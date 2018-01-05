@@ -1658,44 +1658,8 @@ function simBattle(battleInfo, displayMsg) {
 		battleInfo = combatBonus(battleInfo, attacker.passiveAData.initiate_mod, skillInfo['a'][attacker.passiveA].name, "attacker", "by initiating combat");
 	}
 
-	// below hp threshold bonus
-	if (attacker.weaponData.hasOwnProperty("below_threshold_mod") && attacker.initHP <= checkRoundError(attacker.weaponData.below_threshold_mod.threshold * attacker.hp)) {
-		battleInfo = combatBonus(battleInfo, attacker.weaponData.below_threshold_mod.stat_mod, weaponInfo[attacker.weaponName].name, "attacker", "for having HP ≤ " + (attacker.weaponData.below_threshold_mod.threshold * 100).toString() + "%");
-	}
-
-	// below hp threshold bonus
-	if (attacker.passiveAData.hasOwnProperty("below_threshold_mod") && attacker.initHP <= checkRoundError(attacker.passiveAData.below_threshold_mod.threshold * attacker.hp)) {
-		battleInfo = combatBonus(battleInfo, attacker.passiveAData.below_threshold_mod.stat_mod, skillInfo['a'][attacker.passiveA].name, "attacker", "for having HP ≤ " + (attacker.passiveAData.below_threshold_mod.threshold * 100).toString() + "%");
-	}
-
-	// hp advantage boost
-	if (attacker.passiveAData.hasOwnProperty("hp_adv_mod") && attacker.currHP - defender.currHP >= attacker.passiveAData.hp_adv_mod.hp_adv) {
-		battleInfo = combatBonus(battleInfo, attacker.passiveAData.hp_adv_mod.stat_mod, skillInfo['a'][attacker.passiveA].name, "attacker", "for having at least " + attacker.passiveAData.hp_adv_mod.hp_adv.toString() + " more HP than the opponent");
-	}
-
-	// full hp bonus
-	if (attacker.weaponData.hasOwnProperty("full_hp_mod") && attacker.currHP >= attacker.hp) {
-		battleInfo = combatBonus(battleInfo, attacker.weaponData.full_hp_mod, weaponInfo[attacker.weaponName].name, "attacker", "for having full HP");
-	}
-
-	// opponent full hp bonus
-	if (attacker.weaponData.hasOwnProperty("foe_full_hp_mod") && defender.currHP >= defender.hp) {
-		battleInfo = combatBonus(battleInfo, attacker.weaponData.foe_full_hp_mod, weaponInfo[attacker.weaponName].name, "attacker", "for battling an opponent with full HP");
-	}
-
-	// blade tome bonuses
-	if (attacker.hasOwnProperty("addBonusAtk") && attacker.addBonusAtk > 0) {
-		battleInfo = bladeTomeBonus(battleInfo, attacker.addBonusAtk, "attacker");
-	}
-
-	// owl tome bonuses
-	if (attacker.weaponData.hasOwnProperty("adjacent_ally_bonus") && attacker.adjacent > 0) {
-		battleInfo = owlTomeBonus(battleInfo, attacker.adjacent, "attacker");
-	}
-
-	//adjacent stat bonus
-	adjacentStatBonus(battleInfo, attacker, "attacker");
-
+	battleInfo=giveBonuses(battleInfo, attacker, defender);
+	
 	// DEFENDER BONUSES
 	// defending bonus
 	if (defender.weaponData.hasOwnProperty("defend_mod")) {
@@ -1706,58 +1670,7 @@ function simBattle(battleInfo, displayMsg) {
 		battleInfo = combatBonus(battleInfo, defender.passiveAData.defend_mod, skillInfo['a'][defender.passiveA].name, "defender", "by getting attacked");
 	}
 
-	// below hp threshold bonus
-	if (defender.weaponData.hasOwnProperty("below_threshold_mod") && defender.initHP <= checkRoundError(defender.weaponData.below_threshold_mod.threshold * defender.hp)) {
-		battleInfo = combatBonus(battleInfo, defender.weaponData.below_threshold_mod.stat_mod, weaponInfo[defender.weaponName].name, "defender", "for having HP ≤ " + (defender.weaponData.below_threshold_mod.threshold * 100).toString() + "%");
-	}
-
-	// below hp threshold bonus
-	if (defender.passiveAData.hasOwnProperty("below_threshold_mod") && defender.initHP <= checkRoundError(defender.passiveAData.below_threshold_mod.threshold * defender.hp)) {
-		battleInfo = combatBonus(battleInfo, defender.passiveAData.below_threshold_mod.stat_mod, skillInfo['a'][defender.passiveA].name, "defender", "for having HP ≤ " + (defender.passiveAData.below_threshold_mod.threshold * 100).toString() + "%");
-	}
-
-	// hp advantage boost
-	if (defender.passiveAData.hasOwnProperty("hp_adv_mod") && defender.currHP - attacker.currHP >= defender.passiveAData.hp_adv_mod.hp_adv) {
-		battleInfo = combatBonus(battleInfo, defender.passiveAData.hp_adv_mod.stat_mod, skillInfo['a'][defender.passiveA].name, "defender", "for having at least " + defender.passiveAData.hp_adv_mod.hp_adv.toString() + " more HP than the opponent");
-	}
-
-	// full hp bonus
-	if (defender.weaponData.hasOwnProperty("full_hp_mod") && defender.currHP >= defender.hp) {
-		battleInfo = combatBonus(battleInfo, defender.weaponData.full_hp_mod, weaponInfo[defender.weaponName].name, "defender", "for having full HP");
-	}
-
-	// opponent full hp bonus
-	if (defender.weaponData.hasOwnProperty("foe_full_hp_mod") && attacker.currHP >= attacker.hp) {
-		battleInfo = combatBonus(battleInfo, defender.weaponData.foe_full_hp_mod, weaponInfo[defender.weaponName].name, "defender", "for battling an opponent with full HP");
-	}
-
-	// defend against specific weapon bonus (Weapon)
-	if (defender.weaponData.hasOwnProperty("type_defend_mod") && defender.weaponData.type_defend_mod.weapon_type.hasOwnProperty(attacker.weaponData.type)) {
-		battleInfo = combatBonus(battleInfo, defender.weaponData.type_defend_mod.stat_mod, weaponInfo[defender.weaponName].name, "defender", "for getting attacked by " + (attacker.weaponData.type === "Axe" ? "an " : "a ") + attacker.weaponData.type.toLowerCase() + " user");
-	}
-
-	// defend against specific weapon bonus (PassiveA)
-	if (defender.passiveAData.hasOwnProperty("type_defend_mod") && defender.passiveAData.type_defend_mod.weapon_type.hasOwnProperty(attacker.weaponData.type)) {
-		battleInfo = combatBonus(battleInfo, defender.passiveAData.type_defend_mod.stat_mod, skillInfo['a'][defender.passiveA].name, "defender", "for getting attacked by " + (attacker.weaponData.type === "Axe" ? "an " : "a ") + attacker.weaponData.type.toLowerCase() + " user");
-	}
-
-	// defend against specific weapon bonus (SEAL)
-	if (defender.sealData.hasOwnProperty("type_defend_mod") && defender.sealData.type_defend_mod.weapon_type.hasOwnProperty(attacker.weaponData.type)) {
-		battleInfo = combatBonus(battleInfo, defender.sealData.type_defend_mod.stat_mod, skillInfo['s'][defender.seal].name, "defender", "for getting attacked by " + (attacker.weaponData.type === "Axe" ? "an " : "a ") + attacker.weaponData.type.toLowerCase() + " user");
-	}
-
-	// blade tome bonuses
-	if (defender.hasOwnProperty("addBonusAtk") && defender.addBonusAtk > 0) {
-		battleInfo = bladeTomeBonus(battleInfo, defender.addBonusAtk, "defender");
-	}
-
-	// owl tome bonuses
-	if (defender.weaponData.hasOwnProperty("adjacent_ally_bonus") && defender.adjacent > 0) {
-		battleInfo = owlTomeBonus(battleInfo, defender.adjacent, "defender");
-	}
-
-	//adjacent stat bonus
-	adjacentStatBonus(battleInfo, defender, "defender");
+	battleInfo=giveBonuses(battleInfo, defender, attacker);
 
 	// can defender counter
 	var defCC = defCanCounter(battleInfo);
