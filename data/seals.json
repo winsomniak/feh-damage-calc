@@ -106,8 +106,8 @@
     },
     "close-def-1": {
         "description": "If unit is attacked by foe using sword, axe, lance, or dragonstone, unit receives Def/Res+2 during combat.",
-        "id": "distant-def-1",
-        "name": "Distant Def 1",
+        "id": "close-def-1",
+        "name": "Close Def 1",
         "type_defend_mod": {
             "weapon_type": {
                 "Sword": true,
@@ -124,8 +124,8 @@
     },
     "close-def-2": {
         "description": "If unit is attacked by foe using sword, axe, lance, or dragonstone, unit receives Def/Res+4 during combat.",
-        "id": "distant-def-2",
-        "name": "Distant Def 2",
+        "id": "close-def-2",
+        "name": "Close Def 2",
         "type_defend_mod": {
             "weapon_type": {
                 "Sword": true,
@@ -142,8 +142,8 @@
     },
     "close-def-3": {
         "description": "If unit is attacked by foe using sword, axe, lance, or dragonstone, unit receives Def/Res+6 during combat.",
-        "id": "distant-def-3",
-        "name": "Distant Def 3",
+        "id": "close-def-3",
+        "name": "Close Def 3",
         "type_defend_mod": {
             "weapon_type": {
                 "Sword": true,
@@ -532,6 +532,33 @@
         "description": "At start of turn, bonuses become penalties on all foes in cardinal directions with HP 1 or more lower than unit through foe's next action.",
         "id": "panic-ploy-3",
         "name": "Panic Ploy 3",
+        "type": "s"
+    },
+    "phantom-spd-1": {
+        "description": "When any skill compares this unit's Spd stat to another unit's, this unit's Spd stat is counted as +5 over actual value.",
+        "id": "phantom-spd-1",
+        "name": "Phantom Spd 1",
+        "phantom_stat_mod": {
+            "spd": 5
+        },
+        "type": "s"
+    },
+    "phantom-spd-2": {
+        "description": "When any skill compares this unit's Spd stat to another unit's, this unit's Spd stat is counted as +8 over actual value.",
+        "id": "phantom-spd-2",
+        "name": "Phantom Spd 2",
+        "phantom_stat_mod": {
+            "spd": 8
+        },
+        "type": "s"
+    },
+    "phantom-spd-3": {
+        "description": "When any skill compares this unit's Spd stat to another unit's, this unit's Spd stat is counted as +10 over actual value.",
+        "id": "phantom-spd-3",
+        "name": "Phantom Spd 3",
+        "phantom_stat_mod": {
+            "spd": 10
+        },
         "type": "s"
     },
     "quickened-pulse": {
