@@ -53,10 +53,12 @@
 	},
 	"staff":{
 		"dazzling refinement":{
-			"prevent_enemy_counter": 0,
+			"description":"The enemy cannot counterattack.",
+			"prevent_enemy_counter": 0
 		},
 		"wrathful refinement":{
-			"reg_weapon_dmg": 0,
+			"description":"Damage from unit's staff will be calculated the same as other weapons.",
+			"reg_weapon_dmg": 0
 		}
 	},
 	"Special":{
@@ -64,6 +66,7 @@
 			"stat_mod":{
 				"hp":3
 			},
+			"description":"Unit makes a guaranteed follow-up attack when HP ≤ 75% and attacking a foe that can counter.",
 			"brash" : {
 			"threshold" : 0.75
 			}
@@ -72,6 +75,7 @@
 			"stat_mod":{
 				"hp":3
 			},
+			"description":"Unit makes a guaranteed follow-up attack when HP ≥ 90% and attacking a foe that can counter.",
 			"bonus_follow_up": {
 				"trigger": "healthy",
 				"threshold": 0.9
@@ -79,6 +83,7 @@
 		},
 		"Fujin Yumi":
 		{
+			"description":"If unit's HP ≥ 50%, unit can move adjacent to any ally within 2 spaces."
 		},
 		"Deathly Dagger":{
 			"sweep": {
@@ -87,7 +92,8 @@
 					"Red Breath": true,
 					"Green Tome": true,
 				}
-			}
+			},
+			"description":"Foes using magic cannot counterattack."
 		},
 		"Mystletainn":
 		{
@@ -98,20 +104,23 @@
 			"def": 3,
 			"res": 3,
 			},
-		"recoil_dmg": 6
+		"recoil_dmg": 6,
+		"description":"Grants Atk/Spd/Def/Res +3. Unit takes 6 damage after combat."
 		},
 		"Hauteclere":{
 			"stat_mod":{
 				"hp":3
 			},
-		"spec_damage_bonus" : 10
+			"description":"Deals +10 damage when special triggers.",
+			"spec_damage_bonus" : 10
 		},
 		"Cavalry ranged":{
 			"nullify_enemy_bonuses": {
 				"move_type": {
 					"Cavalry": true
 				}
-			}
+			},
+			"description":"If in combat against a cavalry foe, nullifies foe's bonuses (from skills like Fortify, Rally, etc.) during combat."
 		},
 		"Cavalry melee":{
 			"stat_mod":{
@@ -121,14 +130,19 @@
 				"move_type": {
 					"Cavalry": true
 				}
-			}
+			},
+			"description":"If in combat against a cavalry foe, nullifies foe's bonuses (from skills like Fortify, Rally, etc.) during combat."
 		},
 		"Armor melee":{
+			"stat_mod":{
+				"hp":3
+			},
 			"nullify_enemy_bonuses": {
 				"move_type": {
 					"Armored": true
 				}
-			}
+			},
+			"description":"If in combat against an armored foe, nullifies foe's bonuses (from skills like Fortify, Rally, etc.) during combat."
 		}
 	}
 }
