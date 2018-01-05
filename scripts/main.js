@@ -1630,6 +1630,12 @@ function simBattle(battleInfo, displayMsg) {
 		if (attacker.specialData.hasOwnProperty("aoe_dmg_mod")) {
 			aoeDmg = roundNum(aoeDmg * attacker.specialData.aoe_dmg_mod, false);
 		}
+		
+		
+		if (attacker.weaponData.hasOwnProperty("spec_damage_bonus")) {
+			aoeDmg += attacker.weaponData.spec_damage_bonus;
+			battleInfo.logMsg += "Damage is increased by " + attacker.weaponData.spec_damage_bonus.toString() + " [" + weaponInfo[attacker.weaponName].name + "]. ";
+		}
 
 		// check for damage nullifier
 		if (defender.sealData.hasOwnProperty("null_dmg")) {
