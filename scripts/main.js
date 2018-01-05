@@ -1631,7 +1631,7 @@ function simBattle(battleInfo, displayMsg) {
 			aoeDmg = roundNum(aoeDmg * attacker.specialData.aoe_dmg_mod, false);
 		}
 		
-		
+		// check for Wo Dao or Hauteclere
 		if (attacker.weaponData.hasOwnProperty("spec_damage_bonus")) {
 			aoeDmg += attacker.weaponData.spec_damage_bonus;
 			battleInfo.logMsg += "Damage is increased by " + attacker.weaponData.spec_damage_bonus.toString() + " [" + weaponInfo[attacker.weaponName].name + "]. ";
