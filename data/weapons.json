@@ -4,7 +4,7 @@
 		"seal" : {
 			"def" : -5,
 			"res" : -5
-		},
+		}
 	},
 	"Kagami Mochi+": {
 		"spec_cooldown_mod" : -1,
@@ -964,7 +964,7 @@
 			"type":"ranged",
 		    "initiate_poison" : 10,
 			"might": 14,
-			"special":"Deathly Dagger"
+			"special":"Deathly Dagger",
 			"description":"After combat, inflict Def/Res-7 on foe through their next actions. If unit initiated combat, inflict 10 damage to target and foes within 2 spaces of target after battle."
 		}
 	},
@@ -2511,7 +2511,7 @@
 		},
 		"char_unique" : true,
 		"refinable":{
-			"type":"melee"
+			"type":"melee",
 			"description" : "If unit initiates combat at HP ≤ 75%, any follow-up attack occurs immediately.",
 			"desperation" : {
 				"threshold" : 0.75
