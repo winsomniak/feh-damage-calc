@@ -1909,10 +1909,15 @@ function simBattle(battleInfo, displayMsg) {
 				battleInfo.logMsg += "<li class='battle-interaction'><span class='defender'>" + defender.display + "</span> " + " is unable to counter-attack.</li>";
 			}
 		}
-
-		// print message if attacker cannot make a follow-up
-		if (attacker.passiveBData.hasOwnProperty("no_follow") && attacker.currHP > 0) {
-			battleInfo.logMsg += "<li class='battle-interaction'><span class='attacker'>" + attacker.display + "</span> " + " is prevented from making follow-up attacks [" + skillInfo['b'][attacker.passiveB].name + "].</li>";
+		
+		if((atkBreakerWeapon) && !(defBreakerPassive || defBreakerWeapon)){ //This should fix the Assassin Bow + Windsweep problem
+		    atkCF=true;
+		}
+		else{
+		    // print message if attacker cannot make a follow-up
+		    if (attacker.passiveBData.hasOwnProperty("no_follow") && attacker.currHP > 0) {
+			    battleInfo.logMsg += "<li class='battle-interaction'><span class='attacker'>" + attacker.display + "</span> " + " is prevented from making follow-up attacks [" + skillInfo['b'][attacker.passiveB].name + "].</li>";
+		    }
 		}
 
 		// if attacker hasn't been ko'd, check for follow ups
