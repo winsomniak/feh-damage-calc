@@ -37,7 +37,7 @@
 		"char_unique": true
 	},
 	"Dark Greatsword": {
-		"init_mod": {
+		"initiate_mod": {
 			"atk": 4,
 			"spd": 4
 		},
