@@ -282,13 +282,16 @@
         }
     },
     "Wrath 1": {
-        "spec_damage_bonus" : 10
+        "spec_damage_bonus_hp" : 10,
+        "hp_requirement": 0.25
     },
     "Wrath 2": {
-        "spec_damage_bonus" : 10
+        "spec_damage_bonus_hp" : 10,
+        "hp_requirement": 0.50
     },
     "Wrath 3": {
-        "spec_damage_bonus" : 10
+        "spec_damage_bonus_hp" : 10,
+        "hp_requirement": 0.75
     },
     "Steady Stance 1": {
             "defend_mod": {
