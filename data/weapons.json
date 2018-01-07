@@ -410,13 +410,13 @@
 		}
 	},
 	"Guard Bow" : {
-		"color"   : "Colorless",
-		"type"    : "Bow",
-		"might"   : 8,
-		"range"   : 2,
-		"magical" : false,
-		"description" : "Effective against flying units. Grants Def/Res+6 during combat if unit is attacked by foe using bow, daggers, magic, or staff.",
-		"move_effective" : "Flying",
+        "color"   : "Colorless",
+        "type"    : "Bow",
+        "might"   : 8,
+        "range"   : 2,
+        "magical" : false,
+        "description" : "Effective against flying units. Grants Def/Res+6 during combat if unit is attacked by foe using bow, daggers, magic, or staff.",
+        "move_effective" : "Flying",
         "type_defend_mod": {
             "weapon_type": {
                 "Bow": true,
@@ -431,16 +431,16 @@
                 "def": 6,
                 "res": 6
             }
-		}
-	},
+        }
+    },
 	"Guard Bow+" : {
-		"color"   : "Colorless",
-		"type"    : "Bow",
-		"might"   : 12,
-		"range"   : 2,
-		"magical" : false,
-		"description" : "Effective against flying units. Grants Def/Res+6 during combat if unit is attacked by foe using bow, daggers, magic, or staff.",
-		"move_effective" : "Flying",
+        "color"   : "Colorless",
+        "type"    : "Bow",
+        "might"   : 12,
+        "range"   : 2,
+        "magical" : false,
+        "description" : "Effective against flying units. Grants Def/Res+6 during combat if unit is attacked by foe using bow, daggers, magic, or staff.",
+        "move_effective" : "Flying",
         "type_defend_mod": {
             "weapon_type": {
                 "Bow": true,
@@ -455,11 +455,11 @@
                 "def": 6,
                 "res": 6
             }
-		},
-		"refinable": {
-			"type":"ranged"
-		}
-	},
+        },
+        "refinable": {
+            "type":"ranged"
+        }
+    },
 	"Assault" : {
 		"color"   : "Colorless",
 		"type"    : "Staff",
