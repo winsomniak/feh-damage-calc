@@ -1680,6 +1680,21 @@ function simBattle(battleInfo, displayMsg) {
 	if (defender.passiveAData.hasOwnProperty("defend_mod")) {
 		battleInfo = combatBonus(battleInfo, defender.passiveAData.defend_mod, skillInfo['a'][defender.passiveA].name, "defender", "by getting attacked");
 	}
+	
+-	// defend against specific weapon bonus (Weapon)
+-	if (defender.weaponData.hasOwnProperty("type_defend_mod") && defender.weaponData.type_defend_mod.weapon_type.hasOwnProperty(attacker.weaponData.type)) {
+-		battleInfo = combatBonus(battleInfo, defender.weaponData.type_defend_mod.stat_mod, weaponInfo[defender.weaponName].name, "defender", "for getting attacked by " + (attacker.weaponData.type === "Axe" ? "an " : "a ") + attacker.weaponData.type.toLowerCase() + " user");
+-	}
+-
+-	// defend against specific weapon bonus (PassiveA)
+-	if (defender.passiveAData.hasOwnProperty("type_defend_mod") && defender.passiveAData.type_defend_mod.weapon_type.hasOwnProperty(attacker.weaponData.type)) {
+-		battleInfo = combatBonus(battleInfo, defender.passiveAData.type_defend_mod.stat_mod, skillInfo['a'][defender.passiveA].name, "defender", "for getting attacked by " + (attacker.weaponData.type === "Axe" ? "an " : "a ") + attacker.weaponData.type.toLowerCase() + " user");
+-	}
+-
+-	// defend against specific weapon bonus (SEAL)
+-	if (defender.sealData.hasOwnProperty("type_defend_mod") && defender.sealData.type_defend_mod.weapon_type.hasOwnProperty(attacker.weaponData.type)) {
+-		battleInfo = combatBonus(battleInfo, defender.sealData.type_defend_mod.stat_mod, skillInfo['s'][defender.seal].name, "defender", "for getting attacked by " + (attacker.weaponData.type === "Axe" ? "an " : "a ") + attacker.weaponData.type.toLowerCase() + " user");
+-	}
 
 	battleInfo=giveBonuses(battleInfo, defender, attacker);
 
