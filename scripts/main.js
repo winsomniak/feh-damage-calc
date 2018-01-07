@@ -1379,7 +1379,10 @@ function singleCombat(battleInfo, initiator, logIntro, brave) {
 	if (attacker.type === "Staff") {
 		if (attacker.passiveBData.hasOwnProperty("reg_weapon_dmg") && attacker.initHP >= roundNum(attacker.hp * attacker.passiveBData.reg_weapon_dmg, true)) {
 			battleInfo.logMsg += "Staff damage is not halved [" + skillInfo['b'][attacker.passiveB].name + "]. ";
-		} else {
+		} else if (attacker.weaponData.hasOwnProperty("reg_weapon_dmg") && attacker.initHP >= roundNum(attacker.hp * attacker.weaponData.reg_weapon_dmg, true)) {
+			battleInfo.logMsg += "Staff damage is not halved [" + weaponInfo[attacker.weaponName].name + "]. ";
+		}
+		else{
 			dmg = roundNum(dmg / 2, false);
 		}
 	}
