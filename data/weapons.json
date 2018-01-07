@@ -409,6 +409,57 @@
 			"weapon_type" : "Dagger"
 		}
 	},
+	"Guard Bow" : {
+		"color"   : "Colorless",
+		"type"    : "Bow",
+		"might"   : 8,
+		"range"   : 2,
+		"magical" : false,
+		"description" : "Effective against flying units. Grants Def/Res+6 during combat if unit is attacked by foe using bow, daggers, magic, or staff.",
+		"move_effective" : "Flying",
+        "type_defend_mod": {
+            "weapon_type": {
+                "Bow": true,
+                "Dagger": true,
+                "Staff": true,
+                "Blue Tome": true,
+                "Green Tome": true,
+                "Red Tome": true,
+                "Tome": true
+            },
+            "stat_mod": {
+                "def": 6,
+                "res": 6
+            }
+		}
+	},
+	"Guard Bow+" : {
+		"color"   : "Colorless",
+		"type"    : "Bow",
+		"might"   : 12,
+		"range"   : 2,
+		"magical" : false,
+		"description" : "Effective against flying units. Grants Def/Res+6 during combat if unit is attacked by foe using bow, daggers, magic, or staff.",
+		"move_effective" : "Flying",
+        "type_defend_mod": {
+            "weapon_type": {
+                "Bow": true,
+                "Dagger": true,
+                "Staff": true,
+                "Blue Tome": true,
+                "Green Tome": true,
+                "Red Tome": true,
+                "Tome": true
+            },
+            "stat_mod": {
+                "def": 6,
+                "res": 6
+            }
+		},
+		"refinable": {
+			"type":"ranged"
+		}
+	},
 	"Assault" : {
 		"color"   : "Colorless",
 		"type"    : "Staff",
@@ -445,6 +496,13 @@
 		"description" : "Grants Res+4 when the unit is under attack.",
 		"defend_mod" : {
 			"res" : 4
+		},
+		"refinable":{
+			"type":"melee",
+			"description" : "Grants Res+7 when the unit is under attack.",
+			"defend_mod" : {
+				"res" : 7
+			}
 		}
 	},
 	"Binding Blade" : {
