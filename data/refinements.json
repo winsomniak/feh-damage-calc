@@ -54,7 +54,7 @@
 	"staff":{
 		"dazzling refinement":{
 			"description":"The enemy cannot counterattack.",
-			"prevent_enemy_counter": 0
+			"prevent_counter" : true
 		},
 		"wrathful refinement":{
 			"description":"Damage from unit's staff will be calculated the same as other weapons.",
