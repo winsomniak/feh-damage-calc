@@ -1247,11 +1247,13 @@ function singleCombat(battleInfo, initiator, logIntro, brave) {
 	// determine base attack
 	var atkPower = attacker.atk;
 
-	// super effectiveness against movement types
+	// super effectiveness against movement types with sacred seal check
 	if (attacker.weaponData.hasOwnProperty("move_effective") && defender.moveType.includes(attacker.weaponData.move_effective)) {
 		if (defender.passiveAData.hasOwnProperty("cancel_effective")) {
 			battleInfo.logMsg += "Effectiveness against " + defender.moveType + " neutralized by opponent [" + skillInfo['a'][defender.passiveA].name + "]. ";
-		} else {
+		} else if (defender.sealData.hasOwnProperty("cancel_effective")){
+			battleInfo.logMsg += "Effectiveness against " + defender.moveType + " neutralized by opponent [" + defender.seal + "]. ";
+		} else{
 			atkPower = roundNum(atkPower * 1.5, false);
 			battleInfo.logMsg += "Effectiveness against " + defender.moveType + " boosts attack by 50% [" + weaponInfo[attacker.weaponName].name + "]. ";
 		}
