@@ -24,6 +24,29 @@ function CheckTriAdvPerPossibility(agent, other, mod, tocheck) {
     return 0;
 }
 
+//Adjusts damage
+function cancelAffinity(a, b, adv, checking) {
+    if (a.passiveBData.hasOwnProperty("cancel_skill_affinity")) {
+        return -checking.tri_advantage;
+    }
+
+    if (b.passiveBData.hasOwnProperty("cancel_enemy_skill_affinity")) {
+        return -checking.tri_advantage;
+    }
+
+    if (adv) {
+        if (b.passiveBData.hasOwnProperty("cancel_negative_enemy_skill_affinity")) {
+            return -checking.tri_advantage;
+        }
+
+        if (b.passiveBData.hasOwnProperty("reverse_negative_enemy_skill_affinity")) {
+            return -(2*checking.tri_advantage);
+        }
+    }
+
+    return 0;
+}
+
 //Checks if bonuses of character b need to be nullifed
 function canNullifyEnemyBonuses(a, b) {
 
