@@ -9,7 +9,7 @@ function checkAffinity(mod, attacker, defender) {
     // The "2-" part is required to change the disequation from < to > (mod <1 "->" 2-mod<1 "->" -mod<-1 "->" mod>1)
     defAdept=Math.min(CheckTriAdvPerPossibility(defender, attacker, 2-mod, defender.passiveAData), CheckTriAdvPerPossibility(defender, attacker, 2-mod, defender.weaponData));
 
-    return Math.max(Math.abs(atkAdept),Math.abs(defAdept));
+    return Math.min(atkAdept,defAdept);
 }
 
 //Let's separate the checks for weaponData and passiveAData, so we can get the correct number to check for cancel affinity
