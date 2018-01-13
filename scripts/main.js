@@ -1407,7 +1407,7 @@ function singleCombat(battleInfo, initiator, logIntro, brave) {
     }
 	
     //check for Wrath
-    if(attacker.passiveBData.hasOwnProperty("spec_damage_bonus_hp") && (attacker.hp<=attacker.initHP*attacker.passiveBData.hp_requirement) && (atkSpec || (attacker.specialData.hasOwnProperty("heal_dmg") && attacker.specCurrCooldown <= 0)) {
+    if(attacker.passiveBData.hasOwnProperty("spec_damage_bonus_hp") && (attacker.hp<=attacker.initHP*attacker.passiveBData.threshold) && (atkSpec || (attacker.specialData.hasOwnProperty("heal_dmg") && attacker.specCurrCooldown <= 0)) {
         dmg += attacker.passiveBData.spec_damage_bonus_hp;
         battleInfo.logMsg += "Damage boosted by " + attacker.passiveBData.spec_damage_bonus_hp.toString() + " on Special trigger [" + attacker.passiveBData.name + "]. ";
     }
@@ -1649,7 +1649,7 @@ function simBattle(battleInfo, displayMsg) {
         }
 		
         //check for Wrath
-        if(attacker.passiveBData.hasOwnProperty("spec_damage_bonus_hp") && (attacker.hp<=attacker.initHP*attacker.passiveBData.hp_requirement)) {
+        if(attacker.passiveBData.hasOwnProperty("spec_damage_bonus_hp") && (attacker.hp<=attacker.initHP*attacker.passiveBData.threshold)) {
             dmg += attacker.passiveBData.spec_damage_bonus_hp;
             battleInfo.logMsg += "Damage boosted by " + attacker.passiveBData.spec_damage_bonus_hp.toString() + " on Special trigger [" + attacker.passiveBData.name + "]. ";
         }
