@@ -268,7 +268,7 @@ function giveBonuses(battleInfo, agent, other){
     }
 
     // hp advantage boost
-    if (agent.passiveAData.hasOwnProperty("hp_adv_mod") && agent.currHP - defender.currHP >= agent.passiveAData.hp_adv_mod.hp_adv) {
+    if (agent.passiveAData.hasOwnProperty("hp_adv_mod") && agent.currHP - battleInfo.defender.currHP >= agent.passiveAData.hp_adv_mod.hp_adv) {
         battleInfo = combatBonus(battleInfo, agent.passiveAData.hp_adv_mod.stat_mod, skillInfo['a'][agent.passiveA].name, "agent", "for having at least " + agent.passiveAData.hp_adv_mod.hp_adv.toString() + " more HP than the opponent");
     }
 
