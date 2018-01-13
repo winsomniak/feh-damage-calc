@@ -2701,8 +2701,10 @@
         "stat_mod" : {
             "res" : 3
         },
-        "move_effective" : "Armored",
-        "move_effective2" : "Cavalry",
+        "move_effective" : [
+            "Armored",
+            "Cavalry"
+        ],
         "move_defensive": {
             "Armored":true,
             "Cavalry":true,
