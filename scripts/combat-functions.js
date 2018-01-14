@@ -266,7 +266,7 @@ function hardy_bearing_msg(battleInfo, agent) {
 		if(agent.sealData.hasOwnProperty("remove_prio_hp")
 		{
 			battleInfo.logMsg += battleInfo.agent.display + " can't alter the turn's order ["+agent.seal+"]! ";
-			if(agent.hp >= agent.initHP*agent.sealData.remove_prio_hp)
+			if(agent.currentHP >= agent.hp*agent.sealData.remove_prio_hp)
 				battleInfo.logMsg += battleInfo.agent.display + " avoids the opponent changes the turn's order too ["+agent.seal+"]! ";
 		}
 		return battleInfo;
