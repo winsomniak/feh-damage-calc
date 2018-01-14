@@ -1788,6 +1788,10 @@ function simBattle(battleInfo, displayMsg) {
         vantagePassive = false;
         vantageWeapon = false;
     }
+	
+	//Print a message if hardy bearing activates
+	battleInfo = hardy_bearing_msg(attacker);
+	battleInfo = hardy_bearing_msg(defender);
 
     // outspeed info
     var atkOutspeed = attacker.spd >= defender.spd + 5;
