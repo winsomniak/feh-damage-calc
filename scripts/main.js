@@ -820,6 +820,10 @@ function getCharPanelData(charNum) {
 
     var charData = {};
 
+    // Save attacker/defender info
+    charData.isAttacker = parseInt(charNum) === 1 ? true : false;
+    charData.agentClass = charData.isAttacker ? 'attacker' : 'defender';
+
     charData.color = $("#color-" + charNum).val();
     charData.moveType = $("#move-type-" + charNum).val();
     charData.type = $("#weapon-type-" + charNum).val();
@@ -1241,6 +1245,12 @@ function singleCombat(battleInfo, initiator, logIntro, brave) {
         defender = battleInfo.attacker;
     }
 
+    //Storing attacker info for self-referencing in later calculations
+    attacker.isAttacker = true;
+    attacker.charClass = 'attacker';
+    defender.isAttacker = false;
+    defender.charClass = 'defender';
+
     var defOldHP = defender.currHP;
     battleInfo.logMsg += "<span class='" + atkClass + "'>" + attacker.display + "</span> " + logIntro + ". ";
 
@@ -1586,6 +1596,14 @@ function singleCombat(battleInfo, initiator, logIntro, brave) {
 // returns battleInfo
 function simBattle(battleInfo, displayMsg) {
 
+    var attacker = battleInfo.attacker;
+    var defender = battleInfo.defender;
+
+    //Storing attacker info for self-referencing in later calculations
+    attacker.isAttacker = true;
+    attacker.agentClass = 'attacker';
+    defender.isAttacker = false;
+    defender.agentClass = 'defender';
 
     // check if attacker has a weapon, if not no attack
     if (battleInfo.attacker.weaponName === "None") {
@@ -1604,9 +1622,6 @@ function simBattle(battleInfo, displayMsg) {
 
         return battleInfo;
     }
-
-    var attacker = battleInfo.attacker;
-    var defender = battleInfo.defender;
 
     // print panic message
     if (attacker.status.panic && (attacker.atkBonus > 0 || attacker.spdBonus > 0 || attacker.defBonus > 0 || attacker.resBonus > 0)) {
@@ -1688,7 +1703,7 @@ function simBattle(battleInfo, displayMsg) {
         battleInfo = combatBonus(battleInfo, attacker.passiveAData.initiate_mod, skillInfo['a'][attacker.passiveA].name, "attacker", "by initiating combat");
     }
 
-    battleInfo=giveBonuses(battleInfo, attacker, defender);
+    battleInfo = giveBonuses(battleInfo, attacker, defender);
 
     // DEFENDER BONUSES
     // defending bonus
@@ -1715,7 +1730,8 @@ function simBattle(battleInfo, displayMsg) {
         battleInfo = combatBonus(battleInfo, defender.sealData.type_defend_mod.stat_mod, skillInfo['s'][defender.seal].name, "defender", "for getting attacked by " + (attacker.weaponData.type === "Axe" ? "an " : "a ") + attacker.weaponData.type.toLowerCase() + " user");
     }
 
-    battleInfo=giveBonuses(battleInfo, defender, attacker);
+
+    battleInfo = giveBonuses(battleInfo, defender, attacker);
 
     // can defender counter
     var defCC = defCanCounter(battleInfo);
