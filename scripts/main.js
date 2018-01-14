@@ -1417,7 +1417,7 @@ function singleCombat(battleInfo, initiator, logIntro, brave) {
     }
 
     //check for Wrath
-    if(attacker.passiveBData.hasOwnProperty("spec_damage_bonus_hp") && (attacker.hp<=attacker.initHP*attacker.passiveBData.threshold) && (atkSpec || (attacker.specialData.hasOwnProperty("heal_dmg") && attacker.specCurrCooldown <= 0))) {
+    if(attacker.passiveBData.hasOwnProperty("spec_damage_bonus_hp") && (attacker.currHP <= attacker.hp * attacker.passiveBData.threshold) && (atkSpec || (attacker.specialData.hasOwnProperty("heal_dmg") && attacker.specCurrCooldown <= 0))) {
         dmg += attacker.passiveBData.spec_damage_bonus_hp;
         battleInfo.logMsg += "Damage boosted by " + attacker.passiveBData.spec_damage_bonus_hp.toString() + " on Special trigger [" + attacker.passiveBData.name + "]. ";
     }
@@ -1671,7 +1671,7 @@ function simBattle(battleInfo, displayMsg) {
         }
 
         //check for Wrath
-        if(attacker.passiveBData.hasOwnProperty("spec_damage_bonus_hp") && (attacker.hp<=attacker.initHP*attacker.passiveBData.threshold)) {
+        if(attacker.passiveBData.hasOwnProperty("spec_damage_bonus_hp") && (attacker.currHP <= attacker.hp * attacker.passiveBData.threshold)) {
             dmg += attacker.passiveBData.spec_damage_bonus_hp;
             battleInfo.logMsg += "Damage boosted by " + attacker.passiveBData.spec_damage_bonus_hp.toString() + " on Special trigger [" + attacker.passiveBData.name + "]. ";
         }
@@ -2112,7 +2112,7 @@ function simBattle(battleInfo, displayMsg) {
             battleInfo = applySeal(battleInfo, attacker.weaponData.seal, weaponInfo[attacker.weaponName].name, false);
         }
         if (attacker.weaponData.hasOwnProperty("initiate_seal")) {
-            battleInfo = applySeal(battleInfo, attacker.weaponData.seal, weaponInfo[attacker.weaponName].name, false);
+            battleInfo = applySeal(battleInfo, attacker.weaponData.initiate_seal, weaponInfo[attacker.weaponName].name, false);
         }
         if (attacker.weaponData.hasOwnProperty("target_seal") &&
             (defender.moveType.includes(attacker.weaponData.target_seal.target) ||
