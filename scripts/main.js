@@ -1785,20 +1785,16 @@ function simBattle(battleInfo, displayMsg) {
     var desperationWeapon = !attacker.sealData.hasOwnProperty("remove_prio_hp") && canActivateDesperation(attacker.weaponData, attacker.initHP, attacker.hp);
     var desperationSource = desperationPassive ? skillInfo['b'][attacker.passiveB].name : weaponInfo[attacker.weaponName].name;
 
-    //Check HP for Hardy bearing
-    if(defender.sealData.hasOwnProperty("remove_prio_hp") && (defender.currentHP >= defender.hp*defender.sealData.remove_prio_hp)) {
+    //Check HP for Hardy bearing 
+	if(defender.sealData.hasOwnProperty("remove_prio_hp") && (defender.hp >= defender.initHP*defender.sealData.remove_prio_hp)) {
         desperationWeapon = false;
         desperationPassive = false;
     }
-    if(attacker.sealData.hasOwnProperty("remove_prio_hp") && (attacker.currentHP >= attacker.hp*attacker.sealData.remove_prio_hp)) {
+-   if(attacker.sealData.hasOwnProperty("remove_prio_hp") && (attacker.hp >= attacker.initHP*attacker.sealData.remove_prio_hp)) {
         vantagePassive = false;
         vantageWeapon = false;
     }
 	
-	//Print a message if hardy bearing activates
-	battleInfo = hardy_bearing_msg(attacker);
-	battleInfo = hardy_bearing_msg(defender);
-
     // outspeed info
     var atkOutspeed = attacker.spd >= defender.spd + 5;
     var defOutspeed = defender.spd >= attacker.spd + 5;
