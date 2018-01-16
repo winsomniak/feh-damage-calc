@@ -1757,7 +1757,6 @@ function simBattle(battleInfo, displayMsg) {
 	if(defRiposteSeal) //I chose to use an already existant variable to avoid redundancy
 	{
 		defRiposteSource = skillInfo['s'][defender.seal].name;
-		defRipostePassive = true;
 	}
 
     // other follow-up info
@@ -1833,7 +1832,10 @@ function simBattle(battleInfo, displayMsg) {
             if (atkBreakerPassive || atkBreakerWeapon) { // follow with breaker
                 desperation = true;
                 atkCF = false;
-                if ((defRiposteWeapon || defRipostePassive) && defOutspeed) { // foe can follow-up
+                if ((defRiposteWeapon || defRipostePassive) && (defOutspeed || defRiposteSeal)) { // foe can follow-up
+                    battleInfo = singleCombat(battleInfo, true, "makes an immediate, automatic follow-up attack [" + desperationSource + ", " + atkBreakerSource + "]", false);
+                } 
+                else if (defRiposteSeal && defOutspeed) { // foe can follow-up
                     battleInfo = singleCombat(battleInfo, true, "makes an immediate, automatic follow-up attack [" + desperationSource + ", " + atkBreakerSource + "]", false);
                 } else {
                     battleInfo = singleCombat(battleInfo, true, "makes an immediate follow-up attack, while canceling any follow-up attack from the opponent [" + desperationSource + ", " + atkBreakerSource + "]", false);
@@ -1897,12 +1899,17 @@ function simBattle(battleInfo, displayMsg) {
             // wary fighter
             if (atkWary) { // attacker wary fighter
                 // check if defender can follow up with breaker
-                if ((defBreakerPassive || defBreakerWeapon) && defCC && (defOutspeed || defRiposteSeal)) {
+                if ((defBreakerPassive || defBreakerWeapon) && defCC && defOutspeed) {
                     battleInfo = singleCombat(battleInfo, false, "makes a follow-up attack, while canceling any follow-up attack from the opponent [" + defBreakerSource + "]", false);
                 }
 
                 // check if defender can follow up with quick riposte ability
                 else if ((defRiposteWeapon || defRipostePassive) && (defOutspeed || defRiposteSeal)) {
+                    battleInfo = singleCombat(battleInfo, false, "makes an automatic follow-up attack [" + defRiposteSource + "]", false);
+                }
+				
+                // check if defender can follow up with quick riposte seal
+                else if (defRiposteSeal && defOutspeed) {
                     battleInfo = singleCombat(battleInfo, false, "makes an automatic follow-up attack [" + defRiposteSource + "]", false);
                 }
 
@@ -1922,7 +1929,12 @@ function simBattle(battleInfo, displayMsg) {
                 }
 
                 // no follow ups
-                else if (atkCF || defRiposteWeapon) {
+                else if ((atkCF || defRiposteWeapon) && (!defRiposteSeal)) {
+                    battleInfo.logMsg += "<li class='battle-interaction'><span class='defender'>" + defender.display + "</span> prevents any further follow-up attacks [" + skillInfo['b'][defender.passiveB].name + "].</li>";
+                }
+				
+                // no follow ups
+                else if ((atkCF || defRiposteSeal)) {
                     battleInfo.logMsg += "<li class='battle-interaction'><span class='defender'>" + defender.display + "</span> prevents any further follow-up attacks [" + skillInfo['b'][defender.passiveB].name + "].</li>";
                 }
             }
@@ -1942,7 +1954,15 @@ function simBattle(battleInfo, displayMsg) {
                 }
             } else if ((atkBreakerPassive || atkBreakerWeapon)) {  // attacker has breaker
                 // check if defender can activate quick riposte ability
-                if ((defRiposteWeapon || defRipostePassive) && defOutspeed) {
+                if ((defRiposteWeapon || defRipostePassive) && (defOutspeed || defRiposteSeal)) {
+                    if (atkCF) {
+                        battleInfo = singleCombat(battleInfo, true, "makes an automatic follow-up attack [" + atkBreakerSource + "]", false);
+                    }
+                    if (defender.currHP > 0) {
+                        battleInfo = singleCombat(battleInfo, false, "makes an automatic follow-up attack [" + defRiposteSource + "]", false);
+                    }
+                }
+                else if (defRiposteSeal && defOutspeed) {
                     if (atkCF) {
                         battleInfo = singleCombat(battleInfo, true, "makes an automatic follow-up attack [" + atkBreakerSource + "]", false);
                     }
@@ -2002,7 +2022,7 @@ function simBattle(battleInfo, displayMsg) {
                 }
 
                 // check for quick riposte ability
-                if ((defRiposteWeapon || defRipostePassive) && defender.currHP > 0 && !defendFollow) {
+                if ((defRiposteWeapon || defRipostePassive || defRiposteSeal) && defender.currHP > 0 && !defendFollow) {
                     battleInfo = singleCombat(battleInfo, false, "makes an automatic follow-up attack [" + defRiposteSource + "]", false);
                 }
 
