@@ -1897,12 +1897,12 @@ function simBattle(battleInfo, displayMsg) {
             // wary fighter
             if (atkWary) { // attacker wary fighter
                 // check if defender can follow up with breaker
-                if ((defBreakerPassive || defBreakerWeapon) && defCC && defOutspeed) {
+                if ((defBreakerPassive || defBreakerWeapon) && defCC && (defOutspeed || defRiposteSeal)) {
                     battleInfo = singleCombat(battleInfo, false, "makes a follow-up attack, while canceling any follow-up attack from the opponent [" + defBreakerSource + "]", false);
                 }
 
                 // check if defender can follow up with quick riposte ability
-                else if ((defRiposteWeapon || defRipostePassive) && defOutspeed) {
+                else if ((defRiposteWeapon || defRipostePassive) && (defOutspeed || defRiposteSeal)) {
                     battleInfo = singleCombat(battleInfo, false, "makes an automatic follow-up attack [" + defRiposteSource + "]", false);
                 }
 
