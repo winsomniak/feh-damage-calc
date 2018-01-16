@@ -1752,7 +1752,13 @@ function simBattle(battleInfo, displayMsg) {
     // quick riposte info
     var defRipostePassive = canActivateRiposte(defender.passiveBData, defender.initHP, defender.hp, defCC);
     var defRiposteWeapon = canActivateRiposte(defender.weaponData, defender.initHP, defender.hp, defCC);
+    var defRiposteSeal = canActivateRiposte(defender.seal, defender.initHP, defender.hp, defCC);
     var defRiposteSource = defRipostePassive ? skillInfo['b'][defender.passiveB].name : weaponInfo[defender.weaponName].name;
+	if(defRiposteSeal) //I chose to use an already existant variable to avoid redundancy
+	{
+		defRiposteSource = skillInfo['s'][defender.seal].name;
+		defRipostePassive = true;
+	}
 
     // other follow-up info
     var atkWary = canActivateWary(attacker.passiveBData, attacker.initHP, attacker.hp);
@@ -1780,14 +1786,18 @@ function simBattle(battleInfo, displayMsg) {
     var desperationSource = desperationPassive ? skillInfo['b'][attacker.passiveB].name : weaponInfo[attacker.weaponName].name;
 
     //Check HP for Hardy bearing
-    if(defender.sealData.hasOwnProperty("remove_prio_hp") && (defender.hp >= defender.initHP*defender.sealData.remove_prio_hp)) {
+    if(defender.sealData.hasOwnProperty("remove_prio_hp") && (defender.currentHP >= defender.hp*defender.sealData.remove_prio_hp)) {
         desperationWeapon = false;
         desperationPassive = false;
     }
-    if(attacker.sealData.hasOwnProperty("remove_prio_hp") && (attacker.hp >= attacker.initHP*attacker.sealData.remove_prio_hp)) {
+    if(attacker.sealData.hasOwnProperty("remove_prio_hp") && (attacker.currentHP >= attacker.hp*attacker.sealData.remove_prio_hp)) {
         vantagePassive = false;
         vantageWeapon = false;
     }
+	
+	//Print a message if hardy bearing activates
+	battleInfo = hardy_bearing_msg(attacker);
+	battleInfo = hardy_bearing_msg(defender);
 
     // outspeed info
     var atkOutspeed = attacker.spd >= defender.spd + 5;
@@ -2106,6 +2116,9 @@ function simBattle(battleInfo, displayMsg) {
         }
         if (defender.passiveBData.hasOwnProperty("seal") && defender.currHP > 0) {
             battleInfo = applySeal(battleInfo, defender.passiveBData.seal, skillInfo['b'][defender.passiveB].name, true);
+        }
+        if (defender.seal.hasOwnProperty("seal") && defender.currHP > 0) {
+            battleInfo = applySeal(battleInfo, defender.seal.seal, skillInfo['s'][defender.seal].name, true);
         }
     }
     if (defender.currHP > 0) {
