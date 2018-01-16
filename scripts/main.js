@@ -1819,6 +1819,8 @@ function simBattle(battleInfo, displayMsg) {
 
     if(!atkCF && (atkBreakerWeapon) && !(defBreakerPassive || defBreakerWeapon)){ //This should fix the Assassin Bow + Windsweep problem. I put this here because we don't know what IS is going to do
         atkCF=true;
+        if((atkBreakerWeapon) && attacker.passiveBData.hasOwnProperty("no_follow")) //Fixes another Windsweep + Assassin Bow problem
+            atkBreakerWeapon=false;
     }
 
     // desperation follow up
