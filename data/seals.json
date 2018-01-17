@@ -158,6 +158,24 @@
         },
         "type": "s"
     },
+    "def-ploy-1": {
+        "description": "At start of turn, all foes in cardinal directions with Res 1 or more lower than unit suffer Def-3 until the end of foe's next action.",
+        "id": "def-ploy-1",
+        "name": "Def Ploy 1",
+        "type": "s"
+    },
+    "def-ploy-2": {
+        "description": "At start of turn, all foes in cardinal directions with Res 1 or more lower than unit suffer Def-4 until the end of foe's next action.",
+        "id": "def-ploy-2",
+        "name": "Def Ploy 2",
+        "type": "s"
+    },
+    "def-ploy-3": {
+        "description": "At start of turn, all foes in cardinal directions with Res 1 or more lower than unit suffer Def-5 until the end of foe's next action.",
+        "id": "def-ploy-3",
+        "name": "Def Ploy 3",
+        "type": "s"
+    },
     "defense-plus-1": {
         "description": "Grants Atk +1.",
         "id": "defense-plus-1",
@@ -582,6 +600,33 @@
         },
         "type": "s"
     },
+    "quick-riposte-1": {
+        "description": "Unit automatically makes a follow-up attack if attacked at HP ≥ 90%.",
+        "id": "quick-riposte-1",
+        "name": "Quick Riposte 1",
+        "riposte": {
+            "threshold": 0.9
+        },
+        "type": "s"
+    },
+    "quick-riposte-2": {
+        "description": "Unit automatically makes a follow-up attack if attacked at HP ≥ 80%.",
+        "id": "quick-riposte-2",
+        "name": "Quick Riposte 2",
+        "riposte": {
+            "threshold": 0.8
+        },
+        "type": "s"
+    },
+    "quick-riposte-3": {
+        "description": "Unit automatically makes a follow-up attack if attacked at HP ≥ 70%.",
+        "id": "quick-riposte-3",
+        "name": "Quick Riposte 3",
+        "riposte": {
+            "threshold": 0.7
+        },
+        "type": "s"
+    },
     "quickened-pulse": {
         "description": "Special cooldown count -1 at start of Turn 1.",
         "id": "quickened-pulse",
@@ -631,6 +676,33 @@
         "description": "If unit initiates attack, foes within 2 spaces of target take 7 damage after combat.",
         "id": "savage-blow-3",
         "name": "Savage Blow 3",
+        "type": "s"
+    },
+    "seal-atk-1": {
+        "description": "After combat, foe suffers Atk-3 through its next action.",
+        "id": "seal-atk-1",
+        "name": "Seal Atk 1",
+        "seal": {
+            "atk": -3
+        },
+        "type": "s"
+    },
+    "seal-atk-2": {
+        "description": "After combat, foe suffers Atk-5 through its next action.",
+        "id": "seal-atk-2",
+        "name": "Seal Atk 2",
+        "seal": {
+            "atk": -5
+        },
+        "type": "s"
+    },
+    "seal-atk-3": {
+        "description": "After combat, foe suffers Atk-7 through its next action.",
+        "id": "seal-atk-3",
+        "name": "Seal Atk 3",
+        "seal": {
+            "atk": -7
+        },
         "type": "s"
     },
     "speed-plus-1": {

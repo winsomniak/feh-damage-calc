@@ -1752,7 +1752,12 @@ function simBattle(battleInfo, displayMsg) {
     // quick riposte info
     var defRipostePassive = canActivateRiposte(defender.passiveBData, defender.initHP, defender.hp, defCC);
     var defRiposteWeapon = canActivateRiposte(defender.weaponData, defender.initHP, defender.hp, defCC);
+    var defRiposteSeal = canActivateRiposte(defender.seal, defender.initHP, defender.hp, defCC);
     var defRiposteSource = defRipostePassive ? skillInfo['b'][defender.passiveB].name : weaponInfo[defender.weaponName].name;
+	if(defRiposteSeal) //I chose to use an already existant variable to avoid redundancy
+	{
+		defRiposteSource = skillInfo['s'][defender.seal].name;
+	}
 
     // other follow-up info
     var atkWary = canActivateWary(attacker.passiveBData, attacker.initHP, attacker.hp);
@@ -1779,7 +1784,7 @@ function simBattle(battleInfo, displayMsg) {
     var desperationWeapon = !attacker.sealData.hasOwnProperty("remove_prio_hp") && canActivateDesperation(attacker.weaponData, attacker.initHP, attacker.hp);
     var desperationSource = desperationPassive ? skillInfo['b'][attacker.passiveB].name : weaponInfo[attacker.weaponName].name;
 
-    //Check HP for Hardy bearing
+    //Check HP for Hardy bearing 
     if(defender.sealData.hasOwnProperty("remove_prio_hp") && (defender.hp >= defender.initHP*defender.sealData.remove_prio_hp)) {
         desperationWeapon = false;
         desperationPassive = false;
@@ -1827,7 +1832,10 @@ function simBattle(battleInfo, displayMsg) {
             if (atkBreakerPassive || atkBreakerWeapon) { // follow with breaker
                 desperation = true;
                 atkCF = false;
-                if ((defRiposteWeapon || defRipostePassive) && defOutspeed) { // foe can follow-up
+                if ((defRiposteWeapon || defRipostePassive) && (defOutspeed || defRiposteSeal)) { // foe can follow-up
+                    battleInfo = singleCombat(battleInfo, true, "makes an immediate, automatic follow-up attack [" + desperationSource + ", " + atkBreakerSource + "]", false);
+                } 
+                else if (defRiposteSeal && defOutspeed) { // foe can follow-up
                     battleInfo = singleCombat(battleInfo, true, "makes an immediate, automatic follow-up attack [" + desperationSource + ", " + atkBreakerSource + "]", false);
                 } else {
                     battleInfo = singleCombat(battleInfo, true, "makes an immediate follow-up attack, while canceling any follow-up attack from the opponent [" + desperationSource + ", " + atkBreakerSource + "]", false);
@@ -1896,7 +1904,12 @@ function simBattle(battleInfo, displayMsg) {
                 }
 
                 // check if defender can follow up with quick riposte ability
-                else if ((defRiposteWeapon || defRipostePassive) && defOutspeed) {
+                else if ((defRiposteWeapon || defRipostePassive) && (defOutspeed || defRiposteSeal)) {
+                    battleInfo = singleCombat(battleInfo, false, "makes an automatic follow-up attack [" + defRiposteSource + "]", false);
+                }
+				
+                // check if defender can follow up with quick riposte seal
+                else if (defRiposteSeal && defOutspeed) {
                     battleInfo = singleCombat(battleInfo, false, "makes an automatic follow-up attack [" + defRiposteSource + "]", false);
                 }
 
@@ -1916,7 +1929,12 @@ function simBattle(battleInfo, displayMsg) {
                 }
 
                 // no follow ups
-                else if (atkCF || defRiposteWeapon) {
+                else if ((atkCF || defRiposteWeapon) && (!defRiposteSeal)) {
+                    battleInfo.logMsg += "<li class='battle-interaction'><span class='defender'>" + defender.display + "</span> prevents any further follow-up attacks [" + skillInfo['b'][defender.passiveB].name + "].</li>";
+                }
+				
+                // no follow ups
+                else if ((atkCF || defRiposteSeal)) {
                     battleInfo.logMsg += "<li class='battle-interaction'><span class='defender'>" + defender.display + "</span> prevents any further follow-up attacks [" + skillInfo['b'][defender.passiveB].name + "].</li>";
                 }
             }
@@ -1936,7 +1954,15 @@ function simBattle(battleInfo, displayMsg) {
                 }
             } else if ((atkBreakerPassive || atkBreakerWeapon)) {  // attacker has breaker
                 // check if defender can activate quick riposte ability
-                if ((defRiposteWeapon || defRipostePassive) && defOutspeed) {
+                if ((defRiposteWeapon || defRipostePassive) && (defOutspeed || defRiposteSeal)) {
+                    if (atkCF) {
+                        battleInfo = singleCombat(battleInfo, true, "makes an automatic follow-up attack [" + atkBreakerSource + "]", false);
+                    }
+                    if (defender.currHP > 0) {
+                        battleInfo = singleCombat(battleInfo, false, "makes an automatic follow-up attack [" + defRiposteSource + "]", false);
+                    }
+                }
+                else if (defRiposteSeal && defOutspeed) {
                     if (atkCF) {
                         battleInfo = singleCombat(battleInfo, true, "makes an automatic follow-up attack [" + atkBreakerSource + "]", false);
                     }
@@ -1996,7 +2022,7 @@ function simBattle(battleInfo, displayMsg) {
                 }
 
                 // check for quick riposte ability
-                if ((defRiposteWeapon || defRipostePassive) && defender.currHP > 0 && !defendFollow) {
+                if ((defRiposteWeapon || defRipostePassive || defRiposteSeal) && defender.currHP > 0 && !defendFollow) {
                     battleInfo = singleCombat(battleInfo, false, "makes an automatic follow-up attack [" + defRiposteSource + "]", false);
                 }
 
@@ -2106,6 +2132,9 @@ function simBattle(battleInfo, displayMsg) {
         }
         if (defender.passiveBData.hasOwnProperty("seal") && defender.currHP > 0) {
             battleInfo = applySeal(battleInfo, defender.passiveBData.seal, skillInfo['b'][defender.passiveB].name, true);
+        }
+        if (defender.seal.hasOwnProperty("seal") && defender.currHP > 0) {
+            battleInfo = applySeal(battleInfo, defender.seal.seal, skillInfo['s'][defender.seal].name, true);
         }
     }
     if (defender.currHP > 0) {
