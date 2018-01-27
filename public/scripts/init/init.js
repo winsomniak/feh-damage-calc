@@ -7,6 +7,7 @@ var specialInfo;
 var assistInfo;
 var skillInfo;
 var supportInfo;
+var imageUrl = 'https://kagerochart.com';
 
 // stat total upper limit
 var HIGHESTSTAT = 99;
