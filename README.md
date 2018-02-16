@@ -29,6 +29,7 @@ spaces rather than tab characters (4 spaces/1 tab)
 If you have not previously installed NodeJS and NPM, you must first do so.
 
 https://nodejs.org/en/
+
 https://www.npmjs.com/
 
 After you have installed both, you can install the project dependencies (node_modules)
