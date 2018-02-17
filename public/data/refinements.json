@@ -67,8 +67,10 @@
                 "hp":3
             },
             "description":"Unit makes a guaranteed follow-up attack when HP ≤ 75% and attacking a foe that can counter.",
-            "brash" : {
-            "threshold" : 0.75
+            "attack_follow_up": {
+                "trigger": "damaged",
+                "threshold": 0.75,
+                "counterable":true
             }
         },
         "Siegmund":{

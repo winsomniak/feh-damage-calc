@@ -1773,14 +1773,10 @@ function simBattle(battleInfo, displayMsg) {
     var atkOutspeed = attacker.spd >= defender.spd + 5;
     var defOutspeed = defender.spd >= attacker.spd + 5;
 	
-	if(atkOutspeed)
-	{
-		battleInfo.atkFollow++;
-	}
-	else if(defOutspeed)
-	{
-		battleInfo.defFollow++;
-	}
+    if(atkOutspeed)
+        battleInfo.atkFollow++;
+    else if(defOutspeed)
+        battleInfo.defFollow++;
 
     // vantage
     if (((defender.weaponName !== "None" && vantagePassive) || vantageWeapon) && defCC) {
@@ -1840,23 +1836,21 @@ function simBattle(battleInfo, displayMsg) {
 
         // if attacker hasn't been ko'd, check for follow ups
         if (attacker.currHP > 0) {
-			if(vantage && defCC)
-                if(defender.currHP > 0)
-			{
-				if(battleInfo.defFollow >= 2)
-					battleInfo = singleCombat(battleInfo, false, "attacks again", false);
-			} 
-				if(!(desperationPassive || desperationWeapon))
-			{
-				if(battleInfo.atkFollow >= 2)
-					battleInfo = singleCombat(battleInfo, true, "attacks again", false);
-			}
-			if(!vantage && defCC)
-                if(defender.currHP > 0)
-			{
-				if(battleInfo.defFollow >= 2)
-					battleInfo = singleCombat(battleInfo, false, "attacks again", false);
-			} 
+            if(vantage && defCC && defender.currHP > 0)
+            {
+                if(battleInfo.defFollow >= 2)
+                    battleInfo = singleCombat(battleInfo, false, "attacks again", false);
+            } 
+            if((!(desperationPassive || desperationWeapon)) && attacker.currHP > 0)
+            {
+                if(battleInfo.atkFollow >= 2)
+                    battleInfo = singleCombat(battleInfo, true, "attacks again", false);
+            }
+            if((!vantage) && defCC && defender.currHP > 0)
+            {
+                if(battleInfo.defFollow >= 2)
+                    battleInfo = singleCombat(battleInfo, false, "attacks again", false);
+            } 
         }
     }
 
