@@ -468,19 +468,19 @@ function getPortrait(imgID, portraitName) {
         href = href.substr(0, href.indexOf('('));
     }
     $(imgID).parent().attr("href", href);
-    $(imgID).attr("src", "/images/hero/tile/" + portraitName + ".png");
+    $(imgID).attr("src", imageUrl + "/images/hero/tile/" + portraitName + ".png");
 }
 
 // loads the given weapon type image into the given img
 function getWeaponIcon(imgID, weaponType) {
 
-    $(imgID).attr("src", "/images/damage-calc/WeaponType/" + weaponType + ".png").attr("alt", weaponType);
+    $(imgID).attr("src", imageUrl + "/images/damage-calc/WeaponType/" + weaponType + ".png").attr("alt", weaponType);
 }
 
 // loads the given move type image into the given img
 function getMoveIcon(imgID, moveType) {
 
-    $(imgID).attr("src", "/images/damage-calc/MoveType/" + moveType + ".png").attr("alt", moveType);
+    $(imgID).attr("src", imageUrl + "/images/damage-calc/MoveType/" + moveType + ".png").attr("alt", moveType);
 }
 
 // applies any stat modifiers to the given stats and returns the resulting stats
@@ -1258,7 +1258,7 @@ function singleCombat(battleInfo, initiator, logIntro, brave) {
     var atkPower = attacker.atk;
 
     // super effectiveness against movement types with sacred seal check and thani check
-    if ((attacker.weaponData.hasOwnProperty("move_effective2") && defender.moveType.includes(attacker.weaponData.move_effective2))||(attacker.weaponData.hasOwnProperty("move_effective") && defender.moveType.includes(attacker.weaponData.move_effective))) {
+    if (attacker.weaponData.hasOwnProperty("move_effective") && attacker.weaponData.move_effective.includes(defender.moveType)) {
         if (defender.passiveAData.hasOwnProperty("cancel_effective")) {
             battleInfo.logMsg += "Effectiveness against " + defender.moveType + " neutralized by opponent [" + skillInfo['a'][defender.passiveA].name + "]. ";
         } else if (defender.sealData.hasOwnProperty("cancel_effective")){
@@ -1601,7 +1601,7 @@ function simBattle(battleInfo, displayMsg) {
     attacker.agentClass = 'attacker';
     defender.isAttacker = false;
     defender.agentClass = 'defender';
-    
+
     //Counting attacks received for various abilities
     attacker.attacksReceived = 0;
     defender.attacksReceived = 0;
@@ -1780,14 +1780,18 @@ function simBattle(battleInfo, displayMsg) {
     var desperationSource = desperationPassive ? skillInfo['b'][attacker.passiveB].name : weaponInfo[attacker.weaponName].name;
 
     //Check HP for Hardy bearing
-    if(defender.sealData.hasOwnProperty("remove_prio_hp") && (defender.hp >= defender.initHP*defender.sealData.remove_prio_hp)) {
+    if(defender.sealData.hasOwnProperty("remove_prio_hp") && (defender.initHP >= defender.hp*defender.sealData.remove_prio_hp)) {
         desperationWeapon = false;
         desperationPassive = false;
     }
-    if(attacker.sealData.hasOwnProperty("remove_prio_hp") && (attacker.hp >= attacker.initHP*attacker.sealData.remove_prio_hp)) {
+    if(attacker.sealData.hasOwnProperty("remove_prio_hp") && (attacker.initHP >= attacker.hp*attacker.sealData.remove_prio_hp)) {
         vantagePassive = false;
         vantageWeapon = false;
     }
+	
+	//Print a message if hardy bearing activates
+	battleInfo = hardy_bearing_msg(attacker);
+	battleInfo = hardy_bearing_msg(defender);
 
     // outspeed info
     var atkOutspeed = attacker.spd >= defender.spd + 5;
@@ -3011,7 +3015,7 @@ function calculateMatchups(attacker) {
             if (href.indexOf('(') !== -1) {
                 href = href.substr(0, href.indexOf('('));
             }
-            tableHTML += "<td class='matchup-portrait-container' ><div class='open-in-new'><i class='material-icons'>open_in_new</i><a href='" + href + "' target='_blank'><img class='matchup-portrait' src=\"/images/hero/tile/" + charInfo[key].id + ".png\"></a></div></td>";
+            tableHTML += "<td class='matchup-portrait-container' ><div class='open-in-new'><i class='material-icons'>open_in_new</i><a href='" + href + "' target='_blank'><img class='matchup-portrait' src=" + imageUrl + "\"/images/hero/tile/" + charInfo[key].id + ".png\"></a></div></td>";
             tableHTML += "<td><span class='matchup-char' data-id='" + key + "'>" + charInfo[key].display + " <i class='compare-icon material-icons'>compare_arrows</i></span></td>";
             //tableHTML += "<td class='attacker'>" + battleInfo.attacker.damageDealt.toString() + "</td>";
             //tableHTML += "<td class='defender'>" + battleInfo.defender.damageDealt.toString() + "</td>";
@@ -3892,7 +3896,7 @@ function exportSingle(attacker) {
 function clearTeam(attacker) {
 
     for (var index = 0; index < 5; index++) {
-        $("#tab-" + index.toString() + "-" + (attacker ? "1" : "2") ).removeClass("char-tab char-tab-selected").addClass("char-tab-unselected").attr("src", "/images/damage-calc/Portraits/Unselected.png");
+        $("#tab-" + index.toString() + "-" + (attacker ? "1" : "2") ).removeClass("char-tab char-tab-selected").addClass("char-tab-unselected").attr("src", imageUrl + "/images/damage-calc/Portraits/Unselected.png");
         if (attacker) {
             attackerTeam[index] = {};
         } else {
