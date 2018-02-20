@@ -274,7 +274,7 @@ function checkBonusDmg(battleInfo, char)
         if (bfup) {
             if ((!char[checks[i]].spec_damage_bonus_hp) || roundNum(char.currHP / char.hp <= char[checks[i]].threshold)) {
                 battleInfo.bonusDmg+=bfup;
-				battleInfo.logMsg += "Damage is increased by " + bfup.toString() + " [" + char[checks[i]].name + "]. ";
+                battleInfo.logMsg += "Damage is increased by " + bfup.toString() + " [" + char[checks[i]].name + "]. ";
             }
         }
     }
