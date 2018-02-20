@@ -1695,9 +1695,11 @@
 		"stat_mod": {
 			"atk": 3
 		},
-		"other_prevent_follow":true,
-		"stat_to_check":"def",
-		"stat_amount":5,
+		"other_prevent_follow":
+		{
+			"stat_to_check":"def",
+			"stat_amount":5
+		},
 		"char_unique": true
 	},
 	"Green Egg": {
