@@ -215,6 +215,20 @@ function Follow(char, attacker, othWeapon, CanCounter, battleInfo) {
     return battleInfo;
 }
 
+//Needed by Prevent to know which stat to check...
+function ReturnStat(hero, stat)
+{
+	if(stat=="def")
+		return hero.def;
+	if(stat=="atk")
+		return hero.atk;
+	if(stat=="res")
+		return hero.res;
+	if(stat=="spd")
+		return hero.spd;
+	return hero.hp;
+}
+
 //Checks the follow-preventions (Wary & breakers) 
 function Prevent(char, agent, ageWeapon, battleInfo, attacker) 
 {
@@ -230,7 +244,7 @@ function Prevent(char, agent, ageWeapon, battleInfo, attacker)
                 }
             }
             //Myrrh's weapon
-            else if (char.prev.stat_to_check >= agent.prev.stat_to_check + prev.stat_amount) {
+            else if (ReturnStat(char, prev.stat_to_check) >= ReturnStat(agent, prev.stat_to_check)+ prev.stat_amount) {
                     prevention+=1;
                     battleInfo.logMsg+= "<li class='battle-interaction'><span class='" + char.agentClass + "'>" + char.display + "</span>'s " + char[checks[i]].name + " activated, decreasing <span class='" + agent.agentClass + "'>" + agent.display +"</span>'s ability to follow-up!</li>";
                 }
