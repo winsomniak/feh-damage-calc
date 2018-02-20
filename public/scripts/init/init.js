@@ -50,9 +50,8 @@ var resetFilterLock = false;
 // use to fix filters bug
 var initFilters = true;
 
-var data = document.getElementById('data').textContent;
-data = JSON.parse(document.getElementById('data').textContent);
-console.log(data);
+var data = JSON.parse(document.getElementById('data').textContent);
+
 weaponInfo = data.weapons;
 specialInfo = data.specials;
 assistInfo = data.assists;
