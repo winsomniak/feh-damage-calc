@@ -1,6 +1,0 @@
-{
-    "description": "Infantry and armored allies within 2 spaces can move to a space adjacent to unit.",
-    "id": "guidance-3",
-    "name": "Guidance 3",
-    "type": "s"
-}

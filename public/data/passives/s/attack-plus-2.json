@@ -1,9 +1,0 @@
-{
-    "description": "Grants Atk +2.",
-    "id": "attack-plus-2",
-    "name": "Attack +2",
-    "stat_mod": {
-        "atk": 2
-    },
-    "type": "s"
-}

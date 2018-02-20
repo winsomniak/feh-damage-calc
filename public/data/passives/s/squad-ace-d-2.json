@@ -1,9 +1,0 @@
-{
-    "description": "Grants Spd +2",
-    "id": "squad-ace-d-2",
-    "name": "Squad Ace D 2",
-    "stat_mod": {
-        "spd": 2
-    },
-    "type": "s"
-}

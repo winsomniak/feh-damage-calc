@@ -184,20 +184,77 @@ function canPreventEnemyCounter(container, hp, currHP) {
     return container.hasOwnProperty("prevent_enemy_counter") && currHP >= roundNum(container.prevent_enemy_counter * hp, true);
 }
 
-//Checks if unit gets a bonus follow-up (initially creaeted for follow-up ring)
-function bonusFollowUp(char) {
+//Checks the follows (Brash, Riposte, follow-up, fighters & breakers) and if the agent has wary fighter or sweep ability
+function Follow(char, attacker, othWeapon, CanCounter, battleInfo) {
+    var doubling=1;
     for (var i = 0; i < checks.length; i++) {
-        var bfup = char[checks[i]].bonus_follow_up;
+        var bfup=char[checks[i]].attack_follow_up;
+        if(!attacker)
+            bfup=char[checks[i]].defense_follow_up;
         if (bfup) {
-            //healthy
-            if (bfup.trigger === 'healthy' && roundNum(char.currHP / char.hp >= bfup.threshold)) {
-                return true;
+            if ((!bfup.hasOwnProperty("threshold")) || (bfup.trigger==='healthy' && roundNum(char.currHP / char.hp >= bfup.threshold)) || (roundNum(char.currHP / char.hp <= bfup.threshold))) { //hp check for all of them
+                if((!bfup.hasOwnProperty("weapon_type")) || (bfup.weapon_type.includes(othWeapon))){ //breaker check
+                    if((!bfup.hasOwnProperty("counterable")) || (CanCounter)) //brash check
+                    {
+                        doubling++;
+                        battleInfo.logMsg+="<li class='battle-interaction'><span class='" + char.agentClass + "'>" + char.display + "</span>'s " + char[checks[i]].name + " activated, increasing their own ability to follow-up!</li>";
+                    }
+                }
             }
         }
+        if((char[checks[i]].hasOwnProperty("self_prevent_follow")) && ((!char[checks[i]].self_prevent_follow.hasOwnProperty("threshold")) || roundNum(char.currHP / char.hp >= char[checks[i]].self_prevent_follow.threshold))){
+            if((!char[checks[i]].self_prevent_follow.hasOwnProperty("attack")) || attacker)
+                doubling--;
+                battleInfo.logMsg+= "<li class='battle-interaction'><span class='" + char.agentClass + "'>" + char.display + "</span>'s " + char[checks[i]].name + " activated, decreasing their own ability to follow-up!</li>";
+        }
     }
+    if(attacker)
+        battleInfo.atkFollow=doubling;
+    else
+        battleInfo.defFollow=doubling;
+    return battleInfo;
+}
 
-    return false;
+//Needed by Prevent to know which stat to check...
+function ReturnStat(hero, stat)
+{
+	if(stat=="def")
+		return hero.def;
+	if(stat=="atk")
+		return hero.atk;
+	if(stat=="res")
+		return hero.res;
+	if(stat=="spd")
+		return hero.spd;
+	return hero.hp;
+}
 
+//Checks the follow-preventions (Wary & breakers) 
+function Prevent(char, agent, ageWeapon, battleInfo, attacker) 
+{
+    var prevention=0;
+    for (var i = 0; i < checks.length; i++) {
+        var prev = char[checks[i]].other_prevent_follow;
+        if (prev) {
+            //healthy (Breakers and Wary fighter)
+            if ((!prev.hasOwnProperty("stat_to_check")) && ((!prev.hasOwnProperty("threshold")) || roundNum(char.currHP / char.hp >= prev.threshold))) {
+                if((!prev.hasOwnProperty("weapon_type")) || (prev.weapon_type.includes(ageWeapon))){
+                    prevention+=1;
+                    battleInfo.logMsg+= "<li class='battle-interaction'><span class='" + char.agentClass + "'>" + char.display + "</span>'s " + char[checks[i]].name + " activated, decreasing <span class='" + agent.agentClass + "'>" + agent.display +"</span>'s ability to follow-up!</li>";
+                }
+            }
+            //Myrrh's weapon
+            else if (ReturnStat(char, prev.stat_to_check) >= ReturnStat(agent, prev.stat_to_check)+ prev.stat_amount) {
+                    prevention+=1;
+                    battleInfo.logMsg+= "<li class='battle-interaction'><span class='" + char.agentClass + "'>" + char.display + "</span>'s " + char[checks[i]].name + " activated, decreasing <span class='" + agent.agentClass + "'>" + agent.display +"</span>'s ability to follow-up!</li>";
+                }
+            }
+        }
+    if(attacker)
+        battleInfo.atkPrev=prevention;
+    else
+        battleInfo.defPrev=prevention;
+    return battleInfo;
 }
 
 //Reduce damage from first attack
@@ -260,15 +317,6 @@ function enemyPhaseCharge(battleInfo, attacker, defender) {
             }
         }
     })
-}
-
-function hardy_bearing_msg(battleInfo, agent) {
-    if (agent.sealData.hasOwnProperty("remove_prio_hp")) {
-    	battleInfo.logMsg += "<li class='battle-interaction'><span class='" + agent.agentClass + "'>" + agent.display + "</span> can't alter the turn's order ["+agent.sealData.name+"]!</li> ";
-    	if(agent.initHP >= agent.hp*agent.sealData.remove_prio_hp)
-    		battleInfo.logMsg += "<li class='battle-interaction'><span class='" + agent.agentClass + "'>" + agent.display + "</span> avoids the opponent changes the turn's order too ["+agent.sealData.name+"]!</li> ";
-    }
-    return battleInfo;
 }
 
 //This is redundant, separating this makes it easier to maintain

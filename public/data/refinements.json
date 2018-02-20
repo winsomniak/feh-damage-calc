@@ -67,8 +67,10 @@
                 "hp":3
             },
             "description":"Unit makes a guaranteed follow-up attack when HP ≤ 75% and attacking a foe that can counter.",
-            "brash" : {
-            "threshold" : 0.75
+            "attack_follow_up": {
+                "trigger": "damaged",
+                "threshold": 0.75,
+                "counterable":true
             }
         },
         "Siegmund":{
@@ -90,7 +92,7 @@
                 "weapon_type": {
                     "Red Tome": true,
                     "Blue Tome": true,
-                    "Green Tome": true
+                    "Green Tome": true,
                 }
             },
             "description":"Foes using magic cannot counterattack."
@@ -102,7 +104,7 @@
             "atk": 3,
             "spd": 3,
             "def": 3,
-            "res": 3
+            "res": 3,
             },
         "recoil_dmg": 6,
         "description":"Grants Atk/Spd/Def/Res +3. Unit takes 6 damage after combat."

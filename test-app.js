@@ -4,7 +4,6 @@ const express = require('express');
 
 //Filesystem manipulation
 const fs = require('fs');
-const path = require('path');
 
 //Lodash is awesome
 const _ = require('lodash');
@@ -51,8 +50,6 @@ app.get('/', function(req, res, next) {
 
     res.locals.ads = false;
 
-    res.locals.data = JSON.stringify(loadJson('public/data'));
-
     res.locals.pageCSS = [
         { stylesheet: 'sorter' },
         { stylesheet: 'calc-style' },
@@ -77,25 +74,3 @@ app.get('/', function(req, res, next) {
     ];
     res.render('damage-calc', res.locals);
 });
-
-function loadJson(dir) {
-    var filenames = fs.readdirSync(dir);
-
-    var data = {};
-
-    filenames.forEach(function(filename) {
-
-        var file = `${dir}/${filename}`;
-        var parts = filename.split('.');
-        if (parts.length === 1) {
-            data[filename] = loadJson(file);
-        }
-        else {
-            var contents = fs.readFileSync(`${dir}/${filename}`, 'utf-8');
-
-            data[parts[0]] = JSON.parse(contents);
-        }
-    });
-
-    return data;
-}
