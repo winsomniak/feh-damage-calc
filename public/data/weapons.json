@@ -1600,7 +1600,7 @@
 		"range": 2,
 		"magical": true,
 		"description": "Grants Res+3. If foes' HP = 100% at start of combat, grants Atk/Spd+3 during combat.",
-		"full_hp_mod": {
+		"foe_full_hp_mod": {
 			"atk": 3,
 			"spd": 3
 		},
@@ -2054,7 +2054,7 @@
 		"range": 2,
 		"magical": true,
 		"description": "Grants Def+3. If foes' HP = 100% at start of combat, grants Atk/Spd+3 during combat.",
-		"full_hp_mod": {
+		"foe_full_hp_mod": {
 			"atk": 3,
 			"spd": 3
 		},
