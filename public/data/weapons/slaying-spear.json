@@ -1,0 +1,15 @@
+{
+    "name": "Slaying Spear",
+    "might": 10,
+    "range": 1,
+    "sp": 200,
+    "description": "Effective against armored units.",
+    "type": "Lance",
+    "color": "Blue",
+    "magical": false,
+    "move_effective": [
+        "Armored"
+    ],
+    "link": "https://kagerochart.com/hero/weapons/slaying-spear",
+    "id": "slaying-spear"
+}

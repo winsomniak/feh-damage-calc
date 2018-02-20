@@ -1,0 +1,8 @@
+{
+    "description": "Inflicts 7 damage to foe after any combat this unit initiates.",
+    "poison": 7,
+    "weapon_restrict": "Staff",
+    "id": "poison-strike-2",
+    "name": "Poison Strike 2",
+    "type": "s"
+}

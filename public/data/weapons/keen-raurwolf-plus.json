@@ -1,0 +1,19 @@
+{
+    "name": "Keen Rauðrwolf+",
+    "might": 12,
+    "range": 2,
+    "sp": 300,
+    "description": "Effective against cavalry units.",
+    "type": "Red Tome",
+    "link": "https://kagerochart.com/hero/weapons/keen-raurwolf-plus",
+    "color": "Red",
+    "magical": true,
+    "move_effective": [
+        "Cavalry"
+    ],
+    "refinable": {
+        "type": "ranged",
+        "Special": "Cavalry ranged"
+    },
+    "id": "keen-raurwolf-plus"
+}

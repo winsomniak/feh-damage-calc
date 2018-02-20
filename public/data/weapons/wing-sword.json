@@ -1,0 +1,21 @@
+{
+    "name": "Wing Sword",
+    "might": 16,
+    "range": 1,
+    "sp": 400,
+    "description": "Effective against armored and cavalry foes.",
+    "type": "Sword",
+    "link": "https://kagerochart.com/hero/weapons/wing-sword",
+    "color": "Red",
+    "magical": false,
+    "char_unique": true,
+    "move_effective": [
+        "Armored",
+        "Cavalry"
+    ],
+    "refinable":{
+        "type":"melee",
+        "special":"Wing Sword"
+    },
+    "id": "wing-sword"
+}

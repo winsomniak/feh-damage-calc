@@ -1,0 +1,11 @@
+{
+    "name": "Radiant Aether",
+    "cooldown": 4,
+    "sp": 500,
+    "description": "Resolve combat as if foe suffered Def/Res-50%.Unit recovers HP=half damage dealt. This skill cannot be inherited.",
+    "link": "https://kagerochart.com/hero/specials/radiant-aether",
+    "heal_dmg": 0.5,
+    "enemy_def_res_mod": 0.5,
+    "char_unique": true,
+    "id": "radiant-aether"
+}

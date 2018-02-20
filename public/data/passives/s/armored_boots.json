@@ -1,0 +1,7 @@
+{
+    "description": "If unit's HP = 100% at start of turn, unit can move 1 extra space. (That turn only; does not stack.)",
+    "id": "armored-boots",
+    "name": "Armored Boots",
+    "move_unique": "Armored",
+    "type": "s"
+}
