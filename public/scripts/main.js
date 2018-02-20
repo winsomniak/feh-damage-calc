@@ -1,4 +1,4 @@
-// generates the name for a custom unit based on the given weapon type and move type
+﻿// generates the name for a custom unit based on the given weapon type and move type
 function customName(weaponType, moveType) {
 
     var name = "";
@@ -1846,7 +1846,7 @@ function simBattle(battleInfo, displayMsg) {
             {
                 if(battleInfo.defFollow >= 2)
                 {
-                    battleInfo = singleCombat(battleInfo, false, "attacks again", false);
+                    battleInfo = singleCombat(battleInfo, false, "counterattacks again", false);
                 }
             } 
             if((!(desperationPassive || desperationWeapon)) && attacker.currHP > 0)
@@ -1860,7 +1860,7 @@ function simBattle(battleInfo, displayMsg) {
             {
                 if(battleInfo.defFollow >= 2)
                 {
-                    battleInfo = singleCombat(battleInfo, false, "attacks again", false);
+                    battleInfo = singleCombat(battleInfo, false, "counterattacks again", false);
                 }
             } 
         }
