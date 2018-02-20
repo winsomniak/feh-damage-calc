@@ -2976,7 +2976,7 @@
 		"range": 1,
 		"magical": false,
 		"char_unique":true,
-		"description":"Grants Atk/Spd +4 during combat if infantry or flying ally is within 2 spaces of unit."
+		"description":"Grants Atk/Spd +4 during combat if infantry or flying ally is within 2 spaces of unit.",
         "adjacent_stat_bonus": {
             "target": "self",
             "adjacent": "ally",
