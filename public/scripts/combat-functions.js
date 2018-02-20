@@ -83,9 +83,9 @@ function canNullifyEnemyBonuses(a, b) {
 
 //Function to add updated dragonstones
 function checkDefRes(hero) {
-    if(hero[def]>=hero[res])
-        return hero[def];
-    return hero[res];
+    if(hero.def>=hero.res)
+        return false;
+    return true;
 }
 
 //Subtracts bonuses from stats
@@ -260,6 +260,54 @@ function enemyPhaseCharge(battleInfo, attacker, defender) {
             }
         }
     })
+}
+
+//New increased damage check
+
+function checkBonusDmg(battleInfo, char)
+{
+	battleInfo.bonusDmg=0;
+    for (var i = 0; i < checks.length; i++) {
+        var bfup = char[checks[i]].spec_damage_bonus;
+        if(!bfup)
+            bfup = char[checks[i]].spec_damage_bonus_hp;
+        if (bfup) {
+            if ((!char[checks[i]].spec_damage_bonus_hp) || roundNum(char.currHP / char.hp <= char[checks[i]].threshold)) {
+                battleInfo.bonusDmg+=bfup;
+				battleInfo.logMsg += "Damage is increased by " + bfup.toString() + " [" + char[checks[i]].name + "]. ";
+            }
+        }
+    }
+    return battleInfo;
+}
+
+
+//Checks for dragons/felicia's plate
+
+function checkResDefSubstitution(battleInfo, char, other)
+{
+    battleInfo.changeDefRes=0;
+    for (var i = 0; i < checks.length; i++) {
+        var bfup = char[checks[i]].LowerResDef;
+        if(!bfup)
+            bfup = char[checks[i]].LowerResDefRange;
+        if (bfup) {
+            if ((!char[checks[i]].hasOwnProperty("LowerResDefRange")) || (bfup==other.weaponData.range)) {
+                if(!checkDefRes(other))
+                {
+                    battleInfo.logMsg += "<li class='battle-interaction'><span class='" + char.agentClass + "'>" + char.display + "</span>'s " + char[checks[i]].name + " changed the target of the attack to Resistance.</li>";
+                    battleInfo.changeDefRes=1;
+                }
+                else
+                {
+                    battleInfo.logMsg += "<li class='battle-interaction'><span class='" + char.agentClass + "'>" + char.display + "</span>'s " + char[checks[i]].name + " changed the target of the attack to Defense.</li>";
+                    battleInfo.changeDefRes=2;
+                }
+				return battleInfo;
+            }
+        }
+    }
+    return battleInfo;
 }
 
 function hardy_bearing_msg(battleInfo, agent) {

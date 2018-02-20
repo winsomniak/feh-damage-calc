@@ -13,6 +13,12 @@
         },
         "char_unique": true
     },
+    "Radiant Aether" : {
+        "cooldown" : 4,
+        "heal_dmg" : 0.5,
+        "enemy_def_res_mod" : 0.5,
+        "char_unique": true
+    },
     "Aegis" : {
         "cooldown" : 3,
         "reduce_dmg" : {
