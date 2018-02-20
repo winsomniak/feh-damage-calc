@@ -376,12 +376,12 @@ function checkResDefSubstitution(battleInfo, char, other)
             if ((!char[checks[i]].hasOwnProperty("LowerResDefRange")) || (bfup==other.weaponData.range)) {
                 if(!checkDefRes(other))
                 {
-                    battleInfo.logMsg += "<li class='battle-interaction'><span class='" + char.agentClass + "'>" + char.display + "</span>'s " + char[checks[i]].name + " changed the target of the attack to Resistance.</li>";
+                    battleInfo.logMsg += "<span class='" + char.agentClass + "'>" + char.display + "</span>'s " + char[checks[i]].name + " changed the target of the attack to Resistance. ";
                     battleInfo.changeDefRes=1;
                 }
                 else
                 {
-                    battleInfo.logMsg += "<li class='battle-interaction'><span class='" + char.agentClass + "'>" + char.display + "</span>'s " + char[checks[i]].name + " changed the target of the attack to Defense.</li>";
+                    battleInfo.logMsg += "<span class='" + char.agentClass + "'>" + char.display + "</span>'s " + char[checks[i]].name + " changed the target of the attack to Defense. ";
                     battleInfo.changeDefRes=2;
                 }
 				return battleInfo;
