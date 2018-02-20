@@ -362,6 +362,18 @@
 		},
 		"char_unique": true
 	},
+	"Berserk Armads": {
+		"color": "Green",
+		"type": "Axe",
+		"might": 16,
+		"range": 1,
+		"magical": false,
+		"description": "Accelerates Special trigger (cooldown count -1). If unit's HP ≤ 75%, and Special triggers by attacking, Special cooldown -1 at the start of turn. Deals +10 damage when Special triggers.",
+		"spec_cooldown_mod": -1,
+        "spec_damage_bonus_hp" : 10,
+        "threshold": 0.75,
+		"char_unique": true
+	},
 	"Armorslayer": {
 		"color": "Red",
 		"type": "Sword",
@@ -734,6 +746,47 @@
 			"heal": 4
 		}
 	},
+	"Blue Gift": {
+		"color": "Blue",
+		"type": "Blue Tome",
+		"might": 8,
+		"range": 2,
+		"magical": true,
+		"nullify_enemy_bonuses": {
+			"weapon_type": {
+				"Red Tome": true,
+				"Green Tome": true,
+				"Blue Tome": true,
+				"Tome": true,
+				"Bow":true,
+				"Dagger":true,
+				"Staff":true
+			}
+		},
+		"description": "If foe uses bow, dagger, magic, or staff, neutralizes foe's bonuses (from skills like Fortify, Rally, etc.) during combat.",
+	},
+	"Blue Gift+": {
+		"color": "Blue",
+		"type": "Blue Tome",
+		"might": 12,
+		"range": 2,
+		"magical": true,
+		"description": "If foe uses bow, dagger, magic, or staff, neutralizes foe's bonuses (from skills like Fortify, Rally, etc.) during combat.",
+		"nullify_enemy_bonuses": {
+			"weapon_type": {
+				"Red Tome": true,
+				"Green Tome": true,
+				"Blue Tome": true,
+				"Tome": true,
+				"Bow":true,
+				"Dagger":true,
+				"Staff":true
+			}
+		},
+		"refinable": {
+			"type": "ranged"
+		}
+	},
 	"Bolganone": {
 		"color": "Red",
 		"type": "Red Tome",
@@ -928,6 +981,47 @@
 			"type": "melee",
 			"description": "Unit recovers 4 HP after battle.",
 			"heal": 4
+		}
+	},
+	"Casa Blanca": {
+		"color": "Blue",
+		"type": "Lance",
+		"might": 10,
+		"range": 1,
+		"magical": false,
+		"nullify_enemy_bonuses": {
+			"weapon_type": {
+				"Red Tome": true,
+				"Green Tome": true,
+				"Blue Tome": true,
+				"Tome": true,
+				"Bow":true,
+				"Dagger":true,
+				"Staff":true
+			}
+		},
+		"description": "If foe uses bow, dagger, magic, or staff, neutralizes foe's bonuses (from skills like Fortify, Rally, etc.) during combat.",
+	},
+	"Casa Blanca+": {
+		"color": "Blue",
+		"type": "Lance",
+		"might": 14,
+		"range": 1,
+		"magical": false,
+		"description": "If foe uses bow, dagger, magic, or staff, neutralizes foe's bonuses (from skills like Fortify, Rally, etc.) during combat.",
+		"nullify_enemy_bonuses": {
+			"weapon_type": {
+				"Red Tome": true,
+				"Green Tome": true,
+				"Blue Tome": true,
+				"Tome": true,
+				"Bow":true,
+				"Dagger":true,
+				"Staff":true
+			}
+		},
+		"refinable": {
+			"type": "melee"
 		}
 	},
 	"Clarisse's Bow": {
@@ -1499,6 +1593,22 @@
 		},
 		"char_unique": true
 	},
+	"Gleipnir": {
+		"color": "Red",
+		"type": "Red Tome",
+		"might": 14,
+		"range": 2,
+		"magical": true,
+		"description": "Grants Res+3. If foes' HP = 100% at start of combat, grants Atk/Spd+3 during combat.",
+		"foe_full_hp_mod": {
+			"atk": 3,
+			"spd": 3
+		},
+		"stat_mod": {
+			"res": 3
+		},
+		"char_unique": true
+	},
 	"Gradivus": {
 		"color": "Blue",
 		"type": "Lance",
@@ -1508,6 +1618,53 @@
 		"description": "Enables wielder to counter-attack regardless of attacker's range.",
 		"counter": true,
 		"char_unique": true
+	},
+	"Gratia": {
+		"color": "Colorless",
+		"type": "Bow",
+		"might": 8,
+		"range": 2,
+		"magical": false,
+		"nullify_enemy_bonuses": {
+			"weapon_type": {
+				"Red Tome": true,
+				"Green Tome": true,
+				"Blue Tome": true,
+				"Tome": true,
+				"Bow":true,
+				"Dagger":true,
+				"Staff":true
+			}
+		},
+		"move_effective": [
+			"Flying"
+		],
+		"description": "Effective against flying units. If foe uses bow, dagger, magic, or staff, neutralizes foe's bonuses (from skills like Fortify, Rally, etc.) during combat.",
+	},
+	"Gratia+": {
+		"color": "Colorless",
+		"type": "Bow",
+		"might": 12,
+		"range": 2,
+		"magical": false,
+		"description": "Effective against flying units. If foe uses bow, dagger, magic, or staff, neutralizes foe's bonuses (from skills like Fortify, Rally, etc.) during combat.",
+		"nullify_enemy_bonuses": {
+			"weapon_type": {
+				"Red Tome": true,
+				"Green Tome": true,
+				"Blue Tome": true,
+				"Tome": true,
+				"Bow":true,
+				"Dagger":true,
+				"Staff":true
+			}
+		},
+		"move_effective": [
+			"Flying"
+		],
+		"refinable": {
+			"type": "ranged"
+		}
 	},
 	"Gravity": {
 		"color": "Colorless",
@@ -1527,6 +1684,23 @@
 		"refinable": {
 			"type": "staff"
 		}
+	},
+	"Great Flame": {
+		"type": "Breath",
+		"might": 16,
+		"range": 1,
+		"magical": true,
+		"description": "Grants Atk+3. If unit's Def - foe's Def ≥ 5, foe can't make a follow-up attack. If foe's Range = 2, damage calculated using the lower of foe's Def or Res.",
+		"LowerResDefRange": 2,
+		"stat_mod": {
+			"atk": 3
+		},
+		"other_prevent_follow":
+		{
+			"stat_to_check":"def",
+			"stat_amount":5
+		},
+		"char_unique": true
 	},
 	"Green Egg": {
 		"color": "Green",
@@ -1549,6 +1723,47 @@
 			"type": "ranged",
 			"description": "Unit recovers 4 HP after battle.",
 			"heal": 4
+		}
+	},
+	"Green Gift": {
+		"color": "Green",
+		"type": "Green Tome",
+		"might": 8,
+		"range": 2,
+		"magical": true,
+		"nullify_enemy_bonuses": {
+			"weapon_type": {
+				"Red Tome": true,
+				"Green Tome": true,
+				"Blue Tome": true,
+				"Tome": true,
+				"Bow":true,
+				"Dagger":true,
+				"Staff":true
+			}
+		},
+		"description": "If foe uses bow, dagger, magic, or staff, neutralizes foe's bonuses (from skills like Fortify, Rally, etc.) during combat.",
+	},
+	"Green Gift+": {
+		"color": "Green",
+		"type": "Green Tome",
+		"might": 12,
+		"range": 2,
+		"magical": true,
+		"description": "If foe uses bow, dagger, magic, or staff, neutralizes foe's bonuses (from skills like Fortify, Rally, etc.) during combat.",
+		"nullify_enemy_bonuses": {
+			"weapon_type": {
+				"Red Tome": true,
+				"Green Tome": true,
+				"Blue Tome": true,
+				"Tome": true,
+				"Bow":true,
+				"Dagger":true,
+				"Staff":true
+			}
+		},
+		"refinable": {
+			"type": "ranged"
 		}
 	},
 	"Gronnblade": {
@@ -1832,6 +2047,22 @@
 		"range": 1,
 		"magical": false
 	},
+	"Ivaldi": {
+		"color": "Blue",
+		"type": "Blue Tome",
+		"might": 14,
+		"range": 2,
+		"magical": true,
+		"description": "Grants Def+3. If foes' HP = 100% at start of combat, grants Atk/Spd+3 during combat.",
+		"foe_full_hp_mod": {
+			"atk": 3,
+			"spd": 3
+		},
+		"stat_mod": {
+			"def": 3
+		},
+		"char_unique": true
+	},
 	"Kadomatsu": {
 		"color": "Red",
 		"type": "Sword",
@@ -1866,6 +2097,16 @@
 		"might": 11,
 		"range": 1,
 		"magical": false,
+		"description": "Accelerates Special trigger (cooldown count-1).",
+		"spec_cooldown_mod": -1
+	},
+	"Basilikos": {
+		"color": "Green",
+		"type": "Axe",
+		"might": 16,
+		"range": 1,
+		"magical": false,
+		"char_unique":true,
 		"description": "Accelerates Special trigger (cooldown count-1).",
 		"spec_cooldown_mod": -1
 	},
@@ -2067,6 +2308,16 @@
 			"def": 2,
 			"res": 2
 		},
+		"char_unique": true
+	},
+	"Naglfar": {
+		"color": "Red",
+		"type": "Red Tome",
+		"might": 14,
+		"range": 2,
+		"magical": true,
+		"description": "Grants weapon advantage vs. colorless foes.",
+		"color_effective": "Colorless",
 		"char_unique": true
 	},
 	"Nóatún": {
@@ -2685,6 +2936,23 @@
 
 		}
 	},
+	"Felicia's Plate": {
+		"color": "Colorless",
+		"type": "Dagger",
+		"might": 14,
+		"range": 2,
+		"magical": false,
+		"LowerResDef":true,
+		"char_unique":true,
+		"description": "After combat, inflict Def/Res-7 on target and foes within 2 spaces through their next actions. Damage calculated using lower of foe's Def or Res.",
+		"seal": {
+			"def": -7,
+			"res": -7
+		},
+		"refinable": {
+			"type": "ranged"
+		}
+	},
 	"Silver Lance": {
 		"color": "Blue",
 		"type": "Lance",
@@ -2701,6 +2969,26 @@
 		"refinable": {
 			"type": "melee",
 			"might": 16
+		}
+	},
+	"Hinoka's Spear": {
+		"color": "Blue",
+		"type": "Lance",
+		"might": 16,
+		"range": 1,
+		"magical": false,
+		"char_unique":true,
+		"description":"Grants Atk/Spd +4 during combat if infantry or flying ally is within 2 spaces of unit.",
+        "adjacent_stat_bonus": {
+            "target": "self",
+            "adjacent": "ally",
+            "mod": {
+                "atk": 4,
+                "spd": 4
+            }
+        },
+		"refinable": {
+			"type": "melee"
 		}
 	},
 	"Silver Sword": {
@@ -3017,6 +3305,22 @@
 		"might": 4,
 		"range": 2,
 		"magical": false
+	},
+	"Wing Sword": {
+		"color": "Red",
+		"type": "Sword",
+		"might": 16,
+		"range": 1,
+		"magical": false,
+		"char_unique": true,
+		"description": "Effective against armored and cavalry foes.",
+		"move_effective": [
+			"Armored",
+			"Cavalry"
+		],
+		"refinable": {
+			"type": "melee"
+		}
 	},
 	"Wo Dao": {
 		"color": "Red",

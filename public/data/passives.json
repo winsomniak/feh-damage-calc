@@ -62,6 +62,36 @@
             }
         }
     },
+    "Atk Spd Bond 1": {
+        "adjacent_stat_bonus": {
+            "target": "self",
+            "adjacent": "ally",
+            "mod": {
+                "atk": 3,
+                "spd": 3
+            }
+        }
+    },
+    "Atk Spd Bond 2": {
+        "adjacent_stat_bonus": {
+            "target": "self",
+            "adjacent": "ally",
+            "mod": {
+                "atk": 4,
+                "spd": 4
+            }
+        }
+    },
+    "Atk Spd Bond 3": {
+        "adjacent_stat_bonus": {
+            "target": "self",
+            "adjacent": "ally",
+            "mod": {
+                "atk": 5,
+                "spd": 5
+            }
+        }
+    },
     "Brazen Atk Def 1": {
         "below_threshold_mod": {
             "threshold": 0.8,
@@ -317,6 +347,15 @@
             "defend": true
         }
     },
+    "Warding Breath": {
+            "defend_mod": {
+            "res": 4
+        },
+        "enemy_phase_charge": {
+            "attack": true,
+            "defend": true
+        }
+    },
     "Beorc's Blessing": {
             "nullify_enemy_bonuses": {
             "move_type": {
@@ -558,6 +597,18 @@
     "Defense +3": {
             "stat_mod": {
             "def": 3
+        }
+    },
+    "HP Atk 1": {
+            "stat_mod": {
+            "hp": 3,
+            "atk": 1
+        }
+    },
+    "HP Atk 2": {
+            "stat_mod": {
+            "hp": 4,
+            "atk": 2
         }
     },
     "HP Def 1": {
@@ -1559,6 +1610,15 @@
     "B Tome Experience 3": {
             "weapon_unique": "Blue Tome"
     },
+    "R Tome Experience 1": {
+            "weapon_unique": "Red Tome"
+    },
+    "R Tome Experience 2": {
+            "weapon_unique": "Red Tome"
+    },
+    "R Tome Experience 3": {
+            "weapon_unique": "Red Tome"
+    },
     "Bow Experience 1": {
             "weapon_unique": "Bow"
     },
@@ -1595,6 +1655,9 @@
     },
     "Hone Cavalry": {
             "move_unique": "Cavalry"
+    },
+    "Hone Dragons": {
+        "dragon_unique": true
     },
     "Hone Fliers": {
             "move_unique": "Flying"

@@ -1342,8 +1342,24 @@ function singleCombat(battleInfo, initiator, logIntro, brave) {
 
     // determine if magical or not
     var defBase = attacker.weaponData.magical ? defender.res : defender.def;
-    var defReduct = defBase;
     var defStat = attacker.weaponData.magical ? "resistance" : "defense";
+
+    //checks for special def/res picking
+	
+    battleInfo=checkResDefSubstitution(battleInfo, attacker, defender);
+    
+	if(battleInfo.changeDefRes==1)
+    {
+        defStat="resistance";
+        defBase=defender.res;
+    }
+    else if(battleInfo.changeDefRes==2)
+    {
+        defStat="defense";
+        defBase=defender.def;
+    }
+	
+    var defReduct = defBase;
 
     // defense and resistance lowering special
     if (attacker.specialData.hasOwnProperty("enemy_def_res_mod") && attacker.specCurrCooldown <= 0) {
@@ -1405,21 +1421,9 @@ function singleCombat(battleInfo, initiator, logIntro, brave) {
     }
 
     // check for bonus damage on special proc
-    if (attacker.weaponData.hasOwnProperty("spec_damage_bonus") && (atkSpec || (attacker.specialData.hasOwnProperty("heal_dmg") && attacker.specCurrCooldown <= 0))) {
-        dmg += attacker.weaponData.spec_damage_bonus;
-        battleInfo.logMsg += "Damage boosted by " + attacker.weaponData.spec_damage_bonus.toString() + " on Special trigger [" + weaponInfo[attacker.weaponName].name + "]. ";
-    }
-
-    // check for bonus damage on special proc
-    if (attacker.passiveBData.hasOwnProperty("spec_damage_bonus") && (atkSpec || (attacker.specialData.hasOwnProperty("heal_dmg") && attacker.specCurrCooldown <= 0))) {
-        dmg += attacker.passiveBData.spec_damage_bonus;
-        battleInfo.logMsg += "Damage boosted by " + attacker.passiveBData.spec_damage_bonus.toString() + " on Special trigger [" + attacker.passiveBData.name + "]. ";
-    }
-
-    //check for Wrath
-    if(attacker.passiveBData.hasOwnProperty("spec_damage_bonus_hp") && (attacker.currHP <= attacker.hp * attacker.passiveBData.threshold) && (atkSpec || (attacker.specialData.hasOwnProperty("heal_dmg") && attacker.specCurrCooldown <= 0))) {
-        dmg += attacker.passiveBData.spec_damage_bonus_hp;
-        battleInfo.logMsg += "Damage boosted by " + attacker.passiveBData.spec_damage_bonus_hp.toString() + " on Special trigger [" + attacker.passiveBData.name + "]. ";
+    if (atkSpec || (attacker.specialData.hasOwnProperty("heal_dmg") && attacker.specCurrCooldown <= 0)) {
+        battleInfo=checkBonusDmg(battleInfo, attacker);
+        dmg+=battleInfo.bonusDmg;
     }
 
     //Mirror setup
@@ -1665,17 +1669,9 @@ function simBattle(battleInfo, displayMsg) {
             aoeDmg = roundNum(aoeDmg * attacker.specialData.aoe_dmg_mod, false);
         }
 
-        // check for Wo Dao or Hauteclere
-        if (attacker.weaponData.hasOwnProperty("spec_damage_bonus")) {
-            aoeDmg += attacker.weaponData.spec_damage_bonus;
-            battleInfo.logMsg += "Damage is increased by " + attacker.weaponData.spec_damage_bonus.toString() + " [" + weaponInfo[attacker.weaponName].name + "]. ";
-        }
-
-        //check for Wrath
-        if(attacker.passiveBData.hasOwnProperty("spec_damage_bonus_hp") && (attacker.currHP <= attacker.hp * attacker.passiveBData.threshold)) {
-            dmg += attacker.passiveBData.spec_damage_bonus_hp;
-            battleInfo.logMsg += "Damage boosted by " + attacker.passiveBData.spec_damage_bonus_hp.toString() + " on Special trigger [" + attacker.passiveBData.name + "]. ";
-        }
+        // check for damage bonuses
+        battleInfo=checkBonusDmg(battleInfo, attacker);
+        aoeDmg+=battleInfo.bonusDmg;
 
         // check for damage nullifier
         if (defender.sealData.hasOwnProperty("null_dmg")) {
