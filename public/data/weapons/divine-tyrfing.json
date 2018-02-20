@@ -18,5 +18,6 @@
         ],
         "multiplier": 0.5
     },
-    "id": "divine-tyrfing"
+    "id": "divine-tyrfing",
+    "char_unique": true
 }

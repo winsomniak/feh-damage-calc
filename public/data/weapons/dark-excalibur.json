@@ -9,5 +9,6 @@
     "color": "Green",
     "magical": true,
     "spec_damage_bonus": 10,
-    "id": "dark-excalibur"
+    "id": "dark-excalibur",
+    "char_unique": true
 }
