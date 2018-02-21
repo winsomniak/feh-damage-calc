@@ -1,0 +1,18 @@
+{
+    "name": "Basilikos",
+    "might": 16,
+    "range": 1,
+    "sp": 400,
+    "description": "Accelerates Special trigger (cooldown count-1).",
+    "type": "Axe",
+    "link": "https://kagerochart.com/hero/weapons/basilikos",
+    "color": "Green",
+    "magical": false,
+    "char_unique":true,
+    "spec_cooldown_mod": -1,
+    "refinable": {
+        "type": "melee",
+        "special": "Basilikos"
+    },
+    "id": "basilikos"
+}

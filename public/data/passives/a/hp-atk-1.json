@@ -1,0 +1,13 @@
+{
+    "name": "HP Atk 1",
+    "sp": 100,
+    "type": "A",
+    "description": "Grants HP+3, Atk+1.",
+    "icon": "/images/icons/passives/hp-atk-1.png",
+    "stat_mod": {
+        "hp": 3,
+        "atk": 1
+    },
+    "link": "https://kagerochart.com/hero/passives/hp-atk-1",
+    "id": "hp-atk-1"
+}

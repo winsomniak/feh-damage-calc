@@ -1,0 +1,51 @@
+{
+    "display": "Lyn, Wind's Embrace",
+    "name": "Lyn",
+    "title": "Wind's Embrace",
+    "id": "lyn-wind-embrace",
+    "color": "Blue",
+    "weapon_type": "Blue Tome",
+    "link": "https://kagerochart.com/hero/lyn-wind-embrace",
+    "move_type": "Armored",
+    "weapon": [
+        "blue-gift-plus",
+        "blue-gift",
+        "ellight",
+        "light"
+    ],
+    "assist": [
+        "ardent-sacrifice"
+    ],
+    "passive_a": [
+        "atk-spd-bond-3",
+        "atk-spd-bond-2",
+        "atk-spd-bond-1"
+    ],
+    "passive_b": [
+        "guard-3",
+        "guard-2",
+        "guard-1"
+    ],
+    "passive_c": [
+        "armor-march-3",
+        "armor-march-2",
+        "armor-march-1"
+    ],
+    "base_stat": {
+        "star_5": {
+            "hp": 18,
+            "atk": 9,
+            "spd": 10,
+            "def": 5,
+            "res": 10
+        },
+        "growth": {
+            "hp": 5,
+            "atk": 6,
+            "spd": 8,
+            "def": 6,
+            "res": 7,
+            "total": 32
+        }
+    }
+}

@@ -83,9 +83,9 @@ function canNullifyEnemyBonuses(a, b) {
 
 //Function to add updated dragonstones
 function checkDefRes(hero) {
-    if(hero[def]>=hero[res])
-        return hero[def];
-    return hero[res];
+    if(hero.def>=hero.res)
+        return false;
+    return true;
 }
 
 //Subtracts bonuses from stats
@@ -118,7 +118,7 @@ function defCanCounter(battleInfo) {
     }
 
     //Counter prevention
-    if (attacker.weaponData.prevent_counter || defender.weaponData.prevent_counter || canActivateSweep(attacker.passiveBData, attacker.spd, defender.spd, defender.weaponData.type)) {
+    if (attacker.weaponData.prevent_counter || defender.weaponData.prevent_counter || canActivateSweep(attacker.passiveBData, defender.weaponData.type, attacker, defender)) {
         return false;
     }
 
@@ -174,9 +174,8 @@ function consecutiveDamageReduction(dmg, defender, attacker) {
 }
 
 // checks if the attacker can activate windsweep
-function canActivateSweep(container, atkSpd, defSpd, defWeapon) {
-
-    return container.hasOwnProperty("sweep") && (atkSpd - defSpd >= container.sweep.spd_adv) && container.sweep.weapon_type.hasOwnProperty(defWeapon);
+function canActivateSweep(container, defWeapon, attacker, defender) {
+    return container.hasOwnProperty("sweep") && (phantomStat(attacker, "spd") - phantomStat(defender, "spd") >= container.sweep.spd_adv) && container.sweep.weapon_type.hasOwnProperty(defWeapon);
 }
 
 // checks if the attacker can prevent enemy counterattacks
@@ -184,20 +183,105 @@ function canPreventEnemyCounter(container, hp, currHP) {
     return container.hasOwnProperty("prevent_enemy_counter") && currHP >= roundNum(container.prevent_enemy_counter * hp, true);
 }
 
-//Checks if unit gets a bonus follow-up (initially creaeted for follow-up ring)
-function bonusFollowUp(char) {
+
+//Checks the follows (Brash, Riposte, follow-up, fighters & breakers) and if the agent has wary fighter or sweep ability
+function Follow(char, attacker, othWeapon, CanCounter, battleInfo) {
+    var doubling=1;
     for (var i = 0; i < checks.length; i++) {
-        var bfup = char[checks[i]].bonus_follow_up;
+        var bfup=char[checks[i]].attack_follow_up;
+        if(!attacker)
+            bfup=char[checks[i]].defense_follow_up;
         if (bfup) {
-            //healthy
-            if (bfup.trigger === 'healthy' && roundNum(char.currHP / char.hp >= bfup.threshold)) {
-                return true;
+            if ((!bfup.hasOwnProperty("threshold")) || (bfup.trigger==='healthy' && char.initHP >= roundNum(bfup.threshold * char.hp, true)) || (bfup.trigger==='damaged' && char.initHP <= roundNum(bfup.threshold * char.hp, true))) { //hp check for all of them
+                if((!bfup.hasOwnProperty("weapon_type")) || (bfup.weapon_type.includes(othWeapon))){ //breaker check
+                    if((!bfup.hasOwnProperty("counterable")) || (CanCounter)) //brash check
+                    {
+                        doubling++;
+                        battleInfo.logMsg+="<li class='battle-interaction'><span class='" + char.agentClass + "'>" + char.display + "</span>'s " + char[checks[i]].name + " activated, increasing their own ability to follow-up!</li>";
+                    }
+                }
             }
         }
+        if((char[checks[i]].hasOwnProperty("self_prevent_follow")) && ((!char[checks[i]].self_prevent_follow.hasOwnProperty("threshold")) || (char.initHP >= roundNum(char[checks[i]].self_prevent_follow.threshold * char.hp, true)))){
+            if((!char[checks[i]].self_prevent_follow.hasOwnProperty("attack")) || attacker)
+                doubling--;
+                battleInfo.logMsg+= "<li class='battle-interaction'><span class='" + char.agentClass + "'>" + char.display + "</span>'s " + char[checks[i]].name + " activated, decreasing their own ability to follow-up!</li>";
+        }
     }
+    if(attacker)
+        battleInfo.atkFollow=doubling;
+    else
+        battleInfo.defFollow=doubling;
+    return battleInfo;
+}
 
-    return false;
+//Needed by Prevent to know which stat to check...
+function ReturnStat(hero, stat)
+{
+	if(stat=="def")
+		return hero.def;
+	if(stat=="atk")
+		return hero.atk;
+	if(stat=="res")
+		return hero.res;
+	if(stat=="spd")
+		return hero.spd;
+	return hero.hp;
+}
 
+//Checks the follow-preventions (Wary & breakers) 
+function Prevent(char, agent, ageWeapon, battleInfo, attacker) 
+{
+    var prevention=0;
+    for (var i = 0; i < checks.length; i++) {
+        var prev = char[checks[i]].other_prevent_follow;
+        if (prev) {
+            //healthy (Breakers and Wary fighter)
+            if ((!prev.hasOwnProperty("stat_to_check")) && ((!prev.hasOwnProperty("threshold")) || char.initHP >= roundNum(prev.threshold * char.hp, true))) {
+                if((!prev.hasOwnProperty("weapon_type")) || (prev.weapon_type.includes(ageWeapon))){
+                    prevention+=1;
+                    battleInfo.logMsg+= "<li class='battle-interaction'><span class='" + char.agentClass + "'>" + char.display + "</span>'s " + char[checks[i]].name + " activated, decreasing <span class='" + agent.agentClass + "'>" + agent.display +"</span>'s ability to follow-up!</li>";
+                }
+            }
+            //Myrrh's weapon
+            else if (ReturnStat(char, prev.stat_to_check) >= ReturnStat(agent, prev.stat_to_check)+ prev.stat_amount) {
+                    prevention+=1;
+                    battleInfo.logMsg+= "<li class='battle-interaction'><span class='" + char.agentClass + "'>" + char.display + "</span>'s " + char[checks[i]].name + " activated, decreasing <span class='" + agent.agentClass + "'>" + agent.display +"</span>'s ability to follow-up!</li>";
+                }
+            }
+        }
+    if(attacker)
+        battleInfo.atkPrev=prevention;
+    else
+        battleInfo.defPrev=prevention;
+    return battleInfo;
+}
+
+//Checks the poison effect 
+function Poison(char, battleInfo, attacker) 
+{
+    var poison=0;
+    var poisonSource="";
+    for (var i = 0; i < checks.length; i++) {
+        var pois = char[checks[i]].poison;
+        if((!pois) && attacker)
+            pois=char[checks[i]].initiate_poison
+        if (pois) {
+            poison += pois;
+            poisonSource += (poisonSource.length > 0) ? ", " + char[checks[i]].name : char[checks[i]].name;
+        }
+    }
+    if(attacker)
+    {
+        battleInfo.atkPoison=poison;
+        battleInfo.atkPoisonSource=poisonSource;
+    }
+    else
+    {
+        battleInfo.defPoison=poison;
+        battleInfo.defPoisonSource=poisonSource;
+    }
+    return battleInfo;
 }
 
 //Reduce damage from first attack
@@ -260,6 +344,51 @@ function enemyPhaseCharge(battleInfo, attacker, defender) {
             }
         }
     })
+}
+
+//New increased damage check
+function checkBonusDmg(battleInfo, char)
+{
+	battleInfo.bonusDmg=0;
+    for (var i = 0; i < checks.length; i++) {
+        var bfup = char[checks[i]].spec_damage_bonus;
+        if(!bfup)
+            bfup = char[checks[i]].spec_damage_bonus_hp;
+        if (bfup) {
+            if ((!char[checks[i]].spec_damage_bonus_hp) || roundNum(char.currHP / char.hp <= char[checks[i]].threshold)) {
+                battleInfo.bonusDmg+=bfup;
+                battleInfo.logMsg += "Damage is increased by " + bfup.toString() + " [" + char[checks[i]].name + "]. ";
+            }
+        }
+    }
+    return battleInfo;
+}
+
+//Checks for dragons/felicia's plate
+function checkResDefSubstitution(battleInfo, char, other)
+{
+    battleInfo.changeDefRes=0;
+    for (var i = 0; i < checks.length; i++) {
+        var bfup = char[checks[i]].LowerResDef;
+        if(!bfup)
+            bfup = char[checks[i]].LowerResDefRange;
+        if (bfup) {
+            if ((!char[checks[i]].hasOwnProperty("LowerResDefRange")) || (bfup==other.weaponData.range)) {
+                if(!checkDefRes(other))
+                {
+                    battleInfo.logMsg += "<span class='" + char.agentClass + "'>" + char.display + "</span>'s " + char[checks[i]].name + " changed the target of the attack to Resistance. ";
+                    battleInfo.changeDefRes=1;
+                }
+                else
+                {
+                    battleInfo.logMsg += "<span class='" + char.agentClass + "'>" + char.display + "</span>'s " + char[checks[i]].name + " changed the target of the attack to Defense. ";
+                    battleInfo.changeDefRes=2;
+                }
+				return battleInfo;
+            }
+        }
+    }
+    return battleInfo;
 }
 
 function hardy_bearing_msg(battleInfo, agent) {
@@ -355,17 +484,13 @@ function hasSpecAccel(battleInfo, attacker) {
         }
         //Otherwise we need to compare stats
         else {
-
             //Account for bonuses to comparisons like phantom speed
-            var pStat = phantomStat(mainUnit, stat);
-
-            if (pStat - otherUnit[stat] >= reqStatAdvantage) {
+            if (phantomStat(mainUnit, stat) - phantomStat(otherUnit, stat) >= reqStatAdvantage) {
                 return true;
             }
-
         }
     }
-
+	
     return false
 }
 
@@ -376,7 +501,7 @@ function phantomStat(hero, stat) {
 
     checks.forEach(function(key) {
         if (hero[key].phantom_stat_mod && hero[key].phantom_stat_mod[stat]) {
-            pstat += hero[key].phantom_stat_mod[stat];
+            pStat += hero[key].phantom_stat_mod[stat];
         }
     });
 

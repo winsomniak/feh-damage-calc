@@ -1,0 +1,10 @@
+{
+    "name": "Hone Dragons",
+    "sp": 200,
+    "type": "C",
+    "description": "Grants adjacent Dragon allies Atk/Spd+6 through their next actions at the start of each turn.",
+    "icon": "/images/icons/passives/hone-dragons.png",
+    "link": "https://kagerochart.com/hero/passives/hone-dragons",
+    "dragon_unique": true,
+    "id": "hone-dragons"
+}

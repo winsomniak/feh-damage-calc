@@ -1,0 +1,19 @@
+{
+    "name": "Slaying Hammer+",
+    "might": 14,
+    "range": 1,
+    "sp": 300,
+    "description": "Effective against armored units.",
+    "type": "Axe",
+    "link": "https://kagerochart.com/hero/weapons/slaying-hammer-plus",
+    "color": "Green",
+    "magical": false,
+    "move_effective": [
+        "Armored"
+    ],
+    "refinable":{
+        "type":"melee",
+        "special":"Armor melee"
+    },
+    "id": "slaying-hammer-plus"
+}

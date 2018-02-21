@@ -1,0 +1,14 @@
+{
+    "name": "Naglfar",
+    "might": 14,
+    "range": 2,
+    "sp": 400,
+    "description": "Grants weapon advantage vs. colorless foes.",
+    "type": "Red Tome",
+    "link": "https://kagerochart.com/hero/weapons/naglfar",
+    "color": "Red",
+    "magical": true,
+    "color_effective": "Colorless",
+    "char_unique":true,
+    "id": "naglfar"
+}

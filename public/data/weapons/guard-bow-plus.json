@@ -1,0 +1,33 @@
+{
+    "name": "Guard Bow+",
+    "might": 12,
+    "range": 2,
+    "sp": 300,
+    "type": "Bow",
+    "link": "https://kagerochart.com/hero/weapons/guard-bow-plus",
+    "color": "Colorless",
+    "magical": false,
+    "move_effective": [
+        "Flying"
+    ],
+    "description" : "Effective against flying units. Grants Def/Res+6 during combat if unit is attacked by foe using bow, daggers, magic, or staff.",
+    "type_defend_mod": {
+        "weapon_type": {
+            "Bow": true,
+            "Dagger": true,
+            "Staff": true,
+            "Blue Tome": true,
+            "Green Tome": true,
+            "Red Tome": true,
+            "Tome": true
+        },
+        "stat_mod": {
+            "def": 6,
+            "res": 6
+        }
+    },
+    "refinable": {
+        "type":"ranged"
+    },
+    "id": "guard-bow-plus"
+}

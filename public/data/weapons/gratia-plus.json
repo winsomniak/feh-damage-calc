@@ -1,0 +1,29 @@
+{
+    "name": "Gratia+",
+    "might": 12,
+    "range": 2,
+    "sp": 300,
+    "description": "If foe uses bow, dagger, magic, or staff, neutralizes foe's bonuses (from skills like Fortify, Rally, etc.) during combat.",
+    "type": "Bow",
+    "color": "Colorless",
+    "magical": false,
+    "nullify_enemy_bonuses": {
+        "weapon_type": {
+            "Red Tome": true,
+            "Green Tome": true,
+            "Blue Tome": true,
+            "Tome": true,
+            "Bow":true,
+            "Dagger":true,
+            "Staff":true
+        }
+    },
+    "move_effective":[
+        "Flying"
+    ],
+    "refinable":{
+        "type":"ranged"
+    },
+    "link": "https://kagerochart.com/hero/weapons/gratia-plus",
+    "id": "gratia-plus"
+}

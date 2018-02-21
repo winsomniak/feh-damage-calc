@@ -1,0 +1,9 @@
+{
+    "name": "R Tome Exp. 2",
+    "sp": 60,
+    "type": "C",
+    "description": "If unit survives combat, all red magic users on team get 1.5x EXP.(If similar skill effects also used, only highest multiplier applied.)",
+    "icon": "/images/icons/passives/r-tome-exp-2.png",
+    "link": "https://kagerochart.com/hero/passives/r-tome-exp-2",
+    "id": "r-tome-exp-2"
+}
