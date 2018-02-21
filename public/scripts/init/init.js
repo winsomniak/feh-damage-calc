@@ -101,9 +101,14 @@ function setupCalc() {
       mdc.textfield.MDCTextfield.attachTo(tf);
     }
 
-    updatePanel(document.querySelector('#attack-panel .mdc-card__media'), 0);
-    updatePanel(document.querySelector('#defend-panel .mdc-card__media'), 0);
-    updatePanel(document.querySelector('#matchup-overrides .mdc-card__media'), 0);
+    try {
+        updatePanel(document.querySelector('#attack-panel .mdc-card__media'), 0);
+        updatePanel(document.querySelector('#defend-panel .mdc-card__media'), 0);
+        updatePanel(document.querySelector('#matchup-overrides .mdc-card__media'), 0);
+    }
+    catch(err) {
+        console.log('Panel query failed');
+    }
 
     $("#matchup-filters").hide();
     $("#matchup-overrides").hide();
@@ -116,7 +121,6 @@ function setupCalc() {
 }
 
 function updatePanel(panels, index) {
-
     var activePanel = panels.querySelector('.tab-panel.active');
     var newActivePanel = panels.querySelector('.tab-panel:nth-child(' + (index + 1) + ')');
 

@@ -77,7 +77,7 @@
 
 					{{#if ads}}
 					<div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12 mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-4-phone" id="ad-above-fold">
-						{{> ads/responsive-above-fold }}
+						{{> ads/responsive_above_fold }}
 					</div>
 					{{/if}}
 
@@ -89,7 +89,7 @@
 					  char-info">
 
 						{{#attackPanel}}
-						{{> character-panel}}
+						{{> character_panel}}
 						{{/attackPanel}}
 					</div>
 
@@ -100,26 +100,26 @@
 					  mdc-layout-grid__cell--span-4-phone
 					  char-info">
 						{{#defendPanel}}
-						{{> character-panel}}
+						{{> character_panel}}
 						{{/defendPanel}}
 					</div>
 
 					<div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12-desktop mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-4-phone ">
 						<div class="mdc-layout-grid__inner">
 							<div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12" id="battle-log">
-								{{> battle-results}}
+								{{> battle_results}}
 							</div>
 
 							<div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12" id="matchup-panel">
-								{{> matchup-panel}}
+								{{> matchup_panel}}
 							</div>
 
 							<div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12" id="matchup-filters" >
-								{{> matchup-filters}}
+								{{> matchup_filters}}
 							</div>
 
 							<div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12" id="matchup-overrides">
-								{{> matchup-overrides}}
+								{{> matchup_overrides}}
 							</div>
 						</div>
 					</div>
@@ -170,7 +170,7 @@
 
 					{{#if ads}}
 					<div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-						{{> ads/matched-content}}
+						{{> ads/matched_content}}
 					</div>
 					{{/if}}
 
@@ -188,7 +188,7 @@
 
 
 
-			{{> clipboard-snackbar}}
+			{{> clipboard_snackbar}}
 		</div>
 		<!-- Outdated browser warning -->
 		<div id="outdated"></div>

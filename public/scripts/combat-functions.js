@@ -1,4 +1,4 @@
-const checks = ['weaponData', 'passiveAData', 'passiveBData', 'passiveCData', 'sealData'];
+var checks = ['weaponData', 'passiveAData', 'passiveBData', 'passiveCData', 'sealData'];
 
 function checkAffinity(mod, attacker, defender) {
     var atkAdept = 0;
@@ -229,8 +229,8 @@ function ReturnStat(hero, stat)
 	return hero.hp;
 }
 
-//Checks the follow-preventions (Wary & breakers) 
-function Prevent(char, agent, ageWeapon, battleInfo, attacker) 
+//Checks the follow-preventions (Wary & breakers)
+function Prevent(char, agent, ageWeapon, battleInfo, attacker)
 {
     var prevention=0;
     for (var i = 0; i < checks.length; i++) {
@@ -257,8 +257,8 @@ function Prevent(char, agent, ageWeapon, battleInfo, attacker)
     return battleInfo;
 }
 
-//Checks the poison effect 
-function Poison(char, battleInfo, attacker) 
+//Checks the poison effect
+function Poison(char, battleInfo, attacker)
 {
     var poison=0;
     var poisonSource="";
@@ -490,7 +490,7 @@ function hasSpecAccel(battleInfo, attacker) {
             }
         }
     }
-	
+
     return false
 }
 
