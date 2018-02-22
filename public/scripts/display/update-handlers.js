@@ -1,6 +1,6 @@
 function updateAttributeLink(id) {
-    var el = document.getElementById('#' + id);
-    var linkId = el.id.replace(/-([1-2])/, '-link-$1' );
+    var el = document.getElementById(id);
+    var linkId = el.id.replace(/-([1-2])/, "-link-$1" );
     var link = $('#' + linkId);
     var info = window[el.dataset.info];
 
