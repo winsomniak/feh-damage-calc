@@ -19,8 +19,8 @@
         "type": "ranged",
         "Special": "Parthia",
         "description": "Effective against flying foes. If foe uses magic, damage from first attack received by unit during combat reduced by 30%.",
-        "initiate_mod": {
-            "res": 0
+        "remove":{
+            "initiate_mod":true
         },
         "first_dmg_reduction": {
             "weapon_type": [

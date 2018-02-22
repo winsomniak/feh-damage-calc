@@ -1,24 +1,24 @@
 {
     "melee":{
-        "attack refinement":{
+        "Attack":{
             "stat_mod":{
                 "hp": 5,
                 "atk": 2
             }
         },
-        "speed refinement":{
+        "Speed":{
             "stat_mod":{
                 "hp": 5,
                 "spd": 3
             }
         },
-        "defence refinement":{
+        "Defense":{
             "stat_mod":{
                 "hp": 5,
                 "def": 4
             }
         },
-        "resistance refinement":{
+        "Resistance":{
             "stat_mod":{
                 "hp": 5,
                 "res": 4
@@ -26,25 +26,25 @@
         }
     },
     "ranged":{
-        "attack refinement":{
+        "Attack":{
             "stat_mod":{
                 "hp": 2,
                 "atk": 1
             }
         },
-        "speed refinement":{
+        "Speed":{
             "stat_mod":{
                 "hp": 2,
                 "spd": 2
             }
         },
-        "defence refinement":{
+        "Defense":{
             "stat_mod":{
                 "hp": 2,
                 "def": 3
             }
         },
-        "resistance refinement":{
+        "Resistance":{
             "stat_mod":{
                 "hp": 2,
                 "res": 3
@@ -52,11 +52,11 @@
         }
     },
     "staff":{
-        "dazzling refinement":{
+        "Dazzling":{
             "description":"The enemy cannot counterattack.",
             "prevent_counter" : true
         },
-        "wrathful refinement":{
+        "Wrathful":{
             "description":"Damage from unit's staff will be calculated the same as other weapons.",
             "reg_weapon_dmg": 0
         }
@@ -67,8 +67,10 @@
                 "hp":3
             },
             "description":"Unit makes a guaranteed follow-up attack when HP ≤ 75% and attacking a foe that can counter.",
-            "brash" : {
-            "threshold" : 0.75
+            "attack_follow_up": {
+                "trigger": "damaged",
+                "threshold": 0.75,
+                "counterable":true
             }
         },
         "Siegmund":{
@@ -76,9 +78,10 @@
                 "hp":3
             },
             "description":"Unit makes a guaranteed follow-up attack when HP ≥ 90% and attacking a foe that can counter.",
-            "bonus_follow_up": {
+            "attack_follow_up": {
                 "trigger": "healthy",
-                "threshold": 0.9
+                "threshold": 0.9,
+                "counterable":true
             }
         },
         "Fujin Yumi":
@@ -132,9 +135,13 @@
         },
         "Cymbeline":{
             "description":"Grants Atk/Res+5 during combat if within 2 spaces of a flying ally.",
-            "stat_mod": {
-                "atk": 5,
-                "res": 5
+            "adjacent_stat_bonus": {
+                "target": "self",
+                "adjacent": "ally",
+                "mod": {
+                    "atk": 5,
+                    "res": 5
+                }
             }
         },
         "Cavalry ranged":{

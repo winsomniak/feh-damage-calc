@@ -170,7 +170,7 @@
                            <select id="weapon-{{charNum}}"  class="mdc-select weapon-selector link-field" data-charnum="{{charNum}}" data-info="weaponInfo"></select>
                            <a id="weapon-link-{{charNum}}" class="attribute-link mdc-theme--text-secondary-on-background" href="" target="_blank"><i class="material-icons">open_in_new</i></a>
                       </div>
-                        </div>
+                    </div>
                         <div id="extra-weapon-info-{{charNum}}"  class="extra-info collapsable">
                            <div class="ability-desc-container">
                                <p id="weapon-desc-{{charNum}}"  class="ability-desc"></p>
@@ -182,6 +182,15 @@
                                <span id="weapon-magical-{{charNum}}" ></span>
                            </div>
                         </div>
+                    <div class="info-section refinement-select">
+                        <div  class="mdc-form-field">
+                           <label for="refinement-info-{{charNum}}" >
+                               <span id="refinement-info-btn-{{charNum}}" data-section="{{id}}-refinement-info">Refinement</span>
+                           </label>
+                           <select id="refinement-{{charNum}}"  class="mdc-select refinement-selector link-field" data-charnum="{{charNum}}" data-info="refinementsInfo"></select>
+						   <span class="attribute-link mdc-theme--text-secondary-on-background"><i class="material-icons">open_in_new</i></span>
+                      </div>
+                    </div>
 
                     <div class="mdc-form-field">
                         <label for="special-{{charNum}}" class="special-label">

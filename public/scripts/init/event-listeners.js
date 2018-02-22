@@ -120,6 +120,16 @@ $(".char-selector").on("change", function() {
 $(".weapon-selector").on("change", function (){
     var charNum = $(this).data("charnum").toString();
     showWeapon(this.value, charNum, true, true);
+    updateRefinements($("#weapon-" + charNum).val(), charNum);
+    displayStatTotals(charNum);
+    charChange(charNum);
+    updateDisplay();
+});
+
+// setup refinement select
+$(".refinement-selector").on("change", function (){
+    var charNum = $(this).data("charnum").toString();
+    displayStatTotals(charNum);
     charChange(charNum);
     updateDisplay();
 });

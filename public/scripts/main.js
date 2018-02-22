@@ -342,7 +342,7 @@ function showWeapon(selectedWeapon, charNum, update, showHidden) {
         }
         updateSpecCooldown(charNum);
     } else { // weapon not found
-        $("#weapon-might-" + charNum).text("n/a");
+        $("#weapon-might-" + charNum).text("0");
         $("#weapon-range-" + charNum).text("n/a");
         $("#weapon-magical-" + charNum).text("n/a");
         $("#weapon-desc-" + charNum).text("No additional effects.");
@@ -363,6 +363,33 @@ function showWeapon(selectedWeapon, charNum, update, showHidden) {
     }
 
     $("#weapon-might-" + charNum).data("oldmt", mt);
+}
+
+function updateRefinements(selectedWeapon, charNum)
+{
+    // show refinement options
+    var refinements = "<option value=\"None\">None</option>";
+    var selectedRefinement="None";
+    if(selectedWeapon!="None")
+    {
+        if (weaponInfo[selectedWeapon].hasOwnProperty("refinable")) {
+            if(weaponInfo[selectedWeapon].type!="Staff") {
+                refinements += "<option value=\"Attack\">Attack</option>";
+                refinements += "<option value=\"Speed\">Speed</option>";
+                refinements += "<option value=\"Defense\">Defense</option>";
+                refinements += "<option value=\"Resistance\">Resistance</option>";
+            }
+            else {
+                refinements += "<option value=\"Wrathful\">Wrathful</option>";
+                refinements += "<option value=\"Dazzling\">Dazzling</option>";
+            }
+            if(weaponInfo[selectedWeapon].refinable.hasOwnProperty("Special"))
+                refinements += "<option value=\"Special\">Special</option>";
+        }
+    }
+    // set values
+    $("#refinement-" + charNum).html(refinements);
+    $("#refinement-" + charNum).val(selectedRefinement).attr('selected', 'selected');
 }
 
 // show special cooldown values
@@ -501,11 +528,35 @@ function applyStatMods(stats, skillName, dataInfo) {
     return stats;
 }
 
+// applies any stat modifiers to the given stats and returns the resulting stats
+// stats contain the character's stats, skillName is the skill to check for stat mods, dataInfo contains the info for the given skill
+function applyStatModsRef(stats, refinement, type, weapon) {
+    if(refinement!="None")
+    {
+        var tmp;
+        if(refinement=="Special")
+            tmp=refinementsInfo.Special[weapon.refinable.Special];
+        else
+            tmp=refinementsInfo[type][refinement];
+        if (tmp.hasOwnProperty("stat_mod")) {
+            for (var key in tmp.stat_mod) {
+                stats[key] += tmp.stat_mod[key];
+                if (stats[key] < 0) {
+                    stats[key] = 0;
+                } else if (stats[key] > 99) {
+                    stats[key] = 99;
+                }
+            }
+        }
+    }
+    return stats;
+}
+
 // gets that stat totals given the data
 // charName is the name of the character, weaponName is the equipped weapon, passiveA is the equipped passive a skill
 // rarity is the rarity of the character, level is the level of the character, merge is the number of units merged with the given one
 // boon is the boon stat, bane is the bane stat
-function getStatTotals(charName, weaponName, passiveA, seal, rarity, level, merge, boon, bane, summonerSupport, allySupport) {
+function getStatTotals(charName, weaponName, passiveA, seal, rarity, level, merge, boon, bane, summonerSupport, allySupport, refinement) {
 
     // base stats + boons/banes
     var stats = {};
@@ -562,12 +613,20 @@ function getStatTotals(charName, weaponName, passiveA, seal, rarity, level, merg
     }
 
     // add weapon might
-    stats.atk += (weaponName !== "None") ? weaponInfo[weaponName].might : 0;
+    stats.atk += ((weaponName !== "None"))? weaponInfo[weaponName].might : 0;
+
+    //Check for refinement updated might
+    if(refinement!="None" && weaponName!="None" && weaponInfo[weaponName].hasOwnProperty("refinable") && weaponInfo[weaponName].refinable.hasOwnProperty("might"))
+	{
+        stats.atk += weaponInfo[weaponName].refinable.might - weaponInfo[weaponName].might;
+	}
 
     // apply stat mods
     stats = applyStatMods(stats, weaponName, weaponInfo);
     stats = applyStatMods(stats, passiveA, skillInfo.a);
     stats = applyStatMods(stats, seal, skillInfo.s);
+	if(refinement!="None" && weaponName!="None" && weaponInfo[weaponName].hasOwnProperty("refinable"))
+        stats = applyStatModsRef(stats, refinement, weaponInfo[weaponName].refinable.type, weaponInfo[weaponName]);
 
     //Apply support bonuses
     if (summonerSupport !== '') {
@@ -590,6 +649,7 @@ function displayStatTotals(charNum) {
     var charName = $("#char-" + charNum).val();
     var weaponName = $("#weapon-" + charNum).val();
     var passiveA = $("#passive-a-" + charNum).val();
+    var refinement = $("#refinement-" + charNum).val();
     var seal = $("#passive-s-" + charNum).val();
     var rarity = parseInt($("#rarity-" + charNum).val());
     var level = parseInt($("#level-" + charNum).val());
@@ -600,7 +660,7 @@ function displayStatTotals(charNum) {
     var allySupport = $('#ally-support-' + charNum).val();
 
     // get stats
-    var stats = getStatTotals(charName, weaponName, passiveA, seal, rarity, level, merge, boon, bane, summonerSupport, allySupport);
+    var stats = getStatTotals(charName, weaponName, passiveA, seal, rarity, level, merge, boon, bane, summonerSupport, allySupport, refinement);
 
     // display stats
     $("#hp-" + charNum + ", #curr-hp-" + charNum).val(stats.hp);
@@ -861,6 +921,7 @@ function getCharPanelData(charNum) {
     charData.passiveBData = $("#passive-b-" + charNum).data("info");
     charData.passiveCData = $("#passive-c-" + charNum).data("info");
     charData.special = $("#special-" + charNum).val();
+	charData.refinement = $("#refinement-" + charNum).val();
     charData.specCurrCooldown = parseInt($("#spec-cooldown-" + charNum).val());
     charData.specialData = $("#special-" + charNum).data("info");
     charData.assistData = $("#assist-" + charNum).data("info");
@@ -999,6 +1060,7 @@ function getDefaultCharData(charName) {
     charData.assistData = (charInfo[charName].hasOwnProperty("assist") && assistIndex >= 0) ? assistInfo[charInfo[charName].assist[assistIndex]] : {};
     charData.special = (charInfo[charName].hasOwnProperty("special") && specialIndex >= 0) ? charInfo[charName].special[specialIndex] : "None";
     charData.specialData = (charInfo[charName].hasOwnProperty("special") && specialIndex >= 0) ? specialInfo[charData.special] : {};
+    charData.refinement="None";
     charData.seal = "None";
     charData.sealData = {};
 
@@ -1079,7 +1141,7 @@ function getDefaultCharData(charName) {
     // show stats
     var panicMod = charData.status.hasOwnProperty("panic") ? -1 : 1;
     if (charInfo[charName].hasOwnProperty("base_stat")) {
-        var stats = getStatTotals(charName, charData.weaponName, charData.passiveA, charData.seal, rarity, level, merge, boon, bane, charData.summonerSupport, charData.allySupport);
+        var stats = getStatTotals(charName, charData.weaponName, charData.passiveA, charData.seal, rarity, level, merge, boon, bane, charData.summonerSupport, charData.allySupport, charData.refinement);
 
         charData.currHP = stats.hp;
         charData.initHP = stats.hp;
@@ -1592,6 +1654,37 @@ function singleCombat(battleInfo, initiator, logIntro, brave) {
     return battleInfo;
 }
 
+function innerRefCheck(agent, inner){
+
+    Object.keys(inner).forEach(function(current_value) {
+        if(current_value=="might" || current_value=="type" || current_value=="Special" || current_value=="stat_mod"){ //Things we don't care about
+		}else if(agent.weaponData.hasOwnProperty(current_value)){
+            agent.weaponData[current_value]=inner[current_value]; //Change old things!
+        }
+        else if(current_value=="remove"){ //Certain upgrades (Parthia) remove stuff
+            Object.keys(inner.remove).forEach(function(remove_value){
+                delete(agent.weaponData[remove_value]);
+            });
+        }
+        else{
+            agent.weaponData[current_value]=inner[current_value]; //Add new things!
+        }
+    });
+}
+
+//Inserts refinement inside the weapon
+function getRefBonus(agent){
+    if((agent.weaponName!="None")&& (agent.refinement!="None" && (agent.weaponData.hasOwnProperty("refinable"))))
+    {
+        var inner=agent.weaponData.refinable;
+        innerRefCheck(agent, inner);
+        if(agent.refinement=="Special"){
+            inner=refinementsInfo.Special[agent.weaponData.refinable.Special];
+            innerRefCheck(agent, inner);
+        }
+    }
+}
+
 // simulates a battle between the characters currently on display and outputs to the battle log and results section
 // battleInfo contains all the initial combat data before the combat starts, displayMsg is true if we need to print the battle log
 // returns battleInfo
@@ -1599,7 +1692,15 @@ function simBattle(battleInfo, displayMsg) {
 
     var attacker = battleInfo.attacker;
     var defender = battleInfo.defender;
+	
+    //Needed to make sure stuff isn't corrupted	
+    attacker.weaponData= Object.assign({}, weaponInfo[attacker.weaponName]);
+    defender.weaponData= Object.assign({}, weaponInfo[defender.weaponName]);
 
+    //Refinement checks!
+    getRefBonus(attacker);
+    getRefBonus(defender);
+	
     //Storing attacker info for self-referencing in later calculations
     attacker.isAttacker = true;
     attacker.agentClass = 'attacker';
@@ -1749,7 +1850,9 @@ function simBattle(battleInfo, displayMsg) {
     var vantage = false;
     var vantagePassive = !defender.sealData.hasOwnProperty("remove_prio_hp") && canActivateVantage(defender.passiveBData, defender.initHP, defender.hp);
     var vantageWeapon = !defender.sealData.hasOwnProperty("remove_prio_hp") && canActivateVantage(defender.weaponData, defender.initHP, defender.hp);
-    var vantageSource = vantagePassive ? skillInfo['b'][defender.passiveB].name : weaponInfo[defender.weaponName].name;
+    var vantageSource="";
+    if(defCC) //Fixes issue where defender wouldn't be able to be without a weapon
+        vantageSource = vantagePassive ? skillInfo['b'][defender.passiveB].name : weaponInfo[defender.weaponName].name;
 
     // desperation info - if attacker has hardy bearing, no desperation
     var desperation = false;
@@ -3236,6 +3339,7 @@ function importTeam(attacker) {
         importedChars[charCount].special = "None";
         importedChars[charCount].specCooldown = "0";
         importedChars[charCount].seal = "None";
+        importedChars[charCount].refinement="None";
         importedChars[charCount].status = [];
         importedChars[charCount].terrain = "Default";
         importedChars[charCount].adjacent = "0";
@@ -3373,7 +3477,7 @@ function importTeam(attacker) {
                 $("#import-error-msg").text("Import error: Missing stats for data-mined unit (line " + (textLine + 1).toString() + ")").show();
                 error = true;
             } else { // get base stats for character
-                var defaultStats = getStatTotals(importedChars[charCount].character, importedChars[charCount].weapon, importedChars[charCount].passiveA, importedChars[charCount].seal, parseInt(importedChars[charCount].rarity), parseInt(importedChars[charCount].level), parseInt(importedChars[charCount].merge), importedChars[charCount].boon, importedChars[charCount].bane, importedChars[charCount].summonerSupport, importedChars[charCount].allySupport);
+                var defaultStats = getStatTotals(importedChars[charCount].character, importedChars[charCount].weapon, importedChars[charCount].passiveA, importedChars[charCount].seal, parseInt(importedChars[charCount].rarity), parseInt(importedChars[charCount].level), parseInt(importedChars[charCount].merge), importedChars[charCount].boon, importedChars[charCount].bane, "", "", importedChars[charCount].refinement);
 
                 importedChars[charCount].hp = defaultStats.hp;
                 importedChars[charCount].currentHP = defaultStats.hp;
@@ -3423,7 +3527,7 @@ function importTeam(attacker) {
 
         // get equipped weapon and skills
         textLine += statsIncluded ? 1 : 0;
-        var equips = {"weapon": false, "assist": false, "special": false, "passive a": false, "passive b": false, "passive c": false, "sacred seal": false};
+        var equips = {"weapon": false, "refinement":false, "assist": false, "special": false, "passive a": false, "passive b": false, "passive c": false, "sacred seal": false};
 
         while (true) {
             if (textLine >= importText.length) {
@@ -3445,6 +3549,8 @@ function importTeam(attacker) {
                             error = true;
                             break;
                         }
+                    } else if (equipItem === "refinement") { // refinement
+                        importedChars[charCount].refinement = line[1];
                     } else if (equipItem === "assist") { // assist
                         if (assistInfo.hasOwnProperty(line[1]) && ((importedChars[charCount].character === "Custom") || (isInheritable(assistInfo[line[1]], importedChars[charCount].character) || (charInfo[importedChars[charCount].character].hasOwnProperty("assist") && charInfo[importedChars[charCount].character].assist[0] === line[1])))) {
                             importedChars[charCount].assist = line[1];
@@ -3525,7 +3631,7 @@ function importTeam(attacker) {
 
         // get stats if they were not included in the import
         if (!statsIncluded) {
-            var stats = getStatTotals(importedChars[charCount].character, importedChars[charCount].weapon, importedChars[charCount].passiveA, importedChars[charCount].seal, parseInt(importedChars[charCount].rarity), parseInt(importedChars[charCount].level), parseInt(importedChars[charCount].merge), importedChars[charCount].boon, importedChars[charCount].bane);
+            var stats = getStatTotals(importedChars[charCount].character, importedChars[charCount].weapon, importedChars[charCount].passiveA, importedChars[charCount].seal, parseInt(importedChars[charCount].rarity), parseInt(importedChars[charCount].level), parseInt(importedChars[charCount].merge), importedChars[charCount].boon, importedChars[charCount].bane, "", "", importedChars[charCount].refinement);
 
             importedChars[charCount].hp = stats.hp;
             importedChars[charCount].currentHP = stats.hp;
