@@ -5,7 +5,7 @@ const express = require('express');
 //Filesystem manipulation
 const fs = require('fs');
 const path = require('path');
-
+var hbs = require('hbs');
 //Lodash is awesome
 const _ = require('lodash');
 
@@ -13,25 +13,20 @@ const _ = require('lodash');
 var config = require('./config/main.json');
 config.filters = require('./config/matchup-filters.json');
 
-//Mustache template engine
-const expressHandlebars = require('express-handlebars');
-handlebarsHelpers = require('handlebars-helpers')();
-
-const handlebarsEngine = expressHandlebars.create({
-    defaultLayout: 'test-layout',
-    viewsDir: __dirname + '/views',
-    layoutsDir: __dirname + '/views/layouts',
-    partialsDir: __dirname + '/views/partials',
-    helpers: handlebarsHelpers
-});
+var hbsHelpers = require('handlebars-helpers')();
 
 // create a new express server
 var app = express();
 
-// Register '.mustache' extension with The Mustache Express
-app.engine('handlebars', handlebarsEngine.engine);
-app.set('view engine', 'handlebars');
-app.set('views', handlebarsEngine.viewsDir);
+for (var h in hbsHelpers) {
+    hbs.registerHelper(h, hbsHelpers[h]);
+}
+
+hbs.registerPartials(`${__dirname}/views/partials`);
+hbs.localsAsTemplateData(app);
+app.set('view engine', 'hbs');
+app.set('views', `${__dirname}/views`);
+app.locals.layout = 'layouts/test_layout';
 
 // serve the files out of ./public as our main files
 app.use(express.static(__dirname + '/public', { redirect : false }));
@@ -75,7 +70,7 @@ app.get('/', function(req, res, next) {
         'init/event-listeners.js',
         'init/init.js'
     ];
-    res.render('damage-calc', res.locals);
+    res.render('damage_calc', res.locals);
 });
 
 function loadJson(dir) {
