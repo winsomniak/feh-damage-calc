@@ -385,8 +385,6 @@ $(".build-select").on("change", function() {
         $("#boon-" + charNum).val("neutral");
     }
 
-    updateRefinements($("#weapon-" + charNum).val(), charNum);
-
     // check if skills need to change due to rarity change
     if ($(this).hasClass("rarity-select")) {
         rarityUpdate(charNum, parseInt(this.value));
