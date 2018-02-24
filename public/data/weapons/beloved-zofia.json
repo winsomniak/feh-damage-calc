@@ -1,0 +1,21 @@
+{
+    "name": "Beloved Zofia",
+    "might": 16,
+    "range": 1,
+    "sp": 400,
+    "description": "Grants Def+3. If unit's HP = 100% at start of combat, grants Atk/Spd/Def/Res+4, but if unit attacked, unit takes 4 damage after combat.",
+    "type": "Sword",
+    "link": "https://kagerochart.com/hero/weapons/beloved-zofia",
+    "stat_mod": {
+        "def": 3
+    },
+    "full_hp_mod": {
+        "atk": 4,
+        "spd": 4,
+        "def": 4,
+        "res": 4
+    },
+    "full_hp_atk_recoil_dmg": 4,
+    "char_unique": true,
+    "id": "beloved-zofia"
+}

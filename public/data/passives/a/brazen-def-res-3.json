@@ -1,0 +1,16 @@
+{
+    "name": "Brazen Def Res 3",
+    "sp": 240,
+    "type": "A",
+    "description": "If unit's HP ≤ 80% at the start of combat, grants Def/Res+7 during combat.",
+    "icon": "/images/icons/passives/brazen-def-res-3.png",
+    "below_threshold_mod": {
+        "threshold": 0.8,
+        "stat_mod": {
+            "def": 7,
+            "res": 7
+        }
+    },
+    "link": "https://kagerochart.com/hero/passives/brazen-def-res-3",
+    "id": "brazen-def-res-3"
+}

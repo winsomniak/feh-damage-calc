@@ -1,0 +1,26 @@
+{
+    "Attack":{
+        "stat_mod":{
+            "hp": 3,
+            "atk": 2
+        }
+    },
+    "Speed":{
+        "stat_mod":{
+            "hp": 3,
+            "spd": 3
+        }
+    },
+    "Defense":{
+        "stat_mod":{
+            "hp": 3,
+            "def": 4
+        }
+    },
+    "Resistance":{
+        "stat_mod":{
+            "hp": 3,
+            "res": 4
+        }
+    }
+}

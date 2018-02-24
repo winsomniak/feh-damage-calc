@@ -12,6 +12,7 @@
     "refinable": {
         "type": "ranged",
         "description": "Unit recovers 4 HP after battle.",
+        "might": 12,
         "heal": 4,
         "remove":
         {

@@ -1,7 +1,7 @@
 {
     "name": "Casa Blanca+",
     "might": 14,
-    "range": 2,
+    "range": 1,
     "sp": 300,
     "description": "If foe uses bow, dagger, magic, or staff, neutralizes foe's bonuses (from skills like Fortify, Rally, etc.) during combat.",
     "type": "Lance",

@@ -8,6 +8,8 @@
     "attack_follow_up": {
     },
     "move_unique": "Armored",
-    "spec_accel": true,
+    "spec_accel": {
+        "not_in_defense":true
+    },
     "id": "bold-fighter-3"
 }

@@ -1,0 +1,47 @@
+{
+    "display": "Hardin, Dark Emperor",
+    "name": "Hardin",
+    "title": "Dark Emperor",
+    "id": "hardin-dark-emperor",
+    "color": "Blue",
+    "weapon_type": "Lance",
+    "link": "https://kagerochart.com/hero/hardin-dark-emperor",
+    "move_type": "Armored",
+    "weapon": [
+        "gradivus",
+        "silver-lance",
+        "steel-lance",
+        "iron-lance"
+    ],
+    "special": [
+        "vengeance",
+        "retribution"
+    ],
+    "passive_a": [
+        "brazen-def-res-3",
+        "brazen-def-res-2",
+        "brazen-def-res-1"
+    ],
+    "passive_b": [
+        "bold-fighter-3",
+        "bold-fighter-2",
+        "bold-fighter-1"
+    ],
+    "base_stat": {
+        "star_5": {
+            "hp": 23,
+            "atk": 8,
+            "spd": 6,
+            "def": 10,
+            "res": 8
+        },
+        "growth": {
+            "hp": 6,
+            "atk": 8,
+            "spd": 6,
+            "def": 8,
+            "res": 7,
+            "total": 35
+        }
+    }
+}

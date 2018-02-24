@@ -1,0 +1,54 @@
+{
+    "display": "Corrin, Enjoying Tradition",
+    "name": "Corrin",
+    "title": "Enjoying Tradition",
+    "id": "corrin-enjoying-tradition",
+    "color": "Colorless",
+    "weapon_type": "Bow",
+    "link": "https://kagerochart.com/hero/corrin-enjoying-tradition",
+    "move_type": "Infantry",
+    "weapon": [
+        "hama-ya-plus",
+        "hama-ya",
+        "steel-bow",
+        "iron-bow"
+    ],
+    "assist": [
+        "rally-attack-defense",
+        "rally-defense"
+    ],
+    "passive_a": [
+        "attack-def-plus-2",
+        "attack-def-plus-1",
+        "defense-plus-1"
+    ],
+    "passive_c": [
+        "spur-def-res-2",
+        "spur-def-res-1",
+        "spur-def-1"
+    ],
+    "base_stat": {
+        "star_4": {
+            "hp": 17,
+            "atk": 8,
+            "spd": 8,
+            "def": 5,
+            "res": 4
+        },
+        "star_5": {
+            "hp": 18,
+            "atk": 8,
+            "spd": 8,
+            "def": 6,
+            "res": 5
+        },
+        "growth": {
+            "hp": 5,
+            "atk": 7,
+            "spd": 6,
+            "def": 9,
+            "res": 2,
+            "total": 29
+        }
+    }
+}

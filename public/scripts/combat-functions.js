@@ -101,6 +101,34 @@ function removeStatBonuses(hero) {
     delete hero.addBonusAtk;
 }
 
+//Check for enemy counter prevention (dazzling staff/Sacae's blessing/Deathly dagger/Firesweep/sweep)
+function checkPrevent(attacker, defender) {
+//Weapon specific counter prevention
+    var tmp=true;
+    checks.forEach(function(key){
+    var tocheck = attacker[key];
+        if ((tocheck.prevent_weapon_counter && tocheck.prevent_weapon_counter.type.includes(defender.weaponData.type)) || (canPreventEnemyCounter(tocheck, attacker.hp, attacker.currHP)) || (tocheck.prevent_counter || defender[key].prevent_counter || canActivateSweep(tocheck, defender.weaponData.type, attacker, defender))) {
+            tmp = false;
+            return;
+        }
+	});
+    return tmp;
+}
+
+//Check gor initiate/defend bonuses
+function checkMods(battleInfo, attacker, defender, mod, message1, message2)
+{
+    checks.forEach(function(key){
+        if (attacker[key].hasOwnProperty(mod)) {
+            battleInfo = combatBonus(battleInfo, attacker[key][mod], attacker[key].name, message1, message2);
+        }
+        if (attacker[key].hasOwnProperty("type_"+mod) && attacker[key]["type_"+mod].weapon_type.hasOwnProperty(defender.weaponData.type)) {
+            battleInfo = combatBonus(battleInfo, attacker[key]["type_" + mod].stat_mod, attacker[key].name, message1, message2 + " against a " + defender.weaponData.type + " user" );
+        }
+    });
+    return battleInfo;
+}
+
 // checks if the defender can counter
 // battleInfo contains all battle information
 function defCanCounter(battleInfo) {
@@ -117,18 +145,7 @@ function defCanCounter(battleInfo) {
         return false;
     }
 
-    //Counter prevention
-    if (attacker.weaponData.prevent_counter || defender.weaponData.prevent_counter || canActivateSweep(attacker.passiveBData, defender.weaponData.type, attacker, defender)) {
-        return false;
-    }
-
-    //Not sure why original author separate this out
-    if (canPreventEnemyCounter(attacker.passiveBData, attacker.hp, attacker.currHP)) {
-        return false;
-    }
-
-    //Weapon specific counter prevention
-    if (attacker.passiveBData.prevent_weapon_counter && attacker.passiveBData.prevent_weapon_counter.type.includes(defender.weaponData.type)) {
+    if(!checkPrevent(attacker, defender)){
         return false;
     }
 
@@ -203,9 +220,10 @@ function Follow(char, attacker, othWeapon, CanCounter, battleInfo) {
             }
         }
         if((char[checks[i]].hasOwnProperty("self_prevent_follow")) && ((!char[checks[i]].self_prevent_follow.hasOwnProperty("threshold")) || (char.initHP >= roundNum(char[checks[i]].self_prevent_follow.threshold * char.hp, true)))){
-            if((!char[checks[i]].self_prevent_follow.hasOwnProperty("attack")) || attacker)
+            if((!char[checks[i]].self_prevent_follow.hasOwnProperty("attack")) || attacker) {
                 doubling--;
                 battleInfo.logMsg+= "<li class='battle-interaction'><span class='" + char.agentClass + "'>" + char.display + "</span>'s " + char[checks[i]].name + " activated, decreasing their own ability to follow-up!</li>";
+            }
         }
     }
     if(attacker)
@@ -328,24 +346,6 @@ function adjacentStatBonus(battleInfo, char, charToUse) {
     return battleInfo;
 }
 
-function enemyPhaseCharge(battleInfo, attacker, defender) {
-    checks.forEach(function(key) {
-        var effect = battleInfo.defender[key].enemy_phase_charge;
-
-        if (effect) {
-            if (effect.attack && Object.is(attacker, battleInfo.defender)) {
-                battleInfo.logMsg += battleInfo.defender.display + " gained an additional special cooldown charge [" + battleInfo.defender[key].name + "]! ";
-                attacker.specCurrCooldown--;
-            }
-            else if (effect.defend && Object.is(defender, battleInfo.defender)) {
-                battleInfo.logMsg += battleInfo.defender.display + " gained an additional special cooldown charge [" + battleInfo.defender[key].name + "]! ";
-                defender.specCurrCooldown--;
-
-            }
-        }
-    })
-}
-
 //New increased damage check
 function checkBonusDmg(battleInfo, char)
 {
@@ -461,37 +461,97 @@ function combatBonus(battleInfo, statMods, modSource, agentClass, srcMsg) {
 
 // checks if a unit can accelerate special cooldown
 // battleInfo contains the needed info for battle, attacker is true if we are accelerating the attacker's special
-function hasSpecAccel(battleInfo, attacker) {
+function hasSpecAccel(battleInfo, attacker, defender, initiator, block) {
 
-    var mainUnit = attacker ? battleInfo.attacker : battleInfo.defender;
-    var otherUnit = attacker ? battleInfo.defender : battleInfo.attacker;
+    var mainUnit = attacker;
+    var otherUnit = defender;
 
     //Check every hero ability for spec_accel data
     for (var i = 0; i < checks.length; i++) {
         var key = checks[i];
+        var tocheck=mainUnit[key].weapon_charge;
+        var stringToPrint= "<span class='" +mainUnit.agentClass + "'>" +mainUnit.display + "</span> gained an additional special cooldown charge [" + mainUnit[key].name + "]! ";
 
-        //If no spec_accel data, continue to next ability
-        if (!mainUnit[key].spec_accel) {
-            continue;
+        if(tocheck) {
+            if(tocheck.weapon_type.hasOwnProperty(otherUnit.weaponData.type)){ //Felicia's plate
+                if(mainUnit.specCurrCooldown > 0) {
+                    mainUnit.specCurrCooldown--;
+                    battleInfo.logMsg += stringToPrint;
+                }
+                return true;
+            }
         }
 
+        if(block && mainUnit[key].hasOwnProperty("def_spec_charge")) //Don't know what this checks, but it does something...?
+        {
+            if(mainUnit.specCurrCooldown > 0) {
+                mainUnit.specCurrCooldown--;
+                battleInfo.logMsg += stringToPrint;
+            }
+            return true;
+        }
+
+        //heavy blade part
+        mainUnit = initiator ? battleInfo.attacker : battleInfo.defender;
+        otherUnit = initiator ? battleInfo.defender : battleInfo.attacker;
+
+        //If no spec_accel data, or we shouldn't do the following part, continue to next ability
+        if((!mainUnit[key].spec_accel)||(block))
+            continue;
         var stat = mainUnit[key].spec_accel.stat;
         var reqStatAdvantage = mainUnit[key].spec_accel.adv;
+        stringToPrint= "<span class='" +mainUnit.agentClass + "'>" +mainUnit.display + "</span> gained an additional special cooldown charge [" + mainUnit[key].name + "]! ";
 
-        //If spec_accel data does not have stat information, there are no requirements
+        //Check if the boost activates if the unit's attacked
+        if(mainUnit[key].spec_accel.hasOwnProperty("not_in_defense") && !initiator)
+            continue;
+        //If spec_accel data does not have stat information, there are no requirements, only one possible is the threshold one
         if (!stat) {
-            return true;
+            if((!(mainUnit[key].spec_accel.hasOwnProperty("threshold")))||(mainUnit.initHP >= roundNum(mainUnit[key].spec_accel.threshold * mainUnit.hp, true))) {
+                if(mainUnit.specCurrCooldown > 0) {
+                    mainUnit.specCurrCooldown--;
+                    battleInfo.logMsg += stringToPrint;
+                }
+                return true;
+            }
         }
         //Otherwise we need to compare stats
         else {
             //Account for bonuses to comparisons like phantom speed
             if (phantomStat(mainUnit, stat) - phantomStat(otherUnit, stat) >= reqStatAdvantage) {
+                if(mainUnit.specCurrCooldown > 0) {
+                    mainUnit.specCurrCooldown--;
+                    battleInfo.logMsg += stringToPrint;
+                }
                 return true;
             }
         }
     }
 
-    return false
+    return false;
+}
+
+function enemyPhaseCharge(battleInfo, attacker, defender) {
+    checks.forEach(function(key) {
+        var effect = battleInfo.defender[key].enemy_phase_charge;
+
+        if (effect) {
+            if (effect.attack && Object.is(attacker, battleInfo.defender) && (!effect.hasOwnProperty("threshold") || (attacker.initHP >= roundNum(effect.threshold * attacker.hp, true)))) {
+                if(attacker.specCurrCooldown > 0) {
+                    battleInfo.logMsg += "<span class='" +attacker.agentClass + "'>" +attacker.display + "</span> gained an additional special cooldown charge [" + attacker[key].name + "]! ";
+                    attacker.specCurrCooldown--;
+                }
+                return;
+            }
+            else if (effect.defend && Object.is(defender, battleInfo.defender) && (!effect.hasOwnProperty("threshold") || (defender.initHP >= roundNum(effect.threshold * defender.hp, true)))) {
+                if(defender.specCurrCooldown > 0) {
+                    battleInfo.logMsg += "<span class='" +defender.agentClass + "'>" +defender.display + "</span> gained an additional special cooldown charge [" + defender[key].name + "]! ";
+                    defender.specCurrCooldown--;
+                }
+                return;
+            }
+        }
+    });
 }
 
 //Returns a specific hero's stat with phantom stats included

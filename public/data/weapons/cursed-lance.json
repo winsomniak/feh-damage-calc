@@ -13,6 +13,7 @@
         "atk": 2,
         "spd": 2
     },
+    "char_unique":true,
     "recoil_dmg": 4,
     "id": "cursed-lance"
 }

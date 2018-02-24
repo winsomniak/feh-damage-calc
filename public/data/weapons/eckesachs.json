@@ -11,6 +11,11 @@
     "threaten": {
         "def": -4
     },
+    "refinable":{
+        "type":"melee",
+        "Special":"Eckesachs",
+        "description": "Inflicts Def-6 on foes (excluding dragons) within 2 spaces at the start of each turn, through their next actions."
+    },
     "char_unique": true,
     "id": "eckesachs"
 }

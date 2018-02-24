@@ -1,0 +1,9 @@
+{
+    "name": "Chill Speed 2",
+    "sp": 120,
+    "type": "B",
+    "description": "At the start of each turn, inflicts Spd-5 on foe on the enemy team with the highest Spd through its next action.",
+    "icon": "/images/icons/passives/chill-spd-2.png",
+    "link": "https://kagerochart.com/hero/passives/chill-spd-2",
+    "id": "chill-spd-2"
+}

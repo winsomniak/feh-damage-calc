@@ -12,6 +12,11 @@
         "Green Breath",
         "Blue Breath"
     ],
+    "refinable":{
+        "type":"melee",
+        "Special":"Falchion",
+        "description": "Effective against dragons. At the start of every second turn, unit recovers 10 HP."
+    },
     "char_unique": true,
     "id": "falchion"
 }

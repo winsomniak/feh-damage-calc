@@ -91,11 +91,15 @@ function getCharTabInfo(attacker) {
             getMoveIcon((charNum === '1' ? '#attacker-move' : '#defender-move'), $('#move-type-' + charNum).val());
         }
 
-        //change the refinement
-        $('#refinement-' + charNum).val(charTabInfo.refinement).prop('selected', 'selected');
+        //change the blessing
+        $('#blessing-' + charNum).val(charTabInfo.blessing).prop('selected', 'selected');
 
         $('#weapon-' + charNum).val(charTabInfo.weapon).prop('selected', 'selected'); //.trigger('change.select2');
         showWeapon(charTabInfo.weapon, charNum, false, true);
+		updateRefinements(charTabInfo.weapon, charNum);
+
+        //change the refinement
+        $('#refinement-' + charNum).val(charTabInfo.refinement).prop('selected', 'selected');
 
         // change special cooldown
         $('#spec-cooldown-' + charNum).val(charTabInfo.specCooldown);
@@ -205,6 +209,7 @@ function storeCharTabInfo(attacker) {
     // weapon and skill info
     infoToStore.weapon = $('#weapon-' + charNum).val();
     infoToStore.refinement = $('#refinement-' + charNum).val();
+    infoToStore.blessing = $('#blessing-' + charNum).val();
     infoToStore.passiveA = $('#passive-a-' + charNum).val();
     infoToStore.passiveB = $('#passive-b-' + charNum).val();
     infoToStore.passiveC = $('#passive-c-' + charNum).val();
@@ -387,29 +392,24 @@ function displayChar(charName, charNum, showHidden) {
 
     $("#weapon-" + charNum).html(weapons);
     $("#weapon-" + charNum).val(selectedWeapon).attr('selected', 'selected'); //.trigger("change.select2");
-	
-    // show refinement options
-    var refinements = "<option value=\"None\">None</option>";
-    var selectedRefinement="None";
 
-    if (weaponInfo[selectedWeapon].hasOwnProperty("refinable")) {
-        if(weaponInfo[selectedWeapon].type!="Staff") {
-            refinements += "<option value=\"Attack\">Attack</option>";
-            refinements += "<option value=\"Speed\">Speed</option>";
-            refinements += "<option value=\"Defense\">Defense</option>";
-            refinements += "<option value=\"Resistance\">Resistance</option>";
-        }
-        else {
-            refinements += "<option value=\"Wrathful\">Wrathful</option>";
-            refinements += "<option value=\"Dazzling\">Dazzling</option>";
-        }
-        if(weaponInfo[selectedWeapon].refinable.hasOwnProperty("Special"))
-            refinements += "<option value=\"Special\">Special</option>";
-    }
+    updateRefinements(selectedWeapon, charNum); //Refinement stuff!
+
+
+    //blessings stuff!
+    var blessings="<option value=\"None\">---</option>";
+    var selectedBlessing="None";
+
+    if (!singleChar.hasOwnProperty("legendary")){
+        blessings += "<option value=\"Attack\">Attack</option>";
+        blessings += "<option value=\"Speed\">Speed</option>";
+        blessings += "<option value=\"Defense\">Defense</option>";
+        blessings += "<option value=\"Resistance\">Resistance</option>";
+	}
 
     // set values
-    $("#refinement-" + charNum).html(refinements);
-    $("#refinement-" + charNum).val(selectedRefinement).attr('selected', 'selected');
+    $("#blessing-" + charNum).html(blessings);
+    $("#blessing-" + charNum).val(selectedBlessing).attr('selected', 'selected');
 
     // show extra weapon info
     showWeapon(selectedWeapon, charNum, false, showHidden);
@@ -485,6 +485,7 @@ function displayCustomChar(charName, charNum, showHidden) {
     var weaponType = $("#weapon-type-" + charNum).val();
     var weapon = $("#weapon-" + charNum).val();
     var refinement = $("#refinement-" + charNum).val();
+    var blessing = $("#blessing-" + charNum).val();
     var passiveA = $("#passive-a-" + charNum).val();
     var passiveB = $("#passive-b-" + charNum).val();
     var passiveC = $("#passive-c-" + charNum).val();

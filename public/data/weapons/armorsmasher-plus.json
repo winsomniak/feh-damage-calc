@@ -13,7 +13,7 @@
     ],
     "refinable":{
         "type":"melee",
-        "special":"Armor melee"
+        "Special":"Armor melee"
     },
     "id": "armorsmasher-plus"
 }

@@ -15,7 +15,7 @@
     "refinable": {
         "type": "ranged",
         "description": "If unit's HP ≥ 50%, unit is not slowed by terrain. (Does not apply to impassable terrain.)",
-        "special": "Fujin Yumi"
+        "Special": "Fujin Yumi"
     },
     "id": "fujin-yumi"
 }

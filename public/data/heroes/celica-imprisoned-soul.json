@@ -1,0 +1,47 @@
+{
+    "display": "Celica, Imprisoned Soul",
+    "name": "Celica",
+    "title": "Imprisoned Soul",
+    "id": "celica-imprisoned-soul",
+    "color": "Red",
+    "weapon_type": "Sword",
+    "link": "https://kagerochart.com/hero/celica-imprisoned-soul",
+    "move_type": "Infantry",
+    "weapon": [
+        "beloved-zofia",
+        "silver-sword",
+        "steel-sword",
+        "iron-sword"
+    ],
+    "special": [
+        "luna",
+        "new-moon"
+    ],
+    "passive_b": [
+        "chill-spd-3",
+        "chill-spd-2",
+        "chill-spd-1"
+    ],
+    "passive_c": [
+        "hone-atk-3",
+        "hone-atk-2",
+        "hone-atk-1"
+    ],
+    "base_stat": {
+        "star_5": {
+            "hp": 18,
+            "atk": 9,
+            "spd": 9,
+            "def": 5,
+            "res": 7
+        },
+        "growth": {
+            "hp": 6,
+            "atk": 8,
+            "spd": 8,
+            "def": 6,
+            "res": 5,
+            "total": 33
+        }
+    }
+}

@@ -134,6 +134,14 @@ $(".refinement-selector").on("change", function (){
     updateDisplay();
 });
 
+// setup blessing select
+$(".blessing-selector").on("change", function (){
+    var charNum = $(this).data("charnum").toString();
+    displayStatTotals(charNum);
+    charChange(charNum);
+    updateDisplay();
+});
+
 // setup special select
 $(".special-selector").on("change", function (){
     var charNum = $(this).data("charnum").toString();
@@ -376,6 +384,8 @@ $(".build-select").on("change", function() {
     if ($(this).hasClass("bane-select") && this.value === $("#boon-" + charNum).val()) {
         $("#boon-" + charNum).val("neutral");
     }
+
+    updateRefinements($("#weapon-" + charNum).val(), charNum);
 
     // check if skills need to change due to rarity change
     if ($(this).hasClass("rarity-select")) {
