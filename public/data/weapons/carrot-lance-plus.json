@@ -12,7 +12,12 @@
     "refinable": {
         "type": "melee",
         "description": "Unit recovers 4 HP after battle.",
-        "heal": 4
+        "might": 14,
+        "heal": 4,
+        "remove":
+        {
+        "initiate_heal":true
+        }
     },
     "id": "carrot-lance-plus"
 }

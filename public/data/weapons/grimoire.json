@@ -7,5 +7,6 @@
     "type": "Red Tome",
     "link": "https://kagerochart.com/hero/weapons/grimoire",
     "magical": true,
+    "char_unique":true,
     "id": "grimoire"
 }

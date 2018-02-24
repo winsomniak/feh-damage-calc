@@ -1,0 +1,14 @@
+{
+    "name": "Expiration",
+    "might": 16,
+    "range": 1,
+    "sp": 400,
+    "description": "Enables counter-attack regardless of attacker's range. If foe's Range = 2, damage calculated using the lower of foe's Def or Res.",
+    "type": "Breath",
+    "link": "https://kagerochart.com/hero/weapons/expiration",
+    "magical": true,
+    "counter": true,
+    "LowerResDefRange": 2,
+    "char_unique":true,
+    "id": "expiration"
+}

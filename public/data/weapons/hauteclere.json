@@ -12,7 +12,7 @@
     "char_unique": true,
     "refinable": {
         "type": "melee",
-        "special": "Hauteclere"
+        "Special": "Hauteclere"
     },
     "id": "hauteclere"
 }

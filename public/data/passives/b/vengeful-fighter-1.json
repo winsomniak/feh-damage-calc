@@ -8,7 +8,10 @@
         "trigger": "healthy",
         "threshold": 0.9
     },
-    "spec_accel": true,
+    "enemy_phase_charge": {
+        "attack": true,
+        "threshold": 0.9
+    },
     "move_unique":"Armored",
     "link": "https://kagerochart.com/hero/passives/vengeful-fighter-1",
     "id": "vengeful-fighter-1"

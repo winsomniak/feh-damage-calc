@@ -1,24 +1,24 @@
 {
     "melee":{
-        "attack refinement":{
+        "Attack":{
             "stat_mod":{
                 "hp": 5,
                 "atk": 2
             }
         },
-        "speed refinement":{
+        "Speed":{
             "stat_mod":{
                 "hp": 5,
                 "spd": 3
             }
         },
-        "defence refinement":{
+        "Defense":{
             "stat_mod":{
                 "hp": 5,
                 "def": 4
             }
         },
-        "resistance refinement":{
+        "Resistance":{
             "stat_mod":{
                 "hp": 5,
                 "res": 4
@@ -26,25 +26,25 @@
         }
     },
     "ranged":{
-        "attack refinement":{
+        "Attack":{
             "stat_mod":{
                 "hp": 2,
                 "atk": 1
             }
         },
-        "speed refinement":{
+        "Speed":{
             "stat_mod":{
                 "hp": 2,
                 "spd": 2
             }
         },
-        "defence refinement":{
+        "Defense":{
             "stat_mod":{
                 "hp": 2,
                 "def": 3
             }
         },
-        "resistance refinement":{
+        "Resistance":{
             "stat_mod":{
                 "hp": 2,
                 "res": 3
@@ -52,48 +52,132 @@
         }
     },
     "staff":{
-        "dazzling refinement":{
-            "description":"The enemy cannot counterattack.",
-            "prevent_counter" : true
+        "Dazzling":{
+            "description":" The enemy cannot counterattack.",
+            "prevent_enemy_counter" : 0
         },
-        "wrathful refinement":{
-            "description":"Damage from unit's staff will be calculated the same as other weapons.",
+        "Wrathful":{
+            "description":" Damage from unit's staff will be calculated the same as other weapons.",
             "reg_weapon_dmg": 0
         }
     },
     "Special":{
+        "Basilikos":{
+            "stat_mod":{
+                "hp":3,
+                "atk": 5,
+                "spd": 5,
+                "def": -5,
+                "res": -5
+            },
+            "description":" Grants Atk/Spd+5. Inflicts Def/Res-5."
+        },
         "Sol Katti":{
             "stat_mod":{
                 "hp":3
             },
-            "description":"Unit makes a guaranteed follow-up attack when HP ≤ 75% and attacking a foe that can counter.",
-            "brash" : {
-            "threshold" : 0.75
+            "description":" Unit makes a guaranteed follow-up attack when HP ≤ 75% and attacking a foe that can counter.",
+            "attack_follow_up": {
+                "trigger": "damaged",
+                "threshold": 0.75,
+                "counterable":true
             }
         },
         "Siegmund":{
             "stat_mod":{
                 "hp":3
             },
-            "description":"Unit makes a guaranteed follow-up attack when HP ≥ 90% and attacking a foe that can counter.",
-            "bonus_follow_up": {
+            "description":" Unit makes a guaranteed follow-up attack when HP ≥ 90% and attacking a foe that can counter.",
+            "attack_follow_up": {
                 "trigger": "healthy",
-                "threshold": 0.9
+                "threshold": 0.9,
+                "counterable":true
+            }
+        },
+        "Deathly Dagger":{
+           "prevent_weapon_counter": {
+               "type": [
+                    "Red Tome",
+                    "Blue Tome",
+                    "Green Tome",
+                    "Tome"
+                ]
+            },
+            "description":" Foes using magic cannot counterattack."
+        },
+        "Eckesachs":{
+            "description":" If unit is attacked by foe using bow, daggers, magic, or staff, unit receives Def/Res+6 during combat.",
+            "stat_mod":{
+                "hp":3
+            },
+            "type_defend_mod": {
+                "weapon_type": {
+                    "Bow": true,
+                    "Dagger": true,
+                    "Staff": true,
+                    "Red Tome": true,
+                    "Blue Tome": true,
+                    "Green Tome": true,
+                    "Tome": true
+                },
+                "stat_mod": {
+                    "def": 6,
+                    "res": 6
+                }
+            }
+        },
+        "Falchion":{
+            "stat_mod":{
+                "hp":3
+            },
+            "description":" Grants Atk/Spd/Def/Res+2 to allies within 2 spaces during combat."
+        },
+        "Falchion 1":{
+            "stat_mod":{
+                "hp":3
+            },
+            "description":" Grants Atk/Spd/Def/Res+4 during combat if unit is adjacent to an ally.",
+            "adjacent_stat_bonus": {
+                "target": "self",
+                "adjacent": "ally",
+                "mod": {
+                    "atk": 4,
+                    "spd": 4,
+                    "def": 4,
+                    "res": 4
+                }
+            }
+        },
+        "Falchion 2":{
+            "stat_mod":{
+                "hp":3
+            },
+            "full_hp_atk_recoil_dmg": 5,
+            "hp_brave": 1.0,
+            "description":" If unit's HP = 100% at start of combat and unit initiates combat, unit attacks twice then takes 5 damage after combat."
+        },
+        "Felicia's Plate":
+        {
+            "description":" Grants Special cooldown charge +1 if foe uses magic. (Only highest value applied. Does not stack.)",
+            "weapon_charge": {
+                "weapon_type":{
+                    "Tome":true,
+                    "Green Tome":true,
+                    "Red Tome":true,
+                    "Blue Tome":true
+                }
             }
         },
         "Fujin Yumi":
         {
-            "description":"If unit's HP ≥ 50%, unit can move adjacent to any ally within 2 spaces."
+            "description":" If unit's HP ≥ 50%, unit can move adjacent to any ally within 2 spaces."
         },
-        "Deathly Dagger":{
-            "sweep": {
-                "weapon_type": {
-                    "Red Tome": true,
-                    "Blue Tome": true,
-                    "Green Tome": true
-                }
+        "Hinoka's Spear":
+        {
+            "stat_mod":{
+                "hp":3
             },
-            "description":"Foes using magic cannot counterattack."
+            "description":" Infantry and flying allies within 2 spaces can move to a space adjacent to unit."
         },
         "Mystletainn":
         {
@@ -105,25 +189,40 @@
             "res": 3
             },
         "recoil_dmg": 6,
-        "description":"Grants Atk/Spd/Def/Res +3. Unit takes 6 damage after combat."
+        "description":" Grants Atk/Spd/Def/Res +3. Unit takes 6 damage after combat."
         },
         "Hauteclere":{
             "stat_mod":{
                 "hp":3
             },
-            "description":"Deals +10 damage when special triggers.",
+            "description":" Deals +10 damage when special triggers.",
             "spec_damage_bonus" : 10
         },
         "Parthia":{
-            "description":"Grants Atk+6 during combat if foe uses bow, dagger, magic, or staff.",
-            "type_mod": {
+            "description":" Grants Atk+6 during combat if foe uses bow, dagger, magic, or staff.",
+            "type_initiate_mod": {
                 "weapon_type": {
                     "Bow": true,
                     "Dagger": true,
                     "Staff": true,
                     "Red Tome": true,
                     "Blue Tome": true,
-                    "Green Tome": true
+                    "Green Tome": true,
+                    "Tome": true
+                },
+                "stat_mod": {
+                    "atk": 6
+                }
+            },
+            "type_defend_mod": {
+                "weapon_type": {
+                    "Bow": true,
+                    "Dagger": true,
+                    "Staff": true,
+                    "Red Tome": true,
+                    "Blue Tome": true,
+                    "Green Tome": true,
+                    "Tome": true
                 },
                 "stat_mod": {
                     "atk": 6
@@ -131,10 +230,24 @@
             }
         },
         "Cymbeline":{
-            "description":"Grants Atk/Res+5 during combat if within 2 spaces of a flying ally.",
-            "stat_mod": {
-                "atk": 5,
-                "res": 5
+            "description":" Grants Atk/Res+5 during combat if within 2 spaces of a flying ally.",
+            "adjacent_stat_bonus": {
+                "target": "self",
+                "adjacent": "ally",
+                "mod": {
+                    "atk": 5,
+                    "res": 5
+                }
+            }
+        },
+        "Wing Sword":{
+            "stat_mod":{
+                "hp":3
+            },
+            "description":" If unit's Spd - foe's Spd ≥ 1, unit gains Special cooldown charge +1 per attack. (If using other similar skill, only highest value applied.)",
+            "spec_accel": {
+                "stat": "spd",
+                "adv": 1
             }
         },
         "Cavalry ranged":{
@@ -143,7 +256,7 @@
                     "Cavalry": true
                 }
             },
-            "description":"If in combat against a cavalry foe, nullifies foe's bonuses (from skills like Fortify, Rally, etc.) during combat."
+            "description":" If in combat against a cavalry foe, nullifies foe's bonuses (from skills like Fortify, Rally, etc.) during combat."
         },
         "Cavalry melee":{
             "stat_mod":{
@@ -154,7 +267,7 @@
                     "Cavalry": true
                 }
             },
-            "description":"If in combat against a cavalry foe, nullifies foe's bonuses (from skills like Fortify, Rally, etc.) during combat."
+            "description":" If in combat against a cavalry foe, nullifies foe's bonuses (from skills like Fortify, Rally, etc.) during combat."
         },
         "Armor melee":{
             "stat_mod":{
@@ -165,7 +278,7 @@
                     "Armored": true
                 }
             },
-            "description":"If in combat against an armored foe, nullifies foe's bonuses (from skills like Fortify, Rally, etc.) during combat."
+            "description":" If in combat against an armored foe, nullifies foe's bonuses (from skills like Fortify, Rally, etc.) during combat."
         }
     }
 }

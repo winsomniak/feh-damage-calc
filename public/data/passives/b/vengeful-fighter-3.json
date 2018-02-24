@@ -10,6 +10,9 @@
         "threshold": 0.5
     },
     "move_unique":"Armored",
-    "spec_accel": true,
+    "enemy_phase_charge": {
+        "attack": true,
+        "threshold": 0.5
+    },
     "id": "vengeful-fighter-3"
 }

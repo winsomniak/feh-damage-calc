@@ -1,0 +1,10 @@
+{
+    "name": "Ward Dragons",
+    "sp": 200,
+    "type": "C",
+    "description": "Grants dragon allies within 2 spaces Def/Res+4 during combat.",
+    "icon": "/images/icons/passives/ward-dragons.png",
+    "link": "https://kagerochart.com/hero/passives/ward-dragons",
+    "dragon_unique": true,
+    "id": "ward-dragons"
+}

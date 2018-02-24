@@ -10,7 +10,11 @@
     "magical": false,
     "refinable": {
         "type": "melee",
-        "description": "Grants allies withing 2 spaces Def/Res+5 through their next actions after any combat this unit initiates."
+        "description": "After combat, if unit attacked, grants Def/Res+5 to unit and allies within 2 spaces of unit for 1 turn.",
+        "after_mod":{
+            "def":5,
+            "res":5
+        }
     },
     "id": "first-bite-plus"
 }

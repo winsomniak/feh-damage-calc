@@ -18,7 +18,7 @@
         "type": "ranged",
         "initiate_poison": 10,
         "might": 14,
-        "special": "Deathly Dagger",
+        "Special": "Deathly Dagger",
         "description": "After combat, inflict Def/Res-7 on foe through their next actions. If unit initiated combat, inflict 10 damage to target and foes within 2 spaces of target after battle."
     },
     "id": "deathly-dagger"

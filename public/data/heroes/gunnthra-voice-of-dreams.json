@@ -5,6 +5,7 @@
     "id": "gunnthra-voice-of-dreams",
     "color": "Green",
     "weapon_type": "Green Tome",
+    "legendary":true,
     "link": "https://kagerochart.com/hero/gunnthra-voice-of-dreams",
     "move_type": "Cavalry",
     "weapon": [

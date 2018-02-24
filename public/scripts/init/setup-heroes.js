@@ -80,6 +80,14 @@ function loadHeroesFromUrl() {
             case 'weapon-2':
                 showWeapon(p, charNum, true, false);
                 break;
+            case 'refinement-1':
+            case 'refinement-2':
+                displayStatTotals(charNum);
+                break;
+            case 'blessing-1':
+            case 'blessing-2':
+                displayStatTotals(charNum);
+                break;
             case 'passive-a-1':
             case 'passive-a-2':
             case 'passive-b-1':

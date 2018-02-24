@@ -5,6 +5,7 @@
     "id": "fjorm-princess-of-ice",
     "color": "Blue",
     "weapon_type": "Lance",
+    "legendary":true,
     "link": "https://kagerochart.com/hero/fjorm-princess-of-ice",
     "move_type": "Infantry",
     "weapon": [

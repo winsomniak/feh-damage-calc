@@ -9,7 +9,10 @@
         "threshold": 1.0
     },
     "move_unique": "Armored",
-    "spec_accel": true,
+    "spec_accel": {
+        "not_in_defense":true,
+        "threshold": 1.0
+    },
     "link": "https://kagerochart.com/hero/passives/bold-fighter-1",
     "id": "bold-fighter-1"
 }

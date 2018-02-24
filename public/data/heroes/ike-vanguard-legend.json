@@ -5,6 +5,7 @@
     "id": "ike-vanguard-legend",
     "color": "Red",
     "weapon_type": "Sword",
+    "legendary":true,
     "link": "https://kagerochart.com/hero/ike-vanguard-legend",
     "move_type": "Infantry",
     "weapon": [

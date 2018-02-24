@@ -16,7 +16,7 @@
     },
     "refinable": {
         "type": "ranged",
-        "special":"Felicia's Plate"
+        "Special":"Felicia's Plate"
     },
     "id": "felicia-plate"
 }

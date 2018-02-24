@@ -11,7 +11,9 @@
         "Flying"
     ],
     "refinable": {
-        "type": "ranged"
+        "type": "ranged",
+        "description":"Effective against flying foes. After combat, if unit attacked, bonuses on target and all foes within 2 spaces of target become penalties through their next actions.",
+        "convert_penalties": true
     },
     "id": "monstrous-bow-plus"
 }

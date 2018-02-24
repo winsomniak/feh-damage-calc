@@ -13,7 +13,7 @@
         "Flying"
     ],
     "refinable": {
-        "type": "melee"
+        "type": "ranged"
     },
     "id": "slaying-bow-plus"
 }

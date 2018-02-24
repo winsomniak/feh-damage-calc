@@ -7,6 +7,7 @@
     "type": "Blue Tome",
     "link": "https://kagerochart.com/hero/weapons/dark-aura",
     "color": "Blue",
+    "char_unique":true,
     "magical": true,
     "id": "dark-aura"
 }

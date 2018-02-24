@@ -12,7 +12,12 @@
     "refinable": {
         "type": "ranged",
         "description": "Unit recovers 4 HP after battle.",
-        "heal": 4
+        "might": 12,
+        "heal": 4,
+        "remove":
+        {
+        "initiate_heal":true
+        }
     },
     "id": "blue-egg-plus"
 }

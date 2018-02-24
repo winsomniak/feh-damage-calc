@@ -7,6 +7,8 @@ var specialInfo;
 var assistInfo;
 var skillInfo;
 var supportInfo;
+var refinementsInfo;
+var blessingsInfo;
 var imageUrl = 'https://kagerochart.com';
 
 // stat total upper limit
@@ -56,6 +58,8 @@ weaponInfo = data.weapons;
 specialInfo = data.specials;
 assistInfo = data.assists;
 skillInfo = data.passives;
+refinementsInfo= data['refinements'];
+blessingsInfo= data['blessings'];
 supportInfo = data['support-bonus'];
 charInfo = data.heroes;
 charInfo.Custom = {
