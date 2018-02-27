@@ -6,7 +6,7 @@
     "description": "If foe uses bow, dagger, magic, or staff, neutralizes foe's bonuses (from skills like Fortify, Rally, etc.) during combat.",
     "type": "Lance",
     "color": "Blue",
-    "magical": true,
+    "magical": false,
     "nullify_enemy_bonuses": {
         "weapon_type": {
             "Red Tome": true,

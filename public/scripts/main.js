@@ -2707,6 +2707,7 @@ function rarityUpdateWeapon(charNum, rarity) {
         // change weapon
         if (rarityRestrict.hasOwnProperty("weapon") && $("#weapon-" + charNum).val() !== "None" && $("#weapon-" + charNum + " option:selected").index() <= charInfo[charName].weapon.length) {
             selectedWeapon = charInfo[charName].weapon[rarityRestrict.weapon];
+            updateRefinements(selectedWeapon, charNum);
             $("#weapon-" + charNum).val(selectedWeapon).attr('selected', 'selected'); //.trigger("change.select2");
             showWeapon(selectedWeapon, charNum, true, true);
         }
