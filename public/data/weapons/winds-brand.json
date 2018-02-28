@@ -1,0 +1,17 @@
+{
+    "name": "Wind's Brand",
+    "might": 14,
+    "range": 2,
+    "sp": 400,
+    "type": "Green Tome",
+    "color": "Green",
+    "link": "https://kagerochart.com/hero/weapons/winds-brand",
+    "description": "",
+    "magical": true,
+    "char_unique": true,
+    "refinable": {
+        "type": "ranged",
+        "Special": "Wind's Brand"
+    },
+    "id": "winds-brand"
+}

@@ -554,6 +554,17 @@ function enemyPhaseCharge(battleInfo, attacker, defender) {
     });
 }
 
+function increaseHealing(battleInfo, agent) {
+    checks.forEach(function(key) {
+        var effect = agent[key].healing_special;
+        if(effect) {
+            battleInfo.extra_heal_dmg += effect;
+            battleInfo.logMsg += "<span class='" +agent.agentClass + "'>" +agent.display + "</span>'s special's recovering property is increased by " + (effect * 100).toString() + "% [" + agent[key].name + "]! ";
+        }
+    });
+    return battleInfo;
+}
+
 //Returns a specific hero's stat with phantom stats included
 function phantomStat(hero, stat) {
 

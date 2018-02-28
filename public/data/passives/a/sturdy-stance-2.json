@@ -1,0 +1,13 @@
+{
+    "name": "Sturdy Stance 2",
+    "sp": 240,
+    "type": "A",
+    "description": "Grants Atk/Def+4 during combat when this unit is attacked.",
+    "icon": "/images/icons/passives/sturdy-stance-2.png",
+    "defend_mod": {
+        "atk": 4,
+        "def": 4
+    },
+    "link": "https://kagerochart.com/hero/passives/sturdy-stance-2",
+    "id": "sturdy-stance-2"
+}

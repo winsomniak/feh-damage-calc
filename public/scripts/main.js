@@ -1501,6 +1501,12 @@ function singleCombat(battleInfo, initiator, logIntro, brave) {
         atkSpec = true;
     }
 
+    battleInfo.extra_heal_dmg=0;
+    // check for solar brace for attacker
+    if (atkSpec || (attacker.specialData.hasOwnProperty("heal_dmg") && attacker.specCurrCooldown <= 0)) {
+        battleInfo = increaseHealing(battleInfo, attacker);
+    }
+
     // check for bonus damage on special proc
     if (atkSpec || (attacker.specialData.hasOwnProperty("heal_dmg") && attacker.specCurrCooldown <= 0)) {
         battleInfo=checkBonusDmg(battleInfo, attacker);
@@ -1607,7 +1613,12 @@ function singleCombat(battleInfo, initiator, logIntro, brave) {
         didHeal = true;
     }
     if (attacker.specialData.hasOwnProperty("heal_dmg") && attacker.specCurrCooldown <= 0) {
-        battleInfo = healDmg(battleInfo, (defOldHP - defender.currHP), attacker.specialData.heal_dmg, attacker.specialData.name, didHeal);
+        battleInfo = healDmg(battleInfo, (defOldHP - defender.currHP), attacker.specialData.heal_dmg + battleInfo.extra_heal_dmg, attacker.specialData.name, didHeal);
+        didHeal = true;
+        atkSpec = true;
+    }
+    else if (battleInfo.extra_heal_dmg!=0 && attacker.specCurrCooldown <= 0) {
+        battleInfo = healDmg(battleInfo, (defOldHP - defender.currHP), battleInfo.extra_heal_dmg, attacker.passiveBData.name, didHeal);
         didHeal = true;
         atkSpec = true;
     }
@@ -3581,7 +3592,6 @@ function importTeam(attacker) {
                             break;
                         }
                     } else if (equipItem === "refinement") { // refinement
-					console.log(refinement+ "AAA");
                         importedChars[charCount].refinement = line[1];
                     } else if (equipItem === "blessing") { // blessing
                         importedChars[charCount].blessing = line[1];

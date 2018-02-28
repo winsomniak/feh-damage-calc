@@ -72,6 +72,8 @@
             },
             "description":" Grants Atk/Spd+5. Inflicts Def/Res-5."
         },
+        "Brynhildr":{
+        },
         "Sol Katti":{
             "stat_mod":{
                 "hp":3
@@ -93,6 +95,13 @@
                 "threshold": 0.9,
                 "counterable":true
             }
+        },
+        "Sieglinde":{
+            "stat_mod":{
+                "hp":3
+            }
+        },
+        "Wind's Brand":{
         },
         "Deathly Dagger":{
            "prevent_weapon_counter": {
