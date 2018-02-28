@@ -1,0 +1,51 @@
+{
+    "display": "Ephraim, Legendary Lord",
+    "name": "Ephraim",
+    "title": "Legendary Lord",
+    "id": "ephraim-legendary-lord",
+    "color": "Blue",
+    "weapon_type": "Lance",
+    "legendary": "true",
+    "link": "https://kagerochart.com/hero/ephraim-legendary-lord",
+    "move_type": "Cavalry",
+    "weapon": [
+        "flame-siegmund",
+        "silver-lance",
+        "steel-lance",
+        "iron-lance"
+    ],
+    "special": [
+        "sol",
+        "daylight"
+    ],
+    "passive_a": [
+        "sturdy-stance-2",
+        "sturdy-stance-1",
+        "fierce-stance-1"
+    ],
+    "passive_b": [
+        "solar-brace"
+    ],
+    "passive_c": [
+        "fortify-def-3",
+        "fortify-def-2",
+        "fortify-def-1"
+    ],
+    "base_stat": {
+        "star_5": {
+            "hp": 19,
+            "atk": 10,
+            "spd": 5,
+            "def": 9,
+            "res": 3
+        },
+        "growth": {
+            "hp": 7,
+            "atk": 8,
+            "spd": 6,
+            "def": 7,
+            "res": 3,
+            "total": 31
+        }
+    }
+}
