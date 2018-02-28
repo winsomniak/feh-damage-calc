@@ -211,10 +211,11 @@ function Follow(char, attacker, othWeapon, CanCounter, battleInfo) {
         if (bfup) {
             if ((!bfup.hasOwnProperty("threshold")) || (bfup.trigger==='healthy' && char.initHP >= roundNum(bfup.threshold * char.hp, true)) || (bfup.trigger==='damaged' && char.initHP <= roundNum(bfup.threshold * char.hp, true))) { //hp check for all of them
                 if((!bfup.hasOwnProperty("weapon_type")) || (bfup.weapon_type.includes(othWeapon))){ //breaker check
-                    if((!bfup.hasOwnProperty("counterable")) || (CanCounter)) //brash check
-                    {
-                        doubling++;
-                        battleInfo.logMsg+="<li class='battle-interaction'><span class='" + char.agentClass + "'>" + char.display + "</span>'s " + char[checks[i]].name + " activated, increasing their own ability to follow-up!</li>";
+                    if((!bfup.hasOwnProperty("counterable")) || (CanCounter)) { //brash check
+                        if((!bfup.hasOwnProperty("adjacent_dependant")) || char.adjacent == 0) {
+                            doubling++;
+                            battleInfo.logMsg+="<li class='battle-interaction'><span class='" + char.agentClass + "'>" + char.display + "</span>'s " + char[checks[i]].name + " activated, increasing their own ability to follow-up!</li>";
+                        }
                     }
                 }
             }
@@ -554,6 +555,7 @@ function enemyPhaseCharge(battleInfo, attacker, defender) {
     });
 }
 
+//Check for Solar Brace
 function increaseHealing(battleInfo, agent) {
     checks.forEach(function(key) {
         var effect = agent[key].healing_special;

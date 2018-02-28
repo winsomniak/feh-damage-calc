@@ -12,7 +12,11 @@
     "stat_mod":{
         "atk":3
     },
-    "attack_follow_up": {},
-    "defense_follow_up": {},
+    "attack_follow_up": {
+        "adjacent_dependant":true
+    },
+    "defense_follow_up": {
+        "adjacent_dependant":true
+    },
     "id": "flame-siegmund"
 }
