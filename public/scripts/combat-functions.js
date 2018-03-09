@@ -60,17 +60,19 @@ function canNullifyEnemyBonuses(a, b) {
     checks.forEach(function(key) {
         var nullify = a[key].nullify_enemy_bonuses;
         if (nullify) {
+            if(!nullify.threshold || (a.initHP >= roundNum(a.hp * nullify.threshold, true))){
             //Move type
-            if (nullify.move_type && nullify.move_type[b.moveType]) {
-                validTarget = true;
-            }
-            //Weapon type
-            if (nullify.weapon_type && nullify.weapon_type[b.type]) {
-                validTarget = true;
-            }
+                if (nullify.move_type && nullify.move_type[b.moveType]) {
+                    validTarget = true;
+                }
+                //Weapon type
+                if (nullify.weapon_type && nullify.weapon_type[b.type]) {
+                    validTarget = true;
+                }
 
-            if (nullify.all) {
-                validTarget = true;
+                if (nullify.all) {
+                    validTarget = true;
+                }
             }
         }
     });
@@ -116,14 +118,14 @@ function checkPrevent(attacker, defender) {
 }
 
 //Check gor initiate/defend bonuses
-function checkMods(battleInfo, attacker, defender, mod, message1, message2)
+function checkMods(battleInfo, attacker, defender, mod, message1, message2, message3)
 {
     checks.forEach(function(key){
         if (attacker[key].hasOwnProperty(mod)) {
             battleInfo = combatBonus(battleInfo, attacker[key][mod], attacker[key].name, message1, message2);
         }
         if (attacker[key].hasOwnProperty("type_"+mod) && attacker[key]["type_"+mod].weapon_type.hasOwnProperty(defender.weaponData.type)) {
-            battleInfo = combatBonus(battleInfo, attacker[key]["type_" + mod].stat_mod, attacker[key].name, message1, message2 + " against a " + defender.weaponData.type + " user" );
+            battleInfo = combatBonus(battleInfo, attacker[key]["type_" + mod].stat_mod, attacker[key].name, message1, message2 + message3 + " a " + defender.weaponData.type + " user" );
         }
     });
     return battleInfo;
@@ -255,20 +257,17 @@ function Prevent(char, agent, ageWeapon, battleInfo, attacker)
     for (var i = 0; i < checks.length; i++) {
         var prev = char[checks[i]].other_prevent_follow;
         if (prev) {
-            //healthy (Breakers and Wary fighter)
-            if ((!prev.hasOwnProperty("stat_to_check")) && ((!prev.hasOwnProperty("threshold")) || char.initHP >= roundNum(prev.threshold * char.hp, true))) {
-                if((!prev.hasOwnProperty("weapon_type")) || (prev.weapon_type.includes(ageWeapon))){
-                    prevention+=1;
-                    battleInfo.logMsg+= "<li class='battle-interaction'><span class='" + char.agentClass + "'>" + char.display + "</span>'s " + char[checks[i]].name + " activated, decreasing <span class='" + agent.agentClass + "'>" + agent.display +"</span>'s ability to follow-up!</li>";
-                }
-            }
-            //Myrrh's weapon
-            else if (ReturnStat(char, prev.stat_to_check) >= ReturnStat(agent, prev.stat_to_check)+ prev.stat_amount) {
-                    prevention+=1;
-                    battleInfo.logMsg+= "<li class='battle-interaction'><span class='" + char.agentClass + "'>" + char.display + "</span>'s " + char[checks[i]].name + " activated, decreasing <span class='" + agent.agentClass + "'>" + agent.display +"</span>'s ability to follow-up!</li>";
+            //healthy (Breakers and Wary fighter) and stat_to_check (Myrrh)
+            if ((!prev.hasOwnProperty("stat_to_check")) || (ReturnStat(char, prev.stat_to_check) >= ReturnStat(agent, prev.stat_to_check)+ prev.stat_amount)) {
+                if((!prev.hasOwnProperty("threshold")) || char.initHP >= roundNum(prev.threshold * char.hp, true)) {
+                    if((!prev.hasOwnProperty("weapon_type")) || (prev.weapon_type.includes(ageWeapon))){
+                        prevention+=1;
+                        battleInfo.logMsg+= "<li class='battle-interaction'><span class='" + char.agentClass + "'>" + char.display + "</span>'s " + char[checks[i]].name + " activated, decreasing <span class='" + agent.agentClass + "'>" + agent.display +"</span>'s ability to follow-up!</li>";
+                    }
                 }
             }
         }
+    }
     if(attacker)
         battleInfo.atkPrev=prevention;
     else
@@ -422,6 +421,11 @@ function giveBonuses(battleInfo, agent, other){
     // full hp bonus
     if (agent.weaponData.hasOwnProperty("full_hp_mod") && agent.currHP >= agent.hp) {
         battleInfo = combatBonus(battleInfo, agent.weaponData.full_hp_mod, weaponInfo[agent.weaponName].name, agent.agentClass, "for having full HP");
+    }
+
+    // not full hp bonus, couldn't use below_threshold_mod because of rounding
+    if (agent.weaponData.hasOwnProperty("not_full_hp_mod") && agent.currHP < agent.hp) {
+        battleInfo = combatBonus(battleInfo, agent.weaponData.not_full_hp_mod, weaponInfo[agent.weaponName].name, agent.agentClass, "for not having full HP");
     }
 
     // opponent full hp bonus

@@ -1,0 +1,21 @@
+{
+    "name": "Dull Ranged 1",
+    "sp": 60,
+    "type": "B",
+    "description": "If unit's HP = 100% at start of combat and foe uses bow, dagger, magic, or staff, neutralizes foe's bonuses (from skills like Fortify, Rally, etc.) during combat.",
+    "icon": "/images/icons/passives/dull-ranged-1.png",
+    "link": "https://kagerochart.com/hero/passives/dull-ranged-1",
+    "nullify_enemy_bonuses": {
+        "threshold":1.0,
+        "weapon_type": {
+            "Red Tome": true,
+            "Green Tome": true,
+            "Blue Tome": true,
+            "Bow": true,
+            "Dagger": true,
+            "Staff": true,
+            "Tome": true
+        }
+    },
+    "id": "dull-ranged-1"
+}

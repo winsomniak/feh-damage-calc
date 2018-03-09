@@ -1,0 +1,53 @@
+{
+    "display": "Chrom, Knight Exalt",
+    "name": "Chrom",
+    "title": "Knight Exalt",
+    "id": "chrom-knight-exalt",
+    "color": "Red",
+    "weapon_type": "Sword",
+    "link": "https://kagerochart.com/hero/chrom-knight-exalt",
+    "move_type": "Cavalry",
+    "weapon": [
+        "sealed-falchion",
+        "silver-sword",
+        "steel-sword",
+        "iron-sword"
+    ],
+    "special": [
+        "aether",
+        "luna",
+        "new-moon"
+    ],
+    "passive_a": [
+        "fury-3",
+        "fury-2",
+        "fury-1"
+    ],
+    "passive_b": [
+        "chill-def-3",
+        "chill-def-2",
+        "chill-def-1"
+    ],
+    "passive_c": [
+        "sword-valor-3",
+        "sword-valor-2",
+        "sword-valor-1"
+    ],
+    "base_stat": {
+        "star_5": {
+            "hp": 19,
+            "atk": 9,
+            "spd": 6,
+            "def": 8,
+            "res": 4
+        },
+        "growth": {
+            "hp": 6,
+            "atk": 9,
+            "spd": 6,
+            "def": 8,
+            "res": 2,
+            "total": 31
+        }
+    }
+}

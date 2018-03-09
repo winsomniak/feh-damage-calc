@@ -9,5 +9,10 @@
     "color": "Red",
     "magical": false,
     "char_unique": true,
+    "refinable": {
+        "description": "Grants adjacent allies Atk+4 through their next actions at the start of each turn.",
+        "type": "melee",
+        "Special": "Sieglinde"
+    },
     "id": "sieglinde"
 }

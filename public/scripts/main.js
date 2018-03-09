@@ -1837,12 +1837,12 @@ function simBattle(battleInfo, displayMsg) {
     }
 
     // ATTACKER BONUSES
-    battleInfo= checkMods(battleInfo, attacker, defender, "initiate_mod", "attacker", "by initiating combat");
+    battleInfo= checkMods(battleInfo, attacker, defender, "initiate_mod", "attacker", "by initiating combat", " against");
 
     battleInfo = giveBonuses(battleInfo, attacker, defender);
 
     //DEFENDER BONUSES
-    battleInfo= checkMods(battleInfo, defender, attacker, "defend_mod", "defender", "by getting attacked");
+    battleInfo= checkMods(battleInfo, defender, attacker, "defend_mod", "defender", "by getting attacked", " by");
 
     battleInfo = giveBonuses(battleInfo, defender, attacker);
 
