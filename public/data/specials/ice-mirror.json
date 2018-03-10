@@ -9,5 +9,6 @@
         "dmg_mod": 0.3,
         "mirror": true
     },
+    "char_unique":true,
     "id": "ice-mirror"
 }
