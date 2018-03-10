@@ -1,0 +1,13 @@
+{
+    "name": "Mirror Stance 1",
+    "sp": 120,
+    "type": "A",
+    "description": "Grants Atk/Res+2 during combat when this unit is attacked.",
+    "icon": "/images/icons/passives/mirror-stance-1.png",
+    "defend_mod": {
+        "atk": 2,
+        "res": 2
+    },
+    "link": "https://kagerochart.com/hero/passives/mirror-stance-1",
+    "id": "mirror-stance-1"
+}

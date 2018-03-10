@@ -9,5 +9,19 @@
     "color": "Red",
     "magical": true,
     "char_unique": true,
+    "refinable": {
+        "type": "ranged",
+        "description":"If in combat against magic foe, reduces damage from foe's first attack by 30%.",
+        "Special": "Brynhildr",
+        "first_dmg_reduction": {
+            "weapon_type": [
+                "Tome",
+                "Red Tome",
+                "Blue Tome",
+                "Green Tome"
+            ],
+            "multiplier": 0.7
+        }
+    },
     "id": "brynhildr"
 }

@@ -73,6 +73,21 @@
             "description":" Grants Atk/Spd+5. Inflicts Def/Res-5."
         },
         "Brynhildr":{
+            "description":"If foe uses bow, dagger, magic, or staff and unit's Def ≥ foe's Def+1, foe cannot make a follow-up attack.",
+            "other_prevent_follow":
+            {
+                "stat_to_check":"def",
+                "stat_amount":1,
+                "weapon_type": [
+                    "Bow",
+                    "Dagger",
+                    "Staff",
+                    "Blue Tome",
+                    "Green Tome",
+                    "Red Tome",
+                    "Tome"
+                ]
+            }
         },
         "Sol Katti":{
             "stat_mod":{
@@ -99,9 +114,12 @@
         "Sieglinde":{
             "stat_mod":{
                 "hp":3
-            }
+            },
+            "description":"During combat, grants bonus to Atk/Spd/Def/Res = highest bonus on allies within 2 spaces. Each stat bonus calculated independently."
         },
         "Wind's Brand":{
+            "description":"During combat, boosts Atk/Spd/Def/Res by number of adjacent allies × 2.",
+            "adjacent_ally_bonus": true
         },
         "Deathly Dagger":{
            "prevent_weapon_counter": {

@@ -6,7 +6,7 @@
     "type": "Green Tome",
     "color": "Green",
     "link": "https://kagerochart.com/hero/weapons/winds-brand",
-    "description": "",
+    "description": "At start of turn, inflicts Atk-7 on foe on the enemy team with the highest Atk through its next action.",
     "magical": true,
     "char_unique": true,
     "refinable": {

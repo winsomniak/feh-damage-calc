@@ -1,0 +1,52 @@
+{
+    "display": "Gerome, Masked Rider",
+    "name": "Gerome",
+    "title": "Masked Rider",
+    "id": "gerome-masked-rider",
+    "color": "Green",
+    "weapon_type": "Axe",
+    "link": "https://kagerochart.com/hero/gerome-masked-rider",
+    "move_type": "Flying",
+    "weapon": [
+        "poleaxe-plus",
+        "poleaxe",
+        "steel-axe",
+        "iron-axe"
+    ],
+    "assist": [
+        "rally-attack-defense",
+        "rally-defense"
+    ],
+    "passive_a": [
+        "fortress-def-3",
+        "fortress-def-2",
+        "fortress-def-1"
+    ],
+    "passive_b": [
+        "hit-and-run"
+    ],
+    "base_stat": {
+        "star_4": {
+            "hp": 18,
+            "atk": 10,
+            "spd": 5,
+            "def": 8,
+            "res": 3
+        },
+        "star_5": {
+            "hp": 19,
+            "atk": 10,
+            "spd": 6,
+            "def": 8,
+            "res": 4
+        },
+        "growth": {
+            "hp": 8,
+            "atk": 9,
+            "spd": 5,
+            "def": 8,
+            "res": 3,
+            "total": 33
+        }
+    }
+}
