@@ -916,6 +916,16 @@ function getCharPanelData(charNum) {
         charData.addBonusAtk=parseInt($("#atk-bonus-"+charNum).val()) + parseInt($("#spd-bonus-"+charNum).val()) + parseInt($("#def-bonus-"+charNum).val()) + parseInt($("#res-bonus-"+charNum).val());
     }
 
+    if (charData.weaponData.hasOwnProperty("enemy_penalty_bonus")) {
+        var NotCharNum = 1; //Enemy penalty, identify the enemy
+        if(charNum == 1)
+            NotCharNum = 2;
+        charData.addBonusAtk=parseInt($("#atk-penalty-"+NotCharNum).val()) + parseInt($("#spd-penalty-"+NotCharNum).val()) + parseInt($("#def-penalty-"+NotCharNum).val()) + parseInt($("#res-penalty-"+NotCharNum).val()); //Get the penalties
+        if($("#panic-status-" + NotCharNum).is(":checked")) { //Is the enemy panicked? If they are, then the bonuses get added too!
+            charData.addBonusAtk += parseInt($("#atk-bonus-"+NotCharNum).val()) + parseInt($("#spd-bonus-"+NotCharNum).val()) + parseInt($("#def-bonus-"+NotCharNum).val()) + parseInt($("#res-bonus-"+NotCharNum).val());
+        }
+    }
+
     charData.passiveA = $("#passive-a-" + charNum).val();
     charData.passiveB = $("#passive-b-" + charNum).val();
     charData.passiveC = $("#passive-c-" + charNum).val();
