@@ -100,7 +100,9 @@ function removeStatBonuses(hero) {
         hero[stat + 'Bonus'] = 0;
     });
 
-    delete hero.addBonusAtk;
+    //Blizzard doesn't depend on buffes
+    if(hero.weaponData.hasOwnProperty("add_bonus"))
+        delete hero.addBonusAtk;
 }
 
 //Check for enemy counter prevention (dazzling staff/Sacae's blessing/Deathly dagger/Firesweep/sweep)
