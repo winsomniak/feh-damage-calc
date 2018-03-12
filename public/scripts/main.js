@@ -1148,8 +1148,8 @@ function getDefaultCharData(charName) {
     charData.defPenalty = -Math.abs(parseInt($("#override-def-penalty").val()));
     charData.resPenalty = -Math.abs(parseInt($("#override-res-penalty").val()));
 
-    // show stats
-    var panicMod = charData.status.hasOwnProperty("panic") ? -1 : 1;
+    // show stats, panic is always there, so this was REALLY bugged
+    var panicMod = charData.status.panic ? -1 : 1;
     if (charInfo[charName].hasOwnProperty("base_stat")) {
         var stats = getStatTotals(charName, charData.weaponName, charData.passiveA, charData.seal, rarity, level, merge, boon, bane, charData.summonerSupport, charData.allySupport, charData.refinement, charData.blessing);
 
