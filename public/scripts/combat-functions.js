@@ -99,8 +99,22 @@ function removeStatBonuses(hero) {
         hero[stat + 'WS'] -= hero[stat + 'Bonus'];
         hero[stat + 'Bonus'] = 0;
     });
+}
 
-    delete hero.addBonusAtk;
+function checkIfBonusDMG(agent, other)
+{
+    if (agent.weaponData.hasOwnProperty("add_bonus") && !agent.status.panic) {
+        agent.addBonusAtk = agent.atkBonus + agent.defBonus + agent.spdBonus + agent.resBonus;
+        agent.addBonusAtkSource = "bonuses";
+    }
+    else if (agent.weaponData.hasOwnProperty("enemy_penalty_bonus")) {
+        agent.addBonusAtk = -other.atkPenalty - other.spdPenalty - other.defPenalty - other.resPenalty; //Get the penalties
+        if(other.status.panic) { //Is the enemy panicked? If they are, then the bonuses get added too!
+            agent.addBonusAtk += other.atkBonus + other.defBonus + other.spdBonus + other.resBonus;
+        }
+        agent.addBonusAtkSource = "enemy penalties";
+    }
+    return agent;
 }
 
 //Check for enemy counter prevention (dazzling staff/Sacae's blessing/Deathly dagger/Firesweep/sweep)
@@ -435,7 +449,7 @@ function giveBonuses(battleInfo, agent, other){
 
     // blade tome bonuses
     if (agent.hasOwnProperty("addBonusAtk") && agent.addBonusAtk > 0) {
-        battleInfo = bladeTomeBonus(battleInfo, agent.addBonusAtk, agent.agentClass);
+        battleInfo = bladeTomeBonus(battleInfo, agent.addBonusAtk, agent.agentClass, agent.addBonusAtkSource);
     }
 
     // owl tome bonuses

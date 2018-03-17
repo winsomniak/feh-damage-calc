@@ -778,10 +778,10 @@ function statWord(stat) {
 
 // handles atk bonus from -blade tomes
 // battleInfo contains all battle information, bonusAtk is the total amount of bonuses to add to atk, charToUse is either "attacker" or "defender"
-function bladeTomeBonus(battleInfo, bonusAtk, charToUse) {
+function bladeTomeBonus(battleInfo, bonusAtk, charToUse, source) {
 
     battleInfo[charToUse].atk += bonusAtk;
-    battleInfo.logMsg += "<li class='battle-interaction'><span class='" + charToUse + "'>" + battleInfo[charToUse].display + "</span> adds total bonuses to attack, increasing attack by " + bonusAtk.toString() + " [" + battleInfo[charToUse].weaponData.name + "].</li>";
+    battleInfo.logMsg += "<li class='battle-interaction'><span class='" + charToUse + "'>" + battleInfo[charToUse].display + "</span> adds total " + source + " to attack, increasing attack by " + bonusAtk.toString() + " [" + battleInfo[charToUse].weaponData.name + "].</li>";
     return battleInfo;
 }
 
@@ -910,20 +910,6 @@ function getCharPanelData(charNum) {
     }
     else {
         charData.terrain = "Default";
-    }
-
-    if (charData.weaponData.hasOwnProperty("add_bonus") && !charData.status.panic) {
-        charData.addBonusAtk=parseInt($("#atk-bonus-"+charNum).val()) + parseInt($("#spd-bonus-"+charNum).val()) + parseInt($("#def-bonus-"+charNum).val()) + parseInt($("#res-bonus-"+charNum).val());
-    }
-
-    if (charData.weaponData.hasOwnProperty("enemy_penalty_bonus")) {
-        var NotCharNum = 1; //Enemy penalty, identify the enemy
-        if(charNum == 1)
-            NotCharNum = 2;
-        charData.addBonusAtk=parseInt($("#atk-penalty-"+NotCharNum).val()) + parseInt($("#spd-penalty-"+NotCharNum).val()) + parseInt($("#def-penalty-"+NotCharNum).val()) + parseInt($("#res-penalty-"+NotCharNum).val()); //Get the penalties
-        if($("#panic-status-" + NotCharNum).is(":checked")) { //Is the enemy panicked? If they are, then the bonuses get added too!
-            charData.addBonusAtk += parseInt($("#atk-bonus-"+NotCharNum).val()) + parseInt($("#spd-bonus-"+NotCharNum).val()) + parseInt($("#def-bonus-"+NotCharNum).val()) + parseInt($("#res-bonus-"+NotCharNum).val());
-        }
     }
 
     charData.passiveA = $("#passive-a-" + charNum).val();
@@ -1057,11 +1043,6 @@ function getDefaultCharData(charName) {
         }
     }
 
-    // total bonuses
-    if (charData.weaponData.hasOwnProperty("add_bonus") && !charData.status.panic) {
-        charData.addBonusAtk = parseInt($("#override-atk-bonus").val()) + parseInt($("#override-spd-bonus").val()) + parseInt($("#override-def-bonus").val()) + parseInt($("#override-res-bonus").val());
-    }
-
     // get default passives, assist and special
     charData.passiveA = (charInfo[charName].hasOwnProperty("passive_a") && passiveAIndex >= 0) ? charInfo[charName].passive_a[passiveAIndex] : "None";
     charData.passiveB = (charInfo[charName].hasOwnProperty("passive_b") && passiveBIndex >= 0) ? charInfo[charName].passive_b[passiveBIndex] : "None";
@@ -1167,8 +1148,8 @@ function getDefaultCharData(charName) {
     charData.defPenalty = -Math.abs(parseInt($("#override-def-penalty").val()));
     charData.resPenalty = -Math.abs(parseInt($("#override-res-penalty").val()));
 
-    // show stats
-    var panicMod = charData.status.hasOwnProperty("panic") ? -1 : 1;
+    // show stats, panic is always there, so this was REALLY bugged
+    var panicMod = charData.status.panic ? -1 : 1;
     if (charInfo[charName].hasOwnProperty("base_stat")) {
         var stats = getStatTotals(charName, charData.weaponName, charData.passiveA, charData.seal, rarity, level, merge, boon, bane, charData.summonerSupport, charData.allySupport, charData.refinement, charData.blessing);
 
@@ -1801,6 +1782,10 @@ function simBattle(battleInfo, displayMsg) {
         removeStatBonuses(attacker);
         battleInfo.logMsg += "<li class='battle-interaction'><span class='defender'>" + defender.display + "</span> has nullifed enemy bonuses. ";
     }
+
+    //Check for both blade tomes and blizzard
+    attacker = checkIfBonusDMG(attacker, defender);
+    defender = checkIfBonusDMG(defender, attacker);
 
     // AOE damage before combat
     if (attacker.specialData.hasOwnProperty("before_combat_aoe") && attacker.specCurrCooldown <= 0) {
