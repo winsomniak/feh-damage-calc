@@ -1,0 +1,13 @@
+{
+    "name": "Swift Stance 2",
+    "sp": 240,
+    "type": "A",
+    "description": "Grants Spd/Res+4 during combat when this unit is attacked.",
+    "icon": "/images/icons/passives/swift-stance-2.png",
+    "defend_mod": {
+        "spd": 4,
+        "res": 4
+    },
+    "link": "https://kagerochart.com/hero/passives/swift-stance-2",
+    "id": "swift-stance-2"
+}
