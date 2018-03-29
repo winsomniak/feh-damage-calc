@@ -43,6 +43,11 @@ function customName(weaponType, moveType) {
             return "Green Dragon";
         }
         name = "Green Dragon";
+    } else if (weaponType === "Colorless Breath") {
+        if (moveType === "Infantry") {
+            return "Colorless Dragon";
+        }
+        name = "Colorless Dragon";
     } else {
         if (moveType === "Infantry") {
             return "Blue Dragon";

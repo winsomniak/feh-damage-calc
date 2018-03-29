@@ -1,0 +1,50 @@
+{
+    "display": "Robin, Fell Vessel",
+    "name": "Robin",
+    "title": "Fell Vessel",
+    "id": "robin-fell-vessel",
+    "color": "Colorless",
+    "weapon_type": "Colorless Breath",
+    "link": "https://kagerochart.com/hero/robin-fell-vessel",
+    "move_type": "Flying",
+    "weapon": [
+        "expiration",
+        "flametongue",
+        "fire-breath-plus",
+        "fire-breath"
+    ],
+    "special": [
+        "bonfire",
+        "glowing-ember"
+    ],
+    "passive_a": [
+        "dragonskin"
+    ],
+    "passive_b": [
+        "cancel-affinity-3",
+        "cancel-affinity-2",
+        "cancel-affinity-1"
+    ],
+    "passive_c": [
+        "res-smoke-3",
+        "res-smoke-2",
+        "res-smoke-1"
+    ],
+    "base_stat": {
+        "star_5": {
+            "hp": 16,
+            "atk": 8,
+            "spd": 9,
+            "def": 8,
+            "res": 6
+        },
+        "growth": {
+            "hp": 7,
+            "atk": 7,
+            "spd": 8,
+            "def": 6,
+            "res": 5,
+            "total": 33
+        }
+    }
+}
