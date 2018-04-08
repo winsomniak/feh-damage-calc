@@ -8,6 +8,7 @@
     "link": "https://kagerochart.com/hero/ephraim-restoration-lord",
     "move_type": "Infantry",
     "weapon": [
+        "flame-siegmund",
         "siegmund",
         "heavy-spear",
         "steel-lance",
