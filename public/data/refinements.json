@@ -104,11 +104,10 @@
             "stat_mod":{
                 "hp":3
             },
-            "description":" Unit makes a guaranteed follow-up attack when HP ≥ 90% and attacking a foe that can counter.",
+            "description":" Unit makes a guaranteed follow-up attack when HP ≥ 90% and attacking.",
             "attack_follow_up": {
                 "trigger": "healthy",
-                "threshold": 0.9,
-                "counterable":true
+                "threshold": 0.9
             }
         },
         "Sieglinde":{
