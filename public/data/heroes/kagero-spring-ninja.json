@@ -1,0 +1,50 @@
+{
+    "display": "Kagero, Spring Ninja",
+    "name": "Kagero",
+    "title": "Spring Ninja",
+    "id": "kagero-spring-ninja",
+    "color": "Colorless",
+    "weapon_type": "Dagger",
+    "link": "https://kagerochart.com/hero/kagero-spring-ninja",
+    "move_type": "Flying",
+    "weapon": [
+        "lethal-carrot-plus",
+        "lethal-carrot",
+        "steel-dagger",
+        "iron-dagger"
+    ],
+    "special": [
+        "glimmer",
+        "night-sky"
+    ],
+    "passive_a": [
+        "spd-res-bond-3",
+        "spd-res-bond-2",
+        "spd-res-bond-1"
+    ],
+    "passive_b": [
+        "live-for-honor"
+    ],
+    "passive_c": [
+        "goad-fliers",
+        "spur-atk-2",
+        "spur-atk-1"
+    ],
+    "base_stat": {
+        "star_5": {
+            "hp": 17,
+            "atk": 9,
+            "spd": 8,
+            "def": 5,
+            "res": 5
+        },
+        "growth": {
+            "hp": 5,
+            "atk": 8,
+            "spd": 8,
+            "def": 2,
+            "res": 6,
+            "total": 29
+        }
+    }
+}

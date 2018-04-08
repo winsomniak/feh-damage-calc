@@ -1,0 +1,17 @@
+{
+    "name": "Spd Res Bond 2",
+    "sp": 120,
+    "type": "A",
+    "description": "Grants Spd/Res+4 to this unit during combat if unit is adjacent to an ally.",
+    "icon": "/images/icons/passives/spd-res-bond-2.png",
+    "adjacent_stat_bonus": {
+        "target": "self",
+        "adjacent": "ally",
+        "mod": {
+            "spd": 4,
+            "res": 4
+        }
+    },
+    "link": "https://kagerochart.com/hero/passives/spd-res-bond-2",
+    "id": "spd-res-bond-2"
+}

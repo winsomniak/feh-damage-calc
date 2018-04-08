@@ -1,0 +1,15 @@
+{
+    "name": "Lethal Carrot",
+    "might": 8,
+    "range": 2,
+    "sp": 200,
+    "description": "Grants +10 damage when Special triggers. After combat, if unit attacked, inflicts Def/Res-7 on target and foes within 2 spaces through their next actions.",
+    "type": "Dagger",
+    "spec_damage_bonus": 10,
+    "seal": {
+        "def": -7,
+        "res": -7
+    },
+    "link": "https://kagerochart.com/hero/weapons/lethal-carrot",
+    "id": "lethal-carrot"
+}
