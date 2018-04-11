@@ -67,8 +67,9 @@ charInfo.Custom = {
     "id": "Custom",
     "name": "Custom"
 };
-
-setupCalc();
+document.onreadystatechange = function() {
+    setupCalc();
+}
 
 function setupCalc() {
 
@@ -98,11 +99,11 @@ function setupCalc() {
         tabBars.push(bar);
     });
 
-    var tfs = document.querySelectorAll(
-      '.mdc-textfield:not([data-demo-no-auto-js])'
-    );
+    var tfs = document.querySelectorAll('.mdc-text-field');
+    tfields = [];
     for (var i = 0, tf; tf = tfs[i]; i++) {
-      mdc.textfield.MDCTextfield.attachTo(tf);
+        var textField = new mdc.textField.MDCTextField(tf);
+        tfields.push(textField);
     }
 
     try {

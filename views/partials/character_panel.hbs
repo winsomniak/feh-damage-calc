@@ -18,29 +18,30 @@
         <section id="stats-{{charNum}}"  class="mdc-card__supporting-text info-section stat-info">
             <h3 class="mdc-typography--caption">Base Stats</h3>
             <div class="stat-container">
-                <div class="mdc-textfield">
-                    <input type="number" id="hp-{{charNum}}"  class="mdc-textfield__input more-than-zero hp-stat" value="1" data-charnum="{{charNum}}" autocomplete="off">
-                    <label for="hp-{{charNum}}"  class="mdc-textfield__label" title="A unit is defeated if their Hit Points reach 0.">HP</label>
+                <div class="mdc-text-field">
+                    <input id="hp-{{charNum}}" class="mdc-text-field__input more-than-zero hp-stat" value="1" data-charnum="{{charNum}}" autocomplete="off">
+                    <label for="hp-{{charNum}}" title="A unit is defeated if their Hit Points reach 0.">HP</label>
+                    <div class="mdc-line-ripple"></div>
                 </div>
 
-                <div class="mdc-textfield">
-                    <input type="number" id="atk-{{charNum}}"  class="mdc-textfield__input more-than-zero battle-val" value="1" data-charnum="{{charNum}}" autocomplete="off">
-                    <label for="atk-{{charNum}}"  class="mdc-textfield__label" title="The higher a unit's Attack, the more damage they deal.">ATK</label>
+                <div class="mdc-text-field">
+                    <input type="number" id="atk-{{charNum}}" class="mdc-text-field__input more-than-zero battle-val" value="1" data-charnum="{{charNum}}" autocomplete="off">
+                    <label for="atk-{{charNum}}"  class="mdc-floating-label" title="The higher a unit's Attack, the more damage they deal.">ATK</label>
                 </div>
 
-                <div class="mdc-textfield">
-                    <input type="number" id="spd-{{charNum}}"  class="mdc-textfield__input more-than-zero battle-val" value="1" data-charnum="{{charNum}}" autocomplete="off">
-                    <label for="spd-{{charNum}}"  class="mdc-textfield__label" title="A unit will attack twice if their Speed is at least 5 more than their foe's Speed.">SPD</label>
+                <div class="mdc-text-field">
+                    <input type="number" id="spd-{{charNum}}"  class="mdc-text-field__input more-than-zero battle-val" value="1" data-charnum="{{charNum}}" autocomplete="off">
+                    <label for="spd-{{charNum}}"  class="mdc-floating-label" title="A unit will attack twice if their Speed is at least 5 more than their foe's Speed.">SPD</label>
                 </div>
 
-                <div class="mdc-textfield">
-                    <input type="number" id="def-{{charNum}}"  class="mdc-textfield__input more-than-zero battle-val" value="1" data-charnum="{{charNum}}" autocomplete="off">
-                    <label for="def-{{charNum}}"  class="mdc-textfield__label" title="The higher a unit's Defense is, the less damage they take from physical attacks.">DEF</label>
+                <div class="mdc-text-field">
+                    <input type="number" id="def-{{charNum}}"  class="mdc-text-field__input more-than-zero battle-val" value="1" data-charnum="{{charNum}}" autocomplete="off">
+                    <label for="def-{{charNum}}"  class="mdc-floating-label" title="The higher a unit's Defense is, the less damage they take from physical attacks.">DEF</label>
                 </div>
 
-                <div class="mdc-textfield">
-                    <input type="number" id="res-{{charNum}}"  class="mdc-textfield__input more-than-zero battle-val" value="1" data-charnum="{{charNum}}" autocomplete="off">
-                    <label for="res-{{charNum}}"  class="mdc-textfield__label" title="The higher a unit's Resistance is, the less damage they take from magical attacks.">RES</label>
+                <div class="mdc-text-field">
+                    <input type="number" id="res-{{charNum}}"  class="mdc-text-field__input more-than-zero battle-val" value="1" data-charnum="{{charNum}}" autocomplete="off">
+                    <label for="res-{{charNum}}"  class="mdc-floating-label" title="The higher a unit's Resistance is, the less damage they take from magical attacks.">RES</label>
                 </div>
             </div>
 
@@ -291,24 +292,24 @@
                     <h3 class="mdc-typography--caption">Bonus</h3>
                     <div class="stat-container">
 
-                        <div class="mdc-textfield">
-                            <input type="number" id="atk-bonus-{{charNum}}"  class="mdc-textfield__input battle-val stat-bonus zero-or-more" value="0" data-charnum="{{charNum}}" autocomplete="off">
-                            <label for="atk-bonus-{{charNum}}"  class="mdc-textfield__label" title="The higher a unit's Attack, the more damage they deal.">ATK</label>
+                        <div class="mdc-text-field">
+                            <input type="number" id="atk-bonus-{{charNum}}"  class="mdc-text-field__input battle-val stat-bonus zero-or-more" value="0" data-charnum="{{charNum}}" autocomplete="off">
+                            <label for="atk-bonus-{{charNum}}"  class="mdc-floating-label" title="The higher a unit's Attack, the more damage they deal.">ATK</label>
                         </div>
 
-                        <div class="mdc-textfield">
-                            <input type="number" id="spd-bonus-{{charNum}}"  class="mdc-textfield__input battle-val stat-bonus zero-or-more" value="0" data-charnum="{{charNum}}" autocomplete="off">
-                            <label for="spd-bonus-{{charNum}}"  class="mdc-textfield__label" title="A unit will attack twice if their Speed is at least 5 more than their foe's Speed.">SPD</label>
+                        <div class="mdc-text-field">
+                            <input type="number" id="spd-bonus-{{charNum}}"  class="mdc-text-field__input battle-val stat-bonus zero-or-more" value="0" data-charnum="{{charNum}}" autocomplete="off">
+                            <label for="spd-bonus-{{charNum}}"  class="mdc-floating-label" title="A unit will attack twice if their Speed is at least 5 more than their foe's Speed.">SPD</label>
                         </div>
 
-                        <div class="mdc-textfield">
-                            <input type="number" id="def-bonus-{{charNum}}"  class="mdc-textfield__input battle-val stat-bonus zero-or-more" value="0" data-charnum="{{charNum}}" autocomplete="off">
-                            <label for="def-bonus-{{charNum}}"  class="mdc-textfield__label" title="The higher a unit's Defense is, the less damage they take from physical attacks.">DEF</label>
+                        <div class="mdc-text-field">
+                            <input type="number" id="def-bonus-{{charNum}}"  class="mdc-text-field__input battle-val stat-bonus zero-or-more" value="0" data-charnum="{{charNum}}" autocomplete="off">
+                            <label for="def-bonus-{{charNum}}"  class="mdc-floating-label" title="The higher a unit's Defense is, the less damage they take from physical attacks.">DEF</label>
                         </div>
 
-                        <div class="mdc-textfield">
-                            <input type="number" id="res-bonus-{{charNum}}"  class="mdc-textfield__input battle-val stat-bonus zero-or-more" value="0" data-charnum="{{charNum}}" autocomplete="off">
-                            <label for="res-bonus-{{charNum}}"  class="mdc-textfield__label" title="The higher a unit's Resistance is, the less damage they take from magical attacks.">RES</label>
+                        <div class="mdc-text-field">
+                            <input type="number" id="res-bonus-{{charNum}}"  class="mdc-text-field__input battle-val stat-bonus zero-or-more" value="0" data-charnum="{{charNum}}" autocomplete="off">
+                            <label for="res-bonus-{{charNum}}"  class="mdc-floating-label" title="The higher a unit's Resistance is, the less damage they take from magical attacks.">RES</label>
                         </div>
                     </div>
                 </section>
@@ -317,24 +318,24 @@
                     <h3 class="mdc-typography--caption">Penalty</h3>
                     <div class="stat-container">
 
-                        <div class="mdc-textfield">
-                            <input type="number" id="atk-penalty-{{charNum}}"  class="mdc-textfield__input battle-val stat-penalty zero-or-more" value="0" data-charnum="{{charNum}}" autocomplete="off">
-                            <label for="atk-penalty-{{charNum}}"  class="mdc-textfield__label" title="The higher a unit's Attack, the more damage they deal.">ATK</label>
+                        <div class="mdc-text-field">
+                            <input type="number" id="atk-penalty-{{charNum}}"  class="mdc-text-field__input battle-val stat-penalty zero-or-more" value="0" data-charnum="{{charNum}}" autocomplete="off">
+                            <label for="atk-penalty-{{charNum}}"  class="mdc-floating-label" title="The higher a unit's Attack, the more damage they deal.">ATK</label>
                         </div>
 
-                        <div class="mdc-textfield">
-                            <input type="number" id="spd-penalty-{{charNum}}"  class="mdc-textfield__input battle-val stat-penalty zero-or-more" value="0" data-charnum="{{charNum}}" autocomplete="off">
-                            <label for="spd-penalty-{{charNum}}"  class="mdc-textfield__label" title="A unit will attack twice if their Speed is at least 5 more than their foe's Speed.">SPD</label>
+                        <div class="mdc-text-field">
+                            <input type="number" id="spd-penalty-{{charNum}}"  class="mdc-text-field__input battle-val stat-penalty zero-or-more" value="0" data-charnum="{{charNum}}" autocomplete="off">
+                            <label for="spd-penalty-{{charNum}}"  class="mdc-floating-label" title="A unit will attack twice if their Speed is at least 5 more than their foe's Speed.">SPD</label>
                         </div>
 
-                        <div class="mdc-textfield">
-                            <input type="number" id="def-penalty-{{charNum}}"  class="mdc-textfield__input battle-val stat-penalty zero-or-more" value="0" data-charnum="{{charNum}}" autocomplete="off">
-                            <label for="def-penalty-{{charNum}}"  class="mdc-textfield__label" title="The higher a unit's Defense is, the less damage they take from physical attacks.">DEF</label>
+                        <div class="mdc-text-field">
+                            <input type="number" id="def-penalty-{{charNum}}"  class="mdc-text-field__input battle-val stat-penalty zero-or-more" value="0" data-charnum="{{charNum}}" autocomplete="off">
+                            <label for="def-penalty-{{charNum}}"  class="mdc-floating-label" title="The higher a unit's Defense is, the less damage they take from physical attacks.">DEF</label>
                         </div>
 
-                        <div class="mdc-textfield">
-                            <input type="number" id="res-penalty-{{charNum}}"  class="mdc-textfield__input battle-val stat-penalty zero-or-more" value="0" data-charnum="{{charNum}}" autocomplete="off">
-                            <label for="res-penalty-{{charNum}}"  class="mdc-textfield__label" title="The higher a unit's Resistance is, the less damage they take from magical attacks.">RES</label>
+                        <div class="mdc-text-field">
+                            <input type="number" id="res-penalty-{{charNum}}"  class="mdc-text-field__input battle-val stat-penalty zero-or-more" value="0" data-charnum="{{charNum}}" autocomplete="off">
+                            <label for="res-penalty-{{charNum}}"  class="mdc-floating-label" title="The higher a unit's Resistance is, the less damage they take from magical attacks.">RES</label>
                         </div>
                     </div>
                 </section>
@@ -343,24 +344,24 @@
                     <h3 class="mdc-typography--caption">Spur</h3>
                     <div class="stat-container">
 
-                        <div class="mdc-textfield">
-                            <input type="number" id="atk-spur-{{charNum}}"  class="mdc-textfield__input battle-val stat-spur zero-or-more" value="0" data-charnum="{{charNum}}" autocomplete="off">
-                            <label for="atk-spur-{{charNum}}"  class="mdc-textfield__label" title="The higher a unit's Attack, the more damage they deal.">ATK</label>
+                        <div class="mdc-text-field">
+                            <input type="number" id="atk-spur-{{charNum}}"  class="mdc-text-field__input battle-val stat-spur zero-or-more" value="0" data-charnum="{{charNum}}" autocomplete="off">
+                            <label for="atk-spur-{{charNum}}"  class="mdc-floating-label" title="The higher a unit's Attack, the more damage they deal.">ATK</label>
                         </div>
 
-                        <div class="mdc-textfield">
-                            <input type="number" id="spd-spur-{{charNum}}"  class="mdc-textfield__input battle-val stat-spur zero-or-more" value="0" data-charnum="{{charNum}}" autocomplete="off">
-                            <label for="spd-spur-{{charNum}}"  class="mdc-textfield__label" title="A unit will attack twice if their Speed is at least 5 more than their foe's Speed.">SPD</label>
+                        <div class="mdc-text-field">
+                            <input type="number" id="spd-spur-{{charNum}}"  class="mdc-text-field__input battle-val stat-spur zero-or-more" value="0" data-charnum="{{charNum}}" autocomplete="off">
+                            <label for="spd-spur-{{charNum}}"  class="mdc-floating-label" title="A unit will attack twice if their Speed is at least 5 more than their foe's Speed.">SPD</label>
                         </div>
 
-                        <div class="mdc-textfield">
-                            <input type="number" id="def-spur-{{charNum}}"  class="mdc-textfield__input battle-val stat-spur zero-or-more" value="0" data-charnum="{{charNum}}" autocomplete="off">
-                            <label for="def-spur-{{charNum}}"  class="mdc-textfield__label" title="The higher a unit's Defense is, the less damage they take from physical attacks.">DEF</label>
+                        <div class="mdc-text-field">
+                            <input type="number" id="def-spur-{{charNum}}"  class="mdc-text-field__input battle-val stat-spur zero-or-more" value="0" data-charnum="{{charNum}}" autocomplete="off">
+                            <label for="def-spur-{{charNum}}"  class="mdc-floating-label" title="The higher a unit's Defense is, the less damage they take from physical attacks.">DEF</label>
                         </div>
 
-                        <div class="mdc-textfield">
-                            <input type="number" id="res-spur-{{charNum}}"  class="mdc-textfield__input battle-val stat-spur zero-or-more" value="0" data-charnum="{{charNum}}" autocomplete="off">
-                            <label for="res-spur-{{charNum}}"  class="mdc-textfield__label" title="The higher a unit's Resistance is, the less damage they take from magical attacks.">RES</label>
+                        <div class="mdc-text-field">
+                            <input type="number" id="res-spur-{{charNum}}"  class="mdc-text-field__input battle-val stat-spur zero-or-more" value="0" data-charnum="{{charNum}}" autocomplete="off">
+                            <label for="res-spur-{{charNum}}"  class="mdc-floating-label" title="The higher a unit's Resistance is, the less damage they take from magical attacks.">RES</label>
                         </div>
                     </div>
                 </section>
@@ -368,16 +369,16 @@
             </div>
 
             <div class="tab-panel">
-                <div class="mdc-textfield mdc-textfield--upgraded info-section-bottom current-hp">
-                    <label class="mdc-textfield__label curr-hp-label" for="curr-hp-{{charNum}}" data-charnum="{{charNum}}">
+                <div class="mdc-text-field mdc-text-field--upgraded info-section-bottom current-hp">
+                    <label class="mdc-floating-label curr-hp-label" for="curr-hp-{{charNum}}" data-charnum="{{charNum}}">
                         Current HP / <span id="hp-{{charNum}}-denom" class="denominator hp-{{charNum}}-read">1</span>
                     </label>
-                    <input type="number" id="curr-hp-{{charNum}}" class="mdc-textfield__input more-than-zero curr-hp-val" data-charnum="{{charNum}}" value="1" autocomplete="off">
+                    <input type="number" id="curr-hp-{{charNum}}" class="mdc-text-field__input more-than-zero curr-hp-val" data-charnum="{{charNum}}" value="1" autocomplete="off">
                 </div>
 
-                <div class="mdc-textfield mdc-textfield--upgraded info-section-bottom current-hp" id="spec-cooldown-line-{{charNum}}" >
-                    <input type="number" id="spec-cooldown-{{charNum}}"  class="mdc-textfield__input zero-or-more curr-hp-val" data-charnum="{{charNum}}" value="1" autocomplete="off">
-                    <label id="spec-cooldown-label-{{charNum}}" class="mdc-textfield__label" for="spec-cooldown-{{charNum}}" title="Special skills activate when cooldown reaches 0." data-charnum="{{charNum}}">
+                <div class="mdc-text-field mdc-text-field--upgraded info-section-bottom current-hp" id="spec-cooldown-line-{{charNum}}" >
+                    <input type="number" id="spec-cooldown-{{charNum}}"  class="mdc-text-field__input zero-or-more curr-hp-val" data-charnum="{{charNum}}" value="1" autocomplete="off">
+                    <label id="spec-cooldown-label-{{charNum}}" class="mdc-floating-label" for="spec-cooldown-{{charNum}}" title="Special skills activate when cooldown reaches 0." data-charnum="{{charNum}}">
                         Special Cooldown / <span id="spec-cooldown-max-{{charNum}}"  class="denominator">x</span>
                     </label>
                 </div>

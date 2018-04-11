@@ -126,12 +126,12 @@ select, .mdc-select > option {
         flex-flow: row wrap;
         justify-content: center;
 
-        > div.mdc-textfield {
+        > div.mdc-text-field {
             flex: 1 1 20px;
             max-width: 19%;
             margin: 4px;
 
-            .mdc-textfield__input {
+            .mdc-text-field__input {
                 width: 100%;
             }
         }

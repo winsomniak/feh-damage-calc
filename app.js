@@ -50,12 +50,15 @@ app.get('/', function(req, res, next) {
 
     res.locals.pageCSS = [
         { stylesheet: 'sorter' },
-        { stylesheet: 'calc-style' },
-        { stylesheet: 'outdated-browser' }
+        { stylesheet: 'calc-style' }
 
     ];
+
+    res.locals.js = [
+        'lib/material-components-web.min.js'
+    ];
+
     res.locals.bottomJS = [
-        'lib/outdated-browser.min.js',
         'lib/clipboard.min.js',
         'lib/jquery.min.js',
         'tsorter.js',

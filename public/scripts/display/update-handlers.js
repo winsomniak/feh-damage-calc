@@ -45,5 +45,5 @@ document.querySelectorAll('.mdc-icon-toggle').forEach(function(el) {
         var body = card.querySelector('.mdc-card__body');
 
         $(body).toggle(200);
-    });
+    }, {passive: true});
 });

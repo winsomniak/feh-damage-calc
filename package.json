@@ -10,25 +10,18 @@
   "license": "MIT",
   "private": false,
   "scripts": {
-    "start": "node test-app.js"
+    "start": "node app.js"
   },
-  "main": "test-app.js",
+  "main": "app.js",
   "dependencies": {
-    "body-parser": "^1.17.2",
-    "express": "https://registry.npmjs.org/express/-/express-4.15.3.tgz",
-    "express-handlebars": "^3.0.0",
-    "flat": "^2.0.1",
-    "glob": "^7.1.1",
-    "group-array": "^0.3.3",
-    "handlebars": "^4.0.8",
-    "handlebars-helpers": "^0.8.2",
+    "express": "^4.16.3",
+    "handlebars-helpers": "^0.8.4",
     "hbs": "^4.0.1",
-    "json-markup": "^1.1.0",
     "lodash": "^4.17.4",
-    "material-components-web": "https://registry.npmjs.org/material-components-web/-/material-components-web-0.14.0.tgz",
-    "normalize.css": "^7.0.0",
-    "request": "^2.81.0",
-    "simplemde": "^1.11.2"
+    "material-components-web": "^0.34.1",
+    "normalize.css": "^8.0.0",
+    "package.json": "^2.0.1",
+    "request": "^2.85.0"
   },
   "repository": {
     "type": "git",

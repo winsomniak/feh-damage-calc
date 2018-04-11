@@ -14,26 +14,10 @@
 			<div class="mdc-layout-grid" id="calc">
 				<div class="mdc-layout-grid__inner" id="char-panel">
 
-					<!--
-					<div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12 mdc-card mdc-theme--background">
-						<div class="mdc-card__primary">
-							<h2 class="mdc-card__title--large">Notice (December 29, 2017)</h2>
-						</div>
-						<div class="mdc-card__supporting-text">
-							<h3>Open Source</h3>
-							<p>I am in the process of open-sourcing the damage calculator. Please find the repository <a href="https://github.com/winsomniak/kagero-calc/">here</a>.
-								 Those who would like to help fix bugs and implement new features should submit a pull request! Any help maintaining the project is super appreciated.
-							</p>
-							<p>Bug reports are also being moved to github issue tracker for better visibility. Please <a href="https://github.com/winsomniak/kagero-calc/issues/">report any bugs</a> you find. Thanks!</p>
-							<p>-Winsomniak</p>
-						</div>
-					</div>
-					-->
-
 					<div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12-desktop mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-4-phone mdc-card mdc-theme--background" id="modes-container">
 						<section class="mdc-card__primary">
-							<h1 class="mdc-card__title--large mdc-theme--secondary-light">{{header}}</h1>
-							<h2 class="mdc-card__subtitle">Community Edition - <a href="https://github.com/winsomniak/kagero-calc/issues/">Report Bug</a></h2>
+							<h1 class="mdc-typography--headline mdc-theme--secondary-light">{{header}}</h1>
+							<h2 class="mdc-typography--subheading2">Community Edition - <a href="https://github.com/winsomniak/kagero-calc/issues/">Report Bug</a></h2>
 						</section>
 						<div class="mdc-card__actions" id="modes-container">
 							<div id="modes" title="Select a mode of calculation." class="ui-radioset">
@@ -126,7 +110,7 @@
 
 					<div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12 mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-4-phone mdc-card mdc-theme--background" id="matchups">
 						<section class="mdc-card__primary">
-							<h2 class="mdc-card__title--large">Matchups</h2>
+							<h2 class="mdc-typography--headline">Matchups</h2>
 						</section>
 						<div>
 							<div id="matchup-table-container">
@@ -134,39 +118,6 @@
 							</div>
 						</div>
 					</div>
-
-					<!--
-					<div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
-
-						<div class="mdc-card mdc-theme--background" id="import-export">
-							<section class="mdc-card__primary">
-								<h2 class="mdc-card__title--large">Import/Export</h2>
-							</section>
-							<section class="mdc-card__media mdc-layout-grid">
-								<div class="mdc-layout-grid__inner">
-									<div class="mdc-layout-grid__cell--span-12 mdc-textfield mdc-textfield--multiline mdc-textfield--upgraded" id="import-area-container">
-										<textarea class="mdc-textfield__input" id="import-area"></textarea>
-										<label for="import-area" class="mdc-textfield__label">Character Data</label>
-									</div>
-									<div class="mdc-layout-grid__cell--span-6">
-										<h4>Attackers</h4>
-										<button class="mdc-button mdc-button--primary import-btn" id="import-attacker">Import</button>
-										<button class="mdc-button mdc-button--primary export-btn"id="export-attacker">Export</button>
-									</div>
-									<div class="mdc-layout-grid__cell--span-6">
-										<h4>Defenders</h4>
-										<button class="mdc-button mdc-button--primary import-btn" id="import-defender">Import</button>
-										<button class="mdc-button mdc-button--primary export-btn" id="export-defender" >Export</button>
-									</div>
-									<div class="mdc-layout-grid__cell--span-12" id="import-error-msg-container"><span id="import-error-msg"></span></div>
-									<section class="mdc-layout-grid__cell--span-12" id="reddit-markdown">
-										<h3>Reddit Build Markdown</h3>
-										<p></p>
-									</section>
-								</div>
-							</section>
-						</div>
-					</div>-->
 
 					{{#if ads}}
 					<div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
@@ -185,8 +136,6 @@
 					</section>
 				</div>
 			</div>
-
-
 
 			{{> clipboard_snackbar}}
 		</div>
