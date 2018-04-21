@@ -7,6 +7,7 @@
     "weapon_type": "Blue Tome",
     "link": "https://kagerochart.com/hero/oliver-admirer-of-beauty",
     "move_type": "Infantry",
+    "LowestRarity":3,
     "weapon": [
         "shine-plus",
         "shine",
@@ -28,20 +29,6 @@
         "atk-ploy-1"
     ],
     "base_stat": {
-        "star_3": {
-            "hp": 17,
-            "atk": 7,
-            "spd": 4,
-            "def": 5,
-            "res": 7
-        },
-        "star_4": {
-            "hp": 17,
-            "atk": 8,
-            "spd": 4,
-            "def": 5,
-            "res": 8
-        },
         "star_5": {
             "hp": 18,
             "atk": 8,

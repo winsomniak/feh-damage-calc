@@ -7,6 +7,7 @@
     "weapon_type": "Green Tome",
     "link": "https://kagerochart.com/hero/boey-skillful-survivor",
     "move_type": "Infantry",
+    "LowestRarity":3,
     "weapon": [
         "gronnowl-plus",
         "gronnowl",
@@ -28,13 +29,6 @@
         "renewal-1"
     ],
     "base_stat": {
-        "star_4": {
-            "hp": 18,
-            "atk": 7,
-            "spd": 4,
-            "def": 8,
-            "res": 4
-        },
         "star_5": {
             "hp": 19,
             "atk": 7,

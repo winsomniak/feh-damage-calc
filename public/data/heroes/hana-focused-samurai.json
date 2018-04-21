@@ -7,6 +7,7 @@
     "weapon_type": "Sword",
     "link": "https://kagerochart.com/hero/hana-focused-samurai",
     "move_type": "Infantry",
+    "LowestRarity":1,
     "weapon": [
         "armorslayer-plus",
         "armorslayer",
@@ -27,34 +28,6 @@
         "obstruct-1"
     ],
     "base_stat": {
-        "star_1": {
-            "hp": 16,
-            "atk": 7,
-            "spd": 8,
-            "def": 4,
-            "res": 2
-        },
-        "star_2": {
-            "hp": 16,
-            "atk": 8,
-            "spd": 9,
-            "def": 4,
-            "res": 2
-        },
-        "star_3": {
-            "hp": 17,
-            "atk": 8,
-            "spd": 9,
-            "def": 5,
-            "res": 3
-        },
-        "star_4": {
-            "hp": 17,
-            "atk": 9,
-            "spd": 10,
-            "def": 5,
-            "res": 3
-        },
         "star_5": {
             "hp": 18,
             "atk": 9,

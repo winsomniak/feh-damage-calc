@@ -7,6 +7,7 @@
     "weapon_type": "Lance",
     "link": "https://kagerochart.com/hero/effie-army-of-one",
     "move_type": "Armored",
+    "LowestRarity":3,
     "weapon": [
         "silver-lance-plus",
         "silver-lance",
@@ -27,13 +28,6 @@
         "wary-fighter-1"
     ],
     "base_stat": {
-        "star_4": {
-            "hp": 21,
-            "atk": 12,
-            "spd": 4,
-            "def": 11,
-            "res": 3
-        },
         "star_5": {
             "hp": 22,
             "atk": 12,

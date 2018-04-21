@@ -7,6 +7,7 @@
     "weapon_type": "Lance",
     "link": "https://kagerochart.com/hero/clive-idealistic-knight",
     "move_type": "Cavalry",
+    "LowestRarity":4,
     "weapon": [
         "silver-lance-plus",
         "silver-lance",
@@ -26,13 +27,6 @@
         "hit-and-run"
     ],
     "base_stat": {
-        "star_4": {
-            "hp": 18,
-            "atk": 9,
-            "spd": 5,
-            "def": 8,
-            "res": 3
-        },
         "star_5": {
             "hp": 19,
             "atk": 9,

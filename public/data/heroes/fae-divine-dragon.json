@@ -7,6 +7,7 @@
     "weapon_type": "Green Breath",
     "link": "https://kagerochart.com/hero/fae-divine-dragon",
     "move_type": "Infantry",
+    "LowestRarity":3,
     "weapon": [
         "light-breath-plus",
         "light-breath",
@@ -27,13 +28,6 @@
         "threaten-atk-1"
     ],
     "base_stat": {
-        "star_4": {
-            "hp": 15,
-            "atk": 4,
-            "spd": 3,
-            "def": 6,
-            "res": 8
-        },
         "star_5": {
             "hp": 16,
             "atk": 5,

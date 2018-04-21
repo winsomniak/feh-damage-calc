@@ -7,6 +7,7 @@
     "weapon_type": "Sword",
     "link": "https://kagerochart.com/hero/tobin-the-clueless-one",
     "move_type": "Infantry",
+    "LowestRarity":4,
     "weapon": [
         "armorslayer-plus",
         "armorslayer",
@@ -27,13 +28,6 @@
         "seal-spd-1"
     ],
     "base_stat": {
-        "star_4": {
-            "hp": 17,
-            "atk": 7,
-            "spd": 5,
-            "def": 4,
-            "res": 3
-        },
         "star_5": {
             "hp": 18,
             "atk": 7,

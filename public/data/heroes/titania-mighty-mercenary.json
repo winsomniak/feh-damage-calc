@@ -7,6 +7,7 @@
     "weapon_type": "Axe",
     "link": "https://kagerochart.com/hero/titania-mighty-mercenary",
     "move_type": "Cavalry",
+    "LowestRarity":3,
     "weapon": [
         "emerald-axe-plus",
         "emerald-axe",
@@ -27,13 +28,6 @@
         "guard-1"
     ],
     "base_stat": {
-        "star_4": {
-            "hp": 17,
-            "atk": 5,
-            "spd": 8,
-            "def": 5,
-            "res": 8
-        },
         "star_5": {
             "hp": 18,
             "atk": 6,

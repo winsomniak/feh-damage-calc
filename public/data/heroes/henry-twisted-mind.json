@@ -7,6 +7,7 @@
     "weapon_type": "Red Tome",
     "link": "https://kagerochart.com/hero/henry-twisted-mind",
     "move_type": "Infantry",
+    "LowestRarity":3,
     "weapon": [
         "raurraven-plus",
         "raurraven",
@@ -28,20 +29,6 @@
         "g-tomebreaker-1"
     ],
     "base_stat": {
-        "star_3": {
-            "hp": 18,
-            "atk": 5,
-            "spd": 4,
-            "def": 7,
-            "res": 5
-        },
-        "star_4": {
-            "hp": 18,
-            "atk": 6,
-            "spd": 4,
-            "def": 8,
-            "res": 5
-        },
         "star_5": {
             "hp": 19,
             "atk": 6,

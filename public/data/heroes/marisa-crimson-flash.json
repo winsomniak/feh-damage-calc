@@ -7,6 +7,7 @@
     "weapon_type": "Sword",
     "link": "https://kagerochart.com/hero/marisa-crimson-flash",
     "move_type": "Infantry",
+    "LowestRarity":4,
     "weapon": [
         "wo-dao-plus",
         "wo-dao",
@@ -28,13 +29,6 @@
         "infantry-pulse-1"
     ],
     "base_stat": {
-        "star_4": {
-            "hp": 17,
-            "atk": 8,
-            "spd": 10,
-            "def": 5,
-            "res": 5
-        },
         "star_5": {
             "hp": 18,
             "atk": 8,

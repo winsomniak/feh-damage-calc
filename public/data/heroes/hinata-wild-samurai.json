@@ -7,6 +7,7 @@
     "weapon_type": "Sword",
     "link": "https://kagerochart.com/hero/hinata-wild-samurai",
     "move_type": "Infantry",
+    "LowestRarity":3,
     "weapon": [
         "ruby-sword-plus",
         "ruby-sword",
@@ -28,20 +29,6 @@
         "brash-assault-1"
     ],
     "base_stat": {
-        "star_3": {
-            "hp": 20,
-            "atk": 7,
-            "spd": 4,
-            "def": 9,
-            "res": 2
-        },
-        "star_4": {
-            "hp": 20,
-            "atk": 8,
-            "spd": 4,
-            "def": 10,
-            "res": 2
-        },
         "star_5": {
             "hp": 21,
             "atk": 8,

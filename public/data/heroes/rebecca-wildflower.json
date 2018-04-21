@@ -7,6 +7,7 @@
     "weapon_type": "Bow",
     "link": "https://kagerochart.com/hero/rebecca-wildflower",
     "move_type": "Infantry",
+    "LowestRarity":3,
     "weapon": [
         "silver-bow-plus",
         "silver-bow",
@@ -27,13 +28,6 @@
         "seal-atk-1"
     ],
     "base_stat": {
-        "star_4": {
-            "hp": 17,
-            "atk": 7,
-            "spd": 8,
-            "def": 5,
-            "res": 4
-        },
         "star_5": {
             "hp": 18,
             "atk": 7,

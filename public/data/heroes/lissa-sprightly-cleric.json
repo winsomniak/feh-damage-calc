@@ -7,6 +7,7 @@
     "weapon_type": "Staff",
     "link": "https://kagerochart.com/hero/lissa-sprightly-cleric",
     "move_type": "Infantry",
+    "LowestRarity":1,
     "weapon": [
         "gravity-plus",
         "gravity",
@@ -28,34 +29,6 @@
         "renewal-1"
     ],
     "base_stat": {
-        "star_1": {
-            "hp": 15,
-            "atk": 5,
-            "spd": 4,
-            "def": 4,
-            "res": 6
-        },
-        "star_2": {
-            "hp": 15,
-            "atk": 6,
-            "spd": 4,
-            "def": 4,
-            "res": 7
-        },
-        "star_3": {
-            "hp": 16,
-            "atk": 6,
-            "spd": 5,
-            "def": 5,
-            "res": 7
-        },
-        "star_4": {
-            "hp": 16,
-            "atk": 7,
-            "spd": 5,
-            "def": 5,
-            "res": 8
-        },
         "star_5": {
             "hp": 17,
             "atk": 7,

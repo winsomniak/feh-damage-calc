@@ -552,6 +552,61 @@ function applyStatModsRef(stats, refinement, type, weapon) {
     return stats;
 }
 
+function getAllStatsBasedOn5Star(rarity, charName, statsBases)
+{
+	var statNames = ["hp", "atk", "spd", "def", "res"];
+	var statOrdered = ["atk", "spd", "def", "res"];
+	statNames.forEach(function(key)
+	{
+		statsBases[key]=charInfo[charName].base_stat["star_5"][key];
+	});
+	if(rarity==5)
+		return statsBases;
+	if(rarity <= 2) //If rarity is 3, it's -1 to every stat from the 5 stars one. If it's 1 it's -2. If it's 2 or 4, we'll do something later
+		statNames.forEach(function(key)
+		{
+			statsBases[key]--;
+		});
+	statNames.forEach(function(key)
+	{
+		statsBases[key]--;
+	});
+	if (rarity%2 == 0) //In this case we need to add one point to the two highest stats. In case of collision, we pick in the order stated by statOrdered
+	{
+		var max1=0, max2=0, index1="", index2="";
+		statOrdered.forEach(function(key)
+		{
+			if(statsBases[key]>max1)
+			{
+				max2=max1;
+				index2=index1;
+				max1=statsBases[key];
+				index1=key;
+			}
+			else if(statsBases[key]>max2)
+			{
+				max2=statsBases[key];
+				index2=key;
+			}
+		});
+		statsBases[index1]++;
+		statsBases[index2]++;
+	}
+	return statsBases;
+}
+
+function getBaseStat(stats, rarity, charName, boon, bane)
+{
+	var statsBases={};
+	statBases=getAllStatsBasedOn5Star(rarity, charName, statsBases)
+    var statNames = ["hp", "atk", "spd", "def", "res"];
+	statNames.forEach(function(key)
+	{
+		stats[key]=statsBases[key] + ((boon === key) ? 1 : 0) + ((bane === key) ? -1 : 0);
+	});
+	return stats;
+}
+
 // gets that stat totals given the data
 // charName is the name of the character, weaponName is the equipped weapon, passiveA is the equipped passive a skill
 // rarity is the rarity of the character, level is the level of the character, merge is the number of units merged with the given one
@@ -560,11 +615,7 @@ function getStatTotals(charName, weaponName, passiveA, seal, rarity, level, merg
 
     // base stats + boons/banes
     var stats = {};
-    stats.hp = charInfo[charName].base_stat["star_" + rarity.toString()].hp + ((boon === "hp") ? 1 : 0) + ((bane === "hp") ? -1 : 0);
-    stats.atk = charInfo[charName].base_stat["star_" + rarity.toString()].atk + ((boon === "atk") ? 1 : 0) + ((bane === "atk") ? -1 : 0);
-    stats.spd = charInfo[charName].base_stat["star_" + rarity.toString()].spd + ((boon === "spd") ? 1 : 0) + ((bane === "spd") ? -1 : 0);
-    stats.def = charInfo[charName].base_stat["star_" + rarity.toString()].def + ((boon === "def") ? 1 : 0) + ((bane === "def") ? -1 : 0);
-    stats.res = charInfo[charName].base_stat["star_" + rarity.toString()].res + ((boon === "res") ? 1 : 0) + ((bane === "res") ? -1 : 0);
+	stats=getBaseStat(stats, rarity, charName, boon, bane);
 
     // merged units
     if (merge > 0) {
@@ -992,11 +1043,11 @@ function getDefaultCharData(charName) {
     // override rarity
     var overrideRarity = parseInt($("#override-rarity").val());
     if (overrideRarity < 5 && charInfo[charName].hasOwnProperty("base_stat")) {
-        if (charInfo[charName].base_stat.hasOwnProperty("star_" + overrideRarity.toString())) {
+        if (charInfo[charName].hasOwnProperty("LowestRarity") && charInfo[charName].LowestRarity <= overrideRarity) {
             rarity = overrideRarity;
         } else {
             for (var rarityIndex = 4; rarityIndex >= overrideRarity; rarityIndex--) {
-                if (!charInfo[charName].base_stat.hasOwnProperty("star_" + rarityIndex.toString())) {
+                if (!(charInfo[charName].hasOwnProperty("LowestRarity") && charInfo[charName].LowestRarity <= rarityIndex)) {
                     break;
                 }
                 rarity = rarityIndex;
@@ -2837,11 +2888,11 @@ function applyOverrides(charNum) {
     // override rarity
     var overrideRarity = parseInt($("#override-rarity").val());
     if (overrideRarity < 5 && charInfo[charName].hasOwnProperty("base_stat")) {
-        if (charInfo[charName].base_stat.hasOwnProperty("star_" + overrideRarity.toString())) {
+        if (charInfo[charName].hasOwnProperty("LowestRarity") && charInfo[charName].LowestRarity <= overrideRarity) {
             rarity = overrideRarity;
         } else {
             for (var rarityIndex = 4; rarityIndex >= overrideRarity; rarityIndex--) {
-                if (!charInfo[charName].base_stat.hasOwnProperty("star_" + rarityIndex.toString())) {
+                if (!(charInfo[charName].hasOwnProperty("LowestRarity") && charInfo[charName].LowestRarity <= overrideRarity)) {
                     break;
                 }
                 rarity = rarityIndex;
@@ -3438,7 +3489,7 @@ function importTeam(attacker) {
             // get rarity options
             if (charInfo[importedChars[charCount].character].hasOwnProperty("base_stat")) {
                 for (var rarities = 4; rarities >= 1; rarities--) {
-                    if (!charInfo[importedChars[charCount].character].base_stat.hasOwnProperty("star_" + rarities.toString())) {
+                    if (!(charInfo[importedChars[charCount].character].hasOwnProperty("LowestRarity") && charInfo[importedChars[charCount].character].LowestRarity <= rarities)) {
                         break;
                     }
                     importedChars[charCount].rarityHTML += rarities !== 1 ? "<option value='" + rarities.toString() + "'>" + rarities.toString() + " Stars</option>" : "<option value='1'>1 Star</option>";
@@ -3451,7 +3502,7 @@ function importTeam(attacker) {
             if (line.length === 3) { // get rarity and level
                 if (isValidRarity(line[1])) {
                     var rarityStr = line[1].split(" ");
-                    if (charInfo[importedChars[charCount].character].base_stat.hasOwnProperty("star_" + rarityStr[0])) {
+                    if (charInfo[importedChars[charCount].character].hasOwnProperty("LowestRarity") && charInfo[importedChars[charCount].character].LowestRarity <= rarityStr[0]) {
                         importedChars[charCount].rarity = rarityStr[0];
                     } else {
                         $("#import-error-msg").text("Import error: Invalid rarity (line " + (textLine + 1).toString() + ")").show();
@@ -3480,7 +3531,7 @@ function importTeam(attacker) {
             } else if (line.length === 2) { // get rarity or level
                 if (isValidRarity(line[1])) {
                     var rarStr = line[1].split(" ");
-                    if (charInfo[importedChars[charCount].character].base_stat.hasOwnProperty("star_" + rarStr[0])) {
+                    if (charInfo[importedChars[charCount].character].hasOwnProperty("LowestRarity") && charInfo[importedChars[charCount].character].LowestRarity <= rarStr[0]) {
                         importedChars[charCount].rarity = rarStr[0];
                     } else {
                         $("#import-error-msg").text("Import error: Invalid rarity (line " + (textLine + 1).toString() + ")").show();

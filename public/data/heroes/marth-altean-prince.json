@@ -7,6 +7,7 @@
     "weapon_type": "Sword",
     "link": "https://kagerochart.com/hero/marth-altean-prince",
     "move_type": "Infantry",
+    "LowestRarity":3,
     "weapon": [
         "falchion",
         "silver-sword",
@@ -27,13 +28,6 @@
         "spur-spd-1"
     ],
     "base_stat": {
-        "star_4": {
-            "hp": 18,
-            "atk": 7,
-            "spd": 8,
-            "def": 6,
-            "res": 5
-        },
         "star_5": {
             "hp": 19,
             "atk": 7,

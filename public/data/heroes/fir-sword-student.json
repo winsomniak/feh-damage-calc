@@ -7,6 +7,7 @@
     "weapon_type": "Sword",
     "link": "https://kagerochart.com/hero/fir-sword-student",
     "move_type": "Infantry",
+    "LowestRarity":3,
     "weapon": [
         "killing-edge-plus",
         "killing-edge",
@@ -28,20 +29,6 @@
         "pass-1"
     ],
     "base_stat": {
-        "star_3": {
-            "hp": 18,
-            "atk": 5,
-            "spd": 9,
-            "def": 4,
-            "res": 6
-        },
-        "star_4": {
-            "hp": 18,
-            "atk": 5,
-            "spd": 10,
-            "def": 4,
-            "res": 7
-        },
         "star_5": {
             "hp": 19,
             "atk": 6,

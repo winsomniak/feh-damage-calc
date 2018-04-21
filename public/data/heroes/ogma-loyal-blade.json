@@ -7,6 +7,7 @@
     "weapon_type": "Sword",
     "link": "https://kagerochart.com/hero/ogma-loyal-blade",
     "move_type": "Infantry",
+    "LowestRarity":3,
     "weapon": [
         "brave-sword-plus",
         "brave-sword",
@@ -28,13 +29,6 @@
         "spur-atk-1"
     ],
     "base_stat": {
-        "star_4": {
-            "hp": 20,
-            "atk": 7,
-            "spd": 10,
-            "def": 5,
-            "res": 2
-        },
         "star_5": {
             "hp": 21,
             "atk": 7,

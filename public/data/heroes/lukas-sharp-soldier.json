@@ -7,6 +7,7 @@
     "weapon_type": "Lance",
     "link": "https://kagerochart.com/hero/lukas-sharp-soldier",
     "move_type": "Infantry",
+    "LowestRarity":3,
     "weapon": [
         "killer-lance-plus",
         "killer-lance",
@@ -28,13 +29,6 @@
         "obstruct-1"
     ],
     "base_stat": {
-        "star_4": {
-            "hp": 18,
-            "atk": 9,
-            "spd": 4,
-            "def": 10,
-            "res": 3
-        },
         "star_5": {
             "hp": 19,
             "atk": 9,

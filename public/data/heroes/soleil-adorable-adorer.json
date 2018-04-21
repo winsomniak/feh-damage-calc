@@ -7,6 +7,7 @@
     "weapon_type": "Sword",
     "link": "https://kagerochart.com/hero/soleil-adorable-adorer",
     "move_type": "Infantry",
+    "LowestRarity":4,
     "weapon": [
         "firesweep-sword-plus",
         "firesweep-sword",
@@ -28,13 +29,6 @@
         "spur-res-1"
     ],
     "base_stat": {
-        "star_4": {
-            "hp": 17,
-            "atk": 10,
-            "spd": 9,
-            "def": 5,
-            "res": 4
-        },
         "star_5": {
             "hp": 18,
             "atk": 10,

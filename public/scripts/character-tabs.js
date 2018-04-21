@@ -425,7 +425,7 @@ function displayChar(charName, charNum, showHidden) {
     var rarities = "<option value='5'>5 Stars</option>";
     if (singleChar.hasOwnProperty("base_stat")) {
         for (var starIndex = 4; starIndex >= 1; starIndex--) {
-            if (singleChar.base_stat.hasOwnProperty("star_" + starIndex.toString())) {
+            if (charInfo[charName].hasOwnProperty("LowestRarity") && charInfo[charName].LowestRarity <= starIndex) {
                 if (starIndex === 1) {
                     rarities += "<option value='1'>1 Star</option>";
                 } else {

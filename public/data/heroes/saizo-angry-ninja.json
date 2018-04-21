@@ -7,6 +7,7 @@
     "weapon_type": "Dagger",
     "link": "https://kagerochart.com/hero/saizo-angry-ninja",
     "move_type": "Infantry",
+    "LowestRarity":3,
     "weapon": [
         "smoke-dagger-plus",
         "smoke-dagger",
@@ -27,20 +28,6 @@
         "spur-spd-1"
     ],
     "base_stat": {
-        "star_3": {
-            "hp": 16,
-            "atk": 6,
-            "spd": 7,
-            "def": 8,
-            "res": 2
-        },
-        "star_4": {
-            "hp": 16,
-            "atk": 6,
-            "spd": 8,
-            "def": 9,
-            "res": 2
-        },
         "star_5": {
             "hp": 17,
             "atk": 7,

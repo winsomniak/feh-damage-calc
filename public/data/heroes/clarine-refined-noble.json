@@ -7,6 +7,7 @@
     "weapon_type": "Staff",
     "link": "https://kagerochart.com/hero/clarine-refined-noble",
     "move_type": "Cavalry",
+    "LowestRarity":3,
     "weapon": [
         "fear-plus",
         "fear",
@@ -28,20 +29,6 @@
         "resistance-plus-1"
     ],
     "base_stat": {
-        "star_3": {
-            "hp": 15,
-            "atk": 5,
-            "spd": 8,
-            "def": 4,
-            "res": 6
-        },
-        "star_4": {
-            "hp": 15,
-            "atk": 5,
-            "spd": 9,
-            "def": 4,
-            "res": 7
-        },
         "star_5": {
             "hp": 16,
             "atk": 6,

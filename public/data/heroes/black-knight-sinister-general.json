@@ -7,6 +7,7 @@
     "weapon_type": "Sword",
     "link": "https://kagerochart.com/hero/black-knight-sinister-general",
     "move_type": "Armored",
+    "LowestRarity":4,
     "weapon": [
         "alondite",
         "silver-sword",
@@ -29,13 +30,6 @@
         "wings-of-mercy-1"
     ],
     "base_stat": {
-        "star_4": {
-            "hp": 21,
-            "atk": 10,
-            "spd": 7,
-            "def": 9,
-            "res": 4
-        },
         "star_5": {
             "hp": 22,
             "atk": 10,

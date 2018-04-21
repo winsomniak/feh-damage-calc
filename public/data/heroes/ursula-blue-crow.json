@@ -7,6 +7,7 @@
     "weapon_type": "Blue Tome",
     "link": "https://kagerochart.com/hero/ursula-blue-crow",
     "move_type": "Cavalry",
+    "LowestRarity":3,
     "weapon": [
         "blarwolf-plus",
         "blarwolf",
@@ -28,20 +29,6 @@
         "threaten-res-1"
     ],
     "base_stat": {
-        "star_3": {
-            "hp": 15,
-            "atk": 6,
-            "spd": 7,
-            "def": 3,
-            "res": 7
-        },
-        "star_4": {
-            "hp": 15,
-            "atk": 6,
-            "spd": 8,
-            "def": 3,
-            "res": 8
-        },
         "star_5": {
             "hp": 16,
             "atk": 7,

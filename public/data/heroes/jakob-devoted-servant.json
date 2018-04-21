@@ -7,6 +7,7 @@
     "weapon_type": "Dagger",
     "link": "https://kagerochart.com/hero/jakob-devoted-servant",
     "move_type": "Infantry",
+    "LowestRarity":3,
     "weapon": [
         "silver-dagger-plus",
         "silver-dagger",
@@ -27,13 +28,6 @@
         "renewal-1"
     ],
     "base_stat": {
-        "star_4": {
-            "hp": 16,
-            "atk": 7,
-            "spd": 9,
-            "def": 5,
-            "res": 4
-        },
         "star_5": {
             "hp": 17,
             "atk": 7,
