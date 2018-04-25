@@ -7,6 +7,7 @@
     "weapon_type": "Staff",
     "link": "https://kagerochart.com/hero/maria-minervas-sister",
     "move_type": "Infantry",
+    "LowestRarity":3,
     "weapon": [
         "panic-plus",
         "panic",
@@ -28,13 +29,6 @@
         "fortify-res-1"
     ],
     "base_stat": {
-        "star_4": {
-            "hp": 16,
-            "atk": 4,
-            "spd": 8,
-            "def": 3,
-            "res": 10
-        },
         "star_5": {
             "hp": 17,
             "atk": 5,

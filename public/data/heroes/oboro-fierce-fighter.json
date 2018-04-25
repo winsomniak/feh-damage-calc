@@ -7,6 +7,7 @@
     "weapon_type": "Lance",
     "link": "https://kagerochart.com/hero/oboro-fierce-fighter",
     "move_type": "Infantry",
+    "LowestRarity":3,
     "weapon": [
         "heavy-spear-plus",
         "heavy-spear",
@@ -27,20 +28,6 @@
         "threaten-res-1"
     ],
     "base_stat": {
-        "star_3": {
-            "hp": 17,
-            "atk": 7,
-            "spd": 6,
-            "def": 8,
-            "res": 4
-        },
-        "star_4": {
-            "hp": 17,
-            "atk": 8,
-            "spd": 6,
-            "def": 9,
-            "res": 4
-        },
         "star_5": {
             "hp": 18,
             "atk": 8,

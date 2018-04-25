@@ -7,6 +7,7 @@
     "weapon_type": "Dagger",
     "link": "https://kagerochart.com/hero/kagero-honorable-ninja",
     "move_type": "Infantry",
+    "LowestRarity":3,
     "weapon": [
         "poison-dagger-plus",
         "poison-dagger",
@@ -28,13 +29,6 @@
         "daggerbreaker-1"
     ],
     "base_stat": {
-        "star_4": {
-            "hp": 15,
-            "atk": 9,
-            "spd": 8,
-            "def": 4,
-            "res": 5
-        },
         "star_5": {
             "hp": 16,
             "atk": 9,

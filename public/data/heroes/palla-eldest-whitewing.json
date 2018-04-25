@@ -7,6 +7,7 @@
     "weapon_type": "Sword",
     "link": "https://kagerochart.com/hero/palla-eldest-whitewing",
     "move_type": "Flying",
+    "LowestRarity":3,
     "weapon": [
         "ruby-sword-plus",
         "ruby-sword",
@@ -28,20 +29,6 @@
         "spur-spd-1"
     ],
     "base_stat": {
-        "star_3": {
-            "hp": 17,
-            "atk": 6,
-            "spd": 8,
-            "def": 5,
-            "res": 6
-        },
-        "star_4": {
-            "hp": 17,
-            "atk": 7,
-            "spd": 9,
-            "def": 5,
-            "res": 6
-        },
         "star_5": {
             "hp": 18,
             "atk": 7,

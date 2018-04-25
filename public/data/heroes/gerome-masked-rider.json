@@ -7,6 +7,7 @@
     "weapon_type": "Axe",
     "link": "https://kagerochart.com/hero/gerome-masked-rider",
     "move_type": "Flying",
+    "LowestRarity":4,
     "weapon": [
         "poleaxe-plus",
         "poleaxe",
@@ -26,13 +27,6 @@
         "hit-and-run"
     ],
     "base_stat": {
-        "star_4": {
-            "hp": 18,
-            "atk": 10,
-            "spd": 5,
-            "def": 8,
-            "res": 3
-        },
         "star_5": {
             "hp": 19,
             "atk": 10,

@@ -7,6 +7,7 @@
     "weapon_type": "Sword",
     "link": "https://kagerochart.com/hero/stahl-viridian-knight",
     "move_type": "Cavalry",
+    "LowestRarity":1,
     "weapon": [
         "ruby-sword-plus",
         "ruby-sword",
@@ -27,34 +28,6 @@
         "obstruct-1"
     ],
     "base_stat": {
-        "star_1": {
-            "hp": 17,
-            "atk": 5,
-            "spd": 5,
-            "def": 6,
-            "res": 3
-        },
-        "star_2": {
-            "hp": 17,
-            "atk": 6,
-            "spd": 5,
-            "def": 7,
-            "res": 3
-        },
-        "star_3": {
-            "hp": 18,
-            "atk": 6,
-            "spd": 6,
-            "def": 7,
-            "res": 4
-        },
-        "star_4": {
-            "hp": 18,
-            "atk": 7,
-            "spd": 6,
-            "def": 8,
-            "res": 4
-        },
         "star_5": {
             "hp": 19,
             "atk": 7,

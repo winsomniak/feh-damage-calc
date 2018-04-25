@@ -7,6 +7,7 @@
     "weapon_type": "Green Tome",
     "link": "https://kagerochart.com/hero/nino-pious-mage",
     "move_type": "Infantry",
+    "LowestRarity":3,
     "weapon": [
         "gronnblade-plus",
         "gronnblade",
@@ -27,20 +28,6 @@
         "hone-atk-1"
     ],
     "base_stat": {
-        "star_3": {
-            "hp": 15,
-            "atk": 6,
-            "spd": 9,
-            "def": 3,
-            "res": 6
-        },
-        "star_4": {
-            "hp": 15,
-            "atk": 7,
-            "spd": 10,
-            "def": 3,
-            "res": 6
-        },
         "star_5": {
             "hp": 16,
             "atk": 7,

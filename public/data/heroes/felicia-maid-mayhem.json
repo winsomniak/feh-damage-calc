@@ -7,6 +7,7 @@
     "weapon_type": "Dagger",
     "link": "https://kagerochart.com/hero/felicia-maid-mayhem",
     "move_type": "Infantry",
+    "LowestRarity":1,
     "weapon": [
         "felicia-plate",
         "silver-dagger-plus",
@@ -29,34 +30,6 @@
         "breath-of-life-1"
     ],
     "base_stat": {
-        "star_1": {
-            "hp": 13,
-            "atk": 4,
-            "spd": 9,
-            "def": 1,
-            "res": 7
-        },
-        "star_2": {
-            "hp": 13,
-            "atk": 4,
-            "spd": 10,
-            "def": 1,
-            "res": 8
-        },
-        "star_3": {
-            "hp": 14,
-            "atk": 5,
-            "spd": 10,
-            "def": 2,
-            "res": 8
-        },
-        "star_4": {
-            "hp": 14,
-            "atk": 5,
-            "spd": 11,
-            "def": 2,
-            "res": 9
-        },
         "star_5": {
             "hp": 15,
             "atk": 6,

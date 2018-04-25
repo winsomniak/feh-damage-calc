@@ -7,6 +7,7 @@
     "weapon_type": "Lance",
     "link": "https://kagerochart.com/hero/eliwood-devoted-love",
     "move_type": "Armored",
+    "LowestRarity":4,
     "weapon": [
         "casa-blanca-plus",
         "casa-blanca",
@@ -28,13 +29,6 @@
         "spur-atk-1"
     ],
     "base_stat": {
-        "star_4": {
-            "hp": 22,
-            "atk": 10,
-            "spd": 8,
-            "def": 6,
-            "res": 6
-        },
         "star_5": {
             "hp": 23,
             "atk": 10,

@@ -7,6 +7,7 @@
     "weapon_type": "Blue Tome",
     "link": "https://kagerochart.com/hero/mae-bundle-of-energy",
     "move_type": "Infantry",
+    "LowestRarity":3,
     "weapon": [
         "blarowl-plus",
         "blarowl",
@@ -27,13 +28,6 @@
         "b-tome-exp-1"
     ],
     "base_stat": {
-        "star_4": {
-            "hp": 15,
-            "atk": 10,
-            "spd": 6,
-            "def": 2,
-            "res": 8
-        },
         "star_5": {
             "hp": 16,
             "atk": 10,

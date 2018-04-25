@@ -7,6 +7,7 @@
     "weapon_type": "Lance",
     "link": "https://kagerochart.com/hero/camus-sable-knight",
     "move_type": "Cavalry",
+    "LowestRarity":3,
     "weapon": [
         "gradivus",
         "silver-lance",
@@ -26,20 +27,6 @@
         "spur-atk-1"
     ],
     "base_stat": {
-        "star_3": {
-            "hp": 17,
-            "atk": 7,
-            "spd": 8,
-            "def": 6,
-            "res": 3
-        },
-        "star_4": {
-            "hp": 17,
-            "atk": 8,
-            "spd": 9,
-            "def": 6,
-            "res": 3
-        },
         "star_5": {
             "hp": 18,
             "atk": 8,

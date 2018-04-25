@@ -1,0 +1,10 @@
+{
+    "name": "S Drink",
+    "sp": 300,
+    "type": "B",
+    "description": "At the start of turn 1, restores 99 HP and grants Special cooldown count-1.",
+    "icon": "/images/icons/passives/s-drink.png",
+    "link": "https://kagerochart.com/hero/passives/s-drink",
+    "char_unique": true,
+    "id": "s-drink"
+}

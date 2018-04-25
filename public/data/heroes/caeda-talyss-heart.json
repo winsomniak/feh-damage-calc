@@ -7,6 +7,7 @@
     "weapon_type": "Sword",
     "link": "https://kagerochart.com/hero/caeda-talyss-heart",
     "move_type": "Flying",
+    "LowestRarity":3,
     "weapon": [
         "wing-sword",
         "armorslayer-plus",
@@ -28,13 +29,6 @@
         "fortify-res-1"
     ],
     "base_stat": {
-        "star_4": {
-            "hp": 16,
-            "atk": 5,
-            "spd": 9,
-            "def": 4,
-            "res": 10
-        },
         "star_5": {
             "hp": 17,
             "atk": 6,

@@ -7,6 +7,7 @@
     "weapon_type": "Lance",
     "link": "https://kagerochart.com/hero/subaki-perfect-expert",
     "move_type": "Flying",
+    "LowestRarity":1,
     "weapon": [
         "sapphire-lance-plus",
         "sapphire-lance",
@@ -27,34 +28,6 @@
         "quick-riposte-1"
     ],
     "base_stat": {
-        "star_1": {
-            "hp": 16,
-            "atk": 4,
-            "spd": 7,
-            "def": 7,
-            "res": 3
-        },
-        "star_2": {
-            "hp": 16,
-            "atk": 4,
-            "spd": 8,
-            "def": 8,
-            "res": 3
-        },
-        "star_3": {
-            "hp": 17,
-            "atk": 5,
-            "spd": 8,
-            "def": 8,
-            "res": 4
-        },
-        "star_4": {
-            "hp": 17,
-            "atk": 5,
-            "spd": 9,
-            "def": 9,
-            "res": 4
-        },
         "star_5": {
             "hp": 18,
             "atk": 6,

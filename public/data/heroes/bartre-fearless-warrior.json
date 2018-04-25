@@ -7,6 +7,7 @@
     "weapon_type": "Axe",
     "link": "https://kagerochart.com/hero/bartre-fearless-warrior",
     "move_type": "Infantry",
+    "LowestRarity":3,
     "weapon": [
         "hammer-plus",
         "hammer",
@@ -27,20 +28,6 @@
         "brash-assault-1"
     ],
     "base_stat": {
-        "star_3": {
-            "hp": 20,
-            "atk": 9,
-            "spd": 5,
-            "def": 6,
-            "res": 2
-        },
-        "star_4": {
-            "hp": 20,
-            "atk": 10,
-            "spd": 5,
-            "def": 7,
-            "res": 2
-        },
         "star_5": {
             "hp": 21,
             "atk": 10,

@@ -7,6 +7,7 @@
     "weapon_type": "Lance",
     "link": "https://kagerochart.com/hero/donnel-village-hero",
     "move_type": "Infantry",
+    "LowestRarity":1,
     "weapon": [
         "brave-lance-plus",
         "brave-lance",
@@ -25,34 +26,6 @@
         "drag-back"
     ],
     "base_stat": {
-        "star_1": {
-            "hp": 15,
-            "atk": 5,
-            "spd": 3,
-            "def": 4,
-            "res": 2
-        },
-        "star_2": {
-            "hp": 15,
-            "atk": 6,
-            "spd": 3,
-            "def": 5,
-            "res": 2
-        },
-        "star_3": {
-            "hp": 16,
-            "atk": 6,
-            "spd": 4,
-            "def": 5,
-            "res": 3
-        },
-        "star_4": {
-            "hp": 16,
-            "atk": 7,
-            "spd": 4,
-            "def": 6,
-            "res": 3
-        },
         "star_5": {
             "hp": 17,
             "atk": 7,

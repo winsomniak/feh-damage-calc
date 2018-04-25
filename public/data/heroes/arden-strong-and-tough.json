@@ -7,6 +7,7 @@
     "weapon_type": "Sword",
     "link": "https://kagerochart.com/hero/arden-strong-and-tough",
     "move_type": "Armored",
+    "LowestRarity":4,
     "weapon": [
         "brave-sword-plus",
         "brave-sword",
@@ -26,13 +27,6 @@
         "spur-def-1"
     ],
     "base_stat": {
-        "star_4": {
-            "hp": 24,
-            "atk": 10,
-            "spd": 2,
-            "def": 13,
-            "res": 2
-        },
         "star_5": {
             "hp": 25,
             "atk": 10,

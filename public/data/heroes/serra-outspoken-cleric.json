@@ -7,6 +7,7 @@
     "weapon_type": "Staff",
     "link": "https://kagerochart.com/hero/serra-outspoken-cleric",
     "move_type": "Infantry",
+    "LowestRarity":3,
     "weapon": [
         "absorb-plus",
         "absorb",
@@ -28,20 +29,6 @@
         "hone-atk-1"
     ],
     "base_stat": {
-        "star_3": {
-            "hp": 15,
-            "atk": 5,
-            "spd": 8,
-            "def": 3,
-            "res": 8
-        },
-        "star_4": {
-            "hp": 15,
-            "atk": 5,
-            "spd": 9,
-            "def": 3,
-            "res": 9
-        },
         "star_5": {
             "hp": 16,
             "atk": 6,

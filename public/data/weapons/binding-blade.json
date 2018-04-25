@@ -12,6 +12,23 @@
         "def": 2,
         "res": 2
     },
+    "refinable": {
+        "remove":{
+            "defend_mod":true
+        },
+        "defend_mod": {
+            "def": 4,
+            "res": 4
+        },
+        "weapon_effective": [
+            "Breath",
+            "Red Breath",
+            "Green Breath",
+            "Blue Breath"
+        ],
+        "type": "melee",
+        "Special": "Binding Blade"
+    },
     "char_unique": true,
     "id": "binding-blade"
 }

@@ -7,6 +7,7 @@
     "weapon_type": "Sword",
     "link": "https://kagerochart.com/hero/marth-enigmatic-blade",
     "move_type": "Infantry",
+    "LowestRarity":4,
     "weapon": [
         "falchion-1",
         "silver-sword",
@@ -14,13 +15,6 @@
         "iron-sword"
     ],
     "base_stat": {
-        "star_4": {
-            "hp": 18,
-            "atk": 8,
-            "spd": 10,
-            "def": 5,
-            "res": 3
-        },
         "star_5": {
             "hp": 19,
             "atk": 8,

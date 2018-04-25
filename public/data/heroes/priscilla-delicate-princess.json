@@ -7,6 +7,7 @@
     "weapon_type": "Staff",
     "link": "https://kagerochart.com/hero/priscilla-delicate-princess",
     "move_type": "Cavalry",
+    "LowestRarity":3,
     "weapon": [
         "panic-plus",
         "panic",
@@ -28,13 +29,6 @@
         "spur-def-1"
     ],
     "base_stat": {
-        "star_4": {
-            "hp": 16,
-            "atk": 7,
-            "spd": 6,
-            "def": 3,
-            "res": 8
-        },
         "star_5": {
             "hp": 17,
             "atk": 7,
