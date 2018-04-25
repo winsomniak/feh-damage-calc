@@ -1,0 +1,10 @@
+{
+    "description": "Grants Def+4. Inflicts Atk-3.",
+    "id": "fortress-def-2",
+    "name": "Fortress Def 2",
+    "stat_mod": {
+        "def": 4,
+        "atk":-3
+    },
+    "type": "s"
+}

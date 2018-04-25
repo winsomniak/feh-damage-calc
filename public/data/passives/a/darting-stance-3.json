@@ -1,0 +1,12 @@
+{
+    "name": "Darting Stance 3",
+    "sp": 200,
+    "type": "A",
+    "description": "Grants Spd+6 during combat when this unit is attacked.",
+    "icon": "/images/icons/passives/darting-stance-3.png",
+    "link": "https://kagerochart.com/hero/passives/darting-stance-3",
+    "defend_mod": {
+        "spd": 6
+    },
+    "id": "darting-stance-3"
+}

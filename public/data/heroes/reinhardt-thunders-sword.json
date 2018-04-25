@@ -1,0 +1,52 @@
+{
+    "display": "Reinhardt, Thunder's Sword",
+    "name": "Reinhardt",
+    "title": "Thunder's Sword",
+    "id": "reinhardt-thunders-sword",
+    "color": "Red",
+    "weapon_type": "Sword",
+    "link": "https://kagerochart.com/hero/reinhardt-thunders-sword",
+    "move_type": "Cavalry",
+    "weapon": [
+        "meisterschwert",
+        "silver-sword",
+        "steel-sword",
+        "iron-sword"
+    ],
+    "special": [
+        "pavise",
+        "buckler"
+    ],
+    "passive_a": [
+        "death-blow-3",
+        "death-blow-2",
+        "death-blow-1"
+    ],
+    "passive_b": [
+        "vantage-3",
+        "vantage-2",
+        "vantage-1"
+    ],
+    "passive_c": [
+        "spur-atk-def-2",
+        "spur-atk-def-1",
+        "spur-atk-1"
+    ],
+    "base_stat": {
+        "star_5": {
+            "hp": 18,
+            "atk": 9,
+            "spd": 6,
+            "def": 7,
+            "res": 6
+        },
+        "growth": {
+            "hp": 6,
+            "atk": 8,
+            "spd": 4,
+            "def": 7,
+            "res": 6,
+            "total": 31
+        }
+    }
+}

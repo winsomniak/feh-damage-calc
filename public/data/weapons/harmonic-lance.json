@@ -1,0 +1,13 @@
+{
+    "name": "Harmonic Lance",
+    "might": 9,
+    "range": 1,
+    "sp": 200,
+    "description": "Grants +10 to damage when Special triggers.",
+    "type": "Lance",
+    "color": "Blue",
+    "magical": false,
+    "spec_damage_bonus": 10,
+    "link": "https://kagerochart.com/hero/weapons/harmonic-lance",
+    "id": "harmonic-lance"
+}

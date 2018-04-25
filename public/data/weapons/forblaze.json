@@ -1,0 +1,17 @@
+{
+    "name": "Forblaze",
+    "might": 14,
+    "range": 2,
+    "sp": 400,
+    "type": "Red Tome",
+    "color": "Red",
+    "link": "https://kagerochart.com/hero/weapons/forblaze",
+    "description": "At start of turn, inflicts Res-7 on foe on the enemy team with the highest Res through its next action.",
+    "magical": true,
+    "char_unique": true,
+    "refinable": {
+        "type": "ranged",
+        "Special": "Forblaze"
+    },
+    "id": "forblaze"
+}

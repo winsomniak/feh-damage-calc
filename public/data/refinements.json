@@ -89,6 +89,16 @@
                 ]
             }
         },
+        "Binding Blade":{
+            "stat_mod":{
+                "hp":3
+            },
+            "description":" If unit’s HP >= 50% and foe initiates combat, unit makes a guaranteed follow-up attack.",
+            "defense_follow_up": {
+                "trigger": "healthy",
+                "threshold": 0.50
+            }
+        },
         "Sol Katti":{
             "stat_mod":{
                 "hp":3
@@ -195,6 +205,13 @@
                 }
             }
         },
+        "Forblaze":
+        {
+            "description": "Grants Atk+6 during combat if unit initiates the attack.",
+            "initiate_mod": {
+                "atk": 6
+            }
+        },
         "Fujin Yumi":
         {
             "description":" If unit's HP ≥ 50%, unit can move adjacent to any ally within 2 spaces."
@@ -253,6 +270,22 @@
                 },
                 "stat_mod": {
                     "atk": 6
+                }
+            }
+        },
+        "Regal Blade":{
+            "stat_mod":{
+                "hp":3
+            },
+            "description":" If unit is within 2 spaces of an infantry magic ally, grants Atk/Spd/Def/Res+3 during combat.",
+            "adjacent_stat_bonus": {
+                "target": "self",
+                "adjacent": "ally",
+                "mod": {
+                    "atk": 3,
+                    "spd": 3,
+                    "def": 3,
+                    "res": 3
                 }
             }
         },

@@ -12,6 +12,17 @@
         "atk": 2,
         "spd": 2
     },
+    "refinable": {
+        "remove":{
+            "foe_full_hp_mod":true
+        },
+        "type": "melee",
+        "foe_full_hp_mod": {
+            "atk": 3,
+            "spd": 3
+        },
+        "Special": "Regal Blade"
+    },
     "char_unique": true,
     "id": "regal-blade"
 }

@@ -9,6 +9,7 @@
     "LowestRarity":3,
     "move_type": "Infantry",
     "weapon": [
+        "forblaze",
         "bolganone-plus",
         "bolganone",
         "elfire",

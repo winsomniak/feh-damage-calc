@@ -1520,7 +1520,6 @@ function singleCombat(battleInfo, initiator, logIntro, brave) {
         battleInfo.logMsg += "Damage boosted by " + battleInfo.mirroringdmg.toString() + " [" + specialInfo[attacker.special].name + "]. ";
     }
 
-
     // cap damage at 0 if negative
     dmg = Math.max(dmg, 0);
 
@@ -1533,6 +1532,15 @@ function singleCombat(battleInfo, initiator, logIntro, brave) {
         }
         else{
             dmg = roundNum(dmg / 2, false);
+        }
+    }
+
+    //Light Brand's check
+    if(attacker.weaponData.hasOwnProperty("dmg_comp"))
+    {
+        if(phantomStat(defender, attacker.weaponData.dmg_comp.great) - phantomStat(defender, attacker.weaponData.dmg_comp.low) >= attacker.weaponData.dmg_comp.quantity){
+            dmg += attacker.weaponData.dmg_comp.dmg;
+            battleInfo.logMsg += "Damage boosted by " + attacker.weaponData.dmg_comp.dmg.toString() + " [" + attacker.weaponData.name + "]. ";
         }
     }
 
@@ -1727,6 +1735,9 @@ function singleCombat(battleInfo, initiator, logIntro, brave) {
 
     // check for a brave weapon / Alm's upgraded Falchion
     if (initiator && (attacker.weaponData.hasOwnProperty("brave") || (attacker.weaponData.hasOwnProperty("hp_brave") && (attacker.initHP >= roundNum(attacker.hp * attacker.weaponData.hp_brave, true)))) && !brave && defender.currHP > 0) {
+        battleInfo = singleCombat(battleInfo, initiator, "attacks again immediately [" + weaponInfo[attacker.weaponName].name + "]", true);
+    }
+	else if(!initiator && (attacker.weaponData.hasOwnProperty("en_brave"))&& !brave && defender.currHP > 0) {
         battleInfo = singleCombat(battleInfo, initiator, "attacks again immediately [" + weaponInfo[attacker.weaponName].name + "]", true);
     }
 

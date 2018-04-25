@@ -1,0 +1,14 @@
+{
+    "name": "Thunderhead",
+    "might": 14,
+    "range": 2,
+    "sp": 400,
+    "description": "Adds total bonuses on unit to attack.",
+    "type": "Green Tome",
+    "link": "https://kagerochart.com/hero/weapons/thunderhead",
+    "color": "Green",
+    "magical": true,
+    "add_bonus": true,
+    "char_unique": true,
+    "id": "thunderhead"
+}

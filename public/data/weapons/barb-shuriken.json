@@ -1,5 +1,5 @@
 {
-    "name": "Kagami Mochi",
+    "name": "Barb Shuriken",
     "might": 8,
     "range": 2,
     "sp": 200,
@@ -10,6 +10,6 @@
         "def": -5,
         "res": -5
     },
-    "link": "https://kagerochart.com/hero/weapons/kagami-mochi",
-    "id": "kagami-mochi"
+    "link": "https://kagerochart.com/hero/weapons/barb-shuriken",
+    "id": "barb-shuriken"
 }

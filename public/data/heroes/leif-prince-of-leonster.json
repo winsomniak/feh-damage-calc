@@ -1,0 +1,50 @@
+{
+    "display": "Leif, Prince of Leonster",
+    "name": "Leif",
+    "title": "Prince of Leonster",
+    "id": "leif-prince-of-leonster",
+    "color": "Red",
+    "weapon_type": "Sword",
+    "link": "https://kagerochart.com/hero/leif-prince-of-leonster",
+    "move_type": "Infantry",
+    "weapon": [
+        "light-brand",
+        "silver-sword",
+        "steel-sword",
+        "iron-sword"
+    ],
+    "special": [
+        "blazing-light",
+        "rising-light"
+    ],
+    "passive_a": [
+        "steady-blow-2",
+        "steady-blow-1",
+        "armored-blow-1"
+    ],
+    "passive_b": [
+        "s-drink"
+    ],
+    "passive_c": [
+        "drive-atk-2",
+        "drive-atk-1",
+        "spur-atk-1"
+    ],
+    "base_stat": {
+        "star_5": {
+            "hp": 18,
+            "atk": 6,
+            "spd": 10,
+            "def": 8,
+            "res": 6
+        },
+        "growth": {
+            "hp": 6,
+            "atk": 8,
+            "spd": 9,
+            "def": 6,
+            "res": 4,
+            "total": 33
+        }
+    }
+}
