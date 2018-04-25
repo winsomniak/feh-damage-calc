@@ -1,12 +1,13 @@
 <div class="mdc-card mdc-theme--background">
 
-    <section class="mdc-card__primary">
-        <h2 class="mdc-card__title mdc-theme--secondary-light">{{title}}</h2>
+    <div class="card-head">
+        <h3 class="mdc-typography--overline mdc-theme--secondary-light">{{title}}</h3>
         {{> toggle_button}}
-    </section>
-    <div class="mdc-card__body">
+    </div>
+
+    <div>
         <div class="char-slots-container">
-            <div id="char-slots-{{charNum}}"  class="info-section char-slots">
+            <div id="char-slots-{{charNum}}" class="info-section char-slots">
                 <img id="tab-0-{{charNum}}" class="char-tab-unselected" alt="h-{{charNum}}-1" src="images/damage-calc/Portraits/Unselected.png" data-index="0" data-charnum="{{charNum}}">
                 <img id="tab-1-{{charNum}}" class="char-tab-unselected" alt="h-{{charNum}}-2" src="images/damage-calc/Portraits/Unselected.png" data-index="1" data-charnum="{{charNum}}">
                 <img id="tab-2-{{charNum}}" class="char-tab-unselected" alt="h-{{charNum}}-3" src="images/damage-calc/Portraits/Unselected.png" data-index="2" data-charnum="{{charNum}}">
@@ -15,28 +16,27 @@
             </div>
         </div>
 
-        <section id="stats-{{charNum}}"  class="mdc-card__supporting-text info-section stat-info">
-            <h3 class="mdc-typography--caption">Base Stats</h3>
+        <section id="stats-{{charNum}}" class="mdc-card__supporting-text info-section stat-info">
+            <h3 class="mdc-typography--caption mdc-theme--text-secondary-on-background">Base Stats</h3>
             <div class="stat-container">
                 <div class="mdc-text-field">
-                    <input id="hp-{{charNum}}" class="mdc-text-field__input more-than-zero hp-stat" value="1" data-charnum="{{charNum}}" autocomplete="off">
-                    <label for="hp-{{charNum}}" title="A unit is defeated if their Hit Points reach 0.">HP</label>
-                    <div class="mdc-line-ripple"></div>
+                    <input type="number" id="hp-{{charNum}}" class="mdc-text-field__input more-than-zero hp-stat" value="1" data-charnum="{{charNum}}" autocomplete="off">
+                    <label for="hp-{{charNum}}" class="mdc-floating-label" title="A unit is defeated if their Hit Points reach 0.">HP</label>
                 </div>
 
                 <div class="mdc-text-field">
                     <input type="number" id="atk-{{charNum}}" class="mdc-text-field__input more-than-zero battle-val" value="1" data-charnum="{{charNum}}" autocomplete="off">
-                    <label for="atk-{{charNum}}"  class="mdc-floating-label" title="The higher a unit's Attack, the more damage they deal.">ATK</label>
+                    <label for="atk-{{charNum}}" class="mdc-floating-label" title="The higher a unit's Attack, the more damage they deal.">ATK</label>
                 </div>
 
                 <div class="mdc-text-field">
                     <input type="number" id="spd-{{charNum}}"  class="mdc-text-field__input more-than-zero battle-val" value="1" data-charnum="{{charNum}}" autocomplete="off">
-                    <label for="spd-{{charNum}}"  class="mdc-floating-label" title="A unit will attack twice if their Speed is at least 5 more than their foe's Speed.">SPD</label>
+                    <label for="spd-{{charNum}}" class="mdc-floating-label" title="A unit will attack twice if their Speed is at least 5 more than their foe's Speed.">SPD</label>
                 </div>
 
                 <div class="mdc-text-field">
-                    <input type="number" id="def-{{charNum}}"  class="mdc-text-field__input more-than-zero battle-val" value="1" data-charnum="{{charNum}}" autocomplete="off">
-                    <label for="def-{{charNum}}"  class="mdc-floating-label" title="The higher a unit's Defense is, the less damage they take from physical attacks.">DEF</label>
+                    <input type="number" id="def-{{charNum}}" class="mdc-text-field__input more-than-zero battle-val" value="1" data-charnum="{{charNum}}" autocomplete="off">
+                    <label for="def-{{charNum}}" class="mdc-floating-label" title="The higher a unit's Defense is, the less damage they take from physical attacks.">DEF</label>
                 </div>
 
                 <div class="mdc-text-field">

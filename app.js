@@ -50,8 +50,8 @@ app.get('/', function(req, res, next) {
 
     res.locals.pageCSS = [
         { stylesheet: 'sorter' },
-        { stylesheet: 'calc-style' }
-
+        { stylesheet: 'calc-style' },
+        { stylesheet: 'hero-portraits' }
     ];
 
     res.locals.js = [

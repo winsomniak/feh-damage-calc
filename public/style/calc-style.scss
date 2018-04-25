@@ -1,10 +1,32 @@
 @import "theme.scss";
+@import "material-components-web/material-components-web";
+
+html, body {
+    font-family: "Roboto", sans-serif;
+    background-color: $mdc-theme-background-dark;
+    background-image: url("https://kagerochart.com/images/site/type.png");
+    background-blend-mode: luminosity;
+    background-repeat: repeat;
+    width: auto;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    color: $text-color;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    color: $mdc-theme-primary;
+}
 
 body::after {
     display: none;
     content: url(/images/damage-calc/swap-hover.png) url(/images/damage-calc/Portraits/Unselected-hover.png);
 }
-
 
 //Floating action button
 .app-fab--absolute {
@@ -41,10 +63,6 @@ select, .mdc-select > option {
 
 #ad-above-fold, #modes-container {
     align-self: stretch;
-
-    .ad-responsive-above-fold {
-        color: $text-color;
-    }
 }
 
 #ad-above-fold {
@@ -62,23 +80,50 @@ select, .mdc-select > option {
 .mdc-card__actions {
     border-top: 1px solid rgba(255,255,255,.12);
 }
+
 #modes {
     .mdc-form-field {
         display: inline-flex;
     }
 }
 
+.stat-info {
+    border-top: 1px solid rgba(#fff, 0.12);
+}
+
 .mdc-card {
     align-self: flex-start;
 
-    .mdc-card__primary {
+    div {
         position: relative;
+    }
 
-        .mdc-icon-toggle {
-            position: absolute;
-            top: 4px;
-            right: 4px;
-        }
+    p {
+        line-height: 1.618em;
+        font-weight: 400;
+        font-size: 1.1em;
+        word-spacing: 1px;
+    }
+    
+    .mdc-text-field {
+        color: $text-color;
+    }
+
+    .card-head {
+        padding: 2px 16px;
+        background: rgba(0,0,0,0.1);
+    }
+
+    .mdc-icon-toggle {
+        position: absolute;
+        top: 4px;
+        right: 4px;
+
+        @include mdc-icon-toggle-ink-color($mdc-theme-secondary);
+        @include mdc-states-base-color($mdc-theme-secondary);
+        @include mdc-states-hover-opacity(.09);
+        @include mdc-states-focus-opacity(.05);
+        @include mdc-states-press-opacity(.25);
     }
 
     .mdc-form-field {
@@ -105,7 +150,7 @@ select, .mdc-select > option {
             flex:  0 1 86px;
         }
         > select:last-of-type {
-            margin-left: 8px;
+            margin-left: 4px;
         }
     }
 
@@ -113,9 +158,6 @@ select, .mdc-select > option {
         margin-bottom: 12px;
     }
 
-    .stat-info {
-        border-top: 1px solid rgba(#fff, 0.12);
-    }
     .mdc-typography--caption {
         text-align: center;
         margin-bottom: 0;
@@ -139,6 +181,7 @@ select, .mdc-select > option {
 }
 
 div#char-panel {
+
     max-width: 123ch;
 
     div.char-info, div#matchup-overrides {
@@ -252,6 +295,7 @@ div#matchup-display {
 #matchup-buttons {
     display: none;
 }
+
 #matchup-filters {
 
     section {
@@ -417,11 +461,6 @@ section#credits {
 }
 
 div#import-export {
-
-    .mdc-card__media {
-        padding: 16px;
-        margin: 0;
-    }
 
     textarea {
         background: rgba(#000, 0.1);

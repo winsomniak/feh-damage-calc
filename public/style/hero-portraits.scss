@@ -1,0 +1,102 @@
+@import "theme.scss";
+
+$border-radius: 23px;
+$tileWidth: 75px;
+
+div.tile {
+    outline: none;
+    display: inline-block;
+    position: relative;
+    vertical-align: top;
+    border-radius: 1.618em;
+    margin: $down / 2;
+    margin-bottom: 1.5em;
+    width: $tileWidth;
+    height: $tileWidth;
+    text-align: center;
+    padding: 0;
+    overflow: visible;
+
+    span {
+        display: block;
+        margin-top: 3px;
+    }
+
+    img:last-of-type {
+        display: block;
+        border-radius: $border-radius;
+    }
+
+    img.weapon-icon {
+        position: absolute;
+        top: -4px;
+        left: -4px;
+        //z-index: 2;
+        border: 0;
+    }
+
+    img.move-icon {
+        position: absolute;
+        bottom: -3px;
+        left: -3px;
+        //z-index: 1;
+    }
+
+    img.checkmark-icon {
+        position: absolute;
+        top: -6px;
+        right: -6px;
+        //z-index: 1;
+        padding-bottom: 4px;
+        border: 0;
+    }
+
+    img.x-icon {
+        position: absolute;
+        top: -6px;
+        right: -6px;
+        //z-index: 1;
+        border: 0;
+    }
+
+    img.double-icon {
+        position: absolute;
+        bottom: -3px;
+        right: -6px;
+        //z-index: 1;
+    }
+
+    img.multiplication-icon {
+        position: absolute;
+        bottom: -1px;
+        right: 9px;
+        //z-index: 1;
+    }
+
+    img.rarity-icon {
+        position: absolute;
+        top: -5px;
+        right: -4px;
+        //z-index: 1;
+        border: 0;
+    }
+}
+
+div.tile:last-child {
+    margin-bottom: 0.618em;
+}
+
+.advantage {
+    border: 1px solid $cool-teal;
+    background: rgba($cool-teal, 0.4);
+}
+
+.weakness {
+    border: 1px solid $cool-red;
+    background: rgba($cool-red, 0.4);
+}
+
+.neutral {
+    background: rgba(255,255,255, 0.1);
+    border: 1px solid #E9E9E9;
+}
