@@ -1,0 +1,19 @@
+{
+    "name": "Water Breath+",
+    "might": 14,
+    "range": 1,
+    "sp": 300,
+    "type": "Breath",
+    "link": "https://kagerochart.com/hero/weapons/water-breath-plus",
+    "id": "water-breath-plus",
+    "description": "If foe initiates combat, grants Def/Res+4 during combat. If foe's Range = 2, calculates damage using the lower of foe's Def or Res.",
+    "LowerResDefRange": 2,
+    "defend_mod": {
+        "def": 4,
+        "res": 4
+    },
+    "magical": true,
+    "refinable": {
+        "type": "melee"
+    }
+}

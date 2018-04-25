@@ -7,6 +7,7 @@
     "weapon_type": "Axe",
     "link": "https://kagerochart.com/hero/beruka-quiet-assassin",
     "move_type": "Flying",
+    "LowestRarity":3,
     "weapon": [
         "killer-axe-plus",
         "killer-axe",
@@ -26,20 +27,6 @@
         "lunge"
     ],
     "base_stat": {
-        "star_3": {
-            "hp": 19,
-            "atk": 6,
-            "spd": 5,
-            "def": 8,
-            "res": 4
-        },
-        "star_4": {
-            "hp": 19,
-            "atk": 7,
-            "spd": 5,
-            "def": 9,
-            "res": 4
-        },
         "star_5": {
             "hp": 20,
             "atk": 7,

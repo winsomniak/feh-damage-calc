@@ -7,6 +7,7 @@
     "weapon_type": "Sword",
     "link": "https://kagerochart.com/hero/selena-cutting-wit",
     "move_type": "Infantry",
+    "LowestRarity":3,
     "weapon": [
         "armorslayer-plus",
         "armorslayer",
@@ -27,20 +28,6 @@
         "threaten-spd-1"
     ],
     "base_stat": {
-        "star_3": {
-            "hp": 17,
-            "atk": 5,
-            "spd": 8,
-            "def": 7,
-            "res": 5
-        },
-        "star_4": {
-            "hp": 17,
-            "atk": 5,
-            "spd": 9,
-            "def": 8,
-            "res": 5
-        },
         "star_5": {
             "hp": 18,
             "atk": 6,

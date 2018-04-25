@@ -7,6 +7,7 @@
     "weapon_type": "Dagger",
     "link": "https://kagerochart.com/hero/sothe-zephyr",
     "move_type": "Infantry",
+    "LowestRarity":4,
     "weapon": [
         "peshkatz",
         "silver-dagger",

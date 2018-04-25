@@ -7,6 +7,7 @@
     "weapon_type": "Sword",
     "link": "https://kagerochart.com/hero/corrin-fateful-prince",
     "move_type": "Infantry",
+    "LowestRarity":3,
     "weapon": [
         "yato",
         "silver-sword",
@@ -28,13 +29,6 @@
         "obstruct-1"
     ],
     "base_stat": {
-        "star_4": {
-            "hp": 19,
-            "atk": 8,
-            "spd": 8,
-            "def": 5,
-            "res": 4
-        },
         "star_5": {
             "hp": 20,
             "atk": 8,

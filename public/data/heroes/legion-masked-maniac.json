@@ -7,6 +7,7 @@
     "weapon_type": "Axe",
     "link": "https://kagerochart.com/hero/legion-masked-maniac",
     "move_type": "Infantry",
+    "LowestRarity":3,
     "weapon": [
         "legions-axe-plus",
         "legions-axe",
@@ -28,20 +29,6 @@
         "obstruct-1"
     ],
     "base_stat": {
-        "star_3": {
-            "hp": 19,
-            "atk": 9,
-            "spd": 8,
-            "def": 4,
-            "res": 2
-        },
-        "star_4": {
-            "hp": 19,
-            "atk": 10,
-            "spd": 9,
-            "def": 4,
-            "res": 2
-        },
         "star_5": {
             "hp": 20,
             "atk": 10,

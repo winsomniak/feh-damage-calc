@@ -1,0 +1,9 @@
+{
+    "name": "Flier Guidance 3",
+    "sp": 240,
+    "type": "C",
+    "description": "Flying allies within 2 spaces can move to a space adjacent to unit.",
+    "icon": "/images/icons/passives/flier-guidance-3.png",
+    "link": "https://kagerochart.com/hero/passives/flier-guidance-3",
+    "id": "flier-guidance-3"
+}

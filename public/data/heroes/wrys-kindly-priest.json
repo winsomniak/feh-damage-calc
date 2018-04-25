@@ -7,6 +7,7 @@
     "weapon_type": "Staff",
     "link": "https://kagerochart.com/hero/wrys-kindly-priest",
     "move_type": "Infantry",
+    "LowestRarity":1,
     "weapon": [
         "slow-plus",
         "slow",
@@ -28,34 +29,6 @@
         "live-to-serve-1"
     ],
     "base_stat": {
-        "star_1": {
-            "hp": 16,
-            "atk": 3,
-            "spd": 4,
-            "def": 3,
-            "res": 8
-        },
-        "star_2": {
-            "hp": 16,
-            "atk": 3,
-            "spd": 5,
-            "def": 3,
-            "res": 9
-        },
-        "star_3": {
-            "hp": 17,
-            "atk": 4,
-            "spd": 5,
-            "def": 4,
-            "res": 9
-        },
-        "star_4": {
-            "hp": 17,
-            "atk": 4,
-            "spd": 6,
-            "def": 4,
-            "res": 10
-        },
         "star_5": {
             "hp": 18,
             "atk": 5,

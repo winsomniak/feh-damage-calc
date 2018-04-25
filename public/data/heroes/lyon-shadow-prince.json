@@ -7,6 +7,7 @@
     "weapon_type": "Red Tome",
     "link": "https://kagerochart.com/hero/lyon-shadow-prince",
     "move_type": "Infantry",
+    "LowestRarity":3,
     "weapon": [
         "naglfar",
         "fenrir",
@@ -28,20 +29,6 @@
         "spur-res-1"
     ],
     "base_stat": {
-        "star_3": {
-            "hp": 18,
-            "atk": 9,
-            "spd": 3,
-            "def": 3,
-            "res": 7
-        },
-        "star_4": {
-            "hp": 18,
-            "atk": 10,
-            "spd": 3,
-            "def": 3,
-            "res": 8
-        },
         "star_5": {
             "hp": 19,
             "atk": 10,

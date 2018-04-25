@@ -7,6 +7,7 @@
     "weapon_type": "Sword",
     "link": "https://kagerochart.com/hero/navarre-scarlet-sword",
     "move_type": "Infantry",
+    "LowestRarity":3,
     "weapon": [
         "killing-edge-plus",
         "killing-edge",
@@ -28,20 +29,6 @@
         "threaten-spd-1"
     ],
     "base_stat": {
-        "star_3": {
-            "hp": 17,
-            "atk": 6,
-            "spd": 10,
-            "def": 5,
-            "res": 4
-        },
-        "star_4": {
-            "hp": 17,
-            "atk": 7,
-            "spd": 11,
-            "def": 5,
-            "res": 4
-        },
         "star_5": {
             "hp": 18,
             "atk": 7,

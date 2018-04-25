@@ -7,6 +7,7 @@
     "weapon_type": "Axe",
     "link": "https://kagerochart.com/hero/narcian-wyvern-general",
     "move_type": "Flying",
+    "LowestRarity":2,
     "weapon": [
         "emerald-axe-plus",
         "emerald-axe",
@@ -28,27 +29,6 @@
         "savage-blow-1"
     ],
     "base_stat": {
-        "star_2": {
-            "hp": 16,
-            "atk": 6,
-            "spd": 5,
-            "def": 7,
-            "res": 5
-        },
-        "star_3": {
-            "hp": 17,
-            "atk": 6,
-            "spd": 6,
-            "def": 7,
-            "res": 6
-        },
-        "star_4": {
-            "hp": 17,
-            "atk": 7,
-            "spd": 6,
-            "def": 8,
-            "res": 6
-        },
         "star_5": {
             "hp": 18,
             "atk": 7,

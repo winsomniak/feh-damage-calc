@@ -7,6 +7,7 @@
     "weapon_type": "Blue Tome",
     "link": "https://kagerochart.com/hero/tailtiu-thunder-noble",
     "move_type": "Infantry",
+    "LowestRarity":4,
     "weapon": [
         "blarblade-plus",
         "blarblade",
@@ -28,13 +29,6 @@
         "spur-spd-1"
     ],
     "base_stat": {
-        "star_4": {
-            "hp": 16,
-            "atk": 8,
-            "spd": 9,
-            "def": 3,
-            "res": 5
-        },
         "star_5": {
             "hp": 17,
             "atk": 8,

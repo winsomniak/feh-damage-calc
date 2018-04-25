@@ -7,6 +7,7 @@
     "weapon_type": "Sword",
     "link": "https://kagerochart.com/hero/seliph-heir-of-light",
     "move_type": "Infantry",
+    "LowestRarity":3,
     "weapon": [
         "divine-tyrfing",
         "tyrfing",
@@ -28,13 +29,6 @@
         "brash-assault-1"
     ],
     "base_stat": {
-        "star_4": {
-            "hp": 18,
-            "atk": 8,
-            "spd": 6,
-            "def": 8,
-            "res": 4
-        },
         "star_5": {
             "hp": 19,
             "atk": 8,

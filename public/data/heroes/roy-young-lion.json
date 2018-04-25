@@ -7,6 +7,7 @@
     "weapon_type": "Sword",
     "link": "https://kagerochart.com/hero/roy-young-lion",
     "move_type": "Infantry",
+    "LowestRarity":3,
     "weapon": [
         "binding-blade",
         "silver-sword",
@@ -27,13 +28,6 @@
         "seal-def-1"
     ],
     "base_stat": {
-        "star_4": {
-            "hp": 19,
-            "atk": 8,
-            "spd": 9,
-            "def": 5,
-            "res": 3
-        },
         "star_5": {
             "hp": 20,
             "atk": 8,

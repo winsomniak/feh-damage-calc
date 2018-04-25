@@ -1,0 +1,48 @@
+{
+    "display": "Saias, Bishop of Flame",
+    "name": "Saias",
+    "title": "Bishop of Flame",
+    "id": "saias-bishop-of-flame",
+    "color": "Blue",
+    "weapon_type": "Blue Tome",
+    "link": "https://kagerochart.com/hero/saias-bishop-of-flame",
+    "move_type": "Infantry",
+    "LowestRarity":3,
+    "weapon": [
+        "wargods-tome",
+        "shine",
+        "ellight",
+        "light"
+    ],
+    "special": [
+        "glacies",
+        "chilling-wind"
+    ],
+    "passive_b": [
+        "escape-route-3",
+        "escape-route-2",
+        "escape-route-1"
+    ],
+    "passive_c": [
+        "spd-ploy-3",
+        "spd-ploy-2",
+        "spd-ploy-1"
+    ],
+    "base_stat": {
+        "star_5": {
+            "hp": 17,
+            "atk": 7,
+            "spd": 8,
+            "def": 5,
+            "res": 8
+        },
+        "growth": {
+            "hp": 5,
+            "atk": 8,
+            "spd": 6,
+            "def": 2,
+            "res": 8,
+            "total": 29
+        }
+    }
+}

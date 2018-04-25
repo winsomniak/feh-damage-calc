@@ -1,0 +1,9 @@
+{
+    "name": "Restore+",
+    "range": 2,
+    "sp": 300,
+    "description": "Restores HP = 50% of Atk. (Minimum of 8 HP.) Neutralizes ally's penalties (from skills like Panic, Threaten, etc.) and negative status effects (preventing counterattacks, restricting movement, etc.) that last through ally's next action.",
+    "link": "https://kagerochart.com/hero/assists/restore-plus",
+    "weapon_unique": "Staff",
+    "id": "restore-plus"
+}

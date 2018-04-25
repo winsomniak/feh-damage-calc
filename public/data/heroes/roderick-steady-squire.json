@@ -7,6 +7,7 @@
     "weapon_type": "Lance",
     "link": "https://kagerochart.com/hero/roderick-steady-squire",
     "move_type": "Cavalry",
+    "LowestRarity":3,
     "weapon": [
         "firesweep-lance-plus",
         "firesweep-lance",
@@ -26,13 +27,6 @@
         "spur-def-1"
     ],
     "base_stat": {
-        "star_4": {
-            "hp": 17,
-            "atk": 7,
-            "spd": 8,
-            "def": 5,
-            "res": 6
-        },
         "star_5": {
             "hp": 18,
             "atk": 7,

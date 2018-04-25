@@ -7,6 +7,7 @@
     "weapon_type": "Green Tome",
     "link": "https://kagerochart.com/hero/cecilia-etrurian-general",
     "move_type": "Cavalry",
+    "LowestRarity":1,
     "weapon": [
         "gronnraven-plus",
         "gronnraven",
@@ -27,34 +28,6 @@
         "escape-route-1"
     ],
     "base_stat": {
-        "star_1": {
-            "hp": 15,
-            "atk": 6,
-            "spd": 4,
-            "def": 3,
-            "res": 5
-        },
-        "star_2": {
-            "hp": 15,
-            "atk": 7,
-            "spd": 4,
-            "def": 3,
-            "res": 6
-        },
-        "star_3": {
-            "hp": 16,
-            "atk": 7,
-            "spd": 5,
-            "def": 4,
-            "res": 6
-        },
-        "star_4": {
-            "hp": 16,
-            "atk": 8,
-            "spd": 5,
-            "def": 4,
-            "res": 7
-        },
         "star_5": {
             "hp": 17,
             "atk": 8,

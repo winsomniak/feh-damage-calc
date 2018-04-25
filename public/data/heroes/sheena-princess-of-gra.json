@@ -7,6 +7,7 @@
     "weapon_type": "Axe",
     "link": "https://kagerochart.com/hero/sheena-princess-of-gra",
     "move_type": "Armored",
+    "LowestRarity":3,
     "weapon": [
         "killer-axe-plus",
         "killer-axe",
@@ -26,13 +27,6 @@
         "fortify-def-1"
     ],
     "base_stat": {
-        "star_4": {
-            "hp": 20,
-            "atk": 8,
-            "spd": 5,
-            "def": 12,
-            "res": 6
-        },
         "star_5": {
             "hp": 21,
             "atk": 8,

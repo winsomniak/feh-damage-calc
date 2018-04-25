@@ -7,6 +7,7 @@
     "weapon_type": "Red Tome",
     "link": "https://kagerochart.com/hero/tharja-dark-shadow",
     "move_type": "Infantry",
+    "LowestRarity":3,
     "weapon": [
         "raurblade-plus",
         "raurblade",
@@ -28,13 +29,6 @@
         "spur-res-1"
     ],
     "base_stat": {
-        "star_4": {
-            "hp": 16,
-            "atk": 8,
-            "spd": 8,
-            "def": 5,
-            "res": 4
-        },
         "star_5": {
             "hp": 17,
             "atk": 8,

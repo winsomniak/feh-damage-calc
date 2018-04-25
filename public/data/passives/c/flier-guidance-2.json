@@ -1,0 +1,9 @@
+{
+    "name": "Flier Guidance 2",
+    "sp": 120,
+    "type": "C",
+    "description": "If unit has ≥ 50% HP, flying allies within 2 spaces can move to a space adjacent to unit.",
+    "icon": "/images/icons/passives/flier-guidance-2.png",
+    "link": "https://kagerochart.com/hero/passives/flier-guidance-2",
+    "id": "flier-guidance-2"
+}

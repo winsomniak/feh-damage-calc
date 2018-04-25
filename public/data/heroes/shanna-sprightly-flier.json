@@ -7,6 +7,7 @@
     "weapon_type": "Lance",
     "link": "https://kagerochart.com/hero/shanna-sprightly-flier",
     "move_type": "Flying",
+    "LowestRarity":3,
     "weapon": [
         "killer-lance-plus",
         "killer-lance",
@@ -28,20 +29,6 @@
         "threaten-spd-1"
     ],
     "base_stat": {
-        "star_3": {
-            "hp": 16,
-            "atk": 7,
-            "spd": 8,
-            "def": 5,
-            "res": 6
-        },
-        "star_4": {
-            "hp": 16,
-            "atk": 8,
-            "spd": 9,
-            "def": 5,
-            "res": 6
-        },
         "star_5": {
             "hp": 17,
             "atk": 8,

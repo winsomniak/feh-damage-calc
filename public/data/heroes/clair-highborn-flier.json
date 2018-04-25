@@ -7,6 +7,7 @@
     "weapon_type": "Lance",
     "link": "https://kagerochart.com/hero/clair-highborn-flier",
     "move_type": "Flying",
+    "LowestRarity":3,
     "weapon": [
         "silver-lance-plus",
         "silver-lance",
@@ -25,13 +26,6 @@
         "spur-spd-1"
     ],
     "base_stat": {
-        "star_4": {
-            "hp": 17,
-            "atk": 6,
-            "spd": 8,
-            "def": 4,
-            "res": 9
-        },
         "star_5": {
             "hp": 18,
             "atk": 7,

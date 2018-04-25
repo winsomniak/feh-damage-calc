@@ -7,6 +7,7 @@
     "weapon_type": "Sword",
     "link": "https://kagerochart.com/hero/draug-gentle-giant",
     "move_type": "Armored",
+    "LowestRarity":2,
     "weapon": [
         "brave-sword-plus",
         "brave-sword",
@@ -26,27 +27,6 @@
         "spur-def-1"
     ],
     "base_stat": {
-        "star_2": {
-            "hp": 22,
-            "atk": 7,
-            "spd": 4,
-            "def": 12,
-            "res": 1
-        },
-        "star_3": {
-            "hp": 23,
-            "atk": 7,
-            "spd": 5,
-            "def": 12,
-            "res": 2
-        },
-        "star_4": {
-            "hp": 23,
-            "atk": 8,
-            "spd": 5,
-            "def": 13,
-            "res": 2
-        },
         "star_5": {
             "hp": 24,
             "atk": 8,

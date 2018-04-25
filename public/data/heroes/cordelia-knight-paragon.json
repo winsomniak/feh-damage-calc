@@ -7,6 +7,7 @@
     "weapon_type": "Lance",
     "link": "https://kagerochart.com/hero/cordelia-knight-paragon",
     "move_type": "Flying",
+    "LowestRarity":3,
     "weapon": [
         "brave-lance-plus",
         "brave-lance",
@@ -29,13 +30,6 @@
         "pass-1"
     ],
     "base_stat": {
-        "star_4": {
-            "hp": 17,
-            "atk": 9,
-            "spd": 9,
-            "def": 4,
-            "res": 5
-        },
         "star_5": {
             "hp": 18,
             "atk": 9,

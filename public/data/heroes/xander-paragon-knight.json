@@ -5,6 +5,7 @@
     "id": "xander-paragon-knight",
     "color": "Red",
     "weapon_type": "Sword",
+    "LowestRarity":3,
     "link": "https://kagerochart.com/hero/xander-paragon-knight",
     "move_type": "Cavalry",
     "weapon": [
@@ -28,20 +29,6 @@
         "spur-def-1"
     ],
     "base_stat": {
-        "star_3": {
-            "hp": 19,
-            "atk": 7,
-            "spd": 4,
-            "def": 8,
-            "res": 3
-        },
-        "star_4": {
-            "hp": 19,
-            "atk": 8,
-            "spd": 4,
-            "def": 9,
-            "res": 3
-        },
         "star_5": {
             "hp": 20,
             "atk": 8,
