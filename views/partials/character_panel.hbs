@@ -19,29 +19,34 @@
         <section id="stats-{{charNum}}" class="mdc-card__supporting-text info-section stat-info">
             <h3 class="mdc-typography--caption mdc-theme--text-secondary-on-background">Base Stats</h3>
             <div class="stat-container">
-                <div class="mdc-text-field">
+                <div class="mdc-text-field mdc-text-field--box mdc-text-field--upgraded mdc-ripple-upgraded">
                     <input type="number" id="hp-{{charNum}}" class="mdc-text-field__input more-than-zero hp-stat" value="1" data-charnum="{{charNum}}" autocomplete="off">
                     <label for="hp-{{charNum}}" class="mdc-floating-label" title="A unit is defeated if their Hit Points reach 0.">HP</label>
+                    <div class="mdc-line-ripple"></div>
                 </div>
 
                 <div class="mdc-text-field">
                     <input type="number" id="atk-{{charNum}}" class="mdc-text-field__input more-than-zero battle-val" value="1" data-charnum="{{charNum}}" autocomplete="off">
                     <label for="atk-{{charNum}}" class="mdc-floating-label" title="The higher a unit's Attack, the more damage they deal.">ATK</label>
+                    <div class="mdc-line-ripple"></div>
                 </div>
 
                 <div class="mdc-text-field">
                     <input type="number" id="spd-{{charNum}}"  class="mdc-text-field__input more-than-zero battle-val" value="1" data-charnum="{{charNum}}" autocomplete="off">
                     <label for="spd-{{charNum}}" class="mdc-floating-label" title="A unit will attack twice if their Speed is at least 5 more than their foe's Speed.">SPD</label>
+                    <div class="mdc-line-ripple"></div>
                 </div>
 
                 <div class="mdc-text-field">
                     <input type="number" id="def-{{charNum}}" class="mdc-text-field__input more-than-zero battle-val" value="1" data-charnum="{{charNum}}" autocomplete="off">
                     <label for="def-{{charNum}}" class="mdc-floating-label" title="The higher a unit's Defense is, the less damage they take from physical attacks.">DEF</label>
+                    <div class="mdc-line-ripple"></div>
                 </div>
 
                 <div class="mdc-text-field">
                     <input type="number" id="res-{{charNum}}"  class="mdc-text-field__input more-than-zero battle-val" value="1" data-charnum="{{charNum}}" autocomplete="off">
                     <label for="res-{{charNum}}"  class="mdc-floating-label" title="The higher a unit's Resistance is, the less damage they take from magical attacks.">RES</label>
+                    <div class="mdc-line-ripple"></div>
                 </div>
             </div>
 
@@ -65,26 +70,24 @@
 
         <div class="mdc-card__media">
             <div class="tab-panel info-section build-fields">
-                <div class="mdc-form-field">
-                    <label for="char-{{charNum}}" >
-                        Character
-                    </label>
-                    <select id="char-{{charNum}}"  class="mdc-select char-selector link-field" data-charnum="{{charNum}}" data-info="charInfo"></select>
+                <div class="mdc-select mdc-select-box mdc-ripple-upgraded">
+                    <select id="char-{{charNum}}" class="mdc-select__native-control char-selector link-field" data-charnum="{{charNum}}" data-info="charInfo"></select>
+                    <label class="mdc-floating-label mdc-floating-label-float-above" for="char-{{charNum}}">Character</label>
                     <a id="char-link-{{charNum}}" class="attribute-link mdc-theme--text-secondary-on-background" href="" target="_blank"><i class="material-icons">open_in_new</i></a>
                 </div>
-                <div class="mdc-form-field">
+                <div class="mdc-select mdc-select-box mdc-ripple-upgraded">
                     <label for="rarity-{{charNum}}">Rarity</label>
-                    <select id="rarity-{{charNum}}"  class="mdc-select rarity-select build-select link-field" data-charnum="{{charNum}}">
+                    <select id="rarity-{{charNum}}"  class="rarity-select build-select link-field" data-charnum="{{charNum}}">
                         <option value="5">5 Stars</option>
                     </select>
                     <span class="attribute-link mdc-theme--text-secondary-on-background"><i class="material-icons">open_in_new</i></span>
                 </div>
-                <div class="mdc-form-field double-select">
+                <div class="mdc-select mdc-select-box mdc-ripple-upgraded double-select">
                     <label for="level-{{charNum}}" >Level</label>
                     <select id="level-{{charNum}}"  class="mdc-select level-select build-select link-field" data-charnum="{{charNum}}">
                         <option value="40">Lvl. 40</option>
                         <option value="1">Lvl. 1</option>
-                    </select><select id="merge-{{charNum}}"  class="mdc-select merge-select build-select link-field" data-charnum="{{charNum}}" title="Merged units">
+                    </select><select id="merge-{{charNum}}" class="mdc-select merge-select build-select link-field" data-charnum="{{charNum}}" title="Merged units">
                         <option value="0">+0</option>
                         <option value="1">+1</option>
                         <option value="2">+2</option>
@@ -100,7 +103,7 @@
                     <span class="attribute-link mdc-theme--text-secondary-on-background"><i class="material-icons">open_in_new</i></span>
                 </div>
 
-                <div class="mdc-form-field double-select">
+                <div class="mdc-select mdc-select-box mdc-ripple-upgraded double-select">
                     <label for="boon-{{charNum}}">Boon/Bane</label>
                     <select id="boon-{{charNum}}" class="mdc-select boon-select build-select link-field" data-charnum="{{charNum}}" title="Boon">
                         <option value="neutral">Neutral</option>
@@ -121,7 +124,7 @@
                 </div>
                 <div>
                     <div id="extra-char-info-{{charNum}}"  class="collapsable">
-                        <div class="mdc-form-field">
+                        <div class="mdc-select mdc-select-box mdc-ripple-upgraded">
                             <label for="color-{{charNum}}" >Color</label>
                             <select id="color-{{charNum}}"  class="mdc-select color-selector" data-charnum="{{charNum}}">
                                 <option value="Red">Red</option>
@@ -131,7 +134,7 @@
                             </select>
                             <span class="attribute-link mdc-theme--text-secondary-on-background"><i class="material-icons">open_in_new</i></span>
                         </div>
-                        <div class="mdc-form-field">
+                        <div class="mdc-select mdc-select-box mdc-ripple-upgraded">
                             <label for="weapon-type-{{charNum}}" >Weapon Type</label>
                             <select id="weapon-type-{{charNum}}"  class="mdc-select weapon-type-selector" data-charnum="{{charNum}}">
                                 <option value="Sword">Sword</option>
@@ -149,7 +152,7 @@
                             </select>
                             <span class="attribute-link mdc-theme--text-secondary-on-background"><i class="material-icons">open_in_new</i></span>
                         </div>
-                        <div class="mdc-form-field">
+                        <div class="mdc-select mdc-select-box mdc-ripple-upgraded">
                             <label for="move-type-{{charNum}}" >Move Type</label>
                             <select id="move-type-{{charNum}}"  class="mdc-select move-type-selector" data-charnum="{{charNum}}">
                                 <option value="Infantry">Infantry</option>
@@ -164,7 +167,7 @@
                 </div>
                 <div>
                     <div class="info-section weapon-select">
-                        <div  class="mdc-form-field">
+                        <div  class="mdc-select mdc-select-box mdc-ripple-upgraded">
                            <label for="extra-weapon-info-{{charNum}}" >
                                <span id="extra-weapon-info-btn-{{charNum}}" data-section="{{id}}-extra-weapon-info">Weapon</span>
                            </label>
@@ -184,7 +187,7 @@
                            </div>
                         </div>
                     <div class="info-section refinement-select">
-                        <div  class="mdc-form-field">
+                        <div  class="mdc-select mdc-select-box mdc-ripple-upgraded">
                            <label for="refinement-info-{{charNum}}" >
                                <span id="refinement-info-btn-{{charNum}}" data-section="{{id}}-refinement-info">Refinement</span>
                            </label>
@@ -193,7 +196,7 @@
                       </div>
                     </div>
 
-                    <div class="mdc-form-field">
+                    <div class="mdc-select mdc-select-box mdc-ripple-upgraded">
                         <label for="special-{{charNum}}" class="special-label">
                             Special
                         </label>
@@ -203,7 +206,7 @@
                 </div>
 
                 <div id="skills-{{charNum}}"  class="info-section skill-select">
-                    <div class="mdc-form-field">
+                    <div class="mdc-select mdc-select-box mdc-ripple-upgraded">
                         <label for="passive-a-{{charNum}}"  class="passive-a-label">
                             Passive A
                         </label>
@@ -211,7 +214,7 @@
                         <a id="passive-a-link-{{charNum}}" class="attribute-link mdc-theme--text-secondary-on-background" href="" target="_blank"><i class="material-icons">open_in_new</i></a>
                     </div>
 
-                    <div class="mdc-form-field">
+                    <div class="mdc-select mdc-select-box mdc-ripple-upgraded">
                         <label for="passive-b-{{charNum}}"  class="passive-b-label">
                             Passive B
                         </label>
@@ -219,7 +222,7 @@
                         <a id="passive-b-link-{{charNum}}" class="attribute-link mdc-theme--text-secondary-on-background" href="" target="_blank"><i class="material-icons">open_in_new</i></a>
                     </div>
 
-                    <div class="mdc-form-field">
+                    <div class="mdc-select mdc-select-box mdc-ripple-upgraded">
                         <label for="passive-c-{{charNum}}"  class="passive-c-label">
                             Passive C
                         </label>
@@ -227,7 +230,7 @@
                         <a id="passive-c-link-{{charNum}}" class="attribute-link mdc-theme--text-secondary-on-background" href="" target="_blank"><i class="material-icons">open_in_new</i></a>
                     </div>
 
-                    <div class="mdc-form-field">
+                    <div class="mdc-select mdc-select-box mdc-ripple-upgraded">
                         <label for="passive-s-{{charNum}}"  class="passive-s-label">
                             Sacred Seal
                         </label>
@@ -235,7 +238,7 @@
                         <span class="attribute-link mdc-theme--text-secondary-on-background"><i class="material-icons">open_in_new</i></span>
                     </div>
 
-                    <div class="mdc-form-field">
+                    <div class="mdc-select mdc-select-box mdc-ripple-upgraded">
                         <label for="assist-{{charNum}}"  class="assist-label">
                             <span data-section="{{id}}-extra-assist-info" >Assist</span>
                         </label>
@@ -249,7 +252,7 @@
 
                 <section id="support-{{charNum}}">
 
-                    <div class="mdc-form-field">
+                    <div class="mdc-select mdc-select-box mdc-ripple-upgraded">
                         <label for="summoner-support-{{charNum}}">
                             Summoner Support
                         </label>
@@ -264,7 +267,7 @@
 
                     </div>
 
-                    <div class="mdc-form-field">
+                    <div class="mdc-select mdc-select-box mdc-ripple-upgraded">
                         <label for="ally-support-{{charNum}}">
                             Ally Support
                         </label>
@@ -279,7 +282,7 @@
 
                     </div>
 
-                    <div class="mdc-form-field">
+                    <div class="mdc-select mdc-select-box mdc-ripple-upgraded">
                         <label for="blessing-{{charNum}}">
                             Blessing
                         </label>
@@ -419,7 +422,7 @@
                     </section>
                 </div>
 
-                <div id="adjacent-block-{{charNum}}"  class="mdc-form-field adjacent-block">
+                <div id="adjacent-block-{{charNum}}"  class="mdc-select mdc-select-box mdc-ripple-upgraded adjacent-block">
                     <label for="adjacent-{{charNum}}" >Adjacent Allies</label>
                     <select id="adjacent-{{charNum}}"  class="mdc-select adjacent-select battle-val" data-charnum="{{charNum}}">
                         <option value="0">0</option>

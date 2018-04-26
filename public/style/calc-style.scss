@@ -1,6 +1,9 @@
 @import "theme.scss";
 @import "material-components-web/material-components-web";
 
+/*
+ * Page wide styles
+ */
 html, body {
     font-family: "Roboto", sans-serif;
     background-color: $mdc-theme-background-dark;
@@ -23,52 +26,39 @@ a {
     color: $mdc-theme-primary;
 }
 
-body::after {
-    display: none;
-    content: url(/images/damage-calc/swap-hover.png) url(/images/damage-calc/Portraits/Unselected-hover.png);
+.mdc-select, .mdc-select__native-input, .mdc-select-box {
+    color: $text-color;
+    border: none;
+    background: rgba(0,0,0,0.1);
 }
 
-//Floating action button
-.app-fab--absolute {
-    background-position: center;
-}
-.app-fab--absolute.app-fab--absolute {
-  position: fixed;
-  z-index: 2;
-  bottom: 1rem;
-  right: 1rem;
+
+/*
+ * Mobile Specific Style
+ */
+@media (min-width: 480px) and (max-width: 700px), (max-width: 380px) {
+    div#char-panel > div.char-info > .mdc-card {
+        min-width: 260px;
+    }
+
+    .tab-panel.build-fields {
+        .mdc-form-field {
+            justify-content: center;
+        }
+    }
 }
 
-.attribute-link {
-    margin-left: 3px;
-    vertical-align: middle;
-    text-align: center;
-}
-
-span.attribute-link i {
-    color: $mdc-theme-background;
-    cursor: default;
-}
-
-select, .mdc-select > option {
-    background: darken($mdc-theme-background, 5%);
-}
-
-@media(min-width: 1024px) {
-   .app-fab--absolute.app-fab--absolute {
-    bottom: 1.5rem;
-    right: 1.5rem;
-  }
-}
-
-#ad-above-fold, #modes-container {
-    align-self: stretch;
-}
-
+/*
+ * Ads
+ */
 #ad-above-fold {
+    align-self: stretch;
     justify-content: flex-end;
 }
 
+/*
+ * Tabs
+ */
 #override-tab-bar, #char-tab-bar-1, #char-tab-bar-2 {
     width: 100%;
 
@@ -77,19 +67,13 @@ select, .mdc-select > option {
     }
 }
 
+/*
+ * Cards
+ */
 .mdc-card__actions {
     border-top: 1px solid rgba(255,255,255,.12);
 }
 
-#modes {
-    .mdc-form-field {
-        display: inline-flex;
-    }
-}
-
-.stat-info {
-    border-top: 1px solid rgba(#fff, 0.12);
-}
 
 .mdc-card {
     align-self: flex-start;
@@ -103,10 +87,6 @@ select, .mdc-select > option {
         font-weight: 400;
         font-size: 1.1em;
         word-spacing: 1px;
-    }
-    
-    .mdc-text-field {
-        color: $text-color;
     }
 
     .card-head {
@@ -126,34 +106,6 @@ select, .mdc-select > option {
         @include mdc-states-press-opacity(.25);
     }
 
-    .mdc-form-field {
-        display: flex;
-        flex-flow: row wrap;
-
-        > label {
-            display: block;
-            flex: 1 1 auto;
-
-            span {
-                color: inherit;
-            }
-        }
-
-        > select {
-            flex: 1 1 180px;
-            max-width: 180px;
-        }
-    }
-
-    .mdc-form-field.double-select {
-        > select {
-            flex:  0 1 86px;
-        }
-        > select:last-of-type {
-            margin-left: 4px;
-        }
-    }
-
     #char-build-info-1, #char-build-info-2 {
         margin-bottom: 12px;
     }
@@ -163,22 +115,58 @@ select, .mdc-select > option {
         margin-bottom: 0;
     }
 
+
     .stat-container {
         display: flex;
         flex-flow: row wrap;
         justify-content: center;
 
         > div.mdc-text-field {
+            display: block;
             flex: 1 1 20px;
             max-width: 19%;
             margin: 4px;
 
+            .mdc-floating-label:not(.mdc-floating-label--float-above) {
+                color: $text-color;
+            }
+
             .mdc-text-field__input {
-                width: 100%;
+                color: inherit;
             }
         }
     }
 }
+
+/*
+ * Mode Switcher
+ */
+
+#modes {
+    .mdc-form-field {
+        display: inline-flex;
+    }
+}
+
+.stat-info {
+    border-top: 1px solid rgba(#fff, 0.12);
+}
+
+/*
+ * Character Panel
+ */
+
+.attribute-link {
+     margin-left: 3px;
+     vertical-align: middle;
+     text-align: center;
+ }
+
+ span.attribute-link i {
+     color: $mdc-theme-background;
+     cursor: default;
+ }
+
 
 div#char-panel {
 
@@ -288,6 +276,35 @@ div#char-panel {
 
 }
 
+
+.open-in-new {
+    position: relative;
+}
+
+.open-in-new i {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.open-in-new:hover {
+    border-color: rgba(#fff,.3);
+    opacity: 0.7;
+}
+
+.open-in-new:hover i {
+    color: $text-color;
+    font-size: 36px;
+    display: block;
+    pointer-events: none;
+}
+
+/*
+ * Matchup Table
+ */
 div#matchup-display {
     border-color: $text-color;
 }
@@ -331,6 +348,7 @@ div#matchup-display {
 #matchup-table-container {
     margin: 0;
     padding: 0;
+
     #matchup-table {
         margin: 16px 0;
         width: 100%;
@@ -366,6 +384,31 @@ div#matchup-display {
 }
 
 
+#matchup-overview {
+    display: block;
+    margin-bottom: 0.8em;
+    text-align: center;
+    font-weight: bold;
+}
+
+#override-msg {
+    margin: 0;
+    line-height: 130%;
+    white-space: normal;
+    font-style: italic;
+    color: #5b5b5b;
+    text-align: center;
+    padding-top: 0.5em;
+}
+
+.compare-icon {
+    display: inline;
+    vertical-align: middle;
+}
+
+/*
+ * 1v1 Panel
+ */
 #single-combat {
     display: flex;
     flex-flow: row wrap;
@@ -396,7 +439,6 @@ img#portrait-1, img#portrait-2 {
     width: 75px;
     height: 75px;
 }
-
 
 .battle-interaction, .battle-interaction-final {
     padding: 0.6em 0em;
@@ -435,46 +477,6 @@ img#portrait-1, img#portrait-2 {
     color: $cool-red;
 }
 
-#matchup-overview {
-    display: block;
-    margin-bottom: 0.8em;
-    text-align: center;
-    font-weight: bold;
-}
-
-#override-msg {
-    margin: 0;
-    line-height: 130%;
-    white-space: normal;
-    font-style: italic;
-    color: #5b5b5b;
-    text-align: center;
-    padding-top: 0.5em;
-}
-
-section#credits {
-    flex: 1 1 320px;
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 24px;
-    background: none;
-}
-
-div#import-export {
-
-    textarea {
-        background: rgba(#000, 0.1);
-        width: 100%;
-        min-height: 12em;
-    }
-}
-section#reddit-markdown {
-    width: 100%;
-    margin: 8px;
-    padding: 8px;
-    display: none;
-}
-
 .attacker {
     color: $cool-teal;
 }
@@ -487,49 +489,54 @@ section#reddit-markdown {
     color: #fff;
 }
 
-.open-in-new {
-    position: relative;
+/*
+ * Credits
+ */
+section#credits {
+    flex: 1 1 320px;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 24px;
+    background: none;
 }
 
-.compare-icon {
-    display: inline;
-    vertical-align: middle;
-}
-
-.open-in-new i {
+/*
+ * Reddit
+ */
+section#reddit-markdown {
+    width: 100%;
+    margin: 8px;
+    padding: 8px;
     display: none;
-    position: absolute;
-    z-index: 1;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
 }
 
-.open-in-new:hover {
-    border-color: rgba(#fff,.3);
-    opacity: 0.7;
+
+/*
+ * Floating action button
+ */
+.app-fab--absolute {
+    background-position: center;
 }
 
-.open-in-new:hover i {
-    color: $text-color;
-    font-size: 36px;
-    display: block;
-    pointer-events: none;
+.app-fab--absolute.app-fab--absolute {
+  position: fixed;
+  z-index: 2;
+  bottom: 1rem;
+  right: 1rem;
 }
 
-/* Mobile Specific Style */
-@media (min-width: 480px) and (max-width: 700px), (max-width: 380px) {
-    div#char-panel > div.char-info > .mdc-card {
-        min-width: 260px;
-    }
+@media(min-width: 1024px) {
+   .app-fab--absolute.app-fab--absolute {
+    bottom: 1.5rem;
+    right: 1.5rem;
+  }
+}
 
-    .tab-panel.build-fields {
-        .mdc-form-field {
-            justify-content: center;
-        }
+/*
+ * Asset Loading
+ */
 
-        .mdc-form-field > label {
-            display: none;
-        }
-    }
+body::after {
+    display: none;
+    content: url(/images/damage-calc/swap-hover.png) url(/images/damage-calc/Portraits/Unselected-hover.png);
 }

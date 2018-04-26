@@ -1,11 +1,11 @@
 <div id="filter-panel" class="matchup-section mdc-card mdc-theme--background">
 
     <div class="mdc-card__primary">
-        <h2 class="mdc-typography--headline">Matchup Filters</h2>
+        <h2 class="mdc-typography--headline5">Matchup Filters</h2>
     </div>
 
     <div class="mdc-card__supporting-text">
-        <h4 class="mdc-typography--subheading2">Characters</h4>
+        <h4 class="mdc-typography--subtitle1">Characters</h4>
         <div class="mdc-field">
             <div class="mdc-text-field mdc-text-field--fullwidth mdc-text-field--upgraded">
                 <input id="matchup-filter-name" type="text" class="mdc-text-field__input matchup-filter-input filter-toprow" placeholder="Separate names with a comma" aria-label="Characters" autocomplete="off">
@@ -14,7 +14,7 @@
 
         {{#filters}}
         <section class="mdc-layout-grid{{#if @first}} no-border{{/if}}">
-            <h4 class="mdc-typography--subheading2">{{name}}</h4>
+            <h4 class="mdc-typography--subtitle1">{{name}}</h4>
             <div class="mdc-layout-grid__inner">
                 {{#items}}
                 <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-3 mdc-layout-grid__cell--span-2-tablet mdc-layout-grid__cell--span-2-phone mdc-form-field">
