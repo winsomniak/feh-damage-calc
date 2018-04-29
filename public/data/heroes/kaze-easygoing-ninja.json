@@ -7,6 +7,7 @@
     "weapon_type": "Dagger",
     "link": "https://kagerochart.com/hero/kaze-easygoing-ninja",
     "move_type": "Infantry",
+    "LowestRarity":3,
     "weapon": [
         "barb-shuriken-plus",
         "barb-shuriken",

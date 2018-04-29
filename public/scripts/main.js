@@ -130,6 +130,9 @@ function isInheritableWeapon(weapon, charName) {
     if (weaponType.indexOf("Breath") !== -1) {
         weaponType = "Breath";
     }
+    if (weaponType.indexOf("Bow") !== -1) {
+        weaponType = "Bow";
+    }
 
     return !weapon.char_unique && weapon.type === weaponType;
 }
@@ -1913,8 +1916,8 @@ function simBattle(battleInfo, displayMsg) {
     var defAttacks = false;
 
     //New follow-up logic
-    battleInfo = Follow(attacker, true, defender.weaponData.type, defCC, battleInfo);
-    battleInfo = Follow(defender, false, attacker.weaponData.type, true, battleInfo);
+    battleInfo = Follow(attacker, true, defender.weaponData.type, defender.color, defCC, battleInfo);
+    battleInfo = Follow(defender, false, attacker.weaponData.type, attacker.color, true, battleInfo);
 
     battleInfo = Prevent(attacker, defender, defender.weaponData.type, battleInfo, true);
     battleInfo = Prevent(defender, attacker, attacker.weaponData.type, battleInfo, false);

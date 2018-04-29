@@ -218,7 +218,7 @@ function canPreventEnemyCounter(container, hp, currHP) {
 
 
 //Checks the follows (Brash, Riposte, follow-up, fighters & breakers) and if the agent has wary fighter or sweep ability
-function Follow(char, attacker, othWeapon, CanCounter, battleInfo) {
+function Follow(char, attacker, othWeapon, othColor, CanCounter, battleInfo) {
     var doubling=1;
     for (var i = 0; i < checks.length; i++) {
         var bfup=char[checks[i]].attack_follow_up;
@@ -226,7 +226,7 @@ function Follow(char, attacker, othWeapon, CanCounter, battleInfo) {
             bfup=char[checks[i]].defense_follow_up;
         if (bfup) {
             if ((!bfup.hasOwnProperty("threshold")) || (bfup.trigger==='healthy' && char.initHP >= roundNum(bfup.threshold * char.hp, true)) || (bfup.trigger==='damaged' && char.initHP <= roundNum(bfup.threshold * char.hp, true))) { //hp check for all of them
-                if((!bfup.hasOwnProperty("weapon_type")) || (bfup.weapon_type.includes(othWeapon))){ //breaker check
+                if((!bfup.hasOwnProperty("weapon_type")) || (bfup.weapon_type.includes(othWeapon) && (othWeapon !== 'Bow' || othColor === 'Colorless'))){ //breaker check
                     if((!bfup.hasOwnProperty("counterable")) || (CanCounter)) { //brash check
                         if((!bfup.hasOwnProperty("adjacent_dependant")) || char.adjacent == 0) {
                             doubling++;
@@ -274,7 +274,7 @@ function Prevent(char, agent, ageWeapon, battleInfo, attacker)
             //healthy (Breakers and Wary fighter) and stat_to_check (Myrrh)
             if ((!prev.hasOwnProperty("stat_to_check")) || (ReturnStat(char, prev.stat_to_check) >= ReturnStat(agent, prev.stat_to_check)+ prev.stat_amount)) {
                 if((!prev.hasOwnProperty("threshold")) || char.initHP >= roundNum(prev.threshold * char.hp, true)) {
-                    if((!prev.hasOwnProperty("weapon_type")) || (prev.weapon_type.includes(ageWeapon))){
+                    if((!prev.hasOwnProperty("weapon_type")) || (prev.weapon_type.includes(ageWeapon) && (ageWeapon !== 'Bow' || agent.color === 'Colorless'))){
                         prevention+=1;
                         battleInfo.logMsg+= "<li class='battle-interaction'><span class='" + char.agentClass + "'>" + char.display + "</span>'s " + char[checks[i]].name + " activated, decreasing <span class='" + agent.agentClass + "'>" + agent.display +"</span>'s ability to follow-up!</li>";
                     }
@@ -346,7 +346,7 @@ function adjacentStatBonus(battleInfo, char, charToUse) {
             return;
         }
 
-        if (char.adjacent < 1) {
+        if (char.adjacent < 1 || (bonus.hasOwnProperty("needed") && bonus.needed > char.adjacent)) {
             return;
         }
 
