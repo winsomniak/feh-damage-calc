@@ -339,21 +339,21 @@ function firstDmgReduction(char, enemy) {
 }
 
 //Bonus for adjacency to allies
-function adjacentStatBonus(battleInfo, char, charToUse) {
+function adjacentStatBonus(battleInfo, char, charToUse, initiator) {
     checks.forEach(function(key) {
         var bonus = char[key].adjacent_stat_bonus
         if (!bonus) {
             return;
         }
 
-        if (char.adjacent < 1 || (bonus.hasOwnProperty("needed") && bonus.needed > char.adjacent)) {
+        if (char.adjacent < 1 || (bonus.hasOwnProperty("needed") && bonus.needed > char.adjacent) || (bonus.hasOwnProperty("en_phase") && initiator)) {
             return;
         }
 
         if (bonus.target === 'self' && bonus.adjacent === 'ally') {
             for (b in bonus.mod) {
                 battleInfo[charToUse][b] += bonus.mod[b];
-                    battleInfo.logMsg += "<li class='battle-interaction'><span class='" + charToUse + "'><strong>" + battleInfo[charToUse].display + "</strong></span> raises " + b + " by " + bonus.mod[b] + "</li>";
+                    battleInfo.logMsg += "<li class='battle-interaction'><span class='" + charToUse + "'>" + battleInfo[charToUse].display + "</span> raises " + b + " by " + bonus.mod[b] + " [" + char[key].name + "].</li>";
             };
         }
     })
@@ -415,7 +415,7 @@ function hardy_bearing_msg(battleInfo, agent) {
 }
 
 //This is redundant, separating this makes it easier to maintain
-function giveBonuses(battleInfo, agent, other){
+function giveBonuses(battleInfo, agent, other, initiator){
 
     // below hp threshold bonus
     if (agent.weaponData.hasOwnProperty("below_threshold_mod") && agent.initHP <= checkRoundError(agent.weaponData.below_threshold_mod.threshold * agent.hp)) {
@@ -458,7 +458,7 @@ function giveBonuses(battleInfo, agent, other){
     }
 
     //adjacent stat bonus
-    adjacentStatBonus(battleInfo, agent, agent.agentClass);
+    battleInfo=adjacentStatBonus(battleInfo, agent, agent.agentClass, initiator);
 
     return battleInfo;
 }
