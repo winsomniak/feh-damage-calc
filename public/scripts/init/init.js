@@ -67,12 +67,56 @@ charInfo.Custom = {
     "id": "Custom",
     "name": "Custom"
 };
-document.onreadystatechange = function() {
-    setupCalc();
+
+document.onreadystatechange = () => {
+    if (document.readyState === 'complete') {
+        console.log("Setting up combat simulator...");
+        setupCalc();
+    }
 }
 
 function setupCalc() {
 
+    initMaterial();
+
+    $("#matchup-filters").hide();
+    $("#matchup-overrides").hide();
+    $("#matchups").hide();
+
+    // setup initial display
+    setupChars();
+    setupOverrides();
+
+}
+
+function initMaterial() {
+    console.group('Material Web Component Initialization Errors and Warnings');
+    /*
+     * Form fields and radio buttons
+     */
+    var formFields = document.querySelectorAll('.mdc-form-field');
+    for (var i = 0, formField; formField = formFields[i]; i++) {
+        var formFieldInstance = new mdc.formField.MDCFormField(formField);
+        var radio = formField.querySelector('.mdc-radio');
+        if (radio) {
+            var radioInstance = new mdc.radio.MDCRadio(radio);
+            formFieldInstance.input = radioInstance;
+        }
+    }
+
+    /*
+     * Text fields
+     */
+    var tfs = document.querySelectorAll('.mdc-text-field');
+    tfields = [];
+    for (var i = 0, tf; tf = tfs[i]; i++) {
+        var textField = new mdc.textField.MDCTextField(tf);
+        tfields.push(textField);
+    }
+
+    /*
+     * Tab panels
+     */
     var tabEls = document.querySelectorAll('.mdc-tab-bar');
 
     var tabBars = [];
@@ -99,29 +143,34 @@ function setupCalc() {
         tabBars.push(bar);
     });
 
-    var tfs = document.querySelectorAll('.mdc-text-field');
-    tfields = [];
-    for (var i = 0, tf; tf = tfs[i]; i++) {
-        var textField = new mdc.textField.MDCTextField(tf);
-        tfields.push(textField);
-    }
-
+    //Initialize tab panels
     try {
         updatePanel(document.querySelector('#attack-panel .mdc-card__media'), 0);
         updatePanel(document.querySelector('#defend-panel .mdc-card__media'), 0);
         updatePanel(document.querySelector('#matchup-overrides .mdc-card__media'), 0);
     }
     catch(err) {
-        console.log('Panel query failed');
+        console.error('Tab panel initialization failed - ', err);
     }
 
-    $("#matchup-filters").hide();
-    $("#matchup-overrides").hide();
-    $("#matchups").hide();
+    /*
+     * Select fields
+     */
+    var selects = document.querySelectorAll('.mdc-select');
+    sfields = [];
+    for (var i = 0, sf; sf = selects[i]; i++) {
 
-    // setup initial display
-    setupChars();
-    setupOverrides();
+        try {
+            var selectField = new mdc.select.MDCSelect(sf);
+        }
+        catch(err) {
+            console.error('Material select field initialization failed - ', err);
+        }
+
+        sfields.push(selectField);
+    }
+
+    console.groupEnd();
 
 }
 

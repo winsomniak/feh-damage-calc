@@ -37,13 +37,3 @@ function updateAllAttributeLinks() {
         }
     });
 }
-
-
-document.querySelectorAll('.mdc-icon-toggle').forEach(function(el) {
-    el.addEventListener('MDCIconToggle:change', (k) => {
-        var card = k.target.parentElement.parentElement;
-        var body = card.querySelector('.mdc-card__media:nth-child(2)');
-
-        $(body).toggle(200);
-    }, {passive: true});
-});

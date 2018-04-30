@@ -26,13 +26,6 @@ a {
     color: $mdc-theme-primary;
 }
 
-.mdc-select, .mdc-select__native-input, .mdc-select-box {
-    color: $text-color;
-    border: none;
-    background: rgba(0,0,0,0.1);
-}
-
-
 /*
  * Mobile Specific Style
  */
@@ -57,6 +50,59 @@ a {
 }
 
 /*
+ * Selects
+ */
+
+.mdc-select {
+    //Set background image to change caret icon
+    position: relative;
+    width: 100%;
+
+    option {
+        background-color: $mdc-theme-background-light;
+    }
+}
+
+.select-sizer {
+    display: block;
+    width: auto;
+    overflow: hidden;
+}
+
+.attribute-link {
+    position: relative;
+    display: block;
+    vertical-align: middle;
+    text-align: center;
+    top: 14px;
+    left: 4px;
+    font-size: 28px;
+    width: 32px;
+    float: right;
+
+    i {
+        color: inherit;
+        font-size: inherit;
+    }
+
+    i:hover {
+        color: rgba($mdc-theme-primary, 0.7);
+    }
+}
+
+span.attribute-link {
+    i {
+        cursor: default;
+        color: transparent;
+        user-select: none;
+    }
+
+    i:hover {
+        color: transparent;
+    }
+}
+
+/*
  * Tabs
  */
 #override-tab-bar, #char-tab-bar-1, #char-tab-bar-2 {
@@ -64,7 +110,17 @@ a {
 
     .mdc-tab {
         min-width: 96px;
+        width: 50%;
+        @include mdc-states-base-color($mdc-theme-primary);
+        @include mdc-states-hover-opacity(.09);
+        @include mdc-states-focus-opacity(.05);
+        @include mdc-states-press-opacity(.25);
     }
+
+    .mdc-tab-bar__indicator {
+        background-color: $mdc-theme-primary;
+    }
+
 }
 
 /*
@@ -76,11 +132,16 @@ a {
 
 
 .mdc-card {
-    align-self: flex-start;
 
-    div {
-        position: relative;
-    }
+    --mdc-layout-grid-gutter-desktop: 8px;
+    --mdc-layout-grid-gutter-tablet: 8px;
+    --mdc-layout-grid-gutter-phone: 8px;
+
+    --mdc-layout-grid-margin-desktop: 8px;
+    --mdc-layout-grid-margin-tablet: 8px;
+    --mdc-layout-grid-margin-phone: 8px;
+
+    align-self: flex-start;
 
     p {
         line-height: 1.618em;
@@ -90,6 +151,7 @@ a {
     }
 
     .card-head {
+        position: relative;
         padding: 2px 16px;
         background: rgba(0,0,0,0.1);
     }
@@ -121,19 +183,9 @@ a {
         flex-flow: row wrap;
         justify-content: center;
 
-        > div.mdc-text-field {
-            display: block;
+        .mdc-text-field {
             flex: 1 1 20px;
-            max-width: 19%;
-            margin: 4px;
-
-            .mdc-floating-label:not(.mdc-floating-label--float-above) {
-                color: $text-color;
-            }
-
-            .mdc-text-field__input {
-                color: inherit;
-            }
+            margin: 8px;
         }
     }
 }
@@ -156,29 +208,12 @@ a {
  * Character Panel
  */
 
-.attribute-link {
-     margin-left: 3px;
-     vertical-align: middle;
-     text-align: center;
- }
-
- span.attribute-link i {
-     color: $mdc-theme-background;
-     cursor: default;
- }
-
 
 div#char-panel {
 
     max-width: 123ch;
 
     div.char-info, div#matchup-overrides {
-
-        .mdc-card {
-            max-width: 60ch;
-            min-width: 330px;
-            align-self: center;
-        }
 
         .mdc-tab-bar {
             border-top: 1px solid rgba(#fff, 0.12);
@@ -236,7 +271,7 @@ div#char-panel {
         }
 
         .char-tab-selected {
-            border: solid 1px $mdc-theme-accent;
+            border: solid 1px $mdc-theme-secondary;
             background-size: cover;
             vertical-align: middle;
             border-radius: 50%;
@@ -364,7 +399,7 @@ div#matchup-display {
 
         th {
             padding: 2px 0.3em;
-            color: $mdc-theme-accent;
+            color: $mdc-theme-secondary;
             border: 1px solid #6c6c6c;
         }
 

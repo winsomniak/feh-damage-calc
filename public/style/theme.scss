@@ -1,10 +1,13 @@
 $up: 1.68em;
 $down: 0.68em;
 
+
 /* Colors */
 $color: #e9e9e9;
 $text-color: $color;
 $heading-color: #f9f9f9;
+$mdc-theme-text-primary: $text-color;
+$mdc-theme-text-secondary: darken($text-color, 25%);
 
 $cool-purple: #9d4dc5;
 $cool-blue: #5486d1;
@@ -12,10 +15,18 @@ $cool-teal: #53dbd0;
 $cool-red: #d93344;
 
 /* MDC Configs */
+$mdc-theme-surface: darken(#25252F, 0.2);
+$mdc-theme-on-surface: $text-color;
+$mdc-theme-on-primary: #222222;
+$mdc-theme-on-secondary: #222222;
+$mdc-theme-on-background: $text-color;
 $mdc-theme-primary: #40c4ff;
 $mdc-theme-primary-light: #82f7ff;
 $mdc-theme-primary-dark: #0094cc;
-$mdc-theme-accent: #ca912e;
+$mdc-theme-accent: #dcb064;
+$mdc-theme-secondary: $mdc-theme-accent;
+$mdc-theme-secondary-light: lighten(#ca912e, 25%);
+$mdc-theme-secondary-dark: #ca912e;
 $mdc-theme-background: #25252F;
 $mdc-theme-background-light: lighten($mdc-theme-background, 0.2);
 $mdc-theme-background-dark: darken($mdc-theme-background, 0.2);

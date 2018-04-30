@@ -1474,7 +1474,7 @@ function singleCombat(battleInfo, initiator, logIntro, brave) {
 
     //checks for special def/res picking
     battleInfo=checkResDefSubstitution(battleInfo, attacker, defender);
-   
+
     if(battleInfo.changeDefRes==1)
     {
         defStat="resistance";
@@ -1692,7 +1692,7 @@ function singleCombat(battleInfo, initiator, logIntro, brave) {
         if(Object.is(attacker, battleInfo.defender))
             HasDefSpecbeenBoosted=true
     } else if (attacker.specCurrCooldown > 0) {
-		
+
         if (canActivateGuard(battleInfo, !initiator)) { // guard effect
             attacker.specCurrCooldown += 1;
             battleInfo.logMsg += "Lost a special cooldown charge [" + skillInfo['b'][defender.passiveB].name + "]. ";
@@ -1723,7 +1723,7 @@ function singleCombat(battleInfo, initiator, logIntro, brave) {
     //Steady Breath, only if the special hasn't activated this turn and there haven't already been other increases
     if(!HasDefSpecbeenBoosted)
         enemyPhaseCharge(battleInfo, attacker, defender);
-    
+
     // print hp before and after
     battleInfo.logMsg += "<br><span class='" + defClass + "'>" + defender.display + "</span> HP: " + defOldHP.toString() + " → " + defender.currHP.toString() + "" + healMsg + "</li>";
 
@@ -1794,15 +1794,15 @@ function simBattle(battleInfo, displayMsg) {
 
     var attacker = battleInfo.attacker;
     var defender = battleInfo.defender;
-	
-    //Needed to make sure stuff isn't corrupted	
+
+    //Needed to make sure stuff isn't corrupted
     attacker.weaponData= Object.assign({}, weaponInfo[attacker.weaponName]);
     defender.weaponData= Object.assign({}, weaponInfo[defender.weaponName]);
 
     //Refinement checks!
     getRefBonus(attacker);
     getRefBonus(defender);
-	
+
     //Storing attacker info for self-referencing in later calculations
     attacker.isAttacker = true;
     attacker.agentClass = 'attacker';
@@ -2028,7 +2028,7 @@ function simBattle(battleInfo, displayMsg) {
                 {
                     battleInfo = singleCombat(battleInfo, false, "counterattacks again", false);
                 }
-            } 
+            }
             if((!(desperationPassive || desperationWeapon)) && attacker.currHP > 0)
             {
                 if(battleInfo.atkFollow >= 2)
@@ -2042,7 +2042,7 @@ function simBattle(battleInfo, displayMsg) {
                 {
                     battleInfo = singleCombat(battleInfo, false, "counterattacks again", false);
                 }
-            } 
+            }
         }
     }
 
