@@ -60,6 +60,7 @@ a {
 
     option {
         background-color: $mdc-theme-background-light;
+
     }
 }
 
@@ -124,6 +125,14 @@ span.attribute-link {
 }
 
 /*
+ * Switches
+ */
+.mdc-switch {
+    //This one is supposed to be private and may cause issues with future releases
+    @include mdc-switch-unchecked-track-color_($mdc-theme-text-secondary);
+}
+
+/*
  * Cards
  */
 .mdc-card__actions {
@@ -154,6 +163,11 @@ span.attribute-link {
         position: relative;
         padding: 2px 16px;
         background: rgba(0,0,0,0.1);
+        padding-right: 32px;
+    }
+
+    .card-body {
+        padding: 8px;
     }
 
     .mdc-icon-toggle {

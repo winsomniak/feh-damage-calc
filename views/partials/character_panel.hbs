@@ -33,7 +33,7 @@
                 </div>
 
                 <div class="mdc-text-field">
-                    <input type="number" id="spd-{{charNum}}"  class="mdc-text-field__input more-than-zero battle-val" value="1" data-charnum="{{charNum}}" autocomplete="off">
+                    <input type="number" id="spd-{{charNum}}" class="mdc-text-field__input more-than-zero battle-val" value="1" data-charnum="{{charNum}}" autocomplete="off">
                     <label for="spd-{{charNum}}" class="mdc-floating-label" title="A unit will attack twice if their Speed is at least 5 more than their foe's Speed.">SPD</label>
                     <div class="mdc-line-ripple"></div>
                 </div>
@@ -45,8 +45,8 @@
                 </div>
 
                 <div class="mdc-text-field">
-                    <input type="number" id="res-{{charNum}}"  class="mdc-text-field__input more-than-zero battle-val" value="1" data-charnum="{{charNum}}" autocomplete="off">
-                    <label for="res-{{charNum}}"  class="mdc-floating-label" title="The higher a unit's Resistance is, the less damage they take from magical attacks.">RES</label>
+                    <input type="number" id="res-{{charNum}}" class="mdc-text-field__input more-than-zero battle-val" value="1" data-charnum="{{charNum}}" autocomplete="off">
+                    <label for="res-{{charNum}}" class="mdc-floating-label" title="The higher a unit's Resistance is, the less damage they take from magical attacks.">RES</label>
                     <div class="mdc-line-ripple"></div>
                 </div>
             </div>
@@ -82,7 +82,7 @@
 
                     <div class="collapsable mdc-layout-grid__cell mdc-layout-grid__cell--span-12" id="extra-char-info-{{charNum}}">
                         <div class="mdc-select mdc-select--box mdc-ripple-upgraded">
-                            <select id="color-{{charNum}}"  class="mdc-select__native-control color-selector" data-charnum="{{charNum}}">
+                            <select id="color-{{charNum}}" class="mdc-select__native-control color-selector" data-charnum="{{charNum}}">
                                 <option value="Red" selected>Red</option>
                                 <option value="Green">Green</option>
                                 <option value="Blue">Blue</option>
@@ -91,7 +91,7 @@
                             <label class="mdc-floating-label" for="color-{{charNum}}" >Color</label>
                         </div>
                         <div class="mdc-select mdc-select--box mdc-ripple-upgraded">
-                            <select id="weapon-type-{{charNum}}"  class="mdc-select__native-control weapon-type-selector" data-charnum="{{charNum}}">
+                            <select id="weapon-type-{{charNum}}" class="mdc-select__native-control weapon-type-selector" data-charnum="{{charNum}}">
                                 <option value="Sword" selected>Sword</option>
                                 <option value="Red Tome">Red Tome</option>
                                 <option value="Red Breath">Red Breath</option>
@@ -108,7 +108,7 @@
                             <label class="mdc-floating-label" for="weapon-type-{{charNum}}" >Weapon Type</label>
                         </div>
                         <div class="mdc-select mdc-select--box mdc-ripple-upgraded">
-                            <select id="move-type-{{charNum}}"  class="mdc-select__native-control move-type-selector" data-charnum="{{charNum}}">
+                            <select id="move-type-{{charNum}}" class="mdc-select__native-control move-type-selector" data-charnum="{{charNum}}">
                                 <option value="Infantry" selected>Infantry</option>
                                 <option value="Cavalry">Cavalry</option>
                                 <option value="Flying">Flying</option>
@@ -124,7 +124,7 @@
 
                             <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
                                 <div class="mdc-select mdc-select--box mdc-ripple-upgraded">
-                                    <select id="level-{{charNum}}"  class="mdc-select__native-control level-select build-select link-field" data-charnum="{{charNum}}">
+                                    <select id="level-{{charNum}}" class="mdc-select__native-control level-select build-select link-field" data-charnum="{{charNum}}">
                                         <option value="40" selected>Lvl. 40</option>
                                         <option value="1">Lvl. 1</option>
                                     </select>
@@ -192,7 +192,7 @@
 
                             <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
                                 <div class="mdc-select mdc-select--box mdc-ripple-upgraded">
-                                    <select id="rarity-{{charNum}}"  class="mdc-select__native-control rarity-select build-select link-field" data-charnum="{{charNum}}">
+                                    <select id="rarity-{{charNum}}" class="mdc-select__native-control rarity-select build-select link-field" data-charnum="{{charNum}}">
                                         <option value="5" selected>5 Stars</option>
                                     </select>
                                     <label class="mdc-floating-label" for="rarity-{{charNum}}">Rarity</label>
@@ -218,7 +218,7 @@
                         <div class="mdc-layout-grid__inner">
                             <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
                                 <div class="mdc-select mdc-select--box mdc-ripple-upgraded">
-                                    <select id="summoner-support-{{charNum}}"  class="mdc-select__native-control link-field" data-charnum="{{charNum}}">
+                                    <select id="summoner-support-{{charNum}}" class="mdc-select__native-control link-field" data-charnum="{{charNum}}">
                                         <option value="None" selected>---</option>
                                         <option value="c">C</option>
                                         <option value="b">B</option>
@@ -265,7 +265,7 @@
                             <span class="attribute-link mdc-theme--text-secondary-on-background"><i class="material-icons">open_in_new</i></span>
                             <div class="select-sizer">
                                 <div class="mdc-select mdc-select--box mdc-ripple-upgraded">
-                                    <select id="refinement-{{charNum}}"  class="mdc-select__native-control refinement-selector link-field" data-charnum="{{charNum}}" data-info="refinementsInfo">
+                                    <select id="refinement-{{charNum}}" class="mdc-select__native-control refinement-selector link-field" data-charnum="{{charNum}}" data-info="refinementsInfo">
                                         <option value="None" selected></option>
                                     </select>
                                    <label class="mdc-floating-label" for="refinement-info-{{charNum}}" >
@@ -293,10 +293,10 @@
                         <a id="assist-link-{{charNum}}" class="attribute-link mdc-theme--text-secondary-on-background" href="" target="_blank"><i class="material-icons">open_in_new</i></a>
                         <div class="select-sizer">
                             <div class="mdc-select mdc-select--box mdc-ripple-upgraded">
-                                <select id="assist-{{charNum}}"  class="mdc-select__native-control assist-selector link-field" data-charnum="{{charNum}}" data-info="assistInfo">
+                                <select id="assist-{{charNum}}" class="mdc-select__native-control assist-selector link-field" data-charnum="{{charNum}}" data-info="assistInfo">
                                     <option value="None" selected>---</option>
                                 </select>
-                                <label class="mdc-floating-label" for="assist-{{charNum}}"  class="assist-label">
+                                <label class="mdc-floating-label" for="assist-{{charNum}}" class="assist-label">
                                     <span data-section="{{id}}-extra-assist-info" >Assist</span>
                                 </label>
                             </div>
@@ -321,10 +321,10 @@
                         <a id="passive-a-link-{{charNum}}" class="attribute-link mdc-theme--text-secondary-on-background" href="" target="_blank"><i class="material-icons">open_in_new</i></a>
                         <div class="select-sizer">
                             <div class="mdc-select mdc-select--box mdc-ripple-upgraded">
-                                <select id="passive-a-{{charNum}}"  class="mdc-select__native-control passive-selector link-field" data-charnum="{{charNum}}" data-skilltype="a" data-info="skillInfo">
+                                <select id="passive-a-{{charNum}}" class="mdc-select__native-control passive-selector link-field" data-charnum="{{charNum}}" data-skilltype="a" data-info="skillInfo">
                                     <option value="None" selected>---</option>
                                 </select>
-                                <label class="mdc-floating-label" for="passive-a-{{charNum}}"  class="passive-a-label">
+                                <label class="mdc-floating-label" for="passive-a-{{charNum}}" class="passive-a-label">
                                     Passive A
                                 </label>
                             </div>
@@ -335,10 +335,10 @@
                         <a id="passive-b-link-{{charNum}}" class="attribute-link mdc-theme--text-secondary-on-background" href="" target="_blank"><i class="material-icons">open_in_new</i></a>
                         <div class="select-sizer">
                             <div class="mdc-select mdc-select--box mdc-ripple-upgraded">
-                                <select id="passive-b-{{charNum}}"  class="mdc-select__native-control passive-selector link-field" data-charnum="{{charNum}}" data-skilltype="b" data-info="skillInfo">
+                                <select id="passive-b-{{charNum}}" class="mdc-select__native-control passive-selector link-field" data-charnum="{{charNum}}" data-skilltype="b" data-info="skillInfo">
                                     <option value="None" selected>---</option>
                                 </select>
-                                <label class="mdc-floating-label" for="passive-b-{{charNum}}"  class="passive-b-label">
+                                <label class="mdc-floating-label" for="passive-b-{{charNum}}" class="passive-b-label">
                                     Passive B
                                 </label>
                             </div>
@@ -349,7 +349,7 @@
                         <a id="passive-c-link-{{charNum}}" class="attribute-link mdc-theme--text-secondary-on-background" href="" target="_blank"><i class="material-icons">open_in_new</i></a>
                         <div class="select-sizer">
                             <div class="mdc-select mdc-select--box mdc-ripple-upgraded">
-                                <select id="passive-c-{{charNum}}"  class="mdc-select__native-control passive-selector link-field" data-charnum="{{charNum}}" data-skilltype="c" data-info="skillInfo">
+                                <select id="passive-c-{{charNum}}" class="mdc-select__native-control passive-selector link-field" data-charnum="{{charNum}}" data-skilltype="c" data-info="skillInfo">
                                     <option value="None" selected>---</option>
                                 </select>
                                 <label class="mdc-floating-label" for="passive-c-{{charNum}}" class="passive-c-label">
@@ -363,10 +363,10 @@
                         <span class="attribute-link mdc-theme--text-secondary-on-background"><i class="material-icons">open_in_new</i></span>
                         <div class="select-sizer">
                             <div class="mdc-select mdc-select--box mdc-ripple-upgraded">
-                                <select id="passive-s-{{charNum}}"  class="mdc-select__native-control passive-selector link-field" data-charnum="{{charNum}}" data-skilltype="s" data-info="skillInfo">
+                                <select id="passive-s-{{charNum}}" class="mdc-select__native-control passive-selector link-field" data-charnum="{{charNum}}" data-skilltype="s" data-info="skillInfo">
                                     <option value="None" selected>---</option>
                                 </select>
-                                <label class="mdc-floating-label" for="passive-s-{{charNum}}"  class="passive-s-label">
+                                <label class="mdc-floating-label" for="passive-s-{{charNum}}" class="passive-s-label">
                                     Sacred Seal
                                 </label>
                             </div>
@@ -389,9 +389,9 @@
 
                     <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
                         <div class="mdc-text-field mdc-text-field--upgraded info-section-bottom current-hp" id="spec-cooldown-line-{{charNum}}" >
-                            <input type="number" id="spec-cooldown-{{charNum}}"  class="mdc-text-field__input zero-or-more curr-hp-val" data-charnum="{{charNum}}" value="1" autocomplete="off">
+                            <input type="number" id="spec-cooldown-{{charNum}}" class="mdc-text-field__input zero-or-more curr-hp-val" data-charnum="{{charNum}}" value="1" autocomplete="off">
                             <label id="spec-cooldown-label-{{charNum}}" class="mdc-floating-label" for="spec-cooldown-{{charNum}}" title="Special skills activate when cooldown reaches 0." data-charnum="{{charNum}}">
-                                Special Cooldown / <span id="spec-cooldown-max-{{charNum}}"  class="denominator">x</span>
+                                Special Cooldown / <span id="spec-cooldown-max-{{charNum}}" class="denominator">x</span>
                             </label>
                         </div>
                     </div>
@@ -405,34 +405,34 @@
                                     <div class="mdc-switch__knob"></div>
                                 </div>
                             </div>
-                            <label for="candlelight-status-{{charNum}}"  class="mdc-switch-label">Candlelight</label>
+                            <label for="candlelight-status-{{charNum}}" class="mdc-switch-label">Candlelight</label>
                         </div>
 
                         <div class="mdc-form-field">
                             <div class="mdc-switch">
-                                <input type="checkbox" id="panic-status-{{charNum}}"  class="mdc-switch__native-control" data-charnum="{{charNum}}" />
+                                <input type="checkbox" id="panic-status-{{charNum}}" class="mdc-switch__native-control" data-charnum="{{charNum}}" />
                                 <div class="mdc-switch__background">
                                     <div class="mdc-switch__knob"></div>
                                 </div>
                             </div>
-                            <label for="panic-status-{{charNum}}"  class="mdc-switch-label">Panic</label>
+                            <label for="panic-status-{{charNum}}" class="mdc-switch-label">Panic</label>
                         </div>
 
                         <div class="mdc-form-field">
                             <div class="mdc-switch">
-                                <input type="checkbox" id="defensive-terrain-{{charNum}}"  class="mdc-switch__native-control" data-charnum="{{charNum}}" />
+                                <input type="checkbox" id="defensive-terrain-{{charNum}}" class="mdc-switch__native-control" data-charnum="{{charNum}}" />
                                 <div class="mdc-switch__background">
                                     <div class="mdc-switch__knob"></div>
                                 </div>
                             </div>
-                            <label for="defensive-terrain-{{charNum}}"  class="mdc-switch-label">Defensive Terrain</label>
+                            <label for="defensive-terrain-{{charNum}}" class="mdc-switch-label">Defensive Terrain</label>
                         </div>
                     </div>
 
                     <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
-                        <div id="adjacent-block-{{charNum}}"  class="mdc-select mdc-select--box mdc-ripple-upgraded adjacent-block">
+                        <div id="adjacent-block-{{charNum}}" class="mdc-select mdc-select--box mdc-ripple-upgraded adjacent-block">
                             <label class="mdc-floating-label" for="adjacent-{{charNum}}" >Adjacent Allies</label>
-                            <select id="adjacent-{{charNum}}"  class="mdc-select__native-control adjacent-select battle-val" data-charnum="{{charNum}}">
+                            <select id="adjacent-{{charNum}}" class="mdc-select__native-control adjacent-select battle-val" data-charnum="{{charNum}}">
                                 <option value="0" selected>0</option>
                                 <option value="1">1</option>
                                 <option value="2">2</option>
@@ -447,23 +447,23 @@
                         <div class="stat-container">
 
                             <div class="mdc-text-field">
-                                <input type="number" id="atk-bonus-{{charNum}}"  class="mdc-text-field__input battle-val stat-bonus zero-or-more" value="0" data-charnum="{{charNum}}" autocomplete="off">
-                                <label for="atk-bonus-{{charNum}}"  class="mdc-floating-label" title="The higher a unit's Attack, the more damage they deal.">ATK</label>
+                                <input type="number" id="atk-bonus-{{charNum}}" class="mdc-text-field__input battle-val stat-bonus zero-or-more" value="0" data-charnum="{{charNum}}" autocomplete="off">
+                                <label for="atk-bonus-{{charNum}}" class="mdc-floating-label" title="The higher a unit's Attack, the more damage they deal.">ATK</label>
                             </div>
 
                             <div class="mdc-text-field">
-                                <input type="number" id="spd-bonus-{{charNum}}"  class="mdc-text-field__input battle-val stat-bonus zero-or-more" value="0" data-charnum="{{charNum}}" autocomplete="off">
-                                <label for="spd-bonus-{{charNum}}"  class="mdc-floating-label" title="A unit will attack twice if their Speed is at least 5 more than their foe's Speed.">SPD</label>
+                                <input type="number" id="spd-bonus-{{charNum}}" class="mdc-text-field__input battle-val stat-bonus zero-or-more" value="0" data-charnum="{{charNum}}" autocomplete="off">
+                                <label for="spd-bonus-{{charNum}}" class="mdc-floating-label" title="A unit will attack twice if their Speed is at least 5 more than their foe's Speed.">SPD</label>
                             </div>
 
                             <div class="mdc-text-field">
-                                <input type="number" id="def-bonus-{{charNum}}"  class="mdc-text-field__input battle-val stat-bonus zero-or-more" value="0" data-charnum="{{charNum}}" autocomplete="off">
-                                <label for="def-bonus-{{charNum}}"  class="mdc-floating-label" title="The higher a unit's Defense is, the less damage they take from physical attacks.">DEF</label>
+                                <input type="number" id="def-bonus-{{charNum}}" class="mdc-text-field__input battle-val stat-bonus zero-or-more" value="0" data-charnum="{{charNum}}" autocomplete="off">
+                                <label for="def-bonus-{{charNum}}" class="mdc-floating-label" title="The higher a unit's Defense is, the less damage they take from physical attacks.">DEF</label>
                             </div>
 
                             <div class="mdc-text-field">
-                                <input type="number" id="res-bonus-{{charNum}}"  class="mdc-text-field__input battle-val stat-bonus zero-or-more" value="0" data-charnum="{{charNum}}" autocomplete="off">
-                                <label for="res-bonus-{{charNum}}"  class="mdc-floating-label" title="The higher a unit's Resistance is, the less damage they take from magical attacks.">RES</label>
+                                <input type="number" id="res-bonus-{{charNum}}" class="mdc-text-field__input battle-val stat-bonus zero-or-more" value="0" data-charnum="{{charNum}}" autocomplete="off">
+                                <label for="res-bonus-{{charNum}}" class="mdc-floating-label" title="The higher a unit's Resistance is, the less damage they take from magical attacks.">RES</label>
                             </div>
                         </div>
                     </div>
@@ -473,23 +473,23 @@
                         <div class="stat-container">
 
                             <div class="mdc-text-field">
-                                <input type="number" id="atk-penalty-{{charNum}}"  class="mdc-text-field__input battle-val stat-penalty zero-or-more" value="0" data-charnum="{{charNum}}" autocomplete="off">
-                                <label for="atk-penalty-{{charNum}}"  class="mdc-floating-label" title="The higher a unit's Attack, the more damage they deal.">ATK</label>
+                                <input type="number" id="atk-penalty-{{charNum}}" class="mdc-text-field__input battle-val stat-penalty zero-or-more" value="0" data-charnum="{{charNum}}" autocomplete="off">
+                                <label for="atk-penalty-{{charNum}}" class="mdc-floating-label" title="The higher a unit's Attack, the more damage they deal.">ATK</label>
                             </div>
 
                             <div class="mdc-text-field">
-                                <input type="number" id="spd-penalty-{{charNum}}"  class="mdc-text-field__input battle-val stat-penalty zero-or-more" value="0" data-charnum="{{charNum}}" autocomplete="off">
-                                <label for="spd-penalty-{{charNum}}"  class="mdc-floating-label" title="A unit will attack twice if their Speed is at least 5 more than their foe's Speed.">SPD</label>
+                                <input type="number" id="spd-penalty-{{charNum}}" class="mdc-text-field__input battle-val stat-penalty zero-or-more" value="0" data-charnum="{{charNum}}" autocomplete="off">
+                                <label for="spd-penalty-{{charNum}}" class="mdc-floating-label" title="A unit will attack twice if their Speed is at least 5 more than their foe's Speed.">SPD</label>
                             </div>
 
                             <div class="mdc-text-field">
-                                <input type="number" id="def-penalty-{{charNum}}"  class="mdc-text-field__input battle-val stat-penalty zero-or-more" value="0" data-charnum="{{charNum}}" autocomplete="off">
-                                <label for="def-penalty-{{charNum}}"  class="mdc-floating-label" title="The higher a unit's Defense is, the less damage they take from physical attacks.">DEF</label>
+                                <input type="number" id="def-penalty-{{charNum}}" class="mdc-text-field__input battle-val stat-penalty zero-or-more" value="0" data-charnum="{{charNum}}" autocomplete="off">
+                                <label for="def-penalty-{{charNum}}" class="mdc-floating-label" title="The higher a unit's Defense is, the less damage they take from physical attacks.">DEF</label>
                             </div>
 
                             <div class="mdc-text-field">
-                                <input type="number" id="res-penalty-{{charNum}}"  class="mdc-text-field__input battle-val stat-penalty zero-or-more" value="0" data-charnum="{{charNum}}" autocomplete="off">
-                                <label for="res-penalty-{{charNum}}"  class="mdc-floating-label" title="The higher a unit's Resistance is, the less damage they take from magical attacks.">RES</label>
+                                <input type="number" id="res-penalty-{{charNum}}" class="mdc-text-field__input battle-val stat-penalty zero-or-more" value="0" data-charnum="{{charNum}}" autocomplete="off">
+                                <label for="res-penalty-{{charNum}}" class="mdc-floating-label" title="The higher a unit's Resistance is, the less damage they take from magical attacks.">RES</label>
                             </div>
                         </div>
                     </div>
@@ -498,23 +498,23 @@
                         <h3 class="mdc-typography--caption">Spur</h3>
                         <div class="stat-container">
                             <div class="mdc-text-field">
-                                <input type="number" id="atk-spur-{{charNum}}"  class="mdc-text-field__input battle-val stat-spur zero-or-more" value="0" data-charnum="{{charNum}}" autocomplete="off">
-                                <label for="atk-spur-{{charNum}}"  class="mdc-floating-label" title="The higher a unit's Attack, the more damage they deal.">ATK</label>
+                                <input type="number" id="atk-spur-{{charNum}}" class="mdc-text-field__input battle-val stat-spur zero-or-more" value="0" data-charnum="{{charNum}}" autocomplete="off">
+                                <label for="atk-spur-{{charNum}}" class="mdc-floating-label" title="The higher a unit's Attack, the more damage they deal.">ATK</label>
                             </div>
 
                             <div class="mdc-text-field">
-                                <input type="number" id="spd-spur-{{charNum}}"  class="mdc-text-field__input battle-val stat-spur zero-or-more" value="0" data-charnum="{{charNum}}" autocomplete="off">
-                                <label for="spd-spur-{{charNum}}"  class="mdc-floating-label" title="A unit will attack twice if their Speed is at least 5 more than their foe's Speed.">SPD</label>
+                                <input type="number" id="spd-spur-{{charNum}}" class="mdc-text-field__input battle-val stat-spur zero-or-more" value="0" data-charnum="{{charNum}}" autocomplete="off">
+                                <label for="spd-spur-{{charNum}}" class="mdc-floating-label" title="A unit will attack twice if their Speed is at least 5 more than their foe's Speed.">SPD</label>
                             </div>
 
                             <div class="mdc-text-field">
-                                <input type="number" id="def-spur-{{charNum}}"  class="mdc-text-field__input battle-val stat-spur zero-or-more" value="0" data-charnum="{{charNum}}" autocomplete="off">
-                                <label for="def-spur-{{charNum}}"  class="mdc-floating-label" title="The higher a unit's Defense is, the less damage they take from physical attacks.">DEF</label>
+                                <input type="number" id="def-spur-{{charNum}}" class="mdc-text-field__input battle-val stat-spur zero-or-more" value="0" data-charnum="{{charNum}}" autocomplete="off">
+                                <label for="def-spur-{{charNum}}" class="mdc-floating-label" title="The higher a unit's Defense is, the less damage they take from physical attacks.">DEF</label>
                             </div>
 
                             <div class="mdc-text-field">
-                                <input type="number" id="res-spur-{{charNum}}"  class="mdc-text-field__input battle-val stat-spur zero-or-more" value="0" data-charnum="{{charNum}}" autocomplete="off">
-                                <label for="res-spur-{{charNum}}"  class="mdc-floating-label" title="The higher a unit's Resistance is, the less damage they take from magical attacks.">RES</label>
+                                <input type="number" id="res-spur-{{charNum}}" class="mdc-text-field__input battle-val stat-spur zero-or-more" value="0" data-charnum="{{charNum}}" autocomplete="off">
+                                <label for="res-spur-{{charNum}}" class="mdc-floating-label" title="The higher a unit's Resistance is, the less damage they take from magical attacks.">RES</label>
                             </div>
                         </div>
                     </div>
