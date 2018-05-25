@@ -2572,15 +2572,31 @@ function enableCharPanel(charNum, enable) {
     if (enable) {
         $(textID).css("color", "white");
         $(inputID).removeAttr("disabled");
-    //    $("#status-" + charNum).multipleSelect("enable");
+
         enableSpecCooldown(charNum);
         enableCharBuild(charNum);
         enableExtraCharInfo(charNum);
+
+        if (charNum == 1) {
+            $('#attack-panel').removeClass('disabled');
+        }
+        else {
+            $('#defend-panel').removeClass('disabled');
+        }
+
     } else {
         $(textID).css("color", "#5b5b5b");
         $(inputID).attr("disabled", "disabled");
-    //    $("#status-" + charNum).multipleSelect("disable");
+
+        if (charNum == 1) {
+            $('#attack-panel').addClass('disabled');
+        }
+        else {
+            $('#defend-panel').addClass('disabled');
+        }
     }
+
+
 }
 
 // recolors matchup table rows

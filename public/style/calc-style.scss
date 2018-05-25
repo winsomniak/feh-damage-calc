@@ -222,6 +222,10 @@ span.attribute-link {
  * Character Panel
  */
 
+.disabled {
+    -webkit-filter: grayscale(100%);
+    filter: greyscale(100%);
+}
 
 div#char-panel {
 
