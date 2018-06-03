@@ -22,31 +22,31 @@
 
                 <div class="mdc-text-field">
                     <input type="number" id="hp-{{charNum}}" class="mdc-text-field__input more-than-zero hp-stat" value="1" data-charnum="{{charNum}}" autocomplete="off">
-                    <label for="hp-{{charNum}}" class="mdc-floating-label" title="A unit is defeated if their Hit Points reach 0.">HP</label>
+                    <label for="hp-{{charNum}}" class="mdc-floating-label mdc-floating-label--float-above" title="A unit is defeated if their Hit Points reach 0.">HP</label>
                     <div class="mdc-line-ripple"></div>
                 </div>
 
                 <div class="mdc-text-field">
                     <input type="number" id="atk-{{charNum}}" class="mdc-text-field__input more-than-zero battle-val" value="1" data-charnum="{{charNum}}" autocomplete="off">
-                    <label for="atk-{{charNum}}" class="mdc-floating-label" title="The higher a unit's Attack, the more damage they deal.">ATK</label>
+                    <label for="atk-{{charNum}}" class="mdc-floating-label mdc-floating-label--float-above" title="The higher a unit's Attack, the more damage they deal.">ATK</label>
                     <div class="mdc-line-ripple"></div>
                 </div>
 
                 <div class="mdc-text-field">
                     <input type="number" id="spd-{{charNum}}" class="mdc-text-field__input more-than-zero battle-val" value="1" data-charnum="{{charNum}}" autocomplete="off">
-                    <label for="spd-{{charNum}}" class="mdc-floating-label" title="A unit will attack twice if their Speed is at least 5 more than their foe's Speed.">SPD</label>
+                    <label for="spd-{{charNum}}" class="mdc-floating-label mdc-floating-label--float-above" title="A unit will attack twice if their Speed is at least 5 more than their foe's Speed.">SPD</label>
                     <div class="mdc-line-ripple"></div>
                 </div>
 
                 <div class="mdc-text-field">
                     <input type="number" id="def-{{charNum}}" class="mdc-text-field__input more-than-zero battle-val" value="1" data-charnum="{{charNum}}" autocomplete="off">
-                    <label for="def-{{charNum}}" class="mdc-floating-label" title="The higher a unit's Defense is, the less damage they take from physical attacks.">DEF</label>
+                    <label for="def-{{charNum}}" class="mdc-floating-label mdc-floating-label--float-above" title="The higher a unit's Defense is, the less damage they take from physical attacks.">DEF</label>
                     <div class="mdc-line-ripple"></div>
                 </div>
 
                 <div class="mdc-text-field">
                     <input type="number" id="res-{{charNum}}" class="mdc-text-field__input more-than-zero battle-val" value="1" data-charnum="{{charNum}}" autocomplete="off">
-                    <label for="res-{{charNum}}" class="mdc-floating-label" title="The higher a unit's Resistance is, the less damage they take from magical attacks.">RES</label>
+                    <label for="res-{{charNum}}" class="mdc-floating-label mdc-floating-label--float-above" title="The higher a unit's Resistance is, the less damage they take from magical attacks.">RES</label>
                     <div class="mdc-line-ripple"></div>
                 </div>
             </div>
@@ -88,7 +88,7 @@
                                 <option value="Blue">Blue</option>
                                 <option value="Colorless">Colorless</option>
                             </select>
-                            <label class="mdc-floating-label" for="color-{{charNum}}" >Color</label>
+                            <label class="mdc-floating-label mdc-floating-label--float-above" for="color-{{charNum}}" >Color</label>
                         </div>
                         <div class="mdc-select mdc-select--box mdc-ripple-upgraded">
                             <select id="weapon-type-{{charNum}}" class="mdc-select__native-control weapon-type-selector" data-charnum="{{charNum}}">
@@ -105,7 +105,7 @@
                                 <option value="Dagger">Dagger</option>
                                 <option value="Staff">Staff</option>
                             </select>
-                            <label class="mdc-floating-label" for="weapon-type-{{charNum}}" >Weapon Type</label>
+                            <label class="mdc-floating-label mdc-floating-label--float-above" for="weapon-type-{{charNum}}" >Weapon Type</label>
                         </div>
                         <div class="mdc-select mdc-select--box mdc-ripple-upgraded">
                             <select id="move-type-{{charNum}}" class="mdc-select__native-control move-type-selector" data-charnum="{{charNum}}">
@@ -114,7 +114,7 @@
                                 <option value="Flying">Flying</option>
                                 <option value="Armored">Armored</option>
                             </select>
-                            <label class="mdc-floating-label" for="move-type-{{charNum}}" >Move Type</label>
+                            <label class="mdc-floating-label mdc-floating-label--float-above" for="move-type-{{charNum}}" >Move Type</label>
                         </div>
                     </div>
 
@@ -128,7 +128,7 @@
                                         <option value="40" selected>Lvl. 40</option>
                                         <option value="1">Lvl. 1</option>
                                     </select>
-                                    <label class="mdc-floating-label" for="level-{{charNum}}" >Level</label>
+                                    <label class="mdc-floating-label mdc-floating-label--float-above" for="level-{{charNum}}" >Level</label>
                                 </div>
                             </div>
 
@@ -147,7 +147,7 @@
                                         <option value="9">+9</option>
                                         <option value="10">+10</option>
                                     </select>
-                                    <label class="mdc-floating-label" for="merge-{{charNum}}">+Merge</label>
+                                    <label class="mdc-floating-label mdc-floating-label--float-above" for="merge-{{charNum}}">+Merge</label>
                                 </div>
                             </div>
                         </div>
@@ -167,7 +167,7 @@
                                         <option value="def">+DEF</option>
                                         <option value="res">+RES</option>
                                     </select>
-                                    <label class="mdc-floating-label" for="boon-{{charNum}}">Boon</label>
+                                    <label class="mdc-floating-label mdc-floating-label--float-above" for="boon-{{charNum}}">Boon</label>
                                 </div>
                             </div>
                             <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
@@ -180,7 +180,7 @@
                                         <option value="def">-DEF</option>
                                         <option value="res">-RES</option>
                                     </select>
-                                    <label class="mdc-floating-label" for="bane-{{charNum}}">Bane</label>
+                                    <label class="mdc-floating-label mdc-floating-label--float-above" for="bane-{{charNum}}">Bane</label>
                                 </div>
                             </div>
                         </div>
@@ -195,7 +195,7 @@
                                     <select id="rarity-{{charNum}}" class="mdc-select__native-control rarity-select build-select link-field" data-charnum="{{charNum}}">
                                         <option value="5" selected>5 Stars</option>
                                     </select>
-                                    <label class="mdc-floating-label" for="rarity-{{charNum}}">Rarity</label>
+                                    <label class="mdc-floating-label mdc-floating-label--float-above" for="rarity-{{charNum}}">Rarity</label>
                                 </div>
                             </div>
 
@@ -253,7 +253,7 @@
                                 <select id="weapon-{{charNum}}" class="mdc-select__native-control weapon-selector link-field" data-charnum="{{charNum}}" data-info="weaponInfo">
                                     <option value="None" selected></option>
                                 </select>
-                                <label class="mdc-floating-label" for="extra-weapon-info-{{charNum}}" >
+                                <label class="mdc-floating-label mdc-floating-label--float-above" for="extra-weapon-info-{{charNum}}" >
                                     <span id="extra-weapon-info-btn-{{charNum}}" data-section="{{id}}-extra-weapon-info">Weapon</span>
                                 </label>
                             </div>
@@ -268,7 +268,7 @@
                                     <select id="refinement-{{charNum}}" class="mdc-select__native-control refinement-selector link-field" data-charnum="{{charNum}}" data-info="refinementsInfo">
                                         <option value="None" selected></option>
                                     </select>
-                                   <label class="mdc-floating-label" for="refinement-info-{{charNum}}" >
+                                   <label class="mdc-floating-label mdc-floating-label--float-above" for="refinement-info-{{charNum}}" >
                                        <span id="refinement-info-btn-{{charNum}}" data-section="{{id}}-refinement-info">Refinement</span>
                                    </label>
                                </div>
@@ -296,7 +296,7 @@
                                 <select id="assist-{{charNum}}" class="mdc-select__native-control assist-selector link-field" data-charnum="{{charNum}}" data-info="assistInfo">
                                     <option value="None" selected>---</option>
                                 </select>
-                                <label class="mdc-floating-label" for="assist-{{charNum}}" class="assist-label">
+                                <label class="mdc-floating-label mdc-floating-label--float-above" for="assist-{{charNum}}" class="assist-label">
                                     <span data-section="{{id}}-extra-assist-info" >Assist</span>
                                 </label>
                             </div>
@@ -310,7 +310,7 @@
                                 <select id="special-{{charNum}}" class="mdc-select__native-control special-selector link-field" data-charnum="{{charNum}}" data-info="specialInfo">
                                     <option value="None" selected>---</option>
                                 </select>
-                                <label class="mdc-floating-label" for="special-{{charNum}}" class="special-label">
+                                <label class="mdc-floating-label mdc-floating-label--float-above" for="special-{{charNum}}" class="special-label">
                                     Special
                                 </label>
                             </div>
@@ -324,7 +324,7 @@
                                 <select id="passive-a-{{charNum}}" class="mdc-select__native-control passive-selector link-field" data-charnum="{{charNum}}" data-skilltype="a" data-info="skillInfo">
                                     <option value="None" selected>---</option>
                                 </select>
-                                <label class="mdc-floating-label" for="passive-a-{{charNum}}" class="passive-a-label">
+                                <label class="mdc-floating-label mdc-floating-label--float-above" for="passive-a-{{charNum}}" class="passive-a-label">
                                     Passive A
                                 </label>
                             </div>
@@ -338,7 +338,7 @@
                                 <select id="passive-b-{{charNum}}" class="mdc-select__native-control passive-selector link-field" data-charnum="{{charNum}}" data-skilltype="b" data-info="skillInfo">
                                     <option value="None" selected>---</option>
                                 </select>
-                                <label class="mdc-floating-label" for="passive-b-{{charNum}}" class="passive-b-label">
+                                <label class="mdc-floating-label mdc-floating-label--float-above" for="passive-b-{{charNum}}" class="passive-b-label">
                                     Passive B
                                 </label>
                             </div>
@@ -352,7 +352,7 @@
                                 <select id="passive-c-{{charNum}}" class="mdc-select__native-control passive-selector link-field" data-charnum="{{charNum}}" data-skilltype="c" data-info="skillInfo">
                                     <option value="None" selected>---</option>
                                 </select>
-                                <label class="mdc-floating-label" for="passive-c-{{charNum}}" class="passive-c-label">
+                                <label class="mdc-floating-label mdc-floating-label--float-above" for="passive-c-{{charNum}}" class="passive-c-label">
                                     Passive C
                                 </label>
                             </div>
@@ -366,7 +366,7 @@
                                 <select id="passive-s-{{charNum}}" class="mdc-select__native-control passive-selector link-field" data-charnum="{{charNum}}" data-skilltype="s" data-info="skillInfo">
                                     <option value="None" selected>---</option>
                                 </select>
-                                <label class="mdc-floating-label" for="passive-s-{{charNum}}" class="passive-s-label">
+                                <label class="mdc-floating-label mdc-floating-label--float-above" for="passive-s-{{charNum}}" class="passive-s-label">
                                     Sacred Seal
                                 </label>
                             </div>
@@ -380,7 +380,7 @@
                 <div class="mdc-layout-grid__inner">
                     <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
                         <div class="mdc-text-field mdc-text-field--upgraded info-section-bottom current-hp">
-                            <label class="mdc-floating-label curr-hp-label" for="curr-hp-{{charNum}}" data-charnum="{{charNum}}">
+                            <label class="mdc-floating-label mdc-floating-label--float-above curr-hp-label" for="curr-hp-{{charNum}}" data-charnum="{{charNum}}">
                                 Current HP / <span id="hp-{{charNum}}-denom" class="denominator hp-{{charNum}}-read">1</span>
                             </label>
                             <input type="number" id="curr-hp-{{charNum}}" class="mdc-text-field__input more-than-zero curr-hp-val" data-charnum="{{charNum}}" value="1" autocomplete="off">
@@ -390,7 +390,7 @@
                     <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
                         <div class="mdc-text-field mdc-text-field--upgraded info-section-bottom current-hp" id="spec-cooldown-line-{{charNum}}" >
                             <input type="number" id="spec-cooldown-{{charNum}}" class="mdc-text-field__input zero-or-more curr-hp-val" data-charnum="{{charNum}}" value="1" autocomplete="off">
-                            <label id="spec-cooldown-label-{{charNum}}" class="mdc-floating-label" for="spec-cooldown-{{charNum}}" title="Special skills activate when cooldown reaches 0." data-charnum="{{charNum}}">
+                            <label id="spec-cooldown-label-{{charNum}}" class="mdc-floating-label mdc-floating-label--float-above" for="spec-cooldown-{{charNum}}" title="Special skills activate when cooldown reaches 0." data-charnum="{{charNum}}">
                                 Special Cooldown / <span id="spec-cooldown-max-{{charNum}}" class="denominator">x</span>
                             </label>
                         </div>
@@ -431,7 +431,7 @@
 
                     <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
                         <div id="adjacent-block-{{charNum}}" class="mdc-select mdc-select--box mdc-ripple-upgraded adjacent-block">
-                            <label class="mdc-floating-label" for="adjacent-{{charNum}}" >Adjacent Allies</label>
+                            <label class="mdc-floating-label mdc-floating-label--float-above" for="adjacent-{{charNum}}" >Adjacent Allies</label>
                             <select id="adjacent-{{charNum}}" class="mdc-select__native-control adjacent-select battle-val" data-charnum="{{charNum}}">
                                 <option value="0" selected>0</option>
                                 <option value="1">1</option>
@@ -448,22 +448,22 @@
 
                             <div class="mdc-text-field">
                                 <input type="number" id="atk-bonus-{{charNum}}" class="mdc-text-field__input battle-val stat-bonus zero-or-more" value="0" data-charnum="{{charNum}}" autocomplete="off">
-                                <label for="atk-bonus-{{charNum}}" class="mdc-floating-label" title="The higher a unit's Attack, the more damage they deal.">ATK</label>
+                                <label for="atk-bonus-{{charNum}}" class="mdc-floating-label mdc-floating-label--float-above" title="The higher a unit's Attack, the more damage they deal.">ATK</label>
                             </div>
 
                             <div class="mdc-text-field">
                                 <input type="number" id="spd-bonus-{{charNum}}" class="mdc-text-field__input battle-val stat-bonus zero-or-more" value="0" data-charnum="{{charNum}}" autocomplete="off">
-                                <label for="spd-bonus-{{charNum}}" class="mdc-floating-label" title="A unit will attack twice if their Speed is at least 5 more than their foe's Speed.">SPD</label>
+                                <label for="spd-bonus-{{charNum}}" class="mdc-floating-label mdc-floating-label--float-above" title="A unit will attack twice if their Speed is at least 5 more than their foe's Speed.">SPD</label>
                             </div>
 
                             <div class="mdc-text-field">
                                 <input type="number" id="def-bonus-{{charNum}}" class="mdc-text-field__input battle-val stat-bonus zero-or-more" value="0" data-charnum="{{charNum}}" autocomplete="off">
-                                <label for="def-bonus-{{charNum}}" class="mdc-floating-label" title="The higher a unit's Defense is, the less damage they take from physical attacks.">DEF</label>
+                                <label for="def-bonus-{{charNum}}" class="mdc-floating-label mdc-floating-label--float-above" title="The higher a unit's Defense is, the less damage they take from physical attacks.">DEF</label>
                             </div>
 
                             <div class="mdc-text-field">
                                 <input type="number" id="res-bonus-{{charNum}}" class="mdc-text-field__input battle-val stat-bonus zero-or-more" value="0" data-charnum="{{charNum}}" autocomplete="off">
-                                <label for="res-bonus-{{charNum}}" class="mdc-floating-label" title="The higher a unit's Resistance is, the less damage they take from magical attacks.">RES</label>
+                                <label for="res-bonus-{{charNum}}" class="mdc-floating-label mdc-floating-label--float-above" title="The higher a unit's Resistance is, the less damage they take from magical attacks.">RES</label>
                             </div>
                         </div>
                     </div>
@@ -474,22 +474,22 @@
 
                             <div class="mdc-text-field">
                                 <input type="number" id="atk-penalty-{{charNum}}" class="mdc-text-field__input battle-val stat-penalty zero-or-more" value="0" data-charnum="{{charNum}}" autocomplete="off">
-                                <label for="atk-penalty-{{charNum}}" class="mdc-floating-label" title="The higher a unit's Attack, the more damage they deal.">ATK</label>
+                                <label for="atk-penalty-{{charNum}}" class="mdc-floating-label mdc-floating-label--float-above" title="The higher a unit's Attack, the more damage they deal.">ATK</label>
                             </div>
 
                             <div class="mdc-text-field">
                                 <input type="number" id="spd-penalty-{{charNum}}" class="mdc-text-field__input battle-val stat-penalty zero-or-more" value="0" data-charnum="{{charNum}}" autocomplete="off">
-                                <label for="spd-penalty-{{charNum}}" class="mdc-floating-label" title="A unit will attack twice if their Speed is at least 5 more than their foe's Speed.">SPD</label>
+                                <label for="spd-penalty-{{charNum}}" class="mdc-floating-label mdc-floating-label--float-above" title="A unit will attack twice if their Speed is at least 5 more than their foe's Speed.">SPD</label>
                             </div>
 
                             <div class="mdc-text-field">
                                 <input type="number" id="def-penalty-{{charNum}}" class="mdc-text-field__input battle-val stat-penalty zero-or-more" value="0" data-charnum="{{charNum}}" autocomplete="off">
-                                <label for="def-penalty-{{charNum}}" class="mdc-floating-label" title="The higher a unit's Defense is, the less damage they take from physical attacks.">DEF</label>
+                                <label for="def-penalty-{{charNum}}" class="mdc-floating-label mdc-floating-label--float-above" title="The higher a unit's Defense is, the less damage they take from physical attacks.">DEF</label>
                             </div>
 
                             <div class="mdc-text-field">
                                 <input type="number" id="res-penalty-{{charNum}}" class="mdc-text-field__input battle-val stat-penalty zero-or-more" value="0" data-charnum="{{charNum}}" autocomplete="off">
-                                <label for="res-penalty-{{charNum}}" class="mdc-floating-label" title="The higher a unit's Resistance is, the less damage they take from magical attacks.">RES</label>
+                                <label for="res-penalty-{{charNum}}" class="mdc-floating-label mdc-floating-label--float-above" title="The higher a unit's Resistance is, the less damage they take from magical attacks.">RES</label>
                             </div>
                         </div>
                     </div>
@@ -499,22 +499,22 @@
                         <div class="stat-container">
                             <div class="mdc-text-field">
                                 <input type="number" id="atk-spur-{{charNum}}" class="mdc-text-field__input battle-val stat-spur zero-or-more" value="0" data-charnum="{{charNum}}" autocomplete="off">
-                                <label for="atk-spur-{{charNum}}" class="mdc-floating-label" title="The higher a unit's Attack, the more damage they deal.">ATK</label>
+                                <label for="atk-spur-{{charNum}}" class="mdc-floating-label mdc-floating-label--float-above" title="The higher a unit's Attack, the more damage they deal.">ATK</label>
                             </div>
 
                             <div class="mdc-text-field">
                                 <input type="number" id="spd-spur-{{charNum}}" class="mdc-text-field__input battle-val stat-spur zero-or-more" value="0" data-charnum="{{charNum}}" autocomplete="off">
-                                <label for="spd-spur-{{charNum}}" class="mdc-floating-label" title="A unit will attack twice if their Speed is at least 5 more than their foe's Speed.">SPD</label>
+                                <label for="spd-spur-{{charNum}}" class="mdc-floating-label mdc-floating-label--float-above" title="A unit will attack twice if their Speed is at least 5 more than their foe's Speed.">SPD</label>
                             </div>
 
                             <div class="mdc-text-field">
                                 <input type="number" id="def-spur-{{charNum}}" class="mdc-text-field__input battle-val stat-spur zero-or-more" value="0" data-charnum="{{charNum}}" autocomplete="off">
-                                <label for="def-spur-{{charNum}}" class="mdc-floating-label" title="The higher a unit's Defense is, the less damage they take from physical attacks.">DEF</label>
+                                <label for="def-spur-{{charNum}}" class="mdc-floating-label mdc-floating-label--float-above" title="The higher a unit's Defense is, the less damage they take from physical attacks.">DEF</label>
                             </div>
 
                             <div class="mdc-text-field">
                                 <input type="number" id="res-spur-{{charNum}}" class="mdc-text-field__input battle-val stat-spur zero-or-more" value="0" data-charnum="{{charNum}}" autocomplete="off">
-                                <label for="res-spur-{{charNum}}" class="mdc-floating-label" title="The higher a unit's Resistance is, the less damage they take from magical attacks.">RES</label>
+                                <label for="res-spur-{{charNum}}" class="mdc-floating-label mdc-floating-label--float-above" title="The higher a unit's Resistance is, the less damage they take from magical attacks.">RES</label>
                             </div>
                         </div>
                     </div>
