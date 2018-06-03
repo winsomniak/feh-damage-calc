@@ -1,12 +1,12 @@
 <div class="mdc-card mdc-theme--background">
-    <section class="mdc-card__primary">
-        <h2 class="mdc-typography--headline5 mdc-theme--secondary-light">Matchup Summary</h2>
-        <h3 class="mdc-typography--subtitle1" id="matchup-title"></h3>
+    <div class="card-head">
+        <h3 class="mdc-typography--overline mdc-theme--secondary">Matchup Summary</h3>
         {{> toggle_button}}
-    </section>
+    </div>
 
-    <div class="mdc-card__body">
+    <div class="card-body">
         <div class="mdc-card__supporting-text" id="matchup-display">
+            <h4 class="mdc-typography--caption" id="matchup-title"></h4>
             <span id="matchup-overview"></span>
         </div>
     </div>

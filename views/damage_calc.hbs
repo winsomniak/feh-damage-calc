@@ -18,7 +18,7 @@
 							<h1 class="mdc-typography--headline5 mdc-theme--secondary">Fire Emblem Heroes Combat Simulator</h1>
 							<h2 class="mdc-typography--subtitle1">KageroCalc - Community Edition - <a href="https://github.com/winsomniak/kagero-calc/issues/">Report Bug</a></h2>
 						</div>
-						
+
 						<div class="mdc-card__actions" id="modes-container">
 							<div id="modes" title="Select a mode of calculation." class="ui-radioset">
 
@@ -109,10 +109,11 @@
 					</div>
 
 					<div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12 mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-4-phone mdc-card mdc-theme--background" id="matchups">
-						<div class="mdc-card__primary">
-							<h2 class="mdc-typography--headline5">Matchups</h2>
+						<div class="card-head">
+							<h2 class="mdc-typography--overline mdc-theme--secondary">Matchups</h2>
+							{{> toggle_button}}
 						</div>
-						<div>
+						<div class="card-body">
 							<div id="matchup-table-container">
 								<table id="matchup-table" class="sortable"></table>
 							</div>

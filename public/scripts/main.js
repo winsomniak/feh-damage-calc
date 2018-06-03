@@ -3245,13 +3245,13 @@ function setupOverrides() {
     loadSpecials("#override-special");
 
     // add No override option
-    $("#override-weapon").html("<option value='No Override'>No Override</option>" + $("#override-weapon").html());
-    $("#override-passive-a").html("<option value='No Override'>No Override</option>" + $("#override-passive-a").html());
-    $("#override-passive-b").html("<option value='No Override'>No Override</option>" + $("#override-passive-b").html());
-    $("#override-passive-c").html("<option value='No Override'>No Override</option>" + $("#override-passive-c").html());
-    $("#override-passive-s").html("<option value='No Override'>No Override</option>" + $("#override-passive-s").html());
-    $("#override-assist").html("<option value='No Override'>No Override</option>" + $("#override-assist").html());
-    $("#override-special").html("<option value='No Override'>No Override</option>" + $("#override-special").html());
+    $("#override-weapon").html("<option value='No Override'>---</option>" + $("#override-weapon").html());
+    $("#override-passive-a").html("<option value='No Override'>---</option>" + $("#override-passive-a").html());
+    $("#override-passive-b").html("<option value='No Override'>---</option>" + $("#override-passive-b").html());
+    $("#override-passive-c").html("<option value='No Override'>---</option>" + $("#override-passive-c").html());
+    $("#override-passive-s").html("<option value='No Override'>---</option>" + $("#override-passive-s").html());
+    $("#override-assist").html("<option value='No Override'>---</option>" + $("#override-assist").html());
+    $("#override-special").html("<option value='No Override'>---</option>" + $("#override-special").html());
 }
 
 // checks if the given unit is a custom unit

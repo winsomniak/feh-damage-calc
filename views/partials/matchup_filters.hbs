@@ -1,7 +1,8 @@
 <div class="matchup-section mdc-card mdc-theme--background" id="filter-panel">
 
     <div class="card-head">
-        <h2 class="mdc-typography--headline5">Matchup Filters</h2>
+        <h3 class="mdc-typography--overline mdc-theme--secondary">Matchup Filters</h3>
+        {{> toggle_button}}
     </div>
 
     <div class="card-body">
@@ -33,11 +34,11 @@
             </div>
         </section>
         {{/filters}}
+    </div>
 
-        <div class="mdc-card__actions matchup-filter-block">
-            <button class="mdc-card__action mdc-button mdc-button--primary" id="matchup-filter-reset">Reset</button>
-            <button class="mdc-card__action mdc-button mdc-button--primary" id="matchup-filter-dismiss">Dismiss</button>
-        </div>
+    <div class="mdc-card__actions matchup-filter-block">
+        <button class="mdc-card__action mdc-button mdc-button--primary" id="matchup-filter-reset">Reset</button>
+        <button class="mdc-card__action mdc-button mdc-button--primary" id="matchup-filter-dismiss">Dismiss</button>
     </div>
 
 </div>
