@@ -183,7 +183,7 @@ $(".weapon-type-selector").on("change", function (){
     var charNum = $(this).data("charnum").toString();
     loadWeapons(this.value, "#weapon-" + charNum, false);
     setColor(this.value, charNum);
-    $("#weapon-" + charNum + " option:eq(1)").attr("selected", "selected").attr('selected', 'selected'); //.trigger("change.select2");
+    $("#weapon-" + charNum + " option:eq(1)").attr("selected", "selected").attr('selected', 'selected');
     getWeaponIcon((charNum === "1" ? "#weapon-1" : "#weapon-2"), this.value);
     showWeapon($("#weapon-" + charNum).val(), charNum, true, true);
     charChange(charNum);
@@ -210,9 +210,9 @@ $("#override-weapon-type").on("change", function (){
     keepTable = false;
 
     if (selectedWeapon === "No Override" || selectedWeapon === "None" || this.value === "Any" || weaponInfo[selectedWeapon].type === this.value) {
-        $("#override-weapon").val(selectedWeapon).attr('selected', 'selected'); //.trigger("change.select2");
+        $("#override-weapon").val(selectedWeapon).attr('selected', 'selected');
     } else {
-        $("#override-weapon option:eq(0)").attr("selected", "selected").attr('selected', 'selected'); //.trigger("change.select2");
+        $("#override-weapon option:eq(0)").attr("selected", "selected").attr('selected', 'selected');
         $("#override-adjacent-block").hide(500);
         $("#override-adjacent").val("0");
     }
@@ -237,7 +237,7 @@ $(".color-selector").on("change", function() {
         loadWeapons("Bow", "#weapon-" + charNum, false);
         $("#weapon-type-" + charNum).val("Bow");
     }
-    $("#weapon-" + charNum + " option:eq(1)").attr("selected", "selected").attr('selected', 'selected'); //.trigger("change.select2");
+    $("#weapon-" + charNum + " option:eq(1)").attr("selected", "selected").attr('selected', 'selected');
     getWeaponIcon((charNum === "1" ? "#weapon-1" : "#weapon-2"), $("#weapon-type-" + charNum).val());
     showWeapon($("#weapon-" + charNum).val(), charNum, true, true);
     charChange(charNum);
@@ -266,7 +266,6 @@ $(".swap-btn").on("click", function() {
 $("input[type=radio][name=mode]").on("change", function() {
     if (initFilters) {
         $("#matchup-filter-name").val("");
-        //$("select.multi-select").multipleSelect("checkAll");
         initFilters = false;
     }
 
@@ -288,7 +287,6 @@ $("input[type=radio][name=mode]").on("change", function() {
 
     if (this.id === "one-vs-all") {
         $("#battle-log").stop(true, true).hide(200);
-    //    $("#single-combat").stop(true, true).hide(200);
         $("#matchups").stop(true, true).show(200);
         $("#matchup-panel").stop(true, true).show(200);
 
@@ -351,15 +349,15 @@ $("#override-reset").on("click", function() {
     $("#override-weapon-type").val("Any");
     loadWeapons("Any", "#override-weapon", true);
     $("#override-weapon").html("<option value='No Override'>No Override</option>" + $("#override-weapon").html());
-    $("#override-weapon").val("No Override").attr('selected', 'selected'); //.trigger("change.select2");
+    $("#override-weapon").val("No Override").attr('selected', 'selected');
 
-    $("#override-passive-a").val("No Override").attr('selected', 'selected'); //.trigger("change.select2");
-    $("#override-passive-b").val("No Override").attr('selected', 'selected'); //.trigger("change.select2");
-    $("#override-passive-c").val("No Override").attr('selected', 'selected'); //.trigger("change.select2");
-    $("#override-assist").val("No Override").attr('selected', 'selected'); //.trigger("change.select2");
-    $("#override-special").val("No Override").attr('selected', 'selected'); //.trigger("change.select2");
+    $("#override-passive-a").val("No Override").attr('selected', 'selected');
+    $("#override-passive-b").val("No Override").attr('selected', 'selected');
+    $("#override-passive-c").val("No Override").attr('selected', 'selected');
+    $("#override-assist").val("No Override").attr('selected', 'selected');
+    $("#override-special").val("No Override").attr('selected', 'selected');
     $("#override-spec-cooldown").val("max");
-    $("#override-passive-s").val("No Override").attr('selected', 'selected'); //.trigger("change.select2");
+    $("#override-passive-s").val("No Override").attr('selected', 'selected');
 
     $(".override-stat").val(0);
     $("#override-curr-hp").val(100);
@@ -528,4 +526,15 @@ $(".draw-update").on("click", function() {
 
     // sim battle again
     simBattle(getBattleInfo(), true);
+});
+
+
+// Panel collapse buttons
+document.querySelectorAll('.mdc-icon-toggle').forEach(function(el) {
+    el.addEventListener('MDCIconToggle:change', (k) => {
+        var card = k.target.parentElement.parentElement;
+        var body = card.querySelector('.card-body');
+
+        $(body).toggle(200);
+    }, {passive: true});
 });

@@ -9,9 +9,6 @@
     <meta name="mobile-web-app-capable" content="yes">
     <link rel="shortcut icon" href="/favicon.png"/>
 
-    <!-- KageroChart styling -->
-    <link rel="stylesheet" type="text/css" href="https://kagerochart.com/dist/css/material/main.min.css">
-
     <!-- Load CSS -->
     {{#pageCSS}}
     <link rel="stylesheet" type="text/css" href="style/{{stylesheet}}.min.css">
@@ -27,15 +24,12 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 
-<body id="body" class="mdc-theme--dark">
+<body id="body">
     <main id="main" class="material-main">
         <div id="material-content">
             {{{body}}}
         </div>
     </main>
-
-    <!-- End of Body JS -->
-    <script src="https://kagerochart.com/dist/scripts/material-components-web.min.js"></script>
 
     <script type="application/json" id="data">
     {{{data}}}
@@ -45,7 +39,7 @@
 
     <!-- Initialize Material Web Comopnents -->
     <script type="text/javascript">
-        mdc.autoInit();
+        window.mdc.autoInit();
     </script>
 </body>
 </html>

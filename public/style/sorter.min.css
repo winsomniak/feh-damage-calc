@@ -1,1 +1,1 @@
-.sortable th.descend:after{font-size:0.9em;content:" \25B2"}.sortable th.ascend:after{font-size:0.9em;content:" \25BC"}.sortable th:hover{cursor:pointer}
+.sortable th.descend:after{font-size:.9em;content:" \25B2"}.sortable th.ascend:after{font-size:.9em;content:" \25BC"}.sortable th:hover{cursor:pointer}

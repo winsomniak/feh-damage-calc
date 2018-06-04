@@ -1,153 +1,237 @@
 @import "theme.scss";
+@import "material-components-web/material-components-web";
 
-body::after {
-    display: none;
-    content: url(/images/damage-calc/swap-hover.png) url(/images/damage-calc/Portraits/Unselected-hover.png);
+/*
+ * Page wide styles
+ */
+html, body {
+    font-family: "Roboto", sans-serif;
+    background-color: $mdc-theme-background-dark;
+    background-image: url("https://kagerochart.com/images/site/type.png");
+    background-blend-mode: luminosity;
+    background-repeat: repeat;
+    width: auto;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    color: $text-color;
 }
 
-
-//Floating action button
-.app-fab--absolute {
-    background-position: center;
-}
-.app-fab--absolute.app-fab--absolute {
-  position: fixed;
-  z-index: 2;
-  bottom: 1rem;
-  right: 1rem;
+li {
+    list-style-type: none;
 }
 
-.attribute-link {
-    margin-left: 3px;
-    vertical-align: middle;
-    text-align: center;
+a {
+    color: $mdc-theme-primary;
 }
 
-span.attribute-link i {
-    color: $mdc-theme-background;
-    cursor: default;
-}
+/*
+ * Mobile Specific Style
+ */
+@media (min-width: 480px) and (max-width: 700px), (max-width: 380px) {
+    div#char-panel > div.char-info > .mdc-card {
+        min-width: 260px;
+    }
 
-select, .mdc-select > option {
-    background: darken($mdc-theme-background, 5%);
-}
-
-@media(min-width: 1024px) {
-   .app-fab--absolute.app-fab--absolute {
-    bottom: 1.5rem;
-    right: 1.5rem;
-  }
-}
-
-#ad-above-fold, #modes-container {
-    align-self: stretch;
-
-    .ad-responsive-above-fold {
-        color: $text-color;
+    .tab-panel.build-fields {
+        .mdc-form-field {
+            justify-content: center;
+        }
     }
 }
 
+/*
+ * Ads
+ */
 #ad-above-fold {
+    align-self: stretch;
     justify-content: flex-end;
 }
 
+/*
+ * Selects
+ */
+
+.mdc-select {
+    //Set background image to change caret icon
+    position: relative;
+    width: 100%;
+
+    option {
+        background-color: $mdc-theme-background-light;
+
+    }
+}
+
+.select-sizer {
+    display: block;
+    width: auto;
+    overflow: hidden;
+}
+
+.attribute-link {
+    position: relative;
+    display: block;
+    vertical-align: middle;
+    text-align: center;
+    top: 14px;
+    left: 4px;
+    font-size: 28px;
+    width: 32px;
+    float: right;
+
+    i {
+        color: inherit;
+        font-size: inherit;
+    }
+
+    i:hover {
+        color: rgba($mdc-theme-primary, 0.7);
+    }
+}
+
+span.attribute-link {
+    i {
+        cursor: default;
+        color: transparent;
+        user-select: none;
+    }
+
+    i:hover {
+        color: transparent;
+    }
+}
+
+/*
+ * Tabs
+ */
 #override-tab-bar, #char-tab-bar-1, #char-tab-bar-2 {
     width: 100%;
 
     .mdc-tab {
         min-width: 96px;
+        width: 50%;
+        @include mdc-states-base-color($mdc-theme-primary);
+        @include mdc-states-hover-opacity(.09);
+        @include mdc-states-focus-opacity(.05);
+        @include mdc-states-press-opacity(.25);
     }
+
+    .mdc-tab-bar__indicator {
+        background-color: $mdc-theme-primary;
+    }
+
 }
 
+/*
+ * Switches
+ */
+.mdc-switch {
+    //This one is supposed to be private and may cause issues with future releases
+    @include mdc-switch-unchecked-track-color_($mdc-theme-text-secondary);
+}
+
+/*
+ * Cards
+ */
 .mdc-card__actions {
     border-top: 1px solid rgba(255,255,255,.12);
 }
-#modes {
-    .mdc-form-field {
-        display: inline-flex;
-    }
-}
+
 
 .mdc-card {
+
+    --mdc-layout-grid-gutter-desktop: 8px;
+    --mdc-layout-grid-gutter-tablet: 8px;
+    --mdc-layout-grid-gutter-phone: 8px;
+
+    --mdc-layout-grid-margin-desktop: 8px;
+    --mdc-layout-grid-margin-tablet: 8px;
+    --mdc-layout-grid-margin-phone: 8px;
+
     align-self: flex-start;
 
-    .mdc-card__primary {
+    p {
+        line-height: 1.618em;
+        font-weight: 400;
+        font-size: 1.1em;
+        word-spacing: 1px;
+    }
+
+    .card-head {
         position: relative;
-
-        .mdc-icon-toggle {
-            position: absolute;
-            top: 4px;
-            right: 4px;
-        }
+        padding: 2px 16px;
+        background: rgba(0,0,0,0.1);
+        padding-right: 32px;
     }
 
-    .mdc-form-field {
-        display: flex;
-        flex-flow: row wrap;
-
-        > label {
-            display: block;
-            flex: 1 1 auto;
-
-            span {
-                color: inherit;
-            }
-        }
-
-        > select {
-            flex: 1 1 180px;
-            max-width: 180px;
-        }
+    .card-body {
+        padding: 8px;
     }
 
-    .mdc-form-field.double-select {
-        > select {
-            flex:  0 1 86px;
-        }
-        > select:last-of-type {
-            margin-left: 8px;
-        }
+    .mdc-icon-toggle {
+        position: absolute;
+        top: 4px;
+        right: 4px;
+
+        @include mdc-icon-toggle-ink-color($mdc-theme-secondary);
+        @include mdc-states-base-color($mdc-theme-secondary);
+        @include mdc-states-hover-opacity(.09);
+        @include mdc-states-focus-opacity(.05);
+        @include mdc-states-press-opacity(.25);
     }
 
     #char-build-info-1, #char-build-info-2 {
         margin-bottom: 12px;
     }
 
-    .stat-info {
-        border-top: 1px solid rgba(#fff, 0.12);
-    }
     .mdc-typography--caption {
         text-align: center;
         margin-bottom: 0;
     }
+
 
     .stat-container {
         display: flex;
         flex-flow: row wrap;
         justify-content: center;
 
-        > div.mdc-textfield {
+        .mdc-text-field {
             flex: 1 1 20px;
-            max-width: 19%;
-            margin: 4px;
-
-            .mdc-textfield__input {
-                width: 100%;
-            }
+            margin: 8px;
         }
     }
 }
 
+/*
+ * Mode Switcher
+ */
+
+#modes {
+    .mdc-form-field {
+        display: inline-flex;
+    }
+}
+
+.stat-info {
+    border-top: 1px solid rgba(#fff, 0.12);
+}
+
+/*
+ * Character Panel
+ */
+
+.disabled {
+    -webkit-filter: grayscale(100%);
+    filter: greyscale(100%);
+}
+
 div#char-panel {
+
     max-width: 123ch;
 
     div.char-info, div#matchup-overrides {
-
-        .mdc-card {
-            max-width: 60ch;
-            min-width: 330px;
-            align-self: center;
-        }
 
         .mdc-tab-bar {
             border-top: 1px solid rgba(#fff, 0.12);
@@ -205,7 +289,7 @@ div#char-panel {
         }
 
         .char-tab-selected {
-            border: solid 1px $mdc-theme-accent;
+            border: solid 1px $mdc-theme-secondary;
             background-size: cover;
             vertical-align: middle;
             border-radius: 50%;
@@ -245,6 +329,35 @@ div#char-panel {
 
 }
 
+
+.open-in-new {
+    position: relative;
+}
+
+.open-in-new i {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.open-in-new:hover {
+    border-color: rgba(#fff,.3);
+    opacity: 0.7;
+}
+
+.open-in-new:hover i {
+    color: $text-color;
+    font-size: 36px;
+    display: block;
+    pointer-events: none;
+}
+
+/*
+ * Matchup Table
+ */
 div#matchup-display {
     border-color: $text-color;
 }
@@ -252,6 +365,7 @@ div#matchup-display {
 #matchup-buttons {
     display: none;
 }
+
 #matchup-filters {
 
     section {
@@ -287,6 +401,7 @@ div#matchup-display {
 #matchup-table-container {
     margin: 0;
     padding: 0;
+
     #matchup-table {
         margin: 16px 0;
         width: 100%;
@@ -302,7 +417,7 @@ div#matchup-display {
 
         th {
             padding: 2px 0.3em;
-            color: $mdc-theme-accent;
+            color: $mdc-theme-secondary;
             border: 1px solid #6c6c6c;
         }
 
@@ -322,6 +437,31 @@ div#matchup-display {
 }
 
 
+#matchup-overview {
+    display: block;
+    margin-bottom: 0.8em;
+    text-align: center;
+    font-weight: bold;
+}
+
+#override-msg {
+    margin: 0;
+    line-height: 130%;
+    white-space: normal;
+    font-style: italic;
+    color: #5b5b5b;
+    text-align: center;
+    padding-top: 0.5em;
+}
+
+.compare-icon {
+    display: inline;
+    vertical-align: middle;
+}
+
+/*
+ * 1v1 Panel
+ */
 #single-combat {
     display: flex;
     flex-flow: row wrap;
@@ -352,7 +492,6 @@ img#portrait-1, img#portrait-2 {
     width: 75px;
     height: 75px;
 }
-
 
 .battle-interaction, .battle-interaction-final {
     padding: 0.6em 0em;
@@ -391,51 +530,6 @@ img#portrait-1, img#portrait-2 {
     color: $cool-red;
 }
 
-#matchup-overview {
-    display: block;
-    margin-bottom: 0.8em;
-    text-align: center;
-    font-weight: bold;
-}
-
-#override-msg {
-    margin: 0;
-    line-height: 130%;
-    white-space: normal;
-    font-style: italic;
-    color: #5b5b5b;
-    text-align: center;
-    padding-top: 0.5em;
-}
-
-section#credits {
-    flex: 1 1 320px;
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 24px;
-    background: none;
-}
-
-div#import-export {
-
-    .mdc-card__media {
-        padding: 16px;
-        margin: 0;
-    }
-
-    textarea {
-        background: rgba(#000, 0.1);
-        width: 100%;
-        min-height: 12em;
-    }
-}
-section#reddit-markdown {
-    width: 100%;
-    margin: 8px;
-    padding: 8px;
-    display: none;
-}
-
 .attacker {
     color: $cool-teal;
 }
@@ -448,49 +542,54 @@ section#reddit-markdown {
     color: #fff;
 }
 
-.open-in-new {
-    position: relative;
+/*
+ * Credits
+ */
+section#credits {
+    flex: 1 1 320px;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 24px;
+    background: none;
 }
 
-.compare-icon {
-    display: inline;
-    vertical-align: middle;
-}
-
-.open-in-new i {
+/*
+ * Reddit
+ */
+section#reddit-markdown {
+    width: 100%;
+    margin: 8px;
+    padding: 8px;
     display: none;
-    position: absolute;
-    z-index: 1;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
 }
 
-.open-in-new:hover {
-    border-color: rgba(#fff,.3);
-    opacity: 0.7;
+
+/*
+ * Floating action button
+ */
+.app-fab--absolute {
+    background-position: center;
 }
 
-.open-in-new:hover i {
-    color: $text-color;
-    font-size: 36px;
-    display: block;
-    pointer-events: none;
+.app-fab--absolute.app-fab--absolute {
+  position: fixed;
+  z-index: 2;
+  bottom: 1rem;
+  right: 1rem;
 }
 
-/* Mobile Specific Style */
-@media (min-width: 480px) and (max-width: 700px), (max-width: 380px) {
-    div#char-panel > div.char-info > .mdc-card {
-        min-width: 260px;
-    }
+@media(min-width: 1024px) {
+   .app-fab--absolute.app-fab--absolute {
+    bottom: 1.5rem;
+    right: 1.5rem;
+  }
+}
 
-    .tab-panel.build-fields {
-        .mdc-form-field {
-            justify-content: center;
-        }
+/*
+ * Asset Loading
+ */
 
-        .mdc-form-field > label {
-            display: none;
-        }
-    }
+body::after {
+    display: none;
+    content: url(/images/damage-calc/swap-hover.png) url(/images/damage-calc/Portraits/Unselected-hover.png);
 }

@@ -5,9 +5,9 @@ function checkAffinity(mod, attacker, defender) {
     var defAdept = 0;
 
     // A better hero engine would really help here to not do this horrible line
-    atkAdept=Math.min(CheckTriAdvPerPossibility(attacker, defender, mod, attacker.passiveAData), CheckTriAdvPerPossibility(attacker, defender, mod, attacker.weaponData));
+    atkAdept = Math.min(CheckTriAdvPerPossibility(attacker, defender, mod, attacker.passiveAData), CheckTriAdvPerPossibility(attacker, defender, mod, attacker.weaponData));
     // The "2-" part is required to change the disequation from < to > (mod <1 "->" 2-mod<1 "->" -mod<-1 "->" mod>1)
-    defAdept=Math.min(CheckTriAdvPerPossibility(defender, attacker, 2-mod, defender.passiveAData), CheckTriAdvPerPossibility(defender, attacker, 2-mod, defender.weaponData));
+    defAdept = Math.min(CheckTriAdvPerPossibility(defender, attacker, 2-mod, defender.passiveAData), CheckTriAdvPerPossibility(defender, attacker, 2-mod, defender.weaponData));
 
     return Math.min(atkAdept,defAdept);
 }

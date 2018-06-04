@@ -43,7 +43,7 @@ After you have installed both, you can install the project dependencies (node_mo
 1) Open a command prompt or terminal
 2) Navigate to the project root
 3) Start the test app
-> node test-app.js
+> npm start
 
 4) Open a browser window and navigate to locahost:3000
 5) Refresh the page when you make client changes; Restart the app for changes to the
@@ -63,14 +63,14 @@ people to jump in and contribute.
 your change there.
 2) Stop and restart the test application
 > ctrl + C
-> node test-app.js
+> npm start
 
 ### Creating
 1) Find the relevant directory under /data to add new data and create a new json
 file using a [url slug](https://en.wikipedia.org/wiki/Clean_URL#Slug) naming convention.
 2) Stop and restart the test application
 > ctrl + C
-> node test-app.js
+> npm start
 
 ## Images
 Images are currently hosted on https://kagerochart.com. There are gigs of images,
