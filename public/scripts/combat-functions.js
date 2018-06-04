@@ -218,7 +218,7 @@ function canPreventEnemyCounter(container, hp, currHP) {
 
 
 //Checks the follows (Brash, Riposte, follow-up, fighters & breakers) and if the agent has wary fighter or sweep ability
-function Follow(char, attacker, othWeapon, CanCounter, battleInfo) {
+function Follow(char, attacker, othWeapon, othColor, CanCounter, battleInfo) {
     var doubling=1;
     for (var i = 0; i < checks.length; i++) {
         var bfup=char[checks[i]].attack_follow_up;
@@ -226,7 +226,7 @@ function Follow(char, attacker, othWeapon, CanCounter, battleInfo) {
             bfup=char[checks[i]].defense_follow_up;
         if (bfup) {
             if ((!bfup.hasOwnProperty("threshold")) || (bfup.trigger==='healthy' && char.initHP >= roundNum(bfup.threshold * char.hp, true)) || (bfup.trigger==='damaged' && char.initHP <= roundNum(bfup.threshold * char.hp, true))) { //hp check for all of them
-                if((!bfup.hasOwnProperty("weapon_type")) || (bfup.weapon_type.includes(othWeapon))){ //breaker check
+                if((!bfup.hasOwnProperty("weapon_type")) || (bfup.weapon_type.includes(othWeapon) && (othWeapon !== 'Bow' || othColor === 'Colorless'))){ //breaker check
                     if((!bfup.hasOwnProperty("counterable")) || (CanCounter)) { //brash check
                         if((!bfup.hasOwnProperty("adjacent_dependant")) || char.adjacent == 0) {
                             doubling++;
@@ -274,7 +274,7 @@ function Prevent(char, agent, ageWeapon, battleInfo, attacker)
             //healthy (Breakers and Wary fighter) and stat_to_check (Myrrh)
             if ((!prev.hasOwnProperty("stat_to_check")) || (ReturnStat(char, prev.stat_to_check) >= ReturnStat(agent, prev.stat_to_check)+ prev.stat_amount)) {
                 if((!prev.hasOwnProperty("threshold")) || char.initHP >= roundNum(prev.threshold * char.hp, true)) {
-                    if((!prev.hasOwnProperty("weapon_type")) || (prev.weapon_type.includes(ageWeapon))){
+                    if((!prev.hasOwnProperty("weapon_type")) || (prev.weapon_type.includes(ageWeapon) && (ageWeapon !== 'Bow' || agent.color === 'Colorless'))){
                         prevention+=1;
                         battleInfo.logMsg+= "<li class='battle-interaction'><span class='" + char.agentClass + "'>" + char.display + "</span>'s " + char[checks[i]].name + " activated, decreasing <span class='" + agent.agentClass + "'>" + agent.display +"</span>'s ability to follow-up!</li>";
                     }
@@ -339,21 +339,21 @@ function firstDmgReduction(char, enemy) {
 }
 
 //Bonus for adjacency to allies
-function adjacentStatBonus(battleInfo, char, charToUse) {
+function adjacentStatBonus(battleInfo, char, charToUse, initiator) {
     checks.forEach(function(key) {
         var bonus = char[key].adjacent_stat_bonus
         if (!bonus) {
             return;
         }
 
-        if (char.adjacent < 1) {
+        if (char.adjacent < 1 || (bonus.hasOwnProperty("needed") && bonus.needed > char.adjacent) || (bonus.hasOwnProperty("en_phase") && initiator)) {
             return;
         }
 
         if (bonus.target === 'self' && bonus.adjacent === 'ally') {
             for (b in bonus.mod) {
                 battleInfo[charToUse][b] += bonus.mod[b];
-                    battleInfo.logMsg += "<li class='battle-interaction'><span class='" + charToUse + "'><strong>" + battleInfo[charToUse].display + "</strong></span> raises " + b + " by " + bonus.mod[b] + "</li>";
+                    battleInfo.logMsg += "<li class='battle-interaction'><span class='" + charToUse + "'>" + battleInfo[charToUse].display + "</span> raises " + b + " by " + bonus.mod[b] + " [" + char[key].name + "].</li>";
             };
         }
     })
@@ -415,7 +415,7 @@ function hardy_bearing_msg(battleInfo, agent) {
 }
 
 //This is redundant, separating this makes it easier to maintain
-function giveBonuses(battleInfo, agent, other){
+function giveBonuses(battleInfo, agent, other, initiator){
 
     // below hp threshold bonus
     if (agent.weaponData.hasOwnProperty("below_threshold_mod") && agent.initHP <= checkRoundError(agent.weaponData.below_threshold_mod.threshold * agent.hp)) {
@@ -458,7 +458,7 @@ function giveBonuses(battleInfo, agent, other){
     }
 
     //adjacent stat bonus
-    adjacentStatBonus(battleInfo, agent, agent.agentClass);
+    battleInfo=adjacentStatBonus(battleInfo, agent, agent.agentClass, initiator);
 
     return battleInfo;
 }

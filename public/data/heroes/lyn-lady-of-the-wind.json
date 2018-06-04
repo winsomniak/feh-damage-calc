@@ -1,0 +1,51 @@
+{
+    "display": "Lyn, Lady of the Wind",
+    "name": "Lyn",
+    "title": "Lady of the Wind",
+    "id": "lyn-lady-of-the-wind",
+    "color": "Green",
+    "weapon_type": "Green Bow",
+    "legendary":true,
+    "link": "https://kagerochart.com/hero/lyn-lady-of-the-wind",
+    "move_type": "Infantry",
+    "weapon": [
+        "swift-mulagir",
+        "silver-bow",
+        "steel-bow",
+        "iron-bow"
+    ],
+    "assist": [
+        "rally-defense-resistance",
+        "rally-defense"
+    ],
+    "passive_a": [
+        "laws-of-sacae"
+    ],
+    "passive_b": [
+        "desperation-3",
+        "desperation-2",
+        "desperation-1"
+    ],
+    "passive_c": [
+        "spd-tactic-3",
+        "spd-tactic-2",
+        "spd-tactic-1"
+    ],
+    "base_stat": {
+        "star_5": {
+            "hp": 17,
+            "atk": 9,
+            "spd": 10,
+            "def": 4,
+            "res": 5
+        },
+        "growth": {
+            "hp": 5,
+            "atk": 6,
+            "spd": 8,
+            "def": 4,
+            "res": 6,
+            "total": 29
+        }
+    }
+}

@@ -130,6 +130,9 @@ function isInheritableWeapon(weapon, charName) {
     if (weaponType.indexOf("Breath") !== -1) {
         weaponType = "Breath";
     }
+    if (weaponType.indexOf("Bow") !== -1) {
+        weaponType = "Bow";
+    }
 
     return !weapon.char_unique && weapon.type === weaponType;
 }
@@ -1901,20 +1904,20 @@ function simBattle(battleInfo, displayMsg) {
     // ATTACKER BONUSES
     battleInfo= checkMods(battleInfo, attacker, defender, "initiate_mod", "attacker", "by initiating combat", " against");
 
-    battleInfo = giveBonuses(battleInfo, attacker, defender);
+    battleInfo = giveBonuses(battleInfo, attacker, defender, true);
 
     //DEFENDER BONUSES
     battleInfo= checkMods(battleInfo, defender, attacker, "defend_mod", "defender", "by getting attacked", " by");
 
-    battleInfo = giveBonuses(battleInfo, defender, attacker);
+    battleInfo = giveBonuses(battleInfo, defender, attacker, false);
 
     // can defender counter
     var defCC = defCanCounter(battleInfo);
     var defAttacks = false;
 
     //New follow-up logic
-    battleInfo = Follow(attacker, true, defender.weaponData.type, defCC, battleInfo);
-    battleInfo = Follow(defender, false, attacker.weaponData.type, true, battleInfo);
+    battleInfo = Follow(attacker, true, defender.weaponData.type, defender.color, defCC, battleInfo);
+    battleInfo = Follow(defender, false, attacker.weaponData.type, attacker.color, true, battleInfo);
 
     battleInfo = Prevent(attacker, defender, defender.weaponData.type, battleInfo, true);
     battleInfo = Prevent(defender, attacker, attacker.weaponData.type, battleInfo, false);

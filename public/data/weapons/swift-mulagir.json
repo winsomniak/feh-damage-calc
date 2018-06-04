@@ -1,0 +1,26 @@
+{
+    "name": "Swift Mulagir",
+    "might": 14,
+    "range": 2,
+    "sp": 400,
+    "description": "Effective against flying foes. Grants Res+3. If the number of allies within 2 spaces (excluding unit) > the number of foes within 2 spaces (excluding target), grants Atk/Spd+5 during combat.",
+    "type": "Bow",
+    "link": "https://kagerochart.com/hero/weapons/swift-mulagir",
+    "magical": false,
+    "stat_mod": {
+        "res": 3
+    },
+    "adjacent_stat_bonus": {
+        "target": "self",
+        "adjacent": "ally",
+        "mod": {
+            "atk": 5,
+            "spd": 5
+        }
+    },
+    "move_effective": [
+        "Flying"
+    ],
+    "char_unique": true,
+    "id": "swift-mulagir"
+}
