@@ -11,6 +11,20 @@
     "initiate_mod": {
         "spd": 4
     },
+    "refinable": {
+        "type": "melee",
+        "Special": "Yato",
+        "description": "Grants Atk/Spd/Def/Res+2.",
+        "remove":{
+            "initiate_mod":true
+        },
+        "stat_mod": {
+            "atk":2,
+            "spd":2,
+            "def":2,
+            "res":2
+        }
+    },
     "char_unique": true,
     "id": "yato"
 }

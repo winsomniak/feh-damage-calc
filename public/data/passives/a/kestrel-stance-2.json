@@ -1,0 +1,13 @@
+{
+    "name": "Kestrel Stance 2",
+    "sp": 240,
+    "type": "A",
+    "description": "Grants Atk/Spd+4 during combat when this unit is attacked.",
+    "icon": "/images/icons/passives/kestrel-stance-2.png",
+    "defend_mod": {
+        "atk": 4,
+        "spd": 4
+    },
+    "link": "https://kagerochart.com/hero/passives/kestrel-stance-2",
+    "id": "kestrel-stance-2"
+}

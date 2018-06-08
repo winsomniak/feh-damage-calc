@@ -1,0 +1,8 @@
+{
+    "name": "Live to Serve 2",
+    "sp": 80,
+    "type": "s",
+    "description": "When healing allies with a staff, unit also recovers 75% of the HP restored.",
+    "icon": "/images/icons/passives/live-to-serve-2.png",
+    "id": "live-to-serve-2"
+}

@@ -12,5 +12,11 @@
         "Flying"
     ],
     "char_unique": true,
+    "refinable":{
+        "type":"ranged",
+        "Special":"Excalibur",
+        "spec_cooldown_mod": -1,
+        "description": "Effective against flying units. Accelerates Special trigger (cooldown count-1)."
+    },
     "id": "excalibur"
 }

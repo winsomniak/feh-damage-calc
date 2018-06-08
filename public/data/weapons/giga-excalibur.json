@@ -1,0 +1,22 @@
+{
+    "name": "Giga Excalibur",
+    "might": 14,
+    "range": 2,
+    "sp": 400,
+    "description": "Grants Spd+3. If unit's Spd > foe's Spd, boosts damage dealt by 70% of difference between stats. (Maximum bonus of +7 damage. Combos with Phantom Spd.)",
+    "type": "Green Tome",
+    "link": "https://kagerochart.com/hero/weapons/giga-excalibur",
+    "color": "Green",
+	"stat_mod": {
+		"spd": 3
+	},
+    "magical": true,
+    "boost_by_difference":{
+        "stat": "spd",
+        "type": "positive",
+        "multiplier": 0.7,
+        "maximum": 7
+    },
+    "id": "giga-excalibur",
+    "char_unique": true
+}

@@ -1,0 +1,52 @@
+{
+    "display": "Nino, Pale Flower",
+    "name": "Nino",
+    "title": "Pale Flower",
+    "id": "nino-pale-flower",
+    "color": "Green",
+    "weapon_type": "Green Tome",
+    "link": "https://kagerochart.com/hero/nino-pale-flower",
+    "move_type": "Flying",
+    "weapon": [
+        "giga-excalibur",
+        "rexcalibur",
+        "elwind",
+        "wind"
+    ],
+    "special": [
+        "moonbow",
+        "new-moon"
+    ],
+    "passive_a": [
+        "swift-sparrow-2",
+        "swift-sparrow-1",
+        "death-blow-1"
+    ],
+    "passive_b": [
+        "aerobatics-3",
+        "aerobatics-2",
+        "aerobatics-1"
+    ],
+    "passive_c": [
+        "spd-smoke-3",
+        "spd-smoke-2",
+        "spd-smoke-1"
+    ],
+    "base_stat": {
+        "star_5": {
+            "hp": 17,
+            "atk": 7,
+            "spd": 10,
+            "def": 4,
+            "res": 6
+        },
+        "growth": {
+            "hp": 5,
+            "atk": 8,
+            "spd": 9,
+            "def": 2,
+            "res": 5,
+            "total": 29
+        }
+    }
+}

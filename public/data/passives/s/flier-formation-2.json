@@ -1,0 +1,8 @@
+{
+    "description": "If unit has ≥50% HP, unit can move to a space adjacent to a flying ally within 2 spaces.",
+    "id": "flier-formation-2",
+    "name": "Flier Formation 2",
+    "sp": 120,
+    "move_unique": "Flying",
+    "type": "s"
+}

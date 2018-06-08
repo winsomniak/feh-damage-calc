@@ -1,0 +1,7 @@
+{
+    "description": "After combat, inflicts Spd-3 on foes within 2 spaces of target through their next actions.",
+    "id": "spd-smoke-1",
+    "name": "Spd Smoke 1",
+    "sp": 60,
+    "type": "s"
+}

@@ -1,0 +1,52 @@
+{
+    "display": "Ishtar, Thunder Goddess",
+    "name": "Ishtar",
+    "title": "Thunder Goddess",
+    "id": "ishtar-thunder-goddess",
+    "color": "Blue",
+    "weapon_type": "Blue Tome",
+    "link": "https://kagerochart.com/hero/ishtar-thunder-goddess",
+    "move_type": "Infantry",
+    "weapon": [
+        "mjolnir",
+        "thoron",
+        "elthunder",
+        "thunder"
+    ],
+    "special": [
+        "moonbow",
+        "new-moon"
+    ],
+    "passive_a": [
+        "swift-sparrow-2",
+        "swift-sparrow-1",
+        "darting-blow-1"
+    ],
+    "passive_b": [
+        "vantage-3",
+        "vantage-2",
+        "vantage-1"
+    ],
+    "passive_c": [
+        "odd-atk-wave-3",
+        "odd-atk-wave-2",
+        "odd-atk-wave-1"
+    ],
+    "base_stat": {
+        "star_5": {
+            "hp": 16,
+            "atk": 8,
+            "spd": 10,
+            "def": 4,
+            "res": 7
+        },
+        "growth": {
+            "hp": 6,
+            "atk": 8,
+            "spd": 8,
+            "def": 2,
+            "res": 5,
+            "total": 29
+        }
+    }
+}

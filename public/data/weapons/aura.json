@@ -9,5 +9,10 @@
     "color": "Blue",
     "magical": true,
     "char_unique": true,
+    "refinable":{
+        "type":"ranged",
+        "Special":"Excalibur",
+        "description": "At start of turn, grants Atk+6 to adjacent magic and staff allies for 1 turn."
+    },
     "id": "aura"
 }

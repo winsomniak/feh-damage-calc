@@ -1,0 +1,8 @@
+{
+    "description": "Unit can move to a space adjacent to a flying ally within 2 spaces.",
+    "id": "flier-formation-3",
+    "name": "Flier Formation 3",
+    "move_unique": "Flying",
+    "sp": 240,
+    "type": "s"
+}

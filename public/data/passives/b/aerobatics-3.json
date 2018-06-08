@@ -1,0 +1,9 @@
+{
+    "name": "Aerobatics 3",
+    "sp": 240,
+    "type": "B",
+    "description": "Unit can move to a space adjacent to any infantry, armored, or cavalry ally within 2 spaces.",
+    "icon": "/images/icons/passives/aerobatics-3.png",
+    "link": "https://kagerochart.com/hero/passives/aerobatics-3",
+    "id": "aerobatics-3"
+}

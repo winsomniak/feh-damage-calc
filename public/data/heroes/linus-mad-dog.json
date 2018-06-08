@@ -1,0 +1,48 @@
+{
+    "display": "Linus, Mad Dog",
+    "name": "Linus",
+    "title": "Mad Dog",
+    "id": "linus-mad-dog",
+    "color": "Green",
+    "weapon_type": "Axe",
+    "link": "https://kagerochart.com/hero/linus-mad-dog",
+    "move_type": "Infantry",
+    "LowestRarity":3,
+    "weapon": [
+        "basilikos",
+        "silver-axe",
+        "steel-axe",
+        "iron-axe"
+    ],
+    "special": [
+        "luna",
+        "new-moon"
+    ],
+    "passive_a": [
+        "brazen-atk-spd-3",
+        "brazen-atk-spd-2",
+        "brazen-atk-spd-1"
+    ],
+    "passive_c": [
+        "drive-def-2",
+        "drive-def-1",
+        "spur-def-1"
+    ],
+    "base_stat": {
+        "star_5": {
+            "hp": 19,
+            "atk": 9,
+            "spd": 9,
+            "def": 8,
+            "res": 4
+        },
+        "growth": {
+            "hp": 7,
+            "atk": 9,
+            "spd": 7,
+            "def": 7,
+            "res": 3,
+            "total": 33
+        }
+    }
+}

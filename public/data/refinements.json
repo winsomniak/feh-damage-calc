@@ -72,8 +72,22 @@
             },
             "description":" Grants Atk/Spd+5. Inflicts Def/Res-5."
         },
+        "Breath of Fog":{
+            "stat_mod":{
+                "hp":3
+            },
+            "description":" If unit is within 2 spaces of a sword or dragon ally, grants Atk/Def+5 during combat.",
+            "adjacent_stat_bonus": {
+                "target": "self",
+                "adjacent": "ally",
+                "mod": {
+                    "atk": 5,
+                    "def": 5
+                }
+            }
+        },
         "Brynhildr":{
-            "description":"If foe uses bow, dagger, magic, or staff and unit's Def ≥ foe's Def+1, foe cannot make a follow-up attack.",
+            "description":" If foe uses bow, dagger, magic, or staff and unit's Def ≥ foe's Def+1, foe cannot make a follow-up attack.",
             "other_prevent_follow":
             {
                 "stat_to_check":"def",
@@ -124,11 +138,24 @@
             "stat_mod":{
                 "hp":3
             },
-            "description":"During combat, grants bonus to Atk/Spd/Def/Res = highest bonus on allies within 2 spaces. Each stat bonus calculated independently."
+            "description":" During combat, grants bonus to Atk/Spd/Def/Res = highest bonus on allies within 2 spaces. Each stat bonus calculated independently."
         },
         "Wind's Brand":{
-            "description":"During combat, boosts Atk/Spd/Def/Res by number of adjacent allies × 2.",
+            "description":" During combat, boosts Atk/Spd/Def/Res by number of adjacent allies × 2.",
             "adjacent_ally_bonus": true
+        },
+        "Yato":{
+            "stat_mod":{
+                "hp":3
+            },
+            "description":" If unit is within 2 spaces of support partner, grants Atk/Spd/Def/Res+4 to that ally during combat."
+        },
+        "Camilla's Axe":
+        {
+            "stat_mod":{
+                "hp":3
+            },
+            "description":" Grants Atk/Spd+3 to cavalry and flying allies within 2 spaces during combat."
         },
         "Deathly Dagger":{
            "prevent_weapon_counter": {
@@ -159,6 +186,17 @@
                 "stat_mod": {
                     "def": 6,
                     "res": 6
+                }
+            }
+        },
+        "Excalibur":{
+            "description":" If unit is within 2 spaces of a magic or staff ally, grants Atk/Spd+5 during combat.",
+            "adjacent_stat_bonus": {
+                "target": "self",
+                "adjacent": "ally",
+                "mod": {
+                    "atk": 5,
+                    "spd": 5
                 }
             }
         },
@@ -206,7 +244,7 @@
         },
         "Forblaze":
         {
-            "description": "Grants Atk+6 during combat if unit initiates the attack.",
+            "description": " Grants Atk+6 during combat if unit initiates the attack.",
             "initiate_mod": {
                 "atk": 6
             }

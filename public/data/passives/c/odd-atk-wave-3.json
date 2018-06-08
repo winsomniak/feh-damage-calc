@@ -1,0 +1,9 @@
+{
+    "name": "Odd Atk Wave 3",
+    "sp": 240,
+    "type": "C",
+    "description": "At start of odd-numbered turns, grants Atk+6 to unit and adjacent allies for 1 turn. (Bonus granted to unit even if no allies are adjacent.)",
+    "icon": "/images/icons/passives/odd-atk-wave-3.png",
+    "link": "https://kagerochart.com/hero/passives/odd-atk-wave-3",
+    "id": "odd-atk-wave-3"
+}

@@ -1,0 +1,11 @@
+{
+    "name": "Bushido",
+    "sp": 300,
+    "type": "B",
+    "description": "Deals +10 damage when Special triggers.",
+    "icon": "/images/icons/passives/bushido.png",
+    "spec_damage_bonus": 10,
+    "link": "https://kagerochart.com/hero/passives/bushido",
+    "char_unique": true,
+    "id": "bushido"
+}

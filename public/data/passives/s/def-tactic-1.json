@@ -1,0 +1,7 @@
+{
+    "name": "Def Tactic 1",
+    "sp": 60,
+    "type": "s",
+    "description": "At start of turn, grants Def+2 to allies within 2 spaces for 1 turn. Granted only if number of that ally's movement type on current team ≤ 2.",
+    "id": "def-tactic-1"
+}

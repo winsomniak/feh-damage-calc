@@ -556,6 +556,16 @@ function applyStatModsRef(stats, refinement, type, weapon) {
                 }
             }
         }
+        if (weapon.refinable.hasOwnProperty("stat_mod")) {
+            for (var key in weapon.refinable.stat_mod) {
+                stats[key] += weapon.refinable.stat_mod[key];
+                if (stats[key] < 0) {
+                    stats[key] = 0;
+                } else if (stats[key] > 99) {
+                    stats[key] = 99;
+                }
+            }
+        }
     }
     return stats;
 }
@@ -847,12 +857,25 @@ function bladeTomeBonus(battleInfo, bonusAtk, charToUse, source) {
 // handles bonus from -owl tomes
 // battleInfo contains all battle information, adjacent is the number of adjacent allies, charToUse is either "attacker" or "defender"
 function owlTomeBonus(battleInfo, adjacent, charToUse) {
-    battleInfo[charToUse].atk += adjacent * 2;
-    battleInfo[charToUse].spd += adjacent * 2;
-    battleInfo[charToUse].def += adjacent * 2;
-    battleInfo[charToUse].res += adjacent * 2;
-    battleInfo.logMsg += "<li class='battle-interaction'><span class='" + charToUse + "'>" + battleInfo[charToUse].display + "</span> raises attack, speed, defense and resistance by " + (adjacent * 2).toString() + " [" + battleInfo[charToUse].weaponData.name + "].</li>";
-    return battleInfo;
+    var times = 2;
+	if(battleInfo[charToUse].weaponData.adjacent_ally_bonus.hasOwnProperty("maximum") && adjacent > battleInfo[charToUse].weaponData.adjacent_ally_bonus.maximum)
+        adjacent=battleInfo[charToUse].weaponData.adjacent_ally_bonus.maximum;
+	if(battleInfo[charToUse].weaponData.adjacent_ally_bonus.hasOwnProperty("times"))
+        times=battleInfo[charToUse].weaponData.adjacent_ally_bonus.times;
+    if(!battleInfo[charToUse].weaponData.adjacent_ally_bonus.hasOwnProperty("stat_mod")) {
+        battleInfo[charToUse].atk += adjacent * times;
+        battleInfo[charToUse].spd += adjacent * times;
+        battleInfo[charToUse].def += adjacent * times;
+        battleInfo[charToUse].res += adjacent * times;
+        battleInfo.logMsg += "<li class='battle-interaction'><span class='" + charToUse + "'>" + battleInfo[charToUse].display + "</span> raises attack, speed, defense and resistance by " + (adjacent * 2).toString() + " [" + battleInfo[charToUse].weaponData.name + "].</li>";
+        return battleInfo;
+    }
+	var statistics = battleInfo[charToUse].weaponData.adjacent_ally_bonus.stat_mod;
+	statistics.forEach(function(key) {
+		battleInfo[charToUse][key] += adjacent * times;
+        battleInfo.logMsg += "<li class='battle-interaction'><span class='" + charToUse + "'>" + battleInfo[charToUse].display + "</span> raises " + key + " by " + (adjacent * 2).toString() + " [" + battleInfo[charToUse].weaponData.name + "].</li>";
+	});
+	return battleInfo;
 }
 
 // applies a seal effect
@@ -1401,9 +1424,12 @@ function singleCombat(battleInfo, initiator, logIntro, brave) {
     }
 
     // super effectiveness against weapon types
-    if (attacker.weaponData.hasOwnProperty("weapon_effective") && attacker.weaponData.weapon_effective.includes(weaponInfo[defender.weaponName].type)) {
+    battleInfo.eff="";
+    battleInfo.isEff=false;
+    battleInfo=isEffective(attacker, defender, battleInfo);
+    if (battleInfo.isEff) {
         atkPower = roundNum(atkPower * 1.5, false);
-        battleInfo.logMsg += "Effectiveness against " + defender.weaponData.type + " boosts attack by 50% [" + weaponInfo[attacker.weaponName].name + "]. ";
+        battleInfo.logMsg += "Effectiveness against " + battleInfo.eff + " boosts attack by 50% [" + weaponInfo[attacker.weaponName].name + "]. ";
     }
 
     // triangle advantage attack modifier
@@ -1549,6 +1575,20 @@ function singleCombat(battleInfo, initiator, logIntro, brave) {
         if(phantomStat(defender, attacker.weaponData.dmg_comp.great) - phantomStat(defender, attacker.weaponData.dmg_comp.low) >= attacker.weaponData.dmg_comp.quantity){
             dmg += attacker.weaponData.dmg_comp.dmg;
             battleInfo.logMsg += "Damage boosted by " + attacker.weaponData.dmg_comp.dmg.toString() + " [" + attacker.weaponData.name + "]. ";
+        }
+    }
+
+    //Light Brand's check
+    if(attacker.weaponData.hasOwnProperty("boost_by_difference"))
+    {
+        var result;
+        if(attacker.weaponData.boost_by_difference.type === "positive")
+            result= phantomStat(attacker, attacker.weaponData.boost_by_difference.stat) - phantomStat(defender, attacker.weaponData.boost_by_difference.stat);
+        else
+            result= phantomStat(defender, attacker.weaponData.boost_by_difference.stat) - phantomStat(attacker, attacker.weaponData.boost_by_difference.stat);
+        if(result>0) {
+            dmg += roundNum(Math.min(result * attacker.weaponData.boost_by_difference.multiplier, attacker.weaponData.boost_by_difference.maximum), false);
+            battleInfo.logMsg += "Damage boosted by " + roundNum(Math.min(result * attacker.weaponData.boost_by_difference.multiplier, attacker.weaponData.boost_by_difference.maximum), false).toString() + " [" + attacker.weaponData.name + "]. ";
         }
     }
 
