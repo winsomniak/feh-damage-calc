@@ -1,0 +1,51 @@
+{
+    "display": "Ryoma, Supreme Samurai",
+    "name": "Ryoma",
+    "title": "Supreme Samurai",
+    "id": "ryoma-supreme-samurai",
+    "color": "Red",
+    "weapon_type": "Sword",
+    "link": "https://kagerochart.com/hero/ryoma-supreme-samurai",
+    "move_type": "Flying",
+    "legendary": true,
+    "weapon": [
+        "raijinto",
+        "silver-sword",
+        "steel-sword",
+        "iron-sword"
+    ],
+    "special": [
+        "glimmer",
+        "night-sky"
+    ],
+    "passive_a": [
+        "kestrel-stance-2",
+        "kestrel-stance-1",
+        "fierce-stance-1"
+    ],
+    "passive_b": [
+        "bushido"
+    ],
+    "passive_c": [
+        "guidance-3",
+        "guidance-2",
+        "guidance-1"
+    ],
+    "base_stat": {
+        "star_5": {
+            "hp": 17,
+            "atk": 8,
+            "spd": 11,
+            "def": 6,
+            "res": 5
+        },
+        "growth": {
+            "hp": 7,
+            "atk": 8,
+            "spd": 9,
+            "def": 6,
+            "res": 3,
+            "total": 33
+        }
+    }
+}

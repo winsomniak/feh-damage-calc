@@ -1,0 +1,14 @@
+{
+    "name": "Seal Def Res 2",
+    "sp": 200,
+    "type": "B",
+    "description": "After combat, foe suffers Def/Res-5 through its next action.",
+    "icon": "/images/icons/passives/seal-def-res-2.png",
+    "seal": {
+        "def": -5,
+        "res": -5
+    },
+    "weapon_restrict": "Staff",
+    "link": "https://kagerochart.com/hero/passives/seal-def-res-2",
+    "id": "seal-def-res-2"
+}

@@ -1,0 +1,21 @@
+{
+    "name": "Rhomphaia",
+    "might": 16,
+    "range": 1,
+    "sp": 400,
+    "description": "Effective against armored and cavalry foes.",
+    "type": "Lance",
+    "link": "https://kagerochart.com/hero/weapons/rhomphaia",
+    "color": "Blue",
+    "magical": false,
+    "char_unique": true,
+    "move_effective": [
+        "Armored",
+        "Cavalry"
+    ],
+    "refinable":{
+        "type":"melee",
+        "Special":"Wing Sword"
+    },
+    "id": "rhomphaia"
+}

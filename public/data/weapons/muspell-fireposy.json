@@ -1,0 +1,24 @@
+{
+    "name": "Múspell Fireposy",
+    "might": 14,
+    "range": 2,
+    "sp": 400,
+    "description": "Grants Spd+3. During combat, boosts unit's Atk/Spd by number of allies within 2 spaces × 2. (Maximum bonus of +6 to each stat.)",
+    "type": "Red Tome",
+    "link": "https://kagerochart.com/hero/weapons/muspell-fireposy",
+    "color": "Red",
+    "magical": true,
+    "stat_mod":{
+        "spd":3
+    },
+    "adjacent_ally_bonus": {
+        "maximum": 3,
+        "times": 2,
+        "stat_mod": [
+            "atk",
+            "spd"
+        ]
+    },
+    "char_unique": true,
+    "id": "muspell-fireposy"
+}

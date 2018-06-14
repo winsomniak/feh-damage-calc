@@ -1,0 +1,48 @@
+{
+    "display": "Ares, Black Knight",
+    "name": "Ares",
+    "title": "Black Knight",
+    "id": "ares-black-knight",
+    "color": "Red",
+    "weapon_type": "Sword",
+    "link": "https://kagerochart.com/hero/ares-black-knight",
+    "move_type": "Cavalry",
+    "LowestRarity":4,
+    "weapon": [
+        "dark-mystletainn",
+        "slaying-edge",
+        "steel-sword",
+        "iron-sword"
+    ],
+    "special": [
+        "draconic-aura",
+        "dragon-gaze"
+    ],
+    "passive_a": [
+        "brazen-atk-def-3",
+        "brazen-atk-def-2",
+        "brazen-atk-def-1"
+    ],
+    "passive_b": [
+        "seal-def-res-2",
+        "seal-def-res-1",
+        "seal-def-1"
+    ],
+    "base_stat": {
+        "star_5": {
+            "hp": 18,
+            "atk": 8,
+            "spd": 8,
+            "def": 7,
+            "res": 5
+        },
+        "growth": {
+            "hp": 6,
+            "atk": 9,
+            "spd": 6,
+            "def": 8,
+            "res": 2,
+            "total": 31
+        }
+    }
+}

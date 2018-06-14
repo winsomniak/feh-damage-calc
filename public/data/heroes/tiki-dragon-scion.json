@@ -8,6 +8,7 @@
     "link": "https://kagerochart.com/hero/tiki-dragon-scion",
     "move_type": "Infantry",
     "weapon": [
+        "breath-of-fog",
         "flametongue-plus",
         "flametongue",
         "fire-breath-plus",

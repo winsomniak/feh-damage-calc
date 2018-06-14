@@ -9,6 +9,7 @@
     "move_type": "Flying",
     "LowestRarity":3,
     "weapon": [
+        "camillas-axe",
         "brave-axe-plus",
         "brave-axe",
         "steel-axe",

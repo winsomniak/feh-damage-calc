@@ -1,0 +1,9 @@
+{
+    "name": "Chill Atk 2",
+    "sp": 120,
+    "type": "B",
+    "description": "At the start of each turn, inflicts Atk-5 on foe on the enemy team with the highest Atk through its next action.",
+    "icon": "/images/icons/passives/chill-atk-2.png",
+    "link": "https://kagerochart.com/hero/passives/chill-atk-2",
+    "id": "chill-atk-2"
+}

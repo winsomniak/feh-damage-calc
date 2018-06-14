@@ -47,6 +47,36 @@ function cancelAffinity(a, b, adv, checking) {
     return 0;
 }
 
+//Needed for Loptous... Why IS?!
+function isEffective(attacker, defender, battleInfo)
+{
+    if(!attacker.weaponData.hasOwnProperty("weapon_effective"))
+        return battleInfo;
+    if(attacker.weaponData.weapon_effective.includes(weaponInfo[defender.weaponName].type))
+    {
+        battleInfo.isEff=true;
+        battleInfo.eff=weaponInfo[defender.weaponName].type;
+        return battleInfo;
+    }
+    if(defender.weaponData.hasOwnProperty("weak_as"))
+    {
+        var validTarget=false;
+        var weaknesses=defender.weaponData.weak_as;
+        weaknesses.forEach(function(weak) {
+            if(attacker.weaponData.weapon_effective.includes(weak))
+            {
+                battleInfo.isEff=true;
+                battleInfo.eff=weak;
+                validTarget=true;
+                return true;
+            }
+        });
+        if(validTarget)
+            return battleInfo;
+    }
+    return battleInfo;
+}
+
 //Checks if bonuses of character b need to be nullifed
 function canNullifyEnemyBonuses(a, b) {
 
@@ -106,6 +136,10 @@ function checkIfBonusDMG(agent, other)
     if (agent.weaponData.hasOwnProperty("add_bonus") && !agent.status.panic) {
         agent.addBonusAtk = agent.atkBonus + agent.defBonus + agent.spdBonus + agent.resBonus;
         agent.addBonusAtkSource = "bonuses";
+    }
+    else if (agent.weaponData.hasOwnProperty("add_enemy_bonus") && !other.status.panic) {
+        agent.addBonusAtk = other.atkBonus + other.defBonus + other.spdBonus + other.resBonus;
+        agent.addBonusAtkSource = "enemy bonuses";
     }
     else if (agent.weaponData.hasOwnProperty("enemy_penalty_bonus")) {
         agent.addBonusAtk = -other.atkPenalty - other.spdPenalty - other.defPenalty - other.resPenalty; //Get the penalties
@@ -456,6 +490,17 @@ function giveBonuses(battleInfo, agent, other, initiator){
     if (agent.weaponData.hasOwnProperty("adjacent_ally_bonus") && agent.adjacent > 0) {
         battleInfo = owlTomeBonus(battleInfo, agent.adjacent, agent.agentClass);
     }
+	
+    //Loptous malus
+	if(other.weaponData.hasOwnProperty("on_no_effectiveness")){
+        // super effectiveness against weapon types
+        battleInfo.eff="";
+        battleInfo.isEff=false;
+        battleInfo=isEffective(agent, other, battleInfo);
+        if(!battleInfo.isEff){
+            battleInfo = combatBonus(battleInfo, other.weaponData.on_no_effectiveness.foe_stat_mod, weaponInfo[other.weaponName].name, agent.agentClass, "for not being effective against opponent");
+        }
+    }
 
     //adjacent stat bonus
     battleInfo=adjacentStatBonus(battleInfo, agent, agent.agentClass, initiator);
@@ -471,7 +516,12 @@ function combatBonus(battleInfo, statMods, modSource, agentClass, srcMsg) {
 
     for (var stat in statMods) {
         battleInfo[agentClass][stat] += statMods[stat];
-        battleInfo.logMsg += "<li class='battle-interaction'><span class='" + agentClass + "'><strong>" + battleInfo[agentClass].display + "</strong></span> gains " + statMods[stat].toString() + " " + statWord(stat) + " " + srcMsg + " [" + modSource + "].</li>";
+        battleInfo.logMsg += "<li class='battle-interaction'><span class='" + agentClass + "'><strong>" + battleInfo[agentClass].display + "</strong></span>";
+        if(statMods[stat]<0)
+            battleInfo.logMsg += " loses ";
+		else
+            battleInfo.logMsg += " gains ";
+        battleInfo.logMsg += Math.abs(statMods[stat]).toString() + " " + statWord(stat) + " " + srcMsg + " [" + modSource + "].</li>";
     }
 
     return battleInfo;

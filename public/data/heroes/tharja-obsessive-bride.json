@@ -1,0 +1,47 @@
+{
+    "display": "Tharja, Obsessive Bride",
+    "name": "Tharja",
+    "title": "Obsessive Bride",
+    "id": "tharja-obsessive-bride",
+    "color": "Red",
+    "weapon_type": "Red Tome",
+    "link": "https://kagerochart.com/hero/tharja-obsessive-bride",
+    "move_type": "Infantry",
+    "weapon": [
+        "muspell-fireposy",
+        "bolganone",
+        "elfire",
+        "fire"
+    ],
+    "assist": [
+        "rally-attack-speed",
+        "rally-speed"
+    ],
+    "passive_a": [
+        "atk-spd-bond-3",
+        "atk-spd-bond-2",
+        "atk-spd-bond-1"
+    ],
+    "passive_b": [
+        "spd-feint-3",
+        "spd-feint-2",
+        "spd-feint-1"
+    ],
+    "base_stat": {
+        "star_5": {
+            "hp": 17,
+            "atk": 9,
+            "spd": 9,
+            "def": 6,
+            "res": 4
+        },
+        "growth": {
+            "hp": 6,
+            "atk": 8,
+            "spd": 8,
+            "def": 3,
+            "res": 4,
+            "total": 29
+        }
+    }
+}

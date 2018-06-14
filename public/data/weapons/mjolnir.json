@@ -1,0 +1,17 @@
+{
+    "name": "Mjölnir",
+    "might": 14,
+    "range": 2,
+    "sp": 400,
+    "description": "Accelerates Special trigger (cooldown count-1). If unit initiates combat, grants Spd+6 during combat.",
+    "type": "Blue Tome",
+    "initiate_mod": {
+        "spd": 6
+    },
+    "spec_cooldown_mod": -1,
+    "link": "https://kagerochart.com/hero/weapons/mjolnir",
+    "color": "Blue",
+    "magical": true,
+    "char_unique": true,
+    "id": "mjolnir"
+}

@@ -1,0 +1,46 @@
+{
+    "display": "Sanaki, Apostle in White",
+    "name": "Sanaki",
+    "title": "Apostle in White",
+    "id": "sanaki-apostle-in-white",
+    "color": "Green",
+    "weapon_type": "Green Tome",
+    "link": "https://kagerochart.com/hero/sanaki-apostle-in-white",
+    "move_type": "Flying",
+    "weapon": [
+        "nifl-frostflowers",
+        "rexcalibur",
+        "elwind",
+        "wind"
+    ],
+    "assist": [
+        "draw-back"
+    ],
+    "passive_a": [
+        "atk-res-bond-3",
+        "atk-res-bond-2",
+        "atk-res-bond-1"
+    ],
+    "passive_b": [
+        "def-res-link-3",
+        "def-res-link-2",
+        "def-res-link-1"
+    ],
+    "base_stat": {
+        "star_5": {
+            "hp": 16,
+            "atk": 10,
+            "spd": 8,
+            "def": 3,
+            "res": 7
+        },
+        "growth": {
+            "hp": 5,
+            "atk": 8,
+            "spd": 6,
+            "def": 2,
+            "res": 8,
+            "total": 29
+        }
+    }
+}

@@ -1,0 +1,48 @@
+{
+    "display": "Marth, Altean Groom",
+    "name": "Marth",
+    "title": "Altean Groom",
+    "id": "marth-altean-groom",
+    "color": "Green",
+    "weapon_type": "Axe",
+    "link": "https://kagerochart.com/hero/marth-altean-groom",
+    "move_type": "Cavalry",
+    "LowestRarity":4,
+    "weapon": [
+        "ardent-service-plus",
+        "ardent-service",
+        "steel-axe",
+        "iron-axe"
+    ],
+    "assist": [
+        "rally-speed-defense",
+        "rally-defense"
+    ],
+    "passive_b": [
+        "wings-of-mercy-3",
+        "wings-of-mercy-2",
+        "wings-of-mercy-1"
+    ],
+    "passive_c": [
+        "drive-atk-2",
+        "drive-atk-1",
+        "spur-atk-1"
+    ],
+    "base_stat": {
+        "star_5": {
+            "hp": 18,
+            "atk": 7,
+            "spd": 10,
+            "def": 6,
+            "res": 5
+        },
+        "growth": {
+            "hp": 6,
+            "atk": 7,
+            "spd": 8,
+            "def": 7,
+            "res": 3,
+            "total": 31
+        }
+    }
+}
