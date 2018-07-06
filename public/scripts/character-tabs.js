@@ -93,6 +93,8 @@ function getCharTabInfo(attacker) {
 
         //change the blessing
         $('#blessing-' + charNum).val(charTabInfo.blessing).prop('selected', 'selected');
+        $('#blessing2-' + charNum).val(charTabInfo.blessing2).prop('selected', 'selected');
+        $('#blessing3-' + charNum).val(charTabInfo.blessing3).prop('selected', 'selected');
 
         $('#weapon-' + charNum).val(charTabInfo.weapon).prop('selected', 'selected'); //.trigger('change.select2');
         showWeapon(charTabInfo.weapon, charNum, false, true);
@@ -210,6 +212,8 @@ function storeCharTabInfo(attacker) {
     infoToStore.weapon = $('#weapon-' + charNum).val();
     infoToStore.refinement = $('#refinement-' + charNum).val();
     infoToStore.blessing = $('#blessing-' + charNum).val();
+    infoToStore.blessing2 = $('#blessing2-' + charNum).val();
+    infoToStore.blessing3 = $('#blessing3-' + charNum).val();
     infoToStore.passiveA = $('#passive-a-' + charNum).val();
     infoToStore.passiveB = $('#passive-b-' + charNum).val();
     infoToStore.passiveC = $('#passive-c-' + charNum).val();
@@ -399,6 +403,8 @@ function displayChar(charName, charNum, showHidden) {
     //blessings stuff!
     var blessings="<option value=\"None\">---</option>";
     var selectedBlessing="None";
+    var selectedBlessing2="None";
+    var selectedBlessing3="None";
 
     if (!singleChar.hasOwnProperty("legendary")){
         blessings += "<option value=\"Attack\">Attack</option>";
@@ -410,6 +416,10 @@ function displayChar(charName, charNum, showHidden) {
     // set values
     $("#blessing-" + charNum).html(blessings);
     $("#blessing-" + charNum).val(selectedBlessing).attr('selected', 'selected');
+    $("#blessing2-" + charNum).html(blessings);
+    $("#blessing2-" + charNum).val(selectedBlessing2).attr('selected', 'selected');
+    $("#blessing3-" + charNum).html(blessings);
+    $("#blessing3-" + charNum).val(selectedBlessing3).attr('selected', 'selected');
 
     // show extra weapon info
     showWeapon(selectedWeapon, charNum, false, showHidden);
@@ -450,9 +460,14 @@ function displayChar(charName, charNum, showHidden) {
         $("#spd-" + charNum).val(singleChar.spd);
         $("#def-" + charNum).val(singleChar.def);
         $("#res-" + charNum).val(singleChar.res);
+        BST = singleChar.hp + singleChar.atk + singleChar.spd + singleChar.def + singleChar.res;
         $("#char-build-info-" + charNum + " label").css("color", "#5b5b5b");
         $("#char-build-info-" + charNum + " select").attr("disabled", "disabled");
     }
+
+    //Arena Score Calculation
+    var points = ArenaScoreCalc(charNum);
+    $(".arena-score-" + charNum + "-read").text(points.toString());
 
     // default state
     $("#status-section" + charNum).find(".mdc-switch__native-control").attr("checked", false);
@@ -486,6 +501,8 @@ function displayCustomChar(charName, charNum, showHidden) {
     var weapon = $("#weapon-" + charNum).val();
     var refinement = $("#refinement-" + charNum).val();
     var blessing = $("#blessing-" + charNum).val();
+    var blessing2 = $("#blessing2-" + charNum).val();
+    var blessing3 = $("#blessing3-" + charNum).val();
     var passiveA = $("#passive-a-" + charNum).val();
     var passiveB = $("#passive-b-" + charNum).val();
     var passiveC = $("#passive-c-" + charNum).val();
