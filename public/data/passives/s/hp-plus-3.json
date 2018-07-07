@@ -2,6 +2,7 @@
     "description": "Grants +3 to max HP.",
     "id": "hp-plus-3",
     "name": "HP +3",
+    "sp":40,
     "stat_mod": {
         "hp": 3
     },

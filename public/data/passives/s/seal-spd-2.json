@@ -2,6 +2,7 @@
     "description": "After combat, foe suffers Spd-5 through its next action.",
     "id": "seal-spd-2",
     "name": "Seal Spd 2",
+    "sp":80,
     "seal": {
         "spd": -5
     }

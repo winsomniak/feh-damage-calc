@@ -2,5 +2,6 @@
     "description": "Grants adjacent allies Def+2 during combat.",
     "id": "spur-def-1",
     "name": "Spur Def 1",
+    "sp":50,
     "type": "s"
 }

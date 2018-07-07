@@ -3,5 +3,6 @@
     "id": "hardy-bearing-2",
     "name": "Hardy Bearing 2",
     "type": "s",
+    "sp":100,
     "remove_prio_hp": 0.5
 }

@@ -2,6 +2,7 @@
     "description": "After combat, foe suffers Atk-7 through its next action.",
     "id": "seal-atk-3",
     "name": "Seal Atk 3",
+    "sp":160,
     "seal": {
         "atk": -7
     }

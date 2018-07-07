@@ -2,5 +2,6 @@
     "description": "Grants allies within 2 spaces Atk+3 during combat.",
     "id": "drive-atk-2",
     "name": "Drive Atk 2",
+    "sp":240,
     "type": "s"
 }

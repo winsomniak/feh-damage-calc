@@ -2,6 +2,7 @@
     "description": "Grants Res +3",
     "id": "resistance-plus-3",
     "name": "Resistance +3",
+    "sp":120,
     "stat_mod": {
         "res": 3
     },

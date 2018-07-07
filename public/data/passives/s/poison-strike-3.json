@@ -1,6 +1,7 @@
 {
     "description": "Inflicts 10 damage to foe after any combat this unit initiates.",
     "poison": 10,
+    "sp":240,
     "weapon_restrict": "Staff",
     "id": "poison-strike-3",
     "name": "Poison Strike 3",
