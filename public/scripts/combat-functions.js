@@ -390,7 +390,7 @@ function adjacentStatBonus(battleInfo, char, charToUse, initiator) {
                     battleInfo.logMsg += "<li class='battle-interaction'><span class='" + charToUse + "'>" + battleInfo[charToUse].display + "</span> raises " + b + " by " + bonus.mod[b] + " [" + char[key].name + "].</li>";
             };
         }
-    })
+    });
     return battleInfo;
 }
 
@@ -601,7 +601,10 @@ function hasSpecAccel(battleInfo, attacker, defender, initiator, block) {
 }
 
 function enemyPhaseCharge(battleInfo, attacker, defender) {
+    var done=false;
     checks.forEach(function(key) {
+        if(done)
+            return;
         var effect = battleInfo.defender[key].enemy_phase_charge;
 
         if (effect) {
@@ -610,6 +613,7 @@ function enemyPhaseCharge(battleInfo, attacker, defender) {
                     battleInfo.logMsg += "<span class='" +attacker.agentClass + "'>" +attacker.display + "</span> gained an additional special cooldown charge [" + attacker[key].name + "]! ";
                     attacker.specCurrCooldown--;
                 }
+                done=true;
                 return;
             }
             else if (effect.defend && Object.is(defender, battleInfo.defender) && (!effect.hasOwnProperty("threshold") || (defender.initHP >= roundNum(effect.threshold * defender.hp, true)))) {
@@ -617,6 +621,7 @@ function enemyPhaseCharge(battleInfo, attacker, defender) {
                     battleInfo.logMsg += "<span class='" +defender.agentClass + "'>" +defender.display + "</span> gained an additional special cooldown charge [" + defender[key].name + "]! ";
                     defender.specCurrCooldown--;
                 }
+                done=true;
                 return;
             }
         }
