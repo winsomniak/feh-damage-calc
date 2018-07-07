@@ -635,16 +635,20 @@ function getStatTotals(charName, weaponName, passiveA, seal, rarity, level, merg
     var stats = {};
 	stats=getBaseStat(stats, rarity, charName, boon, bane);
 
+    //Fix issue with even rarities and merges
+    var statsbase = {};
+	statsbase=getBaseStat(statsbase, 5, charName, boon, bane);
+
     // merged units
     if (merge > 0) {
         var statNames = ["hp", "atk", "spd", "def", "res"];
         var mergeBonusOrder = ["hp", "atk", "spd", "def", "res"];
 
-        // sort stats from highest to lowest with insertion sort haha
+        // sort statsbase from highest to lowest with insertion sort haha
         for (var statsIndex = 1; statsIndex < 5; statsIndex++) {
             var inserted = false;
             for (var orderIndex = 0; orderIndex < statsIndex; orderIndex++) {
-                if (stats[statNames[statsIndex]] > stats[mergeBonusOrder[orderIndex]]) {
+                if (statsbase[statNames[statsIndex]] > statsbase[mergeBonusOrder[orderIndex]]) {
                     // push back
                     for (var pushIndex = statsIndex - 1; pushIndex >= orderIndex; pushIndex--) {
                         mergeBonusOrder[pushIndex + 1] = mergeBonusOrder[pushIndex];

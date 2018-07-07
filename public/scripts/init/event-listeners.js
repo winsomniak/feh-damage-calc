@@ -283,8 +283,6 @@ miscFields.forEach(function(field) {
 $(".swap-btn").on("click", function() {
     swap();
     keepTable = false;
-    ArenaScoreCalc(1);
-    ArenaScoreCalc(2);
     updateDisplay();
 });
 
