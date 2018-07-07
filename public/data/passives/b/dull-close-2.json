@@ -1,0 +1,22 @@
+{
+    "name": "Dull Close 2",
+    "sp": 120,
+    "type": "B",
+    "description": "At start of combat, if unit's HP ≥ 50% and foe uses sword, lance, axe, or dragonstone, neutralizes foe's bonuses (from skills like Fortify, Rally, etc.) during combat.",
+    "icon": "/images/icons/passives/dull-close-2.png",
+    "link": "https://kagerochart.com/hero/passives/dull-close-2",
+    "nullify_enemy_bonuses": {
+        "threshold":0.5,
+        "weapon_type": {
+            "Sword": true,
+            "Lance": true,
+            "Axe": true,
+            "Breath": true,
+            "Red Breath": true,
+            "Blue Breath": true,
+            "Green Breath": true,
+            "Colorless Breath": true
+        }
+    },
+    "id": "dull-close-2"
+}

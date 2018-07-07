@@ -1,0 +1,24 @@
+{
+    "name": "Cocobow+",
+    "might": 12,
+    "range": 2,
+    "sp": 300,
+    "description": "Effective against flying foes. If unit initiates combat, grants Atk/Spd/Def/Res+2 during combat.",
+    "type": "Bow",
+    "link": "https://kagerochart.com/hero/weapons/cocobow-plus",
+    "color": "Colorless",
+    "magical": false,
+    "initiate_mod": {
+        "atk": 2,
+        "spd": 2,
+        "def": 2,
+        "res": 2
+    },
+    "move_effective": [
+        "Flying"
+    ],
+    "refinable": {
+        "type": "ranged"
+    },
+    "id": "cocobow-plus"
+}

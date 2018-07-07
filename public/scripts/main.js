@@ -2061,8 +2061,8 @@ function simBattle(battleInfo, displayMsg) {
         defender.weaponData.range = attacker.weaponData.range;
 
     //New follow-up logic
-    battleInfo = Follow(attacker, true, defender.weaponData.type, defender.color, defCC, battleInfo);
-    battleInfo = Follow(defender, false, attacker.weaponData.type, attacker.color, true, battleInfo);
+    battleInfo = Follow(attacker, defender, true, defCC, battleInfo);
+    battleInfo = Follow(defender, attacker, false, true, battleInfo);
 
     battleInfo = Prevent(attacker, defender, defender.weaponData.type, battleInfo, true);
     battleInfo = Prevent(defender, attacker, attacker.weaponData.type, battleInfo, false);
@@ -2248,17 +2248,25 @@ function simBattle(battleInfo, displayMsg) {
         atkRecoil += attacker.weaponData.full_hp_atk_recoil_dmg;
         atkRecoilSource += (atkRecoilSource.length > 0) ? ", " + weaponInfo[attacker.weaponName].name : weaponInfo[attacker.weaponName].name;
     }
+    if (attacker.currHP > 0 && attacker.passiveAData.hasOwnProperty("full_hp_atk_recoil_dmg") && attacker.initHP >= attacker.hp) {
+        atkRecoil += attacker.passiveAData.full_hp_atk_recoil_dmg;
+        atkRecoilSource += (atkRecoilSource.length > 0) ? ", " + skillInfo['a'][attacker.passiveA].name : skillInfo['a'][attacker.passiveA].name;
+    }
     if (defender.currHP > 0 && defender.passiveAData.hasOwnProperty("recoil_dmg")) {
         defRecoil = defender.passiveAData.recoil_dmg;
         defRecoilSource = defender.passiveA;
     }
     if (defender.currHP > 0 && defender.weaponData.hasOwnProperty("recoil_dmg")) {
         defRecoil += defender.weaponData.recoil_dmg;
-        defRecoilSource += (atkRecoilSource.length > 0) ? ", " + weaponInfo[defender.weaponName].name : weaponInfo[defender.weaponName].name;
+        defRecoilSource += (defRecoilSource.length > 0) ? ", " + weaponInfo[defender.weaponName].name : weaponInfo[defender.weaponName].name;
     }
     if (defender.currHP > 0 && defender.weaponData.hasOwnProperty("full_hp_atk_recoil_dmg") && defender.initHP >= defender.hp) {
         defRecoil += defender.weaponData.full_hp_atk_recoil_dmg;
-        defRecoilSource += (atkRecoilSource.length > 0) ? ", " + weaponInfo[defender.weaponName].name : weaponInfo[defender.weaponName].name;
+        defRecoilSource += (defRecoilSource.length > 0) ? ", " + weaponInfo[defender.weaponName].name : weaponInfo[defender.weaponName].name;
+    }
+    if (defender.currHP > 0 && defender.passiveAData.hasOwnProperty("full_hp_atk_recoil_dmg") && defender.initHP >= defender.hp) {
+        defRecoil += defender.passiveAData.full_hp_atk_recoil_dmg;
+        defRecoilSource += (defRecoilSource.length > 0) ? ", " + skillInfo['a'][defender.passiveA].name : skillInfo['a'][defender.passiveA].name;
     }
     // print after combat effects
     battleInfo = afterCombatEffects(battleInfo, "attacker", defPoison, defPoisonSource, atkRecoil, atkRecoilSource, atkAfterHeal, atkAfterHealSource);

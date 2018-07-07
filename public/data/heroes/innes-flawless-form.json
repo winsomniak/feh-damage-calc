@@ -1,0 +1,47 @@
+{
+    "display": "Innes, Flawless Form",
+    "name": "Innes",
+    "title": "Flawless Form",
+    "id": "innes-flawless-form",
+    "color": "Green",
+    "weapon_type": "Axe",
+    "link": "https://kagerochart.com/hero/innes-flawless-form",
+    "move_type": "Flying",
+    "weapon": [
+        "beach-banner-plus",
+        "beach-banner",
+        "steel-axe",
+        "iron-axe"
+    ],
+    "assist": [
+        "rally-attack-defense",
+        "rally-defense"
+    ],
+    "passive_b": [
+        "def-feint-3",
+        "def-feint-2",
+        "def-feint-1"
+    ],
+    "passive_c": [
+        "goad-fliers",
+        "spur-atk-2",
+        "spur-atk-1"
+    ],
+    "base_stat": {
+        "star_5": {
+            "hp": 18,
+            "atk": 9,
+            "spd": 9,
+            "def": 6,
+            "res": 5
+        },
+        "growth": {
+            "hp": 7,
+            "atk": 7,
+            "spd": 9,
+            "def": 7,
+            "res": 3,
+            "total": 33
+        }
+    }
+}

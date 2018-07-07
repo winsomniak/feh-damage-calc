@@ -1,0 +1,52 @@
+{
+    "display": "Tana, Noble and Nimble",
+    "name": "Tana",
+    "title": "Noble and Nimble",
+    "id": "tana-noble-and-nimble",
+    "color": "Red",
+    "weapon_type": "Red Tome",
+    "link": "https://kagerochart.com/hero/tana-noble-and-nimble",
+    "move_type": "Flying",
+    "weapon": [
+        "fruit-of-iounn",
+        "bolganone",
+        "elfire",
+        "fire"
+    ],
+    "assist": [
+        "rally-speed-resistance",
+        "rally-speed"
+    ],
+    "passive_a": [
+        "atk-spd-push-3",
+        "atk-spd-push-2",
+        "atk-spd-push-1"
+    ],
+    "passive_b": [
+        "renewal-3",
+        "renewal-2",
+        "renewal-1"
+    ],
+    "passive_c": [
+        "spur-atk-def-2",
+        "spur-atk-def-1",
+        "spur-def-1"
+    ],
+    "base_stat": {
+        "star_5": {
+            "hp": 16,
+            "atk": 7,
+            "spd": 10,
+            "def": 5,
+            "res": 6
+        },
+        "growth": {
+            "hp": 5,
+            "atk": 8,
+            "spd": 8,
+            "def": 3,
+            "res": 5,
+            "total": 29
+        }
+    }
+}

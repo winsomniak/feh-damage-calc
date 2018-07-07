@@ -1,0 +1,19 @@
+{
+    "name": "Thunder Armads",
+    "might": 16,
+    "range": 1,
+    "sp": 400,
+    "description": "Grants Def+3. If the number of allies within 2 spaces (excluding unit) > the number of foes within 2 spaces (excluding target), foe cannot make a follow-up attack.",
+    "type": "Axe",
+    "link": "https://kagerochart.com/hero/weapons/thunder-armads",
+    "color": "Green",
+    "stat_mod":{
+        "def":3
+    },
+    "magical": false,
+    "other_prevent_follow": {
+        "adjacent_dependant":true
+    },
+    "char_unique": true,
+    "id": "thunder-armads"
+}

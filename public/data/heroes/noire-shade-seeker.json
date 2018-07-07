@@ -1,0 +1,46 @@
+{
+    "display": "Noire, Shade Seeker",
+    "name": "Noire",
+    "title": "Shade Seeker",
+    "id": "noire-shade-seeker",
+    "color": "Colorless",
+    "weapon_type": "Bow",
+    "link": "https://kagerochart.com/hero/noire-shade-seeker",
+    "move_type": "Infantry",
+    "weapon": [
+        "cocobow-plus",
+        "cocobow",
+        "steel-bow",
+        "iron-bow"
+    ],
+    "assist": [
+        "ardent-sacrifice"
+    ],
+    "passive_a": [
+        "atk-spd-2",
+        "atk-spd-1",
+        "speed-plus-1"
+    ],
+    "passive_c": [
+        "infantry-rush-3",
+        "infantry-rush-2",
+        "infantry-rush-1"
+    ],
+    "base_stat": {
+        "star_5": {
+            "hp": 17,
+            "atk": 8,
+            "spd": 10,
+            "def": 5,
+            "res": 5
+        },
+        "growth": {
+            "hp": 5,
+            "atk": 7,
+            "spd": 8,
+            "def": 6,
+            "res": 3,
+            "total": 29
+        }
+    }
+}

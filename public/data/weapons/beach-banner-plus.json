@@ -1,0 +1,21 @@
+{
+    "name": "Beach Banner+",
+    "might": 14,
+    "range": 1,
+    "sp": 300,
+    "type": "Axe",
+    "link": "https://kagerochart.com/hero/weapons/beach-banner-plus",
+    "description":"If unit initiates combat, grants Atk/Spd/Def/Res+2 during combat.",
+    "color": "Green",
+    "magical": false,
+    "initiate_mod": {
+        "atk": 2,
+        "spd": 2,
+        "def": 2,
+        "res": 2
+    },
+    "refinable": {
+        "type": "melee"
+    },
+    "id": "beach-banner-plus"
+}

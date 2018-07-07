@@ -252,8 +252,10 @@ function canPreventEnemyCounter(container, hp, currHP) {
 
 
 //Checks the follows (Brash, Riposte, follow-up, fighters & breakers) and if the agent has wary fighter or sweep ability
-function Follow(char, attacker, othWeapon, othColor, CanCounter, battleInfo) {
+function Follow(char, agent, attacker, CanCounter, battleInfo) {
     var doubling=1;
+    var othWeapon = agent.weaponData.type;
+    var othColor = agent.color;
     for (var i = 0; i < checks.length; i++) {
         var bfup=char[checks[i]].attack_follow_up;
         if(!attacker)
@@ -262,7 +264,7 @@ function Follow(char, attacker, othWeapon, othColor, CanCounter, battleInfo) {
             if ((!bfup.hasOwnProperty("threshold")) || (bfup.trigger==='healthy' && char.initHP >= roundNum(bfup.threshold * char.hp, true)) || (bfup.trigger==='damaged' && char.initHP <= roundNum(bfup.threshold * char.hp, true))) { //hp check for all of them
                 if((!bfup.hasOwnProperty("weapon_type")) || (bfup.weapon_type.includes(othWeapon) && (othWeapon !== 'Bow' || othColor === 'Colorless'))){ //breaker check
                     if((!bfup.hasOwnProperty("counterable")) || (CanCounter)) { //brash check
-                        if((!bfup.hasOwnProperty("adjacent_dependant")) || char.adjacent == 0) {
+                        if((!bfup.hasOwnProperty("adjacent_dependant")) || char.adjacent <= agent.adjacent) { //LEphraim's check
                             doubling++;
                             battleInfo.logMsg+="<li class='battle-interaction'><span class='" + char.agentClass + "'>" + char.display + "</span>'s " + char[checks[i]].name + " activated, increasing their own ability to follow-up!</li>";
                         }
@@ -305,12 +307,14 @@ function Prevent(char, agent, ageWeapon, battleInfo, attacker)
     for (var i = 0; i < checks.length; i++) {
         var prev = char[checks[i]].other_prevent_follow;
         if (prev) {
-            //healthy (Breakers and Wary fighter) and stat_to_check (Myrrh)
+            //healthy (Breakers and Wary fighter), stat_to_check (Myrrh) and adjacent dependent (Hector's Thunder Armads)
             if ((!prev.hasOwnProperty("stat_to_check")) || (ReturnStat(char, prev.stat_to_check) >= ReturnStat(agent, prev.stat_to_check)+ prev.stat_amount)) {
                 if((!prev.hasOwnProperty("threshold")) || char.initHP >= roundNum(prev.threshold * char.hp, true)) {
-                    if((!prev.hasOwnProperty("weapon_type")) || (prev.weapon_type.includes(ageWeapon) && (ageWeapon !== 'Bow' || agent.color === 'Colorless'))){
-                        prevention+=1;
-                        battleInfo.logMsg+= "<li class='battle-interaction'><span class='" + char.agentClass + "'>" + char.display + "</span>'s " + char[checks[i]].name + " activated, decreasing <span class='" + agent.agentClass + "'>" + agent.display +"</span>'s ability to follow-up!</li>";
+                    if((!prev.hasOwnProperty("weapon_type")) || (prev.weapon_type.includes(ageWeapon) && (ageWeapon !== 'Bow' || agent.color === 'Colorless'))) {
+                        if((!prev.hasOwnProperty("adjacent_dependant")) || (char.adjacent > agent.adjacent)) {
+                            prevention+=1;
+                            battleInfo.logMsg+= "<li class='battle-interaction'><span class='" + char.agentClass + "'>" + char.display + "</span>'s " + char[checks[i]].name + " activated, decreasing <span class='" + agent.agentClass + "'>" + agent.display +"</span>'s ability to follow-up!</li>";
+                        }
                     }
                 }
             }
@@ -469,6 +473,11 @@ function giveBonuses(battleInfo, agent, other, initiator){
     // full hp bonus
     if (agent.weaponData.hasOwnProperty("full_hp_mod") && agent.currHP >= agent.hp) {
         battleInfo = combatBonus(battleInfo, agent.weaponData.full_hp_mod, weaponInfo[agent.weaponName].name, agent.agentClass, "for having full HP");
+    }
+
+    // full hp bonus
+    if (agent.passiveAData.hasOwnProperty("full_hp_mod") && agent.currHP >= agent.hp) {
+        battleInfo = combatBonus(battleInfo, agent.passiveAData.full_hp_mod,  skillInfo['a'][agent.passiveA].name, agent.agentClass, "for having full HP");
     }
 
     // not full hp bonus, couldn't use below_threshold_mod because of rounding

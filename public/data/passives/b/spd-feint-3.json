@@ -2,7 +2,7 @@
     "name": "Spd Feint 3",
     "sp": 240,
     "type": "B",
-    "description": "If a Rally Assist skill is used by unit or targets unit, inflicts Spd-3 on foes in cardinal directions of unit through their next actions.",
+    "description": "If a Rally Assist skill is used by unit or targets unit, inflicts Spd-7 on foes in cardinal directions of unit through their next actions.",
     "icon": "/images/icons/passives/spd-feint-3.png",
     "link": "https://kagerochart.com/hero/passives/spd-feint-3",
     "id": "spd-feint-3"
