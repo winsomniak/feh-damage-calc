@@ -534,6 +534,7 @@ function hasSpecAccel(battleInfo, attacker, defender, initiator, block) {
 
     var mainUnit = attacker;
     var otherUnit = defender;
+    var done = false;
 
     //Check every hero ability for spec_accel data
     for (var i = 0; i < checks.length; i++) {
@@ -547,6 +548,7 @@ function hasSpecAccel(battleInfo, attacker, defender, initiator, block) {
                     mainUnit.specCurrCooldown--;
                     battleInfo.logMsg += stringToPrint;
                 }
+                done = true;
                 return true;
             }
         }
@@ -557,6 +559,7 @@ function hasSpecAccel(battleInfo, attacker, defender, initiator, block) {
                 mainUnit.specCurrCooldown--;
                 battleInfo.logMsg += stringToPrint;
             }
+            done = true;
             return true;
         }
 
@@ -581,6 +584,7 @@ function hasSpecAccel(battleInfo, attacker, defender, initiator, block) {
                     mainUnit.specCurrCooldown--;
                     battleInfo.logMsg += stringToPrint;
                 }
+                done = true;
                 return true;
             }
         }
@@ -592,11 +596,30 @@ function hasSpecAccel(battleInfo, attacker, defender, initiator, block) {
                     mainUnit.specCurrCooldown--;
                     battleInfo.logMsg += stringToPrint;
                 }
+                done = true;
                 return true;
             }
         }
     }
-
+    if(done)
+        return true;
+    //infantry rush part
+    mainUnit = initiator ? battleInfo.attacker : battleInfo.defender;
+    otherUnit = initiator ? battleInfo.defender : battleInfo.attacker;
+    if(mainUnit.infantryRush !== "None")
+    {
+        var stat="atk";
+        var reqStatAdvantage= (2 * (3 - mainUnit.infantryRush)) + 1;
+        stringToPrint= "<span class='" +mainUnit.agentClass + "'>" +mainUnit.display + "</span> gained an additional special cooldown charge [Infantry Rush " + mainUnit.infantryRush.toString() + "]! ";
+        //Account for bonuses to comparisons like phantom speed
+        if (phantomStat(mainUnit, stat) - phantomStat(otherUnit, stat) >= reqStatAdvantage) {
+            if(mainUnit.specCurrCooldown > 0) {
+                mainUnit.specCurrCooldown--;
+                battleInfo.logMsg += stringToPrint;
+            }
+            return true;
+        }
+    }
     return false;
 }
 

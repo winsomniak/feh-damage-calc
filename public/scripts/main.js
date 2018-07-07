@@ -1078,6 +1078,7 @@ function getCharPanelData(charNum) {
     charData.passiveBData = $("#passive-b-" + charNum).data("info");
     charData.passiveCData = $("#passive-c-" + charNum).data("info");
     charData.special = $("#special-" + charNum).val();
+	charData.infantryRush = $("#infantry-rush-" + charNum).val();
 	charData.refinement = $("#refinement-" + charNum).val();
     charData.specCurrCooldown = parseInt($("#spec-cooldown-" + charNum).val());
     charData.specialData = $("#special-" + charNum).data("info");
@@ -1215,6 +1216,7 @@ function getDefaultCharData(charName) {
     charData.seal = "None";
     charData.sealData = {};
     charData.refinement="None";
+    charData.infantryRush="None";
     charData.blessing="None";
     charData.blessing2="None";
     charData.blessing3="None";
@@ -1224,6 +1226,14 @@ function getDefaultCharData(charName) {
     if (tmpRef !== "None") {
         if((charData.weaponName !== "None") && charData.weaponData.hasOwnProperty("refinable") && (((tmpRef !== "Special") && (refinementsInfo[charData.weaponData.refinable.type].hasOwnProperty(tmpRef)))||(charData.weaponData.refinable.hasOwnProperty("Special")))) {
             charData.refinement=tmpRef;
+        }
+    }
+
+    // override infantry rush (Only infantry allies)
+    if ($("#override-infantry-rush").val() !== "None") {
+        if(charInfo[charName].move_type === "Infantry")
+        {
+            charData.infantryRush= $("#override-infantry-rush").val();
         }
     }
 
@@ -2428,6 +2438,8 @@ function swap() {
     oldAtkInfo.weaponDesc = $("#weapon-desc-1").text();
     oldAtkInfo.refinement = $("#refinement-1").html();
     oldAtkInfo.selectedRefinement = $("#refinement-1").val();
+    oldAtkInfo.infantryRush = $("#infantry-rush-1").html();
+    oldAtkInfo.selectedInfantryRush = $("#infantry-rush-1").val();
     oldAtkInfo.blessing = $("#blessing-1").html();
     oldAtkInfo.selectedBlessing = $("#blessing-1").val();
     oldAtkInfo.blessing2 = $("#blessing2-1").html();
@@ -2513,6 +2525,8 @@ function swap() {
     $("#weapon-1").val($("#weapon-2").val());
     $("#refinement-1").html($("#refinement-2").html());
     $("#refinement-1").val($("#refinement-2").val());
+    $("#infantry-rush-1").html($("#infantry-rush-2").html());
+    $("#infantry-rush-1").val($("#infantry-rush-2").val());
     $("#blessing-1").html($("#blessing-2").html());
     $("#blessing-1").val($("#blessing-2").val());
     $("#blessing2-1").html($("#blessing2-2").html());
@@ -2599,6 +2613,8 @@ function swap() {
     $("#weapon-2").val(oldAtkInfo.selectedWeapon);
     $("#refinement-2").html(oldAtkInfo.refinement);
     $("#refinement-2").val(oldAtkInfo.selectedRefinement);
+    $("#infantry-rush-2").html(oldAtkInfo.infantryRush);
+    $("#infantry-rush-2").val(oldAtkInfo.selectedInfantryRush);
     $("#blessing-2").html(oldAtkInfo.blessing);
     $("#blessing-2").val(oldAtkInfo.selectedBlessing);
     $("#blessing2-2").html(oldAtkInfo.blessing2);
@@ -3618,6 +3634,7 @@ function importTeam(attacker) {
         importedChars[charCount].specCooldown = "0";
         importedChars[charCount].seal = "None";
         importedChars[charCount].refinement="None";
+        importedChars[charCount].infantryRush="None";
         importedChars[charCount].blessing="None";
         importedChars[charCount].blessing2="None";
         importedChars[charCount].blessing3="None";
@@ -3808,7 +3825,7 @@ function importTeam(attacker) {
 
         // get equipped weapon and skills
         textLine += statsIncluded ? 1 : 0;
-        var equips = {"weapon": false, "refinement": false, "assist": false, "special": false, "passive a": false, "passive b": false, "passive c": false, "sacred seal": false, "blessing": false, "blessing2": false, "blessing3": false};
+        var equips = {"weapon": false, "refinement": false, "assist": false, "special": false, "passive a": false, "passive b": false, "passive c": false, "sacred seal": false, "blessing": false, "blessing2": false, "blessing3": false, "infantry rush": false};
 
         while (true) {
             if (textLine >= importText.length) {
@@ -3832,6 +3849,8 @@ function importTeam(attacker) {
                         }
                     } else if (equipItem === "refinement") { // refinement
                         importedChars[charCount].refinement = line[1];
+                    } else if (equipItem === "infantry rush") { // infantry rush
+                        importedChars[charCount].infantryRush = line[1];
                     } else if (equipItem === "blessing") { // blessing
                         importedChars[charCount].blessing = line[1];
                     } else if (equipItem === "blessing2") { // blessing
@@ -4049,6 +4068,7 @@ function exportCharPanel(charNum) {
     exportText += $("#passive-c-" + charNum).val() !== "None" ? "Passive C: " + $("#passive-c-" + charNum).val() + "\r\n" : "";
     exportText += $("#passive-s-" + charNum).val() !== "None" ? "Sacred Seal: " + $("#passive-s-" + charNum).val() + "\r\n" : "";
     exportText += $("#refinement-" + charNum).val() !== "None" ? "Refinement: " + $("#refinement-" + charNum).val() + "\r\n" : "";
+    exportText += $("#infantry-rush-" + charNum).val() !== "None" ? "Infantry Rush: " + $("#infantry-rush-" + charNum).val() + "\r\n" : "";
     exportText += $("#blessing-" + charNum).val() !== "None" ? "Blessing: " + $("#blessing-" + charNum).val() + "\r\n" : "";
     exportText += $("#blessing2-" + charNum).val() !== "None" ? "Blessing 2: " + $("#blessing2-" + charNum).val() + "\r\n" : "";
     exportText += $("#blessing3-" + charNum).val() !== "None" ? "Blessing 3: " + $("#blessing3-" + charNum).val() + "\r\n" : "";
@@ -4096,6 +4116,7 @@ function exportCharTab(container) {
     exportText += container.passiveC !== "None" ? "Passive C: " + container.passiveC + "\r\n" : "";
     exportText += container.seal !== "None" ? "Sacred Seal: " + container.seal + "\r\n" : "";
     exportText += container.refinement!== "None" ? "Refinement: " + container.refinement + "\r\n" : "";
+    exportText += container.infantryRush!== "None" ? "Infantry Rush: " + container.infantryRush + "\r\n" : "";
     exportText += container.blessing!== "None" ? "Blessing: " + container.blessing + "\r\n" : "";
     exportText += container.blessing2!== "None" ? "Blessing 2: " + container.blessing2 + "\r\n" : "";
     exportText += container.blessing3!== "None" ? "Blessing 3: " + container.blessing3 + "\r\n" : "";

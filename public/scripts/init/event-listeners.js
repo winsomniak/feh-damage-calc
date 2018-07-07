@@ -154,6 +154,13 @@ $(".blessing-selector").on("change", function (){
     updateDisplay();
 });
 
+// setup infantry rush select
+$(".infantry-rush-selector").on("change", function (){
+    var charNum = $(this).data("charnum").toString();
+    charChange(charNum);
+    updateDisplay();
+});
+
 // setup special select
 $(".special-selector").on("change", function (){
     var charNum = $(this).data("charnum").toString();

@@ -26,7 +26,7 @@ function updateAttributeLink(id) {
 function updateAllAttributeLinks() {
 
     //Change links when entity attribute fields update
-    var linkFields = ['char', 'weapon', 'refinement', 'special', 'passive-a', 'passive-b', 'passive-c', 'assist', 'blessing'];
+    var linkFields = ['char', 'weapon', 'refinement', 'special', 'passive-a', 'passive-b', 'passive-c', 'assist', 'blessing', 'infantry-rush'];
     linkFields.forEach(function (key) {
 
         //Register change event handler for both sides
