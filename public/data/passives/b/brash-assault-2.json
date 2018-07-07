@@ -6,7 +6,7 @@
     "icon": "/images/icons/passives/brash-assault-2.png",
     "attack_follow_up": {
         "trigger": "damaged",
-        "threshold": 0.3,
+        "threshold": 0.4,
         "counterable":true
     },
     "link": "https://kagerochart.com/hero/passives/brash-assault-2",

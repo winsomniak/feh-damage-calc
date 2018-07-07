@@ -7,7 +7,7 @@
     "link": "https://kagerochart.com/hero/passives/brash-assault-3",
     "attack_follow_up": {
         "trigger": "damaged",
-        "threshold": 0.3,
+        "threshold": 0.5,
         "counterable":true
     },
     "id": "brash-assault-3"
