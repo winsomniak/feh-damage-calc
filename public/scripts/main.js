@@ -4,7 +4,7 @@ function customName(weaponType, moveType) {
     var name = "";
 
     // name prefix
-    if (weaponType === "Sword" || weaponType === "Axe" || weaponType === "Lance" || weaponType === "Bow") {
+    if (weaponType === "Sword" || weaponType === "Axe" || weaponType === "Lance" || weaponType === "Bow" || weaponType === "Red Bow" || weaponType === "Green Bow" || weaponType === "Blue Bow") {
         name = weaponType;
     } else if (weaponType === "Red Tome") {
         if (moveType === "Infantry") {
@@ -71,11 +71,11 @@ function customName(weaponType, moveType) {
 // given a weapon type, return its color
 function weaponToColor(weaponType) {
 
-    if (weaponType === "Sword" || weaponType === "Red Tome" || weaponType === "Red Breath") {
+    if (weaponType === "Sword" || weaponType === "Red Tome" || weaponType === "Red Breath" || weaponType === "Red Bow") {
         return "Red";
-    } else if (weaponType === "Axe" || weaponType === "Green Tome" || weaponType === "Green Breath") {
+    } else if (weaponType === "Axe" || weaponType === "Green Tome" || weaponType === "Green Breath" || weaponType === "Green Bow") {
         return "Green";
-    } else if (weaponType === "Lance" || weaponType === "Blue Tome" || weaponType === "Blue Breath") {
+    } else if (weaponType === "Lance" || weaponType === "Blue Tome" || weaponType === "Blue Breath" || weaponType === "Blue Bow") {
         return "Blue";
     }
 
@@ -110,7 +110,7 @@ function isInheritable(skill, charName) {
     var range = weaponTypeRange(weaponType);
 
     var dragon = false;
-    if (weaponType === "Red Breath" || weaponType === "Green Breath" || weaponType === "Blue Breath" || weaponType === "Breath") {
+    if (weaponType === "Red Breath" || weaponType === "Green Breath" || weaponType === "Blue Breath" || weaponType === "Colorless Breath" ||weaponType === "Breath") {
         dragon = true;
     }
 
@@ -485,11 +485,11 @@ function loadSpecials(selectID) {
 // weaponType is the type of weapon, charNum determines which panel to display in
 function setColor(weaponType, charNum) {
 
-    if (weaponType === "Sword" || weaponType === "Red Tome" || weaponType === "Red Breath") {
+    if (weaponType === "Sword" || weaponType === "Red Tome" || weaponType === "Red Breath" || weaponType == "Red Bow") {
         $("#color-" + charNum).val("Red");
-    } else if (weaponType === "Axe" || weaponType === "Green Tome" || weaponType === "Green Breath") {
+    } else if (weaponType === "Axe" || weaponType === "Green Tome" || weaponType === "Green Breath" || weaponType == "Green Bow") {
         $("#color-" + charNum).val("Green");
-    } else if (weaponType === "Lance" || weaponType === "Blue Tome" || weaponType === "Blue Breath") {
+    } else if (weaponType === "Lance" || weaponType === "Blue Tome" || weaponType === "Blue Breath" || weaponType == "Blue Bow") {
         $("#color-" + charNum).val("Blue");
     } else {
         $("#color-" + charNum).val("Colorless");
