@@ -101,7 +101,7 @@ function weaponToColor(weaponType) {
 function weaponTypeRange(weaponType) {
 
     var range = 1;
-    if (weaponType === "Red Tome" || weaponType === "Green Tome" || weaponType === "Blue Tome" || weaponType === "Bow" || weaponType === "Dagger" || weaponType === "Staff") {
+    if (weaponType === "Red Tome" || weaponType === "Green Tome" || weaponType === "Blue Tome" || weaponType === "Bow" || weaponType === "Red Bow" || weaponType === "Green Bow" || weaponType === "Blue Bow" || weaponType === "Red Dagger" || weaponType === "Green Dagger" || weaponType === "Blue Dagger" || weaponType === "Dagger" || weaponType === "Staff") {
         range = 2;
     }
 
@@ -111,7 +111,7 @@ function weaponTypeRange(weaponType) {
 // given a weapon type, return its damage type
 function weaponTypeMagical(weaponType) {
 
-    var physicalWeapons = {"Sword":true, "Axe":true, "Lance":true, "Bow":true, "Dagger":true};
+    var physicalWeapons = {"Sword":true, "Axe":true, "Lance":true, "Bow":true, "Red Bow":true, "Green Bow":true, "Blue Bow":true, "Dagger":true, "Red Dagger":true, "Green Dagger":true, "Blue Dagger":true};
     return physicalWeapons.hasOwnProperty(weaponType) ? "Physical" : "Magical";
 }
 
