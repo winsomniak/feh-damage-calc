@@ -144,6 +144,9 @@ $(".refinement-selector").on("change", function (){
     if (charInfo[$("#char-" + charNum).val()].hasOwnProperty("base_stat")) {
         displayStatTotals(charNum);
     }
+    else {
+        displayRefinement(charNum);
+    }
     //Arena Score Calculation
     if (charInfo[$("#char-" + charNum).val()].hasOwnProperty("base_stat")) {
         var points = ArenaScoreCalc(charNum);
@@ -158,6 +161,23 @@ $(".blessing-selector").on("change", function (){
     var charNum = $(this).data("charnum").toString();
     if (charInfo[$("#char-" + charNum).val()].hasOwnProperty("base_stat")) {
         displayStatTotals(charNum);
+    }
+    else {
+        var selectID ="#blessing-"+charNum;
+        var blessName = $(selectID).val();
+        updateStatTotal(selectID, charNum, false);
+        $(selectID).data("info", blessingsInfo[blessName]);
+        updateStatTotal(selectID, charNum, true);
+		selectID ="#blessing2-"+charNum;
+        blessName = $(selectID).val();
+        updateStatTotal(selectID, charNum, false);
+        $(selectID).data("info", blessingsInfo[blessName]);
+        updateStatTotal(selectID, charNum, true);
+		selectID ="#blessing3-"+charNum;
+        blessName = $(selectID).val();
+        updateStatTotal(selectID, charNum, false);
+        $(selectID).data("info", blessingsInfo[blessName]);
+        updateStatTotal(selectID, charNum, true);
     }
     //Arena Score Calculation
     if (charInfo[$("#char-" + charNum).val()].hasOwnProperty("base_stat")) {
@@ -221,7 +241,21 @@ $(".passive-selector").on("change", function (){
 // set up move type changes
 $(".move-type-selector").on("change", function() {
     var charNum = $(this).data("charnum").toString();
-    getMoveIcon((charNum === "1" ? "#move-1" : "#move-2"), this.value);
+    getMoveIcon((charNum === "1" ? "#move-type-1" : "#move-type-2"), this.value);
+
+    //infantry rush stuff!
+    var infantryRush="<option value=\"None\">---</option>";
+    var selectedRush="None";
+    if ($("#move-type-"+charNum).val() === "Infantry"){
+        infantryRush += "<option value=\"1\">1</option>";
+        infantryRush += "<option value=\"2\">2</option>";
+        infantryRush += "<option value=\"3\">3</option>";
+	}
+
+    // set values
+    $("#infantry-rush-" + charNum).html(infantryRush);
+    $("#infantry-rush-" + charNum).val(selectedRush).attr('selected', 'selected');
+
     charChange(charNum);
     updateDisplay();
 });
@@ -232,8 +266,9 @@ $(".weapon-type-selector").on("change", function (){
     loadWeapons(this.value, "#weapon-" + charNum, false);
     setColor(this.value, charNum);
     $("#weapon-" + charNum + " option:eq(1)").attr("selected", "selected").attr('selected', 'selected');
-    getWeaponIcon((charNum === "1" ? "#weapon-1" : "#weapon-2"), this.value);
+    getWeaponIcon((charNum === "1" ? "#weapon-type-1" : "#weapon-type-2"), this.value);
     showWeapon($("#weapon-" + charNum).val(), charNum, true, true);
+    updateRefinements($("#weapon-" + charNum).val(), charNum);
     //Arena Score Calculation
     if (charInfo[$("#char-" + charNum).val()].hasOwnProperty("base_stat")) {
         var points = ArenaScoreCalc(charNum);

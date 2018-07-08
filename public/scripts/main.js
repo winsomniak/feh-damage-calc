@@ -32,7 +32,22 @@ function customName(weaponType, moveType) {
         if (moveType === "Infantry") {
             return "Thief";
         }
-        name = "Dagger";
+        name = weaponType;
+    } else if (weaponType === "Red Dagger") {
+        if (moveType === "Infantry") {
+            return "Red Thief";
+        }
+        name = weaponType;
+    } else if (weaponType === "Blue Dagger") {
+        if (moveType === "Infantry") {
+            return "Blue Thief";
+        }
+        name = weaponType;
+    } else if (weaponType === "Green Dagger") {
+        if (moveType === "Infantry") {
+            return "Green Thief";
+        }
+        name = weaponType;
     } else if (weaponType === "Red Breath") {
         if (moveType === "Infantry") {
             return "Red Dragon";
@@ -71,11 +86,11 @@ function customName(weaponType, moveType) {
 // given a weapon type, return its color
 function weaponToColor(weaponType) {
 
-    if (weaponType === "Sword" || weaponType === "Red Tome" || weaponType === "Red Breath" || weaponType === "Red Bow") {
+    if (weaponType === "Sword" || weaponType === "Red Tome" || weaponType === "Red Breath" || weaponType === "Red Bow" || weaponType === "Red Dagger") {
         return "Red";
-    } else if (weaponType === "Axe" || weaponType === "Green Tome" || weaponType === "Green Breath" || weaponType === "Green Bow") {
+    } else if (weaponType === "Axe" || weaponType === "Green Tome" || weaponType === "Green Breath" || weaponType === "Green Bow" || weaponType === "Green Dagger") {
         return "Green";
-    } else if (weaponType === "Lance" || weaponType === "Blue Tome" || weaponType === "Blue Breath" || weaponType === "Blue Bow") {
+    } else if (weaponType === "Lance" || weaponType === "Blue Tome" || weaponType === "Blue Breath" || weaponType === "Blue Bow" || weaponType === "Blue Dagger") {
         return "Blue";
     }
 
@@ -132,6 +147,9 @@ function isInheritableWeapon(weapon, charName) {
     }
     if (weaponType.indexOf("Bow") !== -1) {
         weaponType = "Bow";
+    }
+    if (weaponType.indexOf("Dagger") !== -1) {
+        weaponType = "Dagger";
     }
 
     return !weapon.char_unique && weapon.type === weaponType;
@@ -398,6 +416,9 @@ function updateRefinements(selectedWeapon, charNum)
     // set values
     $("#refinement-" + charNum).html(refinements);
     $("#refinement-" + charNum).val(selectedRefinement).attr('selected', 'selected');
+    if (!charInfo[$("#char-" + charNum).val()].hasOwnProperty("base_stat")) {
+        displayRefinement(charNum);
+    }
 }
 
 // show special cooldown values
@@ -485,11 +506,11 @@ function loadSpecials(selectID) {
 // weaponType is the type of weapon, charNum determines which panel to display in
 function setColor(weaponType, charNum) {
 
-    if (weaponType === "Sword" || weaponType === "Red Tome" || weaponType === "Red Breath" || weaponType == "Red Bow") {
+    if (weaponType === "Sword" || weaponType === "Red Tome" || weaponType === "Red Breath" || weaponType === "Red Bow" || weaponType === "Red Dagger") {
         $("#color-" + charNum).val("Red");
-    } else if (weaponType === "Axe" || weaponType === "Green Tome" || weaponType === "Green Breath" || weaponType == "Green Bow") {
+    } else if (weaponType === "Axe" || weaponType === "Green Tome" || weaponType === "Green Breath" || weaponType === "Green Bow" || weaponType === "Green Dagger") {
         $("#color-" + charNum).val("Green");
-    } else if (weaponType === "Lance" || weaponType === "Blue Tome" || weaponType === "Blue Breath" || weaponType == "Blue Bow") {
+    } else if (weaponType === "Lance" || weaponType === "Blue Tome" || weaponType === "Blue Breath" || weaponType === "Blue Bow" || weaponType === "Blue Dagger") {
         $("#color-" + charNum).val("Blue");
     } else {
         $("#color-" + charNum).val("Colorless");
@@ -538,7 +559,7 @@ function applyStatMods(stats, skillName, dataInfo) {
 
 // applies any stat modifiers to the given stats and returns the resulting stats
 // stats contain the character's stats, skillName is the skill to check for stat mods, dataInfo contains the info for the given skill
-function applyStatModsRef(stats, refinement, type, weapon) {
+function applyStatModsRef(stats, refinement, type, weapon, increment) {
     if(refinement!="None" && weapon.hasOwnProperty("refinable"))
     {
         var tmp;
@@ -548,7 +569,10 @@ function applyStatModsRef(stats, refinement, type, weapon) {
             tmp=refinementsInfo[type][refinement];
         if (tmp.hasOwnProperty("stat_mod")) {
             for (var key in tmp.stat_mod) {
-                stats[key] += tmp.stat_mod[key];
+                if(increment)
+                    stats[key] += tmp.stat_mod[key];
+                else
+                    stats[key] -= tmp.stat_mod[key];
                 if (stats[key] < 0) {
                     stats[key] = 0;
                 } else if (stats[key] > 99) {
@@ -558,7 +582,10 @@ function applyStatModsRef(stats, refinement, type, weapon) {
         }
         if (weapon.refinable.hasOwnProperty("stat_mod")) {
             for (var key in weapon.refinable.stat_mod) {
-                stats[key] += weapon.refinable.stat_mod[key];
+                if(increment)
+                    stats[key] += weapon.refinable.stat_mod[key];
+                else
+                    stats[key] -= weapon.refinable.stat_mod[key];
                 if (stats[key] < 0) {
                     stats[key] = 0;
                 } else if (stats[key] > 99) {
@@ -702,7 +729,7 @@ function getStatTotals(charName, weaponName, passiveA, seal, rarity, level, merg
     stats = applyStatMods(stats, blessing2, blessingsInfo);
     stats = applyStatMods(stats, blessing3, blessingsInfo);
 	if(refinement!="None" && weaponName!="None" && weaponInfo[weaponName].hasOwnProperty("refinable"))
-        stats = applyStatModsRef(stats, refinement, weaponInfo[weaponName].refinable.type, weaponInfo[weaponName]);
+        stats = applyStatModsRef(stats, refinement, weaponInfo[weaponName].refinable.type, weaponInfo[weaponName], true);
 
     //Apply support bonuses
     if (summonerSupport !== '') {
@@ -749,6 +776,35 @@ function displayStatTotals(charNum) {
     $("#res-" + charNum).val(stats.res);
     $('#summoner-support-' + charNum).val(summonerSupport);
     $('#ally-support-' + charNum).val(allySupport);
+}
+
+// displays stat totals for refinements with Custom units
+// charNum determines the character panel
+function displayRefinement(charNum) {
+
+    // get info
+    var charName = $("#char-" + charNum).val();
+    var weaponName = $("#weapon-" + charNum).val();
+    var refinement = $("#refinement-" + charNum).val();
+	var stats = {};
+	var statNames = ["hp", "atk", "spd", "def", "res"];
+    stats[statNames[0]] = parseInt($("#hp-" + charNum).val(), 10);
+    stats[statNames[1]] = parseInt($("#atk-" + charNum).val(), 10);
+    stats[statNames[2]] = parseInt($("#spd-" + charNum).val(), 10);
+    stats[statNames[3]] = parseInt($("#def-" + charNum).val(), 10);
+    stats[statNames[4]] = parseInt($("#res-" + charNum).val(), 10);
+    if(prevRefinements[charNum-1] !== "None")
+        stats = applyStatModsRef(stats, prevRefinements[charNum-1], weaponInfo[prevWeapons[charNum-1]].refinable.type, weaponInfo[prevWeapons[charNum-1]], false);
+    if(refinement !== "None" && weaponInfo[weaponName].hasOwnProperty("refinable"))
+        stats = applyStatModsRef(stats, refinement, weaponInfo[weaponName].refinable.type, weaponInfo[weaponName], true);
+    $("#hp-" + charNum + ", #curr-hp-" + charNum).val(stats.hp);
+    $(".hp-" + charNum + "-read").text(stats.hp);
+    $("#atk-" + charNum).val(stats.atk);
+    $("#spd-" + charNum).val(stats.spd);
+    $("#def-" + charNum).val(stats.def);
+    $("#res-" + charNum).val(stats.res);
+    prevRefinements[charNum-1] = refinement;
+    prevWeapons[charNum-1] = weaponName;
 }
 
 //Get the sp of each skill/weapon

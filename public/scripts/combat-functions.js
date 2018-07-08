@@ -262,7 +262,7 @@ function Follow(char, agent, attacker, CanCounter, battleInfo) {
             bfup=char[checks[i]].defense_follow_up;
         if (bfup) {
             if ((!bfup.hasOwnProperty("threshold")) || (bfup.trigger==='healthy' && char.initHP >= roundNum(bfup.threshold * char.hp, true)) || (bfup.trigger==='damaged' && char.initHP <= roundNum(bfup.threshold * char.hp, true))) { //hp check for all of them
-                if((!bfup.hasOwnProperty("weapon_type")) || (bfup.weapon_type.includes(othWeapon) && (othWeapon !== 'Bow' || othColor === 'Colorless'))){ //breaker check
+                if((!bfup.hasOwnProperty("weapon_type")) || (bfup.weapon_type.includes(othWeapon) && (othWeapon !== 'Bow' || othColor === 'Colorless') && (othWeapon !== 'Dagger' || othColor === 'Colorless'))){ //breaker check
                     if((!bfup.hasOwnProperty("counterable")) || (CanCounter)) { //brash check
                         if((!bfup.hasOwnProperty("adjacent_dependant")) || char.adjacent <= agent.adjacent) { //LEphraim's check
                             doubling++;
@@ -310,7 +310,7 @@ function Prevent(char, agent, ageWeapon, battleInfo, attacker)
             //healthy (Breakers and Wary fighter), stat_to_check (Myrrh) and adjacent dependent (Hector's Thunder Armads)
             if ((!prev.hasOwnProperty("stat_to_check")) || (ReturnStat(char, prev.stat_to_check) >= ReturnStat(agent, prev.stat_to_check)+ prev.stat_amount)) {
                 if((!prev.hasOwnProperty("threshold")) || char.initHP >= roundNum(prev.threshold * char.hp, true)) {
-                    if((!prev.hasOwnProperty("weapon_type")) || (prev.weapon_type.includes(ageWeapon) && (ageWeapon !== 'Bow' || agent.color === 'Colorless'))) {
+                    if((!prev.hasOwnProperty("weapon_type")) || (prev.weapon_type.includes(ageWeapon) && (ageWeapon !== 'Bow' || agent.color === 'Colorless') && (ageWeapon !== 'Dagger' || agent.color === 'Colorless'))) {
                         if((!prev.hasOwnProperty("adjacent_dependant")) || (char.adjacent > agent.adjacent)) {
                             prevention+=1;
                             battleInfo.logMsg+= "<li class='battle-interaction'><span class='" + char.agentClass + "'>" + char.display + "</span>'s " + char[checks[i]].name + " activated, decreasing <span class='" + agent.agentClass + "'>" + agent.display +"</span>'s ability to follow-up!</li>";
@@ -573,9 +573,6 @@ function hasSpecAccel(battleInfo, attacker, defender, initiator, block) {
         }
 
         //heavy blade part
-        mainUnit = initiator ? battleInfo.attacker : battleInfo.defender;
-        otherUnit = initiator ? battleInfo.defender : battleInfo.attacker;
-
         //If no spec_accel data, or we shouldn't do the following part, continue to next ability
         if((!mainUnit[key].spec_accel)||(block))
             continue;
@@ -610,12 +607,8 @@ function hasSpecAccel(battleInfo, attacker, defender, initiator, block) {
             }
         }
     }
-    if(done)
-        return true;
     //infantry rush part
-    mainUnit = initiator ? battleInfo.attacker : battleInfo.defender;
-    otherUnit = initiator ? battleInfo.defender : battleInfo.attacker;
-    if(mainUnit.infantryRush !== "None")
+    if(!block && mainUnit.infantryRush !== "None")
     {
         var stat="atk";
         var reqStatAdvantage= (2 * (3 - mainUnit.infantryRush)) + 1;
@@ -648,7 +641,7 @@ function enemyPhaseCharge(battleInfo, attacker, defender) {
                 done=true;
                 return;
             }
-            else if (effect.defend && Object.is(defender, battleInfo.defender) && (!effect.hasOwnProperty("threshold") || (defender.initHP >= roundNum(effect.threshold * defender.hp, true)))) {
+            else if (effect.defend && Object.is(defender, battleInfo.defender) && (defender.currHP > 0) && (!effect.hasOwnProperty("threshold") || (defender.initHP >= roundNum(effect.threshold * defender.hp, true)))) {
                 if(defender.specCurrCooldown > 0) {
                     battleInfo.logMsg += "<span class='" +defender.agentClass + "'>" +defender.display + "</span> gained an additional special cooldown charge [" + defender[key].name + "]! ";
                     defender.specCurrCooldown--;
