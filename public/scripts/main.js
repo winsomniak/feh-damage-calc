@@ -1796,7 +1796,7 @@ function singleCombat(battleInfo, initiator, logIntro, brave) {
     // Damage reduction for sequential attacks (originally for Urvan)
     if (battleInfo.lastActor === attacker.name) {
 
-        var multiplier = consecutiveDamageReduction(dmg, defender, attacker)
+        var multiplier = consecutiveDamageReduction(dmg, defender, attacker, battleInfo)
 
         if (multiplier !== 1) {
             dmg = roundNum(dmg * multiplier, true);
@@ -2111,10 +2111,6 @@ function simBattle(battleInfo, displayMsg) {
     // can defender counter
     var defCC = defCanCounter(battleInfo);
     var defAttacks = false;
-
-    //Fix range of attack, useful to fix a bug with Sigurd's B passive
-    if(defCC && defender.weaponData.range != attacker.weaponData.range)
-        defender.weaponData.range = attacker.weaponData.range;
 
     //New follow-up logic
     battleInfo = Follow(attacker, defender, true, defCC, battleInfo);

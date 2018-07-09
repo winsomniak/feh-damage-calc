@@ -1,0 +1,18 @@
+{
+    "name": "Fishie Bow",
+    "might": 8,
+    "range": 2,
+    "sp": 200,
+    "description": "Effective against flying foes. If unit’s HP ≤ 75% and unit initiates combat, unit can make a follow-up attack before foe can counterattack.",
+    "type": "Bow",
+    "color": "Colorless",
+    "magical": false,
+    "desperation": {
+        "threshold": 0.75
+    },
+    "move_effective": [
+        "Flying"
+    ],
+    "link": "https://kagerochart.com/hero/weapons/fishie-bow",
+    "id": "fishie-bow"
+}

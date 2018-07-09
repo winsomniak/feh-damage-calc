@@ -1,0 +1,9 @@
+{
+    "name": "Odd Res Wave 2",
+    "sp": 120,
+    "type": "C",
+    "description": "At start of odd-numbered turns, grants Res+4 to unit and adjacent allies for 1 turn. (Bonus granted to unit even if no allies are adjacent.)",
+    "icon": "/images/icons/passives/odd-res-wave-2.png",
+    "link": "https://kagerochart.com/hero/passives/odd-res-wave-2",
+    "id": "odd-res-wave-2"
+}

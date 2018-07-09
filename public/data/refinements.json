@@ -157,6 +157,17 @@
             },
             "description":" Grants Atk/Spd+3 to cavalry and flying allies within 2 spaces during combat."
         },
+        "Dauntless Lance":
+        {
+            "stat_mod":{
+                "hp":3
+            },
+            "defend_mod": {
+                "spd": 4,
+                "def": 4
+            },
+            "description":" If foe initiates combat, grants Spd/Def+4 during combat."
+        },
         "Deathly Dagger":{
            "prevent_weapon_counter": {
                "type": [
@@ -167,6 +178,13 @@
                 ]
             },
             "description":" Foes using magic cannot counterattack."
+        },
+        "Draconic Poleax":
+        {
+            "stat_mod":{
+                "hp":3
+            },
+            "description":" At start of turn, grants Res+6 to allies within 2 spaces for 1 turn. Granted only if number of that ally's movement type on current team ≤ 2."
         },
         "Eckesachs":{
             "description":" If unit is attacked by foe using bow, daggers, magic, or staff, unit receives Def/Res+6 during combat.",
@@ -325,6 +343,10 @@
                     "res": 3
                 }
             }
+        },
+        "Reese's Tome":
+        {
+            "description":" At start of turn, inflicts Spd/Res-4 on foes in cardinal directions with Res < unit’s Res through their next actions."
         },
         "Cymbeline":{
             "description":" Grants Atk/Res+5 during combat if within 2 spaces of a flying ally.",

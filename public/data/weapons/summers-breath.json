@@ -1,0 +1,26 @@
+{
+    "name": "Summer's Breath",
+    "might": 16,
+    "range": 1,
+    "sp": 400,
+    "description": "Effective against dragon foes. Grants Def+3. If foe initiates combat, grants Special cooldown charge +1 per attack during combat. (Only highest value applied. Does not stack.) If foe's Range = 2, calculates damage using the lower of foe's Def or Res.",
+    "type": "Breath",
+    "magical": true,
+    "LowerResDefRange": 2,
+    "stat_mod":{
+        "def":3
+    },
+    "weapon_effective": [
+        "Breath",
+        "Red Breath",
+        "Green Breath",
+        "Blue Breath"
+    ],
+    "enemy_phase_charge": {
+        "attack": true,
+        "defend": true
+    },
+    "char_unique": true,
+    "link": "https://kagerochart.com/hero/weapons/summers-breath",
+    "id": "summers-breath"
+}

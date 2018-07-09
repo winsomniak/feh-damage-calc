@@ -1,0 +1,11 @@
+{
+    "description": "If unit's Spd - foe's Spd ≥ 5, unit gains Special cooldown charge +1 per attack.\r\n(If using other similar skill, only highest value applied.)",
+    "id": "flashing-blade-1",
+    "name": "Flashing Blade 1",
+    "spec_accel": {
+        "stat": "spd",
+        "adv": 5
+    },
+    "sp":60,
+    "type": "s"
+}

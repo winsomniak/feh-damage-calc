@@ -9,6 +9,7 @@
     "move_type": "Cavalry",
     "LowestRarity":3,
     "weapon": [
+        "draconic-poleax",
         "emerald-axe-plus",
         "emerald-axe",
         "steel-axe",

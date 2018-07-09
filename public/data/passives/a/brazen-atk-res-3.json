@@ -1,0 +1,16 @@
+{
+    "name": "Brazen Atk Res 3",
+    "sp": 240,
+    "type": "A",
+    "description": "If unit's HP ≤ 80% at the start of combat, grants Atk/Res+7 during combat.",
+    "icon": "/images/icons/passives/brazen-atk-res-3.png",
+    "link": "https://kagerochart.com/hero/passives/brazen-atk-res-3",
+    "below_threshold_mod": {
+        "threshold": 0.8,
+        "stat_mod": {
+            "atk": 7,
+            "res": 7
+        }
+    },
+    "id": "brazen-atk-res-3"
+}

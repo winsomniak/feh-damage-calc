@@ -1,0 +1,10 @@
+{
+    "name": "Dragon Valor 3",
+    "sp": 120,
+    "type": "C",
+    "description": "While unit lives, all dragonstone allies on team get 2x SP. (Only highest value applied. Does not stack.)",
+    "icon": "/images/icons/passives/dragon-valor-3.png",
+    "link": "https://kagerochart.com/hero/passives/dragon-valor-3",
+    "dragon_unique": true,
+    "id": "dragon-valor-3"
+}

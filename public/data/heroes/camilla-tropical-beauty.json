@@ -1,0 +1,52 @@
+{
+    "display": "Camilla, Tropical Beauty",
+    "name": "Camilla",
+    "title": "Tropical Beauty",
+    "id": "camilla-tropical-beauty",
+    "color": "Blue",
+    "weapon_type": "Blue Tome",
+    "link": "https://kagerochart.com/hero/camilla-tropical-beauty",
+    "move_type": "Flying",
+    "weapon": [
+        "juicy-wave-plus",
+        "juicy-wave",
+        "elthunder",
+        "thunder"
+    ],
+    "special": [
+        "draconic-aura",
+        "dragon-gaze"
+    ],
+    "passive_a": [
+        "death-blow-3",
+        "death-blow-2",
+        "death-blow-1"
+    ],
+    "passive_b": [
+        "flier-formation-3",
+        "flier-formation-2",
+        "flier-formation-1"
+    ],
+    "passive_c": [
+        "hone-fliers",
+        "hone-atk-2",
+        "hone-atk-1"
+    ],
+    "base_stat": {
+        "star_5": {
+            "hp": 17,
+            "atk": 7,
+            "spd": 10,
+            "def": 6,
+            "res": 4
+        },
+        "growth": {
+            "hp": 6,
+            "atk": 8,
+            "spd": 8,
+            "def": 4,
+            "res": 3,
+            "total": 29
+        }
+    }
+}
