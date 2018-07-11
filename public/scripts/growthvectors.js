@@ -2514,11 +2514,12 @@ function getGrowthVector(basestat, gp, rarity, vbase) {
         [ 23,  25, 27, 28, 30],
         [ 24,  26, 29, 31, 33],
         [ 26,  28, 31, 33, 35],
-        [NaN, NaN, 33, 35, 37],
+        [ 28,  30, 33, 35, 37],
+        [ 29,  32, 35, 37, 39],
     ];
     const GVGV = [
-        [NaN, NaN, -23, -22, -21],
-        [NaN, NaN, -18, -17, -15],
+        [-27, -25, -23, -22, -21],
+        [-22, -20, -18, -17, -15],
         [-18, -16, -13, -11,  -9],
         [-13, -11,  -8,  -6,  -4],
         [ -9,  -6,  -3,  -1,   2],
@@ -2527,14 +2528,12 @@ function getGrowthVector(basestat, gp, rarity, vbase) {
         [  4,   8,  12,  15,  19],
         [  8,  12,  17,  21,  25],
         [ 12,  17,  22,  26,  31],
-        [NaN, NaN,  27,  31,  36],
-        [NaN, NaN,  32,  37,  42],
-        [NaN, NaN, NaN,  42,  48],
-    ];
+        [ 17,  22,  27,  31,  36],
+        [ 21,  26,  32,  37,  42],
+        [ 25,  31,  37,  42,  48],
+        [ 29,  36,  42,  47,  53],
+    ]; //Some of these are speculative
 
-    //Arden would break the game with an hp boon
-    if(gp > 12)
-        gp=12;
     let gpgrow = GPGV[gp][rarity - 1];
     let gvgrow = GVGV[gp][rarity - 1];
     if (isNaN(gpgrow) || isNaN(gvgrow))
