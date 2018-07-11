@@ -83,6 +83,29 @@ $(".curr-hp-val").on("change", function() {
     updateDisplay();
 });
 
+//level update
+$(".level-val").on("change", function() {
+    var charNum = $(this).data("charnum").toString();
+
+    // current level cannot be greater than 40
+    if (this.value > 40) {
+        this.value = 40;
+    }
+
+    if (charInfo[$("#char-" + charNum).val()].hasOwnProperty("base_stat")) {
+        displayStatTotals(charNum);
+    }
+
+    //Arena Score Calculation
+    if (charInfo[$("#char-" + charNum).val()].hasOwnProperty("base_stat")) {
+        var points = ArenaScoreCalc(charNum);
+        $(".arena-score-" + charNum + "-read").text(points.toString());
+    }
+
+    charChange(charNum);
+    updateDisplay();
+});
+
 // setup special cooldown updates
 $(".spec-cool").on("change", function() {
     var charNum = $(this).data("charnum").toString();
@@ -241,7 +264,7 @@ $(".passive-selector").on("change", function (){
 // set up move type changes
 $(".move-type-selector").on("change", function() {
     var charNum = $(this).data("charnum").toString();
-    getMoveIcon((charNum === "1" ? "#move-type-1" : "#move-type-2"), this.value);
+    getMoveIcon((charNum === "1" ? "#move-icon-1" : "#move-icon-2"), this.value);
 
     //infantry rush stuff!
     var infantryRush="<option value=\"None\">---</option>";
@@ -266,7 +289,7 @@ $(".weapon-type-selector").on("change", function (){
     loadWeapons(this.value, "#weapon-" + charNum, false);
     setColor(this.value, charNum);
     $("#weapon-" + charNum + " option:eq(1)").attr("selected", "selected").attr('selected', 'selected');
-    getWeaponIcon((charNum === "1" ? "#weapon-type-1" : "#weapon-type-2"), this.value);
+    getWeaponIcon((charNum === "1" ? "#weapon-icon-1" : "#weapon-icon-2"), this.value);
     showWeapon($("#weapon-" + charNum).val(), charNum, true, true);
     updateRefinements($("#weapon-" + charNum).val(), charNum);
     //Arena Score Calculation
@@ -304,6 +327,17 @@ $("#override-weapon-type").on("change", function (){
         $("#override-adjacent-block").hide(500);
         $("#override-adjacent").val("0");
     }
+
+    updateDisplay();
+});
+
+//level update
+$(".override-level-val").on("change", function() {
+    // current level cannot be greater than 40
+    if (this.value > 40) {
+        this.value = 40;
+    }
+    keepTable = false;
 
     updateDisplay();
 });
@@ -414,6 +448,21 @@ $("#matchup-filters input").on("change", function() {
 
 // override options
 $(".override-option").on("change", function() {
+    // set banes and boons
+    if ((this.id === "override-boon" && this.value !== "neutral") && $("#override-bane").val() === "neutral") {
+        $("#override-bane").val("hp");
+        if(this.value === "hp")
+            $("#override-bane").val("res");
+    }
+    if ((this.id === "override-bane" && this.value !== "neutral") && $("#override-boon").val() === "neutral") {
+        $("#override-boon").val("hp");
+        if(this.value === "hp")
+            $("#override-boon").val("res");
+    }
+    if((this.id === "override-boon" && (this.value === "neutral" || this.value === $("#override-bane").val())) || (this.id === "override-bane" && (this.value === "neutral" || this.value === $("#override-boon").val()))) {
+        $("#override-boon").val("neutral");
+        $("#override-bane").val("neutral");
+    }
     // check if boon and bane match
     if (this.id === "override-boon" && this.value === $("#override-bane").val()) {
         $("#override-bane").val("neutral");
@@ -463,12 +512,20 @@ $("#override-reset").on("click", function() {
 $(".build-select").on("change", function() {
     var charNum = $(this).data("charnum").toString();
 
-    // check if banes and boons match
-    if ($(this).hasClass("boon-select") && this.value === $("#bane-" + charNum).val()) {
-        $("#bane-" + charNum).val("neutral");
+    // set banes and boons
+    if (($(this).hasClass("boon-select") && this.value !== "neutral") && $("#bane-" + charNum).val() === "neutral") {
+        $("#bane-" + charNum).val("hp");
+        if(this.value === "hp")
+            $("#bane-" + charNum).val("res");
     }
-    if ($(this).hasClass("bane-select") && this.value === $("#boon-" + charNum).val()) {
+    if (($(this).hasClass("bane-select") && this.value !== "neutral") && $("#boon-" + charNum).val() === "neutral") {
+        $("#boon-" + charNum).val("hp");
+        if(this.value === "hp")
+            $("#boon-" + charNum).val("res");
+    }
+    if(($(this).hasClass("boon-select") && (this.value === "neutral" || this.value === $("#bane-" + charNum).val())) || ($(this).hasClass("bane-select") && (this.value === "neutral" || this.value === $("#boon-" + charNum).val()))) {
         $("#boon-" + charNum).val("neutral");
+        $("#bane-" + charNum).val("neutral");
     }
 
     // check if skills need to change due to rarity change

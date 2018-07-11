@@ -131,11 +131,10 @@
 
                             <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
                                 <div class="mdc-select mdc-select--box mdc-ripple-upgraded">
-                                    <select id="level-{{charNum}}" class="mdc-select__native-control level-select build-select link-field" data-charnum="{{charNum}}">
-                                        <option value="40" selected>Lvl. 40</option>
-                                        <option value="1">Lvl. 1</option>
+                                    <select id="rarity-{{charNum}}" class="mdc-select__native-control rarity-select build-select link-field" data-charnum="{{charNum}}">
+                                        <option value="5" selected>5 Stars</option>
                                     </select>
-                                    <label class="mdc-floating-label mdc-floating-label--float-above" for="level-{{charNum}}" >Level</label>
+                                    <label class="mdc-floating-label mdc-floating-label--float-above" for="rarity-{{charNum}}">Rarity</label>
                                 </div>
                             </div>
 
@@ -198,11 +197,11 @@
                         <div class="mdc-layout-grid__inner">
 
                             <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
-                                <div class="mdc-select mdc-select--box mdc-ripple-upgraded">
-                                    <select id="rarity-{{charNum}}" class="mdc-select__native-control rarity-select build-select link-field" data-charnum="{{charNum}}">
-                                        <option value="5" selected>5 Stars</option>
-                                    </select>
-                                    <label class="mdc-floating-label mdc-floating-label--float-above" for="rarity-{{charNum}}">Rarity</label>
+                                <div class="mdc-text-field mdc-text-field--upgraded info-section-bottom level">
+                                    <label class="mdc-floating-label mdc-floating-label--float-above level-label" for="level-{{charNum}}" data-charnum="{{charNum}}">
+                                        Level / 40
+                                    </label>
+                                    <input type="number" id="level-{{charNum}}" class="mdc-text-field__input more-than-zero level-val" data-charnum="{{charNum}}" value="40" autocomplete="on">
                                 </div>
                             </div>
 

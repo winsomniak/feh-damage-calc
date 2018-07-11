@@ -229,19 +229,24 @@
             <div class="tab-panel">
 
                 <div id="override-char-build-info">
+
+                    <div class="mdc-layout-grid__cell mdc-layout-grid__cell">
+                        <div class="mdc-text-field mdc-text-field--upgraded info-section-bottom override-level">
+                            <label class="mdc-floating-label mdc-floating-label--float-above override-level-label" for="override-level">
+                                Level / 40
+                            </label>
+                            <input type="number" id="override-level" class="mdc-text-field__input more-than-zero override-level-val" value="40" autocomplete="on">
+                        </div>
+                    </div>
                     <div class="mdc-select mdc-select--box mdc-ripple-upgraded">
                         <select id="override-rarity" class="mdc-select__native-control override-option rarity-select">
                             <option value="5">5 Stars</option>
+                            <option value="4">4 Stars</option>
+                            <option value="3">3 Stars</option>
+                            <option value="2">2 Stars</option>
+                            <option value="1">1 Star</option>
                         </select>
                         <label class="mdc-floating-label mdc-floating-label--float-above" for="override-rarity">Rarity</label>
-                        <div class="mdc-line-ripple"></div>
-                    </div>
-                    <div class="mdc-select mdc-select--box mdc-ripple-upgraded">
-                        <select id="override-level" class="mdc-select__native-control override-option level-select">
-                            <option value="40">Lvl. 40</option>
-                            <option value="1">Lvl. 1</option>
-                        </select>
-                        <label class="mdc-floating-label mdc-floating-label--float-above" for="override-level">Level</label>
                         <div class="mdc-line-ripple"></div>
                     </div>
                     <div class="mdc-select mdc-select--box mdc-ripple-upgraded">

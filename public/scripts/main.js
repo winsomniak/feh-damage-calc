@@ -643,7 +643,7 @@ function getAllStatsBasedOn5Star(rarity, charName, statsBases)
 function getBaseStat(stats, rarity, charName, boon, bane)
 {
 	var statsBases={};
-	statBases=getAllStatsBasedOn5Star(rarity, charName, statsBases)
+	statBases=getAllStatsBasedOn5Star(rarity, charName, statsBases);
     var statNames = ["hp", "atk", "spd", "def", "res"];
 	statNames.forEach(function(key)
 	{
@@ -660,15 +660,22 @@ function getStatTotals(charName, weaponName, passiveA, seal, rarity, level, merg
 
     // base stats + boons/banes
     var stats = {};
-	stats=getBaseStat(stats, rarity, charName, boon, bane);
+    
 
     //Fix issue with even rarities and merges
     var statsbase = {};
-	statsbase=getBaseStat(statsbase, 5, charName, boon, bane);
+    statsbase=getAllStatsBasedOn5Star(5, charName, statsbase);
+
+    stats=getStatTable(level, statsbase, charInfo[charName].base_stat.growth, rarity, charInfo[charName].base_stat.growth_type, boon, bane, charName);
+
+    const statNames = ["hp", "atk", "spd", "def", "res"];
+    statNames.forEach(function(key)
+    {
+        statsbase[key]=statsbase[key] + ((boon === key) ? 1 : 0) + ((bane === key) ? -1 : 0);
+    });
 
     // merged units
     if (merge > 0) {
-        var statNames = ["hp", "atk", "spd", "def", "res"];
         var mergeBonusOrder = ["hp", "atk", "spd", "def", "res"];
 
         // sort statsbase from highest to lowest with insertion sort haha
@@ -701,15 +708,6 @@ function getStatTotals(charName, weaponName, passiveA, seal, rarity, level, merg
                 bonusIndex = (bonusIndex + 1) % 5;
             }
         }
-    }
-
-    // apply stat growths
-    if (level === 40) {
-        stats.hp += statGrowths[rarity-1][charInfo[charName].base_stat.growth.hp + ((boon === "hp") ? 1 : 0) + ((bane === "hp") ? -1 : 0)];
-        stats.atk += statGrowths[rarity-1][charInfo[charName].base_stat.growth.atk + ((boon === "atk") ? 1 : 0) + ((bane === "atk") ? -1 : 0)];
-        stats.spd += statGrowths[rarity-1][charInfo[charName].base_stat.growth.spd + ((boon === "spd") ? 1 : 0) + ((bane === "spd") ? -1 : 0)];
-        stats.def += statGrowths[rarity-1][charInfo[charName].base_stat.growth.def + ((boon === "def") ? 1 : 0) + ((bane === "def") ? -1 : 0)];
-        stats.res += statGrowths[rarity-1][charInfo[charName].base_stat.growth.res + ((boon === "res") ? 1 : 0) + ((bane === "res") ? -1 : 0)];
     }
 
     // add weapon might
@@ -842,16 +840,11 @@ function ArenaScoreCalc(charNum) {
     var weapSp = 0;
 
     if (charInfo[charName].hasOwnProperty("base_stat")){
-        var tmpstats={};
-        tmpstats=getBaseStat(tmpstats, rarity, charName, boon, bane);
-        // apply stat growths
-        if (level === 40) {
-            tmpstats.hp += statGrowths[rarity-1][charInfo[charName].base_stat.growth.hp + ((boon === "hp") ? 1 : 0) + ((bane === "hp") ? -1 : 0)];
-            tmpstats.atk += statGrowths[rarity-1][charInfo[charName].base_stat.growth.atk + ((boon === "atk") ? 1 : 0) + ((bane === "atk") ? -1 : 0)];
-            tmpstats.spd += statGrowths[rarity-1][charInfo[charName].base_stat.growth.spd + ((boon === "spd") ? 1 : 0) + ((bane === "spd") ? -1 : 0)];
-            tmpstats.def += statGrowths[rarity-1][charInfo[charName].base_stat.growth.def + ((boon === "def") ? 1 : 0) + ((bane === "def") ? -1 : 0)];
-            tmpstats.res += statGrowths[rarity-1][charInfo[charName].base_stat.growth.res + ((boon === "res") ? 1 : 0) + ((bane === "res") ? -1 : 0)];
-        }
+        var tmpstats = {};
+        var statsbase = {};
+	    statsbase=getBaseStat(statsbase, 5, charName, "neutral", "neutral");
+
+        tmpstats=getStatTable(level, statsbase, charInfo[charName].base_stat.growth, rarity, charInfo[charName].base_stat.growth_type, boon, bane, charName);
 
         BST = tmpstats.hp + tmpstats.atk + tmpstats.spd + tmpstats.def + tmpstats.res;
     }
