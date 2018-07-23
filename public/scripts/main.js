@@ -1110,7 +1110,8 @@ function getCharPanelData(charNum) {
 
     charData.status = {
         "candlelight": $("#candlelight-status-" + charNum).is(":checked"),
-        "panic": $("#panic-status-" + charNum).is(":checked")
+        "panic": $("#panic-status-" + charNum).is(":checked"),
+        "triangleAdept": $("#triangle-adept-status-" + charNum).is(":checked")
     };
 
     if ($("#defensive-terrain-" + charNum).is(":checked")) {
@@ -1226,7 +1227,8 @@ function getDefaultCharData(charName) {
 
     charData.status = {
         "candlelight": $("#override-candlelight-status").is(":checked"),
-        "panic": $("#override-panic-status").is(":checked")
+        "panic": $("#override-panic-status").is(":checked"),
+        "triangleAdept": $("#override-triangle-adept-status").is(":checked")
     };
 
     if ($("#override-defensive-terrain").is(":checked")) {
@@ -1610,6 +1612,12 @@ function singleCombat(battleInfo, initiator, logIntro, brave) {
         } else if (defender.weaponData.hasOwnProperty("tri_advantage")) {
             atkMod += 0.2;
             battleInfo.logMsg += "Opponent's weapon triangle affinity granted by skills boosts attack by another 20% [" + weaponInfo[defender.weaponName].name + "]. ";
+        } else if (attacker.status.triangleAdept) {
+            atkMod += 0.2;
+            battleInfo.logMsg += "Weapon triangle affinity granted by " + attacker.display + "'s status boosts attack by another 20%. ";
+        } else if (defender.status.triangleAdept) {
+            atkMod += 0.2;
+            battleInfo.logMsg += "Opponent's weapon triangle affinity granted by " + defender.display + "'s status boosts attack by another 20%. ";
         } else if (attacker.passiveAData.hasOwnProperty("tri_advantage")) {
             atkMod += attacker.passiveAData.tri_advantage;
             battleInfo.logMsg += "Weapon triangle affinity granted by skills boosts attack by another " + (attacker.passiveAData.tri_advantage * 100).toString() + "% [" + skillInfo['a'][attacker.passiveA].name + "]. ";
@@ -1630,6 +1638,12 @@ function singleCombat(battleInfo, initiator, logIntro, brave) {
         } else if (defender.weaponData.hasOwnProperty("tri_advantage")) {
             atkMod -= 0.2;
             battleInfo.logMsg += "Opponent's weapon triangle affinity granted by skills reduces attack by another 20% [" + weaponInfo[defender.weaponName].name + "]. ";
+        } else if (attacker.status.triangleAdept) {
+            atkMod -= 0.2;
+            battleInfo.logMsg += "Weapon triangle affinity granted by " + attacker.display + "'s status reduces attack by another 20%. ";
+        } else if (defender.status.triangleAdept) {
+            atkMod -= 0.2;
+            battleInfo.logMsg += "Opponent's weapon triangle affinity granted by " + defender.display + "'s status reduces attack by another 20%. ";
         } else if (attacker.passiveAData.hasOwnProperty("tri_advantage")) {
             atkMod -= attacker.passiveAData.tri_advantage;
             battleInfo.logMsg += "Weapon triangle affinity granted by skills reduces attack by another " + (attacker.passiveAData.tri_advantage * 100).toString() + "% [" + skillInfo['a'][attacker.passiveA].name + "]. ";
@@ -2198,7 +2212,7 @@ function simBattle(battleInfo, displayMsg) {
                 battleInfo = singleCombat(battleInfo, false, "counterattacks, ignoring distance [" + weaponInfo[defender.weaponName].name + "]", false);
                 defAttacks = true;
             } else if (defender.weaponName !== "None" && defender.passiveAData.hasOwnProperty("counter") && defCC) {
-                battleInfo = singleCombat(battleInfo, false, "counterattacks, ignoring distance [" + defender.passiveA + "]", false);
+                battleInfo = singleCombat(battleInfo, false, "counterattacks, ignoring distance [" + skillInfo['a'][defender.passiveA].name + "]", false);
                 defAttacks = true;
             } else if (defender.weaponName !== "None" && attacker.weaponData.hasOwnProperty("prevent_counter")) {
                 battleInfo.logMsg += "<li class='battle-interaction'><span class='defender'>" + defender.display + "</span> " + " is prevented from counterattacking [" + weaponInfo[attacker.weaponName].name + "].</li>";
@@ -2551,7 +2565,8 @@ function swap() {
     oldAtkInfo.currHP = $("#curr-hp-1").val();
     oldAtkInfo.status = {
         "candlelight": $("#candlelight-status-1").is(":checked"),
-        "panic": $("#panic-status-1").is(":checked")
+        "panic": $("#panic-status-1").is(":checked"),
+        "triangleAdept": $("#triangle-adept-status-1").is(":checked")
     };
     if ($("#defensive-terrain-1").is(":checked")) {
         oldAtkInfo.terrain = "Defensive";
@@ -2645,6 +2660,7 @@ function swap() {
 
     $("#candlelight-status-1").prop("checked", $("#candlelight-status-2").is(":checked"));
     $("#panic-status-1").prop("checked", $("#panic-status-2").prop("checked"));
+    $("#triangle-adept-status-1").prop("checked", $("#triangle-adept-status-2").prop("checked"));
     $("#defensive-terrain-1").prop("checked", $("#defensive-terrain-2").is(":checked"));
 
     $("#rarity-1").html($("#rarity-2").html());
@@ -2732,6 +2748,7 @@ function swap() {
     $(".hp-2-read").text(oldAtkInfo.hp);
     $("#panic-status-2").prop("checked", oldAtkInfo.status.panic);
     $("#candlelight-status-2").prop("checked", oldAtkInfo.status.candlelight);
+    $("#triangle-adept-status-2").prop("checked", oldAtkInfo.status.triangleAdept);
     if (oldAtkInfo.terrain === 'Default') {
         $("#defensive-terrain-2").prop("checked", false);
     }

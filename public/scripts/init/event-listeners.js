@@ -651,6 +651,7 @@ $(".draw-update").on("click", function() {
         $("#res-bonus-1").val(oldBA.attacker.resBonus);
         $("#panic-status-1").prop("checked", oldBA.attacker.status.panic);
         $("#candlelight-status-1").prop("checked", oldBA.attacker.status.candlelight);
+        $("#triangle-adept-status-1").prop("checked", oldBA.attacker.status.triangleAdept);
     }
 
     // update defender
@@ -674,6 +675,7 @@ $(".draw-update").on("click", function() {
         $("#res-bonus-2").val(oldBA.defender.resBonus);
         $("#panic-status-2").prop("checked", oldBA.defender.status.panic);
         $("#candlelight-status-2").prop("checked", oldBA.defender.status.candlelight);
+        $("#triangle-adept-status-2").prop("checked", oldBA.defender.status.triangleAdept);
     }
 
     // sim battle again

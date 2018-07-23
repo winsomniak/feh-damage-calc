@@ -348,7 +348,7 @@
                         <h3>Status Effects</h3>
                         <div class="mdc-form-field">
                             <div class="mdc-switch">
-                                <input type="checkbox" id="override-candlelight-status" class="mdc-switch__native-control" />
+                                <input type="checkbox" id="override-candlelight-status" class="mdc-switch__native-control override-option" />
                                 <div class="mdc-switch__background">
                                     <div class="mdc-switch__knob"></div>
                                 </div>
@@ -359,7 +359,7 @@
 
                         <div class="mdc-form-field">
                             <div class="mdc-switch">
-                                <input type="checkbox" id="override-panic-status" class="mdc-switch__native-control" />
+                                <input type="checkbox" id="override-panic-status" class="mdc-switch__native-control override-option" />
                                 <div class="mdc-switch__background">
                                     <div class="mdc-switch__knob"></div>
                                 </div>
@@ -370,12 +370,23 @@
 
                         <div class="mdc-form-field">
                             <div class="mdc-switch">
-                                <input type="checkbox" id="override-defensive-terrain" class="mdc-switch__native-control" />
+                                <input type="checkbox" id="override-defensive-terrain" class="mdc-switch__native-control override-option" />
                                 <div class="mdc-switch__background">
                                     <div class="mdc-switch__knob"></div>
                                 </div>
                             </div>
                             <label for="override-defensive-terrain" class="mdc-switch-label">Defensive Terrain</label>
+                            <div class="mdc-line-ripple"></div>
+                        </div>
+
+                        <div class="mdc-form-field">
+                            <div class="mdc-switch">
+                                <input type="checkbox" id="override-triangle-adept-status" class="mdc-switch__native-control override-option" />
+                                <div class="mdc-switch__background">
+                                    <div class="mdc-switch__knob"></div>
+                                </div>
+                            </div>
+                            <label for="override-triangle-adept-status" class="mdc-switch-label">Triangle Adept</label>
                             <div class="mdc-line-ripple"></div>
                         </div>
                     </section>
@@ -385,31 +396,31 @@
                     <h3 class="mdc-typography--caption">Bonus</h3>
                     <div class="stat-container">
                         <div class="mdc-text-field">
-                            <input type="number" id="override-hp-bonus" class="mdc-text-field__input hp-stat stat-bonus" value="0" autocomplete="off">
+                            <input type="number" id="override-hp-bonus" class="mdc-text-field__input hp-stat stat-bonus" value="0" override-option autocomplete="off">
                             <label for="hp-bonus-1" class="mdc-floating-label mdc-floating-label--float-above stat" title="A unit is defeated if their Hit Points reach 0.">HP</label>
                             <div class="mdc-line-ripple"></div>
                         </div>
 
                         <div class="mdc-text-field">
-                            <input type="number" id="override-atk-bonus" class="mdc-text-field__input battle-val stat-bonus" value="0" autocomplete="off">
+                            <input type="number" id="override-atk-bonus" class="mdc-text-field__input battle-val stat-bonus" value="0" override-option autocomplete="off">
                             <label for="atk-bonus-1" class="mdc-floating-label mdc-floating-label--float-above stat" title="The higher a unit's Attack, the more damage they deal.">ATK</label>
                             <div class="mdc-line-ripple"></div>
                         </div>
 
                         <div class="mdc-text-field">
-                            <input type="number" id="override-spd-bonus" class="mdc-text-field__input battle-val stat-bonus" value="0" autocomplete="off">
+                            <input type="number" id="override-spd-bonus" class="mdc-text-field__input battle-val stat-bonus" value="0" override-option autocomplete="off">
                             <label for="spd-bonus-1" class="mdc-floating-label mdc-floating-label--float-above stat" title="A unit will attack twice if their Speed is at least 5 more than their foe's Speed.">SPD</label>
                             <div class="mdc-line-ripple"></div>
                         </div>
 
                         <div class="mdc-text-field">
-                            <input type="number" id="override-def-bonus" class="mdc-text-field__input battle-val stat-bonus" value="0" autocomplete="off">
+                            <input type="number" id="override-def-bonus" class="mdc-text-field__input battle-val stat-bonus" value="0" override-option autocomplete="off">
                             <label for="def-bonus-1" class="mdc-floating-label mdc-floating-label--float-above stat" title="The higher a unit's Defense is, the less damage they take from physical attacks.">DEF</label>
                             <div class="mdc-line-ripple"></div>
                         </div>
 
                         <div class="mdc-text-field">
-                            <input type="number" id="override-res-bonus" class="mdc-text-field__input battle-val stat-bonus" value="0" autocomplete="off">
+                            <input type="number" id="override-res-bonus" class="mdc-text-field__input battle-val stat-bonus" value="0" override-option autocomplete="off">
                             <label for="res-bonus-1" class="mdc-floating-label mdc-floating-label--float-above stat" title="The higher a unit's Resistance is, the less damage they take from magical attacks.">RES</label>
                             <div class="mdc-line-ripple"></div>
                         </div>
@@ -420,31 +431,31 @@
                     <h3 class="mdc-typography--caption">Penalty</h3>
                     <div class="stat-container">
                         <div class="mdc-text-field">
-                            <input type="number" id="override-hp-penalty" class="mdc-text-field__input hp-stat stat-penalty" value="0" autocomplete="off">
+                            <input type="number" id="override-hp-penalty" class="mdc-text-field__input hp-stat stat-penalty" value="0" override-option autocomplete="off">
                             <label for="hp-penalty-1" class="mdc-floating-label mdc-floating-label--float-above stat" title="A unit is defeated if their Hit Points reach 0.">HP</label>
                             <div class="mdc-line-ripple"></div>
                         </div>
 
                         <div class="mdc-text-field">
-                            <input type="number" id="override-atk-penalty" class="mdc-text-field__input battle-val stat-penalty" value="0" autocomplete="off">
+                            <input type="number" id="override-atk-penalty" class="mdc-text-field__input battle-val stat-penalty" value="0" override-option autocomplete="off">
                             <label for="atk-penalty-1" class="mdc-floating-label mdc-floating-label--float-above stat" title="The higher a unit's Attack, the more damage they deal.">ATK</label>
                             <div class="mdc-line-ripple"></div>
                         </div>
 
                         <div class="mdc-text-field">
-                            <input type="number" id="override-spd-penalty" class="mdc-text-field__input battle-val stat-penalty" value="0" autocomplete="off">
+                            <input type="number" id="override-spd-penalty" class="mdc-text-field__input battle-val stat-penalty" value="0" override-option autocomplete="off">
                             <label for="spd-penalty-1" class="mdc-floating-label mdc-floating-label--float-above stat" title="A unit will attack twice if their Speed is at least 5 more than their foe's Speed.">SPD</label>
                             <div class="mdc-line-ripple"></div>
                         </div>
 
                         <div class="mdc-text-field">
-                            <input type="number" id="override-def-penalty" class="mdc-text-field__input battle-val stat-penalty" value="0" autocomplete="off">
+                            <input type="number" id="override-def-penalty" class="mdc-text-field__input battle-val stat-penalty" value="0" override-option autocomplete="off">
                             <label for="def-penalty-1" class="mdc-floating-label mdc-floating-label--float-above stat" title="The higher a unit's Defense is, the less damage they take from physical attacks.">DEF</label>
                             <div class="mdc-line-ripple"></div>
                         </div>
 
                         <div class="mdc-text-field">
-                            <input type="number" id="override-res-penalty" class="mdc-text-field__input battle-val stat-penalty" value="0" autocomplete="off">
+                            <input type="number" id="override-res-penalty" class="mdc-text-field__input battle-val stat-penalty" value="0" override-option autocomplete="off">
                             <label for="res-penalty-1" class="mdc-floating-label mdc-floating-label--float-above stat" title="The higher a unit's Resistance is, the less damage they take from magical attacks.">RES</label>
                             <div class="mdc-line-ripple"></div>
                         </div>
@@ -455,38 +466,38 @@
                     <h3 class="mdc-typography--caption">Spur</h3>
                     <div class="stat-container">
                         <div class="mdc-text-field">
-                            <input type="number" id="override-hp-spur" class="mdc-text-field__input hp-stat stat-spur" value="0" autocomplete="off">
+                            <input type="number" id="override-hp-spur" class="mdc-text-field__input hp-stat stat-spur" value="0" override-option autocomplete="off">
                             <label for="hp-spur-1" class="mdc-floating-label mdc-floating-label--float-above stat" title="A unit is defeated if their Hit Points reach 0.">HP</label>
                             <div class="mdc-line-ripple"></div>
                         </div>
 
                         <div class="mdc-text-field">
-                            <input type="number" id="override-atk-spur" class="mdc-text-field__input battle-val stat-spur" value="0" autocomplete="off">
+                            <input type="number" id="override-atk-spur" class="mdc-text-field__input battle-val stat-spur" value="0" override-option autocomplete="off">
                             <label for="atk-spur-1" class="mdc-floating-label mdc-floating-label--float-above stat" title="The higher a unit's Attack, the more damage they deal.">ATK</label>
                             <div class="mdc-line-ripple"></div>
                         </div>
 
                         <div class="mdc-text-field">
-                            <input type="number" id="override-spd-spur" class="mdc-text-field__input battle-val stat-spur" value="0" autocomplete="off">
+                            <input type="number" id="override-spd-spur" class="mdc-text-field__input battle-val stat-spur" value="0" override-option autocomplete="off">
                             <label for="spd-spur-1" class="mdc-floating-label mdc-floating-label--float-above stat" title="A unit will attack twice if their Speed is at least 5 more than their foe's Speed.">SPD</label>
                             <div class="mdc-line-ripple"></div>
                         </div>
 
                         <div class="mdc-text-field">
-                            <input type="number" id="override-def-spur" class="mdc-text-field__input battle-val stat-spur" value="0" autocomplete="off">
+                            <input type="number" id="override-def-spur" class="mdc-text-field__input battle-val stat-spur" value="0" override-option autocomplete="off">
                             <label for="def-spur-1" class="mdc-floating-label mdc-floating-label--float-above stat" title="The higher a unit's Defense is, the less damage they take from physical attacks.">DEF</label>
                             <div class="mdc-line-ripple"></div>
                         </div>
 
                         <div class="mdc-text-field">
-                            <input type="number" id="override-res-spur" class="mdc-text-field__input battle-val stat-spur" value="0" autocomplete="off">
+                            <input type="number" id="override-res-spur" class="mdc-text-field__input battle-val stat-spur" value="0" override-option autocomplete="off">
                             <label for="res-spur-1" class="mdc-floating-label mdc-floating-label--float-above stat" title="The higher a unit's Resistance is, the less damage they take from magical attacks.">RES</label>
                             <div class="mdc-line-ripple"></div>
                         </div>
                     </div>
                 </section>
                 <div class="mdc-text-field info-section current-hp">
-                    <input type="number" id="override-curr-hp" class="mdc-text-field__input more-than-zero override-option" value="100" autocomplete="off">
+                    <input type="number" id="override-curr-hp" class="mdc-text-field__input more-than-zero override-option" value="100" override-option autocomplete="off">
                     <label class="mdc-floating-label mdc-floating-label--float-above curr-hp-label" for="override-curr-hp">% Current HP</label>
                     <div class="mdc-line-ripple"></div>
                 </div>

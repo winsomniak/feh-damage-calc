@@ -5,9 +5,9 @@ function checkAffinity(mod, attacker, defender) {
     var defAdept = 0;
 
     // A better hero engine would really help here to not do this horrible line
-    atkAdept = Math.min(CheckTriAdvPerPossibility(attacker, defender, mod, attacker.passiveAData), CheckTriAdvPerPossibility(attacker, defender, mod, attacker.weaponData));
+    atkAdept = Math.min(CheckTriAdvPerPossibility(attacker, defender, mod, attacker.passiveAData), CheckTriAdvPerPossibility(attacker, defender, mod, attacker.weaponData), CheckTriAdvPerStatus(attacker, defender, mod));
     // The "2-" part is required to change the disequation from < to > (mod <1 "->" 2-mod<1 "->" -mod<-1 "->" mod>1)
-    defAdept = Math.min(CheckTriAdvPerPossibility(defender, attacker, 2-mod, defender.passiveAData), CheckTriAdvPerPossibility(defender, attacker, 2-mod, defender.weaponData));
+    defAdept = Math.min(CheckTriAdvPerPossibility(defender, attacker, 2-mod, defender.passiveAData), CheckTriAdvPerPossibility(defender, attacker, 2-mod, defender.weaponData), CheckTriAdvPerStatus(defender, attacker, 2-mod));
 
     return Math.min(atkAdept,defAdept);
 }
@@ -19,7 +19,18 @@ function CheckTriAdvPerPossibility(agent, other, mod, tocheck) {
         if (mod < 1) {
             adv = false;
         }
-        return cancelAffinity(agent, other, adv, tocheck);
+        return cancelAffinity(agent, other, adv, mod);
+    }
+    return 0;
+}
+
+function CheckTriAdvPerStatus(agent, other, mod) {
+	if(agent.status.triangleAdept) {
+        var adv = true;
+        if (mod < 1) {
+            adv = false;
+        }
+        return cancelAffinitySP(agent, other, adv, 0.2);
     }
     return 0;
 }
@@ -41,6 +52,28 @@ function cancelAffinity(a, b, adv, checking) {
 
         if (b.passiveBData.hasOwnProperty("reverse_negative_enemy_skill_affinity")) {
             return -(2*checking.tri_advantage);
+        }
+    }
+
+    return 0;
+}
+
+function cancelAffinitySP(a, b, adv, checking) {
+    if (a.passiveBData.hasOwnProperty("cancel_skill_affinity")) {
+        return -checking;
+    }
+
+    if (b.passiveBData.hasOwnProperty("cancel_enemy_skill_affinity")) {
+        return -checking;
+    }
+
+    if (adv) {
+        if (b.passiveBData.hasOwnProperty("cancel_negative_enemy_skill_affinity")) {
+            return -checking;
+        }
+
+        if (b.passiveBData.hasOwnProperty("reverse_negative_enemy_skill_affinity")) {
+            return -(2*checking);
         }
     }
 
