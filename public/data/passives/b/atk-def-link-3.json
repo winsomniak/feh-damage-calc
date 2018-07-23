@@ -1,0 +1,9 @@
+{
+    "name": "Atk/Def Link 3",
+    "sp": 240,
+    "type": "B",
+    "description": "If a movement Assist skill (like Reposition, Shove, Pivot, etc.) is used by unit or targets unit, grants Atk/Def+6 to unit and target ally or unit and targeting ally for 1 turn.",
+    "icon": "/images/icons/passives/atk-def-link-3.png",
+    "link": "https://kagerochart.com/hero/passives/atk-def-link-3",
+    "id": "atk-def-link-3"
+}

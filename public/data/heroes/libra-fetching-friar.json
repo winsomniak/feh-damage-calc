@@ -1,0 +1,48 @@
+{
+    "display": "Libra, Fetching Friar",
+    "name": "Libra",
+    "title": "Fetching Friar",
+    "id": "libra-fetching-friar",
+    "color": "Green",
+    "weapon_type": "Axe",
+    "link": "https://kagerochart.com/hero/libra-fetching-friar",
+    "move_type": "Infantry",
+    "weapon": [
+        "wo-gun-plus",
+        "wo-gun",
+        "steel-axe",
+        "iron-axe"
+    ],
+    "special": [
+        "noontime",
+        "daylight"
+    ],
+    "passive_b": [
+        "renewal-3",
+        "renewal-2",
+        "renewal-1"
+    ],
+    "passive_c": [
+        "spur-atk-res-2",
+        "spur-atk-res-1",
+        "spur-res-1"
+    ],
+    "base_stat": {
+        "star_5": {
+            "hp": 18,
+            "atk": 9,
+            "spd": 8,
+            "def": 6,
+            "res": 7
+        },
+        "growth": {
+            "hp": 6,
+            "atk": 8,
+            "spd": 7,
+            "def": 6,
+            "res": 6,
+            "total": 33
+        },
+        "growth_type":51
+    }
+}

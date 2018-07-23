@@ -112,6 +112,7 @@ function getCharTabInfo(attacker) {
         // change state
         $('#candlelight-status-' + charNum).prop("checked", charTabInfo.status.candlelight);
         $('#panic-status-' + charNum).prop("checked", charTabInfo.status.panic);
+        $('#triangle-adept-status-' + charNum).prop("checked", charTabInfo.status.triangleAdept);
         if (charTabInfo.terrain === 'Defensive') {
             $('#defensive-terrain-' + charNum).prop("checked", true);
         }
@@ -160,6 +161,7 @@ function selectCharTab(attacker, newIndex) {
     // fade in new tab
     if (newTab) {
         $('#candlelight-status-' + charNum).prop("checked", false);
+        $('#triangle-adept-status-' + charNum).prop("checked", false);
         $('#panic-status-' + charNum).prop("checked", false);
         $('#defensive-terrain-' + charNum).prop("checked", false);
 
@@ -229,7 +231,8 @@ function storeCharTabInfo(attacker) {
     // state
     infoToStore.status = {
         "candlelight": $("#candlelight-status-" + charNum).is(":checked"),
-        "panic": $("#panic-status-" + charNum).is(":checked")
+        "panic": $("#panic-status-" + charNum).is(":checked"),
+        "triangleAdept": $("#triangle-adept-status-" + charNum).is(":checked")
     };
 
     if ($("#defensive-terrain-" + charNum).is(":checked")) {

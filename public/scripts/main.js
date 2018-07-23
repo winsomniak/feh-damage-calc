@@ -4248,11 +4248,65 @@ function clearTeam(attacker) {
         selectedAttacker = 0;
         selectCharTab(true, 0);
         $("#char-1").val($("#char-1 option:eq(0)").val()).attr('selected', 'selected'); //.trigger("change.select2");
+
+        $("#summoner-support-1").val("None");
+        $("#ally-support-1").val("None");
+
+        //statuses
+        $("#triangle-adept-status-1").prop("checked", false);
+        $("#panic-status-1").prop("checked", false);
+        $("#candlelight-status-1").prop("checked", false);
+        $("#defensive-terrain-1").prop("checked", false);
+
+        //bonuses
+        $("#atk-bonus-1").val("0");
+        $("#spd-bonus-1").val("0");
+        $("#def-bonus-1").val("0");
+        $("#res-bonus-1").val("0");
+
+        //penalties
+        $("#atk-penalty-1").val("0");
+        $("#spd-penalty-1").val("0");
+        $("#def-penalty-1").val("0");
+        $("#res-penalty-1").val("0");
+
+        //spurs
+        $("#atk-spur-1").val("0");
+        $("#spd-spur-1").val("0");
+        $("#def-spur-1").val("0");
+        $("#res-spur-1").val("0");
         displayChar($("#char-1").val(), "1", true);
     } else {
         selectedDefender = 0;
         selectCharTab(false, 0);
         $("#char-2").val($("#char-2 option:eq(1)").val()).attr('selected', 'selected'); //.trigger("change.select2");
+
+        $("#summoner-support-2").val("None");
+        $("#ally-support-2").val("None");
+
+        //statuses
+        $("#triangle-adept-status-2").prop("checked", false);
+        $("#panic-status-2").prop("checked", false);
+        $("#candlelight-status-2").prop("checked", false);
+        $("#defensive-terrain-2").prop("checked", false);
+
+        //bonuses
+        $("#atk-bonus-2").val("0");
+        $("#spd-bonus-2").val("0");
+        $("#def-bonus-2").val("0");
+        $("#res-bonus-2").val("0");
+
+        //penalties
+        $("#atk-penalty-2").val("0");
+        $("#spd-penalty-2").val("0");
+        $("#def-penalty-2").val("0");
+        $("#res-penalty-2").val("0");
+
+        //spurs
+        $("#atk-spur-2").val("0");
+        $("#spd-spur-2").val("0");
+        $("#def-spur-2").val("0");
+        $("#res-spur-2").val("0");
         displayChar($("#char-2").val(), "2", true);
     }
 }

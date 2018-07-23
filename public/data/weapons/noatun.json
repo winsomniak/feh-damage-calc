@@ -9,5 +9,10 @@
     "color": "Green",
     "magical": false,
     "char_unique": true,
+    "refinable":{
+        "type":"melee",
+        "Special":"Nóatún",
+        "description": "If unit’s HP ≤ 50%, unit can move to a space adjacent to any ally."
+    },
     "id": "noatun"
 }

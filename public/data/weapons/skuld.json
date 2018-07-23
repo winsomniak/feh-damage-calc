@@ -1,0 +1,12 @@
+{
+    "name": "Skuld",
+    "might": 16,
+    "range": 1,
+    "sp": 400,
+    "description": "If Sing or Dance is used, target also granted Atk/Spd/Def/Res+3.",
+    "type": "Sword",
+    "color": "Red",
+    "link": "https://kagerochart.com/hero/weapons/skuld",
+    "char_unique":true,
+    "id": "skuld"
+}

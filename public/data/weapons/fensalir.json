@@ -12,5 +12,16 @@
         "atk": -4
     },
     "char_unique": true,
+    "refinable":{
+        "type":"melee",
+        "Special":"Fensalir",
+        "remove":{
+            "threaten":true
+        },
+        "nullify_enemy_bonuses": {
+            "all":true
+        },
+        "description": "Neutralizes foe’s bonuses (from skills like Fortify, Rally, etc.) during combat."
+    },
     "id": "fensalir"
 }

@@ -410,14 +410,14 @@ function firstDmgReduction(char, enemy) {
 }
 
 //Bonus for adjacency to allies
-function adjacentStatBonus(battleInfo, char, charToUse, initiator) {
+function adjacentStatBonus(battleInfo, char, other, charToUse, initiator) {
     checks.forEach(function(key) {
-        var bonus = char[key].adjacent_stat_bonus
+        var bonus = char[key].adjacent_stat_bonus;
         if (!bonus) {
             return;
         }
 
-        if (char.adjacent < 1 || (bonus.hasOwnProperty("needed") && bonus.needed > char.adjacent) || (bonus.hasOwnProperty("en_phase") && initiator)) {
+        if ((bonus.hasOwnProperty("enemy_greater_than") && char.adjacent > other.adjacent ) || (!bonus.hasOwnProperty("enemy_greater_than") && char.adjacent < 1) || (bonus.hasOwnProperty("needed") && bonus.needed > char.adjacent) || (bonus.hasOwnProperty("en_phase") && initiator)) {
             return;
         }
 
@@ -545,7 +545,7 @@ function giveBonuses(battleInfo, agent, other, initiator){
     }
 
     //adjacent stat bonus
-    battleInfo=adjacentStatBonus(battleInfo, agent, agent.agentClass, initiator);
+    battleInfo=adjacentStatBonus(battleInfo, agent, other, agent.agentClass, initiator);
 
     return battleInfo;
 }

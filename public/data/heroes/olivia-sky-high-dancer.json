@@ -1,0 +1,52 @@
+{
+    "display": "Olivia, Sky-High Dancer",
+    "name": "Olivia",
+    "title": "Sky-High Dancer",
+    "id": "olivia-sky-high-dancer",
+    "color": "Red",
+    "weapon_type": "Sword",
+    "link": "https://kagerochart.com/hero/olivia-sky-high-dancer",
+    "move_type": "Flying",
+    "weapon": [
+        "skuld",
+        "silver-sword",
+        "steel-sword",
+        "iron-sword"
+    ],
+    "assist": [
+        "dance"
+    ],
+    "passive_a": [
+        "bracing-stance-2",
+        "bracing-stance-1",
+        "steady-stance-1"
+    ],
+    "passive_b": [
+        "chill-spd-3",
+        "chill-spd-2",
+        "chill-spd-1"
+    ],
+    "passive_c": [
+        "guidance-3",
+        "guidance-2",
+        "guidance-1"
+    ],
+    "base_stat": {
+        "star_5": {
+            "hp": 17,
+            "atk": 6,
+            "spd": 8,
+            "def": 4,
+            "res": 4
+        },
+        "growth": {
+            "hp": 5,
+            "atk": 7,
+            "spd": 8,
+            "def": 6,
+            "res": 5,
+            "total": 31
+        },
+        "growth_type":154
+    }
+}

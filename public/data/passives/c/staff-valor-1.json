@@ -1,0 +1,9 @@
+{
+    "name": "Staff Valor 1",
+    "sp": 30,
+    "type": "C",
+    "description": "While unit lives and uses a staff, unit gets 1.5x SP after combat or after using a healing Assist skill. (Only highest value applied. Does not stack.)",
+    "icon": "/images/icons/passives/staff-valor-1.png",
+    "link": "https://kagerochart.com/hero/passives/staff-valor-1",
+    "id": "staff-valor-1"
+}
