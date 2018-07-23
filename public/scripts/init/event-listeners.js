@@ -396,6 +396,7 @@ $("input[type=radio][name=mode]").on("change", function() {
         $("#battle-log").stop(true, true).show(200);
         $("#matchups").stop(true, true).hide(200);
         $("#matchup-panel").stop(true, true).hide(200);
+        $("#matchup-overrides").stop(true, true).hide(200);
 
         // enable all inputs
         enableCharPanel("1", true);
@@ -487,6 +488,7 @@ $("#override-reset").on("click", function() {
     loadWeapons("Any", "#override-weapon", true);
     $("#override-weapon").html("<option value='No Override'>No Override</option>" + $("#override-weapon").html());
     $("#override-weapon").val("No Override").attr('selected', 'selected');
+    $("#override-refinement").val("None").attr('selected', 'selected');
 
     $("#override-passive-a").val("No Override").attr('selected', 'selected');
     $("#override-passive-b").val("No Override").attr('selected', 'selected');
@@ -504,7 +506,38 @@ $("#override-reset").on("click", function() {
     $("#override-adjacent-block").hide(500);
     $("#override-adjacent").val("0");
 
+    //blessings and infantry rush
+    $("#override-blessing").val("None").attr('selected', 'selected');
+    $("#override-blessing2").val("None").attr('selected', 'selected');
+    $("#override-blessing3").val("None").attr('selected', 'selected');
+    $("#override-infantry-rush").val("None").attr('selected', 'selected');
+
+    //statuses
+    $("#override-triangle-adept-status").prop("checked", false);
+    $("#override-panic-status").prop("checked", false);
+    $("#override-candlelight-status").prop("checked", false);
+    $("#override-defensive-terrain").prop("checked", false);
+
+    //bonuses
+    $("#override-atk-bonus").val("0");
+    $("#override-spd-bonus").val("0");
+    $("#override-def-bonus").val("0");
+    $("#override-res-bonus").val("0");
+
+    //penalties
+    $("#override-atk-penalty").val("0");
+    $("#override-spd-penalty").val("0");
+    $("#override-def-penalty").val("0");
+    $("#override-res-penalty").val("0");
+
+    //spurs
+    $("#override-atk-spur").val("0");
+    $("#override-spd-spur").val("0");
+    $("#override-def-spur").val("0");
+    $("#override-res-spur").val("0");
+
     keepTable = false;
+    charChange(1);
     updateDisplay();
 });
 

@@ -3425,12 +3425,14 @@ function calculateMatchups(attacker) {
 
         // check one vs one radio button
         $("input[type=radio][name=mode]").val(["one-vs-one"]);
+        $("#one-vs-one").prop("checked", true);
 
         // show one vs one info
         $("#battle-log").stop(true, true).show(200);
         //$("#single-combat").stop(true, true).show(200);
         $("#matchups").stop(true, true).hide(200);
         $("#matchup-panel").stop(true, true).hide(200);
+        $("#matchup-overrides").stop(true, true).hide(200);
 
         // enable all inputs
         enableCharPanel("1", true);
