@@ -28,6 +28,27 @@ function customName(weaponType, moveType) {
             return "Troubadour";
         }
         name = "Staff";
+    } else if (weaponType === "Red Staff") {
+        if (moveType === "Infantry") {
+            return "Red Cleric";
+        } else if (moveType === "Cavalry") {
+            return "Red Troubadour";
+        }
+        name = "Red Staff";
+    } else if (weaponType === "Blue Staff") {
+        if (moveType === "Infantry") {
+            return "Blue Cleric";
+        } else if (moveType === "Cavalry") {
+            return "Blue Troubadour";
+        }
+        name = "Blue Staff";
+    } else if (weaponType === "Green Staff") {
+        if (moveType === "Infantry") {
+            return "Green Cleric";
+        } else if (moveType === "Cavalry") {
+            return "Green Troubadour";
+        }
+        name = "Green Staff";
     } else if (weaponType === "Dagger") {
         if (moveType === "Infantry") {
             return "Thief";
@@ -86,11 +107,11 @@ function customName(weaponType, moveType) {
 // given a weapon type, return its color
 function weaponToColor(weaponType) {
 
-    if (weaponType === "Sword" || weaponType === "Red Tome" || weaponType === "Red Breath" || weaponType === "Red Bow" || weaponType === "Red Dagger") {
+    if (weaponType === "Sword" || weaponType === "Red Tome" || weaponType === "Red Breath" || weaponType === "Red Bow" || weaponType === "Red Dagger" || weaponType === "Red Staff") {
         return "Red";
-    } else if (weaponType === "Axe" || weaponType === "Green Tome" || weaponType === "Green Breath" || weaponType === "Green Bow" || weaponType === "Green Dagger") {
+    } else if (weaponType === "Axe" || weaponType === "Green Tome" || weaponType === "Green Breath" || weaponType === "Green Bow" || weaponType === "Green Dagger" || weaponType === "Green Staff") {
         return "Green";
-    } else if (weaponType === "Lance" || weaponType === "Blue Tome" || weaponType === "Blue Breath" || weaponType === "Blue Bow" || weaponType === "Blue Dagger") {
+    } else if (weaponType === "Lance" || weaponType === "Blue Tome" || weaponType === "Blue Breath" || weaponType === "Blue Bow" || weaponType === "Blue Dagger" || weaponType === "Blue Staff") {
         return "Blue";
     }
 
@@ -101,7 +122,7 @@ function weaponToColor(weaponType) {
 function weaponTypeRange(weaponType) {
 
     var range = 1;
-    if (weaponType === "Red Tome" || weaponType === "Green Tome" || weaponType === "Blue Tome" || weaponType === "Bow" || weaponType === "Red Bow" || weaponType === "Green Bow" || weaponType === "Blue Bow" || weaponType === "Red Dagger" || weaponType === "Green Dagger" || weaponType === "Blue Dagger" || weaponType === "Dagger" || weaponType === "Staff") {
+    if (weaponType === "Red Tome" || weaponType === "Green Tome" || weaponType === "Blue Tome" || weaponType === "Bow" || weaponType === "Red Bow" || weaponType === "Green Bow" || weaponType === "Blue Bow" || weaponType === "Red Dagger" || weaponType === "Green Dagger" || weaponType === "Blue Dagger" || weaponType === "Dagger" || weaponType === "Red Staff" || weaponType === "Blue Staff" || weaponType === "Green Staff" || weaponType === "Staff") {
         range = 2;
     }
 
@@ -147,6 +168,9 @@ function isInheritableWeapon(weapon, charName) {
     }
     if (weaponType.indexOf("Bow") !== -1) {
         weaponType = "Bow";
+    }
+    if (weaponType.indexOf("Staff") !== -1) {
+        weaponType = "Staff";
     }
     if (weaponType.indexOf("Dagger") !== -1) {
         weaponType = "Dagger";
@@ -506,11 +530,11 @@ function loadSpecials(selectID) {
 // weaponType is the type of weapon, charNum determines which panel to display in
 function setColor(weaponType, charNum) {
 
-    if (weaponType === "Sword" || weaponType === "Red Tome" || weaponType === "Red Breath" || weaponType === "Red Bow" || weaponType === "Red Dagger") {
+    if (weaponType === "Sword" || weaponType === "Red Tome" || weaponType === "Red Breath" || weaponType === "Red Bow" || weaponType === "Red Dagger" || weaponType === "Red Staff") {
         $("#color-" + charNum).val("Red");
-    } else if (weaponType === "Axe" || weaponType === "Green Tome" || weaponType === "Green Breath" || weaponType === "Green Bow" || weaponType === "Green Dagger") {
+    } else if (weaponType === "Axe" || weaponType === "Green Tome" || weaponType === "Green Breath" || weaponType === "Green Bow" || weaponType === "Green Dagger" || weaponType === "Green Staff") {
         $("#color-" + charNum).val("Green");
-    } else if (weaponType === "Lance" || weaponType === "Blue Tome" || weaponType === "Blue Breath" || weaponType === "Blue Bow" || weaponType === "Blue Dagger") {
+    } else if (weaponType === "Lance" || weaponType === "Blue Tome" || weaponType === "Blue Breath" || weaponType === "Blue Bow" || weaponType === "Blue Dagger" || weaponType === "Blue Staff") {
         $("#color-" + charNum).val("Blue");
     } else {
         $("#color-" + charNum).val("Colorless");
@@ -3046,7 +3070,7 @@ function rarityUpdateWeapon(charNum, rarity) {
             showWeapon(selectedWeapon, charNum, true, true);
         }
     } else if (rarity === 5) {
-        if ($("#weapon-" + charNum).val() !== "None" && $("#weapon-" + charNum + " option:selected").index() <= charInfo[charName].weapon.length) {
+        if (charInfo[charName].hasOwnProperty("weapon") && $("#weapon-" + charNum).val() !== "None" && $("#weapon-" + charNum + " option:selected").index() <= charInfo[charName].weapon.length) {
             selectedWeapon = charInfo[charName].weapon[0];
             $("#weapon-" + charNum).val(selectedWeapon).attr('selected', 'selected'); //.trigger("change.select2");
             showWeapon(selectedWeapon, charNum, true, true);
@@ -3134,7 +3158,6 @@ function rarityUpdateAssist(charNum, rarity) {
 // updates weapons and skills on rarity change
 // charNum determines the panel to look at, rarity is the rarity of the selected character
 function rarityUpdate(charNum, rarity) {
-
     rarityUpdateSpecial(charNum, rarity);
     rarityUpdatePassive(charNum, rarity, "a");
     rarityUpdatePassive(charNum, rarity, "b");
