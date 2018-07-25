@@ -1,0 +1,72 @@
+{
+    "display": "???, Masked Knight",
+    "name": "???",
+    "title": "Masked Knight",
+    "id": "bruno-masked-knight",
+    "color": "Blue",
+    "weapon_type": "Blue Tome",
+    "link": "https://kagerochart.com/hero/bruno-masked-knight",
+    "move_type": "Cavalry",
+    "LowestRarity":1,
+    "weapon": [
+        "valaskjalf",
+        "thoron",
+        "elthunder",
+        "thunder"
+    ],
+    "special": [
+        "growing-thunder",
+        "rising-thunder"
+    ],
+    "passive_a": [
+        "fury-3",
+        "fury-2",
+        "fury-1",
+        "close-def-3",
+        "close-def-2",
+        "close-def-1",
+        "warding-blow-3",
+        "warding-blow-2",
+        "warding-blow-1"
+    ],
+    "passive_b": [
+        "b-tomebreaker-3",
+        "b-tomebreaker-2",
+        "b-tomebreaker-1",
+        "lancebreaker-3",
+        "lancebreaker-2",
+        "lancebreaker-1",
+        "seal-res-3",
+        "seal-res-2",
+        "seal-res-1"
+    ],
+    "passive_c": [
+        "atk-ploy-3",
+        "atk-ploy-2",
+        "atk-ploy-1",
+        "drive-atk-2",
+        "drive-atk-1",
+        "spur-atk-1",
+        "savage-blow-3",
+        "savage-blow-2",
+        "savage-blow-1"
+    ],
+    "base_stat": {
+        "star_5": {
+            "hp": 16,
+            "atk": 7,
+            "spd": 9,
+            "def": 5,
+            "res": 6
+        },
+        "growth": {
+            "hp": 4,
+            "atk": 6,
+            "spd": 8,
+            "def": 4,
+            "res": 5,
+            "total": 27
+        },
+        "growth_type":0
+    }
+}

@@ -397,6 +397,7 @@ $("input[type=radio][name=mode]").on("change", function() {
         $("#matchups").stop(true, true).hide(200);
         $("#matchup-panel").stop(true, true).hide(200);
         $("#matchup-overrides").stop(true, true).hide(200);
+        $("#matchup-filters").stop(true, true).hide(200);
 
         // enable all inputs
         enableCharPanel("1", true);
@@ -625,7 +626,7 @@ $('button#matchup-filter-dismiss').on('click', function() {
 
 //matchup-filter-dismiss
 $('button#overrides-dismiss').on('click', function() {
-    $('#overrides').stop(true, true).hide(200)
+    $('#matchup-overrides').stop(true, true).hide(200)
 });
 
 //Reset HP

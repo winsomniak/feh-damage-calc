@@ -997,10 +997,22 @@ function statWord(stat) {
 
 // handles atk bonus from -blade tomes
 // battleInfo contains all battle information, bonusAtk is the total amount of bonuses to add to atk, charToUse is either "attacker" or "defender"
-function bladeTomeBonus(battleInfo, bonusAtk, charToUse, source) {
-
-    battleInfo[charToUse].atk += bonusAtk;
-    battleInfo.logMsg += "<li class='battle-interaction'><span class='" + charToUse + "'>" + battleInfo[charToUse].display + "</span> adds total " + source + " to attack, increasing attack by " + bonusAtk.toString() + " [" + battleInfo[charToUse].weaponData.name + "].</li>";
+function bladeTomeBonus(battleInfo, increasedStats, charToUse, source) {
+    var stats = battleInfo[charToUse].weaponData.add_changes.stats;
+    var tmpstat;
+    var total = 0;
+    var mult = battleInfo[charToUse].weaponData.add_changes.multiplier === 1.0 ? "" : (battleInfo[charToUse].weaponData.add_changes.multiplier * 100).toString() + "% of ";
+    battleInfo.logMsg += "<li class='battle-interaction'><span class='" + charToUse + "'>" + battleInfo[charToUse].display + "</span> adds " + mult + "total " + source +	" to ";
+    stats.forEach(function(stat) {
+        battleInfo[charToUse][stat] += increasedStats[stat];
+        battleInfo.logMsg += statWord(stat) + ", ";
+        tmpstat = stat;
+        total++;
+    });
+	var multipleStats = " ";
+    if(total > 1)
+        multipleStats = "s ";
+	battleInfo.logMsg += " increasing said statistic" + multipleStats + "by " + increasedStats[tmpstat].toString() + " [" + battleInfo[charToUse].weaponData.name + "].</li>";
     return battleInfo;
 }
 
@@ -1746,7 +1758,7 @@ function singleCombat(battleInfo, initiator, logIntro, brave) {
     dmg = Math.max(dmg, 0);
 
     // halve staff damage
-    if (attacker.type === "Staff") {
+    if (attacker.type.indexOf("Staff") !== -1) {
         if (attacker.passiveBData.hasOwnProperty("reg_weapon_dmg") && attacker.initHP >= roundNum(attacker.hp * attacker.passiveBData.reg_weapon_dmg, true)) {
             battleInfo.logMsg += "Staff damage is not halved [" + skillInfo['b'][attacker.passiveB].name + "]. ";
         } else if (attacker.weaponData.hasOwnProperty("reg_weapon_dmg") && attacker.initHP >= roundNum(attacker.hp * attacker.weaponData.reg_weapon_dmg, true)) {
@@ -2829,6 +2841,18 @@ function swap() {
     // no longer defaults
     defaultAttacker = false;
     defaultDefender = false;
+	
+    // show/hide collapsed section
+    if($("#char-1").val() === "Custom")
+        $("#extra-char-info-1").show(200);
+    else
+        $("#extra-char-info-1").hide(200);
+	
+    // show/hide collapsed section
+    if($("#char-2").val() === "Custom")
+        $("#extra-char-info-2").show(200);
+    else
+        $("#extra-char-info-2").hide(200);
 }
 
 // enables or disables a character panel

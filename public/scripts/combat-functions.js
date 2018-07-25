@@ -166,20 +166,30 @@ function removeStatBonuses(hero) {
 
 function checkIfBonusDMG(agent, other)
 {
-    if (agent.weaponData.hasOwnProperty("add_bonus") && !agent.status.panic) {
-        agent.addBonusAtk = agent.atkBonus + agent.defBonus + agent.spdBonus + agent.resBonus;
-        agent.addBonusAtkSource = "bonuses";
-    }
-    else if (agent.weaponData.hasOwnProperty("add_enemy_bonus") && !other.status.panic) {
-        agent.addBonusAtk = other.atkBonus + other.defBonus + other.spdBonus + other.resBonus;
-        agent.addBonusAtkSource = "enemy bonuses";
-    }
-    else if (agent.weaponData.hasOwnProperty("enemy_penalty_bonus")) {
-        agent.addBonusAtk = -other.atkPenalty - other.spdPenalty - other.defPenalty - other.resPenalty; //Get the penalties
-        if(other.status.panic) { //Is the enemy panicked? If they are, then the bonuses get added too!
-            agent.addBonusAtk += other.atkBonus + other.defBonus + other.spdBonus + other.resBonus;
+    if (agent.weaponData.hasOwnProperty("add_changes")) {
+        var tmp = agent.weaponData.add_changes;
+        var source = tmp.source === "enemy" ? other : agent;
+        agent.addChangesSource = tmp.source === "enemy" ? "enemy's " : "";
+        var type = tmp.type;
+        var multiplier = tmp.multiplier;
+        var stats = tmp.stats;
+        var toAdd = 0;
+        if(type === "bonus" && !source.status.panic) {
+            toAdd = roundNum((source.atkBonus + source.defBonus + source.spdBonus + source.resBonus) * multiplier, false);
+            agent.addChangesSource += "bonuses";
         }
-        agent.addBonusAtkSource = "enemy penalties";
+        else if(type === "penalty") {
+            toAdd = roundNum((-source.atkPenalty - source.defPenalty - source.spdPenalty - source.resPenalty) * multiplier, false);
+            agent.addChangesSource += "penalties";
+        }
+        else
+            return agent;
+        if(toAdd <= 0)
+            return agent;
+        agent.addChanges = {};
+        stats.forEach(function(stat) {
+            agent.addChanges[stat] = toAdd;
+        });
     }
     return agent;
 }
@@ -524,8 +534,8 @@ function giveBonuses(battleInfo, agent, other, initiator){
     }
 
     // blade tome bonuses
-    if (agent.hasOwnProperty("addBonusAtk") && agent.addBonusAtk > 0) {
-        battleInfo = bladeTomeBonus(battleInfo, agent.addBonusAtk, agent.agentClass, agent.addBonusAtkSource);
+    if (agent.hasOwnProperty("addChanges")) {
+        battleInfo = bladeTomeBonus(battleInfo, agent.addChanges, agent.agentClass, agent.addChangesSource);
     }
 
     // owl tome bonuses

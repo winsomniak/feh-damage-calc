@@ -5,7 +5,14 @@
     "sp": 200,
     "description": "Adds total bonuses on foe to damage dealt during combat. After combat, if unit attacked, inflicts Def/Res-5 on target and foes within 2 spaces of target through their next actions.",
     "type": "Dagger",
-    "add_enemy_bonus": true,
+    "add_changes": {
+        "source": "enemy",
+        "type": "bonus",
+        "multiplier": 1.0,
+        "stats": [
+            "atk"
+        ]
+    },
     "seal": {
         "def": -5,
         "res": -5
