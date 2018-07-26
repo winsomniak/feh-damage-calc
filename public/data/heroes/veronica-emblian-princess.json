@@ -21,7 +21,10 @@
     "passive_a": [
         "mirror-strike-2",
         "mirror-strike-1",
-        "warding-blow-1"
+        "warding-blow-1",
+        "fury-3",
+        "fury-2",
+        "fury-1"
     ],
     "passive_b": [
         "renewal-3",
