@@ -6,5 +6,6 @@
         "stat": "atk",
         "adv": 3
     },
+    "sp":120,
     "type": "s"
 }

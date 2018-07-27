@@ -1,0 +1,14 @@
+{
+    "name": "Atk/Spd Push 2",
+    "sp": 120,
+    "type": "A",
+    "description": "At start of combat, if unit's HP = 100%, grants Atk/Spd+4, but if unit attacked, deals 1 damage to unit after combat.",
+    "icon": "/images/icons/passives/atk-spd-push-2.png",
+    "full_hp_mod": {
+        "atk": 4,
+        "spd": 4
+    },
+    "full_hp_atk_recoil_dmg": 1,
+    "link": "https://kagerochart.com/hero/passives/atk-spd-push-2",
+    "id": "atk-spd-push-2"
+}

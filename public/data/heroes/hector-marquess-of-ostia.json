@@ -1,0 +1,50 @@
+{
+    "display": "Hector, Marquess of Ostia",
+    "name": "Hector",
+    "title": "Marquess of Ostia",
+    "id": "hector-marquess-of-ostia",
+    "color": "Green",
+    "weapon_type": "Axe",
+    "link": "https://kagerochart.com/hero/hector-marquess-of-ostia",
+    "move_type": "Armored",
+    "legendary":true,
+    "weapon": [
+        "thunder-armads",
+        "silver-axe",
+        "steel-axe",
+        "iron-axe"
+    ],
+    "special": [
+        "draconic-aura",
+        "dragon-gaze"
+    ],
+    "passive_a": [
+        "distant-counter"
+    ],
+    "passive_b": [
+        "vengeful-fighter-3",
+        "vengeful-fighter-2",
+        "vengeful-fighter-1"
+    ],
+    "passive_c": [
+        "ostias-pulse"
+    ],
+    "base_stat": {
+        "star_5": {
+            "hp": 23,
+            "atk": 10,
+            "spd": 6,
+            "def": 12,
+            "res": 4
+        },
+        "growth": {
+            "hp": 7,
+            "atk": 10,
+            "spd": 4,
+            "def": 8,
+            "res": 6,
+            "total": 35
+        },
+        "growth_type":73
+    }
+}

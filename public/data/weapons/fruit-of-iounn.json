@@ -1,0 +1,16 @@
+{
+    "name": "Fruit of Iðunn",
+    "might": 14,
+    "range": 2,
+    "sp": 400,
+    "description": "Grants Spd+3. If unit's HP ≥ 50%, allies within 2 spaces can move to a space adjacent to unit.",
+    "type": "Red Tome",
+    "stat_mod":{
+        "spd":3
+    },
+    "link": "https://kagerochart.com/hero/weapons/fruit-of-iounn",
+    "color": "Red",
+    "magical": true,
+    "char_unique":true,
+    "id": "fruit-of-iounn"
+}

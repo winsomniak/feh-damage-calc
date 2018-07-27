@@ -1,0 +1,83 @@
+{
+    "display": "Loki, The Trickster",
+    "name": "Loki",
+    "title": "The Trickster",
+    "id": "loki-the-trickster",
+    "color": "Colorless",
+    "weapon_type": "Staff",
+    "link": "https://kagerochart.com/hero/loki-the-trickster",
+    "move_type": "Infantry",
+    "LowestRarity":1,
+    "weapon": [
+        "thokk",
+        "gravity",
+        "assault"
+    ],
+    "special": [
+        "heavenly-light",
+        "solid-earth-balm",
+        "imbue"
+    ],
+    "assist": [
+        "restore-plus",
+        "restore",
+        "physic-plus",
+        "physic",
+        "mend",
+        "heal"
+    ],
+    "passive_a": [
+        "brazen-atk-spd-3",
+        "brazen-atk-spd-2",
+        "brazen-atk-spd-1",
+        "distant-def-3",
+        "distant-def-2",
+        "distant-def-1",
+        "hp-res-2",
+        "hp-res-1",
+        "resistance-plus-1"
+    ],
+    "passive_b": [
+        "live-to-serve-3",
+        "live-to-serve-2",
+        "live-to-serve-1",
+        "renewal-3",
+        "renewal-2",
+        "renewal-1",
+        "guard-3",
+        "guard-2",
+        "guard-1"
+    ],
+    "passive_c": [
+        "atk-ploy-3",
+        "atk-ploy-2",
+        "atk-ploy-1",
+        "hone-atk-3",
+        "hone-atk-2",
+        "hone-atk-1",
+        "hone-spd-3",
+        "hone-spd-2",
+        "hone-spd-1",
+        "threaten-res-3",
+        "threaten-res-2",
+        "threaten-res-1"
+    ],
+    "base_stat": {
+        "star_5": {
+            "hp": 18,
+            "atk": 9,
+            "spd": 9,
+            "def": 4,
+            "res": 8
+        },
+        "growth": {
+            "hp": 7,
+            "atk": 7,
+            "spd": 8,
+            "def": 3,
+            "res": 6,
+            "total": 31
+        },
+        "growth_type":0
+    }
+}

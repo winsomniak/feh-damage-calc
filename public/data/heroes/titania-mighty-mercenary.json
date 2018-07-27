@@ -9,6 +9,7 @@
     "move_type": "Cavalry",
     "LowestRarity":3,
     "weapon": [
+        "draconic-poleax",
         "emerald-axe-plus",
         "emerald-axe",
         "steel-axe",
@@ -42,6 +43,7 @@
             "def": 5,
             "res": 6,
             "total": 30
-        }
+        },
+        "growth_type":46
     }
 }

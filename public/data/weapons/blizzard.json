@@ -10,8 +10,13 @@
     "stat_mod": {
         "res": 3
     },
-    "enemy_penalty_bonus": {
-        "stat": "atk"
+    "add_changes": {
+        "source": "enemy",
+        "type": "penalty",
+        "multiplier": 1.0,
+        "stats": [
+            "atk"
+        ]
     },
     "id": "blizzard",
     "magical": true

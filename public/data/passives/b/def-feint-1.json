@@ -1,0 +1,9 @@
+{
+    "name": "Def Feint 1",
+    "sp": 60,
+    "type": "B",
+    "description": "If a Rally Assist skill is used by unit or targets unit, inflicts Def-3 on foes in cardinal directions of unit through their next actions.",
+    "icon": "/images/icons/passives/def-feint-1.png",
+    "link": "https://kagerochart.com/hero/passives/def-feint-1",
+    "id": "def-feint-1"
+}

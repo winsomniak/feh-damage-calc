@@ -3,5 +3,6 @@
     "id": "armored-boots",
     "name": "Armored Boots",
     "move_unique": "Armored",
+    "sp":100,
     "type": "s"
 }

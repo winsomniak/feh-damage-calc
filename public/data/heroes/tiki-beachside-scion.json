@@ -1,0 +1,51 @@
+{
+    "display": "Tiki, Beachside Scion",
+    "name": "Tiki",
+    "title": "Beachside Scion",
+    "id": "tiki-beachside-scion",
+    "color": "Red",
+    "weapon_type": "Red Breath",
+    "link": "https://kagerochart.com/hero/tiki-beachside-scion",
+    "move_type": "Flying",
+    "weapon": [
+        "summers-breath",
+        "flametongue",
+        "fire-breath-plus",
+        "fire-breath"
+    ],
+    "special": [
+        "moonbow",
+        "new-moon"
+    ],
+    "passive_a": [
+        "atk-def-bond-3",
+        "atk-def-bond-2",
+        "atk-def-bond-1"
+    ],
+    "passive_b": [
+        "hit-and-run"
+    ],
+    "passive_c": [
+        "dragon-valor-3",
+        "dragon-valor-2",
+        "dragon-valor-1"
+    ],
+    "base_stat": {
+        "star_5": {
+            "hp": 16,
+            "atk": 7,
+            "spd": 4,
+            "def": 8,
+            "res": 4
+        },
+        "growth": {
+            "hp": 7,
+            "atk": 8,
+            "spd": 11,
+            "def": 7,
+            "res": 6,
+            "total": 39
+        },
+        "growth_type":125
+    }
+}

@@ -1,0 +1,10 @@
+{
+    "name": "Ostia's Pulse",
+    "sp": 300,
+    "type": "C",
+    "description": "At the start of turn 1, grants Special cooldown count-1 to all allies. Granted only if number of those allies' movement types on current team ≤ 2.",
+    "icon": "/images/icons/passives/ostias-pulse.png",
+    "link": "https://kagerochart.com/hero/passives/ostias-pulse",
+    "char_unique":true,
+    "id": "ostias-pulse"
+}

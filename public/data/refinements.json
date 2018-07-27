@@ -157,6 +157,17 @@
             },
             "description":" Grants Atk/Spd+3 to cavalry and flying allies within 2 spaces during combat."
         },
+        "Dauntless Lance":
+        {
+            "stat_mod":{
+                "hp":3
+            },
+            "defend_mod": {
+                "spd": 4,
+                "def": 4
+            },
+            "description":" If foe initiates combat, grants Spd/Def+4 during combat."
+        },
         "Deathly Dagger":{
            "prevent_weapon_counter": {
                "type": [
@@ -167,6 +178,13 @@
                 ]
             },
             "description":" Foes using magic cannot counterattack."
+        },
+        "Draconic Poleax":
+        {
+            "stat_mod":{
+                "hp":3
+            },
+            "description":" At start of turn, grants Res+6 to allies within 2 spaces for 1 turn. Granted only if number of that ally's movement type on current team ≤ 2."
         },
         "Eckesachs":{
             "description":" If unit is attacked by foe using bow, daggers, magic, or staff, unit receives Def/Res+6 during combat.",
@@ -242,6 +260,20 @@
                 }
             }
         },
+        "Fensalir":{
+            "stat_mod":{
+                "hp":3
+            },
+            "adjacent_stat_bonus": {
+                "target": "self",
+                "adjacent": "ally",
+                "mod": {
+                    "spd": 5,
+                    "def": 5
+                }
+            },
+            "description":" If unit is adjacent to an ally, grants Spd/Def+5 during combat."
+        },
         "Forblaze":
         {
             "description": " Grants Atk+6 during combat if unit initiates the attack.",
@@ -249,9 +281,23 @@
                 "atk": 6
             }
         },
+        "Fólkvangr":{
+            "stat_mod":{
+                "hp":3
+            },
+            "tri_advantage": 0.2,
+            "description":" If unit has weapon-triangle advantage, boosts Atk by 20%. If unit has weapon-triangle disadvantage, reduces Atk by 20%."
+        },
         "Fujin Yumi":
         {
             "description":" If unit's HP ≥ 50%, unit can move adjacent to any ally within 2 spaces."
+        },
+        "Hauteclere":{
+            "stat_mod":{
+                "hp":3
+            },
+            "description":" Deals +10 damage when special triggers.",
+            "spec_damage_bonus" : 10
         },
         "Hinoka's Spear":
         {
@@ -262,22 +308,21 @@
         },
         "Mystletainn":
         {
-        "stat_mod": {
-            "hp": 3,
-            "atk": 3,
-            "spd": 3,
-            "def": 3,
-            "res": 3
-            },
-        "recoil_dmg": 6,
-        "description":" Grants Atk/Spd/Def/Res +3. Unit takes 6 damage after combat."
+            "stat_mod": {
+                "hp": 3,
+                "atk": 3,
+                "spd": 3,
+                "def": 3,
+                "res": 3
+                },
+            "recoil_dmg": 6,
+            "description":" Grants Atk/Spd/Def/Res +3. Unit takes 6 damage after combat."
         },
-        "Hauteclere":{
+        "Nóatún":{
             "stat_mod":{
                 "hp":3
             },
-            "description":" Deals +10 damage when special triggers.",
-            "spec_damage_bonus" : 10
+            "description":" If unit's HP ≥ 50%, unit can move adjacent to any ally within 2 spaces."
         },
         "Parthia":{
             "description":" Grants Atk+6 during combat if foe uses bow, dagger, magic, or staff.",
@@ -326,6 +371,10 @@
                 }
             }
         },
+        "Reese's Tome":
+        {
+            "description":" At start of turn, inflicts Spd/Res-4 on foes in cardinal directions with Res < unit’s Res through their next actions."
+        },
         "Cymbeline":{
             "description":" Grants Atk/Res+5 during combat if within 2 spaces of a flying ally.",
             "adjacent_stat_bonus": {
@@ -365,6 +414,14 @@
                 }
             },
             "description":" If in combat against a cavalry foe, nullifies foe's bonuses (from skills like Fortify, Rally, etc.) during combat."
+        },
+        "Armor ranged":{
+            "nullify_enemy_bonuses": {
+                "move_type": {
+                    "Armored": true
+                }
+            },
+            "description":" If in combat against an armored foe, nullifies foe's bonuses (from skills like Fortify, Rally, etc.) during combat."
         },
         "Armor melee":{
             "stat_mod":{

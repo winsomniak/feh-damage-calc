@@ -42,6 +42,16 @@ var statGrowths = [
     [8, 10, 13, 15, 17, 19, 22, 24, 26, 28, 30, 33, 35]
 ];
 
+// Used to take track of refinements for custom units
+var prevRefinements = ["None", "None"];
+var prevWeapons = ["None", "None"];
+
+// arena score calculation level factor for each rarity
+var rarityLevelFactor = [68, 73, 79, 84, 91];
+
+// arena score calculation base value for each rarity
+var rarityBaseValue = [47, 49, 51, 53, 55];
+
 // default states
 var defaultAttacker = true;
 var defaultDefender = true;

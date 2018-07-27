@@ -2,5 +2,6 @@
     "description": "If unit initiates attack, adjacent allies recover 7 HP after combat.",
     "id": "breath-of-life-3",
     "name": "Breath of Life 3",
+    "sp":200,
     "type": "s"
 }

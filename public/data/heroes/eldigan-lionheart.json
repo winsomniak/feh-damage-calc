@@ -8,6 +8,7 @@
     "link": "https://kagerochart.com/hero/eldigan-lionheart",
     "move_type": "Cavalry",
     "weapon": [
+        "dark-mystletainn",
         "mystletainn",
         "killing-edge",
         "steel-sword",
@@ -40,6 +41,7 @@
             "def": 8,
             "res": 2,
             "total": 30
-        }
+        },
+        "growth_type":119
     }
 }

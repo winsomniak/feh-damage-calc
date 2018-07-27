@@ -1,0 +1,20 @@
+{
+    "name": "Starfish+",
+    "might": 12,
+    "range": 2,
+    "sp": 300,
+    "description": "If unit’s HP ≤ 75% and unit initiates combat, unit can make a follow-up attack before foe can counterattack. After combat, if unit attacked, inflicts Def/Res-7 on target and foes within 2 spaces of target through their next actions.",
+    "type": "Dagger",
+    "link": "https://kagerochart.com/hero/weapons/starfish-plus",
+    "desperation": {
+        "threshold": 0.75
+    },
+    "seal": {
+        "def": -7,
+        "res": -7
+    },
+    "refinable": {
+        "type": "ranged"
+    },
+    "id": "starfish-plus"
+}

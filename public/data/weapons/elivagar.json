@@ -1,0 +1,13 @@
+{
+    "name": "Élivágar",
+    "might": 14,
+    "range": 2,
+    "sp": 400,
+    "description": "If unit initiates combat, converts bonuses on foes within 2 spaces of target into penalties through their next actions.",
+    "type": "Green Tome",
+    "link": "https://kagerochart.com/hero/weapons/elivagar",
+    "color": "Green",
+    "magical": true,
+    "id": "elivagar",
+    "char_unique": true
+}

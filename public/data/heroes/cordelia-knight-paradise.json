@@ -1,0 +1,47 @@
+{
+    "display": "Cordelia, Knight Paradise",
+    "name": "Cordelia",
+    "title": "Knight Paradise",
+    "id": "cordelia-knight-paradise",
+    "color": "Blue",
+    "weapon_type": "Lance",
+    "link": "https://kagerochart.com/hero/cordelia-knight-paradise",
+    "move_type": "Cavalry",
+    "weapon": [
+        "shell-lance-plus",
+        "shell-lance",
+        "steel-lance",
+        "iron-lance"
+    ],
+    "assist": [
+        "harsh-command"
+    ],
+    "passive_a": [
+        "sturdy-blow-2",
+        "sturdy-blow-1",
+        "armored-blow-1"
+    ],
+    "passive_b": [
+        "dull-close-3",
+        "dull-close-2",
+        "dull-close-1"
+    ],
+    "base_stat": {
+        "star_5": {
+            "hp": 17,
+            "atk": 8,
+            "spd": 10,
+            "def": 6,
+            "res": 5
+        },
+        "growth": {
+            "hp": 7,
+            "atk": 7,
+            "spd": 9,
+            "def": 6,
+            "res": 2,
+            "total": 31
+        },
+        "growth_type":254
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "name": "Trilemma+",
+    "might": 12,
+    "range": 2,
+    "sp": 300,
+    "description": "After combat, if unit attacked, inflicts the following status on target and foes within 2 spaces of target through their next actions: \"If unit has weapon-triangle advantage, boosts Atk by 20%. If unit has weapon-triangle disadvantage, reduces Atk by 20%.\"",
+    "type": "Staff",
+    "link": "https://kagerochart.com/hero/weapons/trilemma-plus",
+    "color": "Colorless",
+    "magical": true,
+    "refinable": {
+        "type": "staff"
+    },
+    "id": "trilemma-plus"
+}

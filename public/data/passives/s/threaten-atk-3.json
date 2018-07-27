@@ -2,5 +2,6 @@
     "description": "Inflicts Atk-5 on foes within 2 spaces through their next actions at the start of each turn.",
     "id": "threaten-atk-3",
     "name": "Threaten Atk 3",
+    "sp":200,
     "type": "s"
 }

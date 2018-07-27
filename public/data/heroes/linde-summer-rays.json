@@ -1,0 +1,47 @@
+{
+    "display": "Linde, Summer Rays",
+    "name": "Linde",
+    "title": "Summer Rays",
+    "id": "linde-summer-rays",
+    "color": "Colorless",
+    "weapon_type": "Dagger",
+    "link": "https://kagerochart.com/hero/linde-summer-rays",
+    "move_type": "Cavalry",
+    "weapon": [
+        "starfish-plus",
+        "starfish",
+        "steel-dagger",
+        "iron-dagger"
+    ],
+    "assist": [
+        "ardent-sacrifice"
+    ],
+    "passive_a": [
+        "brazen-atk-res-3",
+        "brazen-atk-res-2",
+        "brazen-atk-res-1"
+    ],
+    "passive_b": [
+        "cancel-affinity-3",
+        "cancel-affinity-2",
+        "cancel-affinity-1"
+    ],
+    "base_stat": {
+        "star_5": {
+            "hp": 16,
+            "atk": 8,
+            "spd": 9,
+            "def": 3,
+            "res": 7
+        },
+        "growth": {
+            "hp": 4,
+            "atk": 8,
+            "spd": 8,
+            "def": 2,
+            "res": 5,
+            "total": 27
+        },
+        "growth_type":142
+    }
+}

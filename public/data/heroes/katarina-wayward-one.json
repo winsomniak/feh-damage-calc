@@ -8,6 +8,7 @@
     "link": "https://kagerochart.com/hero/katarina-wayward-one",
     "move_type": "Infantry",
     "weapon": [
+        "reeses-tome",
         "raurowl-plus",
         "raurowl",
         "elfire",
@@ -42,6 +43,7 @@
             "def": 1,
             "res": 7,
             "total": 28
-        }
+        },
+        "growth_type":129
     }
 }

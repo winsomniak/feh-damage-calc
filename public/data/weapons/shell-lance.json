@@ -1,0 +1,17 @@
+{
+    "name": "Shell Lance",
+    "might": 10,
+    "range": 1,
+    "sp": 200,
+    "description": "If unit initiates combat, grants Atk/Spd/Def/Res+2 during combat.",
+    "type": "Lance",
+    "link": "https://kagerochart.com/hero/weapons/shell-lance",
+    "color": "Blue",
+    "initiate_mod": {
+        "atk": 2,
+        "spd": 2,
+        "def": 2,
+        "res": 2
+    },
+    "id": "shell-lance"
+}

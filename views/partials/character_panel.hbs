@@ -95,15 +95,25 @@
                                 <option value="Sword" selected>Sword</option>
                                 <option value="Red Tome">Red Tome</option>
                                 <option value="Red Breath">Red Breath</option>
+                                <option value="Red Bow">Red Bow</option>
+                                <option value="Red Dagger">Red Dagger</option>
+                                <option value="Red Staff">Red Staff</option>
                                 <option value="Axe">Axe</option>
                                 <option value="Green Tome">Green Tome</option>
                                 <option value="Green Breath">Green Breath</option>
+                                <option value="Green Bow">Green Bow</option>
+                                <option value="Green Dagger">Green Dagger</option>
+                                <option value="Green Staff">Green Staff</option>
                                 <option value="Lance">Lance</option>
                                 <option value="Blue Tome">Blue Tome</option>
                                 <option value="Blue Breath">Blue Breath</option>
-                                <option value="Bow">Bow</option>
-                                <option value="Dagger">Dagger</option>
-                                <option value="Staff">Staff</option>
+                                <option value="Blue Bow">Blue Bow</option>
+                                <option value="Blue Dagger">Blue Dagger</option>
+                                <option value="Blue Staff">Blue Staff</option>
+                                <option value="Bow">Colorless Bow</option>
+                                <option value="Dagger">Colorless Dagger</option>
+                                <option value="Staff">Colorless Staff</option>
+                                <option value="Colorless Breath">Colorless Breath</option>
                             </select>
                             <label class="mdc-floating-label mdc-floating-label--float-above" for="weapon-type-{{charNum}}" >Weapon Type</label>
                         </div>
@@ -124,11 +134,10 @@
 
                             <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
                                 <div class="mdc-select mdc-select--box mdc-ripple-upgraded">
-                                    <select id="level-{{charNum}}" class="mdc-select__native-control level-select build-select link-field" data-charnum="{{charNum}}">
-                                        <option value="40" selected>Lvl. 40</option>
-                                        <option value="1">Lvl. 1</option>
+                                    <select id="rarity-{{charNum}}" class="mdc-select__native-control rarity-select build-select link-field" data-charnum="{{charNum}}">
+                                        <option value="5" selected>5 Stars</option>
                                     </select>
-                                    <label class="mdc-floating-label mdc-floating-label--float-above" for="level-{{charNum}}" >Level</label>
+                                    <label class="mdc-floating-label mdc-floating-label--float-above" for="rarity-{{charNum}}">Rarity</label>
                                 </div>
                             </div>
 
@@ -191,23 +200,16 @@
                         <div class="mdc-layout-grid__inner">
 
                             <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
-                                <div class="mdc-select mdc-select--box mdc-ripple-upgraded">
-                                    <select id="rarity-{{charNum}}" class="mdc-select__native-control rarity-select build-select link-field" data-charnum="{{charNum}}">
-                                        <option value="5" selected>5 Stars</option>
-                                    </select>
-                                    <label class="mdc-floating-label mdc-floating-label--float-above" for="rarity-{{charNum}}">Rarity</label>
+                                <div class="mdc-text-field mdc-text-field--upgraded info-section-bottom level">
+                                    <label class="mdc-floating-label mdc-floating-label--float-above level-label" for="level-{{charNum}}" data-charnum="{{charNum}}">
+                                        Level / 40
+                                    </label>
+                                    <input type="number" id="level-{{charNum}}" class="mdc-text-field__input more-than-zero level-val" data-charnum="{{charNum}}" value="40" autocomplete="on">
                                 </div>
                             </div>
 
                             <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
-                                <div class="mdc-select mdc-select--box mdc-ripple-upgraded">
-                                    <select id="blessing-{{charNum}}" class="mdc-select__native-control blessing-selector link-field" data-charnum="{{charNum}}" blessing-info="blessingsInfo">
-                                        <option value="None" selected>---</option>
-                                    </select>
-                                    <label class="mdc-floating-label mdc-floating-label--float-above" for="blessing-{{charNum}}">
-                                        Blessing
-                                    </label>
-                                </div>
+                                <h3 class="mdc-typography--caption">Arena Score:<br><span id="arena-score-{{charNum}}-denom" class="denominator arena-score-{{charNum}}-read">300</span></h3>
                             </div>
 
                         </div>
@@ -261,6 +263,20 @@
                     </div>
 
                     <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
+                        <a id="passive-a-link-{{charNum}}" class="attribute-link mdc-theme--text-secondary-on-background" href="" target="_blank"><i class="material-icons">open_in_new</i></a>
+                        <div class="select-sizer">
+                            <div class="mdc-select mdc-select--box mdc-ripple-upgraded">
+                                <select id="passive-a-{{charNum}}" class="mdc-select__native-control passive-selector link-field" data-charnum="{{charNum}}" data-skilltype="a" data-info="skillInfo">
+                                    <option value="None" selected>---</option>
+                                </select>
+                                <label class="mdc-floating-label mdc-floating-label--float-above" for="passive-a-{{charNum}}" class="passive-a-label">
+                                    Passive A
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
                         <div class="info-section refinement-select">
                             <span class="attribute-link mdc-theme--text-secondary-on-background"><i class="material-icons">open_in_new</i></span>
                             <div class="select-sizer">
@@ -273,6 +289,20 @@
                                    </label>
                                </div>
                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
+                        <a id="passive-b-link-{{charNum}}" class="attribute-link mdc-theme--text-secondary-on-background" href="" target="_blank"><i class="material-icons">open_in_new</i></a>
+                        <div class="select-sizer">
+                            <div class="mdc-select mdc-select--box mdc-ripple-upgraded">
+                                <select id="passive-b-{{charNum}}" class="mdc-select__native-control passive-selector link-field" data-charnum="{{charNum}}" data-skilltype="b" data-info="skillInfo">
+                                    <option value="None" selected>---</option>
+                                </select>
+                                <label class="mdc-floating-label mdc-floating-label--float-above" for="passive-b-{{charNum}}" class="passive-b-label">
+                                    Passive B
+                                </label>
+                            </div>
                         </div>
                     </div>
 
@@ -304,48 +334,6 @@
                     </div>
 
                     <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
-                        <a id="special-link-{{charNum}}" class="attribute-link mdc-theme--text-secondary-on-background" href="" target="_blank"><i class="material-icons">open_in_new</i></a>
-                        <div class="select-sizer">
-                            <div class="mdc-select mdc-select--box mdc-ripple-upgraded">
-                                <select id="special-{{charNum}}" class="mdc-select__native-control special-selector link-field" data-charnum="{{charNum}}" data-info="specialInfo">
-                                    <option value="None" selected>---</option>
-                                </select>
-                                <label class="mdc-floating-label mdc-floating-label--float-above" for="special-{{charNum}}" class="special-label">
-                                    Special
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
-                        <a id="passive-a-link-{{charNum}}" class="attribute-link mdc-theme--text-secondary-on-background" href="" target="_blank"><i class="material-icons">open_in_new</i></a>
-                        <div class="select-sizer">
-                            <div class="mdc-select mdc-select--box mdc-ripple-upgraded">
-                                <select id="passive-a-{{charNum}}" class="mdc-select__native-control passive-selector link-field" data-charnum="{{charNum}}" data-skilltype="a" data-info="skillInfo">
-                                    <option value="None" selected>---</option>
-                                </select>
-                                <label class="mdc-floating-label mdc-floating-label--float-above" for="passive-a-{{charNum}}" class="passive-a-label">
-                                    Passive A
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
-                        <a id="passive-b-link-{{charNum}}" class="attribute-link mdc-theme--text-secondary-on-background" href="" target="_blank"><i class="material-icons">open_in_new</i></a>
-                        <div class="select-sizer">
-                            <div class="mdc-select mdc-select--box mdc-ripple-upgraded">
-                                <select id="passive-b-{{charNum}}" class="mdc-select__native-control passive-selector link-field" data-charnum="{{charNum}}" data-skilltype="b" data-info="skillInfo">
-                                    <option value="None" selected>---</option>
-                                </select>
-                                <label class="mdc-floating-label mdc-floating-label--float-above" for="passive-b-{{charNum}}" class="passive-b-label">
-                                    Passive B
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
                         <a id="passive-c-link-{{charNum}}" class="attribute-link mdc-theme--text-secondary-on-background" href="" target="_blank"><i class="material-icons">open_in_new</i></a>
                         <div class="select-sizer">
                             <div class="mdc-select mdc-select--box mdc-ripple-upgraded">
@@ -354,6 +342,20 @@
                                 </select>
                                 <label class="mdc-floating-label mdc-floating-label--float-above" for="passive-c-{{charNum}}" class="passive-c-label">
                                     Passive C
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
+                        <a id="special-link-{{charNum}}" class="attribute-link mdc-theme--text-secondary-on-background" href="" target="_blank"><i class="material-icons">open_in_new</i></a>
+                        <div class="select-sizer">
+                            <div class="mdc-select mdc-select--box mdc-ripple-upgraded">
+                                <select id="special-{{charNum}}" class="mdc-select__native-control special-selector link-field" data-charnum="{{charNum}}" data-info="specialInfo">
+                                    <option value="None" selected>---</option>
+                                </select>
+                                <label class="mdc-floating-label mdc-floating-label--float-above" for="special-{{charNum}}" class="special-label">
+                                    Special
                                 </label>
                             </div>
                         </div>
@@ -427,6 +429,16 @@
                             </div>
                             <label for="defensive-terrain-{{charNum}}" class="mdc-switch-label">Defensive Terrain</label>
                         </div>
+
+                        <div class="mdc-form-field">
+                            <div class="mdc-switch">
+                                <input type="checkbox" id="triangle-adept-status-{{charNum}}" class="mdc-switch__native-control" data-charnum="{{charNum}}" />
+                                <div class="mdc-switch__background">
+                                    <div class="mdc-switch__knob"></div>
+                                </div>
+                            </div>
+                            <label for="triangle-adept-status-{{charNum}}" class="mdc-switch-label">Triangle Adept</label>
+                        </div>
                     </div>
 
                     <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
@@ -439,6 +451,54 @@
                                 <option value="3">3</option>
                                 <option value="4">4</option>
                             </select>
+                        </div>
+
+                        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
+                            <div class="mdc-select mdc-select--box mdc-ripple-upgraded">
+                                <select id="infantry-rush-{{charNum}}" class="mdc-select__native-control infantry-rush-selector link-field" data-charnum="{{charNum}}">
+                                    <option value="None" selected>---</option>
+                                </select>
+                                <label class="mdc-floating-label mdc-floating-label--float-above" for="infantry-rush-{{charNum}}">
+                                    Infantry Rush
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12" id="blessings-{{charNum}}">
+                        <h3 class="mdc-typography--caption">Blessings</h3>
+                        <div class="mdc-layout-grid__inner">
+
+                            <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
+                                <div class="mdc-select mdc-select--box mdc-ripple-upgraded">
+                                    <select id="blessing-{{charNum}}" class="mdc-select__native-control blessing-selector link-field" data-charnum="{{charNum}}" blessing-info="blessingsInfo">
+                                        <option value="None" selected>---</option>
+                                    </select>
+                                    <label class="mdc-floating-label mdc-floating-label--float-above" for="blessing-{{charNum}}">
+                                        Blessing 1
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
+                                <div class="mdc-select mdc-select--box mdc-ripple-upgraded">
+                                    <select id="blessing2-{{charNum}}" class="mdc-select__native-control blessing-selector link-field" data-charnum="{{charNum}}" blessing-info="blessingsInfo">
+                                        <option value="None" selected>---</option>
+                                    </select>
+                                    <label class="mdc-floating-label mdc-floating-label--float-above" for="blessing2-{{charNum}}">
+                                        Blessing 2
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
+                                <div class="mdc-select mdc-select--box mdc-ripple-upgraded">
+                                    <select id="blessing3-{{charNum}}" class="mdc-select__native-control blessing-selector link-field" data-charnum="{{charNum}}" blessing-info="blessingsInfo">
+                                        <option value="None" selected>---</option>
+                                    </select>
+                                    <label class="mdc-floating-label mdc-floating-label--float-above" for="blessing3-{{charNum}}">
+                                        Blessing 3
+                                    </label>
+                                </div>
+                            </div>
                         </div>
                     </div>
 

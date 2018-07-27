@@ -1,4 +1,8 @@
 {
+    "None":
+    {
+        "stat_mod":{}
+    },
     "Attack":{
         "stat_mod":{
             "hp": 3,

@@ -8,7 +8,7 @@
     "link": "https://kagerochart.com/hero/weapons/slow-plus",
     "color": "Colorless",
     "magical": true,
-    "initiate_seal": {
+    "seal": {
         "spd": -7
     },
     "refinable": {

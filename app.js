@@ -64,6 +64,7 @@ app.get('/', function(req, res, next) {
         'tsorter.js',
         'util.js',
         'character-tabs.js',
+        'growthvectors.js',
         'combat-functions.js',
         'stat-functions.js',
         'display/update-handlers.js',

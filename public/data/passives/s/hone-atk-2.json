@@ -2,5 +2,6 @@
     "description": "Grants adjacent allies Atk+3 through their next actions at the start of each turn.",
     "id": "hone-atk-2",
     "name": "Hone Atk 2",
+    "sp":100,
     "type": "s"
 }

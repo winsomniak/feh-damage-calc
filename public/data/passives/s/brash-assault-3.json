@@ -6,5 +6,6 @@
         "trigger": "damaged",
         "threshold": 0.5,
         "counterable":true
-    }
+    },
+    "sp":200
 }

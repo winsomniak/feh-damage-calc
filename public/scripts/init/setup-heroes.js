@@ -82,11 +82,17 @@ function loadHeroesFromUrl() {
                 break;
             case 'refinement-1':
             case 'refinement-2':
-                displayStatTotals(charNum);
+                if($('#char-'+charNum).val() !== "Custom")
+                    displayStatTotals(charNum);
                 break;
             case 'blessing-1':
+            case 'blessing2-1':
+            case 'blessing3-1':
             case 'blessing-2':
-                displayStatTotals(charNum);
+            case 'blessing2-2':
+            case 'blessing3-2':
+                if($('#char-'+charNum).val() !== "Custom")
+                    displayStatTotals(charNum);
                 break;
             case 'passive-a-1':
             case 'passive-a-2':
@@ -101,10 +107,12 @@ function loadHeroesFromUrl() {
                 break;
             case 'rarity-1':
             case 'rarity-2':
-                rarityUpdate(charNum, parseInt(p));
+                if($('#char-'+charNum).val() !== "Custom")
+                    rarityUpdate(charNum, parseInt(p));
             case 'level-1':
             case 'level-2':
-                displayStatTotals(charNum);
+                if($('#char-'+charNum).val() !== "Custom")
+                    displayStatTotals(charNum);
                 break;
             case 'special-1':
             case 'special-2':

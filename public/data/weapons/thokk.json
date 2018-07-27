@@ -1,0 +1,14 @@
+{
+    "name": "Thökk",
+    "might": 14,
+    "range": 2,
+    "sp": 400,
+    "description": "Calculates damage from staff like other weapons. At start of turn, if foe's HP ≤ unit's HP+3 and foe is in cardinal direction and uses bow, dagger, magic, or staff, foe cannot move more than 1 space through its action.",
+    "type": "Staff",
+    "color": "Colorless",
+    "magical": true,
+    "link": "https://kagerochart.com/hero/weapons/thokk",
+    "reg_weapon_dmg": 0,
+    "char_unique": true,
+    "id": "thokk"
+}

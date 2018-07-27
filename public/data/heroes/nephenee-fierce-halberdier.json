@@ -8,6 +8,7 @@
     "link": "https://kagerochart.com/hero/nephenee-fierce-halberdier",
     "move_type": "Infantry",
     "weapon": [
+        "dauntless-lance",
         "slaying-lance-plus",
         "slaying-lance",
         "steel-lance",
@@ -42,6 +43,7 @@
             "def": 8,
             "res": 3,
             "total": 31
-        }
+        },
+        "growth_type":143
     }
 }

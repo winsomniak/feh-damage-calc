@@ -9,6 +9,13 @@
     "color": "Green",
     "magical": true,
     "spec_cooldown_mod": 1,
-    "add_bonus": true,
+    "add_changes": {
+        "source": "hero",
+        "type": "bonus",
+        "multiplier": 1.0,
+        "stats": [
+            "atk"
+        ]
+    },
     "id": "gronnblade-plus"
 }

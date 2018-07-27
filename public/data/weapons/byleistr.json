@@ -1,0 +1,13 @@
+{
+    "name": "Býleistr",
+    "might": 16,
+    "range": 1,
+    "sp": 400,
+    "description": "At start of odd-numbered turns, grants Atk/Spd/Def/Res+4 to unit and adjacent allies for 1 turn. (Bonus granted to unit even if no allies are adjacent.)",
+    "type": "Axe",
+    "link": "https://kagerochart.com/hero/weapons/byleistr",
+    "color": "Green",
+    "magical": false,
+    "char_unique": true,
+    "id": "byleistr"
+}

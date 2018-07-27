@@ -91,8 +91,13 @@ function getCharTabInfo(attacker) {
             getMoveIcon((charNum === '1' ? '#attacker-move' : '#defender-move'), $('#move-type-' + charNum).val());
         }
 
+        //change infantry rush
+        $('#infantry-rush-' + charNum).val(charTabInfo.infantryRush).prop('selected', 'selected');
+
         //change the blessing
         $('#blessing-' + charNum).val(charTabInfo.blessing).prop('selected', 'selected');
+        $('#blessing2-' + charNum).val(charTabInfo.blessing2).prop('selected', 'selected');
+        $('#blessing3-' + charNum).val(charTabInfo.blessing3).prop('selected', 'selected');
 
         $('#weapon-' + charNum).val(charTabInfo.weapon).prop('selected', 'selected'); //.trigger('change.select2');
         showWeapon(charTabInfo.weapon, charNum, false, true);
@@ -107,6 +112,7 @@ function getCharTabInfo(attacker) {
         // change state
         $('#candlelight-status-' + charNum).prop("checked", charTabInfo.status.candlelight);
         $('#panic-status-' + charNum).prop("checked", charTabInfo.status.panic);
+        $('#triangle-adept-status-' + charNum).prop("checked", charTabInfo.status.triangleAdept);
         if (charTabInfo.terrain === 'Defensive') {
             $('#defensive-terrain-' + charNum).prop("checked", true);
         }
@@ -155,6 +161,7 @@ function selectCharTab(attacker, newIndex) {
     // fade in new tab
     if (newTab) {
         $('#candlelight-status-' + charNum).prop("checked", false);
+        $('#triangle-adept-status-' + charNum).prop("checked", false);
         $('#panic-status-' + charNum).prop("checked", false);
         $('#defensive-terrain-' + charNum).prop("checked", false);
 
@@ -209,7 +216,10 @@ function storeCharTabInfo(attacker) {
     // weapon and skill info
     infoToStore.weapon = $('#weapon-' + charNum).val();
     infoToStore.refinement = $('#refinement-' + charNum).val();
+    infoToStore.infantryRush = $('#infantry-rush-' + charNum).val();
     infoToStore.blessing = $('#blessing-' + charNum).val();
+    infoToStore.blessing2 = $('#blessing2-' + charNum).val();
+    infoToStore.blessing3 = $('#blessing3-' + charNum).val();
     infoToStore.passiveA = $('#passive-a-' + charNum).val();
     infoToStore.passiveB = $('#passive-b-' + charNum).val();
     infoToStore.passiveC = $('#passive-c-' + charNum).val();
@@ -221,7 +231,8 @@ function storeCharTabInfo(attacker) {
     // state
     infoToStore.status = {
         "candlelight": $("#candlelight-status-" + charNum).is(":checked"),
-        "panic": $("#panic-status-" + charNum).is(":checked")
+        "panic": $("#panic-status-" + charNum).is(":checked"),
+        "triangleAdept": $("#triangle-adept-status-" + charNum).is(":checked")
     };
 
     if ($("#defensive-terrain-" + charNum).is(":checked")) {
@@ -396,9 +407,25 @@ function displayChar(charName, charNum, showHidden) {
     updateRefinements(selectedWeapon, charNum); //Refinement stuff!
 
 
+    //infantry rush stuff!
+    var infantryRush="<option value=\"None\">---</option>";
+    var selectedRush="None";
+    if (singleChar.move_type === "Infantry"){
+        infantryRush += "<option value=\"1\">1</option>";
+        infantryRush += "<option value=\"2\">2</option>";
+        infantryRush += "<option value=\"3\">3</option>";
+	}
+
+    // set values
+    $("#infantry-rush-" + charNum).html(infantryRush);
+    $("#infantry-rush-" + charNum).val(selectedRush).attr('selected', 'selected');
+
+
     //blessings stuff!
     var blessings="<option value=\"None\">---</option>";
     var selectedBlessing="None";
+    var selectedBlessing2="None";
+    var selectedBlessing3="None";
 
     if (!singleChar.hasOwnProperty("legendary")){
         blessings += "<option value=\"Attack\">Attack</option>";
@@ -410,6 +437,10 @@ function displayChar(charName, charNum, showHidden) {
     // set values
     $("#blessing-" + charNum).html(blessings);
     $("#blessing-" + charNum).val(selectedBlessing).attr('selected', 'selected');
+    $("#blessing2-" + charNum).html(blessings);
+    $("#blessing2-" + charNum).val(selectedBlessing2).attr('selected', 'selected');
+    $("#blessing3-" + charNum).html(blessings);
+    $("#blessing3-" + charNum).val(selectedBlessing3).attr('selected', 'selected');
 
     // show extra weapon info
     showWeapon(selectedWeapon, charNum, false, showHidden);
@@ -450,9 +481,14 @@ function displayChar(charName, charNum, showHidden) {
         $("#spd-" + charNum).val(singleChar.spd);
         $("#def-" + charNum).val(singleChar.def);
         $("#res-" + charNum).val(singleChar.res);
+        BST = singleChar.hp + singleChar.atk + singleChar.spd + singleChar.def + singleChar.res;
         $("#char-build-info-" + charNum + " label").css("color", "#5b5b5b");
         $("#char-build-info-" + charNum + " select").attr("disabled", "disabled");
     }
+
+    //Arena Score Calculation
+    var points = ArenaScoreCalc(charNum);
+    $(".arena-score-" + charNum + "-read").text(points.toString());
 
     // default state
     $("#status-section" + charNum).find(".mdc-switch__native-control").attr("checked", false);
@@ -486,6 +522,9 @@ function displayCustomChar(charName, charNum, showHidden) {
     var weapon = $("#weapon-" + charNum).val();
     var refinement = $("#refinement-" + charNum).val();
     var blessing = $("#blessing-" + charNum).val();
+    var blessing2 = $("#blessing2-" + charNum).val();
+    var blessing3 = $("#blessing3-" + charNum).val();
+    var infantryRush = $("#infantry-rush-" + charNum).val();
     var passiveA = $("#passive-a-" + charNum).val();
     var passiveB = $("#passive-b-" + charNum).val();
     var passiveC = $("#passive-c-" + charNum).val();

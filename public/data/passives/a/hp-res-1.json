@@ -5,7 +5,7 @@
     "description": "Grants HP+3, Res+1.",
     "icon": "/images/icons/passives/hp-res-1.png",
     "stat_mod": {
-        "hp": 2,
+        "hp": 3,
         "res": 1
     },
     "link": "https://kagerochart.com/hero/passives/hp-res-1",

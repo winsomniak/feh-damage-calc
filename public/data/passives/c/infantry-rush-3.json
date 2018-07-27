@@ -1,0 +1,9 @@
+{
+    "name": "Infantry Rush 3",
+    "sp": 240,
+    "type": "C",
+    "description": "Infantry allies within 2 spaces gain: \"If unit's Atk ≥ foe's Atk+1, grants Special cooldown charge +1 per attack. (Only highest value applied. Does not stack.)\"",
+    "icon": "/images/icons/passives/infantry-rush-3.png",
+    "link": "https://kagerochart.com/hero/passives/infantry-rush-3",
+    "id": "infantry-rush-3"
+}

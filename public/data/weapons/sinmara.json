@@ -1,0 +1,16 @@
+{
+    "name": "Sinmara",
+    "might": 16,
+    "range": 1,
+    "sp": 400,
+    "description": "Grants Def+3. At the start of turn, deals 20 damage to foes within 2 spaces.",
+    "type": "Axe",
+    "link": "https://kagerochart.com/hero/weapons/sinmara",
+    "color": "Green",
+    "stat_mod":{
+        "def":3
+    },
+    "magical": false,
+    "char_unique": true,
+    "id": "sinmara"
+}

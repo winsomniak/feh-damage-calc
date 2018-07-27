@@ -1,0 +1,9 @@
+{
+    "name": "Staff Valor 3",
+    "sp": 120,
+    "type": "C",
+    "description": "While unit lives, all staff allies on team get 2x SP after combat or after using healing Assist skills. (Only highest value applied. Does not stack.)",
+    "icon": "/images/icons/passives/staff-valor-3.png",
+    "link": "https://kagerochart.com/hero/passives/staff-valor-3",
+    "id": "staff-valor-3"
+}

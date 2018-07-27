@@ -1,0 +1,27 @@
+{
+    "name": "Wolf Berg",
+    "might": 16,
+    "range": 1,
+    "sp": 400,
+    "description": "Grants Def+3. If the number of foes within 2 spaces (excluding target) ≥ the number of allies within 2 spaces (excluding unit), grants Atk/Spd/Def/Res+4 during combat.",
+    "type": "Axe",
+    "stat_mod":{
+        "def":3
+    },
+    "link": "https://kagerochart.com/hero/weapons/wolf-berg",
+    "color": "Green",
+    "adjacent_stat_bonus": {
+        "target": "self",
+        "adjacent": "ally",
+        "enemy_greater_than": true,
+        "mod": {
+            "atk": 4,
+            "spd": 4,
+            "def": 4,
+            "res": 4
+        }
+    },
+    "magical": false,
+    "char_unique":true,
+    "id": "wolf-berg"
+}

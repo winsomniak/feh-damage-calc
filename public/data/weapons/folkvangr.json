@@ -12,5 +12,20 @@
         "atk": 5
     },
     "char_unique": true,
+    "refinable":{
+        "type":"melee",
+        "remove":{
+            "defiant":true
+        },
+        "below_threshold_mod": {
+            "threshold": 0.8,
+            "stat_mod": {
+                "atk": 7,
+                "def": 7
+            }
+        },
+        "Special":"Fólkvangr",
+        "description": "At start of combat, if unit's HP ≤ 80%, grants Atk/Def+7 during combat."
+    },
     "id": "folkvangr"
 }

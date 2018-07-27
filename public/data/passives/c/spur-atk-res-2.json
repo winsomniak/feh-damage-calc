@@ -1,0 +1,9 @@
+{
+    "name": "Spur Atk Res 2",
+    "sp": 240,
+    "type": "C",
+    "description": "Grants adjacent allies Atk/Res +3 during combat.",
+    "icon": "/images/icons/passives/spur-atk-res-2.png",
+    "link": "https://kagerochart.com/hero/passives/spur-atk-res-2",
+    "id": "spur-atk-res-2"
+}

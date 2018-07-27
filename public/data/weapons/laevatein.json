@@ -1,0 +1,24 @@
+{
+    "name": "Laevatein",
+    "might": 16,
+    "range": 1,
+    "sp": 400,
+    "description": "Grants Atk+3. Adds total bonuses on unit to damage dealt.",
+    "type": "Sword",
+    "link": "https://kagerochart.com/hero/weapons/niu",
+    "color": "Red",
+    "magical": false,
+    "stat_mod":{
+        "atk":3
+    },
+    "add_changes": {
+        "source": "hero",
+        "type": "bonus",
+        "multiplier": 1.0,
+        "stats": [
+            "atk"
+        ]
+    },
+    "char_unique": true,
+    "id": "niu"
+}

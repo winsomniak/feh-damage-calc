@@ -5,6 +5,7 @@
     "id": "legault-the-hurricane",
     "color": "Colorless",
     "weapon_type": "Dagger",
+    "LowestRarity":4,
     "link": "https://kagerochart.com/hero/legault-the-hurricane",
     "move_type": "Infantry",
     "weapon": [
@@ -42,6 +43,7 @@
             "def": 4,
             "res": 3,
             "total": 29
-        }
+        },
+        "growth_type":215
     }
 }

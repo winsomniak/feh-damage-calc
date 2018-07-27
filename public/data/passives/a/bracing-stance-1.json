@@ -1,0 +1,13 @@
+{
+    "name": "Bracing Stance 1",
+    "sp": 120,
+    "type": "A",
+    "description": "Grants Def/Res+2 during combat when this unit is attacked.",
+    "icon": "/images/icons/passives/bracing-stance-1.png",
+    "defend_mod": {
+        "def": 2,
+        "res": 2
+    },
+    "link": "https://kagerochart.com/hero/passives/bracing-stance-1",
+    "id": "bracing-stance-1"
+}
