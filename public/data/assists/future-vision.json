@@ -1,0 +1,9 @@
+{
+    "name": "Future Vision",
+    "range": 1,
+    "sp": 400,
+    "description": "Unit and target ally swap spaces. Grants another action to unit. (Additional action granted once per turn only.)",
+    "link": "https://kagerochart.com/hero/assists/future-vision",
+    "char_unique": true,
+    "id": "future-vision"
+}

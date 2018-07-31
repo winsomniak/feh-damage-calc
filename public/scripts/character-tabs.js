@@ -75,6 +75,14 @@ function getCharTabInfo(attacker) {
         getSkillData(charNum, 'c', false);
         getSkillData(charNum, 's', false);
 
+        // change drives
+        $('#drive-1-' + charNum).val(charTabInfo.drive1).prop('selected', 'selected'); //.trigger('change.select2');
+        $('#drive-2-' + charNum).val(charTabInfo.drive2).prop('selected', 'selected'); //.trigger('change.select2');
+        $('#drive-3-' + charNum).val(charTabInfo.drive3).prop('selected', 'selected'); //.trigger('change.select2');
+        getDriveData(charNum, "1", false);
+        getDriveData(charNum, "2", false);
+        getDriveData(charNum, "3", false);
+
         // change special
         $('#special-' + charNum).val(charTabInfo.special).prop('selected', 'selected'); //.trigger('change.select2');
         showSpecCooldown(charTabInfo.special, charNum, true);
@@ -90,9 +98,6 @@ function getCharTabInfo(attacker) {
             getWeaponIcon((charNum === '1' ? '#attacker-weapon' : '#defender-weapon'), $('#weapon-type-' + charNum).val());
             getMoveIcon((charNum === '1' ? '#attacker-move' : '#defender-move'), $('#move-type-' + charNum).val());
         }
-
-        //change infantry rush
-        $('#infantry-rush-' + charNum).val(charTabInfo.infantryRush).prop('selected', 'selected');
 
         //change the blessing
         $('#blessing-' + charNum).val(charTabInfo.blessing).prop('selected', 'selected');
@@ -216,7 +221,6 @@ function storeCharTabInfo(attacker) {
     // weapon and skill info
     infoToStore.weapon = $('#weapon-' + charNum).val();
     infoToStore.refinement = $('#refinement-' + charNum).val();
-    infoToStore.infantryRush = $('#infantry-rush-' + charNum).val();
     infoToStore.blessing = $('#blessing-' + charNum).val();
     infoToStore.blessing2 = $('#blessing2-' + charNum).val();
     infoToStore.blessing3 = $('#blessing3-' + charNum).val();
@@ -227,6 +231,9 @@ function storeCharTabInfo(attacker) {
     infoToStore.special = $('#special-' + charNum).val();
     infoToStore.specCooldown = $('#spec-cooldown-' + charNum).val();
     infoToStore.seal = $('#passive-s-' + charNum).val();
+    infoToStore.drive1 = $('#drive-1-' + charNum).val();
+    infoToStore.drive2 = $('#drive-2-' + charNum).val();
+    infoToStore.drive3 = $('#drive-3-' + charNum).val();
 
     // state
     infoToStore.status = {
@@ -314,6 +321,11 @@ function displayChar(charName, charNum, showHidden) {
     showSkills(singleChar, charNum, "b");
     showSkills(singleChar, charNum, "c");
     showSkills(singleChar, charNum, "s");
+
+    // show drive skills
+    showDrives(singleChar, charNum, "1");
+    showDrives(singleChar, charNum, "2");
+    showDrives(singleChar, charNum, "3");
 
     // reset sacred seal
     $("#passive-s-" + charNum).val("None").attr('selected', 'selected');
@@ -405,21 +417,6 @@ function displayChar(charName, charNum, showHidden) {
     $("#weapon-" + charNum).val(selectedWeapon).attr('selected', 'selected'); //.trigger("change.select2");
 
     updateRefinements(selectedWeapon, charNum); //Refinement stuff!
-
-
-    //infantry rush stuff!
-    var infantryRush="<option value=\"None\">---</option>";
-    var selectedRush="None";
-    if (singleChar.move_type === "Infantry"){
-        infantryRush += "<option value=\"1\">1</option>";
-        infantryRush += "<option value=\"2\">2</option>";
-        infantryRush += "<option value=\"3\">3</option>";
-	}
-
-    // set values
-    $("#infantry-rush-" + charNum).html(infantryRush);
-    $("#infantry-rush-" + charNum).val(selectedRush).attr('selected', 'selected');
-
 
     //blessings stuff!
     var blessings="<option value=\"None\">---</option>";
@@ -524,11 +521,13 @@ function displayCustomChar(charName, charNum, showHidden) {
     var blessing = $("#blessing-" + charNum).val();
     var blessing2 = $("#blessing2-" + charNum).val();
     var blessing3 = $("#blessing3-" + charNum).val();
-    var infantryRush = $("#infantry-rush-" + charNum).val();
     var passiveA = $("#passive-a-" + charNum).val();
     var passiveB = $("#passive-b-" + charNum).val();
     var passiveC = $("#passive-c-" + charNum).val();
     var seal = $("#passive-s-" + charNum).val();
+    var drive1 = $("#drive-1-" + charNum).val();
+    var drive2 = $("#drive-2-" + charNum).val();
+    var drive3 = $("#drive-3-" + charNum).val();
     var assist = $("#assist-" + charNum).val();
     var special = $("#special-" + charNum).val();
 
@@ -557,6 +556,19 @@ function displayCustomChar(charName, charNum, showHidden) {
     loadPassives("s", "#passive-s-" + charNum, true);
     $("#passive-s-" + charNum).val(seal).attr('selected', 'selected'); //.trigger("change.select2");
     getSkillData(charNum, "s", false);
+
+    //load in drive skills
+    loadDrives("#drive-1-" + charNum);
+    $("#drive-1-" + charNum).val(drive1).attr('selected', 'selected'); //.trigger("change.select2");
+    getDriveData(charNum, "1", false);
+
+    loadDrives("#drive-2-" + charNum);
+    $("#drive-2-" + charNum).val(drive2).attr('selected', 'selected'); //.trigger("change.select2");
+    getDriveData(charNum, "2", false);
+
+    loadDrives("#drive-3-" + charNum);
+    $("#drive-3-" + charNum).val(drive3).attr('selected', 'selected'); //.trigger("change.select2");
+    getDriveData(charNum, "3", false);
 
     // load in assist skills
     loadAssists("#assist-" + charNum, true);

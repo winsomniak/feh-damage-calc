@@ -1,4 +1,4 @@
-var checks = ['weaponData', 'passiveAData', 'passiveBData', 'passiveCData', 'sealData'];
+var checks = ['weaponData', 'passiveAData', 'passiveBData', 'passiveCData', 'sealData', 'drive1Data', 'drive2Data', 'drive3Data'];
 
 function checkAffinity(mod, attacker, defender) {
     var atkAdept = 0;
@@ -624,7 +624,7 @@ function hasSpecAccel(battleInfo, attacker, defender, initiator, block) {
         stringToPrint= "<span class='" +mainUnit.agentClass + "'>" +mainUnit.display + "</span> gained an additional special cooldown charge [" + mainUnit[key].name + "]! ";
 
         //Check if the boost activates if the unit's attacked
-        if(mainUnit[key].spec_accel.hasOwnProperty("not_in_defense") && !initiator)
+        if((mainUnit[key].spec_accel.hasOwnProperty("not_in_defense") && !initiator) || (mainUnit[key].spec_accel.hasOwnProperty("movement_type") &&  !mainUnit[key].spec_accel.movement_type.includes(mainUnit.moveType)))
             continue;
         //If spec_accel data does not have stat information, there are no requirements, only one possible is the threshold one
         if (!stat) {
@@ -648,21 +648,6 @@ function hasSpecAccel(battleInfo, attacker, defender, initiator, block) {
                 done = true;
                 return true;
             }
-        }
-    }
-    //infantry rush part
-    if(!block && mainUnit.infantryRush !== "None")
-    {
-        var stat="atk";
-        var reqStatAdvantage= (2 * (3 - mainUnit.infantryRush)) + 1;
-        stringToPrint= "<span class='" +mainUnit.agentClass + "'>" +mainUnit.display + "</span> gained an additional special cooldown charge [Infantry Rush " + mainUnit.infantryRush.toString() + "]! ";
-        //Account for bonuses to comparisons like phantom speed
-        if (phantomStat(mainUnit, stat) - phantomStat(otherUnit, stat) >= reqStatAdvantage) {
-            if(mainUnit.specCurrCooldown > 0) {
-                mainUnit.specCurrCooldown--;
-                battleInfo.logMsg += stringToPrint;
-            }
-            return true;
         }
     }
     return false;
