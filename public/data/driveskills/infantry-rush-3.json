@@ -1,5 +1,5 @@
 {
-    "description": "If unit's Atk - foe's Atk ≥ 1, unit gains Special cooldown charge +1 per attack.\r\n(If using other similar skill, only highest value applied.)",
+    "description": "Works only on Infantry units. If unit's Atk - foe's Atk ≥ 1, unit gains Special cooldown charge +1 per attack.\r\n(If using other similar skill, only highest value applied.)",
     "id": "infantry-rush-3",
     "name": "Infantry Rush 3",
     "spec_accel": {
