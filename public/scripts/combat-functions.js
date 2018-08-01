@@ -250,14 +250,14 @@ function defCanCounter(battleInfo) {
     return true;
 }
 
-function consecutiveDamageReduction(dmg, defender, attacker, battleInfo) {
+function consecutiveDamageReduction(dmg, defender, attacker) {
     var multiplier = 1;
 
     checks.forEach(function(key) {
         var red = defender[key].consecutive_dmg_reduction;
         if (red && red.multiplier) {
 
-            if (red.enemy_range && red.enemy_range !== battleInfo.atkRange) {
+            if (red.enemy_range && red.enemy_range !== attacker.weaponData.range) {
                 return;
             }
 

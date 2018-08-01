@@ -1910,7 +1910,7 @@ function singleCombat(battleInfo, initiator, logIntro, brave) {
     // Damage reduction for sequential attacks (originally for Urvan)
     if (battleInfo.lastActor === attacker.name) {
 
-        var multiplier = consecutiveDamageReduction(dmg, defender, attacker, battleInfo)
+        var multiplier = consecutiveDamageReduction(dmg, defender, attacker);
 
         if (multiplier !== 1) {
             dmg = roundNum(dmg * multiplier, true);
