@@ -354,6 +354,50 @@ function showSkills(singleChar, charNum, type) {
     getSkillData(charNum, type, false);
 }
 
+// gets drive data and stores it
+// charNum determines which panel to display it in, driveNum is the number of the drive, update is true if stats need to be adjusted
+function getDriveData(charNum, driveNum, update) {
+
+    var selectID = "#drive-" + driveNum + "-" + charNum;
+    var driveName = $(selectID).val();
+
+    if (driveInfo.hasOwnProperty(driveName)) {
+        if (update) {
+            updateStatTotal(selectID, charNum, false);
+            $(selectID).data("info", driveInfo[driveName]);
+            updateStatTotal(selectID, charNum, true);
+        } else {
+            $(selectID).data("info", driveInfo[driveName]);
+        }
+    } else {    // no skill
+        if (update) {
+            updateStatTotal(selectID, charNum, false);
+        }
+
+        $(selectID).data("info", {});
+    }
+}
+
+// displays passive skills
+// singleChar contains the data for a single character, charNum determines which panel to display on, driveNum is the drive's number
+function showDrives(singleChar, charNum, driveNum) {
+
+    var drives = "<option value=\"None\">None</option>";
+    var selectedDrive = "None";
+
+    // get drives
+    for (var key in driveInfo) {
+        drives += "<option value=\"" + key + "\">" + driveInfo[key].name + "</option>";
+    }
+
+    // set value
+    $("#drive-" + driveNum + "-" + charNum).html(drives);
+    $("#drive-" + driveNum + "-" + charNum).val(selectedDrive).attr('selected', 'selected'); //.trigger("change.select2");
+
+    // store drive data
+    getDriveData(charNum, driveNum, false);
+}
+
 // shows extra weapon info
 // selectedWeapon is the weapon to display, charNum determines the panel, showHidden is true if we need to show or hide anything
 // set update to true to update the character's atk value
@@ -498,6 +542,17 @@ function loadPassives(letter, selectID, unique) {
         if (unique || !skillInfo[letter][key].hasOwnProperty("char_unique")) {
             options += "<option value=\"" + key + "\">" + skillInfo[letter][key].name + "</option>";
         }
+    }
+    $(selectID).html(options);
+}
+
+// load all drive skills
+// selectID determines which select to load in
+function loadDrives(selectID) {
+
+    var options = "<option value='None'>None</option>";
+    for (var key in driveInfo) {
+        options += "<option value=\"" + key + "\">" + driveInfo[key].name + "</option>";
     }
     $(selectID).html(options);
 }
@@ -1163,8 +1218,13 @@ function getCharPanelData(charNum) {
     charData.passiveAData = $("#passive-a-" + charNum).data("info");
     charData.passiveBData = $("#passive-b-" + charNum).data("info");
     charData.passiveCData = $("#passive-c-" + charNum).data("info");
+    charData.drive1 = $("#drive-1-" + charNum).val();
+    charData.drive2 = $("#drive-2-" + charNum).val();
+    charData.drive3 = $("#drive-3-" + charNum).val();
+    charData.drive1Data = $("#drive-1-" + charNum).data("info");
+    charData.drive2Data = $("#drive-2-" + charNum).data("info");
+    charData.drive3Data = $("#drive-3-" + charNum).data("info");
     charData.special = $("#special-" + charNum).val();
-	charData.infantryRush = $("#infantry-rush-" + charNum).val();
 	charData.refinement = $("#refinement-" + charNum).val();
     charData.specCurrCooldown = parseInt($("#spec-cooldown-" + charNum).val());
     charData.specialData = $("#special-" + charNum).data("info");
@@ -1302,8 +1362,13 @@ function getDefaultCharData(charName) {
     charData.specialData = (charInfo[charName].hasOwnProperty("special") && specialIndex >= 0) ? specialInfo[charData.special] : {};
     charData.seal = "None";
     charData.sealData = {};
+    charData.drive1 = "None";
+    charData.drive1Data = {};
+    charData.drive2 = "None";
+    charData.drive2Data = {};
+    charData.drive3 = "None";
+    charData.drive3Data = {};
     charData.refinement="None";
-    charData.infantryRush="None";
     charData.blessing="None";
     charData.blessing2="None";
     charData.blessing3="None";
@@ -1313,14 +1378,6 @@ function getDefaultCharData(charName) {
     if (tmpRef !== "None") {
         if((charData.weaponName !== "None") && charData.weaponData.hasOwnProperty("refinable") && (((tmpRef !== "Special") && (refinementsInfo[charData.weaponData.refinable.type].hasOwnProperty(tmpRef)))||(charData.weaponData.refinable.hasOwnProperty("Special")))) {
             charData.refinement=tmpRef;
-        }
-    }
-
-    // override infantry rush (Only infantry allies)
-    if ($("#override-infantry-rush").val() !== "None") {
-        if(charInfo[charName].move_type === "Infantry")
-        {
-            charData.infantryRush= $("#override-infantry-rush").val();
         }
     }
 
@@ -1377,6 +1434,20 @@ function getDefaultCharData(charName) {
     if ($("#override-passive-s").val() !== "No Override" && $("#override-passive-s").val() !== "None") {
         charData.seal = $("#override-passive-s").val();
         charData.sealData = skillInfo.s[$("#override-passive-s").val()];
+    }
+
+    // override drives
+    if ($("#override-drive-1").val() !== "No Override" && $("#override-drive-1").val() !== "None") {
+        charData.drive1 = $("#override-drive-1").val();
+        charData.drive1Data = driveInfo[$("#override-drive-1").val()];
+    }
+    if ($("#override-drive-2").val() !== "No Override" && $("#override-drive-2").val() !== "None") {
+        charData.drive2 = $("#override-drive-2").val();
+        charData.drive2Data = driveInfo[$("#override-drive-2").val()];
+    }
+    if ($("#override-drive-3").val() !== "No Override" && $("#override-drive-3").val() !== "None") {
+        charData.drive3 = $("#override-drive-3").val();
+        charData.drive3Data = driveInfo[$("#override-drive-3").val()];
     }
 
     // override assist
@@ -1839,7 +1910,7 @@ function singleCombat(battleInfo, initiator, logIntro, brave) {
     // Damage reduction for sequential attacks (originally for Urvan)
     if (battleInfo.lastActor === attacker.name) {
 
-        var multiplier = consecutiveDamageReduction(dmg, defender, attacker, battleInfo)
+        var multiplier = consecutiveDamageReduction(dmg, defender, attacker);
 
         if (multiplier !== 1) {
             dmg = roundNum(dmg * multiplier, true);
@@ -2541,8 +2612,6 @@ function swap() {
     oldAtkInfo.weaponDesc = $("#weapon-desc-1").text();
     oldAtkInfo.refinement = $("#refinement-1").html();
     oldAtkInfo.selectedRefinement = $("#refinement-1").val();
-    oldAtkInfo.infantryRush = $("#infantry-rush-1").html();
-    oldAtkInfo.selectedInfantryRush = $("#infantry-rush-1").val();
     oldAtkInfo.blessing = $("#blessing-1").html();
     oldAtkInfo.selectedBlessing = $("#blessing-1").val();
     oldAtkInfo.blessing2 = $("#blessing2-1").html();
@@ -2566,6 +2635,15 @@ function swap() {
     oldAtkInfo.selectedPassiveC = $("#passive-c-1").val();
     oldAtkInfo.passiveCData = $("#passive-c-1").data("info");
     oldAtkInfo.passiveCDesc = $("#passive-c-desc-1").text();
+    oldAtkInfo.drive1 = $("#drive-1-1").html();
+    oldAtkInfo.selectedDrive1 = $("#drive-1-1").val();
+    oldAtkInfo.drive1Data = $("#drive-1-1").data("info");
+    oldAtkInfo.drive2 = $("#drive-2-1").html();
+    oldAtkInfo.selectedDrive2 = $("#drive-2-1").val();
+    oldAtkInfo.drive2Data = $("#drive-2-1").data("info");
+    oldAtkInfo.drive3 = $("#drive-3-1").html();
+    oldAtkInfo.selectedDrive3 = $("#drive-3-1").val();
+    oldAtkInfo.drive3Data = $("#drive-3-1").data("info");
     oldAtkInfo.assist = $("#assist-1").html();
     oldAtkInfo.selectedAssist = $("#assist-1").val();
     oldAtkInfo.assistData = $("#assist-1").data("info");
@@ -2629,8 +2707,6 @@ function swap() {
     $("#weapon-1").val($("#weapon-2").val());
     $("#refinement-1").html($("#refinement-2").html());
     $("#refinement-1").val($("#refinement-2").val());
-    $("#infantry-rush-1").html($("#infantry-rush-2").html());
-    $("#infantry-rush-1").val($("#infantry-rush-2").val());
     $("#blessing-1").html($("#blessing-2").html());
     $("#blessing-1").val($("#blessing-2").val());
     $("#blessing2-1").html($("#blessing2-2").html());
@@ -2659,6 +2735,15 @@ function swap() {
     $("#passive-c-1").val($("#passive-c-2").val());
     $("#passive-c-1").data("info", $("#passive-c-2").data("info"));
     $("#passive-c-desc-1").text($("#passive-c-desc-2").text());
+    $("#drive-1-1").html($("#drive-1-2").html());
+    $("#drive-1-1").val($("#drive-1-2").val());
+    $("#drive-1-1").data("info", $("#drive-1-2").data("info"));
+    $("#drive-2-1").html($("#drive-2-2").html());
+    $("#drive-2-1").val($("#drive-2-2").val());
+    $("#drive-2-1").data("info", $("#drive-2-2").data("info"));
+    $("#drive-3-1").html($("#drive-3-2").html());
+    $("#drive-3-1").val($("#drive-3-2").val());
+    $("#drive-3-1").data("info", $("#drive-3-2").data("info"));
     $("#assist-1").html($("#assist-2").html());
     $("#assist-1").val($("#assist-2").val());
     $("#assist-1").data("info", $("#assist-2").data("info"));
@@ -2718,8 +2803,6 @@ function swap() {
     $("#weapon-2").val(oldAtkInfo.selectedWeapon);
     $("#refinement-2").html(oldAtkInfo.refinement);
     $("#refinement-2").val(oldAtkInfo.selectedRefinement);
-    $("#infantry-rush-2").html(oldAtkInfo.infantryRush);
-    $("#infantry-rush-2").val(oldAtkInfo.selectedInfantryRush);
     $("#blessing-2").html(oldAtkInfo.blessing);
     $("#blessing-2").val(oldAtkInfo.selectedBlessing);
     $("#blessing2-2").html(oldAtkInfo.blessing2);
@@ -2748,6 +2831,15 @@ function swap() {
     $("#passive-c-2").val(oldAtkInfo.selectedPassiveC);
     $("#passive-c-2").data("info", oldAtkInfo.passiveCData);
     $("#passive-c-desc-2").text(oldAtkInfo.passiveCDesc);
+    $("#drive-1-2").html(oldAtkInfo.drive1);
+    $("#drive-1-2").val(oldAtkInfo.selectedDrive1);
+    $("#drive-1-2").data("info", oldAtkInfo.drive1Data);
+    $("#drive-2-2").html(oldAtkInfo.drive2);
+    $("#drive-2-2").val(oldAtkInfo.selectedDrive2);
+    $("#drive-2-2").data("info", oldAtkInfo.drive2Data);
+    $("#drive-3-2").html(oldAtkInfo.drive3);
+    $("#drive-3-2").val(oldAtkInfo.selectedDrive3);
+    $("#drive-3-2").data("info", oldAtkInfo.drive3Data);
     $("#assist-2").html(oldAtkInfo.assist);
     $("#assist-2").val(oldAtkInfo.selectedAssist);
     $("#assist-2").data("info", oldAtkInfo.assistData);
@@ -3274,6 +3366,20 @@ function applyOverrides(charNum) {
         getSkillData(charNum, "s", true);
     }
 
+    // override drives
+    if ($("#override-drive-1").val() !== "None") {
+        $("#drive-1-" + charNum).val($("#override-drive-1").val()).attr('selected', 'selected');//.trigger("change.select2");
+        getDriveData(charNum, "1", true);
+    }
+    if ($("#override-drive-2").val() !== "None") {
+        $("#drive-2-" + charNum).val($("#override-drive-2").val()).attr('selected', 'selected');//.trigger("change.select2");
+        getDriveData(charNum, "2", true);
+    }
+    if ($("#override-drive-3").val() !== "None") {
+        $("#drive-3-" + charNum).val($("#override-drive-3").val()).attr('selected', 'selected');//.trigger("change.select2");
+        getDriveData(charNum, "3", true);
+    }
+
     // override assist
     if ($("#override-assist").val() !== "No Override") {
         if ($("#override-assist").val() === "None") {
@@ -3534,6 +3640,9 @@ function setupOverrides() {
     loadPassives("a", "#override-passive-a", false);
     loadPassives("b", "#override-passive-b", false);
     loadPassives("c", "#override-passive-c", false);
+    loadDrives("#override-drive-1");
+    loadDrives("#override-drive-2");
+    loadDrives("#override-drive-3");
     loadPassives("s", "#override-passive-s", false);
     loadAssists("#override-assist", false);
     loadSpecials("#override-special");
@@ -3748,12 +3857,14 @@ function importTeam(attacker) {
         importedChars[charCount].passiveA = "None";
         importedChars[charCount].passiveB = "None";
         importedChars[charCount].passiveC = "None";
+        importedChars[charCount].drive1 = "None";
+        importedChars[charCount].drive2 = "None";
+        importedChars[charCount].drive3 = "None";
         importedChars[charCount].assist = "None";
         importedChars[charCount].special = "None";
         importedChars[charCount].specCooldown = "0";
         importedChars[charCount].seal = "None";
         importedChars[charCount].refinement="None";
-        importedChars[charCount].infantryRush="None";
         importedChars[charCount].blessing="None";
         importedChars[charCount].blessing2="None";
         importedChars[charCount].blessing3="None";
@@ -3968,8 +4079,6 @@ function importTeam(attacker) {
                         }
                     } else if (equipItem === "refinement") { // refinement
                         importedChars[charCount].refinement = line[1];
-                    } else if (equipItem === "infantry rush") { // infantry rush
-                        importedChars[charCount].infantryRush = line[1];
                     } else if (equipItem === "blessing") { // blessing
                         importedChars[charCount].blessing = line[1];
                     } else if (equipItem === "blessing2") { // blessing
@@ -4024,6 +4133,30 @@ function importTeam(attacker) {
                                 error = true;
                                 break;
                             }
+                        }
+                    } else if (equipItem === "drive 1") { // drive 1
+                        if (driveInfo.hasOwnProperty(line[1])) {
+                            importedChars[charCount].drive1 = line[1];
+                        } else {
+                            $("#import-error-msg").text("Import error: Invalid skill drive 1 (line " + (textLine + 1).toString() + ")").show();
+                            error = true;
+                            break;
+                        }
+                    } else if (equipItem === "drive 2") { // drive 2
+                        if (driveInfo.hasOwnProperty(line[1])) {
+                            importedChars[charCount].drive2 = line[1];
+                        } else {
+                            $("#import-error-msg").text("Import error: Invalid skill drive 2 (line " + (textLine + 1).toString() + ")").show();
+                            error = true;
+                            break;
+                        }
+                    } else if (equipItem === "drive 3") { // drive 3
+                        if (driveInfo.hasOwnProperty(line[1])) {
+                            importedChars[charCount].drive3 = line[1];
+                        } else {
+                            $("#import-error-msg").text("Import error: Invalid skill drive 3 (line " + (textLine + 1).toString() + ")").show();
+                            error = true;
+                            break;
                         }
                     } else { // seal
                         if (skillInfo.s.hasOwnProperty(line[1]) && (importedChars[charCount].character === "Custom" || isInheritable(skillInfo.s[line[1]], importedChars[charCount].character))) {
@@ -4187,7 +4320,9 @@ function exportCharPanel(charNum) {
     exportText += $("#passive-c-" + charNum).val() !== "None" ? "Passive C: " + $("#passive-c-" + charNum).val() + "\r\n" : "";
     exportText += $("#passive-s-" + charNum).val() !== "None" ? "Sacred Seal: " + $("#passive-s-" + charNum).val() + "\r\n" : "";
     exportText += $("#refinement-" + charNum).val() !== "None" ? "Refinement: " + $("#refinement-" + charNum).val() + "\r\n" : "";
-    exportText += $("#infantry-rush-" + charNum).val() !== "None" ? "Infantry Rush: " + $("#infantry-rush-" + charNum).val() + "\r\n" : "";
+    exportText += $("#drive-1-" + charNum).val() !== "None" ? "Drive 1: " + $("#drive-1-" + charNum).val() + "\r\n" : "";
+    exportText += $("#drive-2-" + charNum).val() !== "None" ? "Drive 2: " + $("#drive-2-" + charNum).val() + "\r\n" : "";
+    exportText += $("#drive-3-" + charNum).val() !== "None" ? "Drive 3: " + $("#drive-3-" + charNum).val() + "\r\n" : "";
     exportText += $("#blessing-" + charNum).val() !== "None" ? "Blessing: " + $("#blessing-" + charNum).val() + "\r\n" : "";
     exportText += $("#blessing2-" + charNum).val() !== "None" ? "Blessing 2: " + $("#blessing2-" + charNum).val() + "\r\n" : "";
     exportText += $("#blessing3-" + charNum).val() !== "None" ? "Blessing 3: " + $("#blessing3-" + charNum).val() + "\r\n" : "";
@@ -4233,9 +4368,11 @@ function exportCharTab(container) {
     exportText += container.passiveA !== "None" ? "Passive A: " + container.passiveA + "\r\n" : "";
     exportText += container.passiveB !== "None" ? "Passive B: " + container.passiveB + "\r\n" : "";
     exportText += container.passiveC !== "None" ? "Passive C: " + container.passiveC + "\r\n" : "";
+    exportText += container.drive1 !== "None" ? "Drive 1: " + container.drive1 + "\r\n" : "";
+    exportText += container.drive2 !== "None" ? "Drive 2: " + container.drive2 + "\r\n" : "";
+    exportText += container.drive3 !== "None" ? "Drive 3: " + container.drive3 + "\r\n" : "";
     exportText += container.seal !== "None" ? "Sacred Seal: " + container.seal + "\r\n" : "";
     exportText += container.refinement!== "None" ? "Refinement: " + container.refinement + "\r\n" : "";
-    exportText += container.infantryRush!== "None" ? "Infantry Rush: " + container.infantryRush + "\r\n" : "";
     exportText += container.blessing!== "None" ? "Blessing: " + container.blessing + "\r\n" : "";
     exportText += container.blessing2!== "None" ? "Blessing 2: " + container.blessing2 + "\r\n" : "";
     exportText += container.blessing3!== "None" ? "Blessing 3: " + container.blessing3 + "\r\n" : "";

@@ -211,13 +211,6 @@ $(".blessing-selector").on("change", function (){
     updateDisplay();
 });
 
-// setup infantry rush select
-$(".infantry-rush-selector").on("change", function (){
-    var charNum = $(this).data("charnum").toString();
-    charChange(charNum);
-    updateDisplay();
-});
-
 // setup special select
 $(".special-selector").on("change", function (){
     var charNum = $(this).data("charnum").toString();
@@ -261,23 +254,19 @@ $(".passive-selector").on("change", function (){
     updateDisplay();
 });
 
+// setup drive select
+$(".drive-selector").on("change", function (){
+    var charNum = $(this).data("charnum").toString();
+    var num = $(this).data("drivenum");
+    getDriveData(charNum, num, true);
+    charChange(charNum);
+    updateDisplay();
+});
+
 // set up move type changes
 $(".move-type-selector").on("change", function() {
     var charNum = $(this).data("charnum").toString();
     getMoveIcon((charNum === "1" ? "#move-icon-1" : "#move-icon-2"), this.value);
-
-    //infantry rush stuff!
-    var infantryRush="<option value=\"None\">---</option>";
-    var selectedRush="None";
-    if ($("#move-type-"+charNum).val() === "Infantry"){
-        infantryRush += "<option value=\"1\">1</option>";
-        infantryRush += "<option value=\"2\">2</option>";
-        infantryRush += "<option value=\"3\">3</option>";
-	}
-
-    // set values
-    $("#infantry-rush-" + charNum).html(infantryRush);
-    $("#infantry-rush-" + charNum).val(selectedRush).attr('selected', 'selected');
 
     charChange(charNum);
     updateDisplay();
@@ -498,6 +487,9 @@ $("#override-reset").on("click", function() {
     $("#override-special").val("No Override").attr('selected', 'selected');
     $("#override-spec-cooldown").val("max");
     $("#override-passive-s").val("No Override").attr('selected', 'selected');
+    $("#override-drive-1").val("None").attr('selected', 'selected');
+    $("#override-drive-2").val("None").attr('selected', 'selected');
+    $("#override-drive-3").val("None").attr('selected', 'selected');
 
     $(".override-stat").val(0);
     $("#override-curr-hp").val(100);
@@ -507,11 +499,10 @@ $("#override-reset").on("click", function() {
     $("#override-adjacent-block").hide(500);
     $("#override-adjacent").val("0");
 
-    //blessings and infantry rush
+    //blessings
     $("#override-blessing").val("None").attr('selected', 'selected');
     $("#override-blessing2").val("None").attr('selected', 'selected');
     $("#override-blessing3").val("None").attr('selected', 'selected');
-    $("#override-infantry-rush").val("None").attr('selected', 'selected');
 
     //statuses
     $("#override-triangle-adept-status").prop("checked", false);

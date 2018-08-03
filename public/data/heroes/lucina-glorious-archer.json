@@ -1,0 +1,54 @@
+{
+    "display": "Lucina, Glorious Archer",
+    "name": "Lucina",
+    "title": "Glorious Archer",
+    "id": "lucina-glorious-archer",
+    "color": "Blue",
+    "weapon_type": "Blue Bow",
+    "legendary":true,
+    "link": "https://kagerochart.com/hero/lucina-glorious-archer",
+    "move_type": "Infantry",
+    "weapon": [
+        "thogn",
+        "silver-bow",
+        "steel-bow",
+        "iron-bow"
+    ],
+    "assist": [
+        "future-vision",
+        "swap"
+    ],
+    "passive_a": [
+        "swift-sparrow-2",
+        "swift-sparrow-1",
+        "death-blow-1"
+    ],
+    "passive_b": [
+        "wings-of-mercy-3",
+        "wings-of-mercy-2",
+        "wings-of-mercy-1"
+    ],
+    "passive_c": [
+        "distant-guard-3",
+        "distant-guard-2",
+        "distant-guard-1"
+    ],
+    "base_stat": {
+        "star_5": {
+            "hp": 17,
+            "atk": 8,
+            "spd": 9,
+            "def": 6,
+            "res": 5
+        },
+        "growth": {
+            "hp": 5,
+            "atk": 8,
+            "spd": 8,
+            "def": 5,
+            "res": 3,
+            "total": 29
+        },
+        "growth_type":97
+    }
+}

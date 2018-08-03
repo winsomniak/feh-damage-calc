@@ -1,0 +1,36 @@
+{
+    "description": "If unit is against a foe using bow, daggers, magic, or staff, unit receives Def/Res+4 during combat.",
+    "id": "distant-guard-3",
+    "name": "Distant Guard 3",
+    "type_defend_mod": {
+        "weapon_type": {
+            "Bow": true,
+            "Dagger": true,
+            "Staff": true,
+            "Blue Tome": true,
+            "Green Tome": true,
+            "Red Tome": true,
+            "Tome": true
+        },
+        "stat_mod": {
+            "def": 4,
+            "res": 4
+        }
+    },
+    "type_initiate_mod": {
+        "weapon_type": {
+            "Bow": true,
+            "Dagger": true,
+            "Staff": true,
+            "Blue Tome": true,
+            "Green Tome": true,
+            "Red Tome": true,
+            "Tome": true
+        },
+        "stat_mod": {
+            "def": 4,
+            "res": 4
+        }
+    },
+    "type": "drive"
+}

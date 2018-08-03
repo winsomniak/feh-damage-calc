@@ -105,6 +105,15 @@ function loadHeroesFromUrl() {
                 var skillType = key.charAt(8);
                 getSkillData(charNum, skillType, true);
                 break;
+            case 'drive-1-1':
+            case 'drive-1-2':
+            case 'drive-2-1':
+            case 'drive-2-2':
+            case 'drive-3-1':
+            case 'drive-3-2':
+                var driveNum = key.charAt(6);
+                getDriveData(charNum, driveNum, true);
+                break;
             case 'rarity-1':
             case 'rarity-2':
                 if($('#char-'+charNum).val() !== "Custom")

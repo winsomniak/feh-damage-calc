@@ -453,14 +453,47 @@
                             </select>
                         </div>
 
-                        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
-                            <div class="mdc-select mdc-select--box mdc-ripple-upgraded">
-                                <select id="infantry-rush-{{charNum}}" class="mdc-select__native-control infantry-rush-selector link-field" data-charnum="{{charNum}}">
-                                    <option value="None" selected>---</option>
-                                </select>
-                                <label class="mdc-floating-label mdc-floating-label--float-above" for="infantry-rush-{{charNum}}">
-                                    Infantry Rush
-                                </label>
+                    </div>
+
+                    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12" id="drives-{{charNum}}">
+                        <h3 class="mdc-typography--caption">Skill Drives</h3>
+                        <div class="mdc-layout-grid__inner">
+
+                            <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
+                                <div class="select-sizer">
+                                    <div class="mdc-select mdc-select--box mdc-ripple-upgraded">
+                                        <select id="drive-1-{{charNum}}" class="mdc-select__native-control drive-selector link-field" data-charnum="{{charNum}}" data-drivenum="1" data-info="driveInfo">
+                                            <option value="None" selected>None</option>
+                                        </select>
+                                        <label class="mdc-floating-label mdc-floating-label--float-above" for="drive-1-{{charNum}}" class="drive-1-label">
+                                            C Skill Drive 1
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
+                                <div class="select-sizer">
+                                    <div class="mdc-select mdc-select--box mdc-ripple-upgraded">
+                                        <select id="drive-2-{{charNum}}" class="mdc-select__native-control drive-selector link-field" data-charnum="{{charNum}}" data-drivenum="2" data-info="driveInfo">
+                                            <option value="None" selected>None</option>
+                                        </select>
+                                        <label class="mdc-floating-label mdc-floating-label--float-above" for="drive-2-{{charNum}}" class="drive-2-label">
+                                            C Skill Drive 2
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
+                                <div class="select-sizer">
+                                    <div class="mdc-select mdc-select--box mdc-ripple-upgraded">
+                                        <select id="drive-3-{{charNum}}" class="mdc-select__native-control drive-selector link-field" data-charnum="{{charNum}}" data-drivenum="3" data-info="driveInfo">
+                                            <option value="None" selected>None</option>
+                                        </select>
+                                        <label class="mdc-floating-label mdc-floating-label--float-above" for="drive-3-{{charNum}}" class="drive-3-label">
+                                            C Skill Drive 3
+                                        </label>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

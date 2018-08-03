@@ -1,0 +1,9 @@
+{
+    "name": "Distant Guard 3",
+    "sp": 240,
+    "type": "C",
+    "description": "Allies within 2 spaces gain: \"If foe uses bow, dagger, magic, or staff, grants Def/Res+4 during combat.\"",
+    "icon": "/images/icons/passives/distant-guard-3.png",
+    "link": "https://kagerochart.com/hero/passives/distant-guard-3",
+    "id": "distant-guard-3"
+}
