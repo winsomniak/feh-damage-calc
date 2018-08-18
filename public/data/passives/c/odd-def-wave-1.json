@@ -1,0 +1,9 @@
+{
+    "name": "Odd Def Wave 1",
+    "sp": 60,
+    "type": "C",
+    "description": "At start of odd-numbered turns, grants Def+2 to unit and adjacent allies for 1 turn. (Bonus granted to unit even if no allies are adjacent.)",
+    "icon": "/images/icons/passives/odd-def-wave-1.png",
+    "link": "https://kagerochart.com/hero/passives/odd-def-wave-1",
+    "id": "odd-def-wave-1"
+}

@@ -487,10 +487,15 @@ function checkResDefSubstitution(battleInfo, char, other)
 }
 
 function hardy_bearing_msg(battleInfo, agent) {
-    if (agent.sealData.hasOwnProperty("remove_prio_hp")) {
-    	battleInfo.logMsg += "<li class='battle-interaction'><span class='" + agent.agentClass + "'>" + agent.display + "</span> can't alter the turn's order ["+agent.sealData.name+"]!</li> ";
-    	if(agent.initHP >= agent.hp*agent.sealData.remove_prio_hp)
-    		battleInfo.logMsg += "<li class='battle-interaction'><span class='" + agent.agentClass + "'>" + agent.display + "</span> avoids the opponent changes the turn's order too ["+agent.sealData.name+"]!</li> ";
+    for(var i = 0; i < checks.length; i++) {
+        var key = agent[checks[i]];
+        if (key.hasOwnProperty("remove_prio_hp")) {
+    	    battleInfo.logMsg += "<li class='battle-interaction'><span class='" + agent.agentClass + "'>" + agent.display + "</span> can't alter the turn's order ["+key.name+"]!</li> ";
+            if(agent.initHP >= agent.hp*key.remove_prio_hp) {
+                battleInfo.logMsg += "<li class='battle-interaction'><span class='" + agent.agentClass + "'>" + agent.display + "</span> avoids the opponent changes the turn's order too ["+key.name+"]!</li> ";
+                break;
+            }
+        }
     }
     return battleInfo;
 }

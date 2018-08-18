@@ -1,0 +1,9 @@
+{
+    "name": "Fireflood Dance 2",
+    "sp": 240,
+    "type": "B",
+    "description": "If Sing or Dance is used, grants Atk+3 and Res+4 to target.",
+    "icon": "/images/icons/passives/fireflood-dance-2.png",
+    "link": "https://kagerochart.com/hero/passives/fireflood-dance-2",
+    "id": "fireflood-dance-2"
+}

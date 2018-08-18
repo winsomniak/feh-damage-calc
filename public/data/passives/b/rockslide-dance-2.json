@@ -1,0 +1,9 @@
+{
+    "name": "Rockslide Dance 2",
+    "sp": 240,
+    "type": "B",
+    "description": "If Sing or Dance is used, grants Spd+3 and Def+4 to target.",
+    "icon": "/images/icons/passives/rockslide-dance-2.png",
+    "link": "https://kagerochart.com/hero/passives/rockslide-dance-2",
+    "id": "rockslide-dance-2"
+}

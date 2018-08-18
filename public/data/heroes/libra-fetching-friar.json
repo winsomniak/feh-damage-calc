@@ -4,6 +4,7 @@
     "title": "Fetching Friar",
     "id": "libra-fetching-friar",
     "color": "Green",
+    "LowestRarity": 4,
     "weapon_type": "Axe",
     "link": "https://kagerochart.com/hero/libra-fetching-friar",
     "move_type": "Infantry",

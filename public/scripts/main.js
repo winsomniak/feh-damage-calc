@@ -743,9 +743,17 @@ function getStatTotals(charName, weaponName, passiveA, seal, rarity, level, merg
 
     //Fix issue with even rarities and merges
     var statsbase = {};
-    statsbase=getAllStatsBasedOn5Star(5, charName, statsbase);
+    statsbase = getAllStatsBasedOn5Star(5, charName, statsbase);
 
-    stats=getStatTable(level, statsbase, charInfo[charName].base_stat.growth, rarity, charInfo[charName].base_stat.growth_type, boon, bane, charName);
+    if(level !== 40)
+        stats=getStatTable(level, statsbase, charInfo[charName].base_stat.growth, rarity, charInfo[charName].base_stat.growth_type, boon, bane, charName);
+    else {
+        stats.hp = statGrowths[rarity-1][charInfo[charName].base_stat.growth.hp + ((boon === "hp") ? 1 : 0) + ((bane === "hp") ? -1 : 0)] + statsbase.hp + ((boon === "hp") ? 1 : 0) + ((bane === "hp") ? -1 : 0);
+        stats.atk = statGrowths[rarity-1][charInfo[charName].base_stat.growth.atk + ((boon === "atk") ? 1 : 0) + ((bane === "atk") ? -1 : 0)] + statsbase.atk + ((boon === "atk") ? 1 : 0) + ((bane === "atk") ? -1 : 0);
+        stats.spd = statGrowths[rarity-1][charInfo[charName].base_stat.growth.spd + ((boon === "spd") ? 1 : 0) + ((bane === "spd") ? -1 : 0)] + statsbase.spd + ((boon === "spd") ? 1 : 0) + ((bane === "spd") ? -1 : 0);
+        stats.def = statGrowths[rarity-1][charInfo[charName].base_stat.growth.def + ((boon === "def") ? 1 : 0) + ((bane === "def") ? -1 : 0)] + statsbase.def + ((boon === "def") ? 1 : 0) + ((bane === "def") ? -1 : 0);
+        stats.res = statGrowths[rarity-1][charInfo[charName].base_stat.growth.res + ((boon === "res") ? 1 : 0) + ((bane === "res") ? -1 : 0)] + statsbase.res + ((boon === "res") ? 1 : 0) + ((bane === "res") ? -1 : 0);
+    }
 
     const statNames = ["hp", "atk", "spd", "def", "res"];
     statNames.forEach(function(key)
@@ -2239,16 +2247,16 @@ function simBattle(battleInfo, displayMsg) {
 
     // vantage info - if defender has hardy bearing, no vantage
     var vantage = false;
-    var vantagePassive = !defender.sealData.hasOwnProperty("remove_prio_hp") && canActivateVantage(defender.passiveBData, defender.initHP, defender.hp);
-    var vantageWeapon = !defender.sealData.hasOwnProperty("remove_prio_hp") && canActivateVantage(defender.weaponData, defender.initHP, defender.hp);
+    var vantagePassive = !defender.sealData.hasOwnProperty("remove_prio_hp") && !defender.weaponData.hasOwnProperty("remove_prio_hp") && canActivateVantage(defender.passiveBData, defender.initHP, defender.hp);
+    var vantageWeapon = !defender.sealData.hasOwnProperty("remove_prio_hp") && !defender.weaponData.hasOwnProperty("remove_prio_hp") && canActivateVantage(defender.weaponData, defender.initHP, defender.hp);
     var vantageSource="";
     if(defCC) //Fixes issue where defender wouldn't be able to be without a weapon
         vantageSource = vantagePassive ? skillInfo['b'][defender.passiveB].name : weaponInfo[defender.weaponName].name;
 
     // desperation info - if attacker has hardy bearing, no desperation
     var desperation = false;
-    var desperationPassive = !attacker.sealData.hasOwnProperty("remove_prio_hp") && canActivateDesperation(attacker.passiveBData, attacker.initHP, attacker.hp);
-    var desperationWeapon = !attacker.sealData.hasOwnProperty("remove_prio_hp") && canActivateDesperation(attacker.weaponData, attacker.initHP, attacker.hp);
+    var desperationPassive = !attacker.sealData.hasOwnProperty("remove_prio_hp") && !attacker.weaponData.hasOwnProperty("remove_prio_hp") && canActivateDesperation(attacker.passiveBData, attacker.initHP, attacker.hp);
+    var desperationWeapon = !attacker.sealData.hasOwnProperty("remove_prio_hp") && !attacker.weaponData.hasOwnProperty("remove_prio_hp") && canActivateDesperation(attacker.weaponData, attacker.initHP, attacker.hp);
     var desperationSource = desperationPassive ? skillInfo['b'][attacker.passiveB].name : weaponInfo[attacker.weaponName].name;
 
     //Check HP for Hardy bearing
@@ -2257,6 +2265,15 @@ function simBattle(battleInfo, displayMsg) {
         desperationPassive = false;
     }
     if(attacker.sealData.hasOwnProperty("remove_prio_hp") && (attacker.initHP >= attacker.hp*attacker.sealData.remove_prio_hp)) {
+        vantagePassive = false;
+        vantageWeapon = false;
+    }
+    //Check HP for Hardy bearing weapons
+    if(defender.weaponData.hasOwnProperty("remove_prio_hp") && (defender.initHP >= defender.hp*defender.weaponData.remove_prio_hp)) {
+        desperationWeapon = false;
+        desperationPassive = false;
+    }
+    if(attacker.weaponData.hasOwnProperty("remove_prio_hp") && (attacker.initHP >= attacker.hp*attacker.weaponData.remove_prio_hp)) {
         vantagePassive = false;
         vantageWeapon = false;
     }
