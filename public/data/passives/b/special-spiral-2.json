@@ -1,0 +1,9 @@
+{
+    "name": "Special Spiral 2",
+    "sp": 120,
+    "type": "B",
+    "description": "If Special triggers before or during combat, grants Special cooldown count-1 after combat.",
+    "icon": "/images/icons/passives/special-spiral-2.png",
+    "link": "https://kagerochart.com/hero/passives/special-spiral-2",
+    "id": "special-spiral-2"
+}

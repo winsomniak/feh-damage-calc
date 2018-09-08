@@ -1,0 +1,13 @@
+{
+    "description": "Works only on Infantry units. If unit's Spd - foe's Spd ≥ 5, unit gains Special cooldown charge +1 per attack.\r\n(If using other similar skill, only highest value applied.)",
+    "id": "infantry-flash-1",
+    "name": "Infantry Flash 1",
+    "spec_accel": {
+        "movement_type": [
+            "Infantry"
+        ],
+        "stat": "spd",
+        "adv": 5
+    },
+    "type": "drive"
+}

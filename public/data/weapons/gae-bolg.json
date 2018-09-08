@@ -1,0 +1,24 @@
+{
+    "name": "Gáe Bolg",
+    "might": 16,
+    "range": 1,
+    "sp": 400,
+    "description": "In combat against an infantry, armored or cavalry foe, grants Atk/Def+5 during combat.",
+    "type": "Lance",
+    "link": "https://kagerochart.com/hero/weapons/gae-bolg",
+    "color": "Blue",
+    "magical": false,
+    "enemy_movement_mod": {
+        "movement_type": [
+            "Armored",
+            "Infantry",
+            "Cavalry"
+        ],
+        "mod": {
+            "atk": 5,
+            "def": 5
+        }
+    },
+    "char_unique": true,
+    "id": "gae-bolg"
+}

@@ -349,7 +349,7 @@ $(".color-selector").on("change", function() {
         $("#weapon-type-" + charNum).val("Bow");
     }
     $("#weapon-" + charNum + " option:eq(1)").attr("selected", "selected").attr('selected', 'selected');
-    getWeaponIcon((charNum === "1" ? "#weapon-1" : "#weapon-2"), $("#weapon-type-" + charNum).val());
+    getWeaponIcon((charNum === "1" ? "#weapon-icon-1" : "#weapon-icon-2"), $("#weapon-type-" + charNum).val());
     showWeapon($("#weapon-" + charNum).val(), charNum, true, true);
     charChange(charNum);
     updateDisplay();

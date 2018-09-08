@@ -1075,7 +1075,8 @@ function bladeTomeBonus(battleInfo, increasedStats, charToUse, source) {
 	var multipleStats = " ";
     if(total > 1)
         multipleStats = "s ";
-	battleInfo.logMsg += " increasing said statistic" + multipleStats + "by " + increasedStats[tmpstat].toString() + " [" + battleInfo[charToUse].weaponData.name + "].</li>";
+	battleInfo.logMsg += " increasing said statistic" + multipleStats;
+    battleInfo.logMsg += battleInfo[charToUse].weaponData.add_changes.hasOwnProperty("individual") ? " [" + battleInfo[charToUse].weaponData.name + "].</li>" : "by " + increasedStats[tmpstat].toString() + " [" + battleInfo[charToUse].weaponData.name + "].</li>";
     return battleInfo;
 }
 
@@ -1624,7 +1625,7 @@ function canActivateVantage(container, initHP, maxHP) {
 // container contains the skill info, initHP is the hp of the character, maxHP is the max hp of the character
 function canActivateDesperation(container, initHP, maxHP) {
 
-    return container.hasOwnProperty("desperation") && initHP <= checkRoundError(container.desperation.threshold * maxHP);
+    return (container.hasOwnProperty("desperation") && ((container.desperation.hasOwnProperty("threshold") && initHP <= checkRoundError(container.desperation.threshold * maxHP)) ||  (container.desperation.hasOwnProperty("limit") && initHP >= checkRoundError(container.desperation.limit * maxHP))));
 }
 
 // checks if a unit can activate guard ability
@@ -2007,12 +2008,21 @@ function singleCombat(battleInfo, initiator, logIntro, brave) {
     }
 
     var HasDefSpecbeenBoosted=false;
+    var HasAtkSpecbeenBoosted=false;
 
     // update cooldowns
     if (atkSpec) {
         attacker.specCurrCooldown = getSpecialCooldown(attacker.specialData, attacker.weaponData, attacker.assistData);
         if(Object.is(attacker, battleInfo.defender))
-            HasDefSpecbeenBoosted=true
+        {
+            battleInfo.defSpecTriggered = true;
+            HasDefSpecbeenBoosted=true;
+        }
+        else
+        {
+            battleInfo.atkSpecTriggered = true;
+            HasAtkSpecbeenBoosted=true;
+        }
     } else if (attacker.specCurrCooldown > 0) {
 
         if (canActivateGuard(battleInfo, !initiator)) { // guard effect
@@ -2022,14 +2032,26 @@ function singleCombat(battleInfo, initiator, logIntro, brave) {
         attacker.specCurrCooldown -= 1;
 
         // heavy blade, felicia's plate
-        if(hasSpecAccel(battleInfo, attacker, defender, initiator, false) && Object.is(attacker, battleInfo.defender))
-            HasDefSpecbeenBoosted=true;
+        if(hasSpecAccel(battleInfo, attacker, defender, initiator, false)){
+            if(Object.is(attacker, battleInfo.defender))
+                HasDefSpecbeenBoosted=true;
+            else
+                HasAtkSpecbeenBoosted=true;
+        }
     }
 
     if (defSpec) {
         defender.specCurrCooldown = getSpecialCooldown(defender.specialData, defender.weaponData, defender.assistData);
         if(Object.is(defender, battleInfo.defender))
-            HasDefSpecbeenBoosted=true
+        {
+            battleInfo.defSpecTriggered = true;
+            HasDefSpecbeenBoosted=true;
+        }
+        else
+        {
+            battleInfo.atkSpecTriggered = true;
+            HasAtkSpecbeenBoosted=true;
+        }
     } else if (defender.specCurrCooldown > 0) {
         if (canActivateGuard(battleInfo, initiator)) { // guard effect
             defender.specCurrCooldown += 1;
@@ -2038,13 +2060,19 @@ function singleCombat(battleInfo, initiator, logIntro, brave) {
         defender.specCurrCooldown -= 1;
 
         // heavy blade, felicia's plate
-        if(hasSpecAccel(battleInfo, defender, attacker, initiator, true) && Object.is(defender, battleInfo.defender))
-            HasDefSpecbeenBoosted=true;
+        if(hasSpecAccel(battleInfo, defender, attacker, initiator, true)){
+            if(Object.is(attacker, battleInfo.defender))
+                HasDefSpecbeenBoosted=true;
+            else
+                HasAtkSpecbeenBoosted=true;
+        }
     }
 
     //Steady Breath, only if the special hasn't activated this turn and there haven't already been other increases
     if(!HasDefSpecbeenBoosted)
         enemyPhaseCharge(battleInfo, attacker, defender);
+    if(!HasAtkSpecbeenBoosted)
+        playerPhaseCharge(battleInfo, attacker, defender);
 
     // print hp before and after
     battleInfo.logMsg += "<br><span class='" + defClass + "'>" + defender.display + "</span> HP: " + defOldHP.toString() + " → " + defender.currHP.toString() + "" + healMsg + "</li>";
@@ -2061,8 +2089,9 @@ function singleCombat(battleInfo, initiator, logIntro, brave) {
     }
 
     // check for a brave weapon / Alm's upgraded Falchion
-    if (initiator && (attacker.weaponData.hasOwnProperty("brave") || (attacker.weaponData.hasOwnProperty("hp_brave") && (attacker.initHP >= roundNum(attacker.hp * attacker.weaponData.hp_brave, true)))) && !brave && defender.currHP > 0) {
-        battleInfo = singleCombat(battleInfo, initiator, "attacks again immediately [" + weaponInfo[attacker.weaponName].name + "]", true);
+    battleInfo = checkBrave(attacker, battleInfo);
+    if (initiator && battleInfo.brave && !brave && defender.currHP > 0) {
+        battleInfo = singleCombat(battleInfo, initiator, "attacks again immediately [" + battleInfo.braveSource + "]", true);
     }
 	else if(!initiator && (attacker.weaponData.hasOwnProperty("en_brave"))&& !brave && defender.currHP > 0) {
         battleInfo = singleCombat(battleInfo, initiator, "attacks again immediately [" + weaponInfo[attacker.weaponName].name + "]", true);
@@ -2109,6 +2138,28 @@ function getRefBonus(agent){
     }
 }
 
+function checkBrave(char, battleInfo)
+{
+    battleInfo.brave = false;
+    battleInfo.braveSource = "";
+    if(char.weaponData.hasOwnProperty("brave")) {
+        battleInfo.brave = true;
+        battleInfo.braveSource = char.weaponData.name;
+        return battleInfo;
+    }
+    if(char.weaponData.hasOwnProperty("hp_brave") && (char.initHP >= roundNum(char.hp * char.weaponData.hp_brave, true))) {
+        battleInfo.brave = true;
+        battleInfo.braveSource = char.weaponData.name;
+        return battleInfo;
+    }
+    if(char.passiveBData.hasOwnProperty("hp_brave") && (char.initHP >= roundNum(char.hp * char.passiveBData.hp_brave, true))) {
+        battleInfo.brave = true;
+        battleInfo.braveSource = char.passiveBData.name;
+        return battleInfo;
+    }
+    return battleInfo;
+}
+
 // simulates a battle between the characters currently on display and outputs to the battle log and results section
 // battleInfo contains all the initial combat data before the combat starts, displayMsg is true if we need to print the battle log
 // returns battleInfo
@@ -2116,6 +2167,8 @@ function simBattle(battleInfo, displayMsg) {
 
     var attacker = battleInfo.attacker;
     var defender = battleInfo.defender;
+    battleInfo.atkSpecTriggered = false;
+    battleInfo.defSpecTriggered = false;
 
     //Needed to make sure stuff isn't corrupted
     attacker.weaponData= Object.assign({}, weaponInfo[attacker.weaponName]);
@@ -2431,6 +2484,10 @@ function simBattle(battleInfo, displayMsg) {
         atkRecoil += attacker.weaponData.full_hp_atk_recoil_dmg;
         atkRecoilSource += (atkRecoilSource.length > 0) ? ", " + weaponInfo[attacker.weaponName].name : weaponInfo[attacker.weaponName].name;
     }
+    if (attacker.currHP > 0 && attacker.passiveBData.hasOwnProperty("full_hp_atk_recoil_dmg") && attacker.initHP >= attacker.hp) {
+        atkRecoil += attacker.passiveBData.full_hp_atk_recoil_dmg;
+        atkRecoilSource += (atkRecoilSource.length > 0) ? ", " + attacker.passiveBData.name : attacker.passiveBData.name;
+    }
     if (attacker.currHP > 0 && attacker.passiveAData.hasOwnProperty("full_hp_atk_recoil_dmg") && attacker.initHP >= attacker.hp) {
         atkRecoil += attacker.passiveAData.full_hp_atk_recoil_dmg;
         atkRecoilSource += (atkRecoilSource.length > 0) ? ", " + skillInfo['a'][attacker.passiveA].name : skillInfo['a'][attacker.passiveA].name;
@@ -2468,11 +2525,17 @@ function simBattle(battleInfo, displayMsg) {
     if (attacker.currHP > 0 && attacker.weaponData.hasOwnProperty("after_mod") && atkAttacks) {
         applyBonus(battleInfo, attacker.weaponData.after_mod, weaponInfo[attacker.weaponName].name, true);
     }
+    if (attacker.currHP > 0 && attacker.specialData.hasOwnProperty("after_mod") && atkAttacks && battleInfo.atkSpecTriggered) {
+        applyBonus(battleInfo, attacker.specialData.after_mod, attacker.specialData.name, true);
+    }
     if (attacker.currHP > 0 && attacker.weaponData.hasOwnProperty("initiate_after_mod") && atkAttacks) {
         applyBonus(battleInfo, attacker.weaponData.initiate_after_mod, weaponInfo[attacker.weaponName].name, true);
     }
     if (defender.currHP > 0 && defender.weaponData.hasOwnProperty("after_mod") && defAttacks) {
         applyBonus(battleInfo, defender.weaponData.after_mod, weaponInfo[defender.weaponName].name, false);
+    }
+    if (defender.currHP > 0 && defender.specialData.hasOwnProperty("after_mod") && defAttacks && battleInfo.defSpecTriggered) {
+        applyBonus(battleInfo, defender.specialData.after_mod, defender.specialData.name, false);
     }
 
     // apply penalties

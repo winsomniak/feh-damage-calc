@@ -25,6 +25,32 @@
             }
         }
     },
+    "nerfed melee":{
+        "Attack":{
+            "stat_mod":{
+                "hp": 5,
+                "atk": 1
+            }
+        },
+        "Speed":{
+            "stat_mod":{
+                "hp": 5,
+                "spd": 3
+            }
+        },
+        "Defense":{
+            "stat_mod":{
+                "hp": 5,
+                "def": 4
+            }
+        },
+        "Resistance":{
+            "stat_mod":{
+                "hp": 5,
+                "res": 4
+            }
+        }
+    },
     "ranged":{
         "Attack":{
             "stat_mod":{
@@ -113,6 +139,15 @@
                 "threshold": 0.50
             }
         },
+        "Cherche's Axe":{
+            "stat_mod":{
+                "hp":3
+            },
+            "description":" At start of turn, converts bonuses on foes in cardinal directions with HP < unit's HP into penalties through their next actions."
+        },
+        "Odin's Grimoire":{
+            "description":" If a movement Assist skill (like Reposition, Shove, Pivot, etc.) is used by unit or targets unit, grants Atk/Spd+6 to unit and target ally or unit and targeting ally for 1 turn."
+        },
         "Sol Katti":{
             "stat_mod":{
                 "hp":3
@@ -137,6 +172,18 @@
         "Sieglinde":{
             "stat_mod":{
                 "hp":3
+            },
+            "add_changes": {
+                "source": "hero",
+                "type": "bonus",
+                "multiplier": 1.0,
+                "individual": true,
+                "stats": [
+                    "atk",
+                    "spd",
+                    "def",
+                    "res"
+                ]
             },
             "description":" During combat, grants bonus to Atk/Spd/Def/Res = highest bonus on allies within 2 spaces. Each stat bonus calculated independently."
         },
@@ -368,6 +415,17 @@
                     "spd": 3,
                     "def": 3,
                     "res": 3
+                }
+            }
+        },
+        "Ragnarok":
+        {
+            "description":" At start of combat, if unit's HP ≤ 80%, grants Atk/Spd+7 during combat.",
+            "below_threshold_mod": {
+                "threshold": 0.8,
+                "stat_mod": {
+                    "atk": 7,
+                    "spd": 7
                 }
             }
         },

@@ -14,5 +14,19 @@
     },
     "full_hp_atk_recoil_dmg": 5,
     "char_unique": true,
+    "refinable": {
+        "type": "ranged",
+        "Special": "Ragnarok",
+        "description": "Grants Atk/Spd+5 during combat. After combat, if unit attacked, deals 5 damage to unit.",
+        "remove":{
+            "full_hp_atk_recoil_dmg":true,
+            "full_hp_mod":true
+        },
+        "recoil_dmg": 5,
+        "stat_mod": {
+            "atk": 5,
+            "spd": 5
+        }
+    },
     "id": "ragnarok"
 }

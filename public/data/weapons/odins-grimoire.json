@@ -1,0 +1,25 @@
+{
+    "name": "Odin's Grimoire",
+    "might": 14,
+    "range": 2,
+    "sp": 400,
+    "description": "Adds total bonuses on unit to attack.",
+    "type": "Blue Tome",
+    "link": "https://kagerochart.com/hero/weapons/odins-grimoire",
+    "color": "Blue",
+    "magical": true,
+    "add_changes": {
+        "source": "hero",
+        "type": "bonus",
+        "multiplier": 1.0,
+        "stats": [
+            "atk"
+        ]
+    },
+    "char_unique": true,
+    "refinable": {
+        "type": "ranged",
+        "Special": "Odin's Grimoire"
+    },
+    "id": "odins-grimoire"
+}

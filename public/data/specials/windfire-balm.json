@@ -1,0 +1,9 @@
+{
+    "name": "Windfire Balm",
+    "cooldown": 1,
+    "sp": 200,
+    "description": "When healing an ally with a staff, grants Atk/Spd+4 to all allies for 1 turn.",
+    "link": "https://kagerochart.com/hero/specials/windfire-balm",
+    "weapon_unique": "Staff",
+    "id": "windfire-balm"
+}

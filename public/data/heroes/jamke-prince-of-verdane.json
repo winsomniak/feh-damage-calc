@@ -1,0 +1,49 @@
+{
+    "display": "Jamke, Prince of Verdane",
+    "name": "Jamke",
+    "title": "Prince of Verdane",
+    "id": "jamke-prince-of-verdane",
+    "color": "Colorless",
+    "weapon_type": "Bow",
+    "link": "https://kagerochart.com/hero/jamke-prince-of-verdane",
+    "move_type": "Infantry",
+    "LowestRarity":3,
+    "weapon": [
+        "slaying-bow-plus",
+        "slaying-bow",
+        "steel-bow",
+        "iron-bow"
+    ],
+    "special": [
+        "astra",
+        "night-sky"
+    ],
+    "passive_a": [
+        "heavy-blade-3",
+        "heavy-blade-2",
+        "heavy-blade-1"
+    ],
+    "passive_b": [
+        "cancel-affinity-3",
+        "cancel-affinity-2",
+        "cancel-affinity-1"
+    ],
+    "base_stat": {
+        "star_5": {
+            "hp": 16,
+            "atk": 8,
+            "spd": 10,
+            "def": 7,
+            "res": 4
+        },
+        "growth": {
+            "hp": 6,
+            "atk": 9,
+            "spd": 6,
+            "def": 6,
+            "res": 2,
+            "total": 29
+        },
+        "growth_type":185
+    }
+}

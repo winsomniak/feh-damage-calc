@@ -1,0 +1,13 @@
+{
+    "name": "Steady Posture 1",
+    "sp": 120,
+    "type": "A",
+    "description": "Grants Spd/Def+2 during combat when this unit is attacked.",
+    "icon": "/images/icons/passives/steady-posture-1.png",
+    "defend_mod": {
+        "spd": 2,
+        "def": 2
+    },
+    "link": "https://kagerochart.com/hero/passives/steady-posture-1",
+    "id": "steady-posture-1"
+}

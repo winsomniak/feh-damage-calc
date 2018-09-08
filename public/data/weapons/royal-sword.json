@@ -1,0 +1,17 @@
+{
+    "name": "Royal Sword",
+    "might": 16,
+    "range": 1,
+    "sp": 400,
+    "description": "Grants Spd+3. If unit is within 2 spaces of an ally, grants unit Special cooldown charge +1 per unit's attack (Only highest value applied. Does not stack.)",
+    "type": "Sword",
+    "stat_mod":{
+        "spd":3
+    },
+    "link": "https://kagerochart.com/hero/weapons/royal-sword",
+    "spec_accel": {
+        "hasAdjacent": "self"
+    },
+    "char_unique": true,
+    "id": "royal-sword"
+}

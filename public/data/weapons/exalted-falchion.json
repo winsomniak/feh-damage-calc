@@ -1,0 +1,32 @@
+{
+    "name": "Exalted Falchion",
+    "might": 16,
+    "range": 1,
+    "sp": 400,
+    "description": "Effective against dragon foes. Grants Spd+3. Grants bonus to Atk/Spd/Def/Res during combat = current bonus on each of unit's stats. Calculates each stat bonus independently.",
+    "type": "Sword",
+    "link": "https://kagerochart.com/hero/weapons/exalted-falchion",
+    "weapon_effective": [
+        "Breath",
+        "Red Breath",
+        "Green Breath",
+        "Blue Breath"
+    ],
+    "add_changes": {
+        "source": "hero",
+        "type": "bonus",
+        "multiplier": 1.0,
+        "individual": true,
+        "stats": [
+            "atk",
+            "spd",
+            "def",
+            "res"
+        ]
+    },
+    "stat_mod":{
+        "spd":3
+    },
+    "char_unique": true,
+    "id": "exalted-falchion"
+}

@@ -3,12 +3,12 @@
     "might": 10,
     "range": 1,
     "sp": 200,
-    "description": "Grants Def+7 when the unit is under attack.",
+    "description": "Grants Def+4 when the unit is under attack.",
     "type": "Sword",
     "color": "Red",
     "magical": false,
     "defend_mod": {
-        "def": 7
+        "def": 4
     },
     "link": "https://kagerochart.com/hero/weapons/safeguard",
     "id": "safeguard"
