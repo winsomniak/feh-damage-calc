@@ -1,50 +1,50 @@
 {
-    "display": "Tiki, Naga's Voice",
-    "name": "Tiki",
-    "title": "Naga's Voice",
-    "id": "tiki-nagas-voice",
-    "color": "Red",
-    "weapon_type": "Red Breath",
-    "link": "https://kagerochart.com/hero/tiki-nagas-voice",
-    "move_type": "Infantry",
-    "LowestRarity":3,
-    "weapon": [
-        "breath-of-fog",
-        "lightning-breath-plus",
-        "lightning-breath",
-        "fire-breath-plus",
-        "fire-breath"
-    ],
-    "special": [
-        "bonfire",
-        "glowing-ember"
-    ],
-    "passive_a": [
-        "defiant-atk-3",
-        "defiant-atk-2",
-        "defiant-atk-1"
-    ],
-    "passive_c": [
-        "spur-res-3",
-        "spur-res-2",
-        "spur-res-1"
-    ],
-    "base_stat": {
-        "star_5": {
-            "hp": 18,
-            "atk": 7,
-            "spd": 6,
-            "def": 9,
-            "res": 7
-        },
-        "growth": {
-            "hp": 6,
-            "atk": 9,
-            "spd": 4,
-            "def": 8,
-            "res": 4,
-            "total": 31
-        },
-        "growth_type":5
-    }
+  "display": "Tiki, Naga's Voice",
+  "name": "Tiki",
+  "title": "Naga's Voice",
+  "id": "tiki-nagas-voice",
+  "color": "Red",
+  "weapon_type": "Red Breath",
+  "link": "https://kagerochart.com/hero/tiki-nagas-voice",
+  "move_type": "Infantry",
+  "LowestRarity": 3,
+  "weapon": [
+    "breath-of-fog",
+    "lightning-breath-plus",
+    "lightning-breath",
+    "fire-breath-plus",
+    "fire-breath"
+  ],
+  "special": [
+    "bonfire",
+    "glowing-ember"
+  ],
+  "passive_a": [
+    "defiant-atk-3",
+    "defiant-atk-2",
+    "defiant-atk-1"
+  ],
+  "passive_c": [
+    "spur-res-3",
+    "spur-res-2",
+    "spur-res-1"
+  ],
+  "base_stat": {
+    "star_5": {
+      "hp": 18,
+      "atk": 7,
+      "spd": 6,
+      "def": 9,
+      "res": 7
+    },
+    "growth": {
+      "hp": 50,
+      "atk": 65,
+      "spd": 40,
+      "def": 60,
+      "res": 40,
+      "total": 255
+    },
+    "growth_type": 58
+  }
 }

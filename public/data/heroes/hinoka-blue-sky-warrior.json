@@ -1,53 +1,53 @@
 {
-    "display": "Hinoka, Blue Sky Warrior",
-    "name": "Hinoka",
-    "title": "Blue Sky Warrior",
-    "id": "hinoka-blue-sky-warrior",
-    "color": "Colorless",
-    "weapon_type": "Bow",
-    "link": "https://kagerochart.com/hero/hinoka-blue-sky-warrior",
-    "move_type": "Flying",
-    "weapon": [
-        "warrior-princess",
-        "silver-bow",
-        "steel-bow",
-        "iron-bow"
-    ],
-    "special": [
-        "luna",
-        "new-moon"
-    ],
-    "passive_a": [
-        "atk-spd-bond-3",
-        "atk-spd-bond-2",
-        "atk-spd-bond-1"
-    ],
-    "passive_b": [
-        "flier-formation-3",
-        "flier-formation-2",
-        "flier-formation-1"
-    ],
-    "passive_c": [
-        "flier-guidance-3",
-        "flier-guidance-2",
-        "flier-guidance-1"
-    ],
-    "base_stat": {
-        "star_5": {
-            "hp": 18,
-            "atk": 6,
-            "spd": 9,
-            "def": 4,
-            "res": 7
-        },
-        "growth": {
-            "hp": 5,
-            "atk": 8,
-            "spd": 8,
-            "def": 2,
-            "res": 6,
-            "total": 29
-        },
-        "growth_type":226
-    }
+  "display": "Hinoka, Blue Sky Warrior",
+  "name": "Hinoka",
+  "title": "Blue Sky Warrior",
+  "id": "hinoka-blue-sky-warrior",
+  "color": "Colorless",
+  "weapon_type": "Bow",
+  "link": "https://kagerochart.com/hero/hinoka-blue-sky-warrior",
+  "move_type": "Flying",
+  "weapon": [
+    "warrior-princess",
+    "silver-bow",
+    "steel-bow",
+    "iron-bow"
+  ],
+  "special": [
+    "luna",
+    "new-moon"
+  ],
+  "passive_a": [
+    "atk-spd-bond-3",
+    "atk-spd-bond-2",
+    "atk-spd-bond-1"
+  ],
+  "passive_b": [
+    "flier-formation-3",
+    "flier-formation-2",
+    "flier-formation-1"
+  ],
+  "passive_c": [
+    "flier-guidance-3",
+    "flier-guidance-2",
+    "flier-guidance-1"
+  ],
+  "base_stat": {
+    "star_5": {
+      "hp": 18,
+      "atk": 6,
+      "spd": 9,
+      "def": 4,
+      "res": 7
+    },
+    "growth": {
+      "hp": 45,
+      "atk": 60,
+      "spd": 60,
+      "def": 30,
+      "res": 50,
+      "total": 245
+    },
+    "growth_type": 221
+  }
 }

@@ -1,48 +1,48 @@
 {
-    "display": "Lilina, Blush of Youth",
-    "name": "Lilina",
-    "title": "Blush of Youth",
-    "id": "lilina-blush-of-youth",
-    "color": "Green",
-    "weapon_type": "Green Tome",
-    "link": "https://kagerochart.com/hero/lilina-blush-of-youth",
-    "move_type": "Cavalry",
-    "weapon": [
-        "green-gift-plus",
-        "green-gift",
-        "elwind",
-        "wind"
-    ],
-    "special": [
-        "blazing-flame",
-        "rising-flame"
-    ],
-    "passive_a": [
-        "hp-atk-2",
-        "hp-atk-1",
-        "attack-plus-1"
-    ],
-    "passive_c": [
-        "atk-tactic-3",
-        "atk-tactic-2",
-        "atk-tactic-1"
-    ],
-    "base_stat": {
-        "star_5": {
-            "hp": 17,
-            "atk": 9,
-            "spd": 8,
-            "def": 5,
-            "res": 4
-        },
-        "growth": {
-            "hp": 4,
-            "atk": 8,
-            "spd": 6,
-            "def": 3,
-            "res": 6,
-            "total": 27
-        },
-        "growth_type":15
-    }
+  "display": "Lilina, Blush of Youth",
+  "name": "Lilina",
+  "title": "Blush of Youth",
+  "id": "lilina-blush-of-youth",
+  "color": "Green",
+  "weapon_type": "Green Tome",
+  "link": "https://kagerochart.com/hero/lilina-blush-of-youth",
+  "move_type": "Cavalry",
+  "weapon": [
+    "green-gift-plus",
+    "green-gift",
+    "elwind",
+    "wind"
+  ],
+  "special": [
+    "blazing-flame",
+    "rising-flame"
+  ],
+  "passive_a": [
+    "hp-atk-2",
+    "hp-atk-1",
+    "attack-plus-1"
+  ],
+  "passive_c": [
+    "atk-tactic-3",
+    "atk-tactic-2",
+    "atk-tactic-1"
+  ],
+  "base_stat": {
+    "star_5": {
+      "hp": 17,
+      "atk": 9,
+      "spd": 8,
+      "def": 5,
+      "res": 4
+    },
+    "growth": {
+      "hp": 40,
+      "atk": 60,
+      "spd": 50,
+      "def": 35,
+      "res": 50,
+      "total": 235
+    },
+    "growth_type": 48
+  }
 }

@@ -1,49 +1,49 @@
 {
-    "display": "Legault, The Hurricane",
-    "name": "Legault",
-    "title": "The Hurricane",
-    "id": "legault-the-hurricane",
-    "color": "Colorless",
-    "weapon_type": "Dagger",
-    "LowestRarity":4,
-    "link": "https://kagerochart.com/hero/legault-the-hurricane",
-    "move_type": "Infantry",
-    "weapon": [
-        "the-cleaner-plus",
-        "the-cleaner",
-        "steel-dagger",
-        "iron-dagger"
-    ],
-    "special": [
-        "glimmer",
-        "night-sky"
-    ],
-    "passive_a": [
-        "swift-strike-2",
-        "swift-strike-1",
-        "darting-blow-1"
-    ],
-    "passive_c": [
-        "atk-tactic-3",
-        "atk-tactic-2",
-        "atk-tactic-1"
-    ],
-    "base_stat": {
-        "star_5": {
-            "hp": 17,
-            "atk": 7,
-            "spd": 10,
-            "def": 7,
-            "res": 4
-        },
-        "growth": {
-            "hp": 6,
-            "atk": 7,
-            "spd": 9,
-            "def": 4,
-            "res": 3,
-            "total": 29
-        },
-        "growth_type":215
-    }
+  "display": "Legault, The Hurricane",
+  "name": "Legault",
+  "title": "The Hurricane",
+  "id": "legault-the-hurricane",
+  "color": "Colorless",
+  "weapon_type": "Dagger",
+  "LowestRarity": 4,
+  "link": "https://kagerochart.com/hero/legault-the-hurricane",
+  "move_type": "Infantry",
+  "weapon": [
+    "the-cleaner-plus",
+    "the-cleaner",
+    "steel-dagger",
+    "iron-dagger"
+  ],
+  "special": [
+    "glimmer",
+    "night-sky"
+  ],
+  "passive_a": [
+    "swift-strike-2",
+    "swift-strike-1",
+    "darting-blow-1"
+  ],
+  "passive_c": [
+    "atk-tactic-3",
+    "atk-tactic-2",
+    "atk-tactic-1"
+  ],
+  "base_stat": {
+    "star_5": {
+      "hp": 17,
+      "atk": 7,
+      "spd": 10,
+      "def": 7,
+      "res": 4
+    },
+    "growth": {
+      "hp": 50,
+      "atk": 55,
+      "spd": 65,
+      "def": 40,
+      "res": 35,
+      "total": 245
+    },
+    "growth_type": 232
+  }
 }

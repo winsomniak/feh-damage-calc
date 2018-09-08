@@ -1,48 +1,48 @@
 {
-    "display": "Luke, Rowdy Squire",
-    "name": "Luke",
-    "title": "Rowdy Squire",
-    "id": "luke-rowdy-squire",
-    "color": "Red",
-    "weapon_type": "Sword",
-    "link": "https://kagerochart.com/hero/luke-rowdy-squire",
-    "move_type": "Cavalry",
-    "weapon": [
-        "brave-sword-plus",
-        "brave-sword",
-        "steel-sword",
-        "iron-sword"
-    ],
-    "special": [
-        "bonfire",
-        "glowing-ember"
-    ],
-    "passive_a": [
-        "fire-boost-3",
-        "fire-boost-2",
-        "fire-boost-1"
-    ],
-    "passive_c": [
-        "panic-ploy-3",
-        "panic-ploy-2",
-        "panic-ploy-1"
-    ],
-    "base_stat": {
-        "star_5": {
-            "hp": 19,
-            "atk": 8,
-            "spd": 6,
-            "def": 8,
-            "res": 5
-        },
-        "growth": {
-            "hp": 7,
-            "atk": 8,
-            "spd": 6,
-            "def": 6,
-            "res": 3,
-            "total": 30
-        },
-        "growth_type":9
-    }
+  "display": "Luke, Rowdy Squire",
+  "name": "Luke",
+  "title": "Rowdy Squire",
+  "id": "luke-rowdy-squire",
+  "color": "Red",
+  "weapon_type": "Sword",
+  "link": "https://kagerochart.com/hero/luke-rowdy-squire",
+  "move_type": "Cavalry",
+  "weapon": [
+    "brave-sword-plus",
+    "brave-sword",
+    "steel-sword",
+    "iron-sword"
+  ],
+  "special": [
+    "bonfire",
+    "glowing-ember"
+  ],
+  "passive_a": [
+    "fire-boost-3",
+    "fire-boost-2",
+    "fire-boost-1"
+  ],
+  "passive_c": [
+    "panic-ploy-3",
+    "panic-ploy-2",
+    "panic-ploy-1"
+  ],
+  "base_stat": {
+    "star_5": {
+      "hp": 19,
+      "atk": 8,
+      "spd": 6,
+      "def": 8,
+      "res": 5
+    },
+    "growth": {
+      "hp": 55,
+      "atk": 60,
+      "spd": 50,
+      "def": 50,
+      "res": 35,
+      "total": 250
+    },
+    "growth_type": 54
+  }
 }

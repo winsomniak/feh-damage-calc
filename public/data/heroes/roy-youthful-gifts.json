@@ -1,47 +1,47 @@
 {
-    "display": "Roy, Youthful Gifts",
-    "name": "Roy",
-    "title": "Youthful Gifts",
-    "id": "roy-youthful-gifts",
-    "color": "Colorless",
-    "weapon_type": "Bow",
-    "link": "https://kagerochart.com/hero/roy-youthful-gifts",
-    "move_type": "Cavalry",
-    "weapon": [
-        "gratia-plus",
-        "gratia",
-        "steel-bow",
-        "iron-bow"
-    ],
-    "assist": [
-        "reciprocal-aid"
-    ],
-    "passive_a": [
-        "death-blow-3",
-        "death-blow-2",
-        "death-blow-1"
-    ],
-    "passive_c": [
-        "bow-valor-3",
-        "bow-valor-2",
-        "bow-valor-1"
-    ],
-    "base_stat": {
-        "star_5": {
-            "hp": 17,
-            "atk": 9,
-            "spd": 6,
-            "def": 5,
-            "res": 6
-        },
-        "growth": {
-            "hp": 4,
-            "atk": 8,
-            "spd": 2,
-            "def": 6,
-            "res": 7,
-            "total": 27
-        },
-        "growth_type":24
-    }
+  "display": "Roy, Youthful Gifts",
+  "name": "Roy",
+  "title": "Youthful Gifts",
+  "id": "roy-youthful-gifts",
+  "color": "Colorless",
+  "weapon_type": "Bow",
+  "link": "https://kagerochart.com/hero/roy-youthful-gifts",
+  "move_type": "Cavalry",
+  "weapon": [
+    "gratia-plus",
+    "gratia",
+    "steel-bow",
+    "iron-bow"
+  ],
+  "assist": [
+    "reciprocal-aid"
+  ],
+  "passive_a": [
+    "death-blow-3",
+    "death-blow-2",
+    "death-blow-1"
+  ],
+  "passive_c": [
+    "bow-valor-3",
+    "bow-valor-2",
+    "bow-valor-1"
+  ],
+  "base_stat": {
+    "star_5": {
+      "hp": 17,
+      "atk": 9,
+      "spd": 6,
+      "def": 5,
+      "res": 6
+    },
+    "growth": {
+      "hp": 40,
+      "atk": 60,
+      "spd": 30,
+      "def": 50,
+      "res": 55,
+      "total": 235
+    },
+    "growth_type": 39
+  }
 }

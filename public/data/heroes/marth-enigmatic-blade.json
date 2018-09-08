@@ -1,35 +1,35 @@
 {
-    "display": "Marth, Enigmatic Blade",
-    "name": "Marth",
-    "title": "Enigmatic Blade",
-    "id": "marth-enigmatic-blade",
-    "color": "Red",
-    "weapon_type": "Sword",
-    "link": "https://kagerochart.com/hero/marth-enigmatic-blade",
-    "move_type": "Infantry",
-    "LowestRarity":4,
-    "weapon": [
-        "falchion-1",
-        "silver-sword",
-        "steel-sword",
-        "iron-sword"
-    ],
-    "base_stat": {
-        "star_5": {
-            "hp": 19,
-            "atk": 8,
-            "spd": 10,
-            "def": 6,
-            "res": 4
-        },
-        "growth": {
-            "hp": 7,
-            "atk": 8,
-            "spd": 8,
-            "def": 5,
-            "res": 3,
-            "total": 31
-        },
-        "growth_type":45
-    }
+  "display": "Marth, Enigmatic Blade",
+  "name": "Marth",
+  "title": "Enigmatic Blade",
+  "id": "marth-enigmatic-blade",
+  "color": "Red",
+  "weapon_type": "Sword",
+  "link": "https://kagerochart.com/hero/marth-enigmatic-blade",
+  "move_type": "Infantry",
+  "LowestRarity": 4,
+  "weapon": [
+    "falchion-1",
+    "silver-sword",
+    "steel-sword",
+    "iron-sword"
+  ],
+  "base_stat": {
+    "star_5": {
+      "hp": 19,
+      "atk": 8,
+      "spd": 10,
+      "def": 6,
+      "res": 4
+    },
+    "growth": {
+      "hp": 55,
+      "atk": 60,
+      "spd": 60,
+      "def": 45,
+      "res": 35,
+      "total": 255
+    },
+    "growth_type": 18
+  }
 }

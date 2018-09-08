@@ -1,49 +1,49 @@
 {
-    "display": "Corrin, Fateful Princess",
-    "name": "Corrin",
-    "title": "Fateful Princess",
-    "id": "corrin-fateful-princess",
-    "color": "Blue",
-    "weapon_type": "Blue Breath",
-    "link": "https://kagerochart.com/hero/corrin-fateful-princess",
-    "move_type": "Infantry",
-    "LowestRarity":3,
-    "weapon": [
-        "dark-breath-plus",
-        "dark-breath",
-        "fire-breath-plus",
-        "fire-breath"
-    ],
-    "special": [
-        "draconic-aura",
-        "dragon-gaze"
-    ],
-    "passive_b": [
-        "seal-res-3",
-        "seal-res-2",
-        "seal-res-1"
-    ],
-    "passive_c": [
-        "hone-atk-3",
-        "hone-atk-2",
-        "hone-atk-1"
-    ],
-    "base_stat": {
-        "star_5": {
-            "hp": 19,
-            "atk": 8,
-            "spd": 6,
-            "def": 8,
-            "res": 6
-        },
-        "growth": {
-            "hp": 6,
-            "atk": 5,
-            "spd": 9,
-            "def": 8,
-            "res": 3,
-            "total": 31
-        },
-        "growth_type":61
-    }
+  "display": "Corrin, Fateful Princess",
+  "name": "Corrin",
+  "title": "Fateful Princess",
+  "id": "corrin-fateful-princess",
+  "color": "Blue",
+  "weapon_type": "Blue Breath",
+  "link": "https://kagerochart.com/hero/corrin-fateful-princess",
+  "move_type": "Infantry",
+  "LowestRarity": 3,
+  "weapon": [
+    "dark-breath-plus",
+    "dark-breath",
+    "fire-breath-plus",
+    "fire-breath"
+  ],
+  "special": [
+    "draconic-aura",
+    "dragon-gaze"
+  ],
+  "passive_b": [
+    "seal-res-3",
+    "seal-res-2",
+    "seal-res-1"
+  ],
+  "passive_c": [
+    "hone-atk-3",
+    "hone-atk-2",
+    "hone-atk-1"
+  ],
+  "base_stat": {
+    "star_5": {
+      "hp": 19,
+      "atk": 8,
+      "spd": 6,
+      "def": 8,
+      "res": 6
+    },
+    "growth": {
+      "hp": 50,
+      "atk": 45,
+      "spd": 65,
+      "def": 60,
+      "res": 35,
+      "total": 255
+    },
+    "growth_type": 2
+  }
 }

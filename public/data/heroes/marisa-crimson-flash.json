@@ -1,49 +1,49 @@
 {
-    "display": "Marisa, Crimson Flash",
-    "name": "Marisa",
-    "title": "Crimson Flash",
-    "id": "marisa-crimson-flash",
-    "color": "Red",
-    "weapon_type": "Sword",
-    "link": "https://kagerochart.com/hero/marisa-crimson-flash",
-    "move_type": "Infantry",
-    "LowestRarity":4,
-    "weapon": [
-        "wo-dao-plus",
-        "wo-dao",
-        "steel-sword",
-        "iron-sword"
-    ],
-    "special": [
-        "glimmer",
-        "night-sky"
-    ],
-    "passive_a": [
-        "hp-def-2",
-        "hp-def-1",
-        "hp-plus-3"
-    ],
-    "passive_c": [
-        "infantry-pulse-3",
-        "infantry-pulse-2",
-        "infantry-pulse-1"
-    ],
-    "base_stat": {
-        "star_5": {
-            "hp": 18,
-            "atk": 8,
-            "spd": 10,
-            "def": 6,
-            "res": 6
-        },
-        "growth": {
-            "hp": 9,
-            "atk": 6,
-            "spd": 8,
-            "def": 7,
-            "res": 3,
-            "total": 33
-        },
-        "growth_type":236
-    }
+  "display": "Marisa, Crimson Flash",
+  "name": "Marisa",
+  "title": "Crimson Flash",
+  "id": "marisa-crimson-flash",
+  "color": "Red",
+  "weapon_type": "Sword",
+  "link": "https://kagerochart.com/hero/marisa-crimson-flash",
+  "move_type": "Infantry",
+  "LowestRarity": 4,
+  "weapon": [
+    "wo-dao-plus",
+    "wo-dao",
+    "steel-sword",
+    "iron-sword"
+  ],
+  "special": [
+    "glimmer",
+    "night-sky"
+  ],
+  "passive_a": [
+    "hp-def-2",
+    "hp-def-1",
+    "hp-plus-3"
+  ],
+  "passive_c": [
+    "infantry-pulse-3",
+    "infantry-pulse-2",
+    "infantry-pulse-1"
+  ],
+  "base_stat": {
+    "star_5": {
+      "hp": 18,
+      "atk": 8,
+      "spd": 10,
+      "def": 6,
+      "res": 6
+    },
+    "growth": {
+      "hp": 65,
+      "atk": 50,
+      "spd": 60,
+      "def": 55,
+      "res": 35,
+      "total": 265
+    },
+    "growth_type": 211
+  }
 }

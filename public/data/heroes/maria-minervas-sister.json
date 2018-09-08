@@ -1,49 +1,49 @@
 {
-    "display": "Maria, Minerva's Sister",
-    "name": "Maria",
-    "title": "Minerva's Sister",
-    "id": "maria-minervas-sister",
-    "color": "Colorless",
-    "weapon_type": "Staff",
-    "link": "https://kagerochart.com/hero/maria-minervas-sister",
-    "move_type": "Infantry",
-    "LowestRarity":3,
-    "weapon": [
-        "panic-plus",
-        "panic",
-        "assault"
-    ],
-    "special": [
-        "miracle",
-        "imbue"
-    ],
-    "assist": [
-        "physic-plus",
-        "physic",
-        "mend",
-        "heal"
-    ],
-    "passive_c": [
-        "fortify-res-3",
-        "fortify-res-2",
-        "fortify-res-1"
-    ],
-    "base_stat": {
-        "star_5": {
-            "hp": 17,
-            "atk": 5,
-            "spd": 8,
-            "def": 4,
-            "res": 10
-        },
-        "growth": {
-            "hp": 5,
-            "atk": 6,
-            "spd": 8,
-            "def": 3,
-            "res": 6,
-            "total": 28
-        },
-        "growth_type":245
-    }
+  "display": "Maria, Minerva's Sister",
+  "name": "Maria",
+  "title": "Minerva's Sister",
+  "id": "maria-minervas-sister",
+  "color": "Colorless",
+  "weapon_type": "Staff",
+  "link": "https://kagerochart.com/hero/maria-minervas-sister",
+  "move_type": "Infantry",
+  "LowestRarity": 3,
+  "weapon": [
+    "panic-plus",
+    "panic",
+    "assault"
+  ],
+  "special": [
+    "miracle",
+    "imbue"
+  ],
+  "assist": [
+    "physic-plus",
+    "physic",
+    "mend",
+    "heal"
+  ],
+  "passive_c": [
+    "fortify-res-3",
+    "fortify-res-2",
+    "fortify-res-1"
+  ],
+  "base_stat": {
+    "star_5": {
+      "hp": 17,
+      "atk": 5,
+      "spd": 8,
+      "def": 4,
+      "res": 10
+    },
+    "growth": {
+      "hp": 45,
+      "atk": 50,
+      "spd": 60,
+      "def": 35,
+      "res": 50,
+      "total": 240
+    },
+    "growth_type": 202
+  }
 }

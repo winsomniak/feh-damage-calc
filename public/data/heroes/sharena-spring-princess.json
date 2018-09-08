@@ -1,51 +1,51 @@
 {
-    "display": "Sharena, Spring Princess",
-    "name": "Sharena",
-    "title": "Spring Princess",
-    "id": "sharena-spring-princess",
-    "color": "Green",
-    "weapon_type": "Green Tome",
-    "link": "https://kagerochart.com/hero/sharena-spring-princess",
-    "move_type": "Infantry",
-    "weapon": [
-        "muninns-egg",
-        "rexcalibur",
-        "elwind",
-        "wind"
-    ],
-    "assist": [
-        "rally-attack-speed",
-        "rally-speed"
-    ],
-    "passive_a": [
-        "swift-stance-2",
-        "swift-stance-1",
-        "darting-stance-1"
-    ],
-    "passive_b": [
-        "live-for-bounty"
-    ],
-    "passive_c": [
-        "res-tactic-3",
-        "res-tactic-2",
-        "res-tactic-1"
-    ],
-    "base_stat": {
-        "star_5": {
-            "hp": 18,
-            "atk": 8,
-            "spd": 10,
-            "def": 3,
-            "res": 6
-        },
-        "growth": {
-            "hp": 5,
-            "atk": 7,
-            "spd": 8,
-            "def": 2,
-            "res": 7,
-            "total": 29
-        },
-        "growth_type":147
-    }
+  "display": "Sharena, Spring Princess",
+  "name": "Sharena",
+  "title": "Spring Princess",
+  "id": "sharena-spring-princess",
+  "color": "Green",
+  "weapon_type": "Green Tome",
+  "link": "https://kagerochart.com/hero/sharena-spring-princess",
+  "move_type": "Infantry",
+  "weapon": [
+    "muninns-egg",
+    "rexcalibur",
+    "elwind",
+    "wind"
+  ],
+  "assist": [
+    "rally-attack-speed",
+    "rally-speed"
+  ],
+  "passive_a": [
+    "swift-stance-2",
+    "swift-stance-1",
+    "darting-stance-1"
+  ],
+  "passive_b": [
+    "live-for-bounty"
+  ],
+  "passive_c": [
+    "res-tactic-3",
+    "res-tactic-2",
+    "res-tactic-1"
+  ],
+  "base_stat": {
+    "star_5": {
+      "hp": 18,
+      "atk": 8,
+      "spd": 10,
+      "def": 3,
+      "res": 6
+    },
+    "growth": {
+      "hp": 45,
+      "atk": 55,
+      "spd": 60,
+      "def": 30,
+      "res": 55,
+      "total": 245
+    },
+    "growth_type": 172
+  }
 }

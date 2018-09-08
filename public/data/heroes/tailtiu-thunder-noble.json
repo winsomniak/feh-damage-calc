@@ -1,49 +1,49 @@
 {
-    "display": "Tailtiu, Thunder Noble",
-    "name": "Tailtiu",
-    "title": "Thunder Noble",
-    "id": "tailtiu-thunder-noble",
-    "color": "Blue",
-    "weapon_type": "Blue Tome",
-    "link": "https://kagerochart.com/hero/tailtiu-thunder-noble",
-    "move_type": "Infantry",
-    "LowestRarity":3,
-    "weapon": [
-        "blarblade-plus",
-        "blarblade",
-        "elthunder",
-        "thunder"
-    ],
-    "assist": [
-        "rally-speed-resistance",
-        "rally-resistance"
-    ],
-    "passive_a": [
-        "attack-res-2",
-        "attack-res-1",
-        "attack-plus-1"
-    ],
-    "passive_c": [
-        "drive-spd-2",
-        "drive-spd-1",
-        "spur-spd-1"
-    ],
-    "base_stat": {
-        "star_5": {
-            "hp": 17,
-            "atk": 8,
-            "spd": 9,
-            "def": 4,
-            "res": 6
-        },
-        "growth": {
-            "hp": 6,
-            "atk": 7,
-            "spd": 8,
-            "def": 2,
-            "res": 5,
-            "total": 28
-        },
-        "growth_type":96
-    }
+  "display": "Tailtiu, Thunder Noble",
+  "name": "Tailtiu",
+  "title": "Thunder Noble",
+  "id": "tailtiu-thunder-noble",
+  "color": "Blue",
+  "weapon_type": "Blue Tome",
+  "link": "https://kagerochart.com/hero/tailtiu-thunder-noble",
+  "move_type": "Infantry",
+  "LowestRarity": 3,
+  "weapon": [
+    "blarblade-plus",
+    "blarblade",
+    "elthunder",
+    "thunder"
+  ],
+  "assist": [
+    "rally-speed-resistance",
+    "rally-resistance"
+  ],
+  "passive_a": [
+    "attack-res-2",
+    "attack-res-1",
+    "attack-plus-1"
+  ],
+  "passive_c": [
+    "drive-spd-2",
+    "drive-spd-1",
+    "spur-spd-1"
+  ],
+  "base_stat": {
+    "star_5": {
+      "hp": 17,
+      "atk": 8,
+      "spd": 9,
+      "def": 4,
+      "res": 6
+    },
+    "growth": {
+      "hp": 50,
+      "atk": 55,
+      "spd": 60,
+      "def": 30,
+      "res": 45,
+      "total": 240
+    },
+    "growth_type": 95
+  }
 }

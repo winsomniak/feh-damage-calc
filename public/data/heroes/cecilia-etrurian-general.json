@@ -1,48 +1,48 @@
 {
-    "display": "Cecilia, Etrurian General",
-    "name": "Cecilia",
-    "title": "Etrurian General",
-    "id": "cecilia-etrurian-general",
-    "color": "Green",
-    "weapon_type": "Green Tome",
-    "link": "https://kagerochart.com/hero/cecilia-etrurian-general",
-    "move_type": "Cavalry",
-    "LowestRarity":1,
-    "weapon": [
-        "gronnraven-plus",
-        "gronnraven",
-        "elwind",
-        "wind"
-    ],
-    "assist": [
-        "rally-resistance"
-    ],
-    "passive_a": [
-        "attack-plus-3",
-        "attack-plus-2",
-        "attack-plus-1"
-    ],
-    "passive_b": [
-        "escape-route-3",
-        "escape-route-2",
-        "escape-route-1"
-    ],
-    "base_stat": {
-        "star_5": {
-            "hp": 17,
-            "atk": 8,
-            "spd": 6,
-            "def": 5,
-            "res": 7
-        },
-        "growth": {
-            "hp": 5,
-            "atk": 7,
-            "spd": 5,
-            "def": 4,
-            "res": 6,
-            "total": 27
-        },
-        "growth_type":97
-    }
+  "display": "Cecilia, Etrurian General",
+  "name": "Cecilia",
+  "title": "Etrurian General",
+  "id": "cecilia-etrurian-general",
+  "color": "Green",
+  "weapon_type": "Green Tome",
+  "link": "https://kagerochart.com/hero/cecilia-etrurian-general",
+  "move_type": "Cavalry",
+  "LowestRarity": 1,
+  "weapon": [
+    "gronnraven-plus",
+    "gronnraven",
+    "elwind",
+    "wind"
+  ],
+  "assist": [
+    "rally-resistance"
+  ],
+  "passive_a": [
+    "attack-plus-3",
+    "attack-plus-2",
+    "attack-plus-1"
+  ],
+  "passive_b": [
+    "escape-route-3",
+    "escape-route-2",
+    "escape-route-1"
+  ],
+  "base_stat": {
+    "star_5": {
+      "hp": 17,
+      "atk": 8,
+      "spd": 6,
+      "def": 5,
+      "res": 7
+    },
+    "growth": {
+      "hp": 45,
+      "atk": 55,
+      "spd": 45,
+      "def": 40,
+      "res": 50,
+      "total": 235
+    },
+    "growth_type": 94
+  }
 }

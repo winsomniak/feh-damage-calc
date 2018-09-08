@@ -1,53 +1,53 @@
 {
-    "display": "Eirika, Anamnesis Lady",
-    "name": "Eirika",
-    "title": "Anamnesis Lady",
-    "id": "eirika-anamnesis-lady",
-    "color": "Red",
-    "weapon_type": "Red Tome",
-    "link": "https://kagerochart.com/hero/eirika-anamnesis-lady",
-    "move_type": "Cavalry",
-    "weapon": [
-        "gleipnir",
-        "fenrir",
-        "ruin",
-        "flux"
-    ],
-    "assist": [
-        "rally-attack-speed",
-        "rally-speed"
-    ],
-    "passive_a": [
-        "swift-sparrow-2",
-        "swift-sparrow-1",
-        "death-blow-1"
-    ],
-    "passive_b": [
-        "desperation-3",
-        "desperation-2",
-        "desperation-1"
-    ],
-    "passive_c": [
-        "r-tome-exp-3",
-        "r-tome-exp-2",
-        "r-tome-exp-1"
-    ],
-    "base_stat": {
-        "star_5": {
-            "hp": 17,
-            "atk": 7,
-            "spd": 9,
-            "def": 5,
-            "res": 5
-        },
-        "growth": {
-            "hp": 5,
-            "atk": 7,
-            "spd": 8,
-            "def": 3,
-            "res": 4,
-            "total": 27
-        },
-        "growth_type":140
-    }
+  "display": "Eirika, Anamnesis Lady",
+  "name": "Eirika",
+  "title": "Anamnesis Lady",
+  "id": "eirika-anamnesis-lady",
+  "color": "Red",
+  "weapon_type": "Red Tome",
+  "link": "https://kagerochart.com/hero/eirika-anamnesis-lady",
+  "move_type": "Cavalry",
+  "weapon": [
+    "gleipnir",
+    "fenrir",
+    "ruin",
+    "flux"
+  ],
+  "assist": [
+    "rally-attack-speed",
+    "rally-speed"
+  ],
+  "passive_a": [
+    "swift-sparrow-2",
+    "swift-sparrow-1",
+    "death-blow-1"
+  ],
+  "passive_b": [
+    "desperation-3",
+    "desperation-2",
+    "desperation-1"
+  ],
+  "passive_c": [
+    "r-tome-exp-3",
+    "r-tome-exp-2",
+    "r-tome-exp-1"
+  ],
+  "base_stat": {
+    "star_5": {
+      "hp": 17,
+      "atk": 7,
+      "spd": 9,
+      "def": 5,
+      "res": 5
+    },
+    "growth": {
+      "hp": 45,
+      "atk": 55,
+      "spd": 60,
+      "def": 35,
+      "res": 40,
+      "total": 235
+    },
+    "growth_type": 179
+  }
 }

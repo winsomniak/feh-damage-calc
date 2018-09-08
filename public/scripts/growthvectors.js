@@ -2500,56 +2500,20 @@ const GROWTH_VECTORS = [
 ]
 
 function getGrowthVector(basestat, gp, rarity, vbase) {
-    const GPGV = [
-        [  6,   7,  7,  8,  8],
-        [  8,   8,  9, 10, 10],
-        [  9,  10, 11, 12, 13],
-        [ 11,  12, 13, 14, 15],
-        [ 13,  14, 15, 16, 17],
-        [ 14,  15, 17, 18, 19],
-        [ 16,  17, 19, 20, 22],
-        [ 18,  19, 21, 22, 24],
-        [ 19,  21, 23, 24, 26],
-        [ 21,  23, 25, 26, 28],
-        [ 23,  25, 27, 28, 30],
-        [ 24,  26, 29, 31, 33],
-        [ 26,  28, 31, 33, 35],
-        [ 28,  30, 33, 35, 37],
-        [ 29,  32, 35, 37, 39],
-    ];
-    const GVGV = [
-        [-27, -25, -23, -22, -21],
-        [-22, -20, -18, -17, -15],
-        [-18, -16, -13, -11,  -9],
-        [-13, -11,  -8,  -6,  -4],
-        [ -9,  -6,  -3,  -1,   2],
-        [ -5,  -2,   2,   5,   8],
-        [  0,   3,   7,  10,  14],
-        [  4,   8,  12,  15,  19],
-        [  8,  12,  17,  21,  25],
-        [ 12,  17,  22,  26,  31],
-        [ 17,  22,  27,  31,  36],
-        [ 21,  26,  32,  37,  42],
-        [ 25,  31,  37,  42,  48],
-        [ 29,  36,  42,  47,  53],
-    ]; //Some of these are speculative
+	let gvgrow = Math.trunc(gp * (0.79 + 0.07 * rarity));
+	let gpgrow = Math.trunc(0.39 * gvgrow);
+	if (gpgrow < 1 || gpgrow > 39)
+		return [];
 
-    let gpgrow = GPGV[gp][rarity - 1];
-    let gvgrow = GVGV[gp][rarity - 1];
-    if (isNaN(gpgrow) || isNaN(gvgrow))
-        return [];
+	let vid = (3 * basestat + vbase + gvgrow) & 0x3F;
+	let lobytes = GROWTH_VECTORS[gpgrow * 128 + vid * 2 - 128];
+	let hibytes = GROWTH_VECTORS[gpgrow * 128 + vid * 2 - 127];
 
-    let vid = (3 * basestat + vbase + gvgrow) & 0x3F;
-    let lobytes = GROWTH_VECTORS[gpgrow * 128 + vid * 2 - 128];
-    let hibytes = GROWTH_VECTORS[gpgrow * 128 + vid * 2 - 127];
-
-    let vec = [0];
-    for (let i = 2; i <= 31; ++i)
-        vec[i - 1] = (lobytes & (1 << i)) >> i;
-    for (let i = 32; i <= 40; ++i)
-        vec[i - 1] = (hibytes & (1 << (i - 32))) >> (i - 32);
-    if (vec[30] == -1)
-        vec[30] = 1;
+	let vec = [0];
+	for (let i = 2; i <= 31; ++i)
+		vec[i - 1] = (lobytes & (1 << i)) != 0;
+	for (let i = 32; i <= 40; ++i)
+		vec[i - 1] = (hibytes & (1 << (i - 32))) != 0;
 
     return vec;
 }
@@ -2559,11 +2523,11 @@ function calculateStats(level, base, base5, gp, rarity, vbase, iv) {
     let truebase = base;
     if (iv > 0) {
         ++truebase;
-        ++gp;
+        gp += 5;
     }
     else if (iv < 0) {
         --truebase;
-        --gp;
+        gp -= 5;
     }
     let vec = getGrowthVector(base5, gp, rarity, vbase);
 
@@ -2586,7 +2550,7 @@ function getStatTable(level, stats, gps, rarity, bvid, boon, bane, charName) {
             info=1;
         if(bane === statNames[i])
             info=-1;
-        table[statNames[i]] = calculateStats(level, truestats[statNames[i]], stats[statNames[i]], gps[statNames[i]], rarity, (i + 1) * 7 - bvid, info);
+        table[statNames[i]] = calculateStats(level, truestats[statNames[i]], stats[statNames[i]], gps[statNames[i]], rarity, (i - 5) * 7 + bvid, info);
     }
     return table;
 }

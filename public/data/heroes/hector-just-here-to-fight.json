@@ -1,46 +1,46 @@
 {
-    "display": "Hector, Just Here to Fight",
-    "name": "Hector",
-    "title": "Just Here to Fight",
-    "id": "hector-just-here-to-fight",
-    "color": "Green",
-    "weapon_type": "Axe",
-    "link": "https://kagerochart.com/hero/hector-just-here-to-fight",
-    "move_type": "Armored",
-    "weapon": [
-        "berserk-armads",
-        "silver-axe",
-        "steel-axe",
-        "iron-axe"
-    ],
-    "special": [
-        "glimmer",
-        "night-sky"
-    ],
-    "passive_a": [
-        "distant-counter"
-    ],
-    "passive_b": [
-        "wary-fighter-3",
-        "wary-fighter-2",
-        "wary-fighter-1"
-    ],
-    "base_stat": {
-        "star_5": {
-            "hp": 24,
-            "atk": 8,
-            "spd": 4,
-            "def": 12,
-            "res": 7
-        },
-        "growth": {
-            "hp": 8,
-            "atk": 10,
-            "spd": 4,
-            "def": 9,
-            "res": 4,
-            "total": 35
-        },
-        "growth_type":175
-    }
+  "display": "Hector, Just Here to Fight",
+  "name": "Hector",
+  "title": "Just Here to Fight",
+  "id": "hector-just-here-to-fight",
+  "color": "Green",
+  "weapon_type": "Axe",
+  "link": "https://kagerochart.com/hero/hector-just-here-to-fight",
+  "move_type": "Armored",
+  "weapon": [
+    "berserk-armads",
+    "silver-axe",
+    "steel-axe",
+    "iron-axe"
+  ],
+  "special": [
+    "glimmer",
+    "night-sky"
+  ],
+  "passive_a": [
+    "distant-counter"
+  ],
+  "passive_b": [
+    "wary-fighter-3",
+    "wary-fighter-2",
+    "wary-fighter-1"
+  ],
+  "base_stat": {
+    "star_5": {
+      "hp": 24,
+      "atk": 8,
+      "spd": 4,
+      "def": 12,
+      "res": 7
+    },
+    "growth": {
+      "hp": 60,
+      "atk": 70,
+      "spd": 40,
+      "def": 65,
+      "res": 40,
+      "total": 275
+    },
+    "growth_type": 144
+  }
 }

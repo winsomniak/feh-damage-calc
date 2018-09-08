@@ -1,49 +1,49 @@
 {
-    "display": "Morgan, Lad from Afar",
-    "name": "Morgan",
-    "title": "Lad from Afar",
-    "id": "morgan-lad-from-afar",
-    "color": "Red",
-    "weapon_type": "Red Tome",
-    "link": "https://kagerochart.com/hero/morgan-lad-from-afar",
-    "move_type": "Infantry",
-    "LowestRarity":4,
-    "weapon": [
-        "grimas-truth",
-        "fenrir",
-        "ruin",
-        "flux"
-    ],
-    "special": [
-        "dragon-fang",
-        "dragon-gaze"
-    ],
-    "passive_b": [
-        "dull-ranged-3",
-        "dull-ranged-2",
-        "dull-ranged-1"
-    ],
-    "passive_c": [
-        "spur-def-res-2",
-        "spur-def-res-1",
-        "spur-res-1"
-    ],
-    "base_stat": {
-        "star_5": {
-            "hp": 18,
-            "atk": 7,
-            "spd": 8,
-            "def": 5,
-            "res": 7
-        },
-        "growth": {
-            "hp": 5,
-            "atk": 8,
-            "spd": 8,
-            "def": 3,
-            "res": 5,
-            "total": 29
-        },
-        "growth_type":95
-    }
+  "display": "Morgan, Lad from Afar",
+  "name": "Morgan",
+  "title": "Lad from Afar",
+  "id": "morgan-lad-from-afar",
+  "color": "Red",
+  "weapon_type": "Red Tome",
+  "link": "https://kagerochart.com/hero/morgan-lad-from-afar",
+  "move_type": "Infantry",
+  "LowestRarity": 4,
+  "weapon": [
+    "grimas-truth",
+    "fenrir",
+    "ruin",
+    "flux"
+  ],
+  "special": [
+    "dragon-fang",
+    "dragon-gaze"
+  ],
+  "passive_b": [
+    "dull-ranged-3",
+    "dull-ranged-2",
+    "dull-ranged-1"
+  ],
+  "passive_c": [
+    "spur-def-res-2",
+    "spur-def-res-1",
+    "spur-res-1"
+  ],
+  "base_stat": {
+    "star_5": {
+      "hp": 18,
+      "atk": 7,
+      "spd": 8,
+      "def": 5,
+      "res": 7
+    },
+    "growth": {
+      "hp": 45,
+      "atk": 60,
+      "spd": 60,
+      "def": 35,
+      "res": 45,
+      "total": 245
+    },
+    "growth_type": 96
+  }
 }

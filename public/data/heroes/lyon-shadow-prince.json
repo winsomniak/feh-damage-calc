@@ -1,49 +1,49 @@
 {
-    "display": "Lyon, Shadow Prince",
-    "name": "Lyon",
-    "title": "Shadow Prince",
-    "id": "lyon-shadow-prince",
-    "color": "Red",
-    "weapon_type": "Red Tome",
-    "link": "https://kagerochart.com/hero/lyon-shadow-prince",
-    "move_type": "Infantry",
-    "LowestRarity":3,
-    "weapon": [
-        "naglfar",
-        "fenrir",
-        "ruin",
-        "flux"
-    ],
-    "special": [
-        "vengeance",
-        "retribution"
-    ],
-    "passive_a": [
-        "attack-res-2",
-        "attack-res-1",
-        "resistance-plus-1"
-    ],
-    "passive_c": [
-        "drive-res-2",
-        "drive-res-1",
-        "spur-res-1"
-    ],
-    "base_stat": {
-        "star_5": {
-            "hp": 19,
-            "atk": 10,
-            "spd": 4,
-            "def": 4,
-            "res": 8
-        },
-        "growth": {
-            "hp": 6,
-            "atk": 7,
-            "spd": 4,
-            "def": 6,
-            "res": 6,
-            "total": 29
-        },
-        "growth_type":24
-    }
+  "display": "Lyon, Shadow Prince",
+  "name": "Lyon",
+  "title": "Shadow Prince",
+  "id": "lyon-shadow-prince",
+  "color": "Red",
+  "weapon_type": "Red Tome",
+  "link": "https://kagerochart.com/hero/lyon-shadow-prince",
+  "move_type": "Infantry",
+  "LowestRarity": 3,
+  "weapon": [
+    "naglfar",
+    "fenrir",
+    "ruin",
+    "flux"
+  ],
+  "special": [
+    "vengeance",
+    "retribution"
+  ],
+  "passive_a": [
+    "attack-res-2",
+    "attack-res-1",
+    "resistance-plus-1"
+  ],
+  "passive_c": [
+    "drive-res-2",
+    "drive-res-1",
+    "spur-res-1"
+  ],
+  "base_stat": {
+    "star_5": {
+      "hp": 19,
+      "atk": 10,
+      "spd": 4,
+      "def": 4,
+      "res": 8
+    },
+    "growth": {
+      "hp": 50,
+      "atk": 55,
+      "spd": 40,
+      "def": 50,
+      "res": 50,
+      "total": 245
+    },
+    "growth_type": 39
+  }
 }

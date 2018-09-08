@@ -748,11 +748,11 @@ function getStatTotals(charName, weaponName, passiveA, seal, rarity, level, merg
     if(level !== 40)
         stats=getStatTable(level, statsbase, charInfo[charName].base_stat.growth, rarity, charInfo[charName].base_stat.growth_type, boon, bane, charName);
     else {
-        stats.hp = statGrowths[rarity-1][charInfo[charName].base_stat.growth.hp + ((boon === "hp") ? 1 : 0) + ((bane === "hp") ? -1 : 0)] + statsbase.hp + ((boon === "hp") ? 1 : 0) + ((bane === "hp") ? -1 : 0);
-        stats.atk = statGrowths[rarity-1][charInfo[charName].base_stat.growth.atk + ((boon === "atk") ? 1 : 0) + ((bane === "atk") ? -1 : 0)] + statsbase.atk + ((boon === "atk") ? 1 : 0) + ((bane === "atk") ? -1 : 0);
-        stats.spd = statGrowths[rarity-1][charInfo[charName].base_stat.growth.spd + ((boon === "spd") ? 1 : 0) + ((bane === "spd") ? -1 : 0)] + statsbase.spd + ((boon === "spd") ? 1 : 0) + ((bane === "spd") ? -1 : 0);
-        stats.def = statGrowths[rarity-1][charInfo[charName].base_stat.growth.def + ((boon === "def") ? 1 : 0) + ((bane === "def") ? -1 : 0)] + statsbase.def + ((boon === "def") ? 1 : 0) + ((bane === "def") ? -1 : 0);
-        stats.res = statGrowths[rarity-1][charInfo[charName].base_stat.growth.res + ((boon === "res") ? 1 : 0) + ((bane === "res") ? -1 : 0)] + statsbase.res + ((boon === "res") ? 1 : 0) + ((bane === "res") ? -1 : 0);
+        stats.hp = roundNum(0.39 * roundNum((0.79 + (0.07 * rarity)) * (charInfo[charName].base_stat.growth.hp + ((boon === "hp") ? 5 : 0) + ((bane === "hp") ? -5 : 0)), false), false) + statsbase.hp + ((boon === "hp") ? 1 : 0) + ((bane === "hp") ? -1 : 0);
+        stats.atk = roundNum(0.39 * roundNum((0.79 + (0.07 * rarity)) * (charInfo[charName].base_stat.growth.atk + ((boon === "atk") ? 5 : 0) + ((bane === "atk") ? -5 : 0)), false), false) + statsbase.atk + ((boon === "atk") ? 1 : 0) + ((bane === "atk") ? -1 : 0);
+        stats.spd = roundNum(0.39 * roundNum((0.79 + (0.07 * rarity)) * (charInfo[charName].base_stat.growth.spd + ((boon === "spd") ? 5 : 0) + ((bane === "spd") ? -5 : 0)), false), false) + statsbase.spd + ((boon === "spd") ? 1 : 0) + ((bane === "spd") ? -1 : 0);
+        stats.def = roundNum(0.39 * roundNum((0.79 + (0.07 * rarity)) * (charInfo[charName].base_stat.growth.def + ((boon === "def") ? 5 : 0) + ((bane === "def") ? -5 : 0)), false), false) + statsbase.def + ((boon === "def") ? 1 : 0) + ((bane === "def") ? -1 : 0);
+        stats.res = roundNum(0.39 * roundNum((0.79 + (0.07 * rarity)) * (charInfo[charName].base_stat.growth.res + ((boon === "res") ? 5 : 0) + ((bane === "res") ? -5 : 0)), false), false) + statsbase.res + ((boon === "res") ? 1 : 0) + ((bane === "res") ? -1 : 0);
     }
 
     const statNames = ["hp", "atk", "spd", "def", "res"];
@@ -931,7 +931,15 @@ function ArenaScoreCalc(charNum) {
         var statsbase = {};
 	    statsbase=getBaseStat(statsbase, 5, charName, "neutral", "neutral");
 
+    if(level !== 40)
         tmpstats=getStatTable(level, statsbase, charInfo[charName].base_stat.growth, rarity, charInfo[charName].base_stat.growth_type, boon, bane, charName);
+    else {
+        tmpstats.hp = roundNum(0.39 * roundNum((0.79 + (0.07 * rarity)) * (charInfo[charName].base_stat.growth.hp + ((boon === "hp") ? 5 : 0) + ((bane === "hp") ? -5 : 0)), false), false) + statsbase.hp + ((boon === "hp") ? 1 : 0) + ((bane === "hp") ? -1 : 0);
+        tmpstats.atk = roundNum(0.39 * roundNum((0.79 + (0.07 * rarity)) * (charInfo[charName].base_stat.growth.atk + ((boon === "atk") ? 5 : 0) + ((bane === "atk") ? -5 : 0)), false), false) + statsbase.atk + ((boon === "atk") ? 1 : 0) + ((bane === "atk") ? -1 : 0);
+        tmpstats.spd = roundNum(0.39 * roundNum((0.79 + (0.07 * rarity)) * (charInfo[charName].base_stat.growth.spd + ((boon === "spd") ? 5 : 0) + ((bane === "spd") ? -5 : 0)), false), false) + statsbase.spd + ((boon === "spd") ? 1 : 0) + ((bane === "spd") ? -1 : 0);
+        tmpstats.def = roundNum(0.39 * roundNum((0.79 + (0.07 * rarity)) * (charInfo[charName].base_stat.growth.def + ((boon === "def") ? 5 : 0) + ((bane === "def") ? -5 : 0)), false), false) + statsbase.def + ((boon === "def") ? 1 : 0) + ((bane === "def") ? -1 : 0);
+        tmpstats.res = roundNum(0.39 * roundNum((0.79 + (0.07 * rarity)) * (charInfo[charName].base_stat.growth.res + ((boon === "res") ? 5 : 0) + ((bane === "res") ? -5 : 0)), false), false) + statsbase.res + ((boon === "res") ? 1 : 0) + ((bane === "res") ? -1 : 0);
+    }
 
         BST = tmpstats.hp + tmpstats.atk + tmpstats.spd + tmpstats.def + tmpstats.res;
     }

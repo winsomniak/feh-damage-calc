@@ -1,47 +1,47 @@
 {
-    "display": "Walhart, The Conqueror",
-    "name": "Walhart",
-    "title": "The Conqueror",
-    "id": "walhart-the-conqueror",
-    "color": "Green",
-    "weapon_type": "Axe",
-    "link": "https://kagerochart.com/hero/walhart-the-conqueror",
-    "move_type": "Cavalry",
-    "LowestRarity":3,
-    "weapon": [
-        "wolf-berg",
-        "silver-axe",
-        "steel-axe",
-        "iron-axe"
-    ],
-    "special": [
-        "luna",
-        "new-moon"
-    ],
-    "passive_a": [
-        "granis-shield"
-    ],
-    "passive_b": [
-        "chill-def-3",
-        "chill-def-2",
-        "chill-def-1"
-    ],
-    "base_stat": {
-        "star_5": {
-            "hp": 19,
-            "atk": 11,
-            "spd": 5,
-            "def": 8,
-            "res": 3
-        },
-        "growth": {
-            "hp": 6,
-            "atk": 8,
-            "spd": 6,
-            "def": 9,
-            "res": 2,
-            "total": 31
-        },
-        "growth_type":157
-    }
+  "display": "Walhart, The Conqueror",
+  "name": "Walhart",
+  "title": "The Conqueror",
+  "id": "walhart-the-conqueror",
+  "color": "Green",
+  "weapon_type": "Axe",
+  "link": "https://kagerochart.com/hero/walhart-the-conqueror",
+  "move_type": "Cavalry",
+  "LowestRarity": 3,
+  "weapon": [
+    "wolf-berg",
+    "silver-axe",
+    "steel-axe",
+    "iron-axe"
+  ],
+  "special": [
+    "luna",
+    "new-moon"
+  ],
+  "passive_a": [
+    "granis-shield"
+  ],
+  "passive_b": [
+    "chill-def-3",
+    "chill-def-2",
+    "chill-def-1"
+  ],
+  "base_stat": {
+    "star_5": {
+      "hp": 19,
+      "atk": 11,
+      "spd": 5,
+      "def": 8,
+      "res": 3
+    },
+    "growth": {
+      "hp": 50,
+      "atk": 60,
+      "spd": 50,
+      "def": 65,
+      "res": 30,
+      "total": 255
+    },
+    "growth_type": 162
+  }
 }

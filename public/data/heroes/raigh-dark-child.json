@@ -1,48 +1,48 @@
 {
-    "display": "Raigh, Dark Child",
-    "name": "Raigh",
-    "title": "Dark Child",
-    "id": "raigh-dark-child",
-    "color": "Red",
-    "weapon_type": "Red Tome",
-    "link": "https://kagerochart.com/hero/raigh-dark-child",
-    "move_type": "Infantry",
-    "LowestRarity":2,
-    "weapon": [
-        "raurwolf-plus",
-        "raurwolf",
-        "ruin",
-        "flux"
-    ],
-    "assist": [
-        "rally-attack"
-    ],
-    "passive_a": [
-        "hp-plus-5",
-        "hp-plus-4",
-        "hp-plus-3"
-    ],
-    "passive_b": [
-        "seal-res-3",
-        "seal-res-2",
-        "seal-res-1"
-    ],
-    "base_stat": {
-        "star_5": {
-            "hp": 17,
-            "atk": 8,
-            "spd": 7,
-            "def": 5,
-            "res": 7
-        },
-        "growth": {
-            "hp": 5,
-            "atk": 7,
-            "spd": 6,
-            "def": 4,
-            "res": 6,
-            "total": 28
-        },
-        "growth_type":15
-    }
+  "display": "Raigh, Dark Child",
+  "name": "Raigh",
+  "title": "Dark Child",
+  "id": "raigh-dark-child",
+  "color": "Red",
+  "weapon_type": "Red Tome",
+  "link": "https://kagerochart.com/hero/raigh-dark-child",
+  "move_type": "Infantry",
+  "LowestRarity": 2,
+  "weapon": [
+    "raurwolf-plus",
+    "raurwolf",
+    "ruin",
+    "flux"
+  ],
+  "assist": [
+    "rally-attack"
+  ],
+  "passive_a": [
+    "hp-plus-5",
+    "hp-plus-4",
+    "hp-plus-3"
+  ],
+  "passive_b": [
+    "seal-res-3",
+    "seal-res-2",
+    "seal-res-1"
+  ],
+  "base_stat": {
+    "star_5": {
+      "hp": 17,
+      "atk": 8,
+      "spd": 7,
+      "def": 5,
+      "res": 7
+    },
+    "growth": {
+      "hp": 45,
+      "atk": 55,
+      "spd": 50,
+      "def": 40,
+      "res": 50,
+      "total": 240
+    },
+    "growth_type": 48
+  }
 }

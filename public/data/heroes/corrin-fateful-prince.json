@@ -1,49 +1,49 @@
 {
-    "display": "Corrin, Fateful Prince",
-    "name": "Corrin",
-    "title": "Fateful Prince",
-    "id": "corrin-fateful-prince",
-    "color": "Red",
-    "weapon_type": "Sword",
-    "link": "https://kagerochart.com/hero/corrin-fateful-prince",
-    "move_type": "Infantry",
-    "LowestRarity":3,
-    "weapon": [
-        "yato",
-        "silver-sword",
-        "steel-sword",
-        "iron-sword"
-    ],
-    "special": [
-        "dragon-fang",
-        "dragon-gaze"
-    ],
-    "passive_a": [
-        "defense-plus-3",
-        "defense-plus-2",
-        "defense-plus-1"
-    ],
-    "passive_b": [
-        "obstruct-3",
-        "obstruct-2",
-        "obstruct-1"
-    ],
-    "base_stat": {
-        "star_5": {
-            "hp": 20,
-            "atk": 8,
-            "spd": 8,
-            "def": 6,
-            "res": 5
-        },
-        "growth": {
-            "hp": 6,
-            "atk": 7,
-            "spd": 7,
-            "def": 6,
-            "res": 5,
-            "total": 31
-        },
-        "growth_type":249
-    }
+  "display": "Corrin, Fateful Prince",
+  "name": "Corrin",
+  "title": "Fateful Prince",
+  "id": "corrin-fateful-prince",
+  "color": "Red",
+  "weapon_type": "Sword",
+  "link": "https://kagerochart.com/hero/corrin-fateful-prince",
+  "move_type": "Infantry",
+  "LowestRarity": 3,
+  "weapon": [
+    "yato",
+    "silver-sword",
+    "steel-sword",
+    "iron-sword"
+  ],
+  "special": [
+    "dragon-fang",
+    "dragon-gaze"
+  ],
+  "passive_a": [
+    "defense-plus-3",
+    "defense-plus-2",
+    "defense-plus-1"
+  ],
+  "passive_b": [
+    "obstruct-3",
+    "obstruct-2",
+    "obstruct-1"
+  ],
+  "base_stat": {
+    "star_5": {
+      "hp": 20,
+      "atk": 8,
+      "spd": 8,
+      "def": 6,
+      "res": 5
+    },
+    "growth": {
+      "hp": 50,
+      "atk": 55,
+      "spd": 55,
+      "def": 50,
+      "res": 45,
+      "total": 255
+    },
+    "growth_type": 198
+  }
 }

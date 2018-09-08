@@ -1,48 +1,48 @@
 {
-    "display": "Shigure, Uplifting Artist",
-    "name": "Shigure",
-    "title": "Uplifting Artist",
-    "id": "shigure-uplifting-artist",
-    "color": "Blue",
-    "weapon_type": "Lance",
-    "link": "https://kagerochart.com/hero/shigure-uplifting-artist",
-    "move_type": "Flying",
-    "weapon": [
-        "harmonic-lance-plus",
-        "harmonic-lance",
-        "steel-lance",
-        "iron-lance"
-    ],
-    "special": [
-        "noontime",
-        "daylight"
-    ],
-    "passive_a": [
-        "darting-stance-3",
-        "darting-stance-2",
-        "darting-stance-1"
-    ],
-    "passive_c": [
-        "ward-fliers",
-        "spur-res-2",
-        "spur-res-1"
-    ],
-    "base_stat": {
-        "star_5": {
-            "hp": 18,
-            "atk": 7,
-            "spd": 9,
-            "def": 5,
-            "res": 8
-        },
-        "growth": {
-            "hp": 6,
-            "atk": 8,
-            "spd": 9,
-            "def": 6,
-            "res": 4,
-            "total": 33
-        },
-        "growth_type":204
-    }
+  "display": "Shigure, Uplifting Artist",
+  "name": "Shigure",
+  "title": "Uplifting Artist",
+  "id": "shigure-uplifting-artist",
+  "color": "Blue",
+  "weapon_type": "Lance",
+  "link": "https://kagerochart.com/hero/shigure-uplifting-artist",
+  "move_type": "Flying",
+  "weapon": [
+    "harmonic-lance-plus",
+    "harmonic-lance",
+    "steel-lance",
+    "iron-lance"
+  ],
+  "special": [
+    "noontime",
+    "daylight"
+  ],
+  "passive_a": [
+    "darting-stance-3",
+    "darting-stance-2",
+    "darting-stance-1"
+  ],
+  "passive_c": [
+    "ward-fliers",
+    "spur-res-2",
+    "spur-res-1"
+  ],
+  "base_stat": {
+    "star_5": {
+      "hp": 18,
+      "atk": 7,
+      "spd": 9,
+      "def": 5,
+      "res": 8
+    },
+    "growth": {
+      "hp": 50,
+      "atk": 60,
+      "spd": 65,
+      "def": 50,
+      "res": 40,
+      "total": 265
+    },
+    "growth_type": 243
+  }
 }

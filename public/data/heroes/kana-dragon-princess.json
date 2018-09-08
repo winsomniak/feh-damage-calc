@@ -1,48 +1,48 @@
 {
-    "display": "Kana, Dragon Princess",
-    "name": "Kana",
-    "title": "Dragon Princess",
-    "id": "kana-dragon-princess",
-    "color": "Green",
-    "weapon_type": "Green Breath",
-    "link": "https://kagerochart.com/hero/kana-dragon-princess",
-    "move_type": "Infantry",
-    "weapon": [
-        "water-breath-plus",
-        "water-breath",
-        "fire-breath-plus",
-        "fire-breath"
-    ],
-    "special": [
-        "draconic-aura",
-        "dragon-gaze"
-    ],
-    "passive_a": [
-        "fierce-stance-3",
-        "fierce-stance-2",
-        "fierce-stance-1"
-    ],
-    "passive_c": [
-        "goad-dragons",
-        "spur-atk-2",
-        "spur-atk-1"
-    ],
-    "base_stat": {
-        "star_5": {
-            "hp": 18,
-            "atk": 8,
-            "spd": 8,
-            "def": 7,
-            "res": 7
-        },
-        "growth": {
-            "hp": 6,
-            "atk": 6,
-            "spd": 8,
-            "def": 8,
-            "res": 5,
-            "total": 33
-        },
-        "growth_type":68
-    }
+  "display": "Kana, Dragon Princess",
+  "name": "Kana",
+  "title": "Dragon Princess",
+  "id": "kana-dragon-princess",
+  "color": "Green",
+  "weapon_type": "Green Breath",
+  "link": "https://kagerochart.com/hero/kana-dragon-princess",
+  "move_type": "Infantry",
+  "weapon": [
+    "water-breath-plus",
+    "water-breath",
+    "fire-breath-plus",
+    "fire-breath"
+  ],
+  "special": [
+    "draconic-aura",
+    "dragon-gaze"
+  ],
+  "passive_a": [
+    "fierce-stance-3",
+    "fierce-stance-2",
+    "fierce-stance-1"
+  ],
+  "passive_c": [
+    "goad-dragons",
+    "spur-atk-2",
+    "spur-atk-1"
+  ],
+  "base_stat": {
+    "star_5": {
+      "hp": 18,
+      "atk": 8,
+      "spd": 8,
+      "def": 7,
+      "res": 7
+    },
+    "growth": {
+      "hp": 50,
+      "atk": 50,
+      "spd": 60,
+      "def": 60,
+      "res": 45,
+      "total": 265
+    },
+    "growth_type": 123
+  }
 }

@@ -1,47 +1,47 @@
 {
-    "display": "Draug, Gentle Giant",
-    "name": "Draug",
-    "title": "Gentle Giant",
-    "id": "draug-gentle-giant",
-    "color": "Red",
-    "weapon_type": "Sword",
-    "link": "https://kagerochart.com/hero/draug-gentle-giant",
-    "move_type": "Armored",
-    "LowestRarity":2,
-    "weapon": [
-        "brave-sword-plus",
-        "brave-sword",
-        "steel-sword",
-        "iron-sword"
-    ],
-    "special": [
-        "pavise",
-        "buckler"
-    ],
-    "passive_b": [
-        "lunge"
-    ],
-    "passive_c": [
-        "ward-armor",
-        "spur-def-2",
-        "spur-def-1"
-    ],
-    "base_stat": {
-        "star_5": {
-            "hp": 24,
-            "atk": 8,
-            "spd": 6,
-            "def": 13,
-            "res": 3
-        },
-        "growth": {
-            "hp": 8,
-            "atk": 6,
-            "spd": 8,
-            "def": 8,
-            "res": 3,
-            "total": 33
-        },
-        "growth_type":238
-    }
+  "display": "Draug, Gentle Giant",
+  "name": "Draug",
+  "title": "Gentle Giant",
+  "id": "draug-gentle-giant",
+  "color": "Red",
+  "weapon_type": "Sword",
+  "link": "https://kagerochart.com/hero/draug-gentle-giant",
+  "move_type": "Armored",
+  "LowestRarity": 2,
+  "weapon": [
+    "brave-sword-plus",
+    "brave-sword",
+    "steel-sword",
+    "iron-sword"
+  ],
+  "special": [
+    "pavise",
+    "buckler"
+  ],
+  "passive_b": [
+    "lunge"
+  ],
+  "passive_c": [
+    "ward-armor",
+    "spur-def-2",
+    "spur-def-1"
+  ],
+  "base_stat": {
+    "star_5": {
+      "hp": 24,
+      "atk": 8,
+      "spd": 6,
+      "def": 13,
+      "res": 3
+    },
+    "growth": {
+      "hp": 60,
+      "atk": 50,
+      "spd": 60,
+      "def": 60,
+      "res": 35,
+      "total": 265
+    },
+    "growth_type": 209
+  }
 }

@@ -1,47 +1,47 @@
 {
-    "display": "Sumia, Maid of Flowers",
-    "name": "Sumia",
-    "title": "Maid of Flowers",
-    "id": "sumia-maid-of-flowers",
-    "color": "Blue",
-    "weapon_type": "Lance",
-    "link": "https://kagerochart.com/hero/sumia-maid-of-flowers",
-    "move_type": "Flying",
-    "weapon": [
-        "reprisal-lance-plus",
-        "reprisal-lance",
-        "steel-lance",
-        "iron-lance"
-    ],
-    "assist": [
-        "reposition"
-    ],
-    "passive_a": [
-        "close-def-3",
-        "close-def-2",
-        "close-def-1"
-    ],
-    "passive_b": [
-        "atk-def-link-3",
-        "atk-def-link-2",
-        "atk-def-link-1"
-    ],
-    "base_stat": {
-        "star_5": {
-            "hp": 17,
-            "atk": 6,
-            "spd": 11,
-            "def": 7,
-            "res": 6
-        },
-        "growth": {
-            "hp": 6,
-            "atk": 7,
-            "spd": 9,
-            "def": 6,
-            "res": 5,
-            "total": 33
-        },
-        "growth_type":165
-    }
+  "display": "Sumia, Maid of Flowers",
+  "name": "Sumia",
+  "title": "Maid of Flowers",
+  "id": "sumia-maid-of-flowers",
+  "color": "Blue",
+  "weapon_type": "Lance",
+  "link": "https://kagerochart.com/hero/sumia-maid-of-flowers",
+  "move_type": "Flying",
+  "weapon": [
+    "reprisal-lance-plus",
+    "reprisal-lance",
+    "steel-lance",
+    "iron-lance"
+  ],
+  "assist": [
+    "reposition"
+  ],
+  "passive_a": [
+    "close-def-3",
+    "close-def-2",
+    "close-def-1"
+  ],
+  "passive_b": [
+    "atk-def-link-3",
+    "atk-def-link-2",
+    "atk-def-link-1"
+  ],
+  "base_stat": {
+    "star_5": {
+      "hp": 17,
+      "atk": 6,
+      "spd": 11,
+      "def": 7,
+      "res": 6
+    },
+    "growth": {
+      "hp": 50,
+      "atk": 55,
+      "spd": 65,
+      "def": 50,
+      "res": 45,
+      "total": 265
+    },
+    "growth_type": 154
+  }
 }
