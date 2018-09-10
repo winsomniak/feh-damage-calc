@@ -1857,6 +1857,13 @@ function singleCombat(battleInfo, initiator, logIntro, brave) {
         }
     }
 
+    // check for damage multiplier
+    if (attacker.specialData.hasOwnProperty("dmg_mod") && attacker.specCurrCooldown <= 0) {
+        dmg += roundNum(dmg * attacker.specialData.dmg_mod, false);
+        battleInfo.logMsg += "Damage boosted by " + (attacker.specialData.dmg_mod * 100).toString() + "% [" + specialInfo[attacker.special].name + "]. ";
+        atkSpec = true;
+    }
+
     //Light Brand's check
     if(attacker.weaponData.hasOwnProperty("dmg_comp"))
     {
@@ -1866,7 +1873,7 @@ function singleCombat(battleInfo, initiator, logIntro, brave) {
         }
     }
 
-    //Light Brand's check
+    //Guga Excalibur &co's check
     if(attacker.weaponData.hasOwnProperty("boost_by_difference"))
     {
         var result;
@@ -1878,13 +1885,6 @@ function singleCombat(battleInfo, initiator, logIntro, brave) {
             dmg += roundNum(Math.min(result * attacker.weaponData.boost_by_difference.multiplier, attacker.weaponData.boost_by_difference.maximum), false);
             battleInfo.logMsg += "Damage boosted by " + roundNum(Math.min(result * attacker.weaponData.boost_by_difference.multiplier, attacker.weaponData.boost_by_difference.maximum), false).toString() + " [" + attacker.weaponData.name + "]. ";
         }
-    }
-
-    // check for damage multiplier
-    if (attacker.specialData.hasOwnProperty("dmg_mod") && attacker.specCurrCooldown <= 0) {
-        dmg += roundNum(dmg * attacker.specialData.dmg_mod, false);
-        battleInfo.logMsg += "Damage boosted by " + (attacker.specialData.dmg_mod * 100).toString() + "% [" + specialInfo[attacker.special].name + "]. ";
-        atkSpec = true;
     }
 
     battleInfo.extra_heal_dmg=0;
