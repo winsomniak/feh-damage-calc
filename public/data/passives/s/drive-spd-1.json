@@ -1,0 +1,7 @@
+{
+    "description": "Grants allies within 2 spaces Spd+2 during combat.",
+    "id": "drive-spd-1",
+    "name": "Drive Spd 1",
+    "sp":120,
+    "type": "s"
+}

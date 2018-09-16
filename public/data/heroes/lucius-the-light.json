@@ -1,49 +1,49 @@
 {
-    "display": "Lucius, The Light",
-    "name": "Lucius",
-    "title": "The Light",
-    "id": "lucius-the-light",
-    "color": "Colorless",
-    "weapon_type": "Staff",
-    "link": "https://kagerochart.com/hero/lucius-the-light",
-    "move_type": "Infantry",
-    "LowestRarity":3,
-    "weapon": [
-        "pain-plus",
-        "pain",
-        "assault"
-    ],
-    "special": [
-        "miracle",
-        "imbue"
-    ],
-    "assist": [
-        "martyr-plus",
-        "martyr",
-        "reconcile",
-        "heal"
-    ],
-    "passive_a": [
-        "hp-plus-5",
-        "hp-plus-4",
-        "hp-plus-3"
-    ],
-    "base_stat": {
-        "star_5": {
-            "hp": 18,
-            "atk": 6,
-            "spd": 8,
-            "def": 3,
-            "res": 9
-        },
-        "growth": {
-            "hp": 5,
-            "atk": 8,
-            "spd": 6,
-            "def": 1,
-            "res": 8,
-            "total": 28
-        },
-        "growth_type":215
-    }
+  "display": "Lucius, The Light",
+  "name": "Lucius",
+  "title": "The Light",
+  "id": "lucius-the-light",
+  "color": "Colorless",
+  "weapon_type": "Staff",
+  "link": "https://kagerochart.com/hero/lucius-the-light",
+  "move_type": "Infantry",
+  "LowestRarity": 3,
+  "weapon": [
+    "pain-plus",
+    "pain",
+    "assault"
+  ],
+  "special": [
+    "miracle",
+    "imbue"
+  ],
+  "assist": [
+    "martyr-plus",
+    "martyr",
+    "reconcile",
+    "heal"
+  ],
+  "passive_a": [
+    "hp-plus-5",
+    "hp-plus-4",
+    "hp-plus-3"
+  ],
+  "base_stat": {
+    "star_5": {
+      "hp": 18,
+      "atk": 6,
+      "spd": 8,
+      "def": 3,
+      "res": 9
+    },
+    "growth": {
+      "hp": 45,
+      "atk": 60,
+      "spd": 50,
+      "def": 25,
+      "res": 60,
+      "total": 240
+    },
+    "growth_type": 232
+  }
 }

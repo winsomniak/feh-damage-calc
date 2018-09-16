@@ -34,15 +34,6 @@ var mSortDesc = true; // sort in descending order?
 // true if battle log is open, false otherwise
 var openLog = true;
 
-// stat growth amounts from lvl 1 to lvl 40
-var statGrowths = [
-    [6, 8, 9, 11, 13, 14, 16, 18, 19, 21, 23, 24, 26],
-    [7, 8, 10, 12, 14, 15, 17, 19, 21, 23, 25, 26, 28],
-    [7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31],
-    [8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 31, 33],
-    [8, 10, 13, 15, 17, 19, 22, 24, 26, 28, 30, 33, 35]
-];
-
 // Used to take track of refinements for custom units
 var prevRefinements = ["None", "None"];
 var prevWeapons = ["None", "None"];

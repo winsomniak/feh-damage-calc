@@ -1,0 +1,21 @@
+{
+    "name": "Special Fighter 3",
+    "sp": 240,
+    "type": "B",
+    "description": "At start of combat, if unit's HP ≥ 50%, grants Special cooldown charge +1 to unit and inflicts Special cooldown charge -1 on foe per attack. (Only highest value applied. Does not stack.)",
+    "icon": "/images/icons/passives/special-fighter-3.png",
+    "move_unique": "Armored",
+    "guard": 0.5,
+    "enemy_phase_charge": {
+        "attack": true,
+        "defend": true,
+        "threshold": 0.5
+    },
+    "player_phase_charge": {
+        "attack": true,
+        "defend": true,
+        "threshold": 0.5
+    },
+    "link": "https://kagerochart.com/hero/passives/special-fighter-3",
+    "id": "special-fighter-3"
+}

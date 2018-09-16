@@ -1,0 +1,23 @@
+{
+    "name": "Dusk Uchiwa+",
+    "might": 12,
+    "range": 2,
+    "sp": 300,
+    "description": "Effective against cavalry foes. Disables unit's and foe's skills that change attack priority. After combat, if unit attacked, inflicts Def/Res-7 on target and foes within 2 spaces of target through their next actions.",
+    "type": "Dagger",
+    "link": "https://kagerochart.com/hero/weapons/dusk-uchiwa-plus",
+    "color": "Colorless",
+    "magical": false,
+    "seal": {
+        "def": -7,
+        "res": -7
+    },
+    "refinable": {
+        "type": "ranged"
+    },
+    "move_effective": [
+        "Cavalry"
+    ],
+    "remove_prio_hp": 0,
+    "id": "dusk-uchiwa-plus"
+}

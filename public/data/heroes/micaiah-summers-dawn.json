@@ -1,0 +1,52 @@
+{
+  "display": "Micaiah, Summer's Dawn",
+  "name": "Micaiah",
+  "title": "Summer's Dawn",
+  "id": "micaiah-summers-dawn",
+  "color": "Red",
+  "weapon_type": "Red Tome",
+  "link": "https://kagerochart.com/hero/micaiah-summers-dawn",
+  "move_type": "Infantry",
+  "weapon": [
+    "dawn-suzu",
+    "bolganone",
+    "elfire",
+    "fire"
+  ],
+  "assist": [
+    "dance"
+  ],
+  "passive_a": [
+    "atk-res-bond-3",
+    "atk-res-bond-2",
+    "atk-res-bond-1"
+  ],
+  "passive_b": [
+    "fireflood-dance-2",
+    "fireflood-dance-1",
+    "torrent-dance-1"
+  ],
+  "passive_c": [
+    "res-ploy-3",
+    "res-ploy-2",
+    "res-ploy-1"
+  ],
+  "base_stat": {
+    "star_5": {
+      "hp": 14,
+      "atk": 8,
+      "spd": 5,
+      "def": 3,
+      "res": 6
+    },
+    "growth": {
+      "hp": 45,
+      "atk": 60,
+      "spd": 35,
+      "def": 35,
+      "res": 65,
+      "total": 240
+    },
+    "growth_type": 74
+  }
+}

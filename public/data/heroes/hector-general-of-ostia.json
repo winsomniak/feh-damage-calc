@@ -1,47 +1,47 @@
 {
-    "display": "Hector, General of Ostia",
-    "name": "Hector",
-    "title": "General of Ostia",
-    "id": "hector-general-of-ostia",
-    "color": "Green",
-    "weapon_type": "Axe",
-    "link": "https://kagerochart.com/hero/hector-general-of-ostia",
-    "move_type": "Armored",
-    "weapon": [
-        "berserk-armads",
-        "armads",
-        "silver-axe",
-        "steel-axe",
-        "iron-axe"
-    ],
-    "special": [
-        "pavise",
-        "buckler"
-    ],
-    "passive_a": [
-        "distant-counter"
-    ],
-    "passive_c": [
-        "goad-armor",
-        "spur-atk-2",
-        "spur-atk-1"
-    ],
-    "base_stat": {
-        "star_5": {
-            "hp": 24,
-            "atk": 10,
-            "spd": 5,
-            "def": 11,
-            "res": 4
-        },
-        "growth": {
-            "hp": 9,
-            "atk": 8,
-            "spd": 5,
-            "def": 8,
-            "res": 3,
-            "total": 33
-        },
-        "growth_type":165
-    }
+  "display": "Hector, General of Ostia",
+  "name": "Hector",
+  "title": "General of Ostia",
+  "id": "hector-general-of-ostia",
+  "color": "Green",
+  "weapon_type": "Axe",
+  "link": "https://kagerochart.com/hero/hector-general-of-ostia",
+  "move_type": "Armored",
+  "weapon": [
+    "berserk-armads",
+    "armads",
+    "silver-axe",
+    "steel-axe",
+    "iron-axe"
+  ],
+  "special": [
+    "pavise",
+    "buckler"
+  ],
+  "passive_a": [
+    "distant-counter"
+  ],
+  "passive_c": [
+    "goad-armor",
+    "spur-atk-2",
+    "spur-atk-1"
+  ],
+  "base_stat": {
+    "star_5": {
+      "hp": 24,
+      "atk": 10,
+      "spd": 5,
+      "def": 11,
+      "res": 4
+    },
+    "growth": {
+      "hp": 65,
+      "atk": 60,
+      "spd": 45,
+      "def": 60,
+      "res": 35,
+      "total": 265
+    },
+    "growth_type": 154
+  }
 }

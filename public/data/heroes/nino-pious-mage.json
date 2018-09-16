@@ -1,48 +1,48 @@
 {
-    "display": "Nino, Pious Mage",
-    "name": "Nino",
-    "title": "Pious Mage",
-    "id": "nino-pious-mage",
-    "color": "Green",
-    "weapon_type": "Green Tome",
-    "link": "https://kagerochart.com/hero/nino-pious-mage",
-    "move_type": "Infantry",
-    "LowestRarity":3,
-    "weapon": [
-        "gronnblade-plus",
-        "gronnblade",
-        "elwind",
-        "wind"
-    ],
-    "assist": [
-        "draw-back"
-    ],
-    "passive_a": [
-        "resistance-plus-3",
-        "resistance-plus-2",
-        "resistance-plus-1"
-    ],
-    "passive_c": [
-        "hone-atk-3",
-        "hone-atk-2",
-        "hone-atk-1"
-    ],
-    "base_stat": {
-        "star_5": {
-            "hp": 16,
-            "atk": 7,
-            "spd": 10,
-            "def": 4,
-            "res": 7
-        },
-        "growth": {
-            "hp": 4,
-            "atk": 8,
-            "spd": 8,
-            "def": 3,
-            "res": 5,
-            "total": 28
-        },
-        "growth_type":6
-    }
+  "display": "Nino, Pious Mage",
+  "name": "Nino",
+  "title": "Pious Mage",
+  "id": "nino-pious-mage",
+  "color": "Green",
+  "weapon_type": "Green Tome",
+  "link": "https://kagerochart.com/hero/nino-pious-mage",
+  "move_type": "Infantry",
+  "LowestRarity": 3,
+  "weapon": [
+    "gronnblade-plus",
+    "gronnblade",
+    "elwind",
+    "wind"
+  ],
+  "assist": [
+    "draw-back"
+  ],
+  "passive_a": [
+    "resistance-plus-3",
+    "resistance-plus-2",
+    "resistance-plus-1"
+  ],
+  "passive_c": [
+    "hone-atk-3",
+    "hone-atk-2",
+    "hone-atk-1"
+  ],
+  "base_stat": {
+    "star_5": {
+      "hp": 16,
+      "atk": 7,
+      "spd": 10,
+      "def": 4,
+      "res": 7
+    },
+    "growth": {
+      "hp": 40,
+      "atk": 60,
+      "spd": 60,
+      "def": 35,
+      "res": 45,
+      "total": 240
+    },
+    "growth_type": 57
+  }
 }

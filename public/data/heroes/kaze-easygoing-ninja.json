@@ -1,49 +1,49 @@
 {
-    "display": "Kaze, Easygoing Ninja",
-    "name": "Kaze",
-    "title": "Easygoing Ninja",
-    "id": "kaze-easygoing-ninja",
-    "color": "Colorless",
-    "weapon_type": "Dagger",
-    "link": "https://kagerochart.com/hero/kaze-easygoing-ninja",
-    "move_type": "Infantry",
-    "LowestRarity":3,
-    "weapon": [
-        "barb-shuriken-plus",
-        "barb-shuriken",
-        "steel-dagger",
-        "iron-dagger"
-    ],
-    "special": [
-        "iceberg",
-        "chilling-wind"
-    ],
-    "passive_b": [
-        "poison-strike-3",
-        "poison-strike-2",
-        "poison-strike-1"
-    ],
-    "passive_c": [
-        "atk-smoke-3",
-        "atk-smoke-2",
-        "atk-smoke-1"
-    ],
-    "base_stat": {
-        "star_5": {
-            "hp": 17,
-            "atk": 6,
-            "spd": 10,
-            "def": 4,
-            "res": 8
-        },
-        "growth": {
-            "hp": 4,
-            "atk": 7,
-            "spd": 8,
-            "def": 2,
-            "res": 8,
-            "total": 29
-        },
-        "growth_type":69
-    }
+  "display": "Kaze, Easygoing Ninja",
+  "name": "Kaze",
+  "title": "Easygoing Ninja",
+  "id": "kaze-easygoing-ninja",
+  "color": "Colorless",
+  "weapon_type": "Dagger",
+  "link": "https://kagerochart.com/hero/kaze-easygoing-ninja",
+  "move_type": "Infantry",
+  "LowestRarity": 3,
+  "weapon": [
+    "barb-shuriken-plus",
+    "barb-shuriken",
+    "steel-dagger",
+    "iron-dagger"
+  ],
+  "special": [
+    "iceberg",
+    "chilling-wind"
+  ],
+  "passive_b": [
+    "poison-strike-3",
+    "poison-strike-2",
+    "poison-strike-1"
+  ],
+  "passive_c": [
+    "atk-smoke-3",
+    "atk-smoke-2",
+    "atk-smoke-1"
+  ],
+  "base_stat": {
+    "star_5": {
+      "hp": 17,
+      "atk": 6,
+      "spd": 10,
+      "def": 4,
+      "res": 8
+    },
+    "growth": {
+      "hp": 40,
+      "atk": 55,
+      "spd": 60,
+      "def": 30,
+      "res": 60,
+      "total": 245
+    },
+    "growth_type": 122
+  }
 }

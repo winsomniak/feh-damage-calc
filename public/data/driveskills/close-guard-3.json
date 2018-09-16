@@ -1,0 +1,30 @@
+{
+    "description": "If unit is against a foe using sword, axe, lance, or dragonstone, unit receives Def/Res+4 during combat.",
+    "id": "close-guard-3",
+    "name": "Close Guard 3",
+    "type_defend_mod": {
+        "weapon_type": {
+            "Sword": true,
+            "Axe": true,
+            "Lance": true,
+            "Breath": true
+        },
+        "stat_mod": {
+            "def": 4,
+            "res": 4
+        }
+    },
+    "type_initiate_mod": {
+        "weapon_type": {
+            "Sword": true,
+            "Axe": true,
+            "Lance": true,
+            "Breath": true
+        },
+        "stat_mod": {
+            "def": 4,
+            "res": 4
+        }
+    },
+    "type": "drive"
+}

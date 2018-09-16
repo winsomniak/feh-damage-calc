@@ -1,0 +1,7 @@
+{
+    "description": "Inflicts Def-4 on foes within 2 spaces through their next actions at the start of each turn.",
+    "id": "threaten-def-2",
+    "name": "Threaten Def 2",
+    "sp":100,
+    "type": "s"
+}

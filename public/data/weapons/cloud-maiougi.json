@@ -1,0 +1,23 @@
+{
+    "name": "Cloud Maiougi",
+    "might": 8,
+    "range": 2,
+    "sp": 200,
+    "description": "Effective against dragon foes. Disables unit's and foe's skills that change attack priority. After combat, if unit attacked, inflicts Def/Res-5 on target and foes within 2 spaces of target through their next actions.",
+    "type": "Dagger",
+    "color": "Colorless",
+    "magical": false,
+    "seal": {
+        "def": -5,
+        "res": -5
+    },
+    "link": "https://kagerochart.com/hero/weapons/cloud-maiougi",
+    "weapon_effective": [
+        "Breath",
+        "Red Breath",
+        "Green Breath",
+        "Blue Breath"
+    ],
+    "remove_prio_hp": 0,
+    "id": "cloud-maiougi"
+}

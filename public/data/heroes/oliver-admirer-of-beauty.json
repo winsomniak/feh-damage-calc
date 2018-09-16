@@ -1,49 +1,49 @@
 {
-    "display": "Oliver, Admirer of Beauty",
-    "name": "Oliver",
-    "title": "Admirer of Beauty",
-    "id": "oliver-admirer-of-beauty",
-    "color": "Blue",
-    "weapon_type": "Blue Tome",
-    "link": "https://kagerochart.com/hero/oliver-admirer-of-beauty",
-    "move_type": "Infantry",
-    "LowestRarity":3,
-    "weapon": [
-        "shine-plus",
-        "shine",
-        "ellight",
-        "light"
-    ],
-    "special": [
-        "blazing-light",
-        "rising-light"
-    ],
-    "passive_a": [
-        "mirror-strike-2",
-        "mirror-strike-1",
-        "warding-blow-1"
-    ],
-    "passive_c": [
-        "atk-ploy-3",
-        "atk-ploy-2",
-        "atk-ploy-1"
-    ],
-    "base_stat": {
-        "star_5": {
-            "hp": 18,
-            "atk": 8,
-            "spd": 5,
-            "def": 6,
-            "res": 8
-        },
-        "growth": {
-            "hp": 7,
-            "atk": 7,
-            "spd": 3,
-            "def": 4,
-            "res": 8,
-            "total": 29
-        },
-        "growth_type":186
-    }
+  "display": "Oliver, Admirer of Beauty",
+  "name": "Oliver",
+  "title": "Admirer of Beauty",
+  "id": "oliver-admirer-of-beauty",
+  "color": "Blue",
+  "weapon_type": "Blue Tome",
+  "link": "https://kagerochart.com/hero/oliver-admirer-of-beauty",
+  "move_type": "Infantry",
+  "LowestRarity": 3,
+  "weapon": [
+    "shine-plus",
+    "shine",
+    "ellight",
+    "light"
+  ],
+  "special": [
+    "blazing-light",
+    "rising-light"
+  ],
+  "passive_a": [
+    "mirror-strike-2",
+    "mirror-strike-1",
+    "warding-blow-1"
+  ],
+  "passive_c": [
+    "atk-ploy-3",
+    "atk-ploy-2",
+    "atk-ploy-1"
+  ],
+  "base_stat": {
+    "star_5": {
+      "hp": 18,
+      "atk": 8,
+      "spd": 5,
+      "def": 6,
+      "res": 8
+    },
+    "growth": {
+      "hp": 55,
+      "atk": 55,
+      "spd": 35,
+      "def": 40,
+      "res": 60,
+      "total": 245
+    },
+    "growth_type": 133
+  }
 }

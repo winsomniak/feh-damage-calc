@@ -1,48 +1,48 @@
 {
-    "display": "Gunter, Inveterate Soldier",
-    "name": "Gunter",
-    "title": "Inveterate Soldier",
-    "id": "gunter-inveterate-soldier",
-    "color": "Green",
-    "weapon_type": "Axe",
-    "link": "https://kagerochart.com/hero/gunter-inveterate-soldier",
-    "move_type": "Cavalry",
-    "LowestRarity":1,
-    "weapon": [
-        "silver-axe-plus",
-        "silver-axe",
-        "steel-axe",
-        "iron-axe"
-    ],
-    "assist": [
-        "harsh-command"
-    ],
-    "passive_a": [
-        "armored-blow-3",
-        "armored-blow-2",
-        "armored-blow-1"
-    ],
-    "passive_c": [
-        "hone-cavalry",
-        "hone-atk-2",
-        "hone-atk-1"
-    ],
-    "base_stat": {
-        "star_5": {
-            "hp": 21,
-            "atk": 10,
-            "spd": 7,
-            "def": 11,
-            "res": 5
-        },
-        "growth": {
-            "hp": 6,
-            "atk": 6,
-            "spd": 4,
-            "def": 6,
-            "res": 2,
-            "total": 24
-        },
-        "growth_type":222
-    }
+  "display": "Gunter, Inveterate Soldier",
+  "name": "Gunter",
+  "title": "Inveterate Soldier",
+  "id": "gunter-inveterate-soldier",
+  "color": "Green",
+  "weapon_type": "Axe",
+  "link": "https://kagerochart.com/hero/gunter-inveterate-soldier",
+  "move_type": "Cavalry",
+  "LowestRarity": 1,
+  "weapon": [
+    "silver-axe-plus",
+    "silver-axe",
+    "steel-axe",
+    "iron-axe"
+  ],
+  "assist": [
+    "harsh-command"
+  ],
+  "passive_a": [
+    "armored-blow-3",
+    "armored-blow-2",
+    "armored-blow-1"
+  ],
+  "passive_c": [
+    "hone-cavalry",
+    "hone-atk-2",
+    "hone-atk-1"
+  ],
+  "base_stat": {
+    "star_5": {
+      "hp": 21,
+      "atk": 10,
+      "spd": 7,
+      "def": 11,
+      "res": 5
+    },
+    "growth": {
+      "hp": 50,
+      "atk": 50,
+      "spd": 40,
+      "def": 50,
+      "res": 30,
+      "total": 220
+    },
+    "growth_type": 225
+  }
 }

@@ -1,49 +1,49 @@
 {
-    "display": "Anna, Commander",
-    "name": "Anna",
-    "title": "Commander",
-    "id": "anna-commander",
-    "color": "Green",
-    "weapon_type": "Axe",
-    "link": "https://kagerochart.com/hero/anna-commander",
-    "move_type": "Infantry",
-    "LowestRarity":2,
-    "weapon": [
-        "noatun",
-        "silver-axe",
-        "steel-axe",
-        "iron-axe"
-    ],
-    "special": [
-        "astra",
-        "night-sky"
-    ],
-    "passive_b": [
-        "vantage-3",
-        "vantage-2",
-        "vantage-1"
-    ],
-    "passive_c": [
-        "spur-res-3",
-        "spur-res-2",
-        "spur-res-1"
-    ],
-    "base_stat": {
-        "star_5": {
-            "hp": 19,
-            "atk": 7,
-            "spd": 10,
-            "def": 5,
-            "res": 6
-        },
-        "growth": {
-            "hp": 6,
-            "atk": 6,
-            "spd": 9,
-            "def": 4,
-            "res": 6,
-            "total": 31
-        },
-        "growth_type":192
-    }
+  "display": "Anna, Commander",
+  "name": "Anna",
+  "title": "Commander",
+  "id": "anna-commander",
+  "color": "Green",
+  "weapon_type": "Axe",
+  "link": "https://kagerochart.com/hero/anna-commander",
+  "move_type": "Infantry",
+  "LowestRarity": 2,
+  "weapon": [
+    "noatun",
+    "silver-axe",
+    "steel-axe",
+    "iron-axe"
+  ],
+  "special": [
+    "astra",
+    "night-sky"
+  ],
+  "passive_b": [
+    "vantage-3",
+    "vantage-2",
+    "vantage-1"
+  ],
+  "passive_c": [
+    "spur-res-3",
+    "spur-res-2",
+    "spur-res-1"
+  ],
+  "base_stat": {
+    "star_5": {
+      "hp": 19,
+      "atk": 7,
+      "spd": 10,
+      "def": 5,
+      "res": 6
+    },
+    "growth": {
+      "hp": 50,
+      "atk": 50,
+      "spd": 65,
+      "def": 40,
+      "res": 50,
+      "total": 255
+    },
+    "growth_type": 255
+  }
 }

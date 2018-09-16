@@ -1,48 +1,48 @@
 {
-    "display": "Gordin, Altean Archer",
-    "name": "Gordin",
-    "title": "Altean Archer",
-    "id": "gordin-altean-archer",
-    "color": "Colorless",
-    "weapon_type": "Bow",
-    "link": "https://kagerochart.com/hero/gordin-altean-archer",
-    "move_type": "Infantry",
-    "LowestRarity":3,
-    "weapon": [
-        "brave-bow-plus",
-        "brave-bow",
-        "steel-bow",
-        "iron-bow"
-    ],
-    "assist": [
-        "shove"
-    ],
-    "passive_a": [
-        "attack-plus-3",
-        "attack-plus-2",
-        "attack-plus-1"
-    ],
-    "passive_b": [
-        "vantage-3",
-        "vantage-2",
-        "vantage-1"
-    ],
-    "base_stat": {
-        "star_5": {
-            "hp": 19,
-            "atk": 7,
-            "spd": 6,
-            "def": 8,
-            "res": 4
-        },
-        "growth": {
-            "hp": 7,
-            "atk": 7,
-            "spd": 5,
-            "def": 7,
-            "res": 2,
-            "total": 28
-        },
-        "growth_type":243
-    }
+  "display": "Gordin, Altean Archer",
+  "name": "Gordin",
+  "title": "Altean Archer",
+  "id": "gordin-altean-archer",
+  "color": "Colorless",
+  "weapon_type": "Bow",
+  "link": "https://kagerochart.com/hero/gordin-altean-archer",
+  "move_type": "Infantry",
+  "LowestRarity": 3,
+  "weapon": [
+    "brave-bow-plus",
+    "brave-bow",
+    "steel-bow",
+    "iron-bow"
+  ],
+  "assist": [
+    "shove"
+  ],
+  "passive_a": [
+    "attack-plus-3",
+    "attack-plus-2",
+    "attack-plus-1"
+  ],
+  "passive_b": [
+    "vantage-3",
+    "vantage-2",
+    "vantage-1"
+  ],
+  "base_stat": {
+    "star_5": {
+      "hp": 19,
+      "atk": 7,
+      "spd": 6,
+      "def": 8,
+      "res": 4
+    },
+    "growth": {
+      "hp": 55,
+      "atk": 55,
+      "spd": 45,
+      "def": 55,
+      "res": 30,
+      "total": 240
+    },
+    "growth_type": 204
+  }
 }

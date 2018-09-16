@@ -1,48 +1,48 @@
 {
-    "display": "Marth, Altean Prince",
-    "name": "Marth",
-    "title": "Altean Prince",
-    "id": "marth-altean-prince",
-    "color": "Red",
-    "weapon_type": "Sword",
-    "link": "https://kagerochart.com/hero/marth-altean-prince",
-    "move_type": "Infantry",
-    "LowestRarity":3,
-    "weapon": [
-        "falchion",
-        "silver-sword",
-        "steel-sword",
-        "iron-sword"
-    ],
-    "assist": [
-        "pivot"
-    ],
-    "passive_b": [
-        "escape-route-3",
-        "escape-route-2",
-        "escape-route-1"
-    ],
-    "passive_c": [
-        "spur-spd-3",
-        "spur-spd-2",
-        "spur-spd-1"
-    ],
-    "base_stat": {
-        "star_5": {
-            "hp": 19,
-            "atk": 7,
-            "spd": 8,
-            "def": 7,
-            "res": 6
-        },
-        "growth": {
-            "hp": 6,
-            "atk": 7,
-            "spd": 8,
-            "def": 6,
-            "res": 4,
-            "total": 31
-        },
-        "growth_type":29
-    }
+  "display": "Marth, Altean Prince",
+  "name": "Marth",
+  "title": "Altean Prince",
+  "id": "marth-altean-prince",
+  "color": "Red",
+  "weapon_type": "Sword",
+  "link": "https://kagerochart.com/hero/marth-altean-prince",
+  "move_type": "Infantry",
+  "LowestRarity": 3,
+  "weapon": [
+    "falchion",
+    "silver-sword",
+    "steel-sword",
+    "iron-sword"
+  ],
+  "assist": [
+    "pivot"
+  ],
+  "passive_b": [
+    "escape-route-3",
+    "escape-route-2",
+    "escape-route-1"
+  ],
+  "passive_c": [
+    "spur-spd-3",
+    "spur-spd-2",
+    "spur-spd-1"
+  ],
+  "base_stat": {
+    "star_5": {
+      "hp": 19,
+      "atk": 7,
+      "spd": 8,
+      "def": 7,
+      "res": 6
+    },
+    "growth": {
+      "hp": 50,
+      "atk": 55,
+      "spd": 60,
+      "def": 50,
+      "res": 40,
+      "total": 255
+    },
+    "growth_type": 34
+  }
 }

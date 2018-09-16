@@ -1,49 +1,49 @@
 {
-    "display": "Cain, The Bull",
-    "name": "Cain",
-    "title": "The Bull",
-    "id": "cain-the-bull",
-    "color": "Red",
-    "weapon_type": "Sword",
-    "link": "https://kagerochart.com/hero/cain-the-bull",
-    "move_type": "Cavalry",
-    "LowestRarity":3,
-    "weapon": [
-        "brave-sword-plus",
-        "brave-sword",
-        "steel-sword",
-        "iron-sword"
-    ],
-    "special": [
-        "escutcheon",
-        "buckler"
-    ],
-    "passive_b": [
-        "wings-of-mercy-3",
-        "wings-of-mercy-2",
-        "wings-of-mercy-1"
-    ],
-    "passive_c": [
-        "threaten-atk-3",
-        "threaten-atk-2",
-        "threaten-atk-1"
-    ],
-    "base_stat": {
-        "star_5": {
-            "hp": 18,
-            "atk": 8,
-            "spd": 6,
-            "def": 8,
-            "res": 6
-        },
-        "growth": {
-            "hp": 7,
-            "atk": 7,
-            "spd": 8,
-            "def": 5,
-            "res": 3,
-            "total": 30
-        },
-        "growth_type":221
-    }
+  "display": "Cain, The Bull",
+  "name": "Cain",
+  "title": "The Bull",
+  "id": "cain-the-bull",
+  "color": "Red",
+  "weapon_type": "Sword",
+  "link": "https://kagerochart.com/hero/cain-the-bull",
+  "move_type": "Cavalry",
+  "LowestRarity": 3,
+  "weapon": [
+    "brave-sword-plus",
+    "brave-sword",
+    "steel-sword",
+    "iron-sword"
+  ],
+  "special": [
+    "escutcheon",
+    "buckler"
+  ],
+  "passive_b": [
+    "wings-of-mercy-3",
+    "wings-of-mercy-2",
+    "wings-of-mercy-1"
+  ],
+  "passive_c": [
+    "threaten-atk-3",
+    "threaten-atk-2",
+    "threaten-atk-1"
+  ],
+  "base_stat": {
+    "star_5": {
+      "hp": 18,
+      "atk": 8,
+      "spd": 6,
+      "def": 8,
+      "res": 6
+    },
+    "growth": {
+      "hp": 55,
+      "atk": 55,
+      "spd": 60,
+      "def": 45,
+      "res": 35,
+      "total": 250
+    },
+    "growth_type": 226
+  }
 }

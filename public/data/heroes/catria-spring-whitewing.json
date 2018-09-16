@@ -1,47 +1,47 @@
 {
-    "display": "Catria, Spring Whitewing",
-    "name": "Catria",
-    "title": "Spring Whitewing",
-    "id": "catria-spring-whitewing",
-    "color": "Blue",
-    "weapon_type": "Blue Tome",
-    "link": "https://kagerochart.com/hero/catria-spring-whitewing",
-    "move_type": "Cavalry",
-    "weapon": [
-        "huginns-egg",
-        "thoron",
-        "elthunder",
-        "thunder"
-    ],
-    "passive": [
-        "draw-back"
-    ],
-    "passive_b": [
-        "chill-res-3",
-        "chill-res-2",
-        "chill-res-1"
-    ],
-    "passive_c": [
-        "drive-spd-2",
-        "drive-spd-1",
-        "spur-spd-1"
-    ],
-    "base_stat": {
-        "star_5": {
-            "hp": 17,
-            "atk": 6,
-            "spd": 9,
-            "def": 5,
-            "res": 6
-        },
-        "growth": {
-            "hp": 5,
-            "atk": 8,
-            "spd": 8,
-            "def": 2,
-            "res": 4,
-            "total": 27
-        },
-        "growth_type":26
-    }
+  "display": "Catria, Spring Whitewing",
+  "name": "Catria",
+  "title": "Spring Whitewing",
+  "id": "catria-spring-whitewing",
+  "color": "Blue",
+  "weapon_type": "Blue Tome",
+  "link": "https://kagerochart.com/hero/catria-spring-whitewing",
+  "move_type": "Cavalry",
+  "weapon": [
+    "huginns-egg",
+    "thoron",
+    "elthunder",
+    "thunder"
+  ],
+  "passive": [
+    "draw-back"
+  ],
+  "passive_b": [
+    "chill-res-3",
+    "chill-res-2",
+    "chill-res-1"
+  ],
+  "passive_c": [
+    "drive-spd-2",
+    "drive-spd-1",
+    "spur-spd-1"
+  ],
+  "base_stat": {
+    "star_5": {
+      "hp": 17,
+      "atk": 6,
+      "spd": 9,
+      "def": 5,
+      "res": 6
+    },
+    "growth": {
+      "hp": 45,
+      "atk": 60,
+      "spd": 60,
+      "def": 30,
+      "res": 40,
+      "total": 235
+    },
+    "growth_type": 37
+  }
 }

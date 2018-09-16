@@ -1,0 +1,50 @@
+{
+  "display": "Xander, Dancing Knight",
+  "name": "Xander",
+  "title": "Dancing Knight",
+  "id": "xander-dancing-knight",
+  "color": "Colorless",
+  "weapon_type": "Dagger",
+  "link": "https://kagerochart.com/hero/xander-dancing-knight",
+  "move_type": "Infantry",
+  "weapon": [
+    "dusk-uchiwa-plus",
+    "dusk-uchiwa",
+    "steel-dagger",
+    "iron-dagger"
+  ],
+  "assist": [
+    "dance"
+  ],
+  "passive_a": [
+    "close-counter"
+  ],
+  "passive_b": [
+    "quick-riposte-3",
+    "quick-riposte-2",
+    "quick-riposte-1"
+  ],
+  "passive_c": [
+    "odd-def-wave-3",
+    "odd-def-wave-2",
+    "odd-def-wave-1"
+  ],
+  "base_stat": {
+    "star_5": {
+      "hp": 16,
+      "atk": 7,
+      "spd": 4,
+      "def": 6,
+      "res": 3
+    },
+    "growth": {
+      "hp": 50,
+      "atk": 65,
+      "spd": 30,
+      "def": 65,
+      "res": 30,
+      "total": 240
+    },
+    "growth_type": 30
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "display": "Veronica, Brave Princess",
+  "name": "Veronica",
+  "title": "Brave Princess",
+  "id": "veronica-brave-princess",
+  "color": "Colorless",
+  "weapon_type": "Staff",
+  "link": "https://kagerochart.com/hero/veronica-brave-princess",
+  "move_type": "Cavalry",
+  "weapon": [
+    "hlioskjalf",
+    "assault"
+  ],
+  "special": [
+    "windfire-balm-plus",
+    "windfire-balm",
+    "kindled-fire-balm",
+    "imbue"
+  ],
+  "assist": [
+    "recover-plus",
+    "recover",
+    "mend",
+    "heal"
+  ],
+  "passive_b": [
+    "wrathful-staff-3",
+    "wrathful-staff-2",
+    "wrathful-staff-1"
+  ],
+  "passive_c": [
+    "close-guard-3",
+    "close-guard-2",
+    "close-guard-1"
+  ],
+  "base_stat": {
+    "star_5": {
+      "hp": 17,
+      "atk": 8,
+      "spd": 10,
+      "def": 4,
+      "res": 4
+    },
+    "growth": {
+      "hp": 45,
+      "atk": 55,
+      "spd": 60,
+      "def": 40,
+      "res": 35,
+      "total": 235
+    },
+    "growth_type": 254
+  }
+}

@@ -1,0 +1,20 @@
+{
+    "name": "Forseti",
+    "might": 14,
+    "range": 2,
+    "sp": 400,
+    "description": "Grants Spd+3. If unit's HP ≥ 50% and units initiates combat, unit can make a follow-up attack before foe can counterattack.",
+    "type": "Green Tome",
+    "stat_mod":{
+        "spd":3
+    },
+    "desperation": 
+    {
+        "limit": 0.5
+    },
+    "link": "https://kagerochart.com/hero/weapons/forseti",
+    "color": "Green",
+    "magical": true,
+    "id": "forseti",
+    "char_unique": true
+}

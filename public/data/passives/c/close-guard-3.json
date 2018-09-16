@@ -1,0 +1,9 @@
+{
+    "name": "Close Guard 3",
+    "sp": 240,
+    "type": "C",
+    "description": "Allies within 2 spaces gain: \"If foe uses sword, lance, axe or dragonstone, grants Def/Res+4 during combat.\"",
+    "icon": "/images/icons/passives/close-guard-3.png",
+    "link": "https://kagerochart.com/hero/passives/close-guard-3",
+    "id": "close-guard-3"
+}

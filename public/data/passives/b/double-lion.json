@@ -1,0 +1,12 @@
+{
+    "name": "Double Lion",
+    "sp": 300,
+    "type": "B",
+    "description": "If unit's HP = 100% at start of combat and unit initiates combat, unit attacks twice, but deals 1 damage to unit after combat. (Does not stack.)",
+    "full_hp_atk_recoil_dmg": 1,
+    "hp_brave": 1.0,
+    "icon": "/images/icons/passives/double-lion.png",
+    "link": "https://kagerochart.com/hero/passives/double-lion",
+    "char_unique": true,
+    "id": "double-lion"
+}

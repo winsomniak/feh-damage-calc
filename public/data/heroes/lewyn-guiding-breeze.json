@@ -1,0 +1,53 @@
+{
+  "display": "Lewyn, Guiding Breeze",
+  "name": "Lewyn",
+  "title": "Guiding Breeze",
+  "id": "lewyn-guiding-breeze",
+  "color": "Green",
+  "weapon_type": "Green Tome",
+  "link": "https://kagerochart.com/hero/lewyn-guiding-breeze",
+  "move_type": "Infantry",
+  "weapon": [
+    "forseti",
+    "rexcalibur",
+    "elwind",
+    "wind"
+  ],
+  "special": [
+    "glimmer",
+    "night-sky"
+  ],
+  "passive_a": [
+    "swift-sparrow-2",
+    "swift-sparrow-1",
+    "darting-blow-1"
+  ],
+  "passive_b": [
+    "special-spiral-3",
+    "special-spiral-2",
+    "special-spiral-1"
+  ],
+  "passive_c": [
+    "odd-atk-wave-3",
+    "odd-atk-wave-2",
+    "odd-atk-wave-1"
+  ],
+  "base_stat": {
+    "star_5": {
+      "hp": 16,
+      "atk": 8,
+      "spd": 11,
+      "def": 4,
+      "res": 6
+    },
+    "growth": {
+      "hp": 50,
+      "atk": 60,
+      "spd": 60,
+      "def": 30,
+      "res": 45,
+      "total": 245
+    },
+    "growth_type": 214
+  }
+}

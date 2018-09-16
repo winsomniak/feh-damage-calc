@@ -1,0 +1,53 @@
+{
+  "display": "Marth, Hero-King",
+  "name": "Marth",
+  "title": "Hero-King",
+  "id": "marth-hero-king",
+  "color": "Red",
+  "weapon_type": "Sword",
+  "link": "https://kagerochart.com/hero/marth-hero-king",
+  "move_type": "Infantry",
+  "legendary": true,
+  "weapon": [
+    "exalted-falchion",
+    "silver-sword",
+    "steel-sword",
+    "iron-sword"
+  ],
+  "special": [
+    "fire-emblem",
+    "draconic-aura",
+    "dragon-gaze"
+  ],
+  "passive_a": [
+    "atk-spd-bond-3",
+    "atk-spd-bond-2",
+    "atk-spd-bond-1"
+  ],
+  "passive_b": [
+    "binding-shield"
+  ],
+  "passive_c": [
+    "infantry-flash-3",
+    "infantry-flash-2",
+    "infantry-flash-1"
+  ],
+  "base_stat": {
+    "star_5": {
+      "hp": 18,
+      "atk": 8,
+      "spd": 10,
+      "def": 8,
+      "res": 4
+    },
+    "growth": {
+      "hp": 50,
+      "atk": 60,
+      "spd": 60,
+      "def": 55,
+      "res": 40,
+      "total": 265
+    },
+    "growth_type": 190
+  }
+}

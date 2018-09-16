@@ -1,49 +1,49 @@
 {
-    "display": "Titania, Mighty Mercenary",
-    "name": "Titania",
-    "title": "Mighty Mercenary",
-    "id": "titania-mighty-mercenary",
-    "color": "Green",
-    "weapon_type": "Axe",
-    "link": "https://kagerochart.com/hero/titania-mighty-mercenary",
-    "move_type": "Cavalry",
-    "LowestRarity":3,
-    "weapon": [
-        "draconic-poleax",
-        "emerald-axe-plus",
-        "emerald-axe",
-        "steel-axe",
-        "iron-axe"
-    ],
-    "assist": [
-        "reciprocal-aid"
-    ],
-    "passive_a": [
-        "armored-blow-3",
-        "armored-blow-2",
-        "armored-blow-1"
-    ],
-    "passive_b": [
-        "guard-3",
-        "guard-2",
-        "guard-1"
-    ],
-    "base_stat": {
-        "star_5": {
-            "hp": 18,
-            "atk": 6,
-            "spd": 8,
-            "def": 6,
-            "res": 8
-        },
-        "growth": {
-            "hp": 5,
-            "atk": 6,
-            "spd": 8,
-            "def": 5,
-            "res": 6,
-            "total": 30
-        },
-        "growth_type":46
-    }
+  "display": "Titania, Mighty Mercenary",
+  "name": "Titania",
+  "title": "Mighty Mercenary",
+  "id": "titania-mighty-mercenary",
+  "color": "Green",
+  "weapon_type": "Axe",
+  "link": "https://kagerochart.com/hero/titania-mighty-mercenary",
+  "move_type": "Cavalry",
+  "LowestRarity": 3,
+  "weapon": [
+    "draconic-poleax",
+    "emerald-axe-plus",
+    "emerald-axe",
+    "steel-axe",
+    "iron-axe"
+  ],
+  "assist": [
+    "reciprocal-aid"
+  ],
+  "passive_a": [
+    "armored-blow-3",
+    "armored-blow-2",
+    "armored-blow-1"
+  ],
+  "passive_b": [
+    "guard-3",
+    "guard-2",
+    "guard-1"
+  ],
+  "base_stat": {
+    "star_5": {
+      "hp": 18,
+      "atk": 6,
+      "spd": 8,
+      "def": 6,
+      "res": 8
+    },
+    "growth": {
+      "hp": 45,
+      "atk": 50,
+      "spd": 60,
+      "def": 45,
+      "res": 50,
+      "total": 250
+    },
+    "growth_type": 17
+  }
 }

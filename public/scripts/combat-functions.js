@@ -174,6 +174,7 @@ function checkIfBonusDMG(agent, other)
         var multiplier = tmp.multiplier;
         var stats = tmp.stats;
         var toAdd = 0;
+        agent.addChangesSource += tmp.hasOwnProperty("individual") ? "individual " : "";
         if(type === "bonus" && !source.status.panic) {
             toAdd = roundNum((source.atkBonus + source.defBonus + source.spdBonus + source.resBonus) * multiplier, false);
             agent.addChangesSource += "bonuses";
@@ -187,9 +188,20 @@ function checkIfBonusDMG(agent, other)
         if(toAdd <= 0)
             return agent;
         agent.addChanges = {};
-        stats.forEach(function(stat) {
-            agent.addChanges[stat] = toAdd;
-        });
+        if(!tmp.hasOwnProperty("individual"))
+        {
+            stats.forEach(function(stat) {
+                agent.addChanges[stat] = toAdd;
+            });
+        }
+        else {
+            stats.forEach(function(stat) {
+                if(type === "bonus" && !source.status.panic)
+                    agent.addChanges[stat] = source[stat + "Bonus"] * multiplier;
+                else if(type === "penalty")
+                    agent.addChanges[stat] = source[stat + "Penalty"] * multiplier;
+            });
+		}
     }
     return agent;
 }
@@ -304,12 +316,17 @@ function Follow(char, agent, attacker, CanCounter, battleInfo) {
         if(!attacker)
             bfup=char[checks[i]].defense_follow_up;
         if (bfup) {
+            var bonusesTarget = char;
+            if(bfup.hasOwnProperty(("bonus") && bfup.bonus === "other"))
+                bonusesTarget = agent;
             if ((!bfup.hasOwnProperty("threshold")) || (bfup.trigger==='healthy' && char.initHP >= roundNum(bfup.threshold * char.hp, true)) || (bfup.trigger==='damaged' && char.initHP <= roundNum(bfup.threshold * char.hp, true))) { //hp check for all of them
                 if((!bfup.hasOwnProperty("weapon_type")) || (bfup.weapon_type.includes(othWeapon) && (othWeapon !== 'Bow' || othColor === 'Colorless') && (othWeapon !== 'Dagger' || othColor === 'Colorless'))){ //breaker check
                     if((!bfup.hasOwnProperty("counterable")) || (CanCounter)) { //brash check
                         if((!bfup.hasOwnProperty("adjacent_dependant")) || char.adjacent <= agent.adjacent) { //LEphraim's check
-                            doubling++;
-                            battleInfo.logMsg+="<li class='battle-interaction'><span class='" + char.agentClass + "'>" + char.display + "</span>'s " + char[checks[i]].name + " activated, increasing their own ability to follow-up!</li>";
+                            if((!bfup.hasOwnProperty("bonus")) || (((bonusesTarget.atkBonus + bonusesTarget.spdBonus + bonusesTarget.defBonus + bonusesTarget.resBonus) !== 0 && !bonusesTarget.status.panic) || checkMarch(bonusesTarget))) { //BEphraim's check
+                                doubling++;
+                                battleInfo.logMsg+="<li class='battle-interaction'><span class='" + char.agentClass + "'>" + char.display + "</span>'s " + char[checks[i]].name + " activated, increasing their own ability to follow-up!</li>";
+                            }
                         }
                     }
                 }
@@ -368,6 +385,15 @@ function Prevent(char, agent, ageWeapon, battleInfo, attacker)
     else
         battleInfo.defPrev=prevention;
     return battleInfo;
+}
+
+function checkMarch(char)
+{
+    if(char.passiveCData.hasOwnProperty("march") && char.passiveCData.march * char.hp <= char.initHP)
+        return true;
+    if(char.sealData.hasOwnProperty("march") && char.sealData.march * char.hp <= char.initHP)
+        return true;
+    return false;
 }
 
 //Checks the poison effect
@@ -487,10 +513,15 @@ function checkResDefSubstitution(battleInfo, char, other)
 }
 
 function hardy_bearing_msg(battleInfo, agent) {
-    if (agent.sealData.hasOwnProperty("remove_prio_hp")) {
-    	battleInfo.logMsg += "<li class='battle-interaction'><span class='" + agent.agentClass + "'>" + agent.display + "</span> can't alter the turn's order ["+agent.sealData.name+"]!</li> ";
-    	if(agent.initHP >= agent.hp*agent.sealData.remove_prio_hp)
-    		battleInfo.logMsg += "<li class='battle-interaction'><span class='" + agent.agentClass + "'>" + agent.display + "</span> avoids the opponent changes the turn's order too ["+agent.sealData.name+"]!</li> ";
+    for(var i = 0; i < checks.length; i++) {
+        var key = agent[checks[i]];
+        if (key.hasOwnProperty("remove_prio_hp")) {
+    	    battleInfo.logMsg += "<li class='battle-interaction'><span class='" + agent.agentClass + "'>" + agent.display + "</span> can't alter the turn's order ["+key.name+"]!</li> ";
+            if(agent.initHP >= agent.hp*key.remove_prio_hp) {
+                battleInfo.logMsg += "<li class='battle-interaction'><span class='" + agent.agentClass + "'>" + agent.display + "</span> avoids the opponent changes the turn's order too ["+key.name+"]!</li> ";
+                break;
+            }
+        }
     }
     return battleInfo;
 }
@@ -516,6 +547,12 @@ function giveBonuses(battleInfo, agent, other, initiator){
     // full hp bonus
     if (agent.weaponData.hasOwnProperty("full_hp_mod") && agent.currHP >= agent.hp) {
         battleInfo = combatBonus(battleInfo, agent.weaponData.full_hp_mod, weaponInfo[agent.weaponName].name, agent.agentClass, "for having full HP");
+    }
+
+    // enemy's movement bonus
+    if (agent.weaponData.hasOwnProperty("enemy_movement_mod") && agent.weaponData.enemy_movement_mod.movement_type.includes(other.moveType)) {
+		var n = ((other.moveType === "Armored") || (other.moveType === "Infantry")) ? "n" : "";
+        battleInfo = combatBonus(battleInfo, agent.weaponData.enemy_movement_mod.mod, weaponInfo[agent.weaponName].name, agent.agentClass, "for facing a" + n + " " + other.moveType + " unit");
     }
 
     // full hp bonus
@@ -605,14 +642,16 @@ function hasSpecAccel(battleInfo, attacker, defender, initiator, block) {
             }
         }
 
-        if(block && mainUnit[key].hasOwnProperty("def_spec_charge")) //Don't know what this checks, but it does something...?
+        if(block && mainUnit[key].hasOwnProperty("def_spec_charge")) //Don't know what this checks, but it does something...? 
         {
-            if(mainUnit.specCurrCooldown > 0) {
-                mainUnit.specCurrCooldown--;
-                battleInfo.logMsg += stringToPrint;
+            if(!mainUnit[key].def_spec_charge.hasOwnProperty("threshold") || (mainUnit.initHP >= roundNum(mainUnit[key].spec_accel.threshold * mainUnit.hp, true))) {
+                if(mainUnit.specCurrCooldown > 0) {
+                    mainUnit.specCurrCooldown--;
+                    battleInfo.logMsg += stringToPrint;
+                }
+                done = true;
+                return true;
             }
-            done = true;
-            return true;
         }
 
         //heavy blade part
@@ -626,15 +665,17 @@ function hasSpecAccel(battleInfo, attacker, defender, initiator, block) {
         //Check if the boost activates if the unit's attacked
         if((mainUnit[key].spec_accel.hasOwnProperty("not_in_defense") && !initiator) || (mainUnit[key].spec_accel.hasOwnProperty("movement_type") &&  !mainUnit[key].spec_accel.movement_type.includes(mainUnit.moveType)))
             continue;
-        //If spec_accel data does not have stat information, there are no requirements, only one possible is the threshold one
+        //If spec_accel data does not have stat information, there are no requirements, only ones possible are threshold and adjacent
         if (!stat) {
-            if((!(mainUnit[key].spec_accel.hasOwnProperty("threshold")))||(mainUnit.initHP >= roundNum(mainUnit[key].spec_accel.threshold * mainUnit.hp, true))) {
-                if(mainUnit.specCurrCooldown > 0) {
-                    mainUnit.specCurrCooldown--;
-                    battleInfo.logMsg += stringToPrint;
+            if((!(mainUnit[key].spec_accel.hasOwnProperty("threshold"))) || (mainUnit.initHP >= roundNum(mainUnit[key].spec_accel.threshold * mainUnit.hp, true))) {
+                if((!(mainUnit[key].spec_accel.hasOwnProperty("hasAdjacent"))) || (mainUnit[key].spec_accel.hasAdjacent === "self" && mainUnit.adjacent > 0) || (mainUnit[key].spec_accel.hasAdjacent === "other" && otherUnit.adjacent > 0)) {
+                    if(mainUnit.specCurrCooldown > 0) {
+                       mainUnit.specCurrCooldown--;
+                        battleInfo.logMsg += stringToPrint;
+                    }
+                    done = true;
+                    return true;
                 }
-                done = true;
-                return true;
             }
         }
         //Otherwise we need to compare stats
@@ -670,6 +711,34 @@ function enemyPhaseCharge(battleInfo, attacker, defender) {
                 return;
             }
             else if (effect.defend && Object.is(defender, battleInfo.defender) && (defender.currHP > 0) && (!effect.hasOwnProperty("threshold") || (defender.initHP >= roundNum(effect.threshold * defender.hp, true)))) {
+                if(defender.specCurrCooldown > 0) {
+                    battleInfo.logMsg += "<span class='" +defender.agentClass + "'>" +defender.display + "</span> gained an additional special cooldown charge [" + defender[key].name + "]! ";
+                    defender.specCurrCooldown--;
+                }
+                done=true;
+                return;
+            }
+        }
+    });
+}
+
+function playerPhaseCharge(battleInfo, attacker, defender) {
+    var done=false;
+    checks.forEach(function(key) {
+        if(done)
+            return;
+        var effect = battleInfo.attacker[key].player_phase_charge;
+
+        if (effect) {
+            if (effect.attack && Object.is(attacker, battleInfo.attacker) && (!effect.hasOwnProperty("threshold") || (attacker.initHP >= roundNum(effect.threshold * attacker.hp, true)))) {
+                if(attacker.specCurrCooldown > 0) {
+                    battleInfo.logMsg += "<span class='" +attacker.agentClass + "'>" +attacker.display + "</span> gained an additional special cooldown charge [" + attacker[key].name + "]! ";
+                    attacker.specCurrCooldown--;
+                }
+                done=true;
+                return;
+            }
+            else if (effect.defend && Object.is(defender, battleInfo.attacker) && (defender.currHP > 0) && (!effect.hasOwnProperty("threshold") || (defender.initHP >= roundNum(effect.threshold * defender.hp, true)))) {
                 if(defender.specCurrCooldown > 0) {
                     battleInfo.logMsg += "<span class='" +defender.agentClass + "'>" +defender.display + "</span> gained an additional special cooldown charge [" + defender[key].name + "]! ";
                     defender.specCurrCooldown--;

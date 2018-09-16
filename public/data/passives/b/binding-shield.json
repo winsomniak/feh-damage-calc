@@ -1,0 +1,24 @@
+{
+    "name": "Binding Shield",
+    "sp": 300,
+    "type": "B",
+    "description": "In combat against a dragon foe, unit makes a guaranteed follow-up attack and foe cannot counterattack or make a follow-up attack.",
+    "icon": "/images/icons/passives/binding-shield.png",
+    "link": "https://kagerochart.com/hero/passives/binding-shield",
+    "prevent_weapon_counter": {
+        "type": [
+            "Breath"
+        ]
+    },
+    "attack_follow_up": {
+        "weapon_type":"Breath"
+    },
+    "defense_follow_up": {
+        "weapon_type":"Breath"
+    },
+    "other_prevent_follow": {
+        "weapon_type":"Breath"
+    },
+    "char_unique": true,
+    "id": "binding-shield"
+}

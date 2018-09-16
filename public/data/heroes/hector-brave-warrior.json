@@ -1,0 +1,51 @@
+{
+  "display": "Hector, Brave Warrior",
+  "name": "Hector",
+  "title": "Brave Warrior",
+  "id": "hector-brave-warrior",
+  "color": "Blue",
+  "weapon_type": "Lance",
+  "link": "https://kagerochart.com/hero/hector-brave-warrior",
+  "move_type": "Armored",
+  "weapon": [
+    "maltet",
+    "silver-lance",
+    "steel-lance",
+    "iron-lance"
+  ],
+  "special": [
+    "ignis",
+    "glowing-ember"
+  ],
+  "passive_a": [
+    "ostian-counter"
+  ],
+  "passive_b": [
+    "bold-fighter-3",
+    "bold-fighter-2",
+    "bold-fighter-1"
+  ],
+  "passive_c": [
+    "even-res-wave-3",
+    "even-res-wave-2",
+    "even-res-wave-1"
+  ],
+  "base_stat": {
+    "star_5": {
+      "hp": 24,
+      "atk": 11,
+      "spd": 5,
+      "def": 9,
+      "res": 6
+    },
+    "growth": {
+      "hp": 55,
+      "atk": 60,
+      "spd": 40,
+      "def": 70,
+      "res": 50,
+      "total": 275
+    },
+    "growth_type": 58
+  }
+}

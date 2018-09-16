@@ -1,0 +1,47 @@
+{
+  "display": "Silvia, Traveling Dancer",
+  "name": "Silvia",
+  "title": "Traveling Dancer",
+  "id": "silvia-traveling-dancer",
+  "color": "Red",
+  "weapon_type": "Sword",
+  "link": "https://kagerochart.com/hero/silvia-traveling-dancer",
+  "move_type": "Infantry",
+  "weapon": [
+    "barrier-blade-plus",
+    "barrier-blade",
+    "steel-sword",
+    "iron-sword"
+  ],
+  "assist": [
+    "dance"
+  ],
+  "passive_a": [
+    "mirror-stance-2",
+    "mirror-stance-1",
+    "warding-stance-1"
+  ],
+  "passive_b": [
+    "deluge-dance-2",
+    "deluge-dance-1",
+    "torrent-dance-1"
+  ],
+  "base_stat": {
+    "star_5": {
+      "hp": 16,
+      "atk": 5,
+      "spd": 8,
+      "def": 4,
+      "res": 6
+    },
+    "growth": {
+      "hp": 55,
+      "atk": 50,
+      "spd": 65,
+      "def": 30,
+      "res": 55,
+      "total": 255
+    },
+    "growth_type": 123
+  }
+}

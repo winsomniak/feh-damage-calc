@@ -1,53 +1,53 @@
 {
-    "display": "Morgan, Lass from Afar",
-    "name": "Morgan",
-    "title": "Lass from Afar",
-    "id": "morgan-lass-from-afar",
-    "color": "Blue",
-    "weapon_type": "Blue Tome",
-    "link": "https://kagerochart.com/hero/morgan-lass-from-afar",
-    "move_type": "Flying",
-    "weapon": [
-        "blarserpent-plus",
-        "blarserpent",
-        "elthunder",
-        "thunder"
-    ],
-    "special": [
-        "iceberg",
-        "chilling-wind"
-    ],
-    "passive_a": [
-        "mirror-stance-2",
-        "mirror-stance-1",
-        "warding-stance-1"
-    ],
-    "passive_b": [
-        "guard-3",
-        "guard-2",
-        "guard-1"
-    ],
-    "passive_c": [
-        "atk-ploy-3",
-        "atk-ploy-2",
-        "atk-ploy-1"
-    ],
-    "base_stat": {
-        "star_5": {
-            "hp": 18,
-            "atk": 8,
-            "spd": 6,
-            "def": 3,
-            "res": 9
-        },
-        "growth": {
-            "hp": 5,
-            "atk": 8,
-            "spd": 7,
-            "def": 2,
-            "res": 7,
-            "total": 29
-        },
-        "growth_type":99
-    }
+  "display": "Morgan, Lass from Afar",
+  "name": "Morgan",
+  "title": "Lass from Afar",
+  "id": "morgan-lass-from-afar",
+  "color": "Blue",
+  "weapon_type": "Blue Tome",
+  "link": "https://kagerochart.com/hero/morgan-lass-from-afar",
+  "move_type": "Flying",
+  "weapon": [
+    "blarserpent-plus",
+    "blarserpent",
+    "elthunder",
+    "thunder"
+  ],
+  "special": [
+    "iceberg",
+    "chilling-wind"
+  ],
+  "passive_a": [
+    "mirror-stance-2",
+    "mirror-stance-1",
+    "warding-stance-1"
+  ],
+  "passive_b": [
+    "guard-3",
+    "guard-2",
+    "guard-1"
+  ],
+  "passive_c": [
+    "atk-ploy-3",
+    "atk-ploy-2",
+    "atk-ploy-1"
+  ],
+  "base_stat": {
+    "star_5": {
+      "hp": 18,
+      "atk": 8,
+      "spd": 6,
+      "def": 3,
+      "res": 9
+    },
+    "growth": {
+      "hp": 45,
+      "atk": 60,
+      "spd": 55,
+      "def": 30,
+      "res": 55,
+      "total": 245
+    },
+    "growth_type": 92
+  }
 }

@@ -1,0 +1,12 @@
+{
+    "name": "Death Blow 4",
+    "sp": 300,
+    "type": "A",
+    "description": "Grants Atk+8 during combat if unit initiates the attack.",
+    "icon": "/images/icons/passives/death-blow-4.png",
+    "link": "https://kagerochart.com/hero/passives/death-blow-4",
+    "initiate_mod": {
+        "atk": 8
+    },
+    "id": "death-blow-4"
+}

@@ -1,48 +1,48 @@
 {
-    "display": "Tobin, The Clueless One",
-    "name": "Tobin",
-    "title": "The Clueless One",
-    "id": "tobin-the-clueless-one",
-    "color": "Red",
-    "weapon_type": "Sword",
-    "link": "https://kagerochart.com/hero/tobin-the-clueless-one",
-    "move_type": "Infantry",
-    "LowestRarity":4,
-    "weapon": [
-        "armorslayer-plus",
-        "armorslayer",
-        "steel-sword",
-        "iron-sword"
-    ],
-    "assist": [
-        "pivot"
-    ],
-    "passive_a": [
-        "attack-plus-3",
-        "attack-plus-2",
-        "attack-plus-1"
-    ],
-    "passive_b": [
-        "seal-spd-3",
-        "seal-spd-2",
-        "seal-spd-1"
-    ],
-    "base_stat": {
-        "star_5": {
-            "hp": 18,
-            "atk": 7,
-            "spd": 5,
-            "def": 5,
-            "res": 4
-        },
-        "growth": {
-            "hp": 9,
-            "atk": 7,
-            "spd": 6,
-            "def": 9,
-            "res": 6,
-            "total": 37
-        },
-        "growth_type":44
-    }
+  "display": "Tobin, The Clueless One",
+  "name": "Tobin",
+  "title": "The Clueless One",
+  "id": "tobin-the-clueless-one",
+  "color": "Red",
+  "weapon_type": "Sword",
+  "link": "https://kagerochart.com/hero/tobin-the-clueless-one",
+  "move_type": "Infantry",
+  "LowestRarity": 4,
+  "weapon": [
+    "armorslayer-plus",
+    "armorslayer",
+    "steel-sword",
+    "iron-sword"
+  ],
+  "assist": [
+    "pivot"
+  ],
+  "passive_a": [
+    "attack-plus-3",
+    "attack-plus-2",
+    "attack-plus-1"
+  ],
+  "passive_b": [
+    "seal-spd-3",
+    "seal-spd-2",
+    "seal-spd-1"
+  ],
+  "base_stat": {
+    "star_5": {
+      "hp": 18,
+      "atk": 7,
+      "spd": 5,
+      "def": 5,
+      "res": 4
+    },
+    "growth": {
+      "hp": 65,
+      "atk": 55,
+      "spd": 50,
+      "def": 65,
+      "res": 50,
+      "total": 285
+    },
+    "growth_type": 19
+  }
 }

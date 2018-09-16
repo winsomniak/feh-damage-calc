@@ -1,49 +1,49 @@
 {
-    "display": "Julius, Scion of Darkness",
-    "name": "Julius",
-    "title": "Scion of Darkness",
-    "id": "julius-scion-of-darkness",
-    "color": "Red",
-    "weapon_type": "Red Tome",
-    "link": "https://kagerochart.com/hero/julius-scion-of-darkness",
-    "move_type": "Infantry",
-    "LowestRarity":3,
-    "weapon": [
-        "loptous",
-        "fenrir",
-        "ruin",
-        "flux"
-    ],
-    "special": [
-        "draconic-aura",
-        "dragon-gaze"
-    ],
-    "passive_b": [
-        "guard-3",
-        "guard-2",
-        "guard-1"
-    ],
-    "passive_c": [
-        "atk-ploy-3",
-        "atk-ploy-2",
-        "atk-ploy-1"
-    ],
-    "base_stat": {
-        "star_5": {
-            "hp": 16,
-            "atk": 9,
-            "spd": 8,
-            "def": 3,
-            "res": 9
-        },
-        "growth": {
-            "hp": 6,
-            "atk": 8,
-            "spd": 5,
-            "def": 2,
-            "res": 8,
-            "total": 29
-        },
-        "growth_type":176
-    }
+  "display": "Julius, Scion of Darkness",
+  "name": "Julius",
+  "title": "Scion of Darkness",
+  "id": "julius-scion-of-darkness",
+  "color": "Red",
+  "weapon_type": "Red Tome",
+  "link": "https://kagerochart.com/hero/julius-scion-of-darkness",
+  "move_type": "Infantry",
+  "LowestRarity": 3,
+  "weapon": [
+    "loptous",
+    "fenrir",
+    "ruin",
+    "flux"
+  ],
+  "special": [
+    "draconic-aura",
+    "dragon-gaze"
+  ],
+  "passive_b": [
+    "guard-3",
+    "guard-2",
+    "guard-1"
+  ],
+  "passive_c": [
+    "atk-ploy-3",
+    "atk-ploy-2",
+    "atk-ploy-1"
+  ],
+  "base_stat": {
+    "star_5": {
+      "hp": 16,
+      "atk": 9,
+      "spd": 8,
+      "def": 3,
+      "res": 9
+    },
+    "growth": {
+      "hp": 50,
+      "atk": 60,
+      "spd": 45,
+      "def": 30,
+      "res": 60,
+      "total": 245
+    },
+    "growth_type": 143
+  }
 }

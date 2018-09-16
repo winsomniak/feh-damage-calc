@@ -1,53 +1,53 @@
 {
-    "display": "Olwen, Righteous Knight",
-    "name": "Olwen",
-    "title": "Righteous Knight",
-    "id": "olwen-righteous-knight",
-    "color": "Green",
-    "weapon_type": "Green Tome",
-    "link": "https://kagerochart.com/hero/olwen-righteous-knight",
-    "move_type": "Cavalry",
-    "weapon": [
-        "thunderhead",
-        "rexcalibur",
-        "elwind",
-        "wind"
-    ],
-    "special": [
-        "blazing-wind",
-        "rising-wind"
-    ],
-    "passive_a": [
-        "swift-sparrow-2",
-        "swift-sparrow-1",
-        "darting-blow-1"
-    ],
-    "passive_b": [
-        "renewal-3",
-        "renewal-2",
-        "renewal-1"
-    ],
-    "passive_c": [
-        "g-tome-exp-3",
-        "g-tome-exp-2",
-        "g-tome-exp-1"
-    ],
-    "base_stat": {
-        "star_5": {
-            "hp": 17,
-            "atk": 8,
-            "spd": 9,
-            "def": 4,
-            "res": 5
-        },
-        "growth": {
-            "hp": 4,
-            "atk": 6,
-            "spd": 8,
-            "def": 3,
-            "res": 6,
-            "total": 27
-        },
-        "growth_type":253
-    }
+  "display": "Olwen, Righteous Knight",
+  "name": "Olwen",
+  "title": "Righteous Knight",
+  "id": "olwen-righteous-knight",
+  "color": "Green",
+  "weapon_type": "Green Tome",
+  "link": "https://kagerochart.com/hero/olwen-righteous-knight",
+  "move_type": "Cavalry",
+  "weapon": [
+    "thunderhead",
+    "rexcalibur",
+    "elwind",
+    "wind"
+  ],
+  "special": [
+    "blazing-wind",
+    "rising-wind"
+  ],
+  "passive_a": [
+    "swift-sparrow-2",
+    "swift-sparrow-1",
+    "darting-blow-1"
+  ],
+  "passive_b": [
+    "renewal-3",
+    "renewal-2",
+    "renewal-1"
+  ],
+  "passive_c": [
+    "g-tome-exp-3",
+    "g-tome-exp-2",
+    "g-tome-exp-1"
+  ],
+  "base_stat": {
+    "star_5": {
+      "hp": 17,
+      "atk": 8,
+      "spd": 9,
+      "def": 4,
+      "res": 5
+    },
+    "growth": {
+      "hp": 40,
+      "atk": 50,
+      "spd": 60,
+      "def": 35,
+      "res": 50,
+      "total": 235
+    },
+    "growth_type": 194
+  }
 }

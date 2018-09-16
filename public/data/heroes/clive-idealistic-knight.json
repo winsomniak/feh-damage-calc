@@ -1,47 +1,47 @@
 {
-    "display": "Clive, Idealistic Knight",
-    "name": "Clive",
-    "title": "Idealistic Knight",
-    "id": "clive-idealistic-knight",
-    "color": "Blue",
-    "weapon_type": "Lance",
-    "link": "https://kagerochart.com/hero/clive-idealistic-knight",
-    "move_type": "Cavalry",
-    "LowestRarity":4,
-    "weapon": [
-        "silver-lance-plus",
-        "silver-lance",
-        "steel-lance",
-        "iron-lance"
-    ],
-    "special": [
-        "escutcheon",
-        "buckler"
-    ],
-    "passive_a": [
-        "defense-plus-3",
-        "defense-plus-2",
-        "defense-plus-1"
-    ],
-    "passive_b": [
-        "hit-and-run"
-    ],
-    "base_stat": {
-        "star_5": {
-            "hp": 19,
-            "atk": 9,
-            "spd": 6,
-            "def": 8,
-            "res": 4
-        },
-        "growth": {
-            "hp": 8,
-            "atk": 7,
-            "spd": 5,
-            "def": 7,
-            "res": 3,
-            "total": 30
-        },
-        "growth_type":239
-    }
+  "display": "Clive, Idealistic Knight",
+  "name": "Clive",
+  "title": "Idealistic Knight",
+  "id": "clive-idealistic-knight",
+  "color": "Blue",
+  "weapon_type": "Lance",
+  "link": "https://kagerochart.com/hero/clive-idealistic-knight",
+  "move_type": "Cavalry",
+  "LowestRarity": 4,
+  "weapon": [
+    "silver-lance-plus",
+    "silver-lance",
+    "steel-lance",
+    "iron-lance"
+  ],
+  "special": [
+    "escutcheon",
+    "buckler"
+  ],
+  "passive_a": [
+    "defense-plus-3",
+    "defense-plus-2",
+    "defense-plus-1"
+  ],
+  "passive_b": [
+    "hit-and-run"
+  ],
+  "base_stat": {
+    "star_5": {
+      "hp": 19,
+      "atk": 9,
+      "spd": 6,
+      "def": 8,
+      "res": 4
+    },
+    "growth": {
+      "hp": 60,
+      "atk": 55,
+      "spd": 45,
+      "def": 55,
+      "res": 35,
+      "total": 250
+    },
+    "growth_type": 208
+  }
 }

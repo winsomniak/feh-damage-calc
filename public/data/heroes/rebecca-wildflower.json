@@ -1,48 +1,48 @@
 {
-    "display": "Rebecca, Wildflower",
-    "name": "Rebecca",
-    "title": "Wildflower",
-    "id": "rebecca-wildflower",
-    "color": "Colorless",
-    "weapon_type": "Bow",
-    "link": "https://kagerochart.com/hero/rebecca-wildflower",
-    "move_type": "Infantry",
-    "LowestRarity":3,
-    "weapon": [
-        "silver-bow-plus",
-        "silver-bow",
-        "steel-bow",
-        "iron-bow"
-    ],
-    "assist": [
-        "ardent-sacrifice"
-    ],
-    "passive_a": [
-        "darting-blow-3",
-        "darting-blow-2",
-        "darting-blow-1"
-    ],
-    "passive_b": [
-        "seal-atk-3",
-        "seal-atk-2",
-        "seal-atk-1"
-    ],
-    "base_stat": {
-        "star_5": {
-            "hp": 18,
-            "atk": 7,
-            "spd": 8,
-            "def": 6,
-            "res": 5
-        },
-        "growth": {
-            "hp": 5,
-            "atk": 6,
-            "spd": 8,
-            "def": 3,
-            "res": 6,
-            "total": 28
-        },
-        "growth_type":172
-    }
+  "display": "Rebecca, Wildflower",
+  "name": "Rebecca",
+  "title": "Wildflower",
+  "id": "rebecca-wildflower",
+  "color": "Colorless",
+  "weapon_type": "Bow",
+  "link": "https://kagerochart.com/hero/rebecca-wildflower",
+  "move_type": "Infantry",
+  "LowestRarity": 3,
+  "weapon": [
+    "silver-bow-plus",
+    "silver-bow",
+    "steel-bow",
+    "iron-bow"
+  ],
+  "assist": [
+    "ardent-sacrifice"
+  ],
+  "passive_a": [
+    "darting-blow-3",
+    "darting-blow-2",
+    "darting-blow-1"
+  ],
+  "passive_b": [
+    "seal-atk-3",
+    "seal-atk-2",
+    "seal-atk-1"
+  ],
+  "base_stat": {
+    "star_5": {
+      "hp": 18,
+      "atk": 7,
+      "spd": 8,
+      "def": 6,
+      "res": 5
+    },
+    "growth": {
+      "hp": 45,
+      "atk": 50,
+      "spd": 60,
+      "def": 35,
+      "res": 50,
+      "total": 240
+    },
+    "growth_type": 147
+  }
 }

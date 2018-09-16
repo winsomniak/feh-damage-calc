@@ -1,49 +1,49 @@
 {
-    "display": "Oscar, Agile Horseman",
-    "name": "Oscar",
-    "title": "Agile Horseman",
-    "id": "oscar-agile-horseman",
-    "color": "Blue",
-    "weapon_type": "Lance",
-    "link": "https://kagerochart.com/hero/oscar-agile-horseman",
-    "move_type": "Cavalry",
-    "LowestRarity":3,
-    "weapon": [
-        "sapphire-lance-plus",
-        "sapphire-lance",
-        "steel-lance",
-        "iron-lance"
-    ],
-    "assist": [
-        "rally-speed-defense",
-        "rally-speed"
-    ],
-    "passive_b": [
-        "lancebreaker-3",
-        "lancebreaker-2",
-        "lancebreaker-1"
-    ],
-    "passive_c": [
-        "spur-spd-def-2",
-        "spur-spd-def-1",
-        "spur-def-1"
-    ],
-    "base_stat": {
-        "star_5": {
-            "hp": 18,
-            "atk": 7,
-            "spd": 8,
-            "def": 7,
-            "res": 6
-        },
-        "growth": {
-            "hp": 6,
-            "atk": 8,
-            "spd": 8,
-            "def": 5,
-            "res": 3,
-            "total": 30
-        },
-        "growth_type":149
-    }
+  "display": "Oscar, Agile Horseman",
+  "name": "Oscar",
+  "title": "Agile Horseman",
+  "id": "oscar-agile-horseman",
+  "color": "Blue",
+  "weapon_type": "Lance",
+  "link": "https://kagerochart.com/hero/oscar-agile-horseman",
+  "move_type": "Cavalry",
+  "LowestRarity": 3,
+  "weapon": [
+    "sapphire-lance-plus",
+    "sapphire-lance",
+    "steel-lance",
+    "iron-lance"
+  ],
+  "assist": [
+    "rally-speed-defense",
+    "rally-speed"
+  ],
+  "passive_b": [
+    "lancebreaker-3",
+    "lancebreaker-2",
+    "lancebreaker-1"
+  ],
+  "passive_c": [
+    "spur-spd-def-2",
+    "spur-spd-def-1",
+    "spur-def-1"
+  ],
+  "base_stat": {
+    "star_5": {
+      "hp": 18,
+      "atk": 7,
+      "spd": 8,
+      "def": 7,
+      "res": 6
+    },
+    "growth": {
+      "hp": 50,
+      "atk": 60,
+      "spd": 60,
+      "def": 45,
+      "res": 35,
+      "total": 250
+    },
+    "growth_type": 170
+  }
 }

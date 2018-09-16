@@ -5,5 +5,7 @@
     "description": "If unit has an adjacent armored ally at the start of turn, unit and any such allies can move 1 extra space.(That turn only; does not stack.)",
     "icon": "/images/icons/passives/armor-march-3.png",
     "link": "https://kagerochart.com/hero/passives/armor-march-3",
+    "move_unique": "Armored",
+    "march":0,
     "id": "armor-march-3"
 }

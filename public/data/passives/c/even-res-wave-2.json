@@ -1,0 +1,9 @@
+{
+    "name": "Even Res Wave 2",
+    "sp": 120,
+    "type": "C",
+    "description": "At start of even-numbered turns, grants Res+4 to unit and adjacent allies for 1 turn. (Bonus granted to unit even if no allies are adjacent.)",
+    "icon": "/images/icons/passives/even-res-wave-2.png",
+    "link": "https://kagerochart.com/hero/passives/even-res-wave-2",
+    "id": "even-res-wave-2"
+}

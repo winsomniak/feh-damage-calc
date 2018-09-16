@@ -1,54 +1,54 @@
 {
-    "display": "Nanna, Nordion Princess",
-    "name": "Nanna",
-    "title": "Nordion Princess",
-    "id": "nanna-nordion-princess",
-    "color": "Colorless",
-    "weapon_type": "Staff",
-    "link": "https://kagerochart.com/hero/nanna-nordion-princess",
-    "move_type": "Cavalry",
-    "LowestRarity": 4,
-    "weapon": [
-        "absorb-plus",
-        "absorb",
-        "assault"
-    ],
-    "special": [
-        "heavenly-light",
-        "imbue"
-    ],
-    "assist": [
-        "restore-plus",
-        "restore",
-        "reconcile",
-        "heal"
-    ],
-    "passive_a": [
-        "spd-res-2",
-        "spd-res-1",
-        "resistance-plus-1"
-    ],
-    "passive_c": [
-        "drive-def-2",
-        "drive-def-1",
-        "spur-def-1"
-    ],
-    "base_stat": {
-        "star_5": {
-            "hp": 17,
-            "atk": 5,
-            "spd": 8,
-            "def": 6,
-            "res": 7
-        },
-        "growth": {
-            "hp": 5,
-            "atk": 6,
-            "spd": 8,
-            "def": 3,
-            "res": 5,
-            "total": 27
-        },
-        "growth_type":24
-    }
+  "display": "Nanna, Nordion Princess",
+  "name": "Nanna",
+  "title": "Nordion Princess",
+  "id": "nanna-nordion-princess",
+  "color": "Colorless",
+  "weapon_type": "Staff",
+  "link": "https://kagerochart.com/hero/nanna-nordion-princess",
+  "move_type": "Cavalry",
+  "LowestRarity": 4,
+  "weapon": [
+    "absorb-plus",
+    "absorb",
+    "assault"
+  ],
+  "special": [
+    "heavenly-light",
+    "imbue"
+  ],
+  "assist": [
+    "restore-plus",
+    "restore",
+    "reconcile",
+    "heal"
+  ],
+  "passive_a": [
+    "spd-res-2",
+    "spd-res-1",
+    "resistance-plus-1"
+  ],
+  "passive_c": [
+    "drive-def-2",
+    "drive-def-1",
+    "spur-def-1"
+  ],
+  "base_stat": {
+    "star_5": {
+      "hp": 17,
+      "atk": 5,
+      "spd": 8,
+      "def": 6,
+      "res": 7
+    },
+    "growth": {
+      "hp": 45,
+      "atk": 50,
+      "spd": 60,
+      "def": 35,
+      "res": 45,
+      "total": 235
+    },
+    "growth_type": 39
+  }
 }

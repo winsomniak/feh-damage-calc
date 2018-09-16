@@ -1,0 +1,9 @@
+{
+    "name": "Deluge Dance 1",
+    "sp": 120,
+    "type": "B",
+    "description": "If Sing or Dance is used, grants Spd+2 and Res+3 to target.",
+    "icon": "/images/icons/passives/deluge-dance-1.png",
+    "link": "https://kagerochart.com/hero/passives/deluge-dance-1",
+    "id": "deluge-dance-1"
+}

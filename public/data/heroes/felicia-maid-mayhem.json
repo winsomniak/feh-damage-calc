@@ -1,50 +1,50 @@
 {
-    "display": "Felicia, Maid Mayhem",
-    "name": "Felicia",
-    "title": "Maid Mayhem",
-    "id": "felicia-maid-mayhem",
-    "color": "Colorless",
-    "weapon_type": "Dagger",
-    "link": "https://kagerochart.com/hero/felicia-maid-mayhem",
-    "move_type": "Infantry",
-    "LowestRarity":1,
-    "weapon": [
-        "felicia-plate",
-        "silver-dagger-plus",
-        "silver-dagger",
-        "steel-dagger",
-        "iron-dagger"
-    ],
-    "special": [
-        "glacies",
-        "chilling-wind"
-    ],
-    "passive_a": [
-        "resistance-plus-3",
-        "resistance-plus-2",
-        "resistance-plus-1"
-    ],
-    "passive_c": [
-        "breath-of-life-3",
-        "breath-of-life-2",
-        "breath-of-life-1"
-    ],
-    "base_stat": {
-        "star_5": {
-            "hp": 15,
-            "atk": 6,
-            "spd": 11,
-            "def": 3,
-            "res": 9
-        },
-        "growth": {
-            "hp": 5,
-            "atk": 4,
-            "spd": 8,
-            "def": 3,
-            "res": 8,
-            "total": 28
-        },
-        "growth_type":32
-    }
+  "display": "Felicia, Maid Mayhem",
+  "name": "Felicia",
+  "title": "Maid Mayhem",
+  "id": "felicia-maid-mayhem",
+  "color": "Colorless",
+  "weapon_type": "Dagger",
+  "link": "https://kagerochart.com/hero/felicia-maid-mayhem",
+  "move_type": "Infantry",
+  "LowestRarity": 1,
+  "weapon": [
+    "felicia-plate",
+    "silver-dagger-plus",
+    "silver-dagger",
+    "steel-dagger",
+    "iron-dagger"
+  ],
+  "special": [
+    "glacies",
+    "chilling-wind"
+  ],
+  "passive_a": [
+    "resistance-plus-3",
+    "resistance-plus-2",
+    "resistance-plus-1"
+  ],
+  "passive_c": [
+    "breath-of-life-3",
+    "breath-of-life-2",
+    "breath-of-life-1"
+  ],
+  "base_stat": {
+    "star_5": {
+      "hp": 15,
+      "atk": 6,
+      "spd": 11,
+      "def": 3,
+      "res": 9
+    },
+    "growth": {
+      "hp": 45,
+      "atk": 40,
+      "spd": 60,
+      "def": 35,
+      "res": 60,
+      "total": 240
+    },
+    "growth_type": 31
+  }
 }

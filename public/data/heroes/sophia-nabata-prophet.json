@@ -1,49 +1,49 @@
 {
-    "display": "Sophia, Nabata Prophet",
-    "name": "Sophia",
-    "title": "Nabata Prophet",
-    "id": "sophia-nabata-prophet",
-    "color": "Red",
-    "weapon_type": "Red Tome",
-    "link": "https://kagerochart.com/hero/sophia-nabata-prophet",
-    "move_type": "Infantry",
-    "LowestRarity":1,
-    "weapon": [
-        "fenrir-plus",
-        "fenrir",
-        "ruin",
-        "flux"
-    ],
-    "special": [
-        "dragon-fang",
-        "dragon-gaze"
-    ],
-    "passive_a": [
-        "warding-blow-3",
-        "warding-blow-2",
-        "warding-blow-1"
-    ],
-    "passive_c": [
-        "fortify-res-3",
-        "fortify-res-2",
-        "fortify-res-1"
-    ],
-    "base_stat": {
-        "star_5": {
-            "hp": 18,
-            "atk": 9,
-            "spd": 4,
-            "def": 6,
-            "res": 7
-        },
-        "growth": {
-            "hp": 6,
-            "atk": 7,
-            "spd": 3,
-            "def": 6,
-            "res": 6,
-            "total": 28
-        },
-        "growth_type":138
-    }
+  "display": "Sophia, Nabata Prophet",
+  "name": "Sophia",
+  "title": "Nabata Prophet",
+  "id": "sophia-nabata-prophet",
+  "color": "Red",
+  "weapon_type": "Red Tome",
+  "link": "https://kagerochart.com/hero/sophia-nabata-prophet",
+  "move_type": "Infantry",
+  "LowestRarity": 1,
+  "weapon": [
+    "fenrir-plus",
+    "fenrir",
+    "ruin",
+    "flux"
+  ],
+  "special": [
+    "dragon-fang",
+    "dragon-gaze"
+  ],
+  "passive_a": [
+    "warding-blow-3",
+    "warding-blow-2",
+    "warding-blow-1"
+  ],
+  "passive_c": [
+    "fortify-res-3",
+    "fortify-res-2",
+    "fortify-res-1"
+  ],
+  "base_stat": {
+    "star_5": {
+      "hp": 18,
+      "atk": 9,
+      "spd": 4,
+      "def": 6,
+      "res": 7
+    },
+    "growth": {
+      "hp": 50,
+      "atk": 55,
+      "spd": 35,
+      "def": 50,
+      "res": 50,
+      "total": 240
+    },
+    "growth_type": 181
+  }
 }

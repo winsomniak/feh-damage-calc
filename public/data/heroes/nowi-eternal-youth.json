@@ -1,48 +1,48 @@
 {
-    "display": "Nowi, Eternal Youth",
-    "name": "Nowi",
-    "title": "Eternal Youth",
-    "id": "nowi-eternal-youth",
-    "color": "Blue",
-    "weapon_type": "Blue Breath",
-    "link": "https://kagerochart.com/hero/nowi-eternal-youth",
-    "move_type": "Infantry",
-    "LowestRarity":3,
-    "weapon": [
-        "lightning-breath-plus",
-        "lightning-breath",
-        "fire-breath-plus",
-        "fire-breath"
-    ],
-    "assist": [
-        "rally-defense"
-    ],
-    "passive_a": [
-        "defense-plus-3",
-        "defense-plus-2",
-        "defense-plus-1"
-    ],
-    "passive_c": [
-        "threaten-res-3",
-        "threaten-res-2",
-        "threaten-res-1"
-    ],
-    "base_stat": {
-        "star_5": {
-            "hp": 17,
-            "atk": 6,
-            "spd": 5,
-            "def": 6,
-            "res": 5
-        },
-        "growth": {
-            "hp": 9,
-            "atk": 9,
-            "spd": 6,
-            "def": 7,
-            "res": 6,
-            "total": 37
-        },
-        "growth_type":3
-    }
+  "display": "Nowi, Eternal Youth",
+  "name": "Nowi",
+  "title": "Eternal Youth",
+  "id": "nowi-eternal-youth",
+  "color": "Blue",
+  "weapon_type": "Blue Breath",
+  "link": "https://kagerochart.com/hero/nowi-eternal-youth",
+  "move_type": "Infantry",
+  "LowestRarity": 3,
+  "weapon": [
+    "lightning-breath-plus",
+    "lightning-breath",
+    "fire-breath-plus",
+    "fire-breath"
+  ],
+  "assist": [
+    "rally-defense"
+  ],
+  "passive_a": [
+    "defense-plus-3",
+    "defense-plus-2",
+    "defense-plus-1"
+  ],
+  "passive_c": [
+    "threaten-res-3",
+    "threaten-res-2",
+    "threaten-res-1"
+  ],
+  "base_stat": {
+    "star_5": {
+      "hp": 17,
+      "atk": 6,
+      "spd": 5,
+      "def": 6,
+      "res": 5
+    },
+    "growth": {
+      "hp": 65,
+      "atk": 65,
+      "spd": 50,
+      "def": 55,
+      "res": 50,
+      "total": 285
+    },
+    "growth_type": 60
+  }
 }

@@ -1,60 +1,60 @@
 {
-    "display": "Veronica, Emblian Princess",
-    "name": "Veronica",
-    "title": "Emblian Princess",
-    "id": "veronica-emblian-princess",
-    "color": "Green",
-    "weapon_type": "Green Tome",
-    "link": "https://kagerochart.com/hero/veronica-emblian-princess",
-    "move_type": "Infantry",
-    "LowestRarity":1,
-    "weapon": [
-        "elivagar",
-        "rexcalibur",
-        "elwind",
-        "wind"
-    ],
-    "special": [
-        "reprisal",
-        "retribution"
-    ],
-    "passive_a": [
-        "mirror-strike-2",
-        "mirror-strike-1",
-        "warding-blow-1",
-        "fury-3",
-        "fury-2",
-        "fury-1"
-    ],
-    "passive_b": [
-        "renewal-3",
-        "renewal-2",
-        "renewal-1"
-    ],
-    "passive_c": [
-        "drive-def-2",
-        "drive-def-1",
-        "spur-def-1",
-        "savage-blow-3",
-        "savage-blow-2",
-        "savage-blow-1"
-    ],
-    "base_stat": {
-        "star_5": {
-            "hp": 17,
-            "atk": 9,
-            "spd": 5,
-            "def": 7,
-            "res": 6
-        },
-        "growth": {
-            "hp": 7,
-            "atk": 8,
-            "spd": 4,
-            "def": 6,
-            "res": 3,
-            "total": 28
-        },
-        "growth_type":0
-    }
+  "display": "Veronica, Emblian Princess",
+  "name": "Veronica",
+  "title": "Emblian Princess",
+  "id": "veronica-emblian-princess",
+  "color": "Green",
+  "weapon_type": "Green Tome",
+  "link": "https://kagerochart.com/hero/veronica-emblian-princess",
+  "move_type": "Infantry",
+  "LowestRarity": 1,
+  "weapon": [
+    "elivagar",
+    "rexcalibur",
+    "elwind",
+    "wind"
+  ],
+  "special": [
+    "reprisal",
+    "retribution"
+  ],
+  "passive_a": [
+    "mirror-strike-2",
+    "mirror-strike-1",
+    "warding-blow-1",
+    "fury-3",
+    "fury-2",
+    "fury-1"
+  ],
+  "passive_b": [
+    "renewal-3",
+    "renewal-2",
+    "renewal-1"
+  ],
+  "passive_c": [
+    "drive-def-2",
+    "drive-def-1",
+    "spur-def-1",
+    "savage-blow-3",
+    "savage-blow-2",
+    "savage-blow-1"
+  ],
+  "base_stat": {
+    "star_5": {
+      "hp": 17,
+      "atk": 9,
+      "spd": 5,
+      "def": 7,
+      "res": 6
+    },
+    "growth": {
+      "hp": 55,
+      "atk": 60,
+      "spd": 40,
+      "def": 50,
+      "res": 35,
+      "total": 240
+    },
+    "growth_type": 0
+  }
 }

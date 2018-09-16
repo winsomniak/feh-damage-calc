@@ -1,49 +1,49 @@
 {
-    "display": "Boey, Skillful Survivor",
-    "name": "Boey",
-    "title": "Skillful Survivor",
-    "id": "boey-skillful-survivor",
-    "color": "Green",
-    "weapon_type": "Green Tome",
-    "link": "https://kagerochart.com/hero/boey-skillful-survivor",
-    "move_type": "Infantry",
-    "LowestRarity":3,
-    "weapon": [
-        "gronnowl-plus",
-        "gronnowl",
-        "elwind",
-        "wind"
-    ],
-    "special": [
-        "ignis",
-        "glowing-ember"
-    ],
-    "passive_a": [
-        "earth-boost-3",
-        "earth-boost-2",
-        "earth-boost-1"
-    ],
-    "passive_b": [
-        "renewal-3",
-        "renewal-2",
-        "renewal-1"
-    ],
-    "base_stat": {
-        "star_5": {
-            "hp": 19,
-            "atk": 7,
-            "spd": 5,
-            "def": 8,
-            "res": 5
-        },
-        "growth": {
-            "hp": 7,
-            "atk": 6,
-            "spd": 6,
-            "def": 7,
-            "res": 2,
-            "total": 28
-        },
-        "growth_type":227
-    }
+  "display": "Boey, Skillful Survivor",
+  "name": "Boey",
+  "title": "Skillful Survivor",
+  "id": "boey-skillful-survivor",
+  "color": "Green",
+  "weapon_type": "Green Tome",
+  "link": "https://kagerochart.com/hero/boey-skillful-survivor",
+  "move_type": "Infantry",
+  "LowestRarity": 3,
+  "weapon": [
+    "gronnowl-plus",
+    "gronnowl",
+    "elwind",
+    "wind"
+  ],
+  "special": [
+    "ignis",
+    "glowing-ember"
+  ],
+  "passive_a": [
+    "earth-boost-3",
+    "earth-boost-2",
+    "earth-boost-1"
+  ],
+  "passive_b": [
+    "renewal-3",
+    "renewal-2",
+    "renewal-1"
+  ],
+  "base_stat": {
+    "star_5": {
+      "hp": 19,
+      "atk": 7,
+      "spd": 5,
+      "def": 8,
+      "res": 5
+    },
+    "growth": {
+      "hp": 55,
+      "atk": 50,
+      "spd": 50,
+      "def": 55,
+      "res": 30,
+      "total": 240
+    },
+    "growth_type": 220
+  }
 }

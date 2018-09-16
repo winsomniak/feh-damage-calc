@@ -1,0 +1,52 @@
+{
+  "display": "Ryoma, Dancing Samurai",
+  "name": "Ryoma",
+  "title": "Dancing Samurai",
+  "id": "ryoma-dancing-samurai",
+  "color": "Blue",
+  "weapon_type": "Blue Dagger",
+  "link": "https://kagerochart.com/hero/ryoma-dancing-samurai",
+  "move_type": "Infantry",
+  "weapon": [
+    "sky-maiougi-plus",
+    "sky-maiougi",
+    "steel-dagger",
+    "iron-dagger"
+  ],
+  "assist": [
+    "dance"
+  ],
+  "passive_a": [
+    "triangle-adept-3",
+    "triangle-adept-2",
+    "triangle-adept-1"
+  ],
+  "passive_b": [
+    "chill-def-3",
+    "chill-def-2",
+    "chill-def-1"
+  ],
+  "passive_c": [
+    "spur-spd-res-2",
+    "spur-spd-res-1",
+    "spur-res-1"
+  ],
+  "base_stat": {
+    "star_5": {
+      "hp": 14,
+      "atk": 6,
+      "spd": 8,
+      "def": 4,
+      "res": 4
+    },
+    "growth": {
+      "hp": 50,
+      "atk": 60,
+      "spd": 60,
+      "def": 40,
+      "res": 30,
+      "total": 240
+    },
+    "growth_type": 113
+  }
+}

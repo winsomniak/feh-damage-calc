@@ -1,0 +1,54 @@
+{
+  "display": "Ethlyn, Spirited Princess",
+  "name": "Ethlyn",
+  "title": "Spirited Princess",
+  "id": "ethlyn-spirited-princess",
+  "color": "Colorless",
+  "weapon_type": "Staff",
+  "LowestRarity": 4,
+  "link": "https://kagerochart.com/hero/ethlyn-spirited-princess",
+  "move_type": "Cavalry",
+  "weapon": [
+    "fear-plus",
+    "fear",
+    "assault"
+  ],
+  "special": [
+    "heavenly-light",
+    "imbue"
+  ],
+  "assist": [
+    "physic-plus",
+    "physic",
+    "mend",
+    "heal"
+  ],
+  "passive_a": [
+    "spd-def-bond-3",
+    "spd-def-bond-2",
+    "spd-def-bond-1"
+  ],
+  "passive_b": [
+    "live-to-serve-3",
+    "live-to-serve-2",
+    "live-to-serve-1"
+  ],
+  "base_stat": {
+    "star_5": {
+      "hp": 16,
+      "atk": 6,
+      "spd": 10,
+      "def": 4,
+      "res": 7
+    },
+    "growth": {
+      "hp": 50,
+      "atk": 50,
+      "spd": 55,
+      "def": 50,
+      "res": 30,
+      "total": 235
+    },
+    "growth_type": 158
+  }
+}

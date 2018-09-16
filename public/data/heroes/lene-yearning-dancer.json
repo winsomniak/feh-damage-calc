@@ -1,47 +1,47 @@
 {
-    "display": "Lene, Yearning Dancer",
-    "name": "Lene",
-    "title": "Yearning Dancer",
-    "id": "lene-yearning-dancer",
-    "color": "Red",
-    "weapon_type": "Sword",
-    "link": "https://kagerochart.com/hero/lene-yearning-dancer",
-    "move_type": "Infantry",
-    "weapon": [
-        "safeguard-plus",
-        "safeguard",
-        "steel-sword",
-        "iron-sword"
-    ],
-    "assist": [
-        "dance"
-    ],
-    "passive_b": [
-        "firestorm-dance-2",
-        "firestorm-dance-1",
-        "gale-dance-1"
-    ],
-    "passive_c": [
-        "sword-valor-3",
-        "sword-valor-2",
-        "sword-valor-1"
-    ],
-    "base_stat": {
-        "star_5": {
-            "hp": 16,
-            "atk": 6,
-            "spd": 7,
-            "def": 4,
-            "res": 6
-        },
-        "growth": {
-            "hp": 5,
-            "atk": 6,
-            "spd": 9,
-            "def": 5,
-            "res": 6,
-            "total": 31
-        },
-        "growth_type":70
-    }
+  "display": "Lene, Yearning Dancer",
+  "name": "Lene",
+  "title": "Yearning Dancer",
+  "id": "lene-yearning-dancer",
+  "color": "Red",
+  "weapon_type": "Sword",
+  "link": "https://kagerochart.com/hero/lene-yearning-dancer",
+  "move_type": "Infantry",
+  "weapon": [
+    "safeguard-plus",
+    "safeguard",
+    "steel-sword",
+    "iron-sword"
+  ],
+  "assist": [
+    "dance"
+  ],
+  "passive_b": [
+    "firestorm-dance-2",
+    "firestorm-dance-1",
+    "gale-dance-1"
+  ],
+  "passive_c": [
+    "sword-valor-3",
+    "sword-valor-2",
+    "sword-valor-1"
+  ],
+  "base_stat": {
+    "star_5": {
+      "hp": 16,
+      "atk": 6,
+      "spd": 7,
+      "def": 4,
+      "res": 6
+    },
+    "growth": {
+      "hp": 45,
+      "atk": 50,
+      "spd": 65,
+      "def": 45,
+      "res": 50,
+      "total": 255
+    },
+    "growth_type": 121
+  }
 }

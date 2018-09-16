@@ -1,0 +1,52 @@
+{
+  "display": "Elincia, Estival Princess",
+  "name": "Elincia",
+  "title": "Estival Princess",
+  "id": "elincia-estival-princess",
+  "color": "Green",
+  "weapon_type": "Green Dagger",
+  "link": "https://kagerochart.com/hero/elincia-estival-princess",
+  "move_type": "Infantry",
+  "weapon": [
+    "cloud-maiougi-plus",
+    "cloud-maiougi",
+    "steel-dagger",
+    "iron-dagger"
+  ],
+  "assist": [
+    "dance"
+  ],
+  "passive_a": [
+    "atk-spd-push-3",
+    "atk-spd-push-2",
+    "atk-spd-push-1"
+  ],
+  "passive_b": [
+    "rockslide-dance-2",
+    "rockslide-dance-1",
+    "gale-dance-1"
+  ],
+  "passive_c": [
+    "drive-res-2",
+    "drive-res-1",
+    "spur-res-1"
+  ],
+  "base_stat": {
+    "star_5": {
+      "hp": 15,
+      "atk": 5,
+      "spd": 7,
+      "def": 5,
+      "res": 4
+    },
+    "growth": {
+      "hp": 45,
+      "atk": 55,
+      "spd": 65,
+      "def": 35,
+      "res": 40,
+      "total": 240
+    },
+    "growth_type": 250
+  }
+}

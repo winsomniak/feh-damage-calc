@@ -1,0 +1,9 @@
+{
+    "name": "Infantry Flash 3",
+    "sp": 240,
+    "type": "C",
+    "description": "Infantry allies within 2 spaces gain: \"If unit's Spd ≥ foe's Spd+1, grants Special cooldown charge +1 per attack. (Only highest value applied. Does not stack.)\"",
+    "icon": "/images/icons/passives/infantry-flash-3.png",
+    "link": "https://kagerochart.com/hero/passives/infantry-flash-3",
+    "id": "infantry-flash-3"
+}

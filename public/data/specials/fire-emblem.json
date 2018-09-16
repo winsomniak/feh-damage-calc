@@ -1,0 +1,19 @@
+{
+    "name": "Fire Emblem",
+    "cooldown": 2,
+    "sp": 500,
+    "description": "Boosts damage dealt by 30% of unit's Spd. Grants Atk/Spd/Def/Res+4 to unit and all allies for 1 turn after combat. (Bonus granted to allies even if unit's HP reaches 0.)",
+    "link": "https://kagerochart.com/hero/specials/fire-emblem",
+    "dmg_buff_by_stat": {
+        "stat": "spd",
+        "buff": 0.3
+    },
+    "after_mod": {
+        "atk": 4,
+        "spd": 4,
+        "def": 4,
+        "res": 4
+    },
+    "char_unique": true,
+    "id": "fire-emblem"
+}

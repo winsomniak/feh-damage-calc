@@ -1,48 +1,48 @@
 {
-    "display": "Myrrh, Great Dragon",
-    "name": "Myrrh",
-    "title": "Great Dragon",
-    "id": "myrrh-great-dragon",
-    "color": "Green",
-    "weapon_type": "Green Breath",
-    "link": "https://kagerochart.com/hero/myrrh-great-dragon",
-    "move_type": "Flying",
-    "weapon": [
-        "great-flame",
-        "flametongue",
-        "fire-breath-plus",
-        "fire-breath"
-    ],
-    "special": [
-        "bonfire",
-        "glowing-ember"
-    ],
-    "passive_a": [
-        "fury-3",
-        "fury-2",
-        "fury-1"
-    ],
-    "passive_c": [
-        "hone-dragons",
-        "hone-atk-2",
-        "hone-atk-1"
-    ],
-    "base_stat": {
-        "star_5": {
-            "hp": 16,
-            "atk": 7,
-            "spd": 6,
-            "def": 3,
-            "res": 7
-        },
-        "growth": {
-            "hp": 8,
-            "atk": 8,
-            "spd": 5,
-            "def": 11,
-            "res": 7,
-            "total": 39
-        },
-        "growth_type":44
-    }
+  "display": "Myrrh, Great Dragon",
+  "name": "Myrrh",
+  "title": "Great Dragon",
+  "id": "myrrh-great-dragon",
+  "color": "Green",
+  "weapon_type": "Green Breath",
+  "link": "https://kagerochart.com/hero/myrrh-great-dragon",
+  "move_type": "Flying",
+  "weapon": [
+    "great-flame",
+    "flametongue",
+    "fire-breath-plus",
+    "fire-breath"
+  ],
+  "special": [
+    "bonfire",
+    "glowing-ember"
+  ],
+  "passive_a": [
+    "fury-3",
+    "fury-2",
+    "fury-1"
+  ],
+  "passive_c": [
+    "hone-dragons",
+    "hone-atk-2",
+    "hone-atk-1"
+  ],
+  "base_stat": {
+    "star_5": {
+      "hp": 16,
+      "atk": 7,
+      "spd": 6,
+      "def": 3,
+      "res": 7
+    },
+    "growth": {
+      "hp": 60,
+      "atk": 60,
+      "spd": 45,
+      "def": 75,
+      "res": 55,
+      "total": 295
+    },
+    "growth_type": 19
+  }
 }

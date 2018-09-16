@@ -1,0 +1,22 @@
+{
+    "name": "Garm",
+    "might": 16,
+    "range": 1,
+    "sp": 400,
+    "description": "Grants Atk+3. If a bonus granted by a skill like Rally or Hone and/or extra movement granted by a skill like Armor March or Armored Boots is active, unit makes a guaranteed follow-up attack.",
+    "type": "Axe",
+    "link": "https://kagerochart.com/hero/weapons/garm",
+    "color": "Green",
+    "magical": false,
+    "stat_mod":{
+        "atk":3
+    },
+    "defense_follow_up": {
+        "bonus":"self"
+    },
+    "attack_follow_up": {
+        "bonus":"self"
+    },
+    "char_unique": true,
+    "id": "garm"
+}

@@ -1,0 +1,53 @@
+{
+  "display": "Quan, Luminous Lancer",
+  "name": "Quan",
+  "title": "Luminous Lancer",
+  "id": "quan-luminous-lancer",
+  "color": "Blue",
+  "weapon_type": "Lance",
+  "link": "https://kagerochart.com/hero/quan-luminous-lancer",
+  "move_type": "Cavalry",
+  "weapon": [
+    "gae-bolg",
+    "silver-lance",
+    "steel-lance",
+    "iron-lance"
+  ],
+  "assist": [
+    "rally-speed-defense-plus",
+    "rally-speed-defense",
+    "rally-defense"
+  ],
+  "special": [
+    "draconic-aura",
+    "dragon-gaze"
+  ],
+  "passive_a": [
+    "steady-posture-2",
+    "steady-posture-1",
+    "darting-stance-1"
+  ],
+  "passive_c": [
+    "drive-atk-2",
+    "drive-atk-1",
+    "spur-atk-1"
+  ],
+  "base_stat": {
+    "star_5": {
+      "hp": 20,
+      "atk": 11,
+      "spd": 5,
+      "def": 7,
+      "res": 3
+    },
+    "growth": {
+      "hp": 55,
+      "atk": 60,
+      "spd": 55,
+      "def": 55,
+      "res": 30,
+      "total": 255
+    },
+    "growth_type": 135
+  }
+}
