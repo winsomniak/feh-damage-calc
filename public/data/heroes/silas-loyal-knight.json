@@ -1,0 +1,47 @@
+{
+  "display": "Silas, Loyal Knight",
+  "name": "Silas",
+  "title": "Loyal Knight",
+  "id": "silas-loyal-knight",
+  "color": "Blue",
+  "weapon_type": "Lance",
+  "link": "https://kagerochart.com/hero/silas-loyal-knight",
+  "move_type": "Cavalry",
+  "weapon": [
+    "slaying-spear-plus",
+    "slaying-spear",
+    "steel-lance",
+    "iron-lance"
+  ],
+  "assist": [
+    "reposition"
+  ],
+  "passive_a": [
+    "steady-stance-3",
+    "steady-stance-2",
+    "steady-stance-1"
+  ],
+  "passive_c": [
+    "even-def-wave-3",
+    "even-def-wave-2",
+    "even-def-wave-1"
+  ],
+  "base_stat": {
+    "star_5": {
+      "hp": 18,
+      "atk": 9,
+      "spd": 5,
+      "def": 10,
+      "res": 4
+    },
+    "growth": {
+      "hp": 50,
+      "atk": 60,
+      "spd": 45,
+      "def": 60,
+      "res": 40,
+      "total": 255
+    },
+    "growth_type": 91
+  }
+}

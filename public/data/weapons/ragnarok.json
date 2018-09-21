@@ -23,7 +23,11 @@
             "full_hp_mod":true
         },
         "recoil_dmg": 5,
-        "stat_mod": {
+        "initiate_mod": {
+            "atk": 5,
+            "spd": 5
+        },
+        "defend_mod": {
             "atk": 5,
             "spd": 5
         }

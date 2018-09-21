@@ -1,0 +1,53 @@
+{
+  "display": "Ophelia, Dramatic Heroine",
+  "name": "Ophelia",
+  "title": "Dramatic Heroine",
+  "id": "ophelia-dramatic-heroine",
+  "color": "Blue",
+  "weapon_type": "Blue Tome",
+  "link": "https://kagerochart.com/hero/ophelia-dramatic-heroine",
+  "move_type": "Infantry",
+  "weapon": [
+    "missiletainn",
+    "shine",
+    "ellight",
+    "light"
+  ],
+  "assist": [
+    "rally-up-atk-plus",
+    "rally-up-atk",
+    "rally-attack"
+  ],
+  "special": [
+    "blazing-light",
+    "rising-light"
+  ],
+  "passive_a": [
+    "sturdy-blow-2",
+    "sturdy-blow-1",
+    "death-blow-1"
+  ],
+  "passive_b": [
+    "chill-res-3",
+    "chill-res-2",
+    "chill-res-1"
+  ],
+  "base_stat": {
+    "star_5": {
+      "hp": 16,
+      "atk": 7,
+      "spd": 9,
+      "def": 5,
+      "res": 8
+    },
+    "growth": {
+      "hp": 50,
+      "atk": 70,
+      "spd": 55,
+      "def": 35,
+      "res": 35,
+      "total": 245
+    },
+    "growth_type": 18
+  }
+}

@@ -11,6 +11,7 @@
             "Staff": true,
             "Blue Tome": true,
             "Green Tome": true,
+            "Tome": true,
             "Red Tome": true
         },
         "stat_mod": {

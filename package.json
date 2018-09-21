@@ -20,6 +20,7 @@
     "lodash": "^4.17.4",
     "material-components-web": "^0.35.0",
     "normalize.css": "^8.0.0",
+    "npm": "^6.4.1",
     "request": "^2.85.0"
   },
   "repository": {

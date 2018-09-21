@@ -5,7 +5,7 @@
     "sp": 400,
     "description": "After combat, inflict Def/Res-7 on target and foes within 2 spaces through their next actions. Damage calculated using lower of foe's Def or Res.",
     "type": "Dagger",
-    "link": "https://kagerochart.com/hero/weapons/felicia-plate",
+    "link": "https://kagerochart.com/hero/weapons/felicias-plate",
     "color": "Colorless",
     "magical": false,
     "LowerResDef":true,
@@ -18,5 +18,5 @@
         "type": "ranged",
         "Special":"Felicia's Plate"
     },
-    "id": "felicia-plate"
+    "id": "felicias-plate"
 }
