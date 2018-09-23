@@ -85,6 +85,8 @@ function isEffective(attacker, defender, battleInfo)
 {
     if(!attacker.weaponData.hasOwnProperty("weapon_effective"))
         return battleInfo;
+    if(defender.weaponData.hasOwnProperty("weapon_defense") && defender.weaponData.weapon_defense.includes(weaponInfo[defender.weaponName].type))
+        return battleInfo;
     if(attacker.weaponData.weapon_effective.includes(weaponInfo[defender.weaponName].type))
     {
         battleInfo.isEff=true;
@@ -467,6 +469,26 @@ function adjacentStatBonus(battleInfo, char, other, charToUse, initiator) {
     return battleInfo;
 }
 
+//Bonus for being solo
+function soloStatBonus(battleInfo, char, other, charToUse, initiator) {
+    checks.forEach(function(key) {
+        var bonus = char[key].solo_stat_bonus;
+        if (!bonus) {
+            return;
+        }
+
+        if (bonus.target === 'self' && bonus.adjacent === 'ally') {
+            if(char.adjacent < 1) {
+                for (b in bonus.mod) {
+                    battleInfo[charToUse][b] += bonus.mod[b];
+                        battleInfo.logMsg += "<li class='battle-interaction'><span class='" + charToUse + "'>" + battleInfo[charToUse].display + "</span> raises " + b + " by " + bonus.mod[b] + " [" + char[key].name + "].</li>";
+                };
+            }
+        }
+    });
+    return battleInfo;
+}
+
 //New increased damage check
 function checkBonusDmg(battleInfo, char)
 {
@@ -593,6 +615,9 @@ function giveBonuses(battleInfo, agent, other, initiator){
 
     //adjacent stat bonus
     battleInfo=adjacentStatBonus(battleInfo, agent, other, agent.agentClass, initiator);
+	
+    //solo stat bonus
+    battleInfo=soloStatBonus(battleInfo, agent, other, agent.agentClass, initiator);
 
     return battleInfo;
 }

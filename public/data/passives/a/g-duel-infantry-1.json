@@ -1,0 +1,19 @@
+{
+    "name": "G Duel Infantry 1",
+    "sp": 70,
+    "type": "A",
+    "description": "Grants HP+3. If unit is 5★ and level 40 and unit's stats total less than 160, treats unit's stats as 160 in modes like Arena. (Higher-scoring opponents will appear. Stat total calculation excludes any values added by merges and skills.)",
+    "icon": "/images/icons/passives/g-duel-infantry-1.png",
+    "stat_mod": {
+        "hp": 3
+    },
+    "differentBST": {
+        "rarity": 5,
+        "level": 40,
+        "newBST": 160
+    },
+    "move_unique": "Infantry",
+    "color_unique": "Green",
+    "link": "https://kagerochart.com/hero/passives/g-duel-infantry-1",
+    "id": "g-duel-infantry-1"
+}

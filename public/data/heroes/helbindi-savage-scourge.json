@@ -7,7 +7,6 @@
   "weapon_type": "Axe",
   "link": "https://kagerochart.com/hero/helbindi-savage-scourge",
   "move_type": "Infantry",
-  "LowestRarity": 1,
   "weapon": [
     "byleistr",
     "silver-axe",
@@ -15,46 +14,40 @@
     "iron-axe"
   ],
   "special": [
-    "glimmer",
-    "night-sky"
+    "vengeance",
+    "retribution"
   ],
   "passive_a": [
-    "fury-3",
-    "fury-2",
-    "fury-1",
-    "steady-stance-3",
-    "steady-stance-2",
-    "steady-stance-1",
-    "death-blow-3",
-    "death-blow-2",
-    "death-blow-1"
+    "g-duel-infantry-3",
+    "g-duel-infantry-2",
+    "g-duel-infantry-1"
   ],
   "passive_b": [
-    "wrath-3",
-    "wrath-2",
-    "wrath-1"
+    "guard-3",
+    "guard-2",
+    "guard-1"
   ],
   "passive_c": [
-    "panic-ploy-3",
-    "panic-ploy-2",
-    "panic-ploy-1"
+    "infantry-pulse-3",
+    "infantry-pulse-2",
+    "infantry-pulse-1"
   ],
   "base_stat": {
     "star_5": {
-      "hp": 19,
+      "hp": 18,
       "atk": 9,
       "spd": 5,
-      "def": 10,
-      "res": 8
+      "def": 9,
+      "res": 7
     },
     "growth": {
       "hp": 60,
       "atk": 60,
-      "spd": 40,
+      "spd": 30,
       "def": 60,
       "res": 55,
-      "total": 275
+      "total": 265
     },
-    "growth_type": 0
+    "growth_type": 191
   }
 }

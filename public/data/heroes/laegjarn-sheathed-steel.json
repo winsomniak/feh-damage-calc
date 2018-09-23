@@ -7,61 +7,47 @@
   "weapon_type": "Sword",
   "link": "https://kagerochart.com/hero/laegjarn-sheathed-steel",
   "move_type": "Flying",
-  "LowestRarity": 1,
   "weapon": [
     "niu",
     "silver-sword",
     "steel-sword",
     "iron-sword"
   ],
-  "assist": [
-    "rally-attack-speed",
-    "rally-attack"
-  ],
   "special": [
-    "moonbow",
-    "new-moon",
-    "reprisal",
-    "retribution"
+    "bonfire",
+    "glowing-ember"
   ],
   "passive_a": [
-    "fury-3",
-    "fury-2",
-    "fury-1",
-    "bracing-blow-2",
-    "bracing-blow-1",
-    "armored-blow-1"
+    "r-duel-flying-3",
+    "r-duel-flying-2",
+    "r-duel-flying-1"
   ],
   "passive_b": [
-    "def-feint-3",
-    "def-feint-2",
-    "def-feint-1",
-    "drag-back"
+    "chill-atk-3",
+    "chill-atk-2",
+    "chill-atk-1"
   ],
   "passive_c": [
-    "guidance-3",
-    "guidance-2",
-    "guidance-1",
-    "ward-fliers",
-    "spur-def-2",
-    "spur-def-1"
+    "distant-guard-3",
+    "distant-guard-2",
+    "distant-guard-1"
   ],
   "base_stat": {
     "star_5": {
-      "hp": 18,
+      "hp": 17,
       "atk": 8,
       "spd": 10,
-      "def": 9,
+      "def": 8,
       "res": 4
     },
     "growth": {
-      "hp": 60,
+      "hp": 55,
       "atk": 55,
       "spd": 60,
       "def": 65,
-      "res": 35,
-      "total": 275
+      "res": 30,
+      "total": 265
     },
-    "growth_type": 0
+    "growth_type": 35
   }
 }

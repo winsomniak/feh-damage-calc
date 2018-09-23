@@ -1,0 +1,53 @@
+{
+  "display": "Flora, Cold as Ice",
+  "name": "Flora",
+  "title": "Cold as Ice",
+  "id": "flora-cold-as-ice",
+  "color": "Red",
+  "weapon_type": "Red Dagger",
+  "link": "https://kagerochart.com/hero/flora-cold-as-ice",
+  "move_type": "Infantry",
+  "weapon": [
+    "hoarfrost-knife",
+    "silver-dagger",
+    "steel-dagger",
+    "iron-dagger"
+  ],
+  "special": [
+    "iceberg",
+    "chilling-wind"
+  ],
+  "passive_a": [
+    "atk-res-solo-3",
+    "atk-res-solo-2",
+    "atk-res-solo-1"
+  ],
+  "passive_b": [
+    "quick-riposte-3",
+    "quick-riposte-2",
+    "quick-riposte-1"
+  ],
+  "passive_c": [
+    "def-ploy-3",
+    "def-ploy-2",
+    "def-ploy-1"
+  ],
+  "base_stat": {
+    "star_5": {
+      "hp": 16,
+      "atk": 8,
+      "spd": 6,
+      "def": 5,
+      "res": 10
+    },
+    "growth": {
+      "hp": 50,
+      "atk": 60,
+      "spd": 40,
+      "def": 30,
+      "res": 65,
+      "total": 245
+    },
+    "growth_type": 7
+  }
+}

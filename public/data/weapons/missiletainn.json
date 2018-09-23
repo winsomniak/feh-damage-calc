@@ -1,0 +1,14 @@
+{
+    "name": "Missiletainn",
+    "might": 14,
+    "range": 2,
+    "sp": 400,
+    "description": "Accelerates Special trigger (cooldown count-1). At the start of turn 1, grants Special cooldown count-1 for each magic ally on your team (including unit).",
+    "type": "Blue Tome",
+    "link": "https://kagerochart.com/hero/weapons/missiletainn",
+    "color": "Blue",
+    "magical": true,
+    "char_unique": true,
+    "spec_cooldown_mod": -1,
+    "id": "missiletainn"
+}

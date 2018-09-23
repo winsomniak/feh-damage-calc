@@ -1,0 +1,17 @@
+{
+    "name": "Atk Res Solo 3",
+    "sp": 240,
+    "type": "A",
+    "description": "If unit is not adjacent to an ally, grants Atk/Res+6 during combat.",
+    "icon": "/images/icons/passives/atk-res-solo-3.png",
+    "link": "https://kagerochart.com/hero/passives/atk-res-solo-3",
+    "solo_stat_bonus": {
+        "target": "self",
+        "adjacent": "ally",
+        "mod": {
+            "atk": 6,
+            "res": 6
+        }
+    },
+    "id": "atk-res-solo-3"
+}

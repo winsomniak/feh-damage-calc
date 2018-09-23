@@ -1,0 +1,49 @@
+{
+  "display": "Garon, King of Nohr",
+  "name": "Garon",
+  "title": "King of Nohr",
+  "id": "garon-king-of-nohr",
+  "color": "Red",
+  "weapon_type": "Red Breath",
+  "LowestRarity": 3,
+  "link": "https://kagerochart.com/hero/garon-king-of-nohr",
+  "move_type": "Infantry",
+  "weapon": [
+    "breath-of-blight",
+    "flametongue",
+    "fire-breath-plus",
+    "fire-breath"
+  ],
+  "special": [
+    "dragon-fang",
+    "dragon-gaze"
+  ],
+  "passive_a": [
+    "distant-def-3",
+    "distant-def-2",
+    "distant-def-1"
+  ],
+  "passive_c": [
+    "panic-ploy-3",
+    "panic-ploy-2",
+    "panic-ploy-1"
+  ],
+  "base_stat": {
+    "star_5": {
+      "hp": 17,
+      "atk": 9,
+      "spd": 5,
+      "def": 9,
+      "res": 8
+    },
+    "growth": {
+      "hp": 60,
+      "atk": 55,
+      "spd": 40,
+      "def": 55,
+      "res": 55,
+      "total": 265
+    },
+    "growth_type": 44
+  }
+}

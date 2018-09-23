@@ -5,6 +5,7 @@
   "id": "silvia-traveling-dancer",
   "color": "Red",
   "weapon_type": "Sword",
+  "LowestRarity": 4,
   "link": "https://kagerochart.com/hero/silvia-traveling-dancer",
   "move_type": "Infantry",
   "weapon": [

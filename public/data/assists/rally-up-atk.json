@@ -1,0 +1,9 @@
+{
+    "name": "Rally Up Atk",
+    "range": 1,
+    "sp": 300,
+    "description": "Grants Atk+3 to target ally and allies within 2 spaces of target (excluding unit) for 1 turn.",
+    "link": "https://kagerochart.com/hero/assists/rally-up-atk",
+    "weapon_restrict": "Staff",
+    "id": "rally-up-atk"
+}

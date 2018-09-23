@@ -1,0 +1,9 @@
+{
+    "name": "Spd/Res Link 2",
+    "sp": 120,
+    "type": "B",
+    "description": "If a movement Assist skill (like Reposition, Shove, Pivot, etc.) is used by unit or targets unit, grants Spd/Res+4 to unit and target ally or unit and targeting ally for 1 turn.",
+    "icon": "/images/icons/passives/spd-res-link-2.png",
+    "link": "https://kagerochart.com/hero/passives/spd-res-link-2",
+    "id": "spd-res-link-2"
+}

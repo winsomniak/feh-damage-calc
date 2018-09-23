@@ -1,0 +1,51 @@
+{
+  "display": "Nina, Eye Spy",
+  "name": "Nina",
+  "title": "Eye Spy",
+  "id": "nina-eye-spy",
+  "color": "Colorless",
+  "weapon_type": "Bow",
+  "link": "https://kagerochart.com/hero/nina-eye-spy",
+  "move_type": "Infantry",
+  "weapon": [
+    "shining-bow-plus",
+    "shining-bow",
+    "steel-bow",
+    "iron-bow"
+  ],
+  "assist": [
+    "draw-back"
+  ],
+  "special": [
+    "moonbow",
+    "new-moon"
+  ],
+  "passive_b": [
+    "spd-res-link-3",
+    "spd-res-link-2",
+    "spd-res-link-1"
+  ],
+  "passive_c": [
+    "bow-valor-3",
+    "bow-valor-2",
+    "bow-valor-1"
+  ],
+  "base_stat": {
+    "star_5": {
+      "hp": 16,
+      "atk": 8,
+      "spd": 11,
+      "def": 3,
+      "res": 7
+    },
+    "growth": {
+      "hp": 45,
+      "atk": 55,
+      "spd": 60,
+      "def": 30,
+      "res": 55,
+      "total": 245
+    },
+    "growth_type": 184
+  }
+}

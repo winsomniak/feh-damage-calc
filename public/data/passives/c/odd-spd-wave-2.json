@@ -1,0 +1,9 @@
+{
+    "name": "Odd Spd Wave 2",
+    "sp": 120,
+    "type": "C",
+    "description": "At start of odd-numbered turns, grants Spd+4 to unit and adjacent allies for 1 turn. (Bonus granted to unit even if no allies are adjacent.)",
+    "icon": "/images/icons/passives/odd-spd-wave-2.png",
+    "link": "https://kagerochart.com/hero/passives/odd-spd-wave-2",
+    "id": "odd-spd-wave-2"
+}
