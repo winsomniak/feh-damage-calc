@@ -1921,7 +1921,7 @@ function singleCombat(battleInfo, initiator, logIntro, brave) {
     }//Desperation or brave problems
 
     var beforemi = battleInfo.mirroringdmg;
-
+    battleInfo.reduction = 1;
     // percentage damage reduction from defender
     if (defender.specialData.hasOwnProperty("reduce_dmg") && defender.specCurrCooldown <= 0 && defender.specialData.reduce_dmg.range === battleInfo.atkRange) {
 
@@ -1929,38 +1929,33 @@ function singleCombat(battleInfo, initiator, logIntro, brave) {
             battleInfo.mirroringdmg += dmg; //If it can, let's store the initial dmg
             beforemi = 0;
         }
-        dmg -= roundNum(dmg * defender.specialData.reduce_dmg.dmg_mod, false);
+        battleInfo.reduction *= (1 - defender.specialData.reduce_dmg.dmg_mod);
         battleInfo.logMsg += "Opponent reduces damage inflicted from ";
         if (battleInfo.atkRange === 1) {
             battleInfo.logMsg += "adjacent attacks ";
         } else {
             battleInfo.logMsg += battleInfo.atkRange.toString() + " spaces away ";
         }
-        battleInfo.logMsg += "by " + (defender.specialData.reduce_dmg.dmg_mod * 100).toString() + "% [" + specialInfo[defender.special].name + "]. ";
+        battleInfo.logMsg += "[" + specialInfo[defender.special].name + "]. ";
         defSpec = true;
     }
 
     // Damage reduction for sequential attacks (originally for Urvan)
     if (battleInfo.lastActor === attacker.name) {
-
-        var multiplier = consecutiveDamageReduction(dmg, defender, attacker);
-
-        if (multiplier !== 1) {
-            dmg = roundNum(dmg * multiplier, true);
-            battleInfo.logMsg += "Opponent reduces damage from consecutive attack by " + ( (1 - multiplier) * 100 ).toFixed(0) + "%. ";
-        }
+        battleInfo = consecutiveDamageReduction(dmg, defender, attacker, battleInfo);
     }
 
     // First damage reduction effects (such as divine tyrfing and thani)
     if (defender.attacksReceived === 0 && firstDmgReduction(defender, attacker)) {
 
-        var multiplier = defender.weaponData.first_dmg_reduction.multiplier;
-
-        dmg = roundNum(dmg * multiplier, true);
-
-        battleInfo.logMsg += "Opponent reduces damage from first attack by " + ( (1 - multiplier) * 100 ).toFixed(0) + "%. ";
+        battleInfo.reduction *= defender.weaponData.first_dmg_reduction.multiplier;
+        battleInfo.logMsg += "Opponent reduces damage from first attack [" + defender.weaponData.name + "]. ";
     }
 
+    if(battleInfo.reduction !== 1) {
+        battleInfo.logMsg += "Opponent reduced damage by " + ((1 - battleInfo.reduction)*100).toString() + "% in total. ";
+        dmg = roundNum(dmg * battleInfo.reduction, true);
+    }
     //Hacky bugfix for the Brave Ike mirror match issue
     if(attacker.name === defender.name)
         attacker.name += "o";
