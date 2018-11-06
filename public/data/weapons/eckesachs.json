@@ -14,7 +14,7 @@
     "refinable": {
         "type": "melee",
         "Special": "Eckesachs",
-        "description": "Inflicts Def-6 on foes (excluding dragons) within 2 spaces at the start of each turn, through their next actions."
+        "description": "At start of turn, inflicts Def-6 on foes (excluding dragons) within 2 spaces through their next actions."
     },
     "char_unique": true,
     "id": "eckesachs"

@@ -11,7 +11,7 @@
     "char_unique": true,
     "refinable": {
         "type": "ranged",
-        "description": "If in combat against magic foe, reduces damage from foe's first attack by 30%.",
+        "description": "Reduces damage from magic foe's first attack by 30%.",
         "Special": "Brynhildr",
         "first_dmg_reduction": {
             "weapon_type": [

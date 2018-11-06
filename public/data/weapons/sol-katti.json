@@ -14,7 +14,7 @@
     "char_unique": true,
     "refinable": {
         "type": "melee",
-        "description": "If unit initiates combat at HP ≤ 75%, any follow-up attack occurs immediately.",
+        "description": "If unit's HP ≤ 75% and unit initiates combat, unit can make a follow-up attack before foe can counterattack.",
         "desperation": {
             "threshold": 0.75
         },

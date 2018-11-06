@@ -11,7 +11,7 @@
     "convert_penalties": true,
     "refinable": {
         "type": "melee",
-        "description": "After combat, bonuses on target and foes 2 spaces of target become penalties through their next actions."
+        "description": "After combat, if unit attacked, converts bonuses on target and foes within 2 spaces of target into penalties through their next actions."
     },
     "id": "legions-axe-plus"
 }

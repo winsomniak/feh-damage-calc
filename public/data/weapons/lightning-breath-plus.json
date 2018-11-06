@@ -12,7 +12,7 @@
     "refinable": {
         "type": "melee",
         "might": 12,
-        "description": "Enables counter-attack regardless of attacker's range. Slows Special trigger (cooldown count+1). If foe's Range = 2, damage calculated using the lower of foe's Def or Res.",
+        "description": "Slows Special trigger (cooldown count+1). Unit can counterattack regardless of foe's range. If foe's Range = 2, calculates damage using the lower of foe's Def or Res.",
         "LowerResDefRange": 2
     },
     "id": "lightning-breath-plus"

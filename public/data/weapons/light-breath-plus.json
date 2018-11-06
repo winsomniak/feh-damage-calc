@@ -10,7 +10,7 @@
     "refinable": {
         "type": "melee",
         "might": 14,
-        "description": "After combat, grants Atk/Spd/Def/Res+5 to unit and allies within 2 spaces for 1 turn. If foe's Range = 2, damage calculated using the lower of foe's Def or Res.",
+        "description": "After combat, if unit attacked, grants Atk/Spd/Def/Res+5 to unit and allies within 2 spaces of unit for 1 turn. If foe's Range = 2, calculates damage using the lower of foe's Def or Res.",
         "LowerResDefRange": 2,
         "after_mod": {
             "atk": 5,

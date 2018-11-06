@@ -12,7 +12,7 @@
     "refinable": {
         "type": "melee",
         "Special": "Nóatún",
-        "description": "If unit’s HP ≤ 50%, unit can move to a space adjacent to any ally."
+        "description": "If unit's HP ≤ 50%, unit can move to a space adjacent to any ally."
     },
     "id": "noatun"
 }

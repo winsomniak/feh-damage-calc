@@ -13,7 +13,7 @@
     },
     "refinable": {
         "type": "melee",
-        "description": "Grants Res+7 when the unit is under attack.",
+        "description": "If foe initiates combat, grants Res+7 during combat.",
         "defend_mod": {
             "res": 7
         }

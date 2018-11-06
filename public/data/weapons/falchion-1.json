@@ -3,7 +3,7 @@
     "might": 16,
     "range": 1,
     "sp": 400,
-    "description": "Effective against dragons. At the start of every third turn, unit recovers 10 HP.",
+    "description": "Effective against dragon foes. At the start of every third turn, restores 10 HP.",
     "type": "Sword",
     "link": "https://kagerochart.com/hero/weapons/falchion",
     "weapon_effective": [
@@ -15,7 +15,7 @@
     "refinable": {
         "type": "melee",
         "Special": "Falchion 1",
-        "description": "Effective against dragons. At the start of every second turn, unit recovers 10 HP."
+        "description": "Effective against dragon foes. At the start of every second turn, restores 10 HP."
     },
     "char_unique": true,
     "id": "falchion-1"

@@ -21,7 +21,7 @@
         "nullify_enemy_bonuses": {
             "all": true
         },
-        "description": "Neutralizes foe’s bonuses (from skills like Fortify, Rally, etc.) during combat."
+        "description": "Neutralizes foes' bonuses (from skills like Fortify, Rally, etc.) during combat."
     },
     "id": "fensalir"
 }

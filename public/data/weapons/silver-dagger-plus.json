@@ -15,7 +15,7 @@
     "refinable": {
         "type": "ranged",
         "might": 14,
-        "description": "After combat, inflict Def/Res-7 on target and foes within 2 spaces through their next actions."
+        "description": "After combat, if unit attacked, inflicts Def/Res-7 on target and foes within 2 spaces of target through their next actions."
     },
     "id": "silver-dagger-plus"
 }

@@ -10,7 +10,7 @@
     "refinable": {
         "type": "melee",
         "might": 14,
-        "description": "After combat, if unit attacked, inflicts Atk/Spd-7 on target and foes within 2 spaces of target through their next actions. If foe's Range = 2, damage calculated using the lower of foe's Def or Res.",
+        "description": "After combat, if unit attacked, inflicts Atk/Spd-7 on target and foes within 2 spaces of target through their next actions. If foe's Range = 2, calculates damage using the lower of foe's Def or Res.",
         "LowerResDefRange": 2,
         "seal": {
             "atk": -7,

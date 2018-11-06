@@ -12,7 +12,7 @@
     "refinable": {
         "type": "ranged",
         "Special": "Cymbeline",
-        "description": "Grants allies within 2 spaces Atk+3 during combat."
+        "description": "Grants Atk+3 to allies within 2 spaces during combat."
     },
     "id": "cymbeline"
 }

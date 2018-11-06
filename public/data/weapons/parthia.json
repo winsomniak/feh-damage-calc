@@ -18,7 +18,7 @@
     "refinable": {
         "type": "ranged",
         "Special": "Parthia",
-        "description": "Effective against flying foes. If foe uses magic, damage from first attack received by unit during combat reduced by 30%.",
+        "description": "Effective against flying foes. Reduces damage from magic foe's first attack by 30%.",
         "remove": {
             "initiate_mod": true
         },
