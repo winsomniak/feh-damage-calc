@@ -3,7 +3,7 @@
     "might": 16,
     "range": 1,
     "sp": 400,
-    "description": "If unit initiates combat at HP ≤ 50%, any follow-up attack occurs immediately.",
+    "description": "If unit's HP ≤ 50% and unit initiates combat, unit can make a follow-up attack before foe can counterattack.",
     "type": "Sword",
     "link": "https://kagerochart.com/hero/weapons/sol-katti",
     "color": "Red",

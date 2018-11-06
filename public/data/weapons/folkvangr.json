@@ -3,7 +3,7 @@
     "might": 16,
     "range": 1,
     "sp": 400,
-    "description": "Grants Atk+5 at start of turn if HP ≤ 50%.",
+    "description": "At start of turn, if unit's HP ≤ 50%, grants Atk+5 for 1 turn.",
     "type": "Sword",
     "link": "https://kagerochart.com/hero/weapons/folkvangr",
     "color": "Red",
@@ -12,10 +12,10 @@
         "atk": 5
     },
     "char_unique": true,
-    "refinable":{
-        "type":"melee",
-        "remove":{
-            "defiant":true
+    "refinable": {
+        "type": "melee",
+        "remove": {
+            "defiant": true
         },
         "below_threshold_mod": {
             "threshold": 0.8,
@@ -24,7 +24,7 @@
                 "def": 7
             }
         },
-        "Special":"Fólkvangr",
+        "Special": "Fólkvangr",
         "description": "At start of combat, if unit's HP ≤ 80%, grants Atk/Def+7 during combat."
     },
     "id": "folkvangr"

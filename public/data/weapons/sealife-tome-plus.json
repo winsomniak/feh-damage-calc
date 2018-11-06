@@ -3,13 +3,13 @@
     "might": 12,
     "range": 2,
     "sp": 300,
-    "description": "Grants allies within 2 spaces Atk/Spd+1 during combat.",
+    "description": "Grants Atk/Spd+1 to allies within 2 spaces during combat.",
     "type": "Blue Tome",
     "color": "Blue",
     "link": "https://kagerochart.com/hero/weapons/sealife-tome-plus",
     "id": "sealife-tome-plus",
-    "refinable":{
-        "type":"ranged"
+    "refinable": {
+        "type": "ranged"
     },
     "magical": true
 }

@@ -24,8 +24,8 @@
             "res"
         ]
     },
-    "stat_mod":{
-        "spd":3
+    "stat_mod": {
+        "spd": 3
     },
     "char_unique": true,
     "id": "exalted-falchion"

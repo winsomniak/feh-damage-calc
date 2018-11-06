@@ -3,13 +3,13 @@
     "might": 12,
     "range": 2,
     "sp": 300,
-    "description": "Grants allies within 2 spaces Atk/Spd+1 during combat.",
+    "description": "Grants Atk/Spd+1 to allies within 2 spaces during combat.",
     "type": "Red Tome",
     "color": "Red",
     "link": "https://kagerochart.com/hero/weapons/tomato-tome-plus",
     "id": "tomato-tome-plus",
-    "refinable":{
-        "type":"ranged"
+    "refinable": {
+        "type": "ranged"
     },
     "magical": true
 }

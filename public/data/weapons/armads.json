@@ -3,7 +3,7 @@
     "might": 16,
     "range": 1,
     "sp": 400,
-    "description": "Unit makes a guaranteed follow-up attack when attacked at HP ≥ 80%.",
+    "description": "If unit's HP ≥ 80% and foe initiates combat, unit makes a guaranteed follow-up attack.",
     "type": "Axe",
     "link": "https://kagerochart.com/hero/weapons/armads",
     "color": "Green",

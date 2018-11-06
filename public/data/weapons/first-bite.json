@@ -3,7 +3,7 @@
     "might": 10,
     "range": 1,
     "sp": 200,
-    "description": "Grants allies withing 2 spaces Def/Res+2 through their next actions after any combat this unit initiates.",
+    "description": "If unit initiates combat, grants Def/Res+2 to allies within 2 spaces for 1 turn after combat.",
     "type": "Lance",
     "color": "Blue",
     "magical": false,

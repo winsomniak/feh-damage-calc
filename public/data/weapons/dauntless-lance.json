@@ -13,7 +13,7 @@
         "Armored"
     ],
     "refinable": {
-        "Special":"Dauntless Lance",
+        "Special": "Dauntless Lance",
         "type": "melee"
     },
     "char_unique": true,

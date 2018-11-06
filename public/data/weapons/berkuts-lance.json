@@ -3,7 +3,7 @@
     "might": 10,
     "range": 1,
     "sp": 200,
-    "description": "Grants Res+4 when the unit is under attack.",
+    "description": "If foe initiates combat, grants Res+4 during combat.",
     "type": "Lance",
     "color": "Blue",
     "magical": false,

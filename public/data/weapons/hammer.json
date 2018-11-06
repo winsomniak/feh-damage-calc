@@ -3,7 +3,7 @@
     "might": 8,
     "range": 1,
     "sp": 200,
-    "description": "Effective against armored units.",
+    "description": "Effective against armored foes.",
     "type": "Axe",
     "color": "Green",
     "magical": false,

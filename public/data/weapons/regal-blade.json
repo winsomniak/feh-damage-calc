@@ -3,7 +3,7 @@
     "might": 16,
     "range": 1,
     "sp": 400,
-    "description": "If foe's HP is 100% when combat starts, unit receives Atk/Spd+2 during combat.",
+    "description": "At start of combat, if foe's HP = 100%, grants Atk/Spd+2 during combat.",
     "type": "Sword",
     "link": "https://kagerochart.com/hero/weapons/regal-blade",
     "color": "Red",
@@ -13,8 +13,8 @@
         "spd": 2
     },
     "refinable": {
-        "remove":{
-            "foe_full_hp_mod":true
+        "remove": {
+            "foe_full_hp_mod": true
         },
         "type": "melee",
         "foe_full_hp_mod": {

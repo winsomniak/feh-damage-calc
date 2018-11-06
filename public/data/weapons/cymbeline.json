@@ -3,7 +3,7 @@
     "might": 14,
     "range": 2,
     "sp": 400,
-    "description": "Grants adjacent allies Atk+4 through their next actions after any combat this unit initiates.",
+    "description": "If unit initiates combat, grants Atk+4 to adjacent allies for 1 turn after combat.",
     "type": "Red Tome",
     "link": "https://kagerochart.com/hero/weapons/cymbeline",
     "color": "Red",

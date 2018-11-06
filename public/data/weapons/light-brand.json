@@ -7,16 +7,14 @@
     "type": "Sword",
     "link": "https://kagerochart.com/hero/weapons/light-brand",
     "color": "Red",
-    "stat_mod":
-    {
-        "def":3
+    "stat_mod": {
+        "def": 3
     },
-    "dmg_comp":
-    {
-        "great":"def",
-        "low":"res",
-        "quantity":5,
-        "dmg":7
+    "dmg_comp": {
+        "great": "def",
+        "low": "res",
+        "quantity": 5,
+        "dmg": 7
     },
     "magical": false,
     "char_unique": true,

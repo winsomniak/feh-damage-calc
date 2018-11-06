@@ -3,7 +3,7 @@
     "might": 9,
     "range": 1,
     "sp": 200,
-    "description": "Grants adjacent allies Def/Res+4 through their next actions after any combat this unit initiates.",
+    "description": "If unit initiates combat, grants Def/Res+4 to adjacent allies for 1 turn after combat.",
     "type": "Breath",
     "magical": true,
     "link": "https://kagerochart.com/hero/weapons/light-breath",

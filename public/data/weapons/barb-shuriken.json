@@ -3,7 +3,7 @@
     "might": 8,
     "range": 2,
     "sp": 200,
-    "description": "Accelerates Special trigger (cooldown count-1). After combat, if unit attacked, inflicts Def/Res-5 on target and foes within 2 spaces through their next actions.",
+    "description": "Accelerates Special trigger (cooldown count-1). After combat, if unit attacked, inflicts Def/Res-5 on target and foes within 2 spaces of target through their next actions.",
     "type": "Dagger",
     "spec_cooldown_mod": -1,
     "seal": {

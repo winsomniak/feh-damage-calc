@@ -7,8 +7,8 @@
     "type": "Breath",
     "magical": true,
     "LowerResDefRange": 2,
-    "stat_mod":{
-        "def":3
+    "stat_mod": {
+        "def": 3
     },
     "weapon_effective": [
         "Breath",

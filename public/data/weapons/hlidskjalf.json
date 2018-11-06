@@ -8,7 +8,7 @@
     "type": "Staff",
     "link": "https://kagerochart.com/hero/weapons/hlioskjalf",
     "color": "Colorless",
-    "prevent_enemy_counter" : 0,
+    "prevent_enemy_counter": 0,
     "magical": true,
     "seal": {
         "atk": -4,

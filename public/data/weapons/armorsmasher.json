@@ -3,7 +3,7 @@
     "might": 10,
     "range": 1,
     "sp": 200,
-    "description": "Effective against armored units.",
+    "description": "Effective against armored foes.",
     "type": "Sword",
     "color": "Red",
     "magical": false,

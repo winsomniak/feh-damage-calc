@@ -3,7 +3,7 @@
     "might": 6,
     "range": 2,
     "sp": 150,
-    "description": "After any combat, restrict foe from moving more than 1 space through their next actions.",
+    "description": "After combat, if unit attacked, inflicts status on foe restricting movement to 1 space through its next action.",
     "type": "Staff",
     "color": "Colorless",
     "magical": true,

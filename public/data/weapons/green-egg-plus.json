@@ -3,7 +3,7 @@
     "might": 11,
     "range": 2,
     "sp": 300,
-    "description": "If unit initiates attack, unit recovers 4 HP after the battle.",
+    "description": "If unit initiates combat, restores 4 HP after combat.",
     "type": "Green Tome",
     "link": "https://kagerochart.com/hero/weapons/green-egg-plus",
     "color": "Green",
@@ -14,9 +14,8 @@
         "description": "Unit recovers 4 HP after battle.",
         "might": 12,
         "heal": 4,
-        "remove":
-        {
-        "initiate_heal":true
+        "remove": {
+            "initiate_heal": true
         }
     },
     "id": "green-egg-plus"

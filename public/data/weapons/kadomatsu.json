@@ -3,7 +3,7 @@
     "might": 10,
     "range": 1,
     "sp": 200,
-    "description": "Grants Def/Res+2 during combat to allies within 2 spaces.",
+    "description": "Grants Def/Res+2 to allies within 2 spaces during combat.",
     "type": "Sword",
     "color": "Red",
     "magical": false,

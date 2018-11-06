@@ -3,7 +3,7 @@
     "might": 14,
     "range": 2,
     "sp": 400,
-    "description": "If unit has 100% HP at the start of combat, unit receives Atk/Spd+5. If attacking, unit will receive 5 damage after combat.",
+    "description": "At start of combat, if unit's HP = 100%, grants Atk/Spd+5, but after combat, if unit attacked, deals 5 damage to unit.",
     "type": "Red Tome",
     "link": "https://kagerochart.com/hero/weapons/ragnarok",
     "color": "Red",
@@ -18,9 +18,9 @@
         "type": "ranged",
         "Special": "Ragnarok",
         "description": "Grants Atk/Spd+5 during combat. After combat, if unit attacked, deals 5 damage to unit.",
-        "remove":{
-            "full_hp_atk_recoil_dmg":true,
-            "full_hp_mod":true
+        "remove": {
+            "full_hp_atk_recoil_dmg": true,
+            "full_hp_mod": true
         },
         "recoil_dmg": 5,
         "initiate_mod": {

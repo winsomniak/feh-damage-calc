@@ -3,7 +3,7 @@
     "might": 14,
     "range": 2,
     "sp": 400,
-    "description": "If unit initiates attack, restrict foe from moving more than 1 space through their next actions.",
+    "description": "If unit initiates combat, inflicts status on foe restricting movement to 1 space through its next action.",
     "type": "Red Tome",
     "link": "https://kagerochart.com/hero/weapons/brynhildr",
     "color": "Red",
@@ -11,7 +11,7 @@
     "char_unique": true,
     "refinable": {
         "type": "ranged",
-        "description":"If in combat against magic foe, reduces damage from foe's first attack by 30%.",
+        "description": "If in combat against magic foe, reduces damage from foe's first attack by 30%.",
         "Special": "Brynhildr",
         "first_dmg_reduction": {
             "weapon_type": [

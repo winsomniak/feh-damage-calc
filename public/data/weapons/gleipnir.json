@@ -6,15 +6,15 @@
     "type": "Red Tome",
     "color": "Red",
     "magical": true,
-	"description": "Grants Res+3. If foes' HP = 100% at start of combat, grants Atk/Spd+3 during combat.",
-	"foe_full_hp_mod": {
-		"atk": 3,
-		"spd": 3
-	},
-	"stat_mod": {
-		"res": 3
-	},
-	"char_unique": true,
+    "description": "Grants Res+3. At start of combat, if foe's HP = 100%, grants Atk/Spd+3 during combat.",
+    "foe_full_hp_mod": {
+        "atk": 3,
+        "spd": 3
+    },
+    "stat_mod": {
+        "res": 3
+    },
+    "char_unique": true,
     "link": "https://kagerochart.com/hero/weapons/gleipnir",
     "id": "gleipnir"
 }

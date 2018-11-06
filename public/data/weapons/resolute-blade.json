@@ -3,7 +3,7 @@
     "might": 16,
     "range": 1,
     "sp": 400,
-    "description": "Grants Atk+3. Grants +10 to damage when Special triggers.",
+    "description": "Grants Atk+3. Deals +10 damage when Special triggers.",
     "type": "Sword",
     "link": "https://kagerochart.com/hero/weapons/resolute-blade",
     "stat_mod": {

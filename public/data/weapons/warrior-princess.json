@@ -9,9 +9,8 @@
     "color": "Colorless",
     "magical": false,
     "char_unique": true,
-    "stat_mod":
-    {
-        "spd":3
+    "stat_mod": {
+        "spd": 3
     },
     "move_effective": [
         "Armored",

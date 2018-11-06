@@ -5,8 +5,8 @@
     "sp": 400,
     "description": "Grants Def+3. If the number of foes within 2 spaces (excluding target) ≥ the number of allies within 2 spaces (excluding unit), grants Atk/Spd/Def/Res+4 during combat.",
     "type": "Axe",
-    "stat_mod":{
-        "def":3
+    "stat_mod": {
+        "def": 3
     },
     "link": "https://kagerochart.com/hero/weapons/wolf-berg",
     "color": "Green",
@@ -22,6 +22,6 @@
         }
     },
     "magical": false,
-    "char_unique":true,
+    "char_unique": true,
     "id": "wolf-berg"
 }

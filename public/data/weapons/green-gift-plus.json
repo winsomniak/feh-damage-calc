@@ -13,13 +13,13 @@
             "Green Tome": true,
             "Blue Tome": true,
             "Tome": true,
-            "Bow":true,
-            "Dagger":true,
-            "Staff":true
+            "Bow": true,
+            "Dagger": true,
+            "Staff": true
         }
     },
-    "refinable":{
-        "type":"ranged"
+    "refinable": {
+        "type": "ranged"
     },
     "link": "https://kagerochart.com/hero/weapons/green-gift-plus",
     "id": "green-gift-plus"

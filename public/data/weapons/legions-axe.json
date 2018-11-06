@@ -3,7 +3,7 @@
     "might": 10,
     "range": 1,
     "sp": 200,
-    "description": "After combat, bonuses on foe become penalties through their next action.",
+    "description": "After combat, if unit attacked, converts bonuses on foe into penalties through its next action.",
     "type": "Axe",
     "color": "Green",
     "magical": false,

@@ -3,7 +3,7 @@
     "might": 16,
     "range": 1,
     "sp": 400,
-    "description": "Grants Atk/Spd+4 during combat if unit initiates combat.",
+    "description": "If unit initiates combat, grants Atk/Spd+4 during combat.",
     "type": "Sword",
     "link": "https://kagerochart.com/hero/weapons/dark-greatsword",
     "initiate_mod": {

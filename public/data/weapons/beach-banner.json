@@ -5,7 +5,7 @@
     "sp": 200,
     "type": "Axe",
     "color": "Green",
-    "description":"If unit initiates combat, grants Atk/Spd/Def/Res+2 during combat.",
+    "description": "If unit initiates combat, grants Atk/Spd/Def/Res+2 during combat.",
     "magical": false,
     "initiate_mod": {
         "atk": 2,

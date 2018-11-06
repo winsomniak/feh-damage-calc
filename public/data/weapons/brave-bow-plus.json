@@ -3,7 +3,7 @@
     "might": 7,
     "range": 2,
     "sp": 300,
-    "description": "Spd-5. Effective against flying units. Attack twice when initiating combat.",
+    "description": "Effective against flying foes. Inflicts Spd-5. If unit initiates combat, unit attacks twice.",
     "type": "Bow",
     "link": "https://kagerochart.com/hero/weapons/brave-bow-plus",
     "color": "Colorless",

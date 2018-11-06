@@ -3,13 +3,13 @@
     "might": 12,
     "range": 2,
     "sp": 300,
-    "description": "If unit initiates attack, adjacent allies recover 7 HP after combat.",
+    "description": "If unit initiates combat, restores 7 HP to adjacent allies after combat.",
     "type": "Blue Tome",
     "color": "Blue",
     "link": "https://kagerochart.com/hero/weapons/dancers-score-plus",
     "id": "dancers-score-plus",
-    "refinable":{
-        "type":"ranged"
+    "refinable": {
+        "type": "ranged"
     },
     "magical": true
 }

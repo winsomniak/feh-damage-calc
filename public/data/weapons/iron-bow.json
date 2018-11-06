@@ -3,7 +3,7 @@
     "might": 4,
     "range": 2,
     "sp": 50,
-    "description": "Effective against flying units.",
+    "description": "Effective against flying foes.",
     "type": "Bow",
     "color": "Colorless",
     "magical": false,

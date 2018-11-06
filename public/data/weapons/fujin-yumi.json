@@ -3,7 +3,7 @@
     "might": 14,
     "range": 2,
     "sp": 400,
-    "description": "Effective against flying units. Unit can pass through foes if own HP ≥ 50%.",
+    "description": "Effective against flying foes. If unit's HP ≥ 50%, unit can move through foes' spaces.",
     "type": "Bow",
     "link": "https://kagerochart.com/hero/weapons/fujin-yumi",
     "color": "Colorless",

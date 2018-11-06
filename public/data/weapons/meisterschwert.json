@@ -3,7 +3,7 @@
     "might": 11,
     "range": 1,
     "sp": 400,
-    "description": "Spd-5. Attack twice.",
+    "description": "Inflicts Spd-5. Unit attacks twice. (Even if foe initiates combat, unit attacks twice.)",
     "type": "Sword",
     "link": "https://kagerochart.com/hero/weapons/meisterschwert",
     "color": "Red",

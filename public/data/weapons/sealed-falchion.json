@@ -3,7 +3,7 @@
     "might": 16,
     "range": 1,
     "sp": 400,
-    "description": "Effective against dragons. If unit's HP < 100% at start of combat, grants Atk/Spd/Def/Res+5 during combat.",
+    "description": "Effective against dragon foes. At start of combat, if unit's HP < 100%, grants Atk/Spd/Def/Res+5 during combat.",
     "type": "Sword",
     "link": "https://kagerochart.com/hero/weapons/sealed-falchion",
     "weapon_effective": [
@@ -12,11 +12,11 @@
         "Green Breath",
         "Blue Breath"
     ],
-    "not_full_hp_mod":{
-        "atk":5,
-        "spd":5,
-        "def":5,
-        "res":5
+    "not_full_hp_mod": {
+        "atk": 5,
+        "spd": 5,
+        "def": 5,
+        "res": 5
     },
     "char_unique": true,
     "id": "sealed-falchion"

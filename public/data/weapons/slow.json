@@ -3,7 +3,7 @@
     "might": 5,
     "range": 2,
     "sp": 150,
-    "description": "After combat, inflicts Spd-6 on foe through their next actions.",
+    "description": "After combat, if unit attacked, inflicts Spd-6 on foe through its next action.",
     "type": "Staff",
     "color": "Colorless",
     "magical": true,

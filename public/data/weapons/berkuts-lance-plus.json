@@ -3,7 +3,7 @@
     "might": 14,
     "range": 1,
     "sp": 300,
-    "description": "Grants Res+4 when the unit is under attack.",
+    "description": "If foe initiates combat, grants Res+4 during combat.",
     "type": "Lance",
     "link": "https://kagerochart.com/hero/weapons/berkuts-lance-plus",
     "color": "Blue",

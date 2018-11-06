@@ -3,7 +3,7 @@
     "might": 9,
     "range": 1,
     "sp": 200,
-    "description": "Grants +10 to damage when Special triggers.",
+    "description": "Deals +10 damage when Special triggers.",
     "type": "Axe",
     "color": "Green",
     "magical": false,

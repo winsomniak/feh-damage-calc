@@ -3,7 +3,7 @@
     "might": 10,
     "range": 2,
     "sp": 300,
-    "description": "After combat, if unit attacked, prevents target and foes within 1 space of target from moving more than 1 space through their next actions.",
+    "description": "After combat, if unit attacked, inflicts status on target and foes within 1 space of target restricting movement to 1 space through their next actions.",
     "type": "Staff",
     "link": "https://kagerochart.com/hero/weapons/gravity-plus",
     "color": "Colorless",

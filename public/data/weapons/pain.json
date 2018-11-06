@@ -3,7 +3,7 @@
     "might": 3,
     "range": 2,
     "sp": 150,
-    "description": "Inflicts 10 damage on foe after combat.",
+    "description": "After combat, if unit attacked, deals 10 damage to foe.",
     "type": "Staff",
     "color": "Colorless",
     "magical": true,

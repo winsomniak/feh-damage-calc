@@ -3,7 +3,7 @@
     "might": 5,
     "range": 1,
     "sp": 200,
-    "description": "Spd-5. Attack twice when initiating combat.",
+    "description": "Inflicts Spd-5. If unit initiates combat, unit attacks twice.",
     "type": "Axe",
     "color": "Green",
     "magical": false,

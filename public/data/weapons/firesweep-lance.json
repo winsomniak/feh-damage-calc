@@ -3,7 +3,7 @@
     "might": 11,
     "range": 1,
     "sp": 200,
-    "description": "Unit and enemies cannot use counterattacks.",
+    "description": "Unit and foe cannot counterattack.",
     "type": "Lance",
     "color": "Blue",
     "magical": false,

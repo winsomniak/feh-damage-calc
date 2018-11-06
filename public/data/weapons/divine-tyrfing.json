@@ -3,7 +3,7 @@
     "might": 16,
     "range": 1,
     "sp": 400,
-    "description": "Grants Res+3. If in combat against foe using magic, unit receives 50% less damage from the first attack.",
+    "description": "Grants Res+3. Reduces damage from magic foe's first attack by 50%.",
     "type": "Sword",
     "link": "https://kagerochart.com/hero/weapons/divine-tyrfing",
     "stat_mod": {

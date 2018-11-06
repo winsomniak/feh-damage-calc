@@ -3,7 +3,7 @@
     "might": 14,
     "range": 2,
     "sp": 400,
-    "description": "Grants Res+3. Effective against armored and cavalry foes. Against armored and cavalry foes using bow, dagger, magic, or staff, damage from first attack received by unit during combat reduced by 30%.",
+    "description": "Effective against armored and cavalry foes. Grants Res+3. If armored or cavalry foe uses bow, dagger, magic, or staff, reduces damage from foe's first attack by 30%.",
     "type": "Blue Tome",
     "link": "https://kagerochart.com/hero/weapons/thani",
     "color": "Blue",

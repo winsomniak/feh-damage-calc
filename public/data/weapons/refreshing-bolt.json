@@ -3,7 +3,7 @@
     "might": 8,
     "range": 2,
     "sp": 200,
-    "description": "If unit has 100% HP at start of combat, unit gets Atk/Spd/Def/Res+2.If attacking, unit will take 2 damage after combat.",
+    "description": "Effective against flying foes. At start of combat, if unit's HP = 100%, grants Atk/Spd/Def/Res+2, but after combat, if unit attacked, deals 2 damage to unit.",
     "type": "Bow",
     "color": "Colorless",
     "magical": false,
