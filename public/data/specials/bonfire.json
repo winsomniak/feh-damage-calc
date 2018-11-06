@@ -2,7 +2,7 @@
     "name": "Bonfire",
     "cooldown": 3,
     "sp": 200,
-    "description": "Boosts damage dealt by 50% of unit's Def.",
+    "description": "Boosts damage by 50% of unit's Def.",
     "link": "https://kagerochart.com/hero/specials/bonfire",
     "dmg_buff_by_stat": {
         "stat": "def",

@@ -2,7 +2,7 @@
     "name": "Luna",
     "cooldown": 3,
     "sp": 200,
-    "description": "Resolve combat as if foe suffered Def/Res-50%.",
+    "description": "Treats foe's Def/Res as if reduced by 50% during combat.",
     "enemy_def_res_mod": 0.5,
     "weapon_restrict": "Staff",
     "link": "https://kagerochart.com/hero/specials/luna",

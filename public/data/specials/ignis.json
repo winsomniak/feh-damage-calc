@@ -2,7 +2,7 @@
     "name": "Ignis",
     "cooldown": 4,
     "sp": 200,
-    "description": "Boosts damage dealt by 80% of unit's Def.",
+    "description": "Boosts damage by 80% of unit's Def.",
     "link": "https://kagerochart.com/hero/specials/ignis",
     "dmg_buff_by_stat": {
         "stat": "def",

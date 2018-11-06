@@ -2,7 +2,7 @@
     "name": "Holy Vestments",
     "cooldown": 3,
     "sp": 100,
-    "description": "Reduces damage inflicted by attacks from foes 2 spaces away by 30%.",
+    "description": "If foe's Range = 2, reduces damage from that foe's attack by 30%.",
     "reduce_dmg": {
         "range": 2,
         "dmg_mod": 0.3

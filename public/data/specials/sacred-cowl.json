@@ -2,7 +2,7 @@
     "name": "Sacred Cowl",
     "cooldown": 2,
     "sp": 200,
-    "description": "Reduces damage inflicted by attacks from foes 2 spaces away by 30%.",
+    "description": "If foe's Range = 2, reduces damage from that foe's attack by 30%.",
     "link": "https://kagerochart.com/hero/specials/sacred-cowl",
     "reduce_dmg": {
         "range": 2,

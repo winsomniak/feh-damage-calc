@@ -2,7 +2,7 @@
     "name": "Radiant Aether",
     "cooldown": 4,
     "sp": 500,
-    "description": "Resolve combat as if foe suffered Def/Res-50%.Unit recovers HP=half damage dealt. This skill cannot be inherited.",
+    "description": "During combat, treats foe's Def/Res as if reduced by 50%. Restores HP = 50% of damage dealt.",
     "link": "https://kagerochart.com/hero/specials/radiant-aether",
     "heal_dmg": 0.5,
     "enemy_def_res_mod": 0.5,

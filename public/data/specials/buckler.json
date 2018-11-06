@@ -2,7 +2,7 @@
     "name": "Buckler",
     "cooldown": 3,
     "sp": 100,
-    "description": "Reduces damage inflicted by attacks from adjacent foes by 30%.",
+    "description": "Reduces damage from an adjacent foe's attack by 30%.",
     "reduce_dmg": {
         "range": 1,
         "dmg_mod": 0.3
