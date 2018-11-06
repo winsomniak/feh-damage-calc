@@ -2,7 +2,7 @@
     "name": "Seal Atk 2",
     "sp": 80,
     "type": "B",
-    "description": "After combat, foe suffers Atk-5 through its next action.",
+    "description": "Inflicts Atk-5 on foe through its next action after combat.",
     "icon": "/images/icons/passives/seal-atk-2.png",
     "seal": {
         "atk": -5

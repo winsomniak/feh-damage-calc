@@ -2,7 +2,7 @@
     "name": "Kestrel Stance 1",
     "sp": 120,
     "type": "A",
-    "description": "Grants Atk/Spd+2 during combat when this unit is attacked.",
+    "description": "If foe initiates combat, grants Atk/Spd+2 during combat.",
     "icon": "/images/icons/passives/kestrel-stance-1.png",
     "defend_mod": {
         "atk": 2,

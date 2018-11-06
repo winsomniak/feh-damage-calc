@@ -2,7 +2,7 @@
     "name": "Lunge",
     "sp": 150,
     "type": "B",
-    "description": "If unit initiates attack, after combat, unit and targeted foe swap places.",
+    "description": "If unit initiates combat, unit and target foe swap spaces after combat.",
     "icon": "/images/icons/passives/lunge.png",
     "link": "https://kagerochart.com/hero/passives/lunge",
     "range_unique": 1,

@@ -1,5 +1,5 @@
 {
-    "description": "Unit receives 0 damage.",
+    "description": "Reduces damage dealt to unit to 0.",
     "id": "muspellflame",
     "name": "Múspellflame",
     "null_dmg": true,

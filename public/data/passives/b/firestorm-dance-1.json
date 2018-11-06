@@ -2,7 +2,7 @@
     "name": "Firestorm Dance 1",
     "sp": 120,
     "type": "B",
-    "description": "If Sing or Dance is used, target also granted Atk/Spd+2.",
+    "description": "If Sing or Dance is used, grants Atk/Spd+2 to target.",
     "icon": "/images/icons/passives/firestorm-dance-1.png",
     "link": "https://kagerochart.com/hero/passives/firestorm-dance-1",
     "id": "firestorm-dance-1"

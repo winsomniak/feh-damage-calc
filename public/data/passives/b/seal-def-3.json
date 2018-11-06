@@ -2,7 +2,7 @@
     "name": "Seal Def 3",
     "sp": 160,
     "type": "B",
-    "description": "After combat, foe suffers Def-7 through its next action.",
+    "description": "Inflicts Def-7 on foe through its next action after combat.",
     "icon": "/images/icons/passives/seal-def-3.png",
     "link": "https://kagerochart.com/hero/passives/seal-def-3",
     "seal": {

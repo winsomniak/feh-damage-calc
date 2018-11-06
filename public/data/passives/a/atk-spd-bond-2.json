@@ -1,8 +1,8 @@
 {
-    "name": "Atk Spd Bond 2",
+    "name": "Atk/Spd Bond 2",
     "sp": 120,
     "type": "A",
-    "description": "Grants Atk/Spd+4 to this unit during combat if unit is adjacent to an ally.",
+    "description": "If unit is adjacent to an ally, grants Atk/Spd+4 during combat.",
     "icon": "/images/icons/passives/atk-spd-bond-2.png",
     "adjacent_stat_bonus": {
         "target": "self",

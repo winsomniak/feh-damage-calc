@@ -2,7 +2,7 @@
     "name": "Dazzling Staff 2",
     "sp": 120,
     "type": "B",
-    "description": "If unit has ≥ 50% HP at the start of combat, the enemy cannot counterattack.",
+    "description": "At start of combat, if unit's HP ≥ 50%, foe cannot counterattack.",
     "icon": "/images/icons/passives/dazzling-staff-2.png",
     "prevent_enemy_counter": 0.5,
     "weapon_unique": "Staff",

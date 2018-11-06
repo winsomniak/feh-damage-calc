@@ -1,10 +1,10 @@
 {
-    "description": "Grants Res +2",
+    "description": "Grants Res+2.",
     "id": "squad-ace-c-2",
     "name": "Squad Ace C 2",
     "stat_mod": {
         "res": 2
     },
-    "sp":60,
+    "sp": 60,
     "type": "s"
 }

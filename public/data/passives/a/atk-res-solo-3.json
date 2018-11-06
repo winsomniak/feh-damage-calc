@@ -1,5 +1,5 @@
 {
-    "name": "Atk Res Solo 3",
+    "name": "Atk/Res Solo 3",
     "sp": 240,
     "type": "A",
     "description": "If unit is not adjacent to an ally, grants Atk/Res+6 during combat.",

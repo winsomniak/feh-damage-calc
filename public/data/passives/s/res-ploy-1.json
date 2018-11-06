@@ -2,6 +2,6 @@
     "name": "Res Ploy 1",
     "sp": 60,
     "type": "s",
-    "description": "At start of turn, all foes in cardinal directions with Res 1 or more lower than unit suffer Res-3 until the end of foe's next action.",
+    "description": "At start of turn, inflicts Res-3 on foes in cardinal directions with Res < unit's Res through their next actions.",
     "id": "res-ploy-1"
 }

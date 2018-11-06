@@ -1,5 +1,5 @@
 {
-    "description": "If unit is attacked by foe using bow, daggers, magic, or staff, unit receives Def/Res+2 during combat.",
+    "description": "If foe initiates combat and uses bow, dagger, magic, or staff, grants Def/Res+2 during combat.",
     "id": "distant-def-1",
     "name": "Distant Def 1",
     "type_defend_mod": {
@@ -17,6 +17,6 @@
             "res": 2
         }
     },
-    "sp":60,
+    "sp": 60,
     "type": "s"
 }

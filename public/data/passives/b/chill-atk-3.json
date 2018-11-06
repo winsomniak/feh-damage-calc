@@ -2,7 +2,7 @@
     "name": "Chill Atk 3",
     "sp": 240,
     "type": "B",
-    "description": "At the start of each turn, inflicts Atk-7 on foe on the enemy team with the highest Atk through its next action.",
+    "description": "At start of turn, inflicts Atk-7 on foe on the enemy team with the highest Atk through its next action.",
     "icon": "/images/icons/passives/chill-atk-3.png",
     "link": "https://kagerochart.com/hero/passives/chill-atk-3",
     "id": "chill-atk-3"

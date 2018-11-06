@@ -2,7 +2,7 @@
     "name": "Chill Def 1",
     "sp": 60,
     "type": "B",
-    "description": "At the start of each turn, inflicts Def-3 on foe on the enemy team with the highest Def through its next action.",
+    "description": "At start of turn, inflicts Def-3 on foe on the enemy team with the highest Def through its next action.",
     "icon": "/images/icons/passives/chill-def-1.png",
     "link": "https://kagerochart.com/hero/passives/chill-def-1",
     "id": "chill-def-1"

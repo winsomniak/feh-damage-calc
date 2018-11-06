@@ -2,6 +2,6 @@
     "name": "Obstruct 3",
     "sp": 200,
     "type": "s",
-    "description": "Prevents foes from moving through adjacent spaces while this unit's HP ≥ 50%.(No effect on foes with a Pass skill.)",
+    "description": "If unit's HP ≥ 50%, foes cannot move through spaces adjacent to unit. (Does not affect foes with Pass skills.)",
     "id": "obstruct-3"
 }

@@ -2,7 +2,7 @@
     "name": "Defiant Atk 3",
     "sp": 160,
     "type": "A",
-    "description": "Grants Atk+7 at start of turn if unit's HP ≤ 50%.",
+    "description": "At start of turn, if unit's HP ≤ 50%, grants Atk+7 for 1 turn.",
     "icon": "/images/icons/passives/defiant-atk-3.png",
     "link": "https://kagerochart.com/hero/passives/defiant-atk-3",
     "defiant": {

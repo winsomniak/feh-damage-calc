@@ -2,7 +2,7 @@
     "name": "Iote's Shield",
     "sp": 200,
     "type": "A",
-    "description": "Neutralizes \"effective against\" bonuses.",
+    "description": "Neutralizes \"effective against flying\" bonuses.",
     "icon": "/images/icons/passives/iotes-shield.png",
     "link": "https://kagerochart.com/hero/passives/iotes-shield",
     "cancel_effective": true,

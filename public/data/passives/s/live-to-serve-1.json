@@ -2,7 +2,7 @@
     "name": "Live to Serve 1",
     "sp": 40,
     "type": "s",
-    "description": "When healing allies with a staff, unit also recovers 50% of the HP restored.",
+    "description": "When healing an ally with a staff, restores HP to unit = 50% of HP restored to target.",
     "icon": "/images/icons/passives/live-to-serve-1.png",
     "id": "live-to-serve-1"
 }

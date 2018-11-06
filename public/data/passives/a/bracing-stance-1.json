@@ -2,7 +2,7 @@
     "name": "Bracing Stance 1",
     "sp": 120,
     "type": "A",
-    "description": "Grants Def/Res+2 during combat when this unit is attacked.",
+    "description": "If foe initiates combat, grants Def/Res+2 during combat.",
     "icon": "/images/icons/passives/bracing-stance-1.png",
     "defend_mod": {
         "def": 2,

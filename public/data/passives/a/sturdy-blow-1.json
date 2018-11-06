@@ -2,7 +2,7 @@
     "name": "Sturdy Blow 1",
     "sp": 120,
     "type": "A",
-    "description": "Grants Atk/Def+2 during combat if unit initiates combat.",
+    "description": "If unit initiates combat, grants Atk/Def+2 during combat.",
     "icon": "/images/icons/passives/sturdy-blow-1.png",
     "initiate_mod": {
         "atk": 2,

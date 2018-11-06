@@ -2,7 +2,7 @@
     "name": "Solar Brace",
     "sp": 300,
     "type": "B",
-    "description": "Restores 30% of damage dealt when special triggers during combat. (Stacks with effects of skills like Sol.) (Skill cannot be inherited.)",
+    "description": "Restores HP = 30% of damage dealt when Special triggers. (Stacks with effects of skills like Sol.)",
     "icon": "/images/icons/passives/solar-brace.png",
     "link": "https://kagerochart.com/hero/passives/solar-brace",
     "healing_special": 0.3,

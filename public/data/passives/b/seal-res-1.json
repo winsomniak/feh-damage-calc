@@ -2,7 +2,7 @@
     "name": "Seal Res 1",
     "sp": 40,
     "type": "B",
-    "description": "After combat, foe suffers Res-3 through its next action.",
+    "description": "Inflicts Res-3 on foe through its next action after combat.",
     "icon": "/images/icons/passives/seal-res-1.png",
     "seal": {
         "res": -3

@@ -2,7 +2,7 @@
     "name": "Threaten Res 2",
     "sp": 100,
     "type": "C",
-    "description": "Inflicts Res-4 on foes within 2 spaces through their next actions at the start of each turn.",
+    "description": "At start of turn, inflicts Res-4 on foes within 2 spaces through their next actions.",
     "icon": "/images/icons/passives/threaten-res-2.png",
     "threaten": {
         "res": -4

@@ -2,7 +2,7 @@
     "name": "Darting Blow 3",
     "sp": 200,
     "type": "A",
-    "description": "Grants Spd+6 during combat if unit initiates the attack.",
+    "description": "If unit initiates combat, grants Spd+6 during combat.",
     "icon": "/images/icons/passives/darting-blow-3.png",
     "link": "https://kagerochart.com/hero/passives/darting-blow-3",
     "initiate_mod": {

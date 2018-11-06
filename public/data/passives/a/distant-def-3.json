@@ -2,7 +2,7 @@
     "name": "Distant Def 3",
     "sp": 240,
     "type": "A",
-    "description": "If unit is attacked by foe using bow, daggers, magic, or staff, unit receives Def/Res+6 during combat.",
+    "description": "If foe initiates combat and uses bow, dagger, magic, or staff, grants Def/Res+6 during combat.",
     "icon": "/images/icons/passives/distant-def-3.png",
     "link": "https://kagerochart.com/hero/passives/distant-def-3",
     "type_defend_mod": {

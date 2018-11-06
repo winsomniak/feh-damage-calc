@@ -2,7 +2,7 @@
     "name": "Wary Fighter 2",
     "sp": 120,
     "type": "B",
-    "description": "Prevents follow-up attacks in combat from unit and foes if unit's HP ≥ 70%.",
+    "description": "If unit's HP ≥ 70%, unit and foe cannot make a follow-up attack.",
     "icon": "/images/icons/passives/wary-fighter-2.png",
     "other_prevent_follow": {
         "trigger": "healthy",

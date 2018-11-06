@@ -2,7 +2,7 @@
     "name": "Live to Serve 3",
     "sp": 160,
     "type": "s",
-    "description": "When healing allies with a staff, unit also recovers the same amount.",
+    "description": "When healing an ally with a staff, restores HP to unit = HP restored to target.",
     "weapon_unique": "Staff",
     "id": "live-to-serve-3"
 }

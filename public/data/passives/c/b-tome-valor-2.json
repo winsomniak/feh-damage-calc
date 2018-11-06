@@ -2,7 +2,7 @@
     "name": "B Tome Valor 2",
     "sp": 60,
     "type": "C",
-    "description": "If unit survives, all blue tome users on team get 1.5x SP.(If similar skill effects also used, only highest multiplier applied.)",
+    "description": "While unit lives, all blue tome allies on team get 1.5x SP. (Only highest value applied. Does not stack.)",
     "icon": "/images/icons/passives/b-tome-valor-2.png",
     "link": "https://kagerochart.com/hero/passives/b-tome-valor-2",
     "id": "b-tome-valor-2"

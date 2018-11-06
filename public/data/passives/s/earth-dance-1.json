@@ -2,6 +2,6 @@
     "name": "Earth Dance 1",
     "sp": 50,
     "type": "s",
-    "description": "If Sing or Dance is used, target also granted Def+3.",
+    "description": "If Sing or Dance is used, grants Def+3 to target.",
     "id": "earth-dance-1"
 }

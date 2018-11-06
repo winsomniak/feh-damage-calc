@@ -2,7 +2,7 @@
     "name": "Goad Dragons",
     "sp": 200,
     "type": "C",
-    "description": "Grants dragon allies within 2 spaces Atk/Spd+4 during combat.",
+    "description": "Grants Atk/Spd+4 to dragon allies within 2 spaces during combat.",
     "icon": "/images/icons/passives/goad-dragons.png",
     "link": "https://kagerochart.com/hero/passives/goad-dragons",
     "dragon_unique": true,

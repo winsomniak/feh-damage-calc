@@ -2,7 +2,7 @@
     "name": "Chill Res 3",
     "sp": 240,
     "type": "B",
-    "description": "At the start of each turn, inflicts Res-7 on foe on the enemy team with the highest Res through its next action.",
+    "description": "At start of turn, inflicts Res-7 on foe on the enemy team with the highest Res through its next action.",
     "icon": "/images/icons/passives/chill-res-3.png",
     "link": "https://kagerochart.com/hero/passives/chill-res-3",
     "id": "chill-res-3"

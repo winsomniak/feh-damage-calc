@@ -1,5 +1,5 @@
 {
-    "description": "After combat, inflicts Spd-5 on foes within 2 spaces of target through their next actions.",
+    "description": "Inflicts Spd-5 on foes within 2 spaces of target through their next actions after combat.",
     "id": "spd-smoke-2",
     "name": "Spd Smoke 2",
     "sp": 120,

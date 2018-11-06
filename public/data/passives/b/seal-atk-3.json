@@ -2,7 +2,7 @@
     "name": "Seal Atk 3",
     "sp": 160,
     "type": "B",
-    "description": "After combat, foe suffers Atk-7 through its next action.",
+    "description": "Inflicts Atk-7 on foe through its next action after combat.",
     "icon": "/images/icons/passives/seal-atk-3.png",
     "link": "https://kagerochart.com/hero/passives/seal-atk-3",
     "seal": {

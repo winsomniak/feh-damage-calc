@@ -1,8 +1,8 @@
 {
-    "description": "Neutralizes \"effective against\" bonuses.",
+    "description": "Neutralizes \"effective against flying\" bonuses.",
     "id": "iotes-shield",
     "name": "Iote's Shield",
-    "sp":200,
+    "sp": 200,
     "cancel_effective": true,
     "move_unique": "Flying",
     "type": "s"

@@ -2,7 +2,7 @@
     "name": "Swift Stance 2",
     "sp": 240,
     "type": "A",
-    "description": "Grants Spd/Res+4 during combat when this unit is attacked.",
+    "description": "If foe initiates combat, grants Spd/Res+4 during combat.",
     "icon": "/images/icons/passives/swift-stance-2.png",
     "defend_mod": {
         "spd": 4,

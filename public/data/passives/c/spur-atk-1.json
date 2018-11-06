@@ -2,7 +2,7 @@
     "name": "Spur Atk 1",
     "sp": 50,
     "type": "C",
-    "description": "Grants adjacent allies Atk+2 during combat.",
+    "description": "Grants Atk+2 to adjacent allies during combat.",
     "icon": "/images/icons/passives/spur-atk-1.png",
     "link": "https://kagerochart.com/hero/passives/spur-atk-1",
     "id": "spur-atk-1"

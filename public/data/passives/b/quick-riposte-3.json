@@ -2,7 +2,7 @@
     "name": "Quick Riposte 3",
     "sp": 240,
     "type": "B",
-    "description": "Unit automatically makes a follow-up attack if attacked at HP ≥ 70%.",
+    "description": "If unit's HP ≥ 70% and foe initiates combat, unit makes a guaranteed follow-up attack.",
     "icon": "/images/icons/passives/quick-riposte-3.png",
     "link": "https://kagerochart.com/hero/passives/quick-riposte-3",
     "defense_follow_up": {

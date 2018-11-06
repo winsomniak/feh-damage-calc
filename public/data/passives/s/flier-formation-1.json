@@ -1,5 +1,5 @@
 {
-    "description": "If unit has 100% HP, unit can move to a space adjacent to a flying ally within 2 spaces.",
+    "description": "If unit's HP = 100%, unit can move to a space adjacent to a flying ally within 2 spaces.",
     "id": "flier-formation-1",
     "name": "Flier Formation 1",
     "sp": 60,

@@ -2,7 +2,7 @@
     "name": "Defiant Def 1",
     "sp": 40,
     "type": "A",
-    "description": "Grants Def+3 at start of turn if unit's HP ≤ 50%.",
+    "description": "At start of turn, if unit's HP ≤ 50%, grants Def+3 for 1 turn.",
     "icon": "/images/icons/passives/defiant-def-1.png",
     "defiant": {
         "def": 3

@@ -2,7 +2,7 @@
     "name": "Atk Smoke 2",
     "sp": 120,
     "type": "C",
-    "description": "After combat, inflicts Atk-5 on foes within 2 spaces of target through their next actions.",
+    "description": "Inflicts Atk-5 on foes within 2 spaces of target through their next actions after combat.",
     "icon": "/images/icons/passives/atk-smoke-2.png",
     "link": "https://kagerochart.com/hero/passives/atk-smoke-2",
     "id": "atk-smoke-2"

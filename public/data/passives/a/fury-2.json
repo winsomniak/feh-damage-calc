@@ -2,7 +2,7 @@
     "name": "Fury 2",
     "sp": 100,
     "type": "A",
-    "description": "Grants Atk/Spd/Def/Res+2.Unit takes 4 damage after combat.",
+    "description": "Grants Atk/Spd/Def/Res+2. After combat, deals 4 damage to unit.",
     "icon": "/images/icons/passives/fury-2.png",
     "stat_mod": {
         "atk": 2,

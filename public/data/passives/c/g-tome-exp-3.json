@@ -2,7 +2,7 @@
     "name": "G Tome Exp. 3",
     "sp": 120,
     "type": "C",
-    "description": "If unit survives combat, all green magic users on team get 2x EXP.(If similar skill effects also used, only highest multiplier applied.)",
+    "description": "While unit lives, all green tome allies on team get 2x EXP. (Only highest value applied. Does not stack.)",
     "icon": "/images/icons/passives/g-tome-exp-3.png",
     "link": "https://kagerochart.com/hero/passives/g-tome-exp-3",
     "id": "g-tome-exp-3"

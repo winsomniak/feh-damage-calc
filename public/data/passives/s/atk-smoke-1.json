@@ -1,7 +1,7 @@
 {
-    "description": "After combat, inflicts Atk-3 on foes within 2 spaces of target through their next actions.",
+    "description": "Inflicts Atk-3 on foes within 2 spaces of target through their next actions after combat.",
     "id": "atk-smoke-1",
     "name": "Atk Smoke 1",
-    "sp":60,
+    "sp": 60,
     "type": "s"
 }

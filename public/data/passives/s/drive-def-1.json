@@ -1,7 +1,7 @@
 {
-    "description": "Grants allies within 2 spaces Def+2 during combat.",
+    "description": "Grants Def+2 to allies within 2 spaces during combat.",
     "id": "drive-def-1",
     "name": "Drive Def 1",
-    "sp":120,
+    "sp": 120,
     "type": "s"
 }

@@ -2,7 +2,7 @@
     "name": "Seal Res 2",
     "sp": 80,
     "type": "B",
-    "description": "After combat, foe suffers Res-5 through its next action.",
+    "description": "Inflicts Res-5 on foe through its next action after combat.",
     "icon": "/images/icons/passives/seal-res-2.png",
     "seal": {
         "res": -5

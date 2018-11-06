@@ -2,7 +2,7 @@
     "name": "Steady Blow 1",
     "sp": 120,
     "type": "A",
-    "description": "If unit initiates combat, unit granted Spd/Def+2 during battle.",
+    "description": "If unit initiates combat, grants Spd/Def+2 during combat.",
     "icon": "/images/icons/passives/steady-blow-1.png",
     "initiate_mod": {
         "def": 2,

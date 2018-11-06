@@ -2,7 +2,7 @@
     "name": "Flashing Blade 2",
     "sp": 120,
     "type": "A",
-    "description": "If unit's Spd - foe's Spd ≥ 3, unit gains Special cooldown charge +1 per attack.(If using other similar skill, only highest value applied.)",
+    "description": "If unit's Spd ≥ foe's Spd+3, grants Special cooldown charge +1 per unit's attack. (Only highest value applied. Does not stack.)",
     "icon": "/images/icons/passives/flashing-blade-2.png",
     "spec_accel": {
         "stat": "spd",

@@ -2,7 +2,7 @@
     "name": "Sword Exp. 2",
     "sp": 60,
     "type": "C",
-    "description": "If unit survives, all sword users on team get 1.5x EXP.(If similar skill effects also used, only highest multiplier applied.)",
+    "description": "While unit lives, all sword allies on team get 1.5x EXP. (Only highest value applied. Does not stack.)",
     "icon": "/images/icons/passives/sword-exp-2.png",
     "link": "https://kagerochart.com/hero/passives/sword-exp-2",
     "id": "sword-exp-2"

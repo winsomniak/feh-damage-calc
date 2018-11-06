@@ -2,7 +2,7 @@
     "name": "Triangle Adept 3",
     "sp": 200,
     "type": "A",
-    "description": "Gives Atk+20% if weapon-triangle advantage, Atk-20% if disadvantage.",
+    "description": "If unit has weapon-triangle advantage, boosts Atk by 20%. If unit has weapon-triangle disadvantage, reduces Atk by 20%.",
     "icon": "/images/icons/passives/triangle-adept-3.png",
     "link": "https://kagerochart.com/hero/passives/triangle-adept-3",
     "tri_advantage": 0.2,

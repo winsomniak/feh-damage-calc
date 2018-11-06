@@ -2,7 +2,7 @@
     "name": "Def Smoke 1",
     "sp": 60,
     "type": "C",
-    "description": "After combat, inflicts Def-3 on foes within 2 spaces of target through their next actions.",
+    "description": "Inflicts Def-3 on foes within 2 spaces of target through their next actions after combat.",
     "icon": "/images/icons/passives/def-smoke-1.png",
     "link": "https://kagerochart.com/hero/passives/def-smoke-1",
     "id": "def-smoke-1"

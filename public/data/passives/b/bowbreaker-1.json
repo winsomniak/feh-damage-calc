@@ -7,17 +7,17 @@
     "attack_follow_up": {
         "trigger": "healthy",
         "threshold": 0.9,
-        "weapon_type":"Bow"
+        "weapon_type": "Bow"
     },
     "defense_follow_up": {
         "trigger": "healthy",
         "threshold": 0.9,
-        "weapon_type":"Bow"
+        "weapon_type": "Bow"
     },
     "other_prevent_follow": {
         "trigger": "healthy",
         "threshold": 0.9,
-        "weapon_type":"Bow"
+        "weapon_type": "Bow"
     },
     "move_restrict": "Flying",
     "link": "https://kagerochart.com/hero/passives/bowbreaker-1",

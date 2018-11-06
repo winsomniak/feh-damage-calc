@@ -1,8 +1,8 @@
 {
-    "name": "Seal Atk Spd 1",
+    "name": "Seal Atk/Spd 1",
     "sp": 100,
     "type": "B",
-    "description": "After combat, inflicts Atk/Spd-3 on foe through its next action.",
+    "description": "Inflicts Atk/Spd-3 on foe through its next action after combat.",
     "icon": "/images/icons/passives/seal-atk-spd-1.png",
     "seal": {
         "atk": -3,

@@ -2,7 +2,7 @@
     "name": "Vengeful Fighter 2",
     "sp": 120,
     "type": "B",
-    "description": "If unit's HP ≥ 70% and foe initiates combat, unit makes a guaranteed follow-up attack. Grants Special cooldown charge +1 per attack. (Does not stack.)",
+    "description": "If unit's HP ≥ 70% and foe initiates combat, grants Special cooldown charge +1 per unit's attack, and unit makes a guaranteed follow-up attack. (Does not stack.)",
     "icon": "/images/icons/passives/vengeful-fighter-2.png",
     "defense_follow_up": {
         "trigger": "healthy",
@@ -12,7 +12,7 @@
         "attack": true,
         "threshold": 0.7
     },
-    "move_unique":"Armored",
+    "move_unique": "Armored",
     "link": "https://kagerochart.com/hero/passives/vengeful-fighter-2",
     "id": "vengeful-fighter-2"
 }

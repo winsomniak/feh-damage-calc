@@ -2,7 +2,7 @@
     "name": "Pass 1",
     "sp": 50,
     "type": "B",
-    "description": "Units can pass through foes if its own HP ≥ 75%.",
+    "description": "If unit's HP ≥ 75%, unit can move through foes' spaces.",
     "icon": "/images/icons/passives/pass-1.png",
     "link": "https://kagerochart.com/hero/passives/pass-1",
     "id": "pass-1"

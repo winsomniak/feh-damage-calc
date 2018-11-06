@@ -2,7 +2,7 @@
     "name": "Wrathful Staff 3",
     "sp": 240,
     "type": "B",
-    "description": "Damage from unit's staff will be calculated the same as other weapons.",
+    "description": "Calculates damage from staff like other weapons.",
     "icon": "/images/icons/passives/wrathful-staff-3.png",
     "link": "https://kagerochart.com/hero/passives/wrathful-staff-3",
     "reg_weapon_dmg": 0,

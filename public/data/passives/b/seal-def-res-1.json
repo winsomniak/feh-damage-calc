@@ -1,8 +1,8 @@
 {
-    "name": "Seal Def Res 1",
+    "name": "Seal Def/Res 1",
     "sp": 100,
     "type": "B",
-    "description": "After combat, foe suffers Def/Res-3 through its next action.",
+    "description": "Inflicts Def/Res-3 on foe through its next action after combat.",
     "icon": "/images/icons/passives/seal-def-res-1.png",
     "seal": {
         "def": -3,

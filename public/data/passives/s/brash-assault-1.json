@@ -1,11 +1,11 @@
 {
-    "description": "Unit automatically makes a follow-up attack when at HP ≤ 30% and attacking a foe that can counter.",
+    "description": "If unit initiates combat against a foe that can counter and unit's HP ≤ 30%, unit makes a guaranteed follow-up attack.",
     "id": "brash-assault-1",
     "name": "Brash Assault 1",
-    "sp":50,
+    "sp": 50,
     "attack_follow_up": {
         "trigger": "damaged",
         "threshold": 0.3,
-        "counterable":true
+        "counterable": true
     }
 }

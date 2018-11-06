@@ -2,7 +2,7 @@
     "name": "Steady Posture 2",
     "sp": 240,
     "type": "A",
-    "description": "Grants Spd/Def+4 during combat when this unit is attacked.",
+    "description": "If foe initiates combat, grants Spd/Def+4 during combat.",
     "icon": "/images/icons/passives/steady-posture-2.png",
     "defend_mod": {
         "spd": 4,

@@ -1,5 +1,5 @@
 {
-    "name": "Attack Def +2",
+    "name": "Attack/Def +2",
     "sp": 160,
     "description": "Grants Atk/Def+2.",
     "stat_mod": {
