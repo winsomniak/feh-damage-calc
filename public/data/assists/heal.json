@@ -2,7 +2,7 @@
     "name": "Heal",
     "range": 1,
     "sp": null,
-    "description": "Restores 5 HP.",
+    "description": "Restores 5 HP to target ally.",
     "weapon_unique": "Staff",
     "link": "https://kagerochart.com/hero/assists/heal",
     "id": "heal"

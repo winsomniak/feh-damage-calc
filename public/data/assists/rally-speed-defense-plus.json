@@ -1,8 +1,8 @@
 {
-    "name": "Rally Speed Defense+",
+    "name": "Rally Spd/Def+",
     "range": 1,
     "sp": 400,
-    "description": "Grants Spd/Def+6 to an adjacent ally until the end of the turn.",
+    "description": "Grants Spd/Def+6 to target ally for 1 turn.",
     "link": "https://kagerochart.com/hero/assists/rally-speed-defense-plus",
     "id": "rally-speed-defense-plus"
 }

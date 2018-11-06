@@ -2,7 +2,7 @@
     "name": "Rehabilitate+",
     "range": 1,
     "sp": 300,
-    "description": "Restores HP = 50% of Atk -10. (Minimum of 7 HP.)If target's HP is ≤ 50%, the lower the target's HP, the more HP is restored.",
+    "description": "Restores HP = 50% of Atk -10. (Minimum of 7 HP.) If target's HP is ≤ 50%, the lower the target's HP, the more HP is restored.",
     "link": "https://kagerochart.com/hero/assists/rehabilitate-plus",
     "weapon_unique": "Staff",
     "id": "rehabilitate-plus"

@@ -2,7 +2,7 @@
     "name": "Reconcile",
     "range": 1,
     "sp": 100,
-    "description": "Restores 7 HP each to target and this unit.",
+    "description": "Restores 7 HP to unit and target ally.",
     "weapon_unique": "Staff",
     "link": "https://kagerochart.com/hero/assists/reconcile",
     "id": "reconcile"
