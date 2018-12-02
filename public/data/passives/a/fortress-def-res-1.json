@@ -1,0 +1,14 @@
+{
+    "name": "Fortress Def Res 1",
+    "sp": 100,
+    "type": "A",
+    "description": "Grants Def/Res+3. Inflicts Atk-3.",
+    "icon": "/images/icons/passives/fortress-def-res-1.png",
+    "stat_mod": {
+        "atk": -3,
+        "def": 3,
+        "res": 3
+    },
+    "link": "https://kagerochart.com/hero/passives/fortress-def-res-1",
+    "id": "fortress-def-res-1"
+}

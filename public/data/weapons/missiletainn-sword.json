@@ -1,0 +1,22 @@
+{
+    "name": "Missiletainn",
+    "might": 16,
+    "range": 1,
+    "sp": 400,
+    "description": "Accelerates Special trigger (cooldown count-1). Grants Special cooldown charge +1 per foe's attack during combat. (Only highest value applied. Does not stack. Special cooldown charge granted even if foe's attack deals 0 damage.)",
+    "type": "Sword",
+    "link": "https://kagerochart.com/hero/weapons/missiletainn-sword",
+    "color": "Red",
+    "magical": false,
+    "enemy_phase_charge": {
+        "attack": false,
+        "defend": true
+    },
+    "player_phase_charge": {
+        "attack": false,
+        "defend": true
+    },
+    "spec_cooldown_mod": -1,
+    "char_unique": true,
+    "id": "missiletainn-sword"
+}

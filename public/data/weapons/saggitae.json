@@ -1,0 +1,27 @@
+{
+    "name": "Saggitae",
+    "might": 14,
+    "range": 2,
+    "sp": 400,
+    "description": "Grants Def+3. At start of combat, if foe's Atk ≥ unit's Atk+5, grants Atk/Spd/Def/Res+5 during combat.",
+    "type": "Blue Tome",
+    "link": "https://kagerochart.com/hero/weapons/saggitae",
+    "color": "Blue",
+    "magical": true,
+    "stat_bonus_compare":{
+        "stat_to_check": "atk",
+        "difference": 5,
+        "type": "lesser_equal",
+        "mod":{
+            "atk": 5,
+            "spd": 5,
+            "def": 5,
+            "res": 5,
+            }
+    },
+    "stat_mod": {
+        "def": 3
+    },
+    "char_unique": true,
+    "id": "saggitae"
+}

@@ -1,0 +1,16 @@
+{
+    "name": "Hack-o'-Lantern+",
+    "might": 14,
+    "range": 1,
+    "sp": 300,
+    "type": "Axe",
+    "link": "https://kagerochart.com/hero/weapons/hack-o-lantern-plus",
+    "description":"Inflicts Special cooldown charge -1 on foe per attack during combat. (Only highest value applied. Does not stack.)",
+    "color": "Green",
+    "guard": 0,
+    "magical": false,
+    "refinable": {
+        "type": "melee"
+    },
+    "id": "hack-o-lantern-plus"
+}

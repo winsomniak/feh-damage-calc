@@ -1,0 +1,21 @@
+{
+    "name": "Spirit Breath",
+    "might": 16,
+    "range": 1,
+    "sp": 400,
+    "description": "Grants Def+3. If unit initiates combat and unit’s Def ≥ foe’s Def+5, unit makes a guaranteed follow-up attack. If foe's Range = 2, calculates damage using the lower of foe's Def or Res.",
+    "type": "Breath",
+    "magical": true,
+    "stat_mod":{
+        "def":3
+    },
+    "attack_follow_up":
+    {
+        "stat_to_check":"def",
+        "stat_amount":5
+    },
+    "LowerResDefRange": 2,
+    "char_unique": true,
+    "link": "https://kagerochart.com/hero/weapons/spirit-breath",
+    "id": "spirit-breath"
+}
