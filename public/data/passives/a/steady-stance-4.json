@@ -1,0 +1,13 @@
+{
+    "name": "Steady Stance 4",
+    "sp": 300,
+    "type": "A",
+    "description": "If foe initiates combat, grants Def+8 during combat and inflicts Special cooldown charge -1 on foe per attack. (Only highest value applied. Does not stack.)",
+    "icon": "/images/icons/passives/steady-stance-4.png",
+    "link": "https://kagerochart.com/hero/passives/steady-stance-4",
+    "defend_mod": {
+        "def": 8
+    },
+    "defend_guard": 0.0,
+    "id": "steady-stance-4"
+}

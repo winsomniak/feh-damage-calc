@@ -1,12 +1,12 @@
 {
-    "name": "Book of Shadows",
+    "name": "Book of Dreams",
     "might": 14,
     "range": 2,
     "sp": 400,
-    "description": "Grants Spd+3. If unit is adjacent to an ally, inflicts Atk/Spd/Def/Res-4 on foe during combat.",
+    "description": "Grants Atk+3. If unit is adjacent to an ally, inflicts Atk/Spd/Def/Res-4 on foe during combat.",
     "type": "Tome",
     "stat_mod": {
-        "spd": 3
+        "atk": 3
     },
     "adjacent_stat_bonus": {
         "target": "other",
@@ -19,7 +19,6 @@
         }
     },
     "char_unique": true,
-    "link": "https://kagerochart.com/hero/weapons/book-of-shadows",
-    "id": "book-of-shadows",
-    "magical": true
+    "link": "https://kagerochart.com/hero/weapons/book-of-dreams",
+    "id": "book-of-dreams"
 }

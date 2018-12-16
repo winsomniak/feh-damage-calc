@@ -357,6 +357,18 @@ function ReturnStat(hero, stat)
 	return hero.hp;
 }
 
+function unchangeFollow(char, battleInfo, agent)
+{
+    for (var i = 0; i < checks.length; i++) {
+        var unchange = char[checks[i]].negate_follow_changes;
+        if(unchange && ((!unchange.hasOwnProperty("threshold")) || char.initHP >= roundNum(unchange.threshold * char.hp, true))) {
+            battleInfo.logMsg+= "<li class='battle-interaction'><span class='" + char.agentClass + "'>" + char.display + "</span>'s " + char[checks[i]].name + " activated, removing <span class='" + agent.agentClass + "'>" + agent.display +"</span>'s ability to change follow-up logic!</li>";
+            return true;
+        }
+    }
+    return false;
+}
+
 //Checks the follow-preventions (Wary & breakers)
 function Prevent(char, agent, ageWeapon, battleInfo, attacker)
 {
@@ -450,7 +462,7 @@ function adjacentStatBonus(battleInfo, char, other, charToUse, initiator) {
             return;
         }
 
-        if ((bonus.hasOwnProperty("enemy_greater_than") && char.adjacent > other.adjacent ) || (!bonus.hasOwnProperty("enemy_greater_than") && char.adjacent < 1) || (bonus.hasOwnProperty("needed") && bonus.needed > char.adjacent) || (bonus.hasOwnProperty("en_phase") && initiator)) {
+        if ((bonus.hasOwnProperty("enemy_greater_than") && (( bonus.enemy_greater_than == true && char.adjacent > other.adjacent ) || (bonus.enemy_greater_than == false && other.adjacent >= char.adjacent)))|| (!bonus.hasOwnProperty("enemy_greater_than") && char.adjacent < 1) || (bonus.hasOwnProperty("needed") && bonus.needed > char.adjacent) || (bonus.hasOwnProperty("en_phase") && initiator)) {
             return;
         }
 
@@ -485,7 +497,7 @@ function soloStatBonus(battleInfo, char, other, charToUse, initiator) {
 }
 
 //New increased damage check
-function checkBonusDmg(battleInfo, char)
+function checkBonusDmg(battleInfo, char, other)
 {
 	battleInfo.bonusDmg=0;
     for (var i = 0; i < checks.length; i++) {
@@ -494,8 +506,16 @@ function checkBonusDmg(battleInfo, char)
             bfup = char[checks[i]].spec_damage_bonus_hp;
         if (bfup) {
             if ((!char[checks[i]].spec_damage_bonus_hp) || roundNum(char.currHP / char.hp <= char[checks[i]].threshold)) {
-                battleInfo.bonusDmg+=bfup;
-                battleInfo.logMsg += "Damage is increased by " + bfup.toString() + " [" + char[checks[i]].name + "]. ";
+                var boost = 0;
+                if(bfup.hasOwnProperty("stat")) {
+                    var target = char;
+                    if(bfup.target === "other")
+                        target = other;
+					boost = roundNum(target[bfup.stat] * bfup.multiplier, false);
+                } else
+                    boost = bfup;
+                battleInfo.bonusDmg+= boost;
+                battleInfo.logMsg += "Damage is increased by " + boost.toString() + " [" + char[checks[i]].name + "]. ";
             }
         }
     }
@@ -689,12 +709,14 @@ function hasSpecAccel(battleInfo, attacker, defender, initiator, block) {
         if (!stat) {
             if((!(mainUnit[key].spec_accel.hasOwnProperty("threshold"))) || (mainUnit.initHP >= roundNum(mainUnit[key].spec_accel.threshold * mainUnit.hp, true))) {
                 if((!(mainUnit[key].spec_accel.hasOwnProperty("hasAdjacent"))) || (mainUnit[key].spec_accel.hasAdjacent === "self" && mainUnit.adjacent > 0) || (mainUnit[key].spec_accel.hasAdjacent === "other" && otherUnit.adjacent > 0)) {
-                    if(mainUnit.specCurrCooldown > 0) {
-                       mainUnit.specCurrCooldown--;
-                        battleInfo.logMsg += stringToPrint;
-                    }
-                    done = true;
-                    return true;
+                    if((!(mainUnit[key].spec_accel.hasOwnProperty("enemy_greater_than"))) || !(mainUnit.adjacent > otherUnit.adjacent)) {
+                        if(mainUnit.specCurrCooldown > 0) {
+                            mainUnit.specCurrCooldown--;
+                            battleInfo.logMsg += stringToPrint;
+                        }
+                        done = true;
+                        return true;
+					}
                 }
             }
         }

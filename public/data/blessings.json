@@ -3,28 +3,52 @@
     {
         "stat_mod":{}
     },
-    "Attack":{
+    "Legendary Attack":{
         "stat_mod":{
             "hp": 3,
             "atk": 2
         }
     },
-    "Speed":{
+    "Legendary Speed":{
         "stat_mod":{
             "hp": 3,
             "spd": 3
         }
     },
-    "Defense":{
+    "Legendary Defense":{
         "stat_mod":{
             "hp": 3,
             "def": 4
         }
     },
-    "Resistance":{
+    "Legendary Resistance":{
         "stat_mod":{
             "hp": 3,
             "res": 4
+        }
+    },
+    "Mythic Attack":{
+        "stat_mod":{
+            "hp": 5,
+            "atk": 3
+        }
+    },
+    "Mythic Speed":{
+        "stat_mod":{
+            "hp": 5,
+            "spd": 4
+        }
+    },
+    "Mythic Defense":{
+        "stat_mod":{
+            "hp": 5,
+            "def": 5
+        }
+    },
+    "Mythic Resistance":{
+        "stat_mod":{
+            "hp": 5,
+            "res": 5
         }
     }
 }

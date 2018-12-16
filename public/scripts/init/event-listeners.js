@@ -250,6 +250,7 @@ $(".passive-selector").on("change", function (){
         var points = ArenaScoreCalc(charNum);
         $(".arena-score-" + charNum + "-read").text(points.toString());
     }
+    updateSpecCooldown(charNum);
     charChange(charNum);
     updateDisplay();
 });
@@ -658,7 +659,7 @@ $(".draw-update").on("click", function() {
     // update attacker
     if (oldBA.attacker.currHP <= 0) {
         $("#curr-hp-1").val(1);
-        $("#spec-cooldown-1").val(getSpecialCooldown(oldBA.attacker.specialData, oldBA.attacker.weaponData, oldBA.attacker.assistData));
+        $("#spec-cooldown-1").val(getSpecialCooldown(oldBA.attacker.specialData, oldBA.attacker.weaponData, oldBA.attacker.assistData, oldBA.attacker.passiveBData));
         $("#attack-panel .stat-bonus, #attack-panel .stat-penalty, #attack-panel .stat-spur").val(0);
         $("#panic-status-1").prop("checked", false);
         $("#candlelight-status-1").prop("checked", false);
@@ -682,7 +683,7 @@ $(".draw-update").on("click", function() {
     // update defender
     if (oldBA.defender.currHP <= 0) {
         $("#curr-hp-2").val(1);
-        $("#spec-cooldown-2").val(getSpecialCooldown(oldBA.defender.specialData, oldBA.defender.weaponData, oldBA.defender.assistData));
+        $("#spec-cooldown-2").val(getSpecialCooldown(oldBA.defender.specialData, oldBA.defender.weaponData, oldBA.defender.assistData, oldBA.defender.passiveBData));
         $("#defend-panel .stat-bonus, #defend-panel .stat-penalty, #defend-panel .stat-spur").val(0);
         $("#panic-status-2").prop("checked", false);
         $("#candlelight-status-2").prop("checked", false);

@@ -215,7 +215,7 @@ function getAssistData(charNum) {
 }
 
 // gets the cooldown given special info and weapon info
-function getSpecialCooldown(specialData, weaponData, assistData) {
+function getSpecialCooldown(specialData, weaponData, assistData, passiveBData) {
 
     var cool = 0;
 
@@ -224,6 +224,10 @@ function getSpecialCooldown(specialData, weaponData, assistData) {
 
         if (weaponData.hasOwnProperty("spec_cooldown_mod")) {
             cool += weaponData.spec_cooldown_mod;
+        }
+		
+        if (passiveBData.hasOwnProperty("spec_cooldown_mod")) {
+            cool += passiveBData.spec_cooldown_mod;
         }
 
         if (assistData.hasOwnProperty("spec_cooldown_mod")) {
@@ -240,7 +244,7 @@ function updateSpecCooldown(charNum) {
 
     if ($.isNumeric($("#spec-cooldown-max-" + charNum).text())) {
         var oldMax = parseInt($("#spec-cooldown-max-" + charNum).text());
-        var max = getSpecialCooldown($("#special-" + charNum).data("info"), $("#weapon-" + charNum).data("info"), $("#assist-" + charNum).data("info"));
+        var max = getSpecialCooldown($("#special-" + charNum).data("info"), $("#weapon-" + charNum).data("info"), $("#assist-" + charNum).data("info"), $("#passive-b-" + charNum).data("info"));
 
         // check if current cooldown needs to be fixed
         if ((parseInt($("#spec-cooldown-" + charNum).val()) > max) || (parseInt($("#spec-cooldown-" + charNum).val()) === oldMax)) {
@@ -1504,7 +1508,7 @@ function getDefaultCharData(charName) {
     }
 
     // get special cooldown
-    charData.specCurrCooldown = charData.special !== "None" ? getSpecialCooldown(charData.specialData, charData.weaponData, charData.assistData) : 0;
+    charData.specCurrCooldown = charData.special !== "None" ? getSpecialCooldown(charData.specialData, charData.weaponData, charData.assistData, charData.passiveBData) : 0;
 
     // override special cooldown
     if ($("#override-spec-cooldown").val() !== "max") {
@@ -1659,7 +1663,22 @@ function canActivateGuard(battleInfo, attacker) {
     var mainUnit = attacker ? battleInfo.attacker : battleInfo.defender;
     var otherUnit = attacker ? battleInfo.defender : battleInfo.attacker;
 
-    return (mainUnit.passiveBData.hasOwnProperty("guard") && mainUnit.initHP >= mainUnit.hp * mainUnit.passiveBData.guard && otherUnit.special !== "None");
+    if(otherUnit.special === "None")
+        return false;
+
+    for (var i = 0; i < checks.length; i++) {
+        var guard = mainUnit[checks[i]].guard;
+		if(!guard && guard !== 0 && !attacker)
+            guard = mainUnit[checks[i]].defend_guard;
+		if(!guard && guard !== 0 && attacker)
+            guard = mainUnit[checks[i]].initiate_guard;
+        if((guard || guard === 0) && mainUnit.initHP >= mainUnit.hp * guard)
+		{
+            battleInfo.guardian = mainUnit[checks[i]];
+            return true;
+		}
+	}
+    return false;
 }
 
 // calculates how much damage the attacker will do to the defender in just one attack phase
@@ -1911,7 +1930,7 @@ function singleCombat(battleInfo, initiator, logIntro, brave) {
 
     // check for bonus damage on special proc
     if (atkSpec || (attacker.specialData.hasOwnProperty("heal_dmg") && attacker.specCurrCooldown <= 0)) {
-        battleInfo=checkBonusDmg(battleInfo, attacker);
+        battleInfo=checkBonusDmg(battleInfo, attacker, defender);
         dmg+=battleInfo.bonusDmg;
     }
 
@@ -2031,7 +2050,7 @@ function singleCombat(battleInfo, initiator, logIntro, brave) {
 
     // update cooldowns
     if (atkSpec) {
-        attacker.specCurrCooldown = getSpecialCooldown(attacker.specialData, attacker.weaponData, attacker.assistData);
+        attacker.specCurrCooldown = getSpecialCooldown(attacker.specialData, attacker.weaponData, attacker.assistData, attacker.passiveBData);
         if(Object.is(attacker, battleInfo.defender))
         {
             battleInfo.defSpecTriggered = true;
@@ -2046,7 +2065,7 @@ function singleCombat(battleInfo, initiator, logIntro, brave) {
 
         if (canActivateGuard(battleInfo, !initiator)) { // guard effect
             attacker.specCurrCooldown += 1;
-            battleInfo.logMsg += "Lost a special cooldown charge [" + skillInfo['b'][defender.passiveB].name + "]. ";
+            battleInfo.logMsg += "Lost a special cooldown charge [" + battleInfo.guardian.name + "]. ";
         }
         attacker.specCurrCooldown -= 1;
 
@@ -2060,7 +2079,7 @@ function singleCombat(battleInfo, initiator, logIntro, brave) {
     }
 
     if (defSpec) {
-        defender.specCurrCooldown = getSpecialCooldown(defender.specialData, defender.weaponData, defender.assistData);
+        defender.specCurrCooldown = getSpecialCooldown(defender.specialData, defender.weaponData, defender.assistData, defender.passiveBData);
         if(Object.is(defender, battleInfo.defender))
         {
             battleInfo.defSpecTriggered = true;
@@ -2074,7 +2093,7 @@ function singleCombat(battleInfo, initiator, logIntro, brave) {
     } else if (defender.specCurrCooldown > 0) {
         if (canActivateGuard(battleInfo, initiator)) { // guard effect
             defender.specCurrCooldown += 1;
-            battleInfo.logMsg += "Opponent loses a special cooldown charge [" + skillInfo['b'][attacker.passiveB].name + "]. ";
+            battleInfo.logMsg += "Opponent loses a special cooldown charge [" + battleInfo.guardian.name + "]. ";
         }
         defender.specCurrCooldown -= 1;
 
@@ -2251,7 +2270,7 @@ function simBattle(battleInfo, displayMsg) {
     // AOE damage before combat
     if (attacker.specialData.hasOwnProperty("before_combat_aoe") && attacker.specCurrCooldown <= 0) {
         // reset cooldown
-        attacker.specCurrCooldown = getSpecialCooldown(attacker.specialData, attacker.weaponData, attacker.assistData);
+        attacker.specCurrCooldown = getSpecialCooldown(attacker.specialData, attacker.weaponData, attacker.assistData, attacker.passiveBData);
         battleInfo.logMsg += "<li class='battle-interaction'><span class='attacker'>" + attacker.display + "</span> deals AOE damage before combat [" + specialInfo[attacker.special].name + "]. ";
 
         // calculate damage
@@ -2271,7 +2290,7 @@ function simBattle(battleInfo, displayMsg) {
         }
 
         // check for damage bonuses
-        battleInfo=checkBonusDmg(battleInfo, attacker);
+        battleInfo=checkBonusDmg(battleInfo, attacker, defender);
         aoeDmg+=battleInfo.bonusDmg;
 
         // check for damage nullifier
@@ -2307,11 +2326,23 @@ function simBattle(battleInfo, displayMsg) {
     var defAttacks = false;
 
     //New follow-up logic
-    battleInfo = Follow(attacker, defender, true, defCC, battleInfo);
-    battleInfo = Follow(defender, attacker, false, true, battleInfo);
+    if(!unchangeFollow(defender, battleInfo, attacker)){
+        battleInfo = Follow(attacker, defender, true, defCC, battleInfo);
+        battleInfo = Prevent(attacker, defender, defender.weaponData.type, battleInfo, true);
+    }
+    else {
+        battleInfo.atkFollow = 0;
+        battleInfo.atkPrev = 0;
+    }
 
-    battleInfo = Prevent(attacker, defender, defender.weaponData.type, battleInfo, true);
-    battleInfo = Prevent(defender, attacker, attacker.weaponData.type, battleInfo, false);
+    if(!unchangeFollow(attacker, battleInfo, defender)){
+        battleInfo = Follow(defender, attacker, false, true, battleInfo);
+        battleInfo = Prevent(defender, attacker, attacker.weaponData.type, battleInfo, false);
+    }
+    else {
+        battleInfo.defFollow = 0;
+        battleInfo.defPrev = 0;
+    }
 
     battleInfo.atkFollow-=battleInfo.defPrev;
     battleInfo.defFollow-=battleInfo.atkPrev;
@@ -2614,7 +2645,7 @@ function simBattle(battleInfo, displayMsg) {
 
     // extra action
     if (attacker.specialData.hasOwnProperty("extra_action") && attacker.specCurrCooldown <= 0 && attacker.currHP > 0) {
-        attacker.specCurrCooldown = getSpecialCooldown(attacker.specialData, attacker.weaponData, attacker.assistData);
+        attacker.specCurrCooldown = getSpecialCooldown(attacker.specialData, attacker.weaponData, attacker.assistData, attacker.passiveBData);
         battleInfo.logMsg += "<li class='battle-interaction'><span class='attacker'>" + attacker.display + "</span> is granted another action [" + attacker.special + "]. ";
     }
 
@@ -4197,7 +4228,8 @@ function importTeam(attacker) {
                             importedChars[charCount].special = line[1];
                             var weaponData = importedChars[charCount].weapon === "None" ? {} : weaponInfo[importedChars[charCount].weapon];
                             var assistData = importedChars[charCount].assist === "None" ? {} : assistInfo[importedChars[charCount].assist];
-                            importedChars[charCount].specCooldown = getSpecialCooldown(specialInfo[line[1]], weaponData, assistData).toString();
+                            var passiveBData = importedChars[charCount].passiveB === "None" ? {} : skillInfo.b[importedChars[charCount].passiveB];
+                            importedChars[charCount].specCooldown = getSpecialCooldown(specialInfo[line[1]], weaponData, assistData, passiveBData).toString();
                         } else {
                             $("#import-error-msg").text("Import error: Invalid special (line " + (textLine + 1).toString() + ")").show();
                             error = true;

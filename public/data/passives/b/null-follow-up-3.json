@@ -1,0 +1,10 @@
+{
+    "name": "Null Follow-Up 3",
+    "sp": 240,
+    "type": "B",
+    "description": "Disables foe's skills that guarantee foe's follow-up attack and foe's skills that prevent unit's follow-up attack.",
+    "icon": "/images/icons/passives/null-follow-up-3.png",
+    "link": "https://kagerochart.com/hero/passives/null-follow-up-3",
+    "negate_follow_changes": {},
+    "id": "null-follow-up-3"
+}
