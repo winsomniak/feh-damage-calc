@@ -18,6 +18,18 @@ function addSupportBuff(rank, type, stats) {
     return stats;
 }
 
+//Adds arena buff to stats object passed as parameter
+function addArenaBonus(stats) {
+
+    stats.hp += 10;
+    stats.atk += 4;
+    stats.spd += 4;
+    stats.def += 4;
+    stats.res += 4;
+
+    return stats;
+}
+
 //Subtracts specified support buff from stats object passed as parameter
 function subtractSupportBuff(rank, type, stats) {
 
