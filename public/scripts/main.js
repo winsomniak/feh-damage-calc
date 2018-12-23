@@ -976,11 +976,11 @@ function ArenaScoreCalc(charNum) {
     Sp += getSp(seal, skillInfo.s);
 
     var blessNum=0;
-    if(blessing !== "None")
+    if(blessing !== "None" && !blessingsInfo[blessing].hasOwnProperty("mythic"))
         blessNum += 1;
-    if(blessing2 !== "None")
+    if(blessing2 !== "None"  && !blessingsInfo[blessing2].hasOwnProperty("mythic"))
         blessNum += 1;
-    if(blessing3 !== "None")
+    if(blessing3 !== "None" && !blessingsInfo[blessing3].hasOwnProperty("mythic"))
         blessNum += 1;
     return 2 * (150 + rarityBaseValue[rarity-1] + (roundNum(level * (rarityLevelFactor[rarity-1]/39), false)) + merge*2 + roundNum(Sp/100, false) + roundNum(BST/5, false) + 4*blessNum);
 }
@@ -1189,12 +1189,38 @@ function convertPenalties(battleInfo, source, attacker) {
     return battleInfo;
 }
 
+// sets guard status
+// battleInfo contains all battle information, source is the source of the effect, attacker is true if we apply the effect on the attacker
+function afflictGuard(battleInfo, source, attacker) {
+
+    var charClass = attacker ? "attacker" : "defender"; // get character
+    battleInfo[charClass].status.guard = true; // set status
+
+    // message
+    battleInfo.logMsg += "<li class='battle-interaction'><span class='" + charClass + "'>" + battleInfo[charClass].display + "</span> is inflicted with a status effect [" + source + "].</li>";
+
+    return battleInfo;
+}
+
 // candlelight status effect
 // battleInfo contains all battle information, source is the source of the effect, attacker is true if we apply the effect on the attacker
 function cancelCounters(battleInfo, source, attacker){
 
     var charClass = attacker ? "attacker" : "defender"; // get character
     battleInfo[charClass].status.candlelight = true; // set status
+
+    // message
+    battleInfo.logMsg += "<li class='battle-interaction'><span class='" + charClass + "'>" + battleInfo[charClass].display + "</span> is inflicted with a status effect [" + source + "].</li>";
+
+    return battleInfo;
+}
+
+// triangle adept status effect
+// battleInfo contains all battle information, source is the source of the effect, attacker is true if we apply the effect on the attacker
+function afflictTA(battleInfo, source, attacker){
+
+    var charClass = attacker ? "attacker" : "defender"; // get character
+    battleInfo[charClass].status.triangleAdept = true; // set status
 
     // message
     battleInfo.logMsg += "<li class='battle-interaction'><span class='" + charClass + "'>" + battleInfo[charClass].display + "</span> is inflicted with a status effect [" + source + "].</li>";
@@ -1239,7 +1265,8 @@ function getCharPanelData(charNum) {
     charData.status = {
         "candlelight": $("#candlelight-status-" + charNum).is(":checked"),
         "panic": $("#panic-status-" + charNum).is(":checked"),
-        "triangleAdept": $("#triangle-adept-status-" + charNum).is(":checked")
+        "triangleAdept": $("#triangle-adept-status-" + charNum).is(":checked"),
+        "guard": $("#guard-status-" + charNum).is(":checked")
     };
 
     if ($("#defensive-terrain-" + charNum).is(":checked")) {
@@ -1361,7 +1388,8 @@ function getDefaultCharData(charName) {
     charData.status = {
         "candlelight": $("#override-candlelight-status").is(":checked"),
         "panic": $("#override-panic-status").is(":checked"),
-        "triangleAdept": $("#override-triangle-adept-status").is(":checked")
+        "triangleAdept": $("#override-triangle-adept-status").is(":checked"),
+        "guard": $("#override-guard-status").is(":checked")
     };
 
     if ($("#override-defensive-terrain").is(":checked")) {
@@ -1666,6 +1694,11 @@ function canActivateGuard(battleInfo, attacker) {
     if(otherUnit.special === "None")
         return false;
 
+    if(otherUnit.status.guard) {
+            battleInfo.guardian = "Guard Status";
+            return true;
+    }
+
     for (var i = 0; i < checks.length; i++) {
         var guard = mainUnit[checks[i]].guard;
 		if(!guard && guard !== 0 && !attacker)
@@ -1674,7 +1707,7 @@ function canActivateGuard(battleInfo, attacker) {
             guard = mainUnit[checks[i]].initiate_guard;
         if((guard || guard === 0) && mainUnit.initHP >= mainUnit.hp * guard)
 		{
-            battleInfo.guardian = mainUnit[checks[i]];
+            battleInfo.guardian = mainUnit[checks[i]].name;
             return true;
 		}
 	}
@@ -1825,7 +1858,8 @@ function singleCombat(battleInfo, initiator, logIntro, brave) {
     var defStat = attacker.weaponData.magical ? "resistance" : "defense";
 
     //checks for special def/res picking
-    battleInfo=checkResDefSubstitution(battleInfo, attacker, defender);
+    battleInfo = checkResDefChangePrevention(battleInfo, attacker, defender);
+    battleInfo = checkResDefSubstitution(battleInfo, attacker, defender);
 
     if(battleInfo.changeDefRes==1)
     {
@@ -1863,6 +1897,18 @@ function singleCombat(battleInfo, initiator, logIntro, brave) {
         battleInfo.logMsg += "Damage boosted by " + (attacker.specialData.dmg_buff_by_stat.buff * 100).toString() + "% of " + statWord(attacker.specialData.dmg_buff_by_stat.stat) + " [" + specialInfo[attacker.special].name + "]. ";
         atkSpec = true;
     }
+	
+    // damage buffs by number
+    if (attacker.specialData.hasOwnProperty("dmg_bonus") && attacker.specCurrCooldown <= 0) {
+        var bonus = 0;
+        if(attacker.specialData.dmg_bonus.hasOwnProperty("if_adjacent") && attacker.adjacent > 0)
+            bonus += attacker.specialData.dmg_bonus.if_adjacent.bonus;
+		else
+            bonus += attacker.specialData.dmg_bonus.bonus;
+        atkSpec = true;
+        dmg += bonus;
+        battleInfo.logMsg += "Damage boosted by " + bonus.toString() + " [" + specialInfo[attacker.special].name + "]. ";
+    }
 
     // damage suffered buff
     if (attacker.specialData.hasOwnProperty("dmg_suffer_buff") && attacker.specCurrCooldown <= 0) {
@@ -1882,9 +1928,9 @@ function singleCombat(battleInfo, initiator, logIntro, brave) {
 
     // halve staff damage
     if (attacker.type.indexOf("Staff") !== -1) {
-        if (attacker.passiveBData.hasOwnProperty("reg_weapon_dmg") && attacker.initHP >= roundNum(attacker.hp * attacker.passiveBData.reg_weapon_dmg, true)) {
+        if (!checkStaffDamageChangePrevention(defender) && attacker.passiveBData.hasOwnProperty("reg_weapon_dmg") && attacker.initHP >= roundNum(attacker.hp * attacker.passiveBData.reg_weapon_dmg, true)) {
             battleInfo.logMsg += "Staff damage is not halved [" + skillInfo['b'][attacker.passiveB].name + "]. ";
-        } else if (attacker.weaponData.hasOwnProperty("reg_weapon_dmg") && attacker.initHP >= roundNum(attacker.hp * attacker.weaponData.reg_weapon_dmg, true)) {
+        } else if (!checkStaffDamageChangePrevention(defender) && attacker.weaponData.hasOwnProperty("reg_weapon_dmg") && attacker.initHP >= roundNum(attacker.hp * attacker.weaponData.reg_weapon_dmg, true)) {
             battleInfo.logMsg += "Staff damage is not halved [" + weaponInfo[attacker.weaponName].name + "]. ";
         }
         else{
@@ -2065,7 +2111,7 @@ function singleCombat(battleInfo, initiator, logIntro, brave) {
 
         if (canActivateGuard(battleInfo, !initiator)) { // guard effect
             attacker.specCurrCooldown += 1;
-            battleInfo.logMsg += "Lost a special cooldown charge [" + battleInfo.guardian.name + "]. ";
+            battleInfo.logMsg += "Lost a special cooldown charge [" + battleInfo.guardian + "]. ";
         }
         attacker.specCurrCooldown -= 1;
 
@@ -2093,7 +2139,7 @@ function singleCombat(battleInfo, initiator, logIntro, brave) {
     } else if (defender.specCurrCooldown > 0) {
         if (canActivateGuard(battleInfo, initiator)) { // guard effect
             defender.specCurrCooldown += 1;
-            battleInfo.logMsg += "Opponent loses a special cooldown charge [" + battleInfo.guardian.name + "]. ";
+            battleInfo.logMsg += "Opponent loses a special cooldown charge [" + battleInfo.guardian + "]. ";
         }
         defender.specCurrCooldown -= 1;
 
@@ -2181,9 +2227,11 @@ function checkBrave(char, battleInfo)
     battleInfo.brave = false;
     battleInfo.braveSource = "";
     if(char.weaponData.hasOwnProperty("brave")) {
-        battleInfo.brave = true;
-        battleInfo.braveSource = char.weaponData.name;
-        return battleInfo;
+        if(!char.weaponData.brave.hasOwnProperty("adjacent_needed") || char.adjacent >= char.weaponData.brave.adjacent_needed) {
+            battleInfo.brave = true;
+            battleInfo.braveSource = char.weaponData.name;
+            return battleInfo;
+        }
     }
     if(char.weaponData.hasOwnProperty("hp_brave") && (char.initHP >= roundNum(char.hp * char.weaponData.hp_brave, true))) {
         battleInfo.brave = true;
@@ -2498,16 +2546,30 @@ function simBattle(battleInfo, displayMsg) {
 
     // check for after combat healing
     if (attacker.weaponData.hasOwnProperty("initiate_heal") && attacker.currHP > 0) {
-        atkAfterHeal = attacker.weaponData.initiate_heal;
-        atkAfterHealSource = weaponInfo[attacker.weaponName].name;
+        atkAfterHeal += attacker.weaponData.initiate_heal;
+        atkAfterHealSource += weaponInfo[attacker.weaponName].name;
     }
-    else if (attacker.weaponData.hasOwnProperty("heal") && attacker.currHP > 0) {
-        atkAfterHeal = attacker.weaponData.heal;
-        atkAfterHealSource = weaponInfo[attacker.weaponName].name;
+    if (attacker.weaponData.hasOwnProperty("heal") && attacker.currHP > 0) {
+        if(atkAfterHeal != 0)
+            atkAfterHealSource += ", ";
+        atkAfterHeal += attacker.weaponData.heal;
+        atkAfterHealSource += weaponInfo[attacker.weaponName].name;
+    }
+    if (attacker.passiveBData.hasOwnProperty("heal") && attacker.currHP > 0) {
+        if(atkAfterHeal != 0)
+            atkAfterHealSource += ", ";
+        atkAfterHeal += attacker.passiveBData.heal;
+        atkAfterHealSource += attacker.passiveBData.name;
     }
     if (defender.weaponData.hasOwnProperty("heal") && defender.currHP > 0) {
-        defAfterHeal = defender.weaponData.heal;
-        defAfterHealSource = weaponInfo[defender.weaponName].name;
+        defAfterHeal += defender.weaponData.heal;
+        defAfterHealSource += weaponInfo[defender.weaponName].name;
+    }
+    if (defender.passiveBData.hasOwnProperty("heal") && defender.currHP > 0) {
+        if(defAfterHeal != 0)
+            defAfterHealSource += ", ";
+        defAfterHeal += defender.passiveBData.heal;
+        defAfterHealSource += defender.passiveBData.name;
     }
 
     // check for poison damage
@@ -2524,10 +2586,14 @@ function simBattle(battleInfo, displayMsg) {
     // check for recoil damage
     if (attacker.currHP > 0 && attacker.passiveAData.hasOwnProperty("recoil_dmg")) {
         atkRecoil = attacker.passiveAData.recoil_dmg;
-        atkRecoilSource = skillInfo['a'][attacker.passiveA].name;
+        atkRecoilSource = attacker.passiveAData.name;
     }
     if (attacker.currHP > 0 && attacker.weaponData.hasOwnProperty("recoil_dmg")) {
         atkRecoil += attacker.weaponData.recoil_dmg;
+        atkRecoilSource += (atkRecoilSource.length > 0) ? ", " + weaponInfo[attacker.weaponName].name : weaponInfo[attacker.weaponName].name;
+    }
+    if (attacker.currHP > 0 && attacker.weaponData.hasOwnProperty("recoil_dmg_threshold") && attacker.initHP >= attacker.hp * attacker.weaponData.recoil_dmg_threshold.threshold) {
+        atkRecoil += attacker.weaponData.recoil_dmg_threshold.dmg;
         atkRecoilSource += (atkRecoilSource.length > 0) ? ", " + weaponInfo[attacker.weaponName].name : weaponInfo[attacker.weaponName].name;
     }
     if (attacker.currHP > 0 && attacker.weaponData.hasOwnProperty("full_hp_atk_recoil_dmg") && attacker.initHP >= attacker.hp) {
@@ -2544,10 +2610,14 @@ function simBattle(battleInfo, displayMsg) {
     }
     if (defender.currHP > 0 && defender.passiveAData.hasOwnProperty("recoil_dmg")) {
         defRecoil = defender.passiveAData.recoil_dmg;
-        defRecoilSource = defender.passiveA;
+        defRecoilSource = defender.passiveAData.name;
     }
     if (defender.currHP > 0 && defender.weaponData.hasOwnProperty("recoil_dmg")) {
         defRecoil += defender.weaponData.recoil_dmg;
+        defRecoilSource += (defRecoilSource.length > 0) ? ", " + weaponInfo[defender.weaponName].name : weaponInfo[defender.weaponName].name;
+    }
+    if (defender.currHP > 0 && defender.weaponData.hasOwnProperty("recoil_dmg_threshold") && defender.initHP >= defender.hp * defender.weaponData.recoil_dmg_threshold.threshold) {
+        defRecoil += defender.weaponData.recoil_dmg_threshold.dmg;
         defRecoilSource += (defRecoilSource.length > 0) ? ", " + weaponInfo[defender.weaponName].name : weaponInfo[defender.weaponName].name;
     }
     if (defender.currHP > 0 && defender.weaponData.hasOwnProperty("full_hp_atk_recoil_dmg") && defender.initHP >= defender.hp) {
@@ -2628,9 +2698,21 @@ function simBattle(battleInfo, displayMsg) {
     } else if (defender.weaponData.hasOwnProperty("cancel_counter") && defAttacks && attacker.currHP > 0) {
         attacker.status = {};
         battleInfo = cancelCounters(battleInfo, weaponInfo[defender.weaponName].name, true);
+    } else if (defender.weaponData.hasOwnProperty("TA_inflicts") && defAttacks && attacker.currHP > 0) {
+        attacker.status = {};
+        battleInfo = afflictTA(battleInfo, weaponInfo[defender.weaponName].name, true);
+    } else if (defender.weaponData.hasOwnProperty("guard_inflicts") && defAttacks && attacker.currHP > 0) {
+        attacker.status = {};
+        battleInfo = afflictGuard(battleInfo, weaponInfo[defender.weaponName].name, true);
     } else if (!allFalse(attacker.status) && attacker.currHP > 0) {
         attacker.status = {};
-        battleInfo.logMsg += "<li class='battle-interaction'><span class='attacker'>" + attacker.display + "</span> " + " returns to default status.</li>";
+        battleInfo.logMsg += "<li class='battle-interaction'><span class='attacker'>" + attacker.display + "</span> " + " returns to default status. </li>";
+    }
+
+    //witchy wand's special reset
+    if (defender.weaponData.hasOwnProperty("special_reset") && defAttacks && attacker.currHP > 0 && attacker.specialData.hasOwnProperty("cooldown")) {
+        battleInfo.logMsg += "<li class='battle-interaction'><span class='attacker'>" + attacker.display + "</span>'s special cooldown was reset [" + defender.weaponData.name + "]. </li>";
+        attacker.specCurrCooldown = getSpecialCooldown(attacker.specialData, attacker.weaponData, attacker.assistData, attacker.passiveBData);
     }
 
     if (attacker.weaponData.hasOwnProperty("convert_penalties") && atkAttacks && defender.currHP > 0) {
@@ -2641,12 +2723,26 @@ function simBattle(battleInfo, displayMsg) {
         battleInfo = cancelCounters(battleInfo, weaponInfo[attacker.weaponName].name, false);
     }else if (attacker.weaponData.hasOwnProperty("initiate_cancel_counter") && defender.currHP > 0) {
         battleInfo = cancelCounters(battleInfo, weaponInfo[attacker.weaponName].name, false);
+    }else if (attacker.weaponData.hasOwnProperty("TA_inflicts") && atkAttacks && defender.currHP > 0) {
+        battleInfo = afflictTA(battleInfo, weaponInfo[attacker.weaponName].name, false);
+    }else if (attacker.weaponData.hasOwnProperty("initiate_TA_inflicts") && defender.currHP > 0) {
+        battleInfo = afflictTA(battleInfo, weaponInfo[attacker.weaponName].name, false);
+    }else if (attacker.weaponData.hasOwnProperty("guard_inflicts") && atkAttacks && defender.currHP > 0) {
+        battleInfo = afflictGuard(battleInfo, weaponInfo[attacker.weaponName].name, false);
+    }else if (attacker.weaponData.hasOwnProperty("initiate_guard_inflicts") && defender.currHP > 0) {
+        battleInfo = afflictGuard(battleInfo, weaponInfo[attacker.weaponName].name, false);
+    }
+
+    //witchy wand's special reset
+    if (attacker.weaponData.hasOwnProperty("special_reset") && atkAttacks && defender.currHP > 0 && defender.specialData.hasOwnProperty("cooldown")) {
+        battleInfo.logMsg += "<li class='battle-interaction'><span class='defender'>" + defender.display + "</span>'s special cooldown was reset [" + attacker.weaponData.name + "]. </li>";
+        defender.specCurrCooldown = getSpecialCooldown(defender.specialData, defender.weaponData, defender.assistData, defender.passiveBData);
     }
 
     // extra action
     if (attacker.specialData.hasOwnProperty("extra_action") && attacker.specCurrCooldown <= 0 && attacker.currHP > 0) {
         attacker.specCurrCooldown = getSpecialCooldown(attacker.specialData, attacker.weaponData, attacker.assistData, attacker.passiveBData);
-        battleInfo.logMsg += "<li class='battle-interaction'><span class='attacker'>" + attacker.display + "</span> is granted another action [" + attacker.special + "]. ";
+        battleInfo.logMsg += "<li class='battle-interaction'><span class='attacker'>" + attacker.display + "</span> is granted another action [" + attacker.specialData.name + "]. ";
     }
 
     // display results
@@ -2810,7 +2906,8 @@ function swap() {
     oldAtkInfo.status = {
         "candlelight": $("#candlelight-status-1").is(":checked"),
         "panic": $("#panic-status-1").is(":checked"),
-        "triangleAdept": $("#triangle-adept-status-1").is(":checked")
+        "triangleAdept": $("#triangle-adept-status-1").is(":checked"),
+        "guard": $("#guard-status-1").is(":checked")
     };
     if ($("#defensive-terrain-1").is(":checked")) {
         oldAtkInfo.terrain = "Defensive";
@@ -2912,6 +3009,7 @@ function swap() {
     $("#candlelight-status-1").prop("checked", $("#candlelight-status-2").is(":checked"));
     $("#panic-status-1").prop("checked", $("#panic-status-2").prop("checked"));
     $("#triangle-adept-status-1").prop("checked", $("#triangle-adept-status-2").prop("checked"));
+    $("#guard-status-1").prop("checked", $("#guard-status-2").prop("checked"));
     $("#defensive-terrain-1").prop("checked", $("#defensive-terrain-2").is(":checked"));
 
     $("#rarity-1").html($("#rarity-2").html());
@@ -3007,6 +3105,7 @@ function swap() {
     $("#panic-status-2").prop("checked", oldAtkInfo.status.panic);
     $("#candlelight-status-2").prop("checked", oldAtkInfo.status.candlelight);
     $("#triangle-adept-status-2").prop("checked", oldAtkInfo.status.triangleAdept);
+    $("#guard-status-2").prop("checked", oldAtkInfo.status.guard);
     if (oldAtkInfo.terrain === 'Default') {
         $("#defensive-terrain-2").prop("checked", false);
     }
@@ -3776,6 +3875,7 @@ function setupOverrides() {
     loadPassives("s", "#override-passive-s", false);
     loadAssists("#override-assist", false);
     loadSpecials("#override-special");
+    refreshOverrideBlessings("None", "None", "None");
 
     // add No override option
     $("#override-weapon").html("<option value='No Override'>---</option>" + $("#override-weapon").html());
@@ -4411,6 +4511,83 @@ function importTeam(attacker) {
     return !error;
 }
 
+function refreshBlessings(singleChar, sB, sB2, sB3, charNum){
+    var blessings = setBlessings(singleChar, sB, sB2, sB3);
+
+    // set values
+    $("#blessing-" + charNum).html(blessings);
+    $("#blessing-" + charNum).val(sB).attr('selected', 'selected');
+    $("#blessing2-" + charNum).html(blessings);
+    $("#blessing2-" + charNum).val(sB2).attr('selected', 'selected');
+    $("#blessing3-" + charNum).html(blessings);
+    $("#blessing3-" + charNum).val(sB3).attr('selected', 'selected');
+}
+
+function refreshOverrideBlessings(sB, sB2, sB3){
+    var blessings = setOverrideBlessings(sB, sB2, sB3);
+
+    // set values
+    $("#override-blessing").html(blessings);
+    $("#override-blessing").val(sB).attr('selected', 'selected');
+    $("#override-blessing2").html(blessings);
+    $("#override-blessing2").val(sB2).attr('selected', 'selected');
+    $("#override-blessing3").html(blessings);
+    $("#override-blessing3").val(sB3).attr('selected', 'selected');
+}
+
+function setOverrideBlessings(sB, sB2, sB3){
+    //blessings stuff!
+    var blessings="<option value=\"None\">---</option>";
+
+    var tmpSB = "None";
+	if(sB !== "None")
+		tmpSB = sB;
+	else if(sB2 !== "None")
+		tmpSB = sB2;
+	else if(sB3 !== "None")
+		tmpSB = sB3;
+    if (tmpSB === "None" || !blessingsInfo[tmpSB].hasOwnProperty("mythic")){
+        blessings += "<option value=\"Attack\">Legendary Attack</option>";
+        blessings += "<option value=\"Speed\">Legendary Speed</option>";
+        blessings += "<option value=\"Defense\">Legendary Defense</option>";
+        blessings += "<option value=\"Resistance\">Legendary Resistance</option>";
+	}
+    if (tmpSB === "None" || blessingsInfo[tmpSB].hasOwnProperty("mythic")){
+        blessings += "<option value=\"Mythic_Attack\">Mythic Attack</option>";
+        blessings += "<option value=\"Mythic_Speed\">Mythic Speed</option>";
+        blessings += "<option value=\"Mythic_Defense\">Mythic Defense</option>";
+        blessings += "<option value=\"Mythic_Resistance\">Mythic Resistance</option>";
+	}
+	return blessings;
+}
+
+//sets blessings
+function setBlessings(singleChar, sB, sB2, sB3){
+    //blessings stuff!
+    var blessings="<option value=\"None\">---</option>";
+
+    var tmpSB = "None";
+	if(sB !== "None")
+		tmpSB = sB;
+	else if(sB2 !== "None")
+		tmpSB = sB2;
+	else if(sB3 !== "None")
+		tmpSB = sB3;
+    if (!singleChar.hasOwnProperty("legendary") && (tmpSB === "None" || !blessingsInfo[tmpSB].hasOwnProperty("mythic"))){
+        blessings += "<option value=\"Attack\">Legendary Attack</option>";
+        blessings += "<option value=\"Speed\">Legendary Speed</option>";
+        blessings += "<option value=\"Defense\">Legendary Defense</option>";
+        blessings += "<option value=\"Resistance\">Legendary Resistance</option>";
+	}
+    if (!singleChar.hasOwnProperty("legendary") && (tmpSB === "None" || blessingsInfo[tmpSB].hasOwnProperty("mythic"))){
+        blessings += "<option value=\"Mythic_Attack\">Mythic Attack</option>";
+        blessings += "<option value=\"Mythic_Speed\">Mythic Speed</option>";
+        blessings += "<option value=\"Mythic_Defense\">Mythic Defense</option>";
+        blessings += "<option value=\"Mythic_Resistance\">Mythic Resistance</option>";
+	}
+	return blessings;
+}
+
 // returns  info from a character panel as a string to be exported
 // charNum determines the panel to take data from
 function exportCharPanel(charNum) {
@@ -4571,6 +4748,7 @@ function clearTeam(attacker) {
         $("#triangle-adept-status-1").prop("checked", false);
         $("#panic-status-1").prop("checked", false);
         $("#candlelight-status-1").prop("checked", false);
+        $("#guard-status-1").prop("checked", false);
         $("#defensive-terrain-1").prop("checked", false);
 
         //bonuses
@@ -4603,6 +4781,7 @@ function clearTeam(attacker) {
         $("#triangle-adept-status-2").prop("checked", false);
         $("#panic-status-2").prop("checked", false);
         $("#candlelight-status-2").prop("checked", false);
+        $("#guard-status-2").prop("checked", false);
         $("#defensive-terrain-2").prop("checked", false);
 
         //bonuses

@@ -1,0 +1,12 @@
+{
+    "name": "Mystic Boost 1",
+    "sp": 60,
+    "type": "B",
+    "description": "Disables foe's skills that \"calculate damage using the lower of foe's Def or Res\" and \"calculate damage from staff like other weapons.\" Restores 2 HP after combat.",
+    "prevent_change_def_res": true,
+    "prevent_change_staff_dmg": true,
+    "heal": 2,
+    "icon": "/images/icons/passives/mystic-boost-1.png",
+    "link": "https://kagerochart.com/hero/passives/mystic-boost-1",
+    "id": "mystic-boost-1"
+}

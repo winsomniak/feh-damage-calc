@@ -8,7 +8,7 @@
     "stat_mod": {
         "spd": 3
     },
-    "adjacent_stat_bonus": {
+    "adjacent_stat_malus": {
         "target": "other",
         "adjacent": "ally",
         "mod": {

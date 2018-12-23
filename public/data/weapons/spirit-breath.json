@@ -12,7 +12,7 @@
     "attack_follow_up":
     {
         "stat_to_check":"def",
-        "stat_amount":5
+        "adv":5
     },
     "LowerResDefRange": 2,
     "char_unique": true,

@@ -1,0 +1,20 @@
+{
+    "name": "Axe of Virility",
+    "might": 16,
+    "range": 1,
+    "sp": 400,
+    "description": "Effective against armored units.",
+    "type": "Axe",
+    "link": "https://kagerochart.com/hero/weapons/axe-of-virility",
+    "color": "Green",
+    "magical": false,
+    "char_unique": true,
+    "move_effective": [
+        "Armored"
+    ],
+    "refinable":{
+        "type":"melee",
+        "Special":"Mystletainn"
+    },
+    "id": "axe-of-virility"
+}

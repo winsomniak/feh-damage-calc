@@ -207,7 +207,15 @@ $(".blessing-selector").on("change", function (){
         var points = ArenaScoreCalc(charNum);
         $(".arena-score-" + charNum + "-read").text(points.toString());
     }
+    refreshBlessings(charInfo[$("#char-" + charNum).val()], $("#blessing-"+charNum).val(), $("#blessing2-"+charNum).val(), $("#blessing3-"+charNum).val(), charNum);
     charChange(charNum);
+    updateDisplay();
+});
+
+// setup override blessing select
+$(".override-blessing-selector").on("change", function (){
+    refreshOverrideBlessings($("#override-blessing").val(), $("#override-blessing2").val(), $("#override-blessing3").val());
+    keepTable = false;
     updateDisplay();
 });
 
@@ -507,6 +515,7 @@ $("#override-reset").on("click", function() {
 
     //statuses
     $("#override-triangle-adept-status").prop("checked", false);
+    $("#override-guard-status").prop("checked", false);
     $("#override-panic-status").prop("checked", false);
     $("#override-candlelight-status").prop("checked", false);
     $("#override-defensive-terrain").prop("checked", false);
@@ -663,6 +672,8 @@ $(".draw-update").on("click", function() {
         $("#attack-panel .stat-bonus, #attack-panel .stat-penalty, #attack-panel .stat-spur").val(0);
         $("#panic-status-1").prop("checked", false);
         $("#candlelight-status-1").prop("checked", false);
+        $("#guard-status-1").prop("checked", false);
+        $("#triangle-adept-status-1").prop("checked", false);
         $("#defensive-terrain-1").prop("checked", false);
     } else {
         $("#curr-hp-1").val(Math.max(oldBA.attacker.currHP, 1));
@@ -677,6 +688,7 @@ $(".draw-update").on("click", function() {
         $("#res-bonus-1").val(oldBA.attacker.resBonus);
         $("#panic-status-1").prop("checked", oldBA.attacker.status.panic);
         $("#candlelight-status-1").prop("checked", oldBA.attacker.status.candlelight);
+        $("#guard-status-1").prop("checked", oldBA.attacker.status.guard);
         $("#triangle-adept-status-1").prop("checked", oldBA.attacker.status.triangleAdept);
     }
 
@@ -687,6 +699,8 @@ $(".draw-update").on("click", function() {
         $("#defend-panel .stat-bonus, #defend-panel .stat-penalty, #defend-panel .stat-spur").val(0);
         $("#panic-status-2").prop("checked", false);
         $("#candlelight-status-2").prop("checked", false);
+        $("#triangle-adept-status-2").prop("checked", false);
+        $("#guard-status-2").prop("checked", false);
         $("#defensive-terrain-2").prop("checked", false);
     } else {
         $("#curr-hp-2").val(Math.max(oldBA.defender.currHP, 1));
@@ -701,6 +715,7 @@ $(".draw-update").on("click", function() {
         $("#res-bonus-2").val(oldBA.defender.resBonus);
         $("#panic-status-2").prop("checked", oldBA.defender.status.panic);
         $("#candlelight-status-2").prop("checked", oldBA.defender.status.candlelight);
+        $("#guard-status-2").prop("checked", oldBA.defender.status.guard);
         $("#triangle-adept-status-2").prop("checked", oldBA.defender.status.triangleAdept);
     }
 

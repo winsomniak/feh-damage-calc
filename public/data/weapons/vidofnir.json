@@ -19,6 +19,23 @@
             "def": 7
         }
     },
+    "refinable":{
+        "type":"melee",
+        "Special":"Vidofnir",
+        "description": "If foe initiates combat and uses sword, lance, axe, or dragonstone, grants Def/Res+7 during combat.",
+        "type_defend_mod": {
+            "weapon_type": {
+                "Sword": true,
+                "Axe": true,
+                "Lance": true,
+                "Dragonstone": true
+            },
+            "stat_mod": {
+                "def": 7,
+                "res": 7
+            }
+        }
+    },
     "char_unique": true,
     "id": "vidofnir"
 }

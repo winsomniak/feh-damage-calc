@@ -226,6 +226,22 @@
             },
             "description":" Foes using magic cannot counterattack."
         },
+        "Nidhogg":{
+           "prevent_weapon_counter": {
+               "type": [
+                    "Red Tome",
+                    "Blue Tome",
+                    "Green Tome",
+                    "Tome",
+                    "Red Breath",
+                    "Blue Breath",
+                    "Green Breath",
+                    "Colorless Breath",
+                    "Breath"
+                ]
+            },
+            "description":" Magic and dragon foes cannot counterattack."
+        },
         "Draconic Poleax":
         {
             "stat_mod":{
@@ -328,16 +344,32 @@
                 "atk": 6
             }
         },
-        "Fólkvangr":{
+        "Fólkvangr": {
             "stat_mod":{
                 "hp":3
             },
             "tri_advantage": 0.2,
             "description":" If unit has weapon-triangle advantage, boosts Atk by 20%. If unit has weapon-triangle disadvantage, reduces Atk by 20%."
         },
-        "Fujin Yumi":
-        {
+        "Fujin Yumi": {
             "description":" If unit's HP ≥ 50%, unit can move adjacent to any ally within 2 spaces."
+        },
+        "Gladiator's Blade": {
+            "stat_mod":{
+                "hp":3
+            },
+            "adjacent_stat_bonus": {
+                "target": "self",
+                "adjacent": "ally",
+                "mod": {
+                    "atk": 4,
+                    "spd": 4
+                }
+            },
+            "description":" If unit is within 2 spaces of a flying or infantry ally, grants Atk/Spd+4 during combat."
+        },
+        "Tactical Spectrum": {
+            "description": "At start of turn, grants Atk/Spd/Def/Res+4 to allies within 2 spaces for 1 turn. Granted only if number of that ally's movement type on current team ≤ 2."
         },
         "Hauteclere":{
             "stat_mod":{
@@ -418,6 +450,20 @@
                 }
             }
         },
+        "Vidofnir":{
+            "stat_mod":{
+                "hp":3
+            },
+            "description":" If unit is within 2 spaces of an infantry or armored ally, grants Atk/Spd+4 during combat.",
+            "adjacent_stat_bonus": {
+                "target": "self",
+                "adjacent": "ally",
+                "mod": {
+                    "atk": 4,
+                    "spd": 4
+                }
+            }
+        },
         "Ragnarok":
         {
             "description":" At start of combat, if unit's HP ≤ 80%, grants Atk/Spd+7 during combat.",
@@ -433,6 +479,49 @@
         {
             "description":" At start of turn, inflicts Spd/Res-4 on foes in cardinal directions with Res < unit’s Res through their next actions."
         },
+        "Scarlet Sword": {
+            "stat_mod":{
+                "hp":3
+            },
+            "description":" At the start of turn 1, grants Special cooldown count-2."
+        },
+        "Florina's Lance": {
+            "stat_mod":{
+                "hp":3
+            },
+            "type_defend_mod": {
+                "weapon_type": {
+                    "Sword": true,
+                    "Axe": true,
+                    "Lance": true,
+                    "Breath": true
+                },
+                "stat_mod": {
+                    "atk": 4,
+                    "spd": 4,
+                    "def": 4,
+                    "res": 4
+                }
+            },
+            "description":" If foe initiates combat and uses sword, lance, axe, or dragonstone, grants Atk/Spd/Def/Res+4 during combat."
+        },
+        "Golden Dagger": {
+            "stat_mod":{
+                "hp":3
+            },
+            "description":" At start of combat, if Special is ready, grants Atk/Spd/Def/Res+3 during combat and unit can counterattack regardless of foe's range.",
+            "special_ready_mod": {
+                "mod":{
+                    "atk": 3,
+                    "spd": 3,
+                    "def": 3,
+                    "res": 3
+                }
+            },
+            "counter": {
+                "special_ready": true
+            }
+        },
         "Cymbeline":{
             "description":" Grants Atk/Res+5 during combat if within 2 spaces of a flying ally.",
             "adjacent_stat_bonus": {
@@ -442,6 +531,26 @@
                     "atk": 5,
                     "res": 5
                 }
+            }
+        },
+        "Triangle Attack":{
+            "description": "If the number of flying allies within 2 spaces ≥ 2, grants Atk/Spd/Def/Res+3 during combat. If unit initiates combat, unit attacks twice.",
+            "adjacent_stat_bonus": {
+                "needed": 2,
+                "target": "self",
+                "adjacent": "ally",
+                "mod": {
+                    "atk": 3,
+                    "spd": 3,
+                    "def": 3,
+                    "res": 3
+                }
+            },
+            "stat_mod":{
+                "hp":3
+            },
+            "brave": {
+                "adjacent_needed": 2
             }
         },
         "Wing Sword":{

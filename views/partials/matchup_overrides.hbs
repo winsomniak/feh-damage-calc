@@ -335,12 +335,8 @@
                         </div>
                     </div>
                     <div class="mdc-select mdc-select--box mdc-ripple-upgraded">
-                        <select id="override-blessing" class="mdc-select__native-control override-option">
-                            <option value="None">---</option>
-                            <option value="Attack">Attack</option>
-                            <option value="Speed">Speed</option>
-                            <option value="Defense">Defense</option>
-                            <option value="Resistance">Resistance</option>
+                        <select id="override-blessing" class="mdc-select__native-control override-blessing-selector">
+                            <option value="None" selected>---</option>
                         </select>
                         <label class="mdc-floating-label mdc-floating-label--float-above blessing-label" for="override-blessing">
                             <span class="override-collapse-button" data-section="extra-blessing-info">Blessing 1</span>
@@ -348,12 +344,8 @@
                         <div class="mdc-line-ripple"></div>
                     </div>
                     <div class="mdc-select mdc-select--box mdc-ripple-upgraded">
-                        <select id="override-blessing2" class="mdc-select__native-control override-option">
-                            <option value="None">---</option>
-                            <option value="Attack">Attack</option>
-                            <option value="Speed">Speed</option>
-                            <option value="Defense">Defense</option>
-                            <option value="Resistance">Resistance</option>
+                        <select id="override-blessing2" class="mdc-select__native-control override-blessing-selector">
+                            <option value="None" selected>---</option>
                         </select>
                         <label class="mdc-floating-label mdc-floating-label--float-above blessing-label" for="override-blessing2">
                             <span class="override-collapse-button" data-section="extra-blessing-info">Blessing 2</span>
@@ -361,12 +353,8 @@
                         <div class="mdc-line-ripple"></div>
                     </div>
                     <div class="mdc-select mdc-select--box mdc-ripple-upgraded">
-                        <select id="override-blessing3" class="mdc-select__native-control override-option">
-                            <option value="None">---</option>
-                            <option value="Attack">Attack</option>
-                            <option value="Speed">Speed</option>
-                            <option value="Defense">Defense</option>
-                            <option value="Resistance">Resistance</option>
+                        <select id="override-blessing3" class="mdc-select__native-control override-blessing-selector">
+                            <option value="None" selected>---</option>
                         </select>
                         <label class="mdc-floating-label mdc-floating-label--float-above blessing-label" for="override-blessing3">
                             <span class="override-collapse-button" data-section="extra-blessing-info">Blessing 3</span>
@@ -420,6 +408,17 @@
                                 </div>
                             </div>
                             <label for="override-triangle-adept-status" class="mdc-switch-label">Triangle Adept</label>
+                            <div class="mdc-line-ripple"></div>
+                        </div>
+
+                        <div class="mdc-form-field">
+                            <div class="mdc-switch">
+                                <input type="checkbox" id="override-guard-status" class="mdc-switch__native-control override-option" />
+                                <div class="mdc-switch__background">
+                                    <div class="mdc-switch__knob"></div>
+                                </div>
+                            </div>
+                            <label for="guard-status-1" class="mdc-switch-label">Guard</label>
                             <div class="mdc-line-ripple"></div>
                         </div>
                     </section>

@@ -8,10 +8,10 @@
     "link": "https://kagerochart.com/hero/weapons/saggitae",
     "color": "Blue",
     "magical": true,
-    "stat_bonus_compare":{
-        "stat_to_check": "atk",
-        "difference": 5,
-        "type": "lesser_equal",
+    "adv_mod":{
+        "stat": "atk",
+        "adv": 5,
+        "enemy_based":true,
         "mod":{
             "atk": 5,
             "spd": 5,

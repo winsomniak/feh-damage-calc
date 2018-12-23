@@ -1,0 +1,12 @@
+{
+    "name": "Joyous Lantern",
+    "might": 8,
+    "range": 2,
+    "sp": 200,
+    "description": "At start of turn, grants Def/Res+3 to ally with the highest Atk for 1 turn. (Excludes unit.)",
+    "type": "Staff",
+    "color": "Colorless",
+    "magical": true,
+    "link": "https://kagerochart.com/hero/weapons/joyous-lantern",
+    "id": "joyous-lantern"
+}

@@ -5,6 +5,7 @@
     "description": "If foe initiates combat and the number of allies within 2 spaces ≥ 2, grants Atk/Spd/Def/Res+4 during combat.",
     "icon": "/images/icons/passives/laws-of-sacae.png",
     "link": "https://kagerochart.com/hero/passives/laws-of-sacae",
+    "char_unique": true,
     "adjacent_stat_bonus": {
         "target": "self",
         "adjacent": "ally",

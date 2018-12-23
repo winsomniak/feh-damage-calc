@@ -1,0 +1,21 @@
+{
+    "name": "Gladiator's Blade",
+    "might": 16,
+    "range": 1,
+    "sp": 400,
+    "description": "If unit’s Atk > foe’s Atk, grants Special cooldown charge +1 per unit's attack. (Only highest value applied. Does not stack.)",
+    "type": "Sword",
+    "link": "https://kagerochart.com/hero/weapons/gladiators-blade",
+    "color": "Red",
+    "magical": false,
+    "spec_accel": {
+        "stat": "atk",
+        "adv": 1
+    },
+    "refinable":{
+        "type":"melee",
+        "Special":"Gladiator's Blade"
+    },
+    "char_unique": true,
+    "id": "gladiators-blade"
+}

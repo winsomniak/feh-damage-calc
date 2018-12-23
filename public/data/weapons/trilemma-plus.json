@@ -7,6 +7,7 @@
     "type": "Staff",
     "link": "https://kagerochart.com/hero/weapons/trilemma-plus",
     "color": "Colorless",
+    "TA_inflicts": true,
     "magical": true,
     "refinable": {
         "type": "staff"
