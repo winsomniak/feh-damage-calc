@@ -14,18 +14,18 @@ function checkAffinity(mod, attacker, defender) {
 
 //Let's separate the checks for weaponData and passiveAData, so we can get the correct number to check for cancel affinity
 function CheckTriAdvPerPossibility(agent, other, mod, tocheck) {
-    if (tocheck.hasOwnProperty("tri_advantage")) {
+    if (tocheck.hasOwnProperty("tri_advantage") && !checkCA(agent)) {
         var adv = true;
         if (mod < 1) {
             adv = false;
         }
-        return cancelAffinity(agent, other, adv, mod);
+        return cancelAffinity(agent, other, adv, tocheck);
     }
     return 0;
 }
 
 function CheckTriAdvPerStatus(agent, other, mod) {
-	if(agent.status.triangleAdept) {
+	if(agent.status.triangleAdept && !checkCA(agent)) {
         var adv = true;
         if (mod < 1) {
             adv = false;
@@ -33,6 +33,11 @@ function CheckTriAdvPerStatus(agent, other, mod) {
         return cancelAffinitySP(agent, other, adv, 0.2);
     }
     return 0;
+}
+
+function checkCA(a)
+{
+    return a.passiveBData.hasOwnProperty("cancel_skill_affinity");
 }
 
 //Adjusts damage

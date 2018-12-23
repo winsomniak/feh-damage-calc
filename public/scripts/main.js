@@ -1798,57 +1798,95 @@ function singleCombat(battleInfo, initiator, logIntro, brave) {
 
     // check for any additional triangle advantage boost, then calculate if needed
     if (atkMod > 1) {
-        if (attacker.weaponData.hasOwnProperty("tri_advantage")) {
-            atkMod += 0.2;
-            battleInfo.logMsg += "Weapon triangle affinity granted by skills boosts attack by another 20% [" + weaponInfo[attacker.weaponName].name + "]. ";
-        } else if (defender.weaponData.hasOwnProperty("tri_advantage")) {
-            atkMod += 0.2;
-            battleInfo.logMsg += "Opponent's weapon triangle affinity granted by skills boosts attack by another 20% [" + weaponInfo[defender.weaponName].name + "]. ";
-        } else if (attacker.status.triangleAdept) {
-            atkMod += 0.2;
-            battleInfo.logMsg += "Weapon triangle affinity granted by " + attacker.display + "'s status boosts attack by another 20%. ";
-        } else if (defender.status.triangleAdept) {
-            atkMod += 0.2;
-            battleInfo.logMsg += "Opponent's weapon triangle affinity granted by " + defender.display + "'s status boosts attack by another 20%. ";
-        } else if (attacker.passiveAData.hasOwnProperty("tri_advantage")) {
-            atkMod += attacker.passiveAData.tri_advantage;
-            battleInfo.logMsg += "Weapon triangle affinity granted by skills boosts attack by another " + (attacker.passiveAData.tri_advantage * 100).toString() + "% [" + skillInfo['a'][attacker.passiveA].name + "]. ";
-        } else if (defender.passiveAData.hasOwnProperty("tri_advantage")) {
-            atkMod += defender.passiveAData.tri_advantage;
-            battleInfo.logMsg += "Opponent's weapon triangle affinity granted by skills boosts attack by another " + (defender.passiveAData.tri_advantage * 100).toString() + "% [" + skillInfo['a'][defender.passiveA].name + "]. ";
+        var maxBoost = 0;
+        var source = "";
+
+        if (attacker.weaponData.hasOwnProperty("tri_advantage") && !checkCA(attacker)) {
+            maxBoost = 0.2;
+            source = weaponInfo[attacker.weaponName].name;
         }
-        var aff = checkAffinity(atkMod, attacker, defender);
-        atkMod += aff;
-        if (aff !== 0) {
-            battleInfo.logMsg += "[Cancel Affinity] takes effect! "
+        if (defender.weaponData.hasOwnProperty("tri_advantage") && !checkCA(defender)) {
+            maxBoost = 0.2;
+            source = weaponInfo[defender.weaponName].name;
         }
-        atkPower = roundNum(atkPower * atkMod, false);
-    } else if (atkMod < 1) {
-        if (attacker.weaponData.hasOwnProperty("tri_advantage")) {
-            atkMod -= 0.2;
-            battleInfo.logMsg += "Weapon triangle affinity granted by skills reduces attack by another 20% [" + weaponInfo[attacker.weaponName].name + "]. ";
-        } else if (defender.weaponData.hasOwnProperty("tri_advantage")) {
-            atkMod -= 0.2;
-            battleInfo.logMsg += "Opponent's weapon triangle affinity granted by skills reduces attack by another 20% [" + weaponInfo[defender.weaponName].name + "]. ";
-        } else if (attacker.status.triangleAdept) {
-            atkMod -= 0.2;
-            battleInfo.logMsg += "Weapon triangle affinity granted by " + attacker.display + "'s status reduces attack by another 20%. ";
-        } else if (defender.status.triangleAdept) {
-            atkMod -= 0.2;
-            battleInfo.logMsg += "Opponent's weapon triangle affinity granted by " + defender.display + "'s status reduces attack by another 20%. ";
-        } else if (attacker.passiveAData.hasOwnProperty("tri_advantage")) {
-            atkMod -= attacker.passiveAData.tri_advantage;
-            battleInfo.logMsg += "Weapon triangle affinity granted by skills reduces attack by another " + (attacker.passiveAData.tri_advantage * 100).toString() + "% [" + skillInfo['a'][attacker.passiveA].name + "]. ";
-        } else if (defender.passiveAData.hasOwnProperty("tri_advantage")) {
-            atkMod -= defender.passiveAData.tri_advantage;
-            battleInfo.logMsg += "Opponent's weapon triangle affinity granted by skills reduces attack by another " + (defender.passiveAData.tri_advantage * 100).toString() + "% [" + skillInfo['a'][defender.passiveA].name + "]. ";
+        if (attacker.status.triangleAdept && !checkCA(attacker)) {
+            maxBoost = 0.2;
+            source = "Triangle Adept Status Effect";
         }
-        var aff = checkAffinity(atkMod, attacker, defender);
-        atkMod -= aff;
-        if (aff !== 0) {
-            battleInfo.logMsg += "[Cancel Affinity] takes effect! "
+        if (defender.status.triangleAdept && !checkCA(defender)) {
+            maxBoost = 0.2;
+            source = "Triangle Adept Status Effect";
+        }
+        if (attacker.passiveAData.hasOwnProperty("tri_advantage") && !checkCA(attacker)) {
+            if(maxBoost < attacker.passiveAData.tri_advantage){
+                maxBoost = attacker.passiveAData.tri_advantage;
+                source = attacker.passiveAData.name;
+            }
+        }
+        if (defender.passiveAData.hasOwnProperty("tri_advantage") && !checkCA(defender)) {
+            if(maxBoost < defender.passiveAData.tri_advantage){
+                maxBoost = defender.passiveAData.tri_advantage;
+                source = defender.passiveAData.name;
+            }
         }
 
+        atkMod += maxBoost;
+
+        if(maxBoost > 0){
+            battleInfo.logMsg += "Attack boosted by another " + roundNum(maxBoost * 100, false) + "% [" + source + "]. "
+
+            var aff = checkAffinity(atkMod, attacker, defender);
+            atkMod += aff;
+            if (aff !== 0) {
+                battleInfo.logMsg += "[Cancel Affinity] takes effect! "
+            }
+        }
+
+        atkPower = roundNum(atkPower * atkMod, false);
+    } else if (atkMod < 1) {
+        var maxBoost = 0;
+        var source = "";
+
+        if (attacker.weaponData.hasOwnProperty("tri_advantage") && !checkCA(attacker)) {
+            maxBoost = 0.2;
+            source = weaponInfo[attacker.weaponName].name;
+        }
+        if (defender.weaponData.hasOwnProperty("tri_advantage") && !checkCA(defender)) {
+            maxBoost = 0.2;
+            source = weaponInfo[defender.weaponName].name;
+        }
+        if (attacker.status.triangleAdept && !checkCA(attacker)) {
+            maxBoost = 0.2;
+            source = "Triangle Adept Status Effect";
+        }
+        if (defender.status.triangleAdept && !checkCA(defender)) {
+            maxBoost = 0.2;
+            source = "Triangle Adept Status Effect";
+        }
+        if (attacker.passiveAData.hasOwnProperty("tri_advantage") && !checkCA(attacker)) {
+            if(maxBoost < attacker.passiveAData.tri_advantage){
+                maxBoost = attacker.passiveAData.tri_advantage;
+                source = attacker.passiveAData.name;
+            }
+        }
+        if (defender.passiveAData.hasOwnProperty("tri_advantage") && !checkCA(defender)) {
+            if(maxBoost < defender.passiveAData.tri_advantage){
+                maxBoost = defender.passiveAData.tri_advantage;
+                source = defender.passiveAData.name;
+            }
+        }
+        
+        atkMod -= maxBoost;
+
+        if(maxBoost > 0) {
+            battleInfo.logMsg += "Attack reduced by another " + roundNum(maxBoost * 100, false) + "% [" + source + "]. "
+
+            var aff = checkAffinity(atkMod, attacker, defender);
+            atkMod -= aff;
+            if (aff !== 0) {
+                battleInfo.logMsg += "[Cancel Affinity] takes effect! "
+            }
+        }
 
         atkPower = roundNum(atkPower * atkMod, true);
     }
@@ -2018,7 +2056,7 @@ function singleCombat(battleInfo, initiator, logIntro, brave) {
     }
 
     if(battleInfo.reduction !== 1) {
-        battleInfo.logMsg += "Opponent reduced damage by " + ((1 - battleInfo.reduction)*100).toString() + "% in total. ";
+        battleInfo.logMsg += "Opponent reduced damage by " + roundNum(((1 - battleInfo.reduction)*100), false).toString() + "% in total. ";
         dmg = roundNum(dmg * battleInfo.reduction, true);
     }
     //Hacky bugfix for the Brave Ike mirror match issue
