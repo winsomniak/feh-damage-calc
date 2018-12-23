@@ -830,6 +830,11 @@ function getStatTotals(charName, weaponName, passiveA, seal, rarity, level, merg
         addSupportBuff(allySupport, 'ally', stats);
     }
 
+	for(var i = 0; i < statNames.length; i++) { //Consistency check
+        if(stats[statNames[i]] > HIGHESTSTAT)
+            stats[statNames[i]] = HIGHESTSTAT;
+	}
+
     return stats;
 }
 

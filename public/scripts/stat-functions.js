@@ -59,7 +59,7 @@ function updateStatTotal(selectID, charNum, increment) {
     if ($(selectID).data("info") !== undefined && $(selectID).data("info").hasOwnProperty("stat_mod")) {
         for (var stat in $(selectID).data("info").stat_mod) {
             var total = parseInt($("#" + stat + "-" + charNum).val());
-            if(total === 0 || (total === 1 && stat === "hp"))
+            if(total === 0 || total >= HIGHESTSTAT || (total === 1 && stat === "hp"))
                 reset = true;
             if (increment) {
                 total += $(selectID).data("info").stat_mod[stat];
@@ -68,6 +68,8 @@ function updateStatTotal(selectID, charNum, increment) {
             }
 
             // keep stats within limits
+            if(total > HIGHESTSTAT)
+                total = HIGHESTSTAT;
             $("#" + stat + "-" + charNum).val(total);
             if ($("#" + stat + "-" + charNum).hasClass("more-than-zero")) {
                 limit(document.getElementById(stat + "-" + charNum), 1);
