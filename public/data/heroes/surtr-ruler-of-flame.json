@@ -7,7 +7,6 @@
   "weapon_type": "Axe",
   "link": "https://kagerochart.com/hero/surtr-ruler-of-flame",
   "move_type": "Armored",
-  "LowestRarity": 1,
   "weapon": [
     "sinmara",
     "silver-axe",
@@ -15,61 +14,39 @@
     "iron-axe"
   ],
   "special": [
-    "ignis",
     "bonfire",
     "glowing-ember"
   ],
   "passive_a": [
-    "sturdy-stance-2",
-    "sturdy-stance-1",
-    "death-blow-3",
-    "death-blow-2",
-    "death-blow-1",
-    "fierce-stance-3",
-    "fierce-stance-2",
-    "fierce-stance-1"
+    "steady-stance-4",
+    "steady-stance-3",
+    "steady-stance-2",
+    "steady-stance-1"
   ],
   "passive_b": [
-    "vengeful-fighter-3",
-    "vengeful-fighter-2",
-    "vengeful-fighter-1",
-    "bold-fighter-3",
-    "bold-fighter-2",
-    "bold-fighter-1",
-    "obstruct-3",
-    "obstruct-2",
-    "obstruct-1",
-    "cancel-affinity-3",
-    "cancel-affinity-2",
-    "cancel-affinity-1"
+    "wary-fighter-3",
+    "wary-fighter-2",
+    "wary-fighter-1"
   ],
   "passive_c": [
-    "threaten-def-3",
-    "threaten-def-2",
-    "threaten-def-1",
-    "panic-ploy-3",
-    "panic-ploy-2",
-    "panic-ploy-1",
-    "armor-march-3",
-    "armor-march-2",
-    "armor-march-1"
+    "surtrs-menace"
   ],
   "base_stat": {
     "star_5": {
-      "hp": 20,
-      "atk": 11,
+      "hp": 17,
+      "atk": 9,
       "spd": 4,
-      "def": 12,
-      "res": 9
+      "def": 10,
+      "res": 7
     },
     "growth": {
       "hp": 75,
-      "atk": 65,
-      "spd": 25,
-      "def": 65,
+      "atk": 70,
+      "spd": 30,
+      "def": 70,
       "res": 60,
-      "total": 290
+      "total": 305
     },
-    "growth_type": 0
+    "growth_type": 56
   }
 }

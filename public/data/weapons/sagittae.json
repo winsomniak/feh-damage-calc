@@ -1,11 +1,11 @@
 {
-    "name": "Saggitae",
+    "name": "Sagittae",
     "might": 14,
     "range": 2,
     "sp": 400,
     "description": "Grants Def+3. At start of combat, if foe's Atk ≥ unit's Atk+5, grants Atk/Spd/Def/Res+5 during combat.",
     "type": "Blue Tome",
-    "link": "https://kagerochart.com/hero/weapons/saggitae",
+    "link": "https://kagerochart.com/hero/weapons/sagittae",
     "color": "Blue",
     "magical": true,
     "adv_mod":{
@@ -23,5 +23,5 @@
         "def": 3
     },
     "char_unique": true,
-    "id": "saggitae"
+    "id": "sagittae"
 }

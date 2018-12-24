@@ -331,8 +331,10 @@ function Follow(char, agent, attacker, CanCounter, battleInfo) {
                             if((!bfup.hasOwnProperty("bonus")) || (((bonusesTarget.atkBonus + bonusesTarget.spdBonus + bonusesTarget.defBonus + bonusesTarget.resBonus) !== 0 && !bonusesTarget.status.panic) || checkMarch(bonusesTarget))) { //BEphraim's check
                                 if((!bfup.hasOwnProperty("penalty")) || (((penaltiesTarget.atkPenalty + penaltiesTarget.spdPenalty + penaltiesTarget.defPenalty + penaltiesTarget.resPenalty) !== 0) || penaltiesTarget.status.panic || penaltiesTarget.status.guard || penaltiesTarget.status.tiangleAdept || penaltiesTarget.status.candlelight)) { //Hrid's check
                                     if((!bfup.hasOwnProperty("stat_to_check")) || phantomStat(char, bfup.stat_to_check) - phantomStat(agent, bfup.stat_to_check) >= bfup.adv) { //Spirit Breath's check
-                                        doubling++;
-                                        battleInfo.logMsg+="<li class='battle-interaction'><span class='" + char.agentClass + "'>" + char.display + "</span>'s " + char[checks[i]].name + " activated, increasing their own ability to follow-up!</li>";
+                                        if((!bfup.hasOwnProperty("adjacent")) || char.adjacent > 0) { //Lìf's weapon check
+                                            doubling++;
+                                            battleInfo.logMsg+="<li class='battle-interaction'><span class='" + char.agentClass + "'>" + char.display + "</span>'s " + char[checks[i]].name + " activated, increasing their own ability to follow-up!</li>";
+                                        }
                                     }
                                 }
                             }
@@ -373,9 +375,13 @@ function unchangeFollow(char, battleInfo, agent)
 {
     for (var i = 0; i < checks.length; i++) {
         var unchange = char[checks[i]].negate_follow_changes;
-        if(unchange && ((!unchange.hasOwnProperty("threshold")) || char.initHP >= roundNum(unchange.threshold * char.hp, true))) {
-            battleInfo.logMsg+= "<li class='battle-interaction'><span class='" + char.agentClass + "'>" + char.display + "</span>'s " + char[checks[i]].name + " activated, removing <span class='" + agent.agentClass + "'>" + agent.display +"</span>'s ability to change follow-up logic!</li>";
-            return true;
+        if(unchange){
+            if((!unchange.hasOwnProperty("threshold")) || char.initHP >= roundNum(unchange.threshold * char.hp, true)) {
+                if((!unchange.hasOwnProperty("adjacent")) || char.adjacent > 0) {
+                    battleInfo.logMsg+= "<li class='battle-interaction'><span class='" + char.agentClass + "'>" + char.display + "</span>'s " + char[checks[i]].name + " activated, removing <span class='" + agent.agentClass + "'>" + agent.display +"</span>'s ability to change follow-up logic!</li>";
+                    return true;
+                }
+            }
         }
     }
     return false;

@@ -1,0 +1,29 @@
+{
+    "name": "Sökkvabekkr",
+    "might": 16,
+    "range": 1,
+    "sp": 400,
+    "description": "If unit is within 3 spaces of an ally, grants Atk/Spd/Def/Res+4 during combat, and unit makes a guaranteed follow-up attack, but after combat, if unit attacked, deals 20 damage to nearest ally.",
+    "type": "Sword",
+    "link": "https://kagerochart.com/hero/weapons/sokkvabekkr",
+    "color": "Red",
+    "adjacent_stat_bonus": {
+        "target": "self",
+        "adjacent": "ally",
+        "mod": {
+            "atk": 4,
+            "spd": 4,
+            "def": 4,
+            "res": 4
+        }
+    },
+    "attack_follow_up": {
+        "adjacent": true
+    },
+    "defense_follow_up": {
+        "adjacent": true
+    },
+    "magical": false,
+    "char_unique": true,
+    "id": "sokkvabekkr"
+}

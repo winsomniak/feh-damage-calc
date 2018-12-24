@@ -1,0 +1,53 @@
+{
+  "display": "Ephraim, Sparkling Gallantly",
+  "name": "Ephraim",
+  "title": "Sparkling Gallantly",
+  "id": "ephraim-sparkling-gallantly",
+  "color": "Blue",
+  "weapon_type": "Lance",
+  "link": "https://kagerochart.com/hero/ephraim-sparkling-gallantly",
+  "move_type": "Armored",
+  "weapon": [
+    "festive-siegmund",
+    "silver-lance",
+    "steel-lance",
+    "iron-lance"
+  ],
+  "special": [
+    "dragon-fang",
+    "dragon-gaze"
+  ],
+  "passive_a": [
+    "atk-def-solo-3",
+    "atk-def-solo-2",
+    "atk-def-solo-1"
+  ],
+  "passive_b": [
+    "bold-fighter-3",
+    "bold-fighter-2",
+    "bold-fighter-1"
+  ],
+  "passive_c": [
+    "close-guard-3",
+    "close-guard-2",
+    "close-guard-1"
+  ],
+  "base_stat": {
+    "star_5": {
+      "hp": 21,
+      "atk": 11,
+      "spd": 6,
+      "def": 10,
+      "res": 7
+    },
+    "growth": {
+      "hp": 55,
+      "atk": 70,
+      "spd": 40,
+      "def": 60,
+      "res": 50,
+      "total": 275
+    },
+    "growth_type": 255
+  }
+}

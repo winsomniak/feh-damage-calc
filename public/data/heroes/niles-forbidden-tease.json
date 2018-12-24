@@ -1,0 +1,52 @@
+{
+  "display": "Niles, Forbidden Tease",
+  "name": "Niles",
+  "title": "Forbidden Tease",
+  "id": "niles-forbidden-tease",
+  "color": "Blue",
+  "weapon_type": "Blue Bow",
+  "link": "https://kagerochart.com/hero/niles-forbidden-tease",
+  "move_type": "Armored",
+  "weapon": [
+    "devilish-bow-plus",
+    "devilish-bow",
+    "steel-bow",
+    "iron-bow"
+  ],
+  "assist": [
+    "smite"
+  ],
+  "passive_a": [
+    "swift-sparrow-2",
+    "swift-sparrow-1",
+    "darting-blow-1"
+  ],
+  "passive_b": [
+    "atk-spd-link-3",
+    "atk-spd-link-2",
+    "atk-spd-link-1"
+  ],
+  "passive_c": [
+    "fortify-armor",
+    "fortify-res-2",
+    "fortify-res-1"
+  ],
+  "base_stat": {
+    "star_5": {
+      "hp": 18,
+      "atk": 10,
+      "spd": 11,
+      "def": 6,
+      "res": 7
+    },
+    "growth": {
+      "hp": 45,
+      "atk": 55,
+      "spd": 65,
+      "def": 45,
+      "res": 50,
+      "total": 260
+    },
+    "growth_type": 197
+  }
+}

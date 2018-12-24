@@ -5,6 +5,7 @@
   "id": "robin-fell-vessel",
   "color": "Colorless",
   "weapon_type": "Colorless Breath",
+  "legendary": true,
   "link": "https://kagerochart.com/hero/robin-fell-vessel",
   "move_type": "Flying",
   "weapon": [

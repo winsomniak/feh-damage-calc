@@ -1,0 +1,52 @@
+{
+  "display": "Tiki, Legendary Dragon",
+  "name": "Tiki",
+  "title": "Legendary Dragon",
+  "id": "tiki-legendary-dragon",
+  "color": "Blue",
+  "weapon_type": "Blue Breath",
+  "link": "https://kagerochart.com/hero/tiki-legendary-dragon",
+  "move_type": "Armored",
+  "legendary": true,
+  "weapon": [
+    "divine-mist",
+    "flametongue",
+    "fire-breath-plus",
+    "fire-breath"
+  ],
+  "special": [
+    "moonbow",
+    "new-moon"
+  ],
+  "passive_a": [
+    "fierce-breath",
+    "fierce-stance-2",
+    "fierce-stance-1"
+  ],
+  "passive_b": [
+    "bold-fighter-3",
+    "bold-fighter-2",
+    "bold-fighter-1"
+  ],
+  "passive_c": [
+    "with-everyone"
+  ],
+  "base_stat": {
+    "star_5": {
+      "hp": 17,
+      "atk": 10,
+      "spd": 11,
+      "def": 4,
+      "res": 5
+    },
+    "growth": {
+      "hp": 65,
+      "atk": 55,
+      "spd": 55,
+      "def": 75,
+      "res": 55,
+      "total": 305
+    },
+    "growth_type": 170
+  }
+}
