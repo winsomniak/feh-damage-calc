@@ -1,0 +1,9 @@
+{
+    "name": "Earthwater Balm+",
+    "cooldown": 1,
+    "sp": 300,
+    "description": "When healing an ally with a staff, grants Def/Res+6 to all allies for 1 turn.",
+    "link": "https://kagerochart.com/hero/specials/earthwater-balm-plus",
+    "weapon_unique": "Staff",
+    "id": "earthwater-balm-plus"
+}

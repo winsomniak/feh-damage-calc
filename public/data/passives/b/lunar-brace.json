@@ -1,0 +1,17 @@
+{
+    "name": "Lunar Brace",
+    "sp": 300,
+    "type": "B",
+    "description": "Slows Special trigger (cooldown count+1). Deals damage = 50% of foe's Def when Special triggers.",
+    "icon": "/images/icons/passives/lunar-brace.png",
+    "link": "https://kagerochart.com/hero/passives/lunar-brace",
+    "spec_damage_bonus": 
+    {
+        "stat": "def",
+        "target": "other",
+        "multiplier": 0.5
+    },
+    "spec_cooldown_mod": 1,
+    "char_unique": true,
+    "id": "lunar-brace"
+}

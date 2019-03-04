@@ -1,0 +1,10 @@
+{
+    "name": "Surtr's Menace",
+    "sp": 300,
+    "type": "C",
+    "char_unique": true,
+    "description": "At start of turn, if unit is within 2 spaces of a foe, grants Atk/Spd/Def/Res+4 for 1 turn and inflicts Atk/Spd/Def/Res-4 on foes within 2 spaces through their next actions.",
+    "icon": "/images/icons/passives/surtrs-menace.png",
+    "link": "https://kagerochart.com/hero/passives/surtrs-menace",
+    "id": "surtrs-menace"
+}

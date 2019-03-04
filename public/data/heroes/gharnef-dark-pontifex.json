@@ -1,0 +1,49 @@
+{
+  "display": "Gharnef, Dark Pontifex",
+  "name": "Gharnef",
+  "title": "Dark Pontifex",
+  "id": "gharnef-dark-pontifex",
+  "color": "Red",
+  "weapon_type": "Red Tome",
+  "link": "https://kagerochart.com/hero/gharnef-dark-pontifex",
+  "move_type": "Infantry",
+  "LowestRarity": 3,
+  "weapon": [
+    "imhullu",
+    "fenrir",
+    "ruin",
+    "flux"
+  ],
+  "special": [
+    "ignis",
+    "glowing-ember"
+  ],
+  "passive_a": [
+    "mirror-stance-2",
+    "mirror-stance-1",
+    "warding-stance-1"
+  ],
+  "passive_b": [
+    "chill-atk-3",
+    "chill-atk-2",
+    "chill-atk-1"
+  ],
+  "base_stat": {
+    "star_5": {
+      "hp": 16,
+      "atk": 8,
+      "spd": 10,
+      "def": 5,
+      "res": 6
+    },
+    "growth": {
+      "hp": 50,
+      "atk": 50,
+      "spd": 55,
+      "def": 50,
+      "res": 40,
+      "total": 245
+    },
+    "growth_type": 234
+  }
+}

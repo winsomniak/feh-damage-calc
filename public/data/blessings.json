@@ -26,5 +26,33 @@
             "hp": 3,
             "res": 4
         }
+    },
+    "Mythic_Attack":{
+        "mythic": true,
+        "stat_mod":{
+            "hp": 5,
+            "atk": 3
+        }
+    },
+    "Mythic_Speed":{
+        "mythic": true,
+        "stat_mod":{
+            "hp": 5,
+            "spd": 4
+        }
+    },
+    "Mythic_Defense":{
+        "mythic": true,
+        "stat_mod":{
+            "hp": 5,
+            "def": 5
+        }
+    },
+    "Mythic_Resistance":{
+        "mythic": true,
+        "stat_mod":{
+            "hp": 5,
+            "res": 5
+        }
     }
 }

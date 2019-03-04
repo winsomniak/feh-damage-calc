@@ -1,0 +1,15 @@
+{
+    "name": "Blue Flame",
+    "cooldown": 3,
+    "sp": 500,
+    "description": "Boosts damage by 10. If unit is adjacent to an ally, boosts damage by 25 instead.",
+    "link": "https://kagerochart.com/hero/specials/blue_flame",
+    "dmg_bonus": {
+        "bonus": 10,
+        "if_adjacent": {
+            "bonus": 25
+        }
+    },
+    "weapon_restrict": "Staff",
+    "id": "blue_flame"
+}

@@ -1,0 +1,17 @@
+{
+    "name": "Witchy Wand+",
+    "might": 12,
+    "range": 2,
+    "sp": 300,
+    "description": "After combat, if unit attacked, resets Special cooldown of target and foes within 2 spaces of target, and inflicts the following status on target and foes within 2 spaces of target through their next actions: \"Inflicts Special cooldown charge -1 per attack during combat. (Only highest value applied. Does not stack.)\" (Neutralizes Special cooldown count reductions after combat, but skills that Accelerate and Slow Special are still effective.)",
+    "type": "Staff",
+    "special_reset": true,
+    "guard_inflicts": true,
+    "link": "https://kagerochart.com/hero/weapons/witchy-wand-plus",
+    "color": "Colorless",
+    "magical": true,
+    "refinable": {
+        "type": "staff"
+    },
+    "id": "witchy-wand-plus"
+}

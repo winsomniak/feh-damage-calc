@@ -1,0 +1,35 @@
+{
+    "name": "Lyfjaberg",
+    "might": 14,
+    "range": 2,
+    "sp": 400,
+    "description": "Grants Res+3. At start of combat, if unit's HP ≥ 50%, grants Atk/Spd+4 during combat, and if unit initiates combat, foe cannot make a follow-up attack. After combat, if unit attacked, inflicts Def/Res-7 on target and foes within 2 spaces of target through their next actions, and if bonus was granted to unit, deals 4 damage to unit.",
+    "type": "Dagger",
+    "link": "https://kagerochart.com/hero/weapons/lyfjaberg",
+    "color": "Colorless",
+    "magical": true,
+    "above_threshold_mod": {
+        "threshold": 0.5,
+        "stat_mod": {
+            "atk": 4,
+            "spd": 4
+        }
+    },
+    "other_prevent_follow": {
+        "initiate": true,
+        "threshold": 0.5
+    },
+    "recoil_dmg_threshold": {
+        "threshold": 0.5,
+        "dmg": 4
+    },
+    "char_unique": true,
+    "stat_mod": {
+        "res": 3
+    },
+    "seal": {
+        "def": -7,
+        "res": -7
+    },
+    "id": "lyfjaberg"
+}

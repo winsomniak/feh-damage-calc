@@ -1,0 +1,9 @@
+{
+    "name": "Atk Opening 2",
+    "sp": 120,
+    "type": "C",
+    "description": "At start of turn, grants Atk+4 to ally with the highest Atk for 1 turn. (Excludes unit.)",
+    "icon": "/images/icons/passives/atk-opening-2.png",
+    "link": "https://kagerochart.com/hero/passives/atk-opening-2",
+    "id": "atk-opening-2"
+}

@@ -1,0 +1,17 @@
+{
+    "name": "Atk Spd Solo 3",
+    "sp": 240,
+    "type": "A",
+    "description": "If unit is not adjacent to an ally, grants Atk/Spd+6 during combat.",
+    "icon": "/images/icons/passives/atk-spd-solo-3.png",
+    "link": "https://kagerochart.com/hero/passives/atk-spd-solo-3",
+    "solo_stat_bonus": {
+        "target": "self",
+        "adjacent": "ally",
+        "mod": {
+            "atk": 6,
+            "spd": 6
+        }
+    },
+    "id": "atk-spd-solo-3"
+}

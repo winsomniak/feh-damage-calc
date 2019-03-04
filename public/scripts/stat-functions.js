@@ -18,6 +18,18 @@ function addSupportBuff(rank, type, stats) {
     return stats;
 }
 
+//Adds arena buff to stats object passed as parameter
+function addArenaBonus(stats) {
+
+    stats.hp += 10;
+    stats.atk += 4;
+    stats.spd += 4;
+    stats.def += 4;
+    stats.res += 4;
+
+    return stats;
+}
+
 //Subtracts specified support buff from stats object passed as parameter
 function subtractSupportBuff(rank, type, stats) {
 
@@ -55,10 +67,12 @@ function changeSupportBuff(rank, type, charNum) {
 // updates a displayed stat if the given select has a stat_mod property
 // selectID is the select's id, charNum determines which panel's stats to change, increment is true if we need to add to the stat total and false otherwise
 function updateStatTotal(selectID, charNum, increment) {
-
+    var reset = false;
     if ($(selectID).data("info") !== undefined && $(selectID).data("info").hasOwnProperty("stat_mod")) {
         for (var stat in $(selectID).data("info").stat_mod) {
             var total = parseInt($("#" + stat + "-" + charNum).val());
+            if(total === 0 || total >= HIGHESTSTAT || (total === 1 && stat === "hp"))
+                reset = true;
             if (increment) {
                 total += $(selectID).data("info").stat_mod[stat];
             } else {
@@ -66,6 +80,8 @@ function updateStatTotal(selectID, charNum, increment) {
             }
 
             // keep stats within limits
+            if(total > HIGHESTSTAT)
+                total = HIGHESTSTAT;
             $("#" + stat + "-" + charNum).val(total);
             if ($("#" + stat + "-" + charNum).hasClass("more-than-zero")) {
                 limit(document.getElementById(stat + "-" + charNum), 1);
@@ -87,4 +103,6 @@ function updateStatTotal(selectID, charNum, increment) {
             }
         }
     }
+    if(reset)
+        displayStatTotals(charNum);
 }

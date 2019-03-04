@@ -1,0 +1,55 @@
+{
+  "display": "Thrasir, Omnicidial Witch",
+  "name": "Thrasir",
+  "title": "Omnicidial Witch",
+  "id": "thrasir-omnicidial-witch",
+  "color": "Green",
+  "weapon_type": "Green Tome",
+  "link": "https://kagerochart.com/hero/thrasir-omnicidial-witch",
+  "move_type": "Infantry",
+  "LowestRarity": 1,
+  "weapon": [
+    "ifingr",
+    "rexcalibur",
+    "elwind",
+    "wind"
+  ],
+  "special": [
+    "draconic-aura",
+    "dragon-gaze"
+  ],
+  "passive_a": [
+    "swift-sparrow-2",
+    "swift-sparrow-1",
+    "darting-blow-1",
+    "bracing-stance-2",
+    "bracing-stance-1",
+    "warding-stance-1"
+  ],
+  "passive_b": [
+    "desperation-3",
+    "desperation-2",
+    "desperation-1",
+    "quick-riposte-3",
+    "quick-riposte-2",
+    "quick-riposte-1"
+  ],
+  "base_stat": {
+    "star_5": {
+      "hp": 18,
+      "atk": 9,
+      "spd": 9,
+      "def": 6,
+      "res": 5
+    },
+    "growth": {
+      "hp": 50,
+      "atk": 55,
+      "spd": 65,
+      "def": 40,
+      "res": 50,
+      "total": 260
+    },
+    "growth_type": 0
+  }
+}

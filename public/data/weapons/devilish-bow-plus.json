@@ -1,0 +1,19 @@
+{
+    "name": "Devilish Bow+",
+    "might": 12,
+    "range": 2,
+    "sp": 300,
+    "description": "Effective against flying foes. Inflicts Special cooldown charge -1 on foe per attack during combat. (Only highest value applied. Does not stack.)",
+    "type": "Bow",
+    "link": "https://kagerochart.com/hero/weapons/devilish-bow-plus",
+    "color": "Colorless",
+    "magical": false,
+    "move_effective": [
+        "Flying"
+    ],
+    "guard": 0,
+    "refinable": {
+        "type": "ranged"
+    },
+    "id": "devilish-bow-plus"
+}

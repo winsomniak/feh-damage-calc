@@ -1,0 +1,52 @@
+{
+  "display": "Eir, Merciful Death",
+  "name": "Eir",
+  "title": "Merciful Death",
+  "id": "eir-merciful-death",
+  "color": "Colorless",
+  "weapon_type": "Dagger",
+  "link": "https://kagerochart.com/hero/eir-merciful-death",
+  "legendary": true,
+  "move_type": "Flying",
+  "weapon": [
+    "lyfjaberg",
+    "silver-dagger",
+    "steel-dagger",
+    "iron-dagger"
+  ],
+  "special": [
+    "iceberg",
+    "chilling-wind"
+  ],
+  "passive_a": [
+    "swift-sparrow-2",
+    "swift-sparrow-1",
+    "darting-blow-1"
+  ],
+  "passive_b": [
+    "mystic-boost-3",
+    "mystic-boost-2",
+    "mystic-boost-1"
+  ],
+  "passive_c": [
+    "sparkling-boost"
+  ],
+  "base_stat": {
+    "star_5": {
+      "hp": 16,
+      "atk": 8,
+      "spd": 9,
+      "def": 4,
+      "res": 7
+    },
+    "growth": {
+      "hp": 45,
+      "atk": 55,
+      "spd": 65,
+      "def": 25,
+      "res": 55,
+      "total": 245
+    },
+    "growth_type": 131
+  }
+}
