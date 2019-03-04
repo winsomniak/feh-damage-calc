@@ -9,6 +9,7 @@
   "move_type": "Infantry",
   "LowestRarity": 3,
   "weapon": [
+    "axe-of-virility",
     "hammer-plus",
     "hammer",
     "steel-axe",

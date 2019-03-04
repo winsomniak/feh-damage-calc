@@ -1,0 +1,20 @@
+{
+    "name": "Divine Mist",
+    "might": 16,
+    "range": 1,
+    "sp": 400,
+    "description": "Effective against dragon foes. Unit can counterattack regardless of foe's range. If foe's Range = 2, calculates damage using the lower of foe's Def or Res.",
+    "type": "Breath",
+    "magical": true,
+    "LowerResDefRange": 2,
+    "weapon_effective": [
+        "Breath",
+        "Red Breath",
+        "Green Breath",
+        "Blue Breath"
+    ],
+    "counter": true,
+    "char_unique": true,
+    "link": "https://kagerochart.com/hero/weapons/divine-mist",
+    "id": "divine-mist"
+}

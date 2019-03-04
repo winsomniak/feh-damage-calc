@@ -1,0 +1,50 @@
+{
+  "display": "Hríd, Icy Blade",
+  "name": "Hríd",
+  "title": "Icy Blade",
+  "id": "hrid-icy-blade",
+  "color": "Red",
+  "weapon_type": "Sword",
+  "legendary": true,
+  "link": "https://kagerochart.com/hero/hrid-icy-blade",
+  "move_type": "Cavalry",
+  "weapon": [
+    "gjoll",
+    "silver-sword",
+    "steel-sword",
+    "iron-sword"
+  ],
+  "special": [
+    "moonbow",
+    "new-moon"
+  ],
+  "passive_a": [
+    "distant-counter"
+  ],
+  "passive_b": [
+    "freezing-seal"
+  ],
+  "passive_c": [
+    "atk-smoke-3",
+    "atk-smoke-2",
+    "atk-smoke-1"
+  ],
+  "base_stat": {
+    "star_5": {
+      "hp": 19,
+      "atk": 7,
+      "spd": 4,
+      "def": 12,
+      "res": 4
+    },
+    "growth": {
+      "hp": 50,
+      "atk": 70,
+      "spd": 30,
+      "def": 55,
+      "res": 50,
+      "total": 255
+    },
+    "growth_type": 213
+  }
+}

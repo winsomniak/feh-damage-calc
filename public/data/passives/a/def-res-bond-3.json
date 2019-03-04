@@ -1,0 +1,17 @@
+{
+    "name": "Def Res Bond 3",
+    "sp": 240,
+    "type": "A",
+    "description": "Grants Def/Res+5 to this unit during combat if unit is adjacent to an ally.",
+    "icon": "/images/icons/passives/def-res-bond-3.png",
+    "link": "https://kagerochart.com/hero/passives/def-res-bond-3",
+    "adjacent_stat_bonus": {
+        "target": "self",
+        "adjacent": "ally",
+        "mod": {
+            "def": 5,
+            "res": 5
+        }
+    },
+    "id": "def-res-bond-3"
+}

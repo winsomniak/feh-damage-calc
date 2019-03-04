@@ -1,0 +1,49 @@
+{
+  "display": "Cecilia, Festive Instructor",
+  "name": "Cecilia",
+  "title": "Festive Instructor",
+  "id": "cecilia-festive-instructor",
+  "color": "Colorless",
+  "weapon_type": "Dagger",
+  "link": "https://kagerochart.com/hero/cecilia-festive-instructor",
+  "move_type": "Armored",
+  "LowestRarity": 4,
+  "weapon": [
+    "goodie-boot-plus",
+    "goodie-boot",
+    "steel-dagger",
+    "iron-dagger"
+  ],
+  "special": [
+    "iceberg",
+    "chilling-wind"
+  ],
+  "passive_a": [
+    "atk-res-bond-3",
+    "atk-res-bond-2",
+    "atk-res-bond-1"
+  ],
+  "passive_c": [
+    "def-ploy-3",
+    "def-ploy-2",
+    "def-ploy-1"
+  ],
+  "base_stat": {
+    "star_5": {
+      "hp": 19,
+      "atk": 11,
+      "spd": 6,
+      "def": 6,
+      "res": 10
+    },
+    "growth": {
+      "hp": 50,
+      "atk": 55,
+      "spd": 40,
+      "def": 55,
+      "res": 60,
+      "total": 260
+    },
+    "growth_type": 183
+  }
+}

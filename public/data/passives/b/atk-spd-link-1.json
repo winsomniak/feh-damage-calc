@@ -1,0 +1,9 @@
+{
+    "name": "Atk/Spd Link 1",
+    "sp": 60,
+    "type": "B",
+    "description": "If a movement Assist skill (like Reposition, Shove, Pivot, etc.) is used by unit or targets unit, grants Atk/Spd+2 to unit and target ally or unit and targeting ally for 1 turn.",
+    "icon": "/images/icons/passives/atk-spd-link-1.png",
+    "link": "https://kagerochart.com/hero/passives/atk-spd-link-1",
+    "id": "atk-spd-link-1"
+}

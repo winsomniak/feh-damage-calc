@@ -1,0 +1,12 @@
+{
+    "name": "Null Follow-Up 2",
+    "sp": 120,
+    "type": "B",
+    "description": "At start of combat, if unit's HP ≥ 50%, disables foe's skills that guarantee foe's follow-up attack and foe's skills that prevent unit's follow-up attack.",
+    "icon": "/images/icons/passives/null-follow-up-2.png",
+    "link": "https://kagerochart.com/hero/passives/null-follow-up-2",
+    "negate_follow_changes": {
+        "threshold": 0.5
+    },
+    "id": "null-follow-up-2"
+}

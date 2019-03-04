@@ -1,0 +1,31 @@
+{
+    "name": "Ífingr",
+    "might": 14,
+    "range": 2,
+    "sp": 400,
+    "description": "Effective against dragon foes. If unit is within 3 spaces of an ally, grants Atk/Spd/Def/Res+4 during combat and disables foe's skills that guarantee foe's follow-up attack, but after combat, if unit attacked, inflicts Atk/Spd/Def/Res-4 on nearest ally through its next action.",
+    "type": "Tome",
+    "link": "https://kagerochart.com/hero/weapons/ifingr",
+    "weapon_effective": [
+        "Breath",
+        "Red Breath",
+        "Green Breath",
+        "Blue Breath"
+    ],
+    "negate_follow_changes": {
+        "adjacent":true
+    },
+    "adjacent_stat_bonus": {
+        "target": "self",
+        "adjacent": "ally",
+        "mod": {
+            "atk": 4,
+            "spd": 4,
+            "def": 4,
+            "res": 4
+        }
+    },
+    "char_unique": true,
+    "id": "ifingr",
+    "magical": true
+}

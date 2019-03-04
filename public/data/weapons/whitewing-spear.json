@@ -1,0 +1,20 @@
+{
+    "name": "Whitewing Spear",
+    "might": 16,
+    "range": 1,
+    "sp": 400,
+    "description": "Effective against armored units.",
+    "type": "Lance",
+    "link": "https://kagerochart.com/hero/weapons/whitewing-spear",
+    "color": "Blue",
+    "magical": false,
+    "char_unique": true,
+    "move_effective": [
+        "Armored"
+    ],
+    "refinable": {
+        "type": "melee",
+        "Special": "Triangle Attack"
+    },
+    "id": "whitewing-spear"
+}

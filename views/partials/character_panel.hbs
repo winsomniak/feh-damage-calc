@@ -27,25 +27,25 @@
                 </div>
 
                 <div class="mdc-text-field">
-                    <input type="number" id="atk-{{charNum}}" class="mdc-text-field__input more-than-zero battle-val" value="1" data-charnum="{{charNum}}" autocomplete="off">
+                    <input type="number" id="atk-{{charNum}}" class="mdc-text-field__input zero-or-more battle-val" value="0" data-charnum="{{charNum}}" autocomplete="off">
                     <label for="atk-{{charNum}}" class="mdc-floating-label mdc-floating-label--float-above" title="The higher a unit's Attack, the more damage they deal.">ATK</label>
                     <div class="mdc-line-ripple"></div>
                 </div>
 
                 <div class="mdc-text-field">
-                    <input type="number" id="spd-{{charNum}}" class="mdc-text-field__input more-than-zero battle-val" value="1" data-charnum="{{charNum}}" autocomplete="off">
+                    <input type="number" id="spd-{{charNum}}" class="mdc-text-field__input zero-or-more battle-val" value="0" data-charnum="{{charNum}}" autocomplete="off">
                     <label for="spd-{{charNum}}" class="mdc-floating-label mdc-floating-label--float-above" title="A unit will attack twice if their Speed is at least 5 more than their foe's Speed.">SPD</label>
                     <div class="mdc-line-ripple"></div>
                 </div>
 
                 <div class="mdc-text-field">
-                    <input type="number" id="def-{{charNum}}" class="mdc-text-field__input more-than-zero battle-val" value="1" data-charnum="{{charNum}}" autocomplete="off">
+                    <input type="number" id="def-{{charNum}}" class="mdc-text-field__input zero-or-more battle-val" value="0" data-charnum="{{charNum}}" autocomplete="off">
                     <label for="def-{{charNum}}" class="mdc-floating-label mdc-floating-label--float-above" title="The higher a unit's Defense is, the less damage they take from physical attacks.">DEF</label>
                     <div class="mdc-line-ripple"></div>
                 </div>
 
                 <div class="mdc-text-field">
-                    <input type="number" id="res-{{charNum}}" class="mdc-text-field__input more-than-zero battle-val" value="1" data-charnum="{{charNum}}" autocomplete="off">
+                    <input type="number" id="res-{{charNum}}" class="mdc-text-field__input zero-or-more battle-val" value="0" data-charnum="{{charNum}}" autocomplete="off">
                     <label for="res-{{charNum}}" class="mdc-floating-label mdc-floating-label--float-above" title="The higher a unit's Resistance is, the less damage they take from magical attacks.">RES</label>
                     <div class="mdc-line-ripple"></div>
                 </div>
@@ -422,6 +422,27 @@
 
                         <div class="mdc-form-field">
                             <div class="mdc-switch">
+                                <input type="checkbox" id="triangle-adept-status-{{charNum}}" class="mdc-switch__native-control" data-charnum="{{charNum}}" />
+                                <div class="mdc-switch__background">
+                                    <div class="mdc-switch__knob"></div>
+                                </div>
+                            </div>
+                            <label for="triangle-adept-status-{{charNum}}" class="mdc-switch-label">Triangle Adept</label>
+                        </div>
+
+                        <div class="mdc-form-field">
+                            <div class="mdc-switch">
+                                <input type="checkbox" id="guard-status-{{charNum}}" class="mdc-switch__native-control" data-charnum="{{charNum}}" />
+                                <div class="mdc-switch__background">
+                                    <div class="mdc-switch__knob"></div>
+                                </div>
+                            </div>
+                            <label for="guard-status-{{charNum}}" class="mdc-switch-label">Guard</label>
+                        </div>
+
+                        <h3 class="mdc-typography--caption">Bonus Effects</h3>
+                        <div class="mdc-form-field">
+                            <div class="mdc-switch">
                                 <input type="checkbox" id="defensive-terrain-{{charNum}}" class="mdc-switch__native-control" data-charnum="{{charNum}}" />
                                 <div class="mdc-switch__background">
                                     <div class="mdc-switch__knob"></div>
@@ -432,12 +453,12 @@
 
                         <div class="mdc-form-field">
                             <div class="mdc-switch">
-                                <input type="checkbox" id="triangle-adept-status-{{charNum}}" class="mdc-switch__native-control" data-charnum="{{charNum}}" />
+                                <input type="checkbox" id="arena-bonus-{{charNum}}" class="mdc-switch__native-control build-select" data-charnum="{{charNum}}" />
                                 <div class="mdc-switch__background">
                                     <div class="mdc-switch__knob"></div>
                                 </div>
                             </div>
-                            <label for="triangle-adept-status-{{charNum}}" class="mdc-switch-label">Triangle Adept</label>
+                            <label for="arena-bonus-{{charNum}}" class="mdc-switch-label">Arena Bonus</label>
                         </div>
                     </div>
 

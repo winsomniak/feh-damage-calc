@@ -1,0 +1,53 @@
+{
+  "display": "Corrin, Dream Prince",
+  "name": "Corrin",
+  "title": "Dream Prince",
+  "id": "corrin-dream-prince",
+  "color": "Blue",
+  "weapon_type": "Blue Breath",
+  "link": "https://kagerochart.com/hero/corrin-dream-prince",
+  "move_type": "Infantry",
+  "weapon": [
+    "draconic-rage",
+    "water-breath",
+    "fire-breath-plus",
+    "fire-breath"
+  ],
+  "special": [
+    "dragon-fang",
+    "dragon-gaze"
+  ],
+  "passive_a": [
+    "atk-def-bond-3",
+    "atk-def-bond-2",
+    "atk-def-bond-1"
+  ],
+  "passive_b": [
+    "null-follow-up-3",
+    "null-follow-up-2",
+    "null-follow-up-1"
+  ],
+  "passive_c": [
+    "hone-dragons",
+    "hone-spd-2",
+    "hone-spd-1"
+  ],
+  "base_stat": {
+    "star_5": {
+      "hp": 16,
+      "atk": 7,
+      "spd": 7,
+      "def": 5,
+      "res": 5
+    },
+    "growth": {
+      "hp": 60,
+      "atk": 65,
+      "spd": 65,
+      "def": 60,
+      "res": 45,
+      "total": 295
+    },
+    "growth_type": 40
+  }
+}

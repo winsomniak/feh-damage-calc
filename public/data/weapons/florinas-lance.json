@@ -1,0 +1,20 @@
+{
+    "name": "Florina's Lance",
+    "might": 16,
+    "range": 1,
+    "sp": 400,
+    "description": "Effective against armored units.",
+    "type": "Lance",
+    "link": "https://kagerochart.com/hero/weapons/florinas-lance",
+    "color": "Blue",
+    "magical": false,
+    "char_unique": true,
+    "move_effective": [
+        "Armored"
+    ],
+    "refinable": {
+        "type": "melee",
+        "Special": "Florina's Lance"
+    },
+    "id": "florinas-lance"
+}

@@ -1,0 +1,47 @@
+{
+  "display": "Azura, Young Songstress",
+  "name": "Azura",
+  "title": "Young Songstress",
+  "id": "azura-young-songstress",
+  "color": "Green",
+  "weapon_type": "Green Tome",
+  "link": "https://kagerochart.com/hero/azura-young-songstress",
+  "move_type": "Infantry",
+  "weapon": [
+    "book-of-shadows",
+    "rexcalibur",
+    "elwind",
+    "wind"
+  ],
+  "assist": [
+    "sing"
+  ],
+  "passive_a": [
+    "spd-res-bond-3",
+    "spd-res-bond-2",
+    "spd-res-bond-1"
+  ],
+  "passive_b": [
+    "torrent-dance-3",
+    "torrent-dance-2",
+    "torrent-dance-1"
+  ],
+  "base_stat": {
+    "star_5": {
+      "hp": 14,
+      "atk": 7,
+      "spd": 5,
+      "def": 4,
+      "res": 6
+    },
+    "growth": {
+      "hp": 50,
+      "atk": 60,
+      "spd": 55,
+      "def": 30,
+      "res": 45,
+      "total": 240
+    },
+    "growth_type": 32
+  }
+}

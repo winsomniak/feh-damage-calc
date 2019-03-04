@@ -1,0 +1,15 @@
+{
+    "name": "Imhullu",
+    "might": 14,
+    "range": 2,
+    "sp": 400,
+    "description": "Grants Res+3. At the start of turn 3, deals 5 damage to non-magic foes within 5 columns centered on unit, and inflicts status on those foes preventing counterattacks through their next actions.",
+    "type": "Red Tome",
+    "link": "https://kagerochart.com/hero/weapons/imhullu",
+    "stat_mod": {
+        "res": 3
+    },
+    "magical": true,
+    "char_unique":true,
+    "id": "imhullu"
+}

@@ -1,0 +1,27 @@
+{
+    "name": "Sylgr",
+    "might": 14,
+    "range": 2,
+    "sp": 400,
+    "description": "Grants Spd+3. At start of combat, if unit's Spd > foe's Spd, grants Atk/Spd+4 during combat. After combat, if unit attacked, inflicts Def/Res-7 on target and foes within 2 spaces of target through their next actions.",
+    "type": "Dagger",
+    "link": "https://kagerochart.com/hero/weapons/sylgr",
+    "spec_cooldown_mod": -1,
+    "seal": {
+        "def": -7,
+        "res": -7
+    },
+    "stat_mod": {
+        "spd": 3
+    },
+    "adv_mod":{
+        "stat": "spd",
+        "adv": 1,
+        "mod":{
+            "atk": 4,
+            "spd": 4
+        }
+    },
+    "char_unique": true,
+    "id": "sylgr"
+}

@@ -1,0 +1,13 @@
+{
+    "name": "Sorcery Blade 2",
+    "sp": 120,
+    "type": "A",
+    "description": "At start of combat, if unit's HP ≥ 50% and unit is adjacent to a magic ally, calculates damage using the lower of foe's Def or Res.",
+    "icon": "/images/icons/passives/sorcery-blade-2.png",
+    "LowerResDef":{
+        "threshold": 0.5,
+        "adjacent": true
+    },
+    "link": "https://kagerochart.com/hero/passives/sorcery-blade-2",
+    "id": "sorcery-blade-2"
+}

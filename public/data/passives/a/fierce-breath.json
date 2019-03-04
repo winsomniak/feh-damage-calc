@@ -1,0 +1,16 @@
+{
+    "name": "Fierce Breath",
+    "sp": 240,
+    "type": "A",
+    "description": "If attacked, unit granted Atk+4 during combat; also gains Special cooldown charge +1.(If using other similar skill, only highest value applied.)",
+    "icon": "/images/icons/passives/fierce-breath.png",
+    "link": "https://kagerochart.com/hero/passives/fierce-breath",
+    "defend_mod": {
+        "atk": 4
+    },
+    "enemy_phase_charge": {
+        "attack": true,
+        "defend": true
+    },
+    "id": "fierce-breath"
+}

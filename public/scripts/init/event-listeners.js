@@ -207,7 +207,15 @@ $(".blessing-selector").on("change", function (){
         var points = ArenaScoreCalc(charNum);
         $(".arena-score-" + charNum + "-read").text(points.toString());
     }
+    refreshBlessings(charInfo[$("#char-" + charNum).val()], $("#blessing-"+charNum).val(), $("#blessing2-"+charNum).val(), $("#blessing3-"+charNum).val(), charNum);
     charChange(charNum);
+    updateDisplay();
+});
+
+// setup override blessing select
+$(".override-blessing-selector").on("change", function (){
+    refreshOverrideBlessings($("#override-blessing").val(), $("#override-blessing2").val(), $("#override-blessing3").val());
+    keepTable = false;
     updateDisplay();
 });
 
@@ -250,6 +258,7 @@ $(".passive-selector").on("change", function (){
         var points = ArenaScoreCalc(charNum);
         $(".arena-score-" + charNum + "-read").text(points.toString());
     }
+    updateSpecCooldown(charNum);
     charChange(charNum);
     updateDisplay();
 });
@@ -506,6 +515,7 @@ $("#override-reset").on("click", function() {
 
     //statuses
     $("#override-triangle-adept-status").prop("checked", false);
+    $("#override-guard-status").prop("checked", false);
     $("#override-panic-status").prop("checked", false);
     $("#override-candlelight-status").prop("checked", false);
     $("#override-defensive-terrain").prop("checked", false);
@@ -658,10 +668,12 @@ $(".draw-update").on("click", function() {
     // update attacker
     if (oldBA.attacker.currHP <= 0) {
         $("#curr-hp-1").val(1);
-        $("#spec-cooldown-1").val(getSpecialCooldown(oldBA.attacker.specialData, oldBA.attacker.weaponData, oldBA.attacker.assistData));
+        $("#spec-cooldown-1").val(getSpecialCooldown(oldBA.attacker.specialData, oldBA.attacker.weaponData, oldBA.attacker.assistData, oldBA.attacker.passiveBData));
         $("#attack-panel .stat-bonus, #attack-panel .stat-penalty, #attack-panel .stat-spur").val(0);
         $("#panic-status-1").prop("checked", false);
         $("#candlelight-status-1").prop("checked", false);
+        $("#guard-status-1").prop("checked", false);
+        $("#triangle-adept-status-1").prop("checked", false);
         $("#defensive-terrain-1").prop("checked", false);
     } else {
         $("#curr-hp-1").val(Math.max(oldBA.attacker.currHP, 1));
@@ -676,16 +688,19 @@ $(".draw-update").on("click", function() {
         $("#res-bonus-1").val(oldBA.attacker.resBonus);
         $("#panic-status-1").prop("checked", oldBA.attacker.status.panic);
         $("#candlelight-status-1").prop("checked", oldBA.attacker.status.candlelight);
+        $("#guard-status-1").prop("checked", oldBA.attacker.status.guard);
         $("#triangle-adept-status-1").prop("checked", oldBA.attacker.status.triangleAdept);
     }
 
     // update defender
     if (oldBA.defender.currHP <= 0) {
         $("#curr-hp-2").val(1);
-        $("#spec-cooldown-2").val(getSpecialCooldown(oldBA.defender.specialData, oldBA.defender.weaponData, oldBA.defender.assistData));
+        $("#spec-cooldown-2").val(getSpecialCooldown(oldBA.defender.specialData, oldBA.defender.weaponData, oldBA.defender.assistData, oldBA.defender.passiveBData));
         $("#defend-panel .stat-bonus, #defend-panel .stat-penalty, #defend-panel .stat-spur").val(0);
         $("#panic-status-2").prop("checked", false);
         $("#candlelight-status-2").prop("checked", false);
+        $("#triangle-adept-status-2").prop("checked", false);
+        $("#guard-status-2").prop("checked", false);
         $("#defensive-terrain-2").prop("checked", false);
     } else {
         $("#curr-hp-2").val(Math.max(oldBA.defender.currHP, 1));
@@ -700,6 +715,7 @@ $(".draw-update").on("click", function() {
         $("#res-bonus-2").val(oldBA.defender.resBonus);
         $("#panic-status-2").prop("checked", oldBA.defender.status.panic);
         $("#candlelight-status-2").prop("checked", oldBA.defender.status.candlelight);
+        $("#guard-status-2").prop("checked", oldBA.defender.status.guard);
         $("#triangle-adept-status-2").prop("checked", oldBA.defender.status.triangleAdept);
     }
 

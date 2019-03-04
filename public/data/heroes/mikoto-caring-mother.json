@@ -1,0 +1,53 @@
+{
+  "display": "Mikoto, Caring Mother",
+  "name": "Mikoto",
+  "title": "Caring Mother",
+  "id": "mikoto-caring-mother",
+  "color": "Colorless",
+  "weapon_type": "Staff",
+  "link": "https://kagerochart.com/hero/mikoto-caring-mother",
+  "move_type": "Infantry",
+  "weapon": [
+    "flash-plus",
+    "flash",
+    "assault"
+  ],
+  "special": [
+    "miracle",
+    "imbue"
+  ],
+  "assist": [
+    "martyr-plus",
+    "martyr",
+    "reconcile",
+    "heal"
+  ],
+  "passive_a": [
+    "brazen-atk-res-3",
+    "brazen-atk-res-2",
+    "brazen-atk-res-1"
+  ],
+  "passive_c": [
+    "infantry-rush-3",
+    "infantry-rush-2",
+    "infantry-rush-1"
+  ],
+  "base_stat": {
+    "star_5": {
+      "hp": 16,
+      "atk": 9,
+      "spd": 8,
+      "def": 5,
+      "res": 7
+    },
+    "growth": {
+      "hp": 50,
+      "atk": 60,
+      "spd": 55,
+      "def": 35,
+      "res": 45,
+      "total": 245
+    },
+    "growth_type": 220
+  }
+}

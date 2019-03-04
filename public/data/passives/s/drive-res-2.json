@@ -1,0 +1,7 @@
+{
+    "description": "Grants allies within 2 spaces Res+3 during combat.",
+    "id": "drive-res-2",
+    "name": "Drive Res 2",
+    "sp":240,
+    "type": "s"
+}
