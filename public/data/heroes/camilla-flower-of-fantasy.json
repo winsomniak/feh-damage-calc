@@ -1,0 +1,52 @@
+{
+  "display": "Camilla, Flower of Fantasy",
+  "name": "Camilla",
+  "title": "Flower of Fantasy",
+  "id": "camilla-flower-of-fantasy",
+  "color": "Red",
+  "weapon_type": "Red Tome",
+  "link": "https://kagerochart.com/hero/camilla-flower-of-fantasy",
+  "move_type": "Flying",
+  "weapon": [
+    "book-of-dreams",
+    "fenrir",
+    "ruin",
+    "flux"
+  ],
+  "assist": [
+    "draw-back"
+  ],
+  "passive_a": [
+    "atk-res-bond-3",
+    "atk-res-bond-2",
+    "atk-res-bond-1"
+  ],
+  "passive_b": [
+    "atk-res-link-3",
+    "atk-res-link-2",
+    "atk-res-link-1"
+  ],
+  "passive_c": [
+    "goad-fliers",
+    "spur-atk-2",
+    "spur-atk-1"
+  ],
+  "base_stat": {
+    "star_5": {
+      "hp": 17,
+      "atk": 9,
+      "spd": 8,
+      "def": 4,
+      "res": 6
+    },
+    "growth": {
+      "hp": 45,
+      "atk": 65,
+      "spd": 50,
+      "def": 30,
+      "res": 55,
+      "total": 245
+    },
+    "growth_type": 53
+  }
+}

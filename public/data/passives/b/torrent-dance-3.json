@@ -1,0 +1,9 @@
+{
+    "name": "Torrent Dance 3",
+    "sp": 200,
+    "type": "B",
+    "description": "If Sing or Dance is used, target also granted Res+5.",
+    "icon": "/images/icons/passives/torrent-dance-3.png",
+    "link": "https://kagerochart.com/hero/passives/torrent-dance-3",
+    "id": "torrent-dance-3"
+}

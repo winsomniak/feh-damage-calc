@@ -1,0 +1,8 @@
+{
+    "name": "Rally Attack Speed+",
+    "range": 1,
+    "sp": 400,
+    "description": "Grants Atk/Spd+6 to an adjacent ally until the end of the turn.",
+    "link": "https://kagerochart.com/hero/assists/rally-attack-speed-plus",
+    "id": "rally-attack-speed-plus"
+}

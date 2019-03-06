@@ -1,0 +1,53 @@
+{
+  "display": "Myrrh, Spooky Monster",
+  "name": "Myrrh",
+  "title": "Spooky Monster",
+  "id": "myrrh-spooky-monster",
+  "color": "Red",
+  "weapon_type": "Red Breath",
+  "link": "https://kagerochart.com/hero/myrrh-spooky-monster",
+  "move_type": "Armored",
+  "weapon": [
+    "spirit-breath",
+    "flametongue",
+    "fire-breath-plus",
+    "fire-breath"
+  ],
+  "special": [
+    "bonfire",
+    "glowing-ember"
+  ],
+  "passive_a": [
+    "def-res-2",
+    "def-res-1",
+    "defense-plus-1"
+  ],
+  "passive_b": [
+    "vengeful-fighter-3",
+    "vengeful-fighter-2",
+    "vengeful-fighter-1"
+  ],
+  "passive_c": [
+    "armor-march-3",
+    "armor-march-2",
+    "armor-march-1"
+  ],
+  "base_stat": {
+    "star_5": {
+      "hp": 20,
+      "atk": 8,
+      "spd": 4,
+      "def": 7,
+      "res": 8
+    },
+    "growth": {
+      "hp": 60,
+      "atk": 70,
+      "spd": 45,
+      "def": 75,
+      "res": 55,
+      "total": 305
+    },
+    "growth_type": 207
+  }
+}

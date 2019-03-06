@@ -1,0 +1,54 @@
+{
+  "display": "Owain, Chosen One",
+  "name": "Owain",
+  "title": "Chosen One",
+  "id": "owain-chosen-one",
+  "color": "Red",
+  "weapon_type": "Sword",
+  "link": "https://kagerochart.com/hero/owain-chosen-one",
+  "move_type": "Infantry",
+  "weapon": [
+    "missiletainn-sword",
+    "silver-sword",
+    "steel-sword",
+    "iron-sword"
+  ],
+  "special": [
+    "blue-flame",
+    "bonfire",
+    "glowing-ember"
+  ],
+  "passive_a": [
+    "atk-def-bond-3",
+    "atk-def-bond-2",
+    "atk-def-bond-1"
+  ],
+  "passive_b": [
+    "wrath-3",
+    "wrath-2",
+    "wrath-1"
+  ],
+  "passive_c": [
+    "spur-spd-def-2",
+    "spur-spd-def-1",
+    "spur-spd-1"
+  ],
+  "base_stat": {
+    "star_5": {
+      "hp": 17,
+      "atk": 8,
+      "spd": 9,
+      "def": 7,
+      "res": 7
+    },
+    "growth": {
+      "hp": 55,
+      "atk": 55,
+      "spd": 65,
+      "def": 55,
+      "res": 35,
+      "total": 265
+    },
+    "growth_type": 203
+  }
+}

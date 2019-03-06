@@ -1,0 +1,7 @@
+{
+    "name": "Gale Dance 3",
+    "sp": 200,
+    "type": "s",
+    "description": "If Sing or Dance is used, target also granted Spd+4.",
+    "id": "gale-dance-3"
+}

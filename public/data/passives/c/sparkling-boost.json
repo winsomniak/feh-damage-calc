@@ -1,0 +1,10 @@
+{
+    "name": "Sparkling Boost",
+    "sp": 300,
+    "type": "C",
+    "description": "At start of turn, restores 10 HP to ally that has been dealt the most damage. (Excludes unit.)",
+    "icon": "/images/icons/passives/sparkling-boost.png",
+    "link": "https://kagerochart.com/hero/passives/sparkling-boost",
+    "char_unique":true,
+    "id": "sparkling-boost"
+}

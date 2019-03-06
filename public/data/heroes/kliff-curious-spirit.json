@@ -1,0 +1,54 @@
+{
+  "display": "Kliff, Curious Spirit",
+  "name": "Kliff",
+  "title": "Curious Spirit",
+  "id": "kliff-curious-spirit",
+  "color": "Blue",
+  "weapon_type": "Blue Tome",
+  "link": "https://kagerochart.com/hero/kliff-curious-spirit",
+  "move_type": "Infantry",
+  "weapon": [
+    "sagittae",
+    "shine",
+    "ellight",
+    "light"
+  ],
+  "special": [
+    "growing-light",
+    "rising-light"
+  ],
+  "passive_a": [
+    "fortress-def-res-3",
+    "fortress-def-res-2",
+    "fortress-def-res-1",
+    "fortress-def-1"
+  ],
+  "passive_b": [
+    "chill-spd-3",
+    "chill-spd-2",
+    "chill-spd-1"
+  ],
+  "passive_c": [
+    "fortify-res-3",
+    "fortify-res-2",
+    "fortify-res-1"
+  ],
+  "base_stat": {
+    "star_5": {
+      "hp": 15,
+      "atk": 6,
+      "spd": 4,
+      "def": 3,
+      "res": 9
+    },
+    "growth": {
+      "hp": 50,
+      "atk": 55,
+      "spd": 75,
+      "def": 50,
+      "res": 45,
+      "total": 275
+    },
+    "growth_type": 206
+  }
+}

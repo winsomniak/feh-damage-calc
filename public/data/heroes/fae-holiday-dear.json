@@ -1,0 +1,53 @@
+{
+  "display": "Fae, Holiday Dear",
+  "name": "Fae",
+  "title": "Holiday Dear",
+  "id": "fae-holiday-dear",
+  "color": "Green",
+  "weapon_type": "Green Breath",
+  "link": "https://kagerochart.com/hero/fae-holiday-dear",
+  "move_type": "Armored",
+  "weapon": [
+    "glittering-breath-plus",
+    "glittering-breath",
+    "fire-breath-plus",
+    "fire-breath"
+  ],
+  "special": [
+    "luna",
+    "new-moon"
+  ],
+  "passive_a": [
+    "def-res-bond-3",
+    "def-res-bond-2",
+    "def-res-bond-1"
+  ],
+  "passive_b": [
+    "vengeful-fighter-3",
+    "vengeful-fighter-2",
+    "vengeful-fighter-1"
+  ],
+  "passive_c": [
+    "armor-march-3",
+    "armor-march-2",
+    "armor-march-1"
+  ],
+  "base_stat": {
+    "star_5": {
+      "hp": 17,
+      "atk": 9,
+      "spd": 4,
+      "def": 9,
+      "res": 8
+    },
+    "growth": {
+      "hp": 65,
+      "atk": 60,
+      "spd": 50,
+      "def": 55,
+      "res": 75,
+      "total": 305
+    },
+    "growth_type": 47
+  }
+}

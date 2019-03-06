@@ -1,0 +1,53 @@
+{
+  "display": "Ylgr, Fresh Snowfall",
+  "name": "Ylgr",
+  "title": "Fresh Snowfall",
+  "id": "ylgr-fresh-snowfall",
+  "color": "Blue",
+  "weapon_type": "Blue Dagger",
+  "link": "https://kagerochart.com/hero/ylgr-fresh-snowfall",
+  "move_type": "Infantry",
+  "weapon": [
+    "sylgr",
+    "silver-dagger",
+    "steel-dagger",
+    "iron-dagger"
+  ],
+  "special": [
+    "glimmer",
+    "night-sky"
+  ],
+  "passive_a": [
+    "sorcery-blade-3",
+    "sorcery-blade-2",
+    "sorcery-blade-1"
+  ],
+  "passive_b": [
+    "chill-spd-3",
+    "chill-spd-2",
+    "chill-spd-1"
+  ],
+  "passive_c": [
+    "spd-tactic-3",
+    "spd-tactic-2",
+    "spd-tactic-1"
+  ],
+  "base_stat": {
+    "star_5": {
+      "hp": 16,
+      "atk": 7,
+      "spd": 10,
+      "def": 7,
+      "res": 5
+    },
+    "growth": {
+      "hp": 50,
+      "atk": 60,
+      "spd": 65,
+      "def": 35,
+      "res": 35,
+      "total": 245
+    },
+    "growth_type": 33
+  }
+}

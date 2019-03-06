@@ -1,0 +1,17 @@
+{
+    "name": "Tactical Bolt",
+    "might": 14,
+    "range": 2,
+    "sp": 400,
+    "description": "Grants weapon-triangle advantage against colorless foes, and inflicts weapon-triangle disadvantage on colorless foes during combat.",
+    "type": "Tome",
+    "link": "https://kagerochart.com/hero/weapons/tactical-bolt",
+    "char_unique": true,
+    "id": "tactical-bolt",
+    "refinable": {
+        "type": "ranged",
+        "Special": "Tactical Spectrum"
+    },
+    "color_effective": "Colorless",
+    "magical": true
+}

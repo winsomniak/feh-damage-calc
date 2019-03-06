@@ -85,6 +85,7 @@ function loadJson(dir) {
     filenames.forEach(function(filename) {
 
         var file = `${dir}/${filename}`;
+        //console.log(file); //Useful to identify which file has issues
         var parts = filename.split('.');
         if (parts.length === 1) {
             data[filename] = loadJson(file);

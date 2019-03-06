@@ -1,0 +1,48 @@
+{
+  "display": "Dorcas, Pumpkin Smasher",
+  "name": "Dorcas",
+  "title": "Pumpkin Smasher",
+  "id": "dorcas-pumpkin-smasher",
+  "color": "Green",
+  "weapon_type": "Axe",
+  "LowestRarity": 4,
+  "link": "https://kagerochart.com/hero/dorcas-pumpkin-smasher",
+  "move_type": "Armored",
+  "weapon": [
+    "hack-o-lantern-plus",
+    "hack-o-lantern",
+    "steel-axe",
+    "iron-axe"
+  ],
+  "assist": [
+    "swap"
+  ],
+  "passive_a": [
+    "sturdy-stance-2",
+    "sturdy-stance-1",
+    "fierce-stance-1"
+  ],
+  "passive_b": [
+    "wary-fighter-3",
+    "wary-fighter-2",
+    "wary-fighter-1"
+  ],
+  "base_stat": {
+    "star_5": {
+      "hp": 23,
+      "atk": 11,
+      "spd": 6,
+      "def": 9,
+      "res": 6
+    },
+    "growth": {
+      "hp": 60,
+      "atk": 70,
+      "spd": 45,
+      "def": 65,
+      "res": 35,
+      "total": 275
+    },
+    "growth_type": 116
+  }
+}

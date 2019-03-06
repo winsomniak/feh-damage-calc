@@ -1,0 +1,10 @@
+{
+    "name": "With Everyone!",
+    "sp": 300,
+    "type": "C",
+    "description": "At start of turn, if unit is adjacent to an ally, grants Def/Res+5 to unit and adjacent allies for 1 turn.",
+    "icon": "/images/icons/passives/with-everyone.png",
+    "link": "https://kagerochart.com/hero/passives/with-everyone",
+    "char_unique":true,
+    "id": "with-everyone"
+}

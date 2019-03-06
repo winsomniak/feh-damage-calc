@@ -1,0 +1,12 @@
+{
+    "name": "Sorcery Blade 3",
+    "sp": 240,
+    "type": "A",
+    "description": "At start of combat, if unit is adjacent to a magic ally, calculates damage using the lower of foe's Def or Res.",
+    "icon": "/images/icons/passives/sorcery-blade-3.png",
+    "link": "https://kagerochart.com/hero/passives/sorcery-blade-3",
+    "LowerResDef":{
+        "adjacent": true
+    },
+    "id": "sorcery-blade-3"
+}

@@ -1,0 +1,53 @@
+{
+  "display": "Mia, Moonlit Witch",
+  "name": "Mia",
+  "title": "Moonlit Witch",
+  "id": "mia-moonlit-witch",
+  "color": "Colorless",
+  "weapon_type": "Staff",
+  "link": "https://kagerochart.com/hero/mia-moonlit-witch",
+  "move_type": "Flying",
+  "weapon": [
+    "witchy-wand-plus",
+    "witchy-wand",
+    "assault"
+  ],
+  "special": [
+    "heavenly-light",
+    "imbue"
+  ],
+  "assist": [
+    "recover-plus",
+    "recover",
+    "mend",
+    "heal"
+  ],
+  "passive_a": [
+    "spd-res-bond-3",
+    "spd-res-bond-2",
+    "spd-res-bond-1"
+  ],
+  "passive_c": [
+    "hone-fliers",
+    "hone-spd-2",
+    "hone-spd-1"
+  ],
+  "base_stat": {
+    "star_5": {
+      "hp": 17,
+      "atk": 6,
+      "spd": 10,
+      "def": 5,
+      "res": 6
+    },
+    "growth": {
+      "hp": 45,
+      "atk": 55,
+      "spd": 55,
+      "def": 40,
+      "res": 50,
+      "total": 245
+    },
+    "growth_type": 49
+  }
+}

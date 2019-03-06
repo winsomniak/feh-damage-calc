@@ -12,6 +12,10 @@
     "move_effective": [
         "Flying"
     ],
+    "refinable": {
+        "type": "ranged",
+        "Special": "Nidhogg"
+    },
     "char_unique": true,
     "id": "nidhogg"
 }

@@ -1,0 +1,53 @@
+{
+  "display": "Eirika, Gentle as Snow",
+  "name": "Eirika",
+  "title": "Gentle as Snow",
+  "id": "eirika-gentle-as-snow",
+  "color": "Colorless",
+  "weapon_type": "Staff",
+  "link": "https://kagerochart.com/hero/eirika-gentle-as-snow",
+  "move_type": "Armored",
+  "weapon": [
+    "joyous-lantern-plus",
+    "joyous-lantern",
+    "assault"
+  ],
+  "special": [
+    "heavenly-light",
+    "imbue"
+  ],
+  "assist": [
+    "restore-plus",
+    "restore",
+    "reconcile",
+    "heal"
+  ],
+  "passive_b": [
+    "dazzling-staff-3",
+    "dazzling-staff-2",
+    "dazzling-staff-1"
+  ],
+  "passive_c": [
+    "atk-opening-3",
+    "atk-opening-2",
+    "atk-opening-1"
+  ],
+  "base_stat": {
+    "star_5": {
+      "hp": 18,
+      "atk": 10,
+      "spd": 6,
+      "def": 8,
+      "res": 10
+    },
+    "growth": {
+      "hp": 55,
+      "atk": 60,
+      "spd": 40,
+      "def": 50,
+      "res": 55,
+      "total": 260
+    },
+    "growth_type": 90
+  }
+}

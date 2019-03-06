@@ -1,0 +1,23 @@
+{
+    "name": "Glittering Breath+",
+    "might": 14,
+    "range": 1,
+    "sp": 300,
+    "type": "Breath",
+    "link": "https://kagerochart.com/hero/weapons/glittering-breath-plus",
+    "id": "glittering-breath-plus",
+    "description": "During combat, boosts unit's Def/Res by number of allies within 2 spaces × 2. (Maximum bonus of +6 to each stat.) If foe's Range = 2, calculates damage using the lower of foe's Def or Res.",
+    "LowerResDefRange": 2,
+    "adjacent_ally_bonus": {
+        "maximum": 3,
+        "times": 2,
+        "stat_mod": [
+            "def",
+            "res"
+        ]
+    },
+    "magical": true,
+    "refinable": {
+        "type": "melee"
+    }
+}

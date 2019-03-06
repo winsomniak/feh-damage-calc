@@ -1,0 +1,11 @@
+{
+    "name": "Attack Spd +2",
+    "sp": 160,
+    "description": "Grants Atk/Spd+2.",
+    "stat_mod": {
+        "atk": 2,
+        "spd": 2
+    },
+    "type": "s",
+    "id": "attack-spd-plus-2"
+}

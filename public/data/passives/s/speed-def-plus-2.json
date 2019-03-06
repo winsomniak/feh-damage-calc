@@ -1,0 +1,11 @@
+{
+    "name": "Speed Def +2",
+    "sp": 160,
+    "description": "Grants Spd/Def+2.",
+    "stat_mod": {
+        "spd": 2,
+        "def": 2
+    },
+    "type": "s",
+    "id": "speed-def-plus-2"
+}

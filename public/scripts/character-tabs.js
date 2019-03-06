@@ -419,25 +419,11 @@ function displayChar(charName, charNum, showHidden) {
     updateRefinements(selectedWeapon, charNum); //Refinement stuff!
 
     //blessings stuff!
-    var blessings="<option value=\"None\">---</option>";
+    
     var selectedBlessing="None";
     var selectedBlessing2="None";
     var selectedBlessing3="None";
-
-    if (!singleChar.hasOwnProperty("legendary")){
-        blessings += "<option value=\"Attack\">Attack</option>";
-        blessings += "<option value=\"Speed\">Speed</option>";
-        blessings += "<option value=\"Defense\">Defense</option>";
-        blessings += "<option value=\"Resistance\">Resistance</option>";
-	}
-
-    // set values
-    $("#blessing-" + charNum).html(blessings);
-    $("#blessing-" + charNum).val(selectedBlessing).attr('selected', 'selected');
-    $("#blessing2-" + charNum).html(blessings);
-    $("#blessing2-" + charNum).val(selectedBlessing2).attr('selected', 'selected');
-    $("#blessing3-" + charNum).html(blessings);
-    $("#blessing3-" + charNum).val(selectedBlessing3).attr('selected', 'selected');
+    refreshBlessings(singleChar, selectedBlessing, selectedBlessing2, selectedBlessing3, charNum);
 
     // show extra weapon info
     showWeapon(selectedWeapon, charNum, false, showHidden);
