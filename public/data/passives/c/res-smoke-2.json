@@ -2,7 +2,7 @@
     "name": "Res Smoke 2",
     "sp": 120,
     "type": "C",
-    "description": "After combat, inflicts Res-5 on foes within 2 spaces of target through their next actions.",
+    "description": "Inflicts Res-5 on foes within 2 spaces of target through their next actions after combat.",
     "icon": "/images/icons/passives/res-smoke-2.png",
     "link": "https://kagerochart.com/hero/passives/res-smoke-2",
     "id": "res-smoke-2"

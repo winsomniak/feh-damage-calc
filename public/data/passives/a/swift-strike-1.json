@@ -2,7 +2,7 @@
     "name": "Swift Strike 1",
     "sp": 120,
     "type": "A",
-    "description": "If unit initiates combat, unit granted Spd/Res+2 during battle.",
+    "description": "If unit initiates combat, grants Spd/Res+2 during combat.",
     "icon": "/images/icons/passives/swift-strike-1.png",
     "initiate_mod": {
         "res": 2,

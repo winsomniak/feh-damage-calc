@@ -1,8 +1,8 @@
 {
-    "name": "Seal Atk Def 2",
+    "name": "Seal Atk/Def 2",
     "sp": 200,
     "type": "B",
-    "description": "After combat, inflicts Atk/Def-5 on foe through its next action.",
+    "description": "Inflicts Atk/Def-5 on foe through its next action after combat.",
     "icon": "/images/icons/passives/seal-atk-def-2.png",
     "link": "https://kagerochart.com/hero/passives/seal-atk-def-2",
     "seal": {

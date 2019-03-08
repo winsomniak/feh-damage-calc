@@ -3,7 +3,7 @@
     "might": 14,
     "range": 2,
     "sp": 400,
-    "description": "Effective against flying units.",
+    "description": "Effective against flying foes.",
     "type": "Green Tome",
     "link": "https://kagerochart.com/hero/weapons/excalibur",
     "color": "Green",
@@ -12,9 +12,9 @@
         "Flying"
     ],
     "char_unique": true,
-    "refinable":{
-        "type":"ranged",
-        "Special":"Excalibur",
+    "refinable": {
+        "type": "ranged",
+        "Special": "Excalibur",
         "spec_cooldown_mod": -1,
         "description": "Effective against flying units. Accelerates Special trigger (cooldown count-1)."
     },

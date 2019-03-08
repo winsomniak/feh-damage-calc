@@ -3,7 +3,7 @@
     "might": 16,
     "range": 1,
     "sp": 400,
-    "description": "Enables wielder to counter-attack regardless of attacker's range.",
+    "description": "Unit can counterattack regardless of foe's range.",
     "type": "Lance",
     "link": "https://kagerochart.com/hero/weapons/gradivus",
     "color": "Blue",

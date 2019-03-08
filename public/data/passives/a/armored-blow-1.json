@@ -2,7 +2,7 @@
     "name": "Armored Blow 1",
     "sp": 50,
     "type": "A",
-    "description": "Grants Def+2 during combat if unit initiates the attack.",
+    "description": "If unit initiates combat, grants Def+2 during combat.",
     "icon": "/images/icons/passives/armored-blow-1.png",
     "initiate_mod": {
         "def": 2

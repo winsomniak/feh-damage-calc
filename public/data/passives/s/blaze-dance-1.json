@@ -2,6 +2,6 @@
     "name": "Blaze Dance 1",
     "sp": 50,
     "type": "s",
-    "description": "If Sing or Dance is used, target also granted Atk+2.",
+    "description": "If Sing or Dance is used, grants Atk+2 to target.",
     "id": "blaze-dance-1"
 }

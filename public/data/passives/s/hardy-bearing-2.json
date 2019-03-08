@@ -1,8 +1,8 @@
 {
-    "description": "Disables skills that change unit's attack priority. If unit has ≥ 50% HP at start of battle, enemy skills that change attack priority are also disabled.",
+    "description": "Disables unit's skills that change attack priority. At start of combat, if unit's HP ≥ 50%, disables foe's skills that change attack priority.",
     "id": "hardy-bearing-2",
     "name": "Hardy Bearing 2",
     "type": "s",
-    "sp":100,
+    "sp": 100,
     "remove_prio_hp": 0.5
 }

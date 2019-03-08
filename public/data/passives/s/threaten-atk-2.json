@@ -1,7 +1,7 @@
 {
-    "description": "Inflicts Atk-4 on foes within 2 spaces through their next actions at the start of each turn.",
+    "description": "At start of turn, inflicts Atk-4 on foes within 2 spaces through their next actions.",
     "id": "threaten-atk-2",
     "name": "Threaten Atk 2",
-    "sp":100,
+    "sp": 100,
     "type": "s"
 }

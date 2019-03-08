@@ -3,7 +3,7 @@
     "might": 7,
     "range": 2,
     "sp": 150,
-    "description": "After combat, foe inflicted with status preventing them from counterattacking.",
+    "description": "After combat, if unit attacked, inflicts status on foe preventing counterattacks through its next action.",
     "type": "Staff",
     "color": "Colorless",
     "magical": true,

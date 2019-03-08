@@ -1,7 +1,7 @@
 {
-    "description": "Grants adjacent allies Spd+3 during combat.",
+    "description": "Grants Spd+3 to adjacent allies during combat.",
     "id": "spur-spd-2",
     "name": "Spur Spd 2",
-    "sp":100,
+    "sp": 100,
     "type": "s"
 }

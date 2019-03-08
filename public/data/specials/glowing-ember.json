@@ -2,7 +2,7 @@
     "name": "Glowing Ember",
     "cooldown": 4,
     "sp": 100,
-    "description": "Boosts damage dealt by 50% of unit's Def.",
+    "description": "Boosts damage by 50% of unit's Def.",
     "dmg_buff_by_stat": {
         "stat": "def",
         "buff": 0.5

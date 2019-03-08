@@ -3,7 +3,7 @@
     "might": 5,
     "range": 2,
     "sp": 100,
-    "description": "After combat, inflict Def/Res-3 on foe through their next actions.",
+    "description": "After combat, if unit attacked, inflicts Def/Res-3 on foe through its next action.",
     "type": "Dagger",
     "color": "Colorless",
     "magical": false,

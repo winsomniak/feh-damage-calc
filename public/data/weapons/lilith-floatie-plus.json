@@ -3,11 +3,11 @@
     "might": 14,
     "range": 1,
     "sp": 300,
-    "description": "Grants allies within 2 spaces Atk/Spd+1 during combat.",
+    "description": "Grants Atk/Spd+1 to allies within 2 spaces during combat.",
     "type": "Axe",
     "link": "https://kagerochart.com/hero/weapons/lilith-floatie-plus",
-    "refinable":{
-        "type":"melee"
+    "refinable": {
+        "type": "melee"
     },
     "id": "lilith-floatie-plus"
 }

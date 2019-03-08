@@ -8,8 +8,8 @@
     "link": "https://kagerochart.com/hero/weapons/nifl-frostflowers",
     "color": "Green",
     "magical": true,
-    "stat_mod":{
-        "atk":3
+    "stat_mod": {
+        "atk": 3
     },
     "adjacent_ally_bonus": {
         "maximum": 3,

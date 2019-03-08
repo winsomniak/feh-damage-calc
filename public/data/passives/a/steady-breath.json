@@ -2,7 +2,7 @@
     "name": "Steady Breath",
     "sp": 240,
     "type": "A",
-    "description": "If attacked, unit granted Def+4 during combat; also gains Special cooldown charge +1.(If using other similar skill, only highest value applied.)",
+    "description": "If foe initiates combat, grants Def+4 during combat and Special cooldown charge +1 per attack. (Only highest value applied. Does not stack.)",
     "icon": "/images/icons/passives/steady-breath.png",
     "link": "https://kagerochart.com/hero/passives/steady-breath",
     "defend_mod": {

@@ -1,7 +1,7 @@
 {
-    "description": "If unit initiates attack, foes within 2 spaces of target take 3 damage after combat.",
+    "description": "If unit initiates combat, deals 3 damage to foes within 2 spaces of target after combat.",
     "id": "savage-blow-1",
     "name": "Savage Blow 1",
-    "sp":50,
+    "sp": 50,
     "type": "s"
 }

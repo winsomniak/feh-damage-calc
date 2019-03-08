@@ -2,7 +2,7 @@
     "name": "Imbue",
     "cooldown": 1,
     "sp": 50,
-    "description": "When healing an ally with a staff, increases recovered HP by 10.",
+    "description": "When healing an ally with a staff, restores an additional 10 HP to target ally.",
     "weapon_unique": "Staff",
     "link": "https://kagerochart.com/hero/specials/imbue",
     "id": "imbue"

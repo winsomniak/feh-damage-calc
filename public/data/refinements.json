@@ -1,108 +1,108 @@
 {
-    "melee":{
-        "Attack":{
-            "stat_mod":{
+    "melee": {
+        "Attack": {
+            "stat_mod": {
                 "hp": 5,
                 "atk": 2
             }
         },
-        "Speed":{
-            "stat_mod":{
+        "Speed": {
+            "stat_mod": {
                 "hp": 5,
                 "spd": 3
             }
         },
-        "Defense":{
-            "stat_mod":{
+        "Defense": {
+            "stat_mod": {
                 "hp": 5,
                 "def": 4
             }
         },
-        "Resistance":{
-            "stat_mod":{
+        "Resistance": {
+            "stat_mod": {
                 "hp": 5,
                 "res": 4
             }
         }
     },
-    "nerfed melee":{
-        "Attack":{
-            "stat_mod":{
+    "nerfed melee": {
+        "Attack": {
+            "stat_mod": {
                 "hp": 5,
                 "atk": 1
             }
         },
-        "Speed":{
-            "stat_mod":{
+        "Speed": {
+            "stat_mod": {
                 "hp": 5,
                 "spd": 3
             }
         },
-        "Defense":{
-            "stat_mod":{
+        "Defense": {
+            "stat_mod": {
                 "hp": 5,
                 "def": 4
             }
         },
-        "Resistance":{
-            "stat_mod":{
+        "Resistance": {
+            "stat_mod": {
                 "hp": 5,
                 "res": 4
             }
         }
     },
-    "ranged":{
-        "Attack":{
-            "stat_mod":{
+    "ranged": {
+        "Attack": {
+            "stat_mod": {
                 "hp": 2,
                 "atk": 1
             }
         },
-        "Speed":{
-            "stat_mod":{
+        "Speed": {
+            "stat_mod": {
                 "hp": 2,
                 "spd": 2
             }
         },
-        "Defense":{
-            "stat_mod":{
+        "Defense": {
+            "stat_mod": {
                 "hp": 2,
                 "def": 3
             }
         },
-        "Resistance":{
-            "stat_mod":{
+        "Resistance": {
+            "stat_mod": {
                 "hp": 2,
                 "res": 3
             }
         }
     },
-    "staff":{
-        "Dazzling":{
-            "description":" The enemy cannot counterattack.",
-            "prevent_enemy_counter" : 0
+    "staff": {
+        "Dazzling": {
+            "description": " Foe cannot counterattack.",
+            "prevent_enemy_counter": 0
         },
-        "Wrathful":{
-            "description":" Damage from unit's staff will be calculated the same as other weapons.",
+        "Wrathful": {
+            "description": " Calculates damage from staff like other weapons.",
             "reg_weapon_dmg": 0
         }
     },
-    "Special":{
-        "Basilikos":{
-            "stat_mod":{
-                "hp":3,
+    "Special": {
+        "Basilikos": {
+            "stat_mod": {
+                "hp": 3,
                 "atk": 5,
                 "spd": 5,
                 "def": -5,
                 "res": -5
             },
-            "description":" Grants Atk/Spd+5. Inflicts Def/Res-5."
+            "description": " Grants Atk/Spd+5. Inflicts Def/Res-5."
         },
-        "Breath of Fog":{
-            "stat_mod":{
-                "hp":3
+        "Breath of Fog": {
+            "stat_mod": {
+                "hp": 3
             },
-            "description":" If unit is within 2 spaces of a sword or dragon ally, grants Atk/Def+5 during combat.",
+            "description": " If unit is within 2 spaces of sword or dragon ally, grants Atk/Def+5 during combat.",
             "adjacent_stat_bonus": {
                 "target": "self",
                 "adjacent": "ally",
@@ -112,12 +112,11 @@
                 }
             }
         },
-        "Brynhildr":{
-            "description":" If foe uses bow, dagger, magic, or staff and unit's Def ≥ foe's Def+1, foe cannot make a follow-up attack.",
-            "other_prevent_follow":
-            {
-                "stat_to_check":"def",
-                "stat_amount":1,
+        "Brynhildr": {
+            "description": " If foe uses bow, dagger, magic, or staff and unit's Def > foe's Def, foe cannot make a follow-up attack.",
+            "other_prevent_follow": {
+                "stat_to_check": "def",
+                "stat_amount": 1,
                 "weapon_type": [
                     "Bow",
                     "Dagger",
@@ -129,49 +128,49 @@
                 ]
             }
         },
-        "Binding Blade":{
-            "stat_mod":{
-                "hp":3
+        "Binding Blade": {
+            "stat_mod": {
+                "hp": 3
             },
-            "description":" If unit’s HP >= 50% and foe initiates combat, unit makes a guaranteed follow-up attack.",
+            "description": " If unit's HP ≥ 50% and foe initiates combat, unit makes a guaranteed follow-up attack.",
             "defense_follow_up": {
                 "trigger": "healthy",
-                "threshold": 0.50
+                "threshold": 0.5
             }
         },
-        "Cherche's Axe":{
-            "stat_mod":{
-                "hp":3
+        "Cherche's Axe": {
+            "stat_mod": {
+                "hp": 3
             },
-            "description":" At start of turn, converts bonuses on foes in cardinal directions with HP < unit's HP into penalties through their next actions."
+            "description": " At start of turn, converts bonuses on foes in cardinal directions with HP < unit's HP into penalties through their next actions."
         },
-        "Odin's Grimoire":{
-            "description":" If a movement Assist skill (like Reposition, Shove, Pivot, etc.) is used by unit or targets unit, grants Atk/Spd+6 to unit and target ally or unit and targeting ally for 1 turn."
+        "Odin's Grimoire": {
+            "description": " If a movement Assist skill (like Reposition, Shove, Pivot, etc.) is used by unit or targets unit, grants Atk/Spd+6 to unit and target ally or unit and targeting ally for 1 turn."
         },
-        "Sol Katti":{
-            "stat_mod":{
-                "hp":3
+        "Sol Katti": {
+            "stat_mod": {
+                "hp": 3
             },
-            "description":" Unit makes a guaranteed follow-up attack when HP ≤ 75% and attacking a foe that can counter.",
+            "description": " If unit initiates combat against a foe that can counter and unit's HP ≤ 75%, unit makes a guaranteed follow-up attack.",
             "attack_follow_up": {
                 "trigger": "damaged",
                 "threshold": 0.75,
-                "counterable":true
+                "counterable": true
             }
         },
-        "Siegmund":{
-            "stat_mod":{
-                "hp":3
+        "Siegmund": {
+            "stat_mod": {
+                "hp": 3
             },
-            "description":" Unit makes a guaranteed follow-up attack when HP ≥ 90% and attacking.",
+            "description": " If unit's HP ≥ 90% and unit initiates combat, unit makes a guaranteed follow-up attack.",
             "attack_follow_up": {
                 "trigger": "healthy",
                 "threshold": 0.9
             }
         },
-        "Sieglinde":{
-            "stat_mod":{
-                "hp":3
+        "Sieglinde": {
+            "stat_mod": {
+                "hp": 3
             },
             "add_changes": {
                 "source": "hero",
@@ -185,46 +184,44 @@
                     "res"
                 ]
             },
-            "description":" During combat, grants bonus to Atk/Spd/Def/Res = highest bonus on allies within 2 spaces. Each stat bonus calculated independently."
+            "description": " Grants bonus to Atk/Spd/Def/Res = highest bonus on allies within 2 spaces during combat. Calculates each stat bonus independently."
         },
-        "Wind's Brand":{
-            "description":" During combat, boosts Atk/Spd/Def/Res by number of adjacent allies × 2.",
+        "Wind's Brand": {
+            "description": " During combat, boosts unit's Atk/Spd/Def/Res by number of adjacent allies × 2.",
             "adjacent_ally_bonus": true
         },
-        "Yato":{
-            "stat_mod":{
-                "hp":3
+        "Yato": {
+            "stat_mod": {
+                "hp": 3
             },
-            "description":" If unit is within 2 spaces of support partner, grants Atk/Spd/Def/Res+4 to that ally during combat."
+            "description": " If unit is within 2 spaces of support partner, grants Atk/Spd/Def/Res+4 to that ally during combat."
         },
-        "Camilla's Axe":
-        {
-            "stat_mod":{
-                "hp":3
+        "Camilla's Axe": {
+            "stat_mod": {
+                "hp": 3
             },
-            "description":" Grants Atk/Spd+3 to cavalry and flying allies within 2 spaces during combat."
+            "description": " Grants Atk/Spd+3 to cavalry and flying allies within 2 spaces during combat."
         },
-        "Dauntless Lance":
-        {
-            "stat_mod":{
-                "hp":3
+        "Dauntless Lance": {
+            "stat_mod": {
+                "hp": 3
             },
             "defend_mod": {
                 "spd": 4,
                 "def": 4
             },
-            "description":" If foe initiates combat, grants Spd/Def+4 during combat."
+            "description": " If foe initiates combat, grants Spd/Def+4 during combat."
         },
-        "Deathly Dagger":{
-           "prevent_weapon_counter": {
-               "type": [
+        "Deathly Dagger": {
+            "prevent_weapon_counter": {
+                "type": [
                     "Red Tome",
                     "Blue Tome",
                     "Green Tome",
                     "Tome"
                 ]
             },
-            "description":" Foes using magic cannot counterattack."
+            "description": " Magic foes cannot counterattack."
         },
         "Nidhogg":{
            "prevent_weapon_counter": {
@@ -247,12 +244,12 @@
             "stat_mod":{
                 "hp":3
             },
-            "description":" At start of turn, grants Res+6 to allies within 2 spaces for 1 turn. Granted only if number of that ally's movement type on current team ≤ 2."
+            "description": " At start of turn, grants Res+6 to allies within 2 spaces for 1 turn. Granted only if number of that ally's movement type on current team ≤ 2."
         },
-        "Eckesachs":{
-            "description":" If unit is attacked by foe using bow, daggers, magic, or staff, unit receives Def/Res+6 during combat.",
-            "stat_mod":{
-                "hp":3
+        "Eckesachs": {
+            "description": " If foe initiates combat and uses bow, dagger, magic, or staff, grants Def/Res+6 during combat.",
+            "stat_mod": {
+                "hp": 3
             },
             "type_defend_mod": {
                 "weapon_type": {
@@ -270,8 +267,8 @@
                 }
             }
         },
-        "Excalibur":{
-            "description":" If unit is within 2 spaces of a magic or staff ally, grants Atk/Spd+5 during combat.",
+        "Excalibur": {
+            "description": " If unit is within 2 spaces of magic or staff ally, grants Atk/Spd+5 during combat.",
             "adjacent_stat_bonus": {
                 "target": "self",
                 "adjacent": "ally",
@@ -281,17 +278,17 @@
                 }
             }
         },
-        "Falchion":{
-            "stat_mod":{
-                "hp":3
+        "Falchion": {
+            "stat_mod": {
+                "hp": 3
             },
-            "description":" Grants Atk/Spd/Def/Res+2 to allies within 2 spaces during combat."
+            "description": " Grants Atk/Spd/Def/Res+2 to allies within 2 spaces during combat."
         },
-        "Falchion 1":{
-            "stat_mod":{
-                "hp":3
+        "Falchion 1": {
+            "stat_mod": {
+                "hp": 3
             },
-            "description":" Grants Atk/Spd/Def/Res+4 during combat if unit is adjacent to an ally.",
+            "description": " If unit is adjacent to an ally, grants Atk/Spd/Def/Res+4 during combat.",
             "adjacent_stat_bonus": {
                 "target": "self",
                 "adjacent": "ally",
@@ -303,29 +300,28 @@
                 }
             }
         },
-        "Falchion 2":{
-            "stat_mod":{
-                "hp":3
+        "Falchion 2": {
+            "stat_mod": {
+                "hp": 3
             },
             "full_hp_atk_recoil_dmg": 5,
             "hp_brave": 1.0,
-            "description":" If unit's HP = 100% at start of combat and unit initiates combat, unit attacks twice then takes 5 damage after combat."
+            "description": " If unit's HP = 100% at start of combat and unit initiates combat, unit attacks twice, but deals 5 damage to unit after combat."
         },
-        "Felicia's Plate":
-        {
-            "description":" Grants Special cooldown charge +1 if foe uses magic. (Only highest value applied. Does not stack.)",
+        "Felicia's Plate": {
+            "description": " If foe uses magic, grants Special cooldown charge +1 per attack. (Only highest value applied. Does not stack.)",
             "weapon_charge": {
-                "weapon_type":{
-                    "Tome":true,
-                    "Green Tome":true,
-                    "Red Tome":true,
-                    "Blue Tome":true
+                "weapon_type": {
+                    "Tome": true,
+                    "Green Tome": true,
+                    "Red Tome": true,
+                    "Blue Tome": true
                 }
             }
         },
-        "Fensalir":{
-            "stat_mod":{
-                "hp":3
+        "Fensalir": {
+            "stat_mod": {
+                "hp": 3
             },
             "adjacent_stat_bonus": {
                 "target": "self",
@@ -335,24 +331,23 @@
                     "def": 5
                 }
             },
-            "description":" If unit is adjacent to an ally, grants Spd/Def+5 during combat."
+            "description": " If unit is adjacent to an ally, grants Spd/Def+5 during combat."
         },
-        "Forblaze":
-        {
-            "description": " Grants Atk+6 during combat if unit initiates the attack.",
+        "Forblaze": {
+            "description": " If unit initiates combat, grants Atk+6 during combat.",
             "initiate_mod": {
                 "atk": 6
             }
         },
         "Fólkvangr": {
-            "stat_mod":{
-                "hp":3
+            "stat_mod": {
+                "hp": 3
             },
             "tri_advantage": 0.2,
-            "description":" If unit has weapon-triangle advantage, boosts Atk by 20%. If unit has weapon-triangle disadvantage, reduces Atk by 20%."
+            "description": " If unit has weapon-triangle advantage, boosts Atk by 20%. If unit has weapon-triangle disadvantage, reduces Atk by 20%."
         },
         "Fujin Yumi": {
-            "description":" If unit's HP ≥ 50%, unit can move adjacent to any ally within 2 spaces."
+            "description": " If unit's HP ≥ 50%, unit can move to a space adjacent to any ally within 2 spaces."
         },
         "Gladiator's Blade": {
             "stat_mod":{
@@ -371,40 +366,38 @@
         "Tactical Spectrum": {
             "description": "At start of turn, grants Atk/Spd/Def/Res+4 to allies within 2 spaces for 1 turn. Granted only if number of that ally's movement type on current team ≤ 2."
         },
-        "Hauteclere":{
-            "stat_mod":{
-                "hp":3
+        "Hauteclere": {
+            "stat_mod": {
+                "hp": 3
             },
-            "description":" Deals +10 damage when special triggers.",
-            "spec_damage_bonus" : 10
+            "description": " Deals +10 damage when Special triggers.",
+            "spec_damage_bonus": 10
         },
-        "Hinoka's Spear":
-        {
-            "stat_mod":{
-                "hp":3
+        "Hinoka's Spear": {
+            "stat_mod": {
+                "hp": 3
             },
-            "description":" Infantry and flying allies within 2 spaces can move to a space adjacent to unit."
+            "description": " Infantry and flying allies within 2 spaces can move to a space adjacent to unit."
         },
-        "Mystletainn":
-        {
+        "Mystletainn": {
             "stat_mod": {
                 "hp": 3,
                 "atk": 3,
                 "spd": 3,
                 "def": 3,
                 "res": 3
-                },
-            "recoil_dmg": 6,
-            "description":" Grants Atk/Spd/Def/Res +3. Unit takes 6 damage after combat."
-        },
-        "Nóatún":{
-            "stat_mod":{
-                "hp":3
             },
-            "description":" If unit's HP ≥ 50%, unit can move adjacent to any ally within 2 spaces."
+            "recoil_dmg": 6,
+            "description": " Grants Atk/Spd/Def/Res+3. After combat, deals 6 damage to unit."
         },
-        "Parthia":{
-            "description":" Grants Atk+6 during combat if foe uses bow, dagger, magic, or staff.",
+        "Nóatún": {
+            "stat_mod": {
+                "hp": 3
+            },
+            "description": " If unit's HP ≥ 50%, unit can move to a space adjacent to any ally within 2 spaces."
+        },
+        "Parthia": {
+            "description": " If foe uses bow, dagger, magic, or staff, grants Atk+6 during combat.",
             "type_initiate_mod": {
                 "weapon_type": {
                     "Bow": true,
@@ -434,11 +427,11 @@
                 }
             }
         },
-        "Regal Blade":{
-            "stat_mod":{
-                "hp":3
+        "Regal Blade": {
+            "stat_mod": {
+                "hp": 3
             },
-            "description":" If unit is within 2 spaces of an infantry magic ally, grants Atk/Spd/Def/Res+3 during combat.",
+            "description": " If unit is within 2 spaces of an infantry magic ally, grants Atk/Spd/Def/Res+3 during combat.",
             "adjacent_stat_bonus": {
                 "target": "self",
                 "adjacent": "ally",
@@ -475,9 +468,8 @@
                 }
             }
         },
-        "Reese's Tome":
-        {
-            "description":" At start of turn, inflicts Spd/Res-4 on foes in cardinal directions with Res < unit’s Res through their next actions."
+        "Reese's Tome": {
+            "description": " At start of turn, inflicts Spd/Res-4 on foes in cardinal directions with Res < unit's Res through their next actions."
         },
         "Scarlet Sword": {
             "stat_mod":{
@@ -522,8 +514,8 @@
                 "special_ready": true
             }
         },
-        "Cymbeline":{
-            "description":" Grants Atk/Res+5 during combat if within 2 spaces of a flying ally.",
+        "Cymbeline": {
+            "description": " If unit is within 2 spaces of a flying ally, grants Atk/Res+5 during combat.",
             "adjacent_stat_bonus": {
                 "target": "self",
                 "adjacent": "ally",
@@ -553,53 +545,53 @@
                 "adjacent_needed": 2
             }
         },
-        "Wing Sword":{
-            "stat_mod":{
-                "hp":3
+        "Wing Sword": {
+            "stat_mod": {
+                "hp": 3
             },
-            "description":" If unit's Spd - foe's Spd ≥ 1, unit gains Special cooldown charge +1 per attack. (If using other similar skill, only highest value applied.)",
+            "description": " If unit's Spd > foe's Spd, grants Special cooldown charge +1 per unit's attack. (Only highest value applied. Does not stack.)",
             "spec_accel": {
                 "stat": "spd",
                 "adv": 1
             }
         },
-        "Cavalry ranged":{
+        "Cavalry ranged": {
             "nullify_enemy_bonuses": {
                 "move_type": {
                     "Cavalry": true
                 }
             },
-            "description":" If in combat against a cavalry foe, nullifies foe's bonuses (from skills like Fortify, Rally, etc.) during combat."
+            "description": " Neutralizes cavalry foes' bonuses (from skills like Fortify, Rally, etc.) during combat."
         },
-        "Cavalry melee":{
-            "stat_mod":{
-                "hp":3
+        "Cavalry melee": {
+            "stat_mod": {
+                "hp": 3
             },
             "nullify_enemy_bonuses": {
                 "move_type": {
                     "Cavalry": true
                 }
             },
-            "description":" If in combat against a cavalry foe, nullifies foe's bonuses (from skills like Fortify, Rally, etc.) during combat."
+            "description": " Neutralizes cavalry foes' bonuses (from skills like Fortify, Rally, etc.) during combat."
         },
-        "Armor ranged":{
+        "Armor ranged": {
             "nullify_enemy_bonuses": {
                 "move_type": {
                     "Armored": true
                 }
             },
-            "description":" If in combat against an armored foe, nullifies foe's bonuses (from skills like Fortify, Rally, etc.) during combat."
+            "description": " Neutralizes armored foes' bonuses (from skills like Fortify, Rally, etc.) during combat."
         },
-        "Armor melee":{
-            "stat_mod":{
-                "hp":3
+        "Armor melee": {
+            "stat_mod": {
+                "hp": 3
             },
             "nullify_enemy_bonuses": {
                 "move_type": {
                     "Armored": true
                 }
             },
-            "description":" If in combat against an armored foe, nullifies foe's bonuses (from skills like Fortify, Rally, etc.) during combat."
+            "description": " Neutralizes armored foes' bonuses (from skills like Fortify, Rally, etc.) during combat."
         }
     }
 }

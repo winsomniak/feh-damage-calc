@@ -2,7 +2,7 @@
     "name": "Goad Cavalry",
     "sp": 200,
     "type": "C",
-    "description": "Grants cavalry allies within 2 spaces Spd/Atk+4 during combat.",
+    "description": "Grants Atk/Spd+4 to cavalry allies within 2 spaces during combat.",
     "icon": "/images/icons/passives/goad-cavalry.png",
     "link": "https://kagerochart.com/hero/passives/goad-cavalry",
     "move_unique": "Cavalry",

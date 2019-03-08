@@ -2,7 +2,7 @@
     "name": "Rally Attack",
     "range": 1,
     "sp": 150,
-    "description": "Grants Atk+4 to an adjacent ally until the end of the turn.",
+    "description": "Grants Atk+4 to target ally for 1 turn.",
     "link": "https://kagerochart.com/hero/assists/rally-attack",
     "weapon_restrict": "Staff",
     "id": "rally-attack"

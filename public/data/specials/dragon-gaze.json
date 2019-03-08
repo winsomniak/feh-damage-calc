@@ -2,7 +2,7 @@
     "name": "Dragon Gaze",
     "cooldown": 4,
     "sp": 100,
-    "description": "Grants +30% to Atk.",
+    "description": "Boosts damage by 30% of unit's Atk.",
     "dmg_buff_by_stat": {
         "stat": "atk",
         "buff": 0.3

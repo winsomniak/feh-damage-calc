@@ -2,22 +2,22 @@
     "name": "Daggerbreaker 1",
     "sp": 50,
     "type": "B",
-    "description": "If unit's HP ≥ 90% in combat against a dagger user, unit makes a follow-up attack and foe cannot.",
+    "description": "If unit's HP ≥ 90% in combat against a colorless dagger foe, unit makes a guaranteed follow-up attack and foe cannot make a follow-up attack.",
     "icon": "/images/icons/passives/daggerbreaker-1.png",
     "attack_follow_up": {
         "trigger": "healthy",
         "threshold": 0.9,
-        "weapon_type":"Dagger"
+        "weapon_type": "Dagger"
     },
     "defense_follow_up": {
         "trigger": "healthy",
         "threshold": 0.9,
-        "weapon_type":"Dagger"
+        "weapon_type": "Dagger"
     },
     "other_prevent_follow": {
         "trigger": "healthy",
         "threshold": 0.9,
-        "weapon_type":"Dagger"
+        "weapon_type": "Dagger"
     },
     "link": "https://kagerochart.com/hero/passives/daggerbreaker-1",
     "id": "daggerbreaker-1"

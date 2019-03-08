@@ -2,7 +2,7 @@
     "name": "Seal Def 2",
     "sp": 80,
     "type": "B",
-    "description": "After combat, foe suffers Def-5 through its next action.",
+    "description": "Inflicts Def-5 on foe through its next action after combat.",
     "icon": "/images/icons/passives/seal-def-2.png",
     "seal": {
         "def": -5

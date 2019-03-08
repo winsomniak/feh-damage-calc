@@ -3,7 +3,7 @@
     "might": 14,
     "range": 1,
     "sp": 300,
-    "description": "Grants Atk+6 when the unit is under attack.",
+    "description": "If foe initiates combat, grants Atk+6 during combat.",
     "type": "Lance",
     "link": "https://kagerochart.com/hero/weapons/reprisal-lance-plus",
     "color": "Blue",

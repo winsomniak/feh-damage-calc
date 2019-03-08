@@ -3,7 +3,7 @@
     "might": 7,
     "range": 2,
     "sp": 150,
-    "description": "After combat, bonuses on foe become penalties through their next action.",
+    "description": "After combat, if unit attacked, converts bonuses on foe into penalties through its next action.",
     "type": "Staff",
     "color": "Colorless",
     "magical": true,

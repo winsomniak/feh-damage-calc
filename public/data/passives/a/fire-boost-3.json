@@ -2,7 +2,7 @@
     "name": "Fire Boost 3",
     "sp": 200,
     "type": "A",
-    "description": "If unit has at least 3 more HP than enemy at the start of combat, unit receives Atk+6 during combat.",
+    "description": "At start of combat, if unit's HP ≥ foe's HP+3, grants Atk+6 during combat.",
     "icon": "/images/icons/passives/fire-boost-3.png",
     "link": "https://kagerochart.com/hero/passives/fire-boost-3",
     "hp_adv_mod": {

@@ -2,7 +2,7 @@
     "name": "Mend",
     "range": 1,
     "sp": 100,
-    "description": "Restores 10 HP.",
+    "description": "Restores 10 HP to target ally.",
     "weapon_unique": "Staff",
     "link": "https://kagerochart.com/hero/assists/mend",
     "id": "mend"

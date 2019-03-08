@@ -2,7 +2,7 @@
     "name": "Seal Spd 1",
     "sp": 40,
     "type": "B",
-    "description": "After combat, foe suffers Spd-3 through its next action.",
+    "description": "Inflicts Spd-3 on foe through its next action after combat.",
     "icon": "/images/icons/passives/seal-spd-1.png",
     "seal": {
         "spd": -3

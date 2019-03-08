@@ -2,7 +2,7 @@
     "name": "Swift Sparrow 1",
     "sp": 120,
     "type": "A",
-    "description": "If unit initiates combat, unit granted Atk/Spd+2 during battle.",
+    "description": "If unit initiates combat, grants Atk/Spd+2 during combat.",
     "icon": "/images/icons/passives/swift-sparrow-1.png",
     "initiate_mod": {
         "atk": 2,

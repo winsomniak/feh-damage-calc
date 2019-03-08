@@ -3,7 +3,7 @@
     "might": 14,
     "range": 2,
     "sp": 400,
-    "description": "Grants Res+3. Grants bonus to unit's Atk equal to total penalties on foe during combat.",
+    "description": "Grants Res+3. Grants bonus to unit's Atk = total penalties on foe during combat.",
     "type": "Tome",
     "link": "https://kagerochart.com/hero/weapons/blizzard",
     "char_unique": true,

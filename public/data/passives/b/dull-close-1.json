@@ -6,7 +6,7 @@
     "icon": "/images/icons/passives/dull-close-1.png",
     "link": "https://kagerochart.com/hero/passives/dull-close-1",
     "nullify_enemy_bonuses": {
-        "threshold":1.0,
+        "threshold": 1.0,
         "weapon_type": {
             "Sword": true,
             "Lance": true,

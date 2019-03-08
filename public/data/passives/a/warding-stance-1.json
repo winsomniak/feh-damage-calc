@@ -2,7 +2,7 @@
     "name": "Warding Stance 1",
     "sp": 50,
     "type": "A",
-    "description": "Grants Res+2 during combat when this unit is attacked.",
+    "description": "If foe initiates combat, grants Res+2 during combat.",
     "icon": "/images/icons/passives/warding-stance-1.png",
     "defend_mod": {
         "res": 2

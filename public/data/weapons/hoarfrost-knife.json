@@ -27,8 +27,8 @@
         }
     },
     "attack_follow_up": {
-        "counterable":true,
-        "weapon_type":[
+        "counterable": true,
+        "weapon_type": [
             "Sword",
             "Lance",
             "Axe",

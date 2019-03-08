@@ -8,7 +8,7 @@
     "attack_follow_up": {
         "trigger": "damaged",
         "threshold": 0.5,
-        "counterable":true
+        "counterable": true
     },
     "id": "brash-assault-3"
 }

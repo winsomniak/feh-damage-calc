@@ -2,7 +2,7 @@
     "name": "Desperation 1",
     "sp": 50,
     "type": "B",
-    "description": "If unit initiates combat with HP ≤ 25%, follow-up attacks occur immediately after unit's attack.",
+    "description": "If unit's HP ≤ 25% and unit initiates combat, unit can make a follow-up attack before foe can counterattack.",
     "icon": "/images/icons/passives/desperation-1.png",
     "desperation": {
         "threshold": 0.25

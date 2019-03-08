@@ -3,16 +3,16 @@
     "might": 13,
     "range": 1,
     "sp": 300,
-    "description": "After this unit attacks, foes within 2 spaces of target suffer Atk/Spd-5 through their next actions.",
+    "description": "If unit initiates combat, inflicts Atk/Spd-5 on foes within 2 spaces of target through their next actions after combat.",
     "type": "Breath",
     "link": "https://kagerochart.com/hero/weapons/dark-breath-plus",
     "id": "dark-breath-plus",
     "refinable": {
         "type": "melee",
         "might": 14,
-        "description": "After combat, if unit attacked, inflicts Atk/Spd-7 on target and foes within 2 spaces of target through their next actions. If foe's Range = 2, damage calculated using the lower of foe's Def or Res.",
+        "description": "After combat, if unit attacked, inflicts Atk/Spd-7 on target and foes within 2 spaces of target through their next actions. If foe's Range = 2, calculates damage using the lower of foe's Def or Res.",
         "LowerResDefRange": 2,
-        "seal":{
+        "seal": {
             "atk": -7,
             "spd": -7
         }

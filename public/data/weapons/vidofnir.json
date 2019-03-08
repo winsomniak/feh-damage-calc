@@ -3,7 +3,7 @@
     "might": 16,
     "range": 1,
     "sp": 400,
-    "description": "If unit is attacked by foe using sword, axe or lance, unit receives Def+7 during combat.",
+    "description": "If foe initiates combat and uses sword, lance, or axe, grants Def+7 during combat.",
     "type": "Lance",
     "link": "https://kagerochart.com/hero/weapons/vidofnir",
     "color": "Blue",

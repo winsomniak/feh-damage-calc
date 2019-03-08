@@ -2,7 +2,7 @@
     "name": "Life and Death 3",
     "sp": 200,
     "type": "A",
-    "description": "Grants Atk/Spd+5.Inflicts Def/Res-5.",
+    "description": "Grants Atk/Spd+5. Inflicts Def/Res-5.",
     "icon": "/images/icons/passives/life-and-death-3.png",
     "link": "https://kagerochart.com/hero/passives/life-and-death-3",
     "stat_mod": {

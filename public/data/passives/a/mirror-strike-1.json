@@ -2,7 +2,7 @@
     "name": "Mirror Strike 1",
     "sp": 120,
     "type": "A",
-    "description": "Grants Atk/Res+2 during combat if unit initiates combat.",
+    "description": "If unit initiates combat, grants Atk/Res+2 during combat.",
     "icon": "/images/icons/passives/mirror-strike-1.png",
     "initiate_mod": {
         "res": 2,

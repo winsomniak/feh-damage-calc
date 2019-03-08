@@ -2,7 +2,7 @@
     "name": "Galeforce",
     "cooldown": 5,
     "sp": 500,
-    "description": "If this unit initiates an attack, it can take another action after combat.(Once per turn only.)",
+    "description": "If unit initiates combat, grants unit another action after combat. (Once per turn.)",
     "link": "https://kagerochart.com/hero/specials/galeforce",
     "extra_action": true,
     "weapon_restrict": "Staff",

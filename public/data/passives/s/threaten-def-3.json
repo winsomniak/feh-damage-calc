@@ -1,7 +1,7 @@
 {
-    "description": "Inflicts Def-5 on foes within 2 spaces through their next actions at the start of each turn.",
+    "description": "At start of turn, inflicts Def-5 on foes within 2 spaces through their next actions.",
     "id": "threaten-def-3",
     "name": "Threaten Def 3",
-    "sp":200,
+    "sp": 200,
     "type": "s"
 }

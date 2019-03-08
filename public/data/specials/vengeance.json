@@ -2,7 +2,7 @@
     "name": "Vengeance",
     "cooldown": 3,
     "sp": 200,
-    "description": "Grants bonus to damage dealt equal to 50% of damage suffered.",
+    "description": "Boosts damage by 50% of damage dealt to unit.",
     "link": "https://kagerochart.com/hero/specials/vengeance",
     "dmg_suffer_buff": 0.5,
     "weapon_restrict": "Staff",

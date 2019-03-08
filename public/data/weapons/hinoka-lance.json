@@ -3,12 +3,12 @@
     "might": 16,
     "range": 1,
     "sp": 400,
-    "description": "Grants Atk/Spd +4 during combat if infantry or flying ally is within 2 spaces of unit.",
+    "description": "If unit is within 2 spaces of a flying or infantry ally, grants Atk/Spd+4 during combat.",
     "type": "Lance",
     "link": "https://kagerochart.com/hero/weapons/hinoka-spear",
     "color": "Blue",
     "magical": false,
-    "char_unique":true,
+    "char_unique": true,
     "adjacent_stat_bonus": {
         "target": "self",
         "adjacent": "ally",
@@ -19,7 +19,7 @@
     },
     "refinable": {
         "type": "melee",
-        "Special":"Hinoka's Spear"
+        "Special": "Hinoka's Spear"
     },
     "id": "hinoka-lance"
 }

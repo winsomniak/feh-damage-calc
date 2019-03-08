@@ -8,8 +8,8 @@
     "link": "https://kagerochart.com/hero/weapons/muspell-fireposy",
     "color": "Red",
     "magical": true,
-    "stat_mod":{
-        "spd":3
+    "stat_mod": {
+        "spd": 3
     },
     "adjacent_ally_bonus": {
         "maximum": 3,

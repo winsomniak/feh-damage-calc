@@ -11,12 +11,11 @@
     "move_effective": [
         "Flying"
     ],
-    "dmg_comp":
-    {
-        "great":"def",
-        "low":"res",
-        "quantity":5,
-        "dmg":7
+    "dmg_comp": {
+        "great": "def",
+        "low": "res",
+        "quantity": 5,
+        "dmg": 7
     },
     "refinable": {
         "type": "ranged"

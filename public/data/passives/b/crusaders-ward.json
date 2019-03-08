@@ -2,7 +2,7 @@
     "name": "Crusader's Ward",
     "sp": 300,
     "type": "B",
-    "description": "If unit receives consecutive attack from a foe 2 spaces away, damage from second attack onward reduced by 80%.(Skill cannot be inherited.)",
+    "description": "If unit receives consecutive attacks and foe's Range = 2, reduces damage from foe's second attack onward by 80%. (Skill cannot be inherited.)",
     "icon": "/images/icons/passives/crusaders-ward.png",
     "link": "https://kagerochart.com/hero/passives/crusaders-ward",
     "consecutive_dmg_reduction": {

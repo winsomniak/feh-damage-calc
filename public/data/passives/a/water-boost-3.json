@@ -2,7 +2,7 @@
     "name": "Water Boost 3",
     "sp": 200,
     "type": "A",
-    "description": "If unit has at least 3 more HP than enemy at the start of combat, unit receives Res+6 during combat.",
+    "description": "At start of combat, if unit's HP ≥ foe's HP+3, grants Res+6 during combat.",
     "icon": "/images/icons/passives/water-boost-3.png",
     "link": "https://kagerochart.com/hero/passives/water-boost-3",
     "hp_adv_mod": {

@@ -3,13 +3,12 @@
     "might": 14,
     "range": 2,
     "sp": 400,
-    "description": "Grants Spd+3. At the start of turn 3, foes within 3 columns centered on unit take 10 damage and bonuses on those foes become penalties through their next actions.",
+    "description": "Effective against flying foes. Grants Spd+3. At the start of turn 3, deals 10 damage to foes within 3 columns centered on unit, and converts bonuses on those foes into penalties through their next actions.",
     "type": "Bow",
     "link": "https://kagerochart.com/hero/weapons/skadi",
     "color": "Colorless",
-    "stat_mod":
-    {
-        "spd":3
+    "stat_mod": {
+        "spd": 3
     },
     "magical": false,
     "move_effective": [

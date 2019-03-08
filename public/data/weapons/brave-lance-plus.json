@@ -3,7 +3,7 @@
     "might": 8,
     "range": 1,
     "sp": 300,
-    "description": "Spd-5. Attack twice when initiating combat.",
+    "description": "Inflicts Spd-5. If unit initiates combat, unit attacks twice.",
     "type": "Lance",
     "link": "https://kagerochart.com/hero/weapons/brave-lance-plus",
     "color": "Blue",

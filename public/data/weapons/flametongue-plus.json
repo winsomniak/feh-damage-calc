@@ -10,7 +10,7 @@
     "refinable": {
         "type": "melee",
         "might": 16,
-        "description": "If foe's Range = 2, damage calculated using the lower of foe's Def or Res.",
+        "description": "If foe's Range = 2, calculates damage using the lower of foe's Def or Res.",
         "LowerResDefRange": 2
     }
 }

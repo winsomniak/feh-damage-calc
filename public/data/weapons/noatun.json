@@ -3,16 +3,16 @@
     "might": 16,
     "range": 1,
     "sp": 400,
-    "description": "Unit may move adjacent to any ally when HP ≤ 40%.",
+    "description": "If unit's HP ≤ 40%, unit can move to a space adjacent to any ally.",
     "type": "Axe",
     "link": "https://kagerochart.com/hero/weapons/noatun",
     "color": "Green",
     "magical": false,
     "char_unique": true,
-    "refinable":{
-        "type":"melee",
-        "Special":"Nóatún",
-        "description": "If unit’s HP ≤ 50%, unit can move to a space adjacent to any ally."
+    "refinable": {
+        "type": "melee",
+        "Special": "Nóatún",
+        "description": "If unit's HP ≤ 50%, unit can move to a space adjacent to any ally."
     },
     "id": "noatun"
 }

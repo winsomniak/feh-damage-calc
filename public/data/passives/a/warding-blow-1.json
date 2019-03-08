@@ -2,7 +2,7 @@
     "name": "Warding Blow 1",
     "sp": 50,
     "type": "A",
-    "description": "Grants Res+2 during combat if unit initiates attack.",
+    "description": "If unit initiates combat, grants Res+2 during combat.",
     "icon": "/images/icons/passives/warding-blow-1.png",
     "initiate_mod": {
         "res": 2

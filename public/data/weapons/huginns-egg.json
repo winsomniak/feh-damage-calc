@@ -3,11 +3,11 @@
     "might": 14,
     "range": 2,
     "sp": 400,
-    "description": "Grants Res+3. At start of turn, if unit's HP ≥ 50%, inflicts Atk/Def-5 on foe on the enemy team with the lowest Res through it's next action.",
+    "description": "Grants Res+3. At start of turn, if unit's HP ≥ 50%, inflicts Atk/Def-5 on foe on the enemy team with the lowest Res through its next action.",
     "type": "Blue Tome",
     "color": "Blue",
-    "stat_mod":{
-        "res":3
+    "stat_mod": {
+        "res": 3
     },
     "link": "https://kagerochart.com/hero/weapons/huggins-egg",
     "id": "huggins-egg",

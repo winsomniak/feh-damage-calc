@@ -2,7 +2,7 @@
     "name": "Earth Dance 1",
     "sp": 50,
     "type": "B",
-    "description": "If Sing or Dance is used, target also granted Def+3.",
+    "description": "If Sing or Dance is used, grants Def+3 to target.",
     "icon": "/images/icons/passives/earth-dance-1.png",
     "link": "https://kagerochart.com/hero/passives/earth-dance-1",
     "id": "earth-dance-1"

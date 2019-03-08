@@ -2,7 +2,7 @@
     "name": "Live to Serve 2",
     "sp": 80,
     "type": "B",
-    "description": "When healing allies with a staff, unit also recovers 75% of the HP restored.",
+    "description": "When healing an ally with a staff, restores HP to unit = 75% of HP restored to target.",
     "icon": "/images/icons/passives/live-to-serve-2.png",
     "weapon_unique": "Staff",
     "link": "https://kagerochart.com/hero/passives/live-to-serve-2",

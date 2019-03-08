@@ -1,8 +1,8 @@
 {
-    "name": "Brazen Atk Spd 2",
+    "name": "Brazen Atk/Spd 2",
     "sp": 120,
     "type": "A",
-    "description": "If unit's HP ≤ 80% at the start of combat, grants Atk/Spd+5 during combat.",
+    "description": "At start of combat, if unit's HP ≤ 80%, grants Atk/Spd+5 during combat.",
     "icon": "/images/icons/passives/brazen-atk-spd-2.png",
     "below_threshold_mod": {
         "threshold": 0.8,

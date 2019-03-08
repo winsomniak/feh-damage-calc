@@ -2,7 +2,7 @@
     "name": "Hone Spd 1",
     "sp": 50,
     "type": "C",
-    "description": "Grants adjacent allies Spd+2 through their next actions at the start of each turn.",
+    "description": "At start of turn, grants Spd+2 to adjacent allies for 1 turn.",
     "icon": "/images/icons/passives/hone-spd-1.png",
     "link": "https://kagerochart.com/hero/passives/hone-spd-1",
     "id": "hone-spd-1"

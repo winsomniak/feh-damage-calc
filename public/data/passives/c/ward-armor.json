@@ -2,7 +2,7 @@
     "name": "Ward Armor",
     "sp": 200,
     "type": "C",
-    "description": "Grants armored allies within 2 spaces Def/Res+4 during combat.",
+    "description": "Grants Def/Res+4 to armored allies within 2 spaces during combat.",
     "icon": "/images/icons/passives/ward-armor.png",
     "link": "https://kagerochart.com/hero/passives/ward-armor",
     "move_unique": "Armored",

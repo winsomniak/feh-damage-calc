@@ -1,8 +1,8 @@
 {
-    "description": "After combat, foe suffers Atk-5 through its next action.",
+    "description": "Inflicts Atk-5 on foe through its next action after combat.",
     "id": "seal-atk-2",
     "name": "Seal Atk 2",
-    "sp":80,
+    "sp": 80,
     "seal": {
         "atk": -5
     }

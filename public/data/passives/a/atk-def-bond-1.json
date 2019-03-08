@@ -1,8 +1,8 @@
 {
-    "name": "Atk Def Bond 1",
+    "name": "Atk/Def Bond 1",
     "sp": 60,
     "type": "A",
-    "description": "Grants Atk/Def+3 to this unit during combat if unit is adjacent to an ally.",
+    "description": "If unit is adjacent to an ally, grants Atk/Def+3 during combat.",
     "icon": "/images/icons/passives/atk-def-bond-1.png",
     "adjacent_stat_bonus": {
         "target": "self",

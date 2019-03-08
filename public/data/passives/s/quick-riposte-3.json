@@ -1,8 +1,8 @@
 {
-    "description": "Unit automatically makes a follow-up attack if attacked at HP ≥ 70%.",
+    "description": "If unit's HP ≥ 70% and foe initiates combat, unit makes a guaranteed follow-up attack.",
     "id": "quick-riposte-3",
     "name": "Quick Riposte 3",
-    "sp":240,
+    "sp": 240,
     "defense_follow_up": {
         "trigger": "healthy",
         "threshold": 0.7

@@ -3,7 +3,7 @@
     "might": 8,
     "range": 2,
     "sp": 200,
-    "description": "Grants Def/Res+6 during combat if foe initiates combat and uses bow, dagger, magic, or staff.",
+    "description": "If foe initiates combat and uses bow, dagger, magic, or staff, grants Def/Res+6 during combat.",
     "type": "Blue Tome",
     "color": "Blue",
     "magical": true,

@@ -9,7 +9,7 @@
     "adjacent_stat_bonus": {
         "target": "self",
         "adjacent": "ally",
-        "en_phase":true,
+        "en_phase": true,
         "needed": 2,
         "mod": {
             "atk": 4,

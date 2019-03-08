@@ -3,7 +3,7 @@
     "might": 11,
     "range": 2,
     "sp": 300,
-    "description": "After this unit attacks, foes within 2 spaces of target suffer Atk/Spd-5 through their next actions. Effective against flying units.",
+    "description": "Effective against flying foes. If unit initiates combat, inflicts Atk/Spd-5 on foes within 2 spaces of target through their next actions after combat.",
     "type": "Bow",
     "link": "https://kagerochart.com/hero/weapons/clarisses-bow-plus",
     "color": "Colorless",
@@ -13,8 +13,8 @@
     ],
     "refinable": {
         "type": "ranged",
-        "description": "After this unit attacks, inflicts Atk/Spd-5 on target and foes within 2 spaces of target through their next actions. Effective against flying units.",
-        "initiate_seal":{
+        "description": "Effective against flying foes. After combat, if unit attacked, inflicts Atk/Spd-5 on target and foes within 2 spaces of target through their next actions.",
+        "initiate_seal": {
             "atk": -5,
             "spd": -5
         }

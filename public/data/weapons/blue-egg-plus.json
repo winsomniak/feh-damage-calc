@@ -3,7 +3,7 @@
     "might": 11,
     "range": 2,
     "sp": 300,
-    "description": "If unit initiates attack, unit recovers 4 HP after the battle.",
+    "description": "If unit initiates combat, restores 4 HP after combat.",
     "type": "Blue Tome",
     "link": "https://kagerochart.com/hero/weapons/blue-egg-plus",
     "color": "Blue",
@@ -11,12 +11,11 @@
     "initiate_heal": 4,
     "refinable": {
         "type": "ranged",
-        "description": "Unit recovers 4 HP after battle.",
+        "description": "After combat, if unit attacked, restores 4 HP.",
         "might": 12,
         "heal": 4,
-        "remove":
-        {
-        "initiate_heal":true
+        "remove": {
+            "initiate_heal": true
         }
     },
     "id": "blue-egg-plus"

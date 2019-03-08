@@ -2,7 +2,7 @@
     "name": "Sturdy Stance 2",
     "sp": 240,
     "type": "A",
-    "description": "Grants Atk/Def+4 during combat when this unit is attacked.",
+    "description": "If foe initiates combat, grants Atk/Def+4 during combat.",
     "icon": "/images/icons/passives/sturdy-stance-2.png",
     "defend_mod": {
         "atk": 4,

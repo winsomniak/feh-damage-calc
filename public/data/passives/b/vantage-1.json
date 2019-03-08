@@ -2,7 +2,7 @@
     "name": "Vantage 1",
     "sp": 50,
     "type": "B",
-    "description": "Unit counterattacks first when attacked at HP ≤ 25%.",
+    "description": "If unit's HP ≤ 25% and foe initiates combat, unit can counterattack before foe's first attack.",
     "icon": "/images/icons/passives/vantage-1.png",
     "vantage": {
         "threshold": 0.25

@@ -2,7 +2,7 @@
     "name": "Darting Stance 1",
     "sp": 50,
     "type": "A",
-    "description": "Grants Spd+2 during combat when this unit is attacked.",
+    "description": "If foe initiates combat, grants Spd+2 during combat.",
     "icon": "/images/icons/passives/darting-stance-1.png",
     "defend_mod": {
         "spd": 2

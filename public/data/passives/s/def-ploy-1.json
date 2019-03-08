@@ -1,7 +1,7 @@
 {
-    "description": "At start of turn, all foes in cardinal directions with Res 1 or more lower than unit suffer Def-3 until the end of foe's next action.",
+    "description": "At start of turn, inflicts Def-3 on foes in cardinal directions with Res < unit's Res through their next actions.",
     "id": "def-ploy-1",
     "name": "Def Ploy 1",
-    "sp":60,
+    "sp": 60,
     "type": "s"
 }

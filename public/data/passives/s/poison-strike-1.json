@@ -1,8 +1,8 @@
 {
-    "description": "Inflicts 4 damage to foe after any combat this unit initiates.",
+    "description": "If unit initiates combat, deals 4 damage to foe after combat.",
     "poison": 4,
     "weapon_restrict": "Staff",
-    "sp":60,
+    "sp": 60,
     "id": "poison-strike-1",
     "name": "Poison Strike 1",
     "type": "s"

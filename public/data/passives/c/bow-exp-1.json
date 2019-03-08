@@ -2,7 +2,7 @@
     "name": "Bow Exp. 1",
     "sp": 30,
     "type": "C",
-    "description": "If unit survives and uses a bow, unit gets 1.5x EXP.(If similar skill effects also used, only highest multiplier applies.)",
+    "description": "While unit lives and uses a bow, unit gets 1.5x EXP. (Only highest value applied. Does not stack.)",
     "icon": "/images/icons/passives/bow-exp-1.png",
     "link": "https://kagerochart.com/hero/passives/bow-exp-1",
     "id": "bow-exp-1"

@@ -3,7 +3,7 @@
     "might": 11,
     "range": 2,
     "sp": 300,
-    "description": "Effective against flying units. If target has a dagger, it cannot make a follow-up attack and this unit will.",
+    "description": "Effective against flying foes. In combat against a colorless dagger foe, unit makes a guaranteed follow-up attack and foe cannot make a follow-up attack.",
     "type": "Bow",
     "link": "https://kagerochart.com/hero/weapons/assassins-bow-plus",
     "color": "Colorless",
@@ -12,13 +12,13 @@
         "Flying"
     ],
     "attack_follow_up": {
-        "weapon_type":"Dagger"
+        "weapon_type": "Dagger"
     },
     "defense_follow_up": {
-        "weapon_type":"Dagger"
+        "weapon_type": "Dagger"
     },
     "other_prevent_follow": {
-        "weapon_type":"Dagger"
+        "weapon_type": "Dagger"
     },
     "id": "assassins-bow-plus"
 }

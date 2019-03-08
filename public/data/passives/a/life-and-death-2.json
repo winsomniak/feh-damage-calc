@@ -2,7 +2,7 @@
     "name": "Life and Death 2",
     "sp": 100,
     "type": "A",
-    "description": "Grants Atk/Spd+4.Inflicts Def/Res-4.",
+    "description": "Grants Atk/Spd+4. Inflicts Def/Res-4.",
     "icon": "/images/icons/passives/life-and-death-2.png",
     "stat_mod": {
         "atk": 4,

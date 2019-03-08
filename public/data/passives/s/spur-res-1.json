@@ -1,7 +1,7 @@
 {
-    "description": "Grants adjacent allies Res+2 during combat.",
+    "description": "Grants Res+2 to adjacent allies during combat.",
     "id": "spur-res-1",
     "name": "Spur Res 1",
-    "sp":50,
+    "sp": 50,
     "type": "s"
 }

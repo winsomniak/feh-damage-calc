@@ -2,7 +2,7 @@
     "name": "Astra",
     "cooldown": 4,
     "sp": 200,
-    "description": "Grants +150% to damage dealt.",
+    "description": "Boosts damage dealt by 150%.",
     "link": "https://kagerochart.com/hero/specials/astra",
     "dmg_mod": 1.5,
     "weapon_restrict": "Staff",

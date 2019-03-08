@@ -2,7 +2,7 @@
     "name": "Martyr+",
     "range": 1,
     "sp": 300,
-    "description": "Restores HP = this unit's suffered damage +50% of Atk. (Minimum of 7 HP.)Also restores HP to unit = half suffered damage.",
+    "description": "Restores HP = damage dealt to unit +50% of Atk. (Minimum of 7 HP.) Restores HP to unit = half damage dealt to unit.",
     "link": "https://kagerochart.com/hero/assists/martyr-plus",
     "weapon_unique": "Staff",
     "id": "martyr-plus"

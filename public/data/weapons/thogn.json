@@ -9,10 +9,10 @@
     "move_effective": [
         "Flying"
     ],
-    "stat_mod":{
-        "spd":3
+    "stat_mod": {
+        "spd": 3
     },
-    "description" : "Effective against flying foes. Grants Spd+3. If unit initiates combat and foe uses sword, lance, axe, or dragonstone, grants Atk/Spd/Def/Res+4 during combat.",
+    "description": "Effective against flying foes. Grants Spd+3. If unit initiates combat and foe uses sword, lance, axe, or dragonstone, grants Atk/Spd/Def/Res+4 during combat.",
     "type_initiate_mod": {
         "weapon_type": {
             "Sword": true,

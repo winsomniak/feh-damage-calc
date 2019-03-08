@@ -1,8 +1,8 @@
 {
-    "name": "Spur Atk Def 2",
+    "name": "Spur Atk/Def 2",
     "sp": 240,
     "type": "C",
-    "description": "Grants adjacent allies Atk/Def +3 during combat.",
+    "description": "Grants Atk/Def+3 to adjacent allies during combat.",
     "icon": "/images/icons/passives/spur-atk-def-2.png",
     "link": "https://kagerochart.com/hero/passives/spur-atk-def-2",
     "id": "spur-atk-def-2"

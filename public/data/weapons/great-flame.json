@@ -3,17 +3,16 @@
     "might": 16,
     "range": 1,
     "sp": 400,
-    "description": "Grants Atk+3. If unit's Def - foe's Def ≥ 5, foe can't make a follow-up attack. If foe's Range = 2, damage calculated using the lower of foe's Def or Res.",
+    "description": "Grants Atk+3. If unit's Def ≥ foe's Def+5, foe cannot make a follow-up attack. If foe's Range = 2, calculates damage using the lower of foe's Def or Res.",
     "type": "Breath",
     "magical": true,
     "LowerResDefRange": 2,
     "stat_mod": {
         "atk": 3
     },
-    "other_prevent_follow":
-    {
-        "stat_to_check":"def",
-        "stat_amount":5
+    "other_prevent_follow": {
+        "stat_to_check": "def",
+        "stat_amount": 5
     },
     "char_unique": true,
     "link": "https://kagerochart.com/hero/weapons/great-flame",

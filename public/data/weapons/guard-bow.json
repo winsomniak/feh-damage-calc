@@ -10,7 +10,7 @@
     "move_effective": [
         "Flying"
     ],
-    "description" : "Effective against flying units. Grants Def/Res+6 during combat if unit is attacked by foe using bow, daggers, magic, or staff.",
+    "description": "Effective against flying foes. If foe initiates combat and uses bow, dagger, magic, or staff, grants Def/Res+6 to unit during combat.",
     "type_defend_mod": {
         "weapon_type": {
             "Bow": true,

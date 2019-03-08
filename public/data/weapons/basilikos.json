@@ -8,7 +8,7 @@
     "link": "https://kagerochart.com/hero/weapons/basilikos",
     "color": "Green",
     "magical": false,
-    "char_unique":true,
+    "char_unique": true,
     "spec_cooldown_mod": -1,
     "refinable": {
         "type": "melee",

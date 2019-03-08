@@ -2,7 +2,7 @@
     "name": "Close Def 2",
     "sp": 120,
     "type": "A",
-    "description": "If unit is attacked by foe using sword, axe, lance, or dragonstone, unit receives Def/Res+4 during combat.",
+    "description": "If foe initiates combat and uses sword, lance, axe, or dragonstone, grants Def/Res+4 during combat.",
     "icon": "/images/icons/passives/close-def-2.png",
     "type_defend_mod": {
         "weapon_type": {

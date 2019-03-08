@@ -1,7 +1,7 @@
 {
-    "description": "Grants adjacent allies Atk+3 during combat.",
+    "description": "Grants Atk+3 to adjacent allies during combat.",
     "id": "spur-atk-2",
     "name": "Spur Atk 2",
-    "sp":100,
+    "sp": 100,
     "type": "s"
 }

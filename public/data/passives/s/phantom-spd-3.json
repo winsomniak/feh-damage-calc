@@ -1,8 +1,8 @@
 {
-    "description": "When any skill compares this unit's Spd stat to another unit's, this unit's Spd stat is counted as +10 over actual value.",
+    "description": "If a skill compares unit's Spd to a foe's or ally's Spd, treats unit's Spd as if granted +10.",
     "id": "phantom-spd-3",
     "name": "Phantom Spd 3",
-    "sp":200,
+    "sp": 200,
     "phantom_stat_mod": {
         "spd": 10
     },

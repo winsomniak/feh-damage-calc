@@ -2,7 +2,7 @@
     "name": "Mirror Stance 1",
     "sp": 120,
     "type": "A",
-    "description": "Grants Atk/Res+2 during combat when this unit is attacked.",
+    "description": "If foe initiates combat, grants Atk/Res+2 during combat.",
     "icon": "/images/icons/passives/mirror-stance-1.png",
     "defend_mod": {
         "atk": 2,

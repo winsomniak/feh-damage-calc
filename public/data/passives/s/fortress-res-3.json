@@ -4,8 +4,8 @@
     "name": "Fortress Res 3",
     "stat_mod": {
         "res": 5,
-        "atk":-3
+        "atk": -3
     },
-    "sp":160,
+    "sp": 160,
     "type": "s"
 }

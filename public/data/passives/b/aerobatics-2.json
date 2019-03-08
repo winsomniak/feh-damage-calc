@@ -2,7 +2,7 @@
     "name": "Aerobatics 2",
     "sp": 120,
     "type": "B",
-    "description": "If unit has ≥ 50% HP, unit can move to a space adjacent to any infantry, armored, or cavalry ally within 2 spaces.",
+    "description": "If unit's HP ≥ 50%, unit can move to a space adjacent to any infantry, armored, or cavalry ally within 2 spaces.",
     "icon": "/images/icons/passives/aerobatics-2.png",
     "link": "https://kagerochart.com/hero/passives/aerobatics-2",
     "id": "aerobatics-2"

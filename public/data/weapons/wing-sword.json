@@ -13,9 +13,9 @@
         "Armored",
         "Cavalry"
     ],
-    "refinable":{
-        "type":"melee",
-        "Special":"Wing Sword"
+    "refinable": {
+        "type": "melee",
+        "Special": "Wing Sword"
     },
     "id": "wing-sword"
 }

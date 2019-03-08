@@ -1,7 +1,7 @@
 {
-    "description": "Inflicts Spd-5 on foes within 2 spaces through their next actions at the start of each turn.",
+    "description": "At start of turn, inflicts Spd-5 on foes within 2 spaces through their next actions.",
     "id": "threaten-spd-3",
     "name": "Threaten Spd 3",
-    "sp":200,
+    "sp": 200,
     "type": "s"
 }

@@ -1,5 +1,5 @@
 {
-    "description": "If unit has ≥50% HP, infantry and armored allies within 2 spaces can move to a space adjacent to unit.",
+    "description": "If unit's HP ≥ 50%, infantry and armored allies within 2 spaces can move to a space adjacent to unit.",
     "id": "guidance-2",
     "name": "Guidance 2",
     "sp": 120,

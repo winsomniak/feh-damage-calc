@@ -2,7 +2,7 @@
     "name": "Distant Def 1",
     "sp": 60,
     "type": "A",
-    "description": "If unit is attacked by foe using bow, daggers, magic, or staff, unit receives Def/Res+2 during combat.",
+    "description": "If foe initiates combat and uses bow, dagger, magic, or staff, grants Def/Res+2 during combat.",
     "icon": "/images/icons/passives/distant-def-1.png",
     "type_defend_mod": {
         "weapon_type": {

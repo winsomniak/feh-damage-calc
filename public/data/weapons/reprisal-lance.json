@@ -3,7 +3,7 @@
     "might": 10,
     "range": 1,
     "sp": 200,
-    "description": "Grants Atk+6 when the unit is under attack.",
+    "description": "If foe initiates combat, grants Atk+6 during combat.",
     "type": "Lance",
     "color": "Blue",
     "magical": false,

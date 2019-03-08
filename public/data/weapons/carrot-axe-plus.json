@@ -3,7 +3,7 @@
     "might": 13,
     "range": 1,
     "sp": 300,
-    "description": "If unit initiates attack, unit recovers 4 HP after the battle.",
+    "description": "If unit initiates combat, restores 4 HP after combat.",
     "type": "Axe",
     "link": "https://kagerochart.com/hero/weapons/carrot-axe-plus",
     "color": "Green",
@@ -11,12 +11,11 @@
     "initiate_heal": 4,
     "refinable": {
         "type": "melee",
-        "description": "Unit recovers 4 HP after battle.",
+        "description": "After combat, if unit attacked, restores 4 HP.",
         "might": 14,
         "heal": 4,
-        "remove":
-        {
-        "initiate_heal":true
+        "remove": {
+            "initiate_heal": true
         }
     },
     "id": "carrot-axe-plus"

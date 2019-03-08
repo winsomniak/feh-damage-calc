@@ -2,7 +2,7 @@
     "name": "HP +4",
     "sp": 80,
     "type": "A",
-    "description": "Grants +4 to max HP.",
+    "description": "Grants HP+4.",
     "icon": "/images/icons/passives/hp-plus-4.png",
     "stat_mod": {
         "hp": 4

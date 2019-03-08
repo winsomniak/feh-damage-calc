@@ -3,7 +3,7 @@
     "might": 14,
     "range": 2,
     "sp": 400,
-    "description": "If unit’s HP ≤ 50% and foe initiates combat, unit can counterattack before foe’s first attack.",
+    "description": "If unit's HP ≤ 50% and foe initiates combat, unit can counterattack before foe's first attack.",
     "type": "Blue Tome",
     "link": "https://kagerochart.com/hero/weapons/valaskjalf",
     "color": "Blue",

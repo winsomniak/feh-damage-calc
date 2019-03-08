@@ -2,7 +2,7 @@
     "name": "Gale Dance 1",
     "sp": 50,
     "type": "B",
-    "description": "If Sing or Dance is used, target also granted Spd+2.",
+    "description": "If Sing or Dance is used, grants Spd+2 to target.",
     "icon": "/images/icons/passives/gale-dance-1.png",
     "link": "https://kagerochart.com/hero/passives/gale-dance-1",
     "id": "gale-dance-1"

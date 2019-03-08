@@ -10,12 +10,11 @@
     "move_effective": [
         "Flying"
     ],
-    "dmg_comp":
-    {
-        "great":"def",
-        "low":"res",
-        "quantity":5,
-        "dmg":7
+    "dmg_comp": {
+        "great": "def",
+        "low": "res",
+        "quantity": 5,
+        "dmg": 7
     },
     "link": "https://kagerochart.com/hero/weapons/shining-bow",
     "id": "shining-bow"

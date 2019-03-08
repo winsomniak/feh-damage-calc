@@ -2,7 +2,7 @@
     "name": "Live to Serve 3",
     "sp": 160,
     "type": "B",
-    "description": "When healing allies with a staff, unit also recovers the same amount.",
+    "description": "When healing an ally with a staff, restores HP to unit = HP restored to target.",
     "icon": "/images/icons/passives/live-to-serve-3.png",
     "link": "https://kagerochart.com/hero/passives/live-to-serve-3",
     "weapon_unique": "Staff",

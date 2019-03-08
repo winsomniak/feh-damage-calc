@@ -1,8 +1,8 @@
 {
-    "name": "Seal Atk Def 1",
+    "name": "Seal Atk/Def 1",
     "sp": 100,
     "type": "B",
-    "description": "After combat, inflicts Atk/Def-3 on foe through its next action.",
+    "description": "Inflicts Atk/Def-3 on foe through its next action after combat.",
     "icon": "/images/icons/passives/seal-atk-def-1.png",
     "seal": {
         "atk": -3,

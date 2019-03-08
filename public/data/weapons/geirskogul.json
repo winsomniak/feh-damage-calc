@@ -3,7 +3,7 @@
     "might": 16,
     "range": 1,
     "sp": 400,
-    "description": "Grants Def+3. Grants allies with sword, lance, axe, bow, or dagger within 2 spaces Atk/Spd+3 during combat.",
+    "description": "Grants Def+3. If allies within 2 spaces use sword, lance, axe, bow, or dagger, grants Atk/Spd+3 to those allies during combat.",
     "type": "Lance",
     "link": "https://kagerochart.com/hero/weapons/geirskogul",
     "color": "Blue",

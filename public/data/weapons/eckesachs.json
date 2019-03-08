@@ -3,7 +3,7 @@
     "might": 16,
     "range": 1,
     "sp": 400,
-    "description": "Inflicts Def-4 on foes within 2 spaces through their next actions at the start of each turn.",
+    "description": "At start of turn, inflicts Def-4 on foes within 2 spaces through their next actions.",
     "type": "Sword",
     "link": "https://kagerochart.com/hero/weapons/eckesachs",
     "color": "Red",
@@ -11,10 +11,10 @@
     "threaten": {
         "def": -4
     },
-    "refinable":{
-        "type":"melee",
-        "Special":"Eckesachs",
-        "description": "Inflicts Def-6 on foes (excluding dragons) within 2 spaces at the start of each turn, through their next actions."
+    "refinable": {
+        "type": "melee",
+        "Special": "Eckesachs",
+        "description": "At start of turn, inflicts Def-6 on foes (excluding dragons) within 2 spaces through their next actions."
     },
     "char_unique": true,
     "id": "eckesachs"

@@ -7,11 +7,11 @@
     "type": "Green Tome",
     "link": "https://kagerochart.com/hero/weapons/giga-excalibur",
     "color": "Green",
-	"stat_mod": {
-		"spd": 3
-	},
+    "stat_mod": {
+        "spd": 3
+    },
     "magical": true,
-    "boost_by_difference":{
+    "boost_by_difference": {
         "stat": "spd",
         "type": "positive",
         "multiplier": 0.7,

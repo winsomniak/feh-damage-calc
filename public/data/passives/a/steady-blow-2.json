@@ -2,7 +2,7 @@
     "name": "Steady Blow 2",
     "sp": 240,
     "type": "A",
-    "description": "If unit initiates combat, unit granted Spd/Def+4 during battle.",
+    "description": "If unit initiates combat, grants Spd/Def+4 during combat.",
     "icon": "/images/icons/passives/steady-blow-2.png",
     "link": "https://kagerochart.com/hero/passives/steady-blow-2",
     "initiate_mod": {

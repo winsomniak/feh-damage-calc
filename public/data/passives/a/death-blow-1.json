@@ -2,7 +2,7 @@
     "name": "Death Blow 1",
     "sp": 50,
     "type": "A",
-    "description": "Grants Atk+2 during combat if unit initiates the attack.",
+    "description": "If unit initiates combat, grants Atk+2 during combat.",
     "icon": "/images/icons/passives/death-blow-1.png",
     "initiate_mod": {
         "atk": 2

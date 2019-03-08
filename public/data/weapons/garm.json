@@ -8,14 +8,14 @@
     "link": "https://kagerochart.com/hero/weapons/garm",
     "color": "Green",
     "magical": false,
-    "stat_mod":{
-        "atk":3
+    "stat_mod": {
+        "atk": 3
     },
     "defense_follow_up": {
-        "bonus":"self"
+        "bonus": "self"
     },
     "attack_follow_up": {
-        "bonus":"self"
+        "bonus": "self"
     },
     "char_unique": true,
     "id": "garm"

@@ -2,7 +2,7 @@
     "name": "Reposition",
     "range": 1,
     "sp": 150,
-    "description": "Moves adjacent ally to opposite side of unit.",
+    "description": "Target ally moves to opposite side of unit.",
     "link": "https://kagerochart.com/hero/assists/reposition",
     "weapon_restrict": "Staff",
     "id": "reposition"

@@ -2,7 +2,7 @@
     "name": "Dragonskin",
     "sp": 300,
     "type": "A",
-    "description": "Neutralizes \"effective against\" bonuses. Grants Def/Res+4 during combat when this unit is attacked.",
+    "description": "Neutralizes \"effective against flying\" bonuses. If foe initiates combat, grants Def/Res+4 during combat.",
     "icon": "/images/icons/passives/dragonskin.png",
     "link": "https://kagerochart.com/hero/passives/dragonskin",
     "cancel_effective": true,
@@ -10,6 +10,6 @@
         "def": 4,
         "res": 4
     },
-    "char_unique":true,
+    "char_unique": true,
     "id": "dragonskin"
 }

@@ -3,7 +3,7 @@
     "might": 9,
     "range": 1,
     "sp": 200,
-    "description": "If unit initiates attack, unit recovers 4 HP after the battle.",
+    "description": "If unit initiates combat, restores 4 HP after combat.",
     "type": "Axe",
     "color": "Green",
     "magical": false,

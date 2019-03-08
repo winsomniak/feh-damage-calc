@@ -3,7 +3,7 @@
     "might": 4,
     "range": 2,
     "sp": 150,
-    "description": "Recover 50% of damage dealt.",
+    "description": "Restores HP = 50% of damage dealt.",
     "type": "Staff",
     "color": "Colorless",
     "magical": true,

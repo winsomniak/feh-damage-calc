@@ -3,7 +3,7 @@
     "might": 12,
     "range": 2,
     "sp": 300,
-    "description": "Grants allies withing 2 spaces Def/Res+2 through their next actions after any combat this unit initiates. Effective against fliers.",
+    "description": "Effective against flying foes. If unit initiates combat, grants Def/Res+2 to allies within 2 spaces for 1 turn after combat.",
     "type": "Bow",
     "link": "https://kagerochart.com/hero/weapons/cupid-arrow-plus",
     "color": "Colorless",
@@ -13,10 +13,10 @@
     ],
     "refinable": {
         "type": "ranged",
-        "description": "After combat, if unit attacked, grants Def/Res+5 to unit and allies within 2 spaces of unit for 1 turn. Effective against fliers.",
-        "after_mod":{
-            "def":5,
-            "res":5
+        "description": "Effective against flying foes. After combat, if unit attacked, grants Def/Res+5 to unit and allies within 2 spaces of unit for 1 turn.",
+        "after_mod": {
+            "def": 5,
+            "res": 5
         }
     },
     "id": "cupid-arrow-plus"

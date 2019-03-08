@@ -3,7 +3,7 @@
     "might": 14,
     "range": 1,
     "sp": 300,
-    "description": "Effective against armored units.",
+    "description": "Effective against armored foes.",
     "type": "Sword",
     "link": "https://kagerochart.com/hero/weapons/armorsmasher-plus",
     "color": "Red",
@@ -11,9 +11,9 @@
     "move_effective": [
         "Armored"
     ],
-    "refinable":{
-        "type":"melee",
-        "Special":"Armor melee"
+    "refinable": {
+        "type": "melee",
+        "Special": "Armor melee"
     },
     "id": "armorsmasher-plus"
 }

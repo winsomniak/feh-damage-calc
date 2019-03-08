@@ -10,7 +10,7 @@
     "magical": false,
     "char_unique": true,
     "spec_cooldown_mod": -1,
-    "boost_by_difference":{
+    "boost_by_difference": {
         "stat": "spd",
         "type": "positive",
         "multiplier": 0.7,

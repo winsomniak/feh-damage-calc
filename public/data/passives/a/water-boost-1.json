@@ -2,7 +2,7 @@
     "name": "Water Boost 1",
     "sp": 50,
     "type": "A",
-    "description": "If unit has at least 3 more HP than enemy at the start of combat, unit receives Res+2 during combat.",
+    "description": "At start of combat, if unit's HP ≥ foe's HP+3, grants Res+2 during combat.",
     "icon": "/images/icons/passives/water-boost-1.png",
     "hp_adv_mod": {
         "stat_mod": {

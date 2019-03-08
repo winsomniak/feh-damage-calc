@@ -2,7 +2,7 @@
     "name": "Warding Breath",
     "sp": 240,
     "type": "A",
-    "description": "If attacked, unit granted Res+4 during combat; also gains Special cooldown charge +1.(If using other similar skill, only highest value applied.)",
+    "description": "If foe initiates combat, grants Res+4 during combat and Special cooldown charge +1 per attack. (Only highest value applied. Does not stack.)",
     "icon": "/images/icons/passives/warding-breath.png",
     "link": "https://kagerochart.com/hero/passives/warding-breath",
     "defend_mod": {
