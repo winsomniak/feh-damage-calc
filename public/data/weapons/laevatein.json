@@ -5,7 +5,7 @@
     "sp": 400,
     "description": "Grants Atk+3. Adds total bonuses on unit to damage dealt.",
     "type": "Sword",
-    "link": "https://kagerochart.com/hero/weapons/niu",
+    "link": "https://kagerochart.com/hero/weapons/laevatein",
     "color": "Red",
     "magical": false,
     "stat_mod":{
@@ -20,5 +20,5 @@
         ]
     },
     "char_unique": true,
-    "id": "niu"
+    "id": "laevatein"
 }
