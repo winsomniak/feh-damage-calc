@@ -44,7 +44,8 @@
       "res": 50,
       "total": 255
     },
-    "growth_type": 255
+    "growth_type": 255,
+    "dragonflower": 10
   },
   "description": "A veteran fighter who leads the Order of Heroes. Alfonse and Sharena's commander.",
   "voice_actor": "Karen Strassman",

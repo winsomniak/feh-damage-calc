@@ -44,7 +44,8 @@
       "res": 25,
       "total": 250
     },
-    "growth_type": 129
+    "growth_type": 129,
+    "dragonflower": 5
   },
   "description": "A knight who serves the royal house of Ylisse and helps lead Chrom's Shepherds. Appears in Fire Emblem Awakening.",
   "voice_actor": "Kyle Hebert",

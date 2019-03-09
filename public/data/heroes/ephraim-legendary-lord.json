@@ -5,7 +5,7 @@
   "id": "ephraim-legendary-lord",
   "color": "Blue",
   "weapon_type": "Lance",
-  "legendary": "true",
+  "legendary": true,
   "link": "https://kagerochart.com/hero/ephraim-legendary-lord",
   "move_type": "Cavalry",
   "weapon": [
@@ -47,7 +47,8 @@
       "res": 35,
       "total": 255
     },
-    "growth_type": 66
+    "growth_type": 66,
+    "dragonflower": 5
   },
   "description": "Prince of Renais. Eirika's twin. It's said he destroyed the Demon King of old and saved the world. Appears in Fire Emblem: The Sacred Stones.",
   "voice_actor": "Greg Chun",

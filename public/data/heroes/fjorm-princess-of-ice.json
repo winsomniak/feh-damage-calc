@@ -5,7 +5,7 @@
   "id": "fjorm-princess-of-ice",
   "color": "Blue",
   "weapon_type": "Lance",
-  "legendary": "true",
+  "legendary": true,
   "link": "https://kagerochart.com/hero/fjorm-princess-of-ice",
   "move_type": "Infantry",
   "weapon": [
@@ -50,7 +50,8 @@
       "res": 60,
       "total": 265
     },
-    "growth_type": 139
+    "growth_type": 139,
+    "dragonflower": 10
   },
   "description": "The gentle second princess of Nifl, the Kingdom of Ice. Seeks revenge against Surtr.",
   "voice_actor": "Heather Watson",

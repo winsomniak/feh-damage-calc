@@ -14,7 +14,10 @@
     "hawk-king-claw",
     "adult-(flier)",
     "fledgling-(flier)",
-    "hatchling-(flier)"
+    "hatchling-(flier)",
+    "adult-flier",
+    "fledgling-flier",
+    "hatchling-flier"
   ],
   "special": [
     "dragon-gaze",
@@ -52,6 +55,7 @@
       "res": 35,
       "total": 265
     },
-    "growth_type": 136
+    "growth_type": 136,
+    "dragonflower": 5
   }
 }

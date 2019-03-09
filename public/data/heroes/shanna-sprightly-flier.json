@@ -45,7 +45,8 @@
       "res": 50,
       "total": 255
     },
-    "growth_type": 193
+    "growth_type": 193,
+    "dragonflower": 5
   },
   "description": "A trainee of the Pegasus Knights of Ilia. Cheerful and optimistic. Appears in Fire Emblem: The Binding Blade.",
   "voice_actor": "Marisha Ray",

@@ -45,7 +45,8 @@
       "res": 30,
       "total": 255
     },
-    "growth_type": 220
+    "growth_type": 220,
+    "dragonflower": 10
   },
   "description": "A prince of Ylisse and descendant of the Hero-King. Leads the Shepherds. Appears in Fire Emblem Awakening.",
   "voice_actor": "Matt Mercer",

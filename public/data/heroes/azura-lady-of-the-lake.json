@@ -42,7 +42,8 @@
       "res": 50,
       "total": 255
     },
-    "growth_type": 83
+    "growth_type": 83,
+    "dragonflower": 10
   },
   "description": "An enchanting princess raised in Hoshido who sings in battle to help her allies. Appears in Fire Emblem Fates.",
   "voice_actor": "Rena Strober",

@@ -44,7 +44,8 @@
       "res": 55,
       "total": 220
     },
-    "growth_type": 2
+    "growth_type": 2,
+    "dragonflower": 5
   },
   "description": "Veteran knight of Altea who protected Marth since he was young. Appears in Fire Emblem: Mystery of the Emblem.",
   "voice_actor": "Walden James",

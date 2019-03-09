@@ -42,7 +42,8 @@
       "res": 50,
       "total": 265
     },
-    "growth_type": 10
+    "growth_type": 10,
+    "dragonflower": 5
   },
   "description": "Armored knight of Ostia. Intent on mastering defense, despite feeling awkward in armor. Appears in Fire Emblem: The Binding Blade.",
   "voice_actor": "Cherami Leigh",

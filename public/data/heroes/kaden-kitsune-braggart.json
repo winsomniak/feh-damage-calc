@@ -14,7 +14,10 @@
     "kitsune-fang",
     "adult-(cavalry)",
     "yearling-(cavalry)",
-    "whelp-(cavalry)"
+    "whelp-(cavalry)",
+    "adult-cavalry",
+    "yearling-cavalry",
+    "whelp-cavalry"
   ],
   "assist": [
     "pivot"
@@ -45,6 +48,7 @@
       "res": 45,
       "total": 255
     },
-    "growth_type": 143
+    "growth_type": 143,
+    "dragonflower": 5
   }
 }

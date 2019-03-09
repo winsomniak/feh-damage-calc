@@ -44,7 +44,8 @@
       "res": 60,
       "total": 240
     },
-    "growth_type": 232
+    "growth_type": 232,
+    "dragonflower": 10
   },
   "description": "A gentle cleric who serves Raven. Carries a heavy burden from a dark childhood. Appears in Fire Emblem: The Blazing Blade.",
   "voice_actor": "Michael Sinterniklaas",

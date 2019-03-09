@@ -14,7 +14,10 @@
     "taguel-fang",
     "adult-(cavalry)",
     "yearling-(cavalry)",
-    "whelp-(cavalry)"
+    "whelp-(cavalry)",
+    "adult-cavalry",
+    "yearling-cavalry",
+    "whelp-cavalry"
   ],
   "special": [
     "night-sky",
@@ -46,6 +49,7 @@
       "res": 45,
       "total": 255
     },
-    "growth_type": 136
+    "growth_type": 136,
+    "dragonflower": 5
   }
 }

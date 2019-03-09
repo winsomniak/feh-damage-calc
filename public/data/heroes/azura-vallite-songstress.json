@@ -6,7 +6,7 @@
   "description": "Daughter of Arete and the former king of Valla. Gripped by an unkind fate, she strives to lead both Hoshido and Nohr to the truth. Appears in Fire Emblem Fates.",
   "voice_actor": "Rena Strober",
   "illustrator": "kaya8",
-  "legendary": "true",
+  "legendary": true,
   "color": "Blue",
   "weapon_type": "Blue Tome",
   "link": "https://kagerochart.com/hero/azura-vallite-songstress",
@@ -52,6 +52,7 @@
       "res": 45,
       "total": 240
     },
-    "growth_type": 47
+    "growth_type": 47,
+    "dragonflower": 5
   }
 }

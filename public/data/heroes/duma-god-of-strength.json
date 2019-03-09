@@ -6,7 +6,7 @@
   "description": "God of Strength and brother of the goddess Mila. He and Mila fought over the continent of Valentia and split it in twain. Rigel, the north of Valentia, is his domain. Appears in Fire Emblem Echoes: Shadows of Valentia.",
   "voice_actor": "Josh Petersdorf",
   "illustrator": "Yoneko (米子)",
-  "legendary": "true",
+  "legendary": true,
   "color": "Colorless",
   "weapon_type": "Colorless Breath",
   "link": "https://kagerochart.com/hero/duma-god-of-strength",
@@ -50,6 +50,7 @@
       "res": 55,
       "total": 275
     },
-    "growth_type": 47
+    "growth_type": 47,
+    "dragonflower": 5
   }
 }

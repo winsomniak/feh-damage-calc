@@ -5,7 +5,7 @@
   "id": "robin-fell-vessel",
   "color": "Colorless",
   "weapon_type": "Colorless Breath",
-  "legendary": "true",
+  "legendary": true,
   "link": "https://kagerochart.com/hero/robin-fell-vessel",
   "move_type": "Flying",
   "weapon": [
@@ -47,7 +47,8 @@
       "res": 45,
       "total": 265
     },
-    "growth_type": 27
+    "growth_type": 27,
+    "dragonflower": 5
   },
   "description": "The Ylissean tactician Robin with body and soul ruled by the Fell Dragon, Grima. Appears in Fire Emblem Awakening.",
   "voice_actor": "Lauren Landa",

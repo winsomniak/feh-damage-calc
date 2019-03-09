@@ -14,7 +14,10 @@
     "foxkit-fang",
     "adult-(cavalry)",
     "yearling-(cavalry)",
-    "whelp-(cavalry)"
+    "whelp-(cavalry)",
+    "adult-cavalry",
+    "yearling-cavalry",
+    "whelp-cavalry"
   ],
   "special": [
     "chilling-wind",
@@ -51,6 +54,7 @@
       "res": 60,
       "total": 255
     },
-    "growth_type": 217
+    "growth_type": 217,
+    "dragonflower": 5
   }
 }

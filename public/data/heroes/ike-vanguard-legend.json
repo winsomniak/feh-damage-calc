@@ -5,7 +5,7 @@
   "id": "ike-vanguard-legend",
   "color": "Red",
   "weapon_type": "Sword",
-  "legendary": "true",
+  "legendary": true,
   "link": "https://kagerochart.com/hero/ike-vanguard-legend",
   "move_type": "Infantry",
   "weapon": [
@@ -50,7 +50,8 @@
       "res": 40,
       "total": 265
     },
-    "growth_type": 49
+    "growth_type": 49,
+    "dragonflower": 10
   },
   "description": "The leader of the Greil Mercenaries. He is blunt but genuine and loyal. He is also a general that pulled people of different races and kingdoms together. Appears in Fire Emblem: Radiant Dawn.",
   "voice_actor": "Greg Chun",

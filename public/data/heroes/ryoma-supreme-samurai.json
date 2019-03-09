@@ -7,7 +7,7 @@
   "weapon_type": "Sword",
   "link": "https://kagerochart.com/hero/ryoma-supreme-samurai",
   "move_type": "Flying",
-  "legendary": "true",
+  "legendary": true,
   "weapon": [
     "raijinto",
     "silver-sword",
@@ -47,7 +47,8 @@
       "res": 35,
       "total": 265
     },
-    "growth_type": 81
+    "growth_type": 81,
+    "dragonflower": 5
   },
   "description": "The eldest brother of the Hoshidan royal siblings. Rules from the heavens on the back of a legendary kinshi. Appears in Fire Emblem Fates.",
   "voice_actor": "Matt Mercer",

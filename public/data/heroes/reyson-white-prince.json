@@ -14,7 +14,10 @@
     "heron-wing",
     "adult-(flier)",
     "fledgling-(flier)",
-    "hatchling-(flier)"
+    "hatchling-(flier)",
+    "adult-flier",
+    "fledgling-flier",
+    "hatchling-flier"
   ],
   "assist": [
     "sing"
@@ -45,6 +48,7 @@
       "res": 50,
       "total": 255
     },
-    "growth_type": 131
+    "growth_type": 131,
+    "dragonflower": 5
   }
 }

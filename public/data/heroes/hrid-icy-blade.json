@@ -5,7 +5,7 @@
   "id": "hrid-icy-blade",
   "color": "Red",
   "weapon_type": "Sword",
-  "legendary": "true",
+  "legendary": true,
   "link": "https://kagerochart.com/hero/hrid-icy-blade",
   "move_type": "Cavalry",
   "weapon": [
@@ -45,7 +45,8 @@
       "res": 50,
       "total": 255
     },
-    "growth_type": 213
+    "growth_type": 213,
+    "dragonflower": 5
   },
   "description": "The eldest prince of Nifl, Kingdom of Ice. With a steady, calm demeanor, he's always prepared for danger.",
   "voice_actor": "Mark P. Whitten",

@@ -14,7 +14,10 @@
     "raven-king-beak",
     "adult-(flier)",
     "fledgling-(flier)",
-    "hatchling-(flier)"
+    "hatchling-(flier)",
+    "adult-flier",
+    "fledgling-flier",
+    "hatchling-flier"
   ],
   "special": [
     "rising-wind",
@@ -46,6 +49,7 @@
       "res": 50,
       "total": 265
     },
-    "growth_type": 203
+    "growth_type": 203,
+    "dragonflower": 5
   }
 }

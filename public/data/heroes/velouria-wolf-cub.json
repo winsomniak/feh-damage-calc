@@ -14,7 +14,10 @@
     "wolfpup-fang",
     "adult-(infantry)",
     "yearling-(infantry)",
-    "whelp-(infantry)"
+    "whelp-(infantry)",
+    "adult-infantry",
+    "yearling-infantry",
+    "whelp-infantry"
   ],
   "special": [
     "new-moon",
@@ -46,6 +49,7 @@
       "res": 40,
       "total": 275
     },
-    "growth_type": 200
+    "growth_type": 200,
+    "dragonflower": 5
   }
 }

@@ -5,7 +5,7 @@
   "id": "eirika-graceful-resolve",
   "color": "Red",
   "weapon_type": "Sword",
-  "legendary": "true",
+  "legendary": true,
   "link": "https://kagerochart.com/hero/eirika-graceful-resolve",
   "move_type": "Cavalry",
   "weapon": [
@@ -47,7 +47,8 @@
       "res": 35,
       "total": 255
     },
-    "growth_type": 221
+    "growth_type": 221,
+    "dragonflower": 5
   },
   "description": "Princess of Renais. Ephraim's twin. She and her brother strive to rebuild their war-torn country. Appears in Fire Emblem: The Sacred Stones.",
   "voice_actor": "Kira Buckland",

@@ -7,7 +7,7 @@
   "weapon_type": "Blue Breath",
   "link": "https://kagerochart.com/hero/tiki-legendary-dragon",
   "move_type": "Armored",
-  "legendary": "true",
+  "legendary": true,
   "weapon": [
     "divine-mist",
     "flametongue",
@@ -47,7 +47,8 @@
       "res": 55,
       "total": 305
     },
-    "growth_type": 170
+    "growth_type": 170,
+    "dragonflower": 5
   },
   "description": "A princess and daughter of the Divine Dragon. Left behind long ago, before Naga's death, she hides great power within herself. Appears in Fire Emblem: Mystery of the Emblem.",
   "voice_actor": "Mela Lee",

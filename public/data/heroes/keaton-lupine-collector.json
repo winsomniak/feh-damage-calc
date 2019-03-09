@@ -14,7 +14,10 @@
     "wolfskin-fang",
     "adult-(infantry)",
     "yearling-(infantry)",
-    "whelp-(infantry)"
+    "whelp-(infantry)",
+    "adult-infantry",
+    "yearling-infantry",
+    "whelp-infantry"
   ],
   "special": [
     "dragon-gaze",
@@ -46,6 +49,7 @@
       "res": 35,
       "total": 275
     },
-    "growth_type": 201
+    "growth_type": 201,
+    "dragonflower": 5
   }
 }

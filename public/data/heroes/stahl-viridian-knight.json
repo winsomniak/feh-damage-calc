@@ -43,7 +43,8 @@
       "res": 40,
       "total": 250
     },
-    "growth_type": 4
+    "growth_type": 4,
+    "dragonflower": 5
   },
   "description": "A kind but slightly scatterbrained knight who serves with the Shepherds. Appears in Fire Emblem Awakening.",
   "voice_actor": "Sam Regal",

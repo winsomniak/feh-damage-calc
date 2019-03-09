@@ -14,7 +14,10 @@
     "wolf-queen-fang",
     "adult-(infantry)",
     "yearling-(infantry)",
-    "whelp-(infantry)"
+    "whelp-(infantry)",
+    "adult-infantry",
+    "yearling-infantry",
+    "whelp-infantry"
   ],
   "special": [
     "new-moon",
@@ -47,6 +50,7 @@
       "res": 45,
       "total": 265
     },
-    "growth_type": 220
+    "growth_type": 220,
+    "dragonflower": 10
   }
 }
