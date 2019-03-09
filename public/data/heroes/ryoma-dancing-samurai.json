@@ -29,7 +29,8 @@
   "passive_c": [
     "spur-spd-res-2",
     "spur-spd-res-1",
-    "spur-res-1"
+    "spur-res-1",
+    "spur-spd-1"
   ],
   "base_stat": {
     "star_5": {
@@ -48,5 +49,8 @@
       "total": 240
     },
     "growth_type": 113
-  }
+  },
+  "description": "High Prince of Hoshido. Direct and focused on duty. Currently participating in a traditional Hoshidan summer festival. Appears in Fire Emblem Fates.",
+  "voice_actor": "Matt Mercer",
+  "illustrator": "Kita Senri (北千里)"
 }

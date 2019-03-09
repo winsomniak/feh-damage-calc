@@ -1,0 +1,55 @@
+{
+  "display": "Ike, Stalwart Heart",
+  "name": "Ike",
+  "title": "Stalwart Heart",
+  "id": "ike-stalwart-heart",
+  "description": "The leader of the Greil Mercenaries. A stoic and brave warrior who treats his friends like family. Appears in Fire Emblem: Path of Radiance.",
+  "voice_actor": "Greg Chun",
+  "illustrator": "Kita Senri (北千里)",
+  "color": "Red",
+  "weapon_type": "Sword",
+  "link": "https://kagerochart.com/hero/ike-stalwart-heart",
+  "move_type": "Armored",
+  "weapon": [
+    "hearts-blade-plus",
+    "hearts-blade",
+    "steel-sword",
+    "iron-sword"
+  ],
+  "special": [
+    "radiant-aether",
+    "daylight",
+    "sol"
+  ],
+  "passive_a": [
+    "distant-counter"
+  ],
+  "passive_b": [
+    "special-fighter-3",
+    "special-fighter-2",
+    "special-fighter-1"
+  ],
+  "passive_c": [
+    "even-spd-wave-3",
+    "even-spd-wave-2",
+    "even-spd-wave-1"
+  ],
+  "base_stat": {
+    "star_5": {
+      "hp": 21,
+      "atk": 9,
+      "spd": 10,
+      "def": 9,
+      "res": 6
+    },
+    "growth": {
+      "hp": 55,
+      "atk": 65,
+      "spd": 65,
+      "def": 60,
+      "res": 30,
+      "total": 275
+    },
+    "growth_type": 75
+  }
+}

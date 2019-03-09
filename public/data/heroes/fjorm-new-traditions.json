@@ -1,0 +1,55 @@
+{
+  "display": "Fjorm, New Traditions",
+  "name": "Fjorm",
+  "title": "New Traditions",
+  "id": "fjorm-new-traditions",
+  "description": "The gentle second princess of Nifl, the Kingdom of Ice. Her joy in joining Laegjarn and the others for a trip to the shrine shines through.",
+  "voice_actor": "Heather Watson",
+  "illustrator": "Maeshima Shigeki (前嶋重機)",
+  "color": "Green",
+  "weapon_type": "Green Bow",
+  "link": "https://kagerochart.com/hero/fjorm-new-traditions",
+  "move_type": "Flying",
+  "weapon": [
+    "kabura-ya-plus",
+    "kabura-ya",
+    "steel-bow",
+    "iron-bow"
+  ],
+  "assist": [
+    "reposition"
+  ],
+  "passive_a": [
+    "atk-spd-bond-3",
+    "atk-spd-bond-2",
+    "atk-spd-bond-1"
+  ],
+  "passive_b": [
+    "atk-spd-link-3",
+    "atk-spd-link-2",
+    "atk-spd-link-1"
+  ],
+  "passive_c": [
+    "even-res-wave-3",
+    "even-res-wave-2",
+    "even-res-wave-1"
+  ],
+  "base_stat": {
+    "star_5": {
+      "hp": 17,
+      "atk": 9,
+      "spd": 9,
+      "def": 5,
+      "res": 4
+    },
+    "growth": {
+      "hp": 50,
+      "atk": 60,
+      "spd": 60,
+      "def": 35,
+      "res": 40,
+      "total": 245
+    },
+    "growth_type": 13
+  }
+}

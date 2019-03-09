@@ -1,0 +1,56 @@
+{
+  "display": "Hríd, Resolute Prince",
+  "name": "Hríd",
+  "title": "Resolute Prince",
+  "id": "hrid-resolute-prince",
+  "description": "The eldest prince of Nifl, Kingdom of Ice. With a steady, calm demeanor, he's always prepared for danger, even when on a simple trip to a shrine.",
+  "voice_actor": "Mark P. Whitten",
+  "illustrator": "argon / Exys Inc.",
+  "color": "Red",
+  "weapon_type": "Sword",
+  "link": "https://kagerochart.com/hero/hrid-resolute-prince",
+  "move_type": "Flying",
+  "weapon": [
+    "geishun-plus",
+    "geishun",
+    "steel-sword",
+    "iron-sword"
+  ],
+  "assist": [
+    "swap"
+  ],
+  "passive_a": [
+    "atk-def-bond-3",
+    "atk-def-bond-2",
+    "atk-def-bond-1"
+  ],
+  "passive_b": [
+    "quick-riposte-3",
+    "quick-riposte-2",
+    "quick-riposte-1"
+  ],
+  "passive_c": [
+    "hone-atk-4",
+    "hone-atk-3",
+    "hone-atk-2",
+    "hone-atk-1"
+  ],
+  "base_stat": {
+    "star_5": {
+      "hp": 18,
+      "atk": 10,
+      "spd": 4,
+      "def": 10,
+      "res": 5
+    },
+    "growth": {
+      "hp": 55,
+      "atk": 65,
+      "spd": 35,
+      "def": 60,
+      "res": 50,
+      "total": 265
+    },
+    "growth_type": 87
+  }
+}

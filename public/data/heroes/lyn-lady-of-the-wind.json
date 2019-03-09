@@ -5,7 +5,7 @@
   "id": "lyn-lady-of-the-wind",
   "color": "Green",
   "weapon_type": "Green Bow",
-  "legendary": true,
+  "legendary": "true",
   "link": "https://kagerochart.com/hero/lyn-lady-of-the-wind",
   "move_type": "Infantry",
   "weapon": [
@@ -16,7 +16,8 @@
   ],
   "assist": [
     "rally-defense-resistance",
-    "rally-defense"
+    "rally-defense",
+    "rally-def-res"
   ],
   "passive_a": [
     "laws-of-sacae"
@@ -48,5 +49,8 @@
       "total": 245
     },
     "growth_type": 217
-  }
+  },
+  "description": "Noblewoman of Caelin whose true name is Lyndis. Legends say she once secretly helped save a continent from disaster. Appears in Fire Emblem: The Blazing Blade.",
+  "voice_actor": "Wendee Lee",
+  "illustrator": "Wada Sachiko (ワダサチコ)"
 }

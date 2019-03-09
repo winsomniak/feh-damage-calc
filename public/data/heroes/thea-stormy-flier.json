@@ -1,0 +1,51 @@
+{
+  "display": "Thea, Stormy Flier",
+  "name": "Thea",
+  "title": "Stormy Flier",
+  "id": "thea-stormy-flier",
+  "description": "The second of three sisters who are Pegasus Knights of Ilia. She is talented and sincere, but she can be lacking in flexibility. Appears in Fire Emblem: The Binding Blade.",
+  "voice_actor": "Kayli Mills",
+  "illustrator": "Tobi",
+  "color": "Blue",
+  "weapon_type": "Lance",
+  "link": "https://kagerochart.com/hero/thea-stormy-flier",
+  "move_type": "Flying",
+  "weapon": [
+    "vanguard-plus",
+    "vanguard",
+    "steel-lance",
+    "iron-lance"
+  ],
+  "special": [
+    "glowing-ember",
+    "ignis"
+  ],
+  "passive_a": [
+    "steady-posture-2",
+    "steady-posture-1",
+    "darting-stance-1"
+  ],
+  "passive_b": [
+    "seal-spd-def-2",
+    "seal-spd-def-1",
+    "seal-spd-1"
+  ],
+  "base_stat": {
+    "star_5": {
+      "hp": 18,
+      "atk": 5,
+      "spd": 11,
+      "def": 7,
+      "res": 6
+    },
+    "growth": {
+      "hp": 45,
+      "atk": 60,
+      "spd": 55,
+      "def": 55,
+      "res": 50,
+      "total": 265
+    },
+    "growth_type": 145
+  }
+}

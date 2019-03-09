@@ -21,7 +21,10 @@
     "fortress-def-res-3",
     "fortress-def-res-2",
     "fortress-def-res-1",
-    "fortress-def-1"
+    "fortress-def-1",
+    "fort-def-res-3",
+    "fort-def-res-2",
+    "fort-def-res-1"
   ],
   "passive_b": [
     "chill-spd-3",
@@ -50,5 +53,8 @@
       "total": 275
     },
     "growth_type": 206
-  }
+  },
+  "description": "Alm's childhood friend from Ram Village. Loves learning and hungers to see more of the world. Appears in Fire Emblem Echoes: Shadows of Valentia.",
+  "voice_actor": "Christopher Patton",
+  "illustrator": "Tobi"
 }

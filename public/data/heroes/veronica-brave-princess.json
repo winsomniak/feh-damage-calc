@@ -9,7 +9,8 @@
   "move_type": "Cavalry",
   "weapon": [
     "hlioskjalf",
-    "assault"
+    "assault",
+    "hliskjalf"
   ],
   "special": [
     "windfire-balm-plus",
@@ -31,7 +32,8 @@
   "passive_c": [
     "close-guard-3",
     "close-guard-2",
-    "close-guard-1"
+    "close-guard-1",
+    "close-guard"
   ],
   "base_stat": {
     "star_5": {
@@ -50,5 +52,8 @@
       "total": 235
     },
     "growth_type": 254
-  }
+  },
+  "description": "Imperial princess of the Emblian Empire. She is seeking the whereabouts of her missing beloved brother, Bruno.",
+  "voice_actor": "Wendee Lee",
+  "illustrator": "Kozaki Yusuke (コザキユースケ)"
 }

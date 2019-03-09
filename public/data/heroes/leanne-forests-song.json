@@ -1,0 +1,55 @@
+{
+  "display": "Leanne, Forest's Song",
+  "name": "Leanne",
+  "title": "Forest's Song",
+  "id": "leanne-forests-song",
+  "description": "Princess of Serenes. Reyson's younger sister. She speaks the ancient tongue and has not yet mastered the language of Tellius. Appears in Fire Emblem: Radiant Dawn.",
+  "voice_actor": "Rachelle Heger",
+  "illustrator": "Yura (由良)",
+  "color": "Colorless",
+  "weapon_type": "Colorless Beast",
+  "link": "https://kagerochart.com/hero/leanne-forests-song",
+  "move_type": "Flying",
+  "weapon": [
+    "heron-wing",
+    "adult-(flier)",
+    "fledgling-(flier)",
+    "hatchling-(flier)"
+  ],
+  "assist": [
+    "sing"
+  ],
+  "passive_a": [
+    "mirror-stance-2",
+    "mirror-stance-1",
+    "warding-stance-1"
+  ],
+  "passive_b": [
+    "flier-formation-3",
+    "flier-formation-2",
+    "flier-formation-1"
+  ],
+  "passive_c": [
+    "hone-beasts",
+    "hone-spd-2",
+    "hone-spd-1"
+  ],
+  "base_stat": {
+    "star_5": {
+      "hp": 14,
+      "atk": 5,
+      "spd": 9,
+      "def": 3,
+      "res": 8
+    },
+    "growth": {
+      "hp": 50,
+      "atk": 50,
+      "spd": 65,
+      "def": 30,
+      "res": 60,
+      "total": 255
+    },
+    "growth_type": 245
+  }
+}

@@ -7,7 +7,7 @@
   "weapon_type": "Axe",
   "link": "https://kagerochart.com/hero/hector-marquess-of-ostia",
   "move_type": "Armored",
-  "legendary": true,
+  "legendary": "true",
   "weapon": [
     "thunder-armads",
     "silver-axe",
@@ -46,5 +46,8 @@
       "total": 275
     },
     "growth_type": 118
-  }
+  },
+  "description": "Hector has ascended as the Marquess of Ostia. Will renewed, he swings Armads and leads the people. Appears in Fire Emblem: The Blazing Blade.",
+  "voice_actor": "Patrick Seitz",
+  "illustrator": "Wada Sachiko (ワダサチコ)"
 }

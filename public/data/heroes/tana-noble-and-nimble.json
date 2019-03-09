@@ -11,11 +11,13 @@
     "fruit-of-iounn",
     "bolganone",
     "elfire",
-    "fire"
+    "fire",
+    "fruit-of-iunn"
   ],
   "assist": [
     "rally-speed-resistance",
-    "rally-speed"
+    "rally-speed",
+    "rally-spd-res"
   ],
   "passive_a": [
     "atk-spd-push-3",
@@ -49,5 +51,8 @@
       "total": 245
     },
     "growth_type": 89
-  }
+  },
+  "description": "The princess of Frelia. Innes's sister. She's enjoying her break on a summer beach. Appears in Fire Emblem: The Sacred Stones.",
+  "voice_actor": "Joie Marlowe",
+  "illustrator": "cuboon"
 }

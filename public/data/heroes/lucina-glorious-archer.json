@@ -5,7 +5,7 @@
   "id": "lucina-glorious-archer",
   "color": "Blue",
   "weapon_type": "Blue Bow",
-  "legendary": true,
+  "legendary": "true",
   "link": "https://kagerochart.com/hero/lucina-glorious-archer",
   "move_type": "Infantry",
   "weapon": [
@@ -50,5 +50,8 @@
       "total": 245
     },
     "growth_type": 94
-  }
+  },
+  "description": "A princess and the daughter of Chrom who traveled to the past. With a new outfit and divine weapon in hand, she fights once again. Appears in Fire Emblem Awakening.",
+  "voice_actor": "Alexis Tipton",
+  "illustrator": "Yamada Kotaro (山田孝太郎)"
 }

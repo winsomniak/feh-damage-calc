@@ -16,7 +16,8 @@
   ],
   "assist": [
     "rally-attack-defense",
-    "rally-defense"
+    "rally-defense",
+    "rally-def-res"
   ],
   "passive_a": [
     "attack-def-plus-2",
@@ -45,5 +46,8 @@
       "total": 245
     },
     "growth_type": 153
-  }
+  },
+  "description": "A Hoshidan prince raised in Nohr. His kimono was prepared by Mikoto while she was still alive. Appears in Fire Emblem Fates.",
+  "voice_actor": "Cam Clarke",
+  "illustrator": "Maiponpon (まいぽんぽん) / INTELLIGENT SYSTEMS"
 }

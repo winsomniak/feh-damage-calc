@@ -6,7 +6,7 @@
   "color": "Colorless",
   "weapon_type": "Dagger",
   "link": "https://kagerochart.com/hero/eir-merciful-death",
-  "legendary": true,
+  "legendary": "true",
   "move_type": "Flying",
   "weapon": [
     "lyfjaberg",
@@ -48,5 +48,8 @@
       "total": 245
     },
     "growth_type": 131
-  }
+  },
+  "description": "Princess of Hel, the realm of the dead. Dearly loves her mother, Hel, who rules it. She finds Hel's increasing mercilessness toward the living disquieting.",
+  "voice_actor": "Xanthe Huynh",
+  "illustrator": "Kozaki Yusuke (コザキユースケ)"
 }

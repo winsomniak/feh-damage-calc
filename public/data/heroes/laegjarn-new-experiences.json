@@ -1,0 +1,50 @@
+{
+  "display": "Laegjarn, New Experiences",
+  "name": "Laegjarn",
+  "title": "New Experiences",
+  "id": "laegjarn-new-experiences",
+  "description": "The eldest princess of Múspell, the Flame Kingdom, and Laevatein's older sister. Her joy in joining Fjorm and the others for a trip to the shrine is effulgent.",
+  "voice_actor": "Alicia Stratten",
+  "illustrator": "Daisuke Izuka",
+  "color": "Blue",
+  "weapon_type": "Lance",
+  "link": "https://kagerochart.com/hero/laegjarn-new-experiences",
+  "move_type": "Cavalry",
+  "weapon": [
+    "wagasa-plus",
+    "wagasa",
+    "steel-lance",
+    "iron-lance"
+  ],
+  "assist": [
+    "pivot"
+  ],
+  "passive_b": [
+    "chill-res-3",
+    "chill-res-2",
+    "chill-res-1"
+  ],
+  "passive_c": [
+    "def-tactic-3",
+    "def-tactic-2",
+    "def-tactic-1"
+  ],
+  "base_stat": {
+    "star_5": {
+      "hp": 16,
+      "atk": 8,
+      "spd": 9,
+      "def": 9,
+      "res": 4
+    },
+    "growth": {
+      "hp": 50,
+      "atk": 55,
+      "spd": 60,
+      "def": 60,
+      "res": 30,
+      "total": 255
+    },
+    "growth_type": 121
+  }
+}

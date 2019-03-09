@@ -1,0 +1,51 @@
+{
+  "display": "Velouria, Wolf Cub",
+  "name": "Velouria",
+  "title": "Wolf Cub",
+  "id": "velouria-wolf-cub",
+  "description": "Keaton's daughter, carrying wolfskin blood. Has a habit of collecting dust bunnies, furballs, and other random junk. Appears in Fire Emblem Fates.",
+  "voice_actor": "Angela Marie Volpe",
+  "illustrator": "kawasumi (かわすみ)",
+  "color": "Colorless",
+  "weapon_type": "Colorless Beast",
+  "link": "https://kagerochart.com/hero/velouria-wolf-cub",
+  "move_type": "Infantry",
+  "weapon": [
+    "wolfpup-fang",
+    "adult-(infantry)",
+    "yearling-(infantry)",
+    "whelp-(infantry)"
+  ],
+  "special": [
+    "new-moon",
+    "luna"
+  ],
+  "passive_a": [
+    "close-def-3",
+    "close-def-2",
+    "close-def-1"
+  ],
+  "passive_c": [
+    "ward-beasts",
+    "spur-def-2",
+    "spur-def-1"
+  ],
+  "base_stat": {
+    "star_5": {
+      "hp": 18,
+      "atk": 9,
+      "spd": 9,
+      "def": 7,
+      "res": 6
+    },
+    "growth": {
+      "hp": 50,
+      "atk": 60,
+      "spd": 65,
+      "def": 60,
+      "res": 40,
+      "total": 275
+    },
+    "growth_type": 200
+  }
+}

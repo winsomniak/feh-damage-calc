@@ -1,0 +1,51 @@
+{
+  "display": "Panne, Proud Taguel",
+  "name": "Panne",
+  "title": "Proud Taguel",
+  "id": "panne-proud-taguel",
+  "description": "The last of the taguel, a rabbit-like race. Calm, sensible, and self-reliant. Appears in Fire Emblem Awakening.",
+  "voice_actor": "Jessica Gee-George",
+  "illustrator": "Chiko (チーコ)",
+  "color": "Blue",
+  "weapon_type": "Blue Beast",
+  "link": "https://kagerochart.com/hero/panne-proud-taguel",
+  "move_type": "Cavalry",
+  "weapon": [
+    "taguel-fang",
+    "adult-(cavalry)",
+    "yearling-(cavalry)",
+    "whelp-(cavalry)"
+  ],
+  "special": [
+    "night-sky",
+    "astra"
+  ],
+  "passive_b": [
+    "chill-spd-3",
+    "chill-spd-2",
+    "chill-spd-1"
+  ],
+  "passive_c": [
+    "def-smoke-3",
+    "def-smoke-2",
+    "def-smoke-1"
+  ],
+  "base_stat": {
+    "star_5": {
+      "hp": 17,
+      "atk": 7,
+      "spd": 10,
+      "def": 8,
+      "res": 4
+    },
+    "growth": {
+      "hp": 55,
+      "atk": 50,
+      "spd": 55,
+      "def": 50,
+      "res": 45,
+      "total": 255
+    },
+    "growth_type": 136
+  }
+}

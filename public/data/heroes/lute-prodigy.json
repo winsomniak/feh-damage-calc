@@ -15,7 +15,8 @@
   ],
   "assist": [
     "rally-attack-resistance",
-    "rally-attack"
+    "rally-attack",
+    "rally-atk-res"
   ],
   "passive_a": [
     "hp-res-2",
@@ -44,5 +45,8 @@
       "total": 245
     },
     "growth_type": 13
-  }
+  },
+  "description": "A young mage of Renais with an unusual temperament. Confident in her abilities. Appears in Fire Emblem: The Sacred Stones.",
+  "voice_actor": "Brina Palencia",
+  "illustrator": "Seo Kouji (瀬尾公治)"
 }

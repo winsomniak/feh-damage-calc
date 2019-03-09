@@ -15,7 +15,8 @@
   ],
   "assist": [
     "rally-attack-resistance",
-    "rally-attack"
+    "rally-attack",
+    "rally-atk-res"
   ],
   "passive_a": [
     "spd-res-2",
@@ -44,5 +45,8 @@
       "total": 240
     },
     "growth_type": 30
-  }
+  },
+  "description": "A Nohrian princess who loves her siblings and has matured a little by taking a solo trip to a tropical island. Appears in Fire Emblem Fates.",
+  "voice_actor": "Liv Strander",
+  "illustrator": "Mikuro (みく郎)"
 }

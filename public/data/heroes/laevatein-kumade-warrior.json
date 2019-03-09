@@ -1,0 +1,58 @@
+{
+  "display": "Laevatein, Kumade Warrior",
+  "name": "Laevatein",
+  "title": "Kumade Warrior",
+  "id": "laevatein-kumade-warrior",
+  "description": "The second princess of Múspell, the Kingdom of Flame. She keeps her emotions in check but can't relax without her blade by her side.",
+  "voice_actor": "Sarah Williams",
+  "illustrator": "kawasumi (かわすみ)",
+  "color": "Colorless",
+  "weapon_type": "Staff",
+  "link": "https://kagerochart.com/hero/laevatein-kumade-warrior",
+  "move_type": "Cavalry",
+  "weapon": [
+    "kumade-plus",
+    "kumade",
+    "assault"
+  ],
+  "assist": [
+    "rehabilitate-plus",
+    "rehabilitate",
+    "reconcile",
+    "heal"
+  ],
+  "special": [
+    "earthfire-balm-plus",
+    "kindled-fire-balm",
+    "earthfire-balm",
+    "imbue"
+  ],
+  "passive_b": [
+    "wrathful-staff-3",
+    "wrathful-staff-2",
+    "wrathful-staff-1"
+  ],
+  "passive_c": [
+    "even-def-wave-3",
+    "even-def-wave-2",
+    "even-def-wave-1"
+  ],
+  "base_stat": {
+    "star_5": {
+      "hp": 16,
+      "atk": 10,
+      "spd": 6,
+      "def": 8,
+      "res": 3
+    },
+    "growth": {
+      "hp": 40,
+      "atk": 60,
+      "spd": 55,
+      "def": 45,
+      "res": 35,
+      "total": 235
+    },
+    "growth_type": 252
+  }
+}

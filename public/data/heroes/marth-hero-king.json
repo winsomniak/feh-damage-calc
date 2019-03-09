@@ -7,7 +7,7 @@
   "weapon_type": "Sword",
   "link": "https://kagerochart.com/hero/marth-hero-king",
   "move_type": "Infantry",
-  "legendary": true,
+  "legendary": "true",
   "weapon": [
     "exalted-falchion",
     "silver-sword",
@@ -49,5 +49,8 @@
       "total": 265
     },
     "growth_type": 190
-  }
+  },
+  "description": "Prince of Altea. After the War of Shadows and the War of Heroes, he becomes the first king of the Archanean Alliance. Appears in Fire Emblem: Mystery of the Emblem.",
+  "voice_actor": "Yuri Lowenthal",
+  "illustrator": "Daisuke Izuka"
 }

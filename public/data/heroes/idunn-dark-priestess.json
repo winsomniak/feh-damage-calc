@@ -1,0 +1,57 @@
+{
+  "display": "Idunn, Dark Priestess",
+  "name": "Idunn",
+  "title": "Dark Priestess",
+  "id": "idunn-dark-priestess",
+  "description": "Transformed into a Demon Dragon and sealed during the Scouring. She was awoken by Zephiel and serves him so he may realize his ambition. Appears in Fire Emblem: The Binding Blade.",
+  "voice_actor": "—",
+  "illustrator": "Yamada Kotaro (山田孝太郎)",
+  "color": "Red",
+  "weapon_type": "Red Breath",
+  "link": "https://kagerochart.com/hero/idunn-dark-priestess",
+  "move_type": "Armored",
+  "weapon": [
+    "demonic-breath",
+    "flametongue",
+    "fire-breath-plus",
+    "fire-breath"
+  ],
+  "special": [
+    "glowing-ember",
+    "bonfire"
+  ],
+  "passive_a": [
+    "fort-def-res-3",
+    "fort-def-res-2",
+    "fort-def-res-1",
+    "fortress-def-1"
+  ],
+  "passive_b": [
+    "vengeful-fighter-3",
+    "vengeful-fighter-2",
+    "vengeful-fighter-1"
+  ],
+  "passive_c": [
+    "ward-dragons",
+    "spur-def-2",
+    "spur-def-1"
+  ],
+  "base_stat": {
+    "star_5": {
+      "hp": 19,
+      "atk": 11,
+      "spd": 4,
+      "def": 9,
+      "res": 4
+    },
+    "growth": {
+      "hp": 60,
+      "atk": 55,
+      "spd": 50,
+      "def": 70,
+      "res": 70,
+      "total": 305
+    },
+    "growth_type": 165
+  }
+}

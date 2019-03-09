@@ -15,7 +15,8 @@
   ],
   "assist": [
     "rally-attack-speed",
-    "rally-speed"
+    "rally-speed",
+    "rally-atk-spd"
   ],
   "passive_a": [
     "swift-stance-2",
@@ -47,5 +48,8 @@
       "total": 245
     },
     "growth_type": 172
-  }
+  },
+  "description": "Princess of Askr and Alfonse's younger sister. She cajoled her brother into participating in the Spring Festival with her.",
+  "voice_actor": "Julie Kliewer",
+  "illustrator": "Kozaki Yusuke (コザキユースケ)"
 }

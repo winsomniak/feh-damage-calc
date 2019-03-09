@@ -1,0 +1,57 @@
+{
+  "display": "Sue, Doe of the Plains",
+  "name": "Sue",
+  "title": "Doe of the Plains",
+  "id": "sue-doe-of-the-plains",
+  "description": "Granddaughter of Dayan, the Silver Wolf, leader of the Kutolah tribe. She hears the voices of the sky and earth and lives in harmony with nature. Appears in Fire Emblem: The Binding Blade.",
+  "voice_actor": "Megan Harvey",
+  "illustrator": "Mayo (まよ)",
+  "color": "Green",
+  "weapon_type": "Green Bow",
+  "link": "https://kagerochart.com/hero/sue-doe-of-the-plains",
+  "move_type": "Cavalry",
+  "weapon": [
+    "short-bow-plus",
+    "short-bow",
+    "steel-bow",
+    "iron-bow"
+  ],
+  "special": [
+    "new-moon",
+    "moonbow"
+  ],
+  "passive_a": [
+    "swift-sparrow-2",
+    "swift-sparrow-1",
+    "darting-blow-1"
+  ],
+  "passive_b": [
+    "chill-def-3",
+    "chill-def-2",
+    "chill-def-1"
+  ],
+  "passive_c": [
+    "hone-spd-4",
+    "hone-spd-3",
+    "hone-spd-2",
+    "hone-spd-1"
+  ],
+  "base_stat": {
+    "star_5": {
+      "hp": 17,
+      "atk": 8,
+      "spd": 10,
+      "def": 4,
+      "res": 5
+    },
+    "growth": {
+      "hp": 45,
+      "atk": 55,
+      "spd": 65,
+      "def": 45,
+      "res": 35,
+      "total": 245
+    },
+    "growth_type": 21
+  }
+}

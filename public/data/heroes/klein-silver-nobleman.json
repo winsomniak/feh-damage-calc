@@ -12,7 +12,8 @@
     "brave-bow-plus",
     "brave-bow",
     "steel-bow",
-    "iron-bow"
+    "iron-bow",
+    "argent-bow"
   ],
   "special": [
     "glacies",
@@ -45,5 +46,8 @@
       "total": 240
     },
     "growth_type": 146
-  }
+  },
+  "description": "A young general of Etruria. Clarine's brother. Treats all as equals. Appears in Fire Emblem: The Binding Blade.",
+  "voice_actor": "Edward Bosco",
+  "illustrator": "Tobi"
 }

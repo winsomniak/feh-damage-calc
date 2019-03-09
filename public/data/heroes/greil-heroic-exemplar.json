@@ -1,0 +1,58 @@
+{
+  "display": "Greil, Heroic Exemplar",
+  "name": "Greil",
+  "title": "Heroic Exemplar",
+  "id": "greil-heroic-exemplar",
+  "description": "The first leader of the Greil Mercenaries. Father of Ike and Mist. Will meet his family again at the Day of Devotion festival. Appears in Fire Emblem: Path of Radiance.",
+  "voice_actor": "Frank Todaro",
+  "illustrator": "Daisuke Izuka",
+  "color": "Green",
+  "weapon_type": "Axe",
+  "link": "https://kagerochart.com/hero/greil-heroic-exemplar",
+  "move_type": "Armored",
+  "weapon": [
+    "faithful-axe-plus",
+    "faithful-axe",
+    "steel-axe",
+    "iron-axe"
+  ],
+  "special": [
+    "aether",
+    "new-moon",
+    "luna"
+  ],
+  "passive_a": [
+    "fury-4",
+    "fury-3",
+    "fury-2",
+    "fury-1"
+  ],
+  "passive_b": [
+    "wary-fighter-3",
+    "wary-fighter-2",
+    "wary-fighter-1"
+  ],
+  "passive_c": [
+    "armor-march-3",
+    "armor-march-2",
+    "armor-march-1"
+  ],
+  "base_stat": {
+    "star_5": {
+      "hp": 23,
+      "atk": 11,
+      "spd": 5,
+      "def": 10,
+      "res": 6
+    },
+    "growth": {
+      "hp": 55,
+      "atk": 70,
+      "spd": 30,
+      "def": 65,
+      "res": 55,
+      "total": 275
+    },
+    "growth_type": 129
+  }
+}

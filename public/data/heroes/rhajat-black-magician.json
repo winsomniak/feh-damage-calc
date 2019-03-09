@@ -15,7 +15,8 @@
   ],
   "assist": [
     "rally-attack-defense",
-    "rally-defense"
+    "rally-defense",
+    "rally-atk-def"
   ],
   "passive_a": [
     "distant-def-3",
@@ -44,5 +45,8 @@
       "total": 245
     },
     "growth_type": 35
-  }
+  },
+  "description": "Hayato's daughter. Tends toward the obsessive and has a horrifying temper. Appears in Fire Emblem Fates.",
+  "voice_actor": "Stephanie Sheh",
+  "illustrator": "Kusakihara Toshiyuki (草木原俊行) / INTELLIGENT SYSTEMS"
 }

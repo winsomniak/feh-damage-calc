@@ -1,0 +1,56 @@
+{
+  "display": "Ryoma, Samurai at Ease",
+  "name": "Ryoma",
+  "title": "Samurai at Ease",
+  "id": "ryoma-samurai-at-ease",
+  "description": "High Prince of Hoshido. A font of knowledge about remote and hidden hot springs. Appears in Fire Emblem Fates.",
+  "voice_actor": "Matt Mercer",
+  "illustrator": "PenekoR (п猫Ｒ)",
+  "color": "Blue",
+  "weapon_type": "Lance",
+  "link": "https://kagerochart.com/hero/ryoma-samurai-at-ease",
+  "move_type": "Flying",
+  "weapon": [
+    "its-curtains-plus",
+    "its-curtains",
+    "steel-lance",
+    "iron-lance"
+  ],
+  "special": [
+    "new-moon",
+    "luna"
+  ],
+  "passive_a": [
+    "atk-def-solo-3",
+    "atk-def-solo-2",
+    "atk-def-solo-1"
+  ],
+  "passive_b": [
+    "chill-spd-3",
+    "chill-spd-2",
+    "chill-spd-1"
+  ],
+  "passive_c": [
+    "odd-def-wave-3",
+    "odd-def-wave-2",
+    "odd-def-wave-1"
+  ],
+  "base_stat": {
+    "star_5": {
+      "hp": 18,
+      "atk": 11,
+      "spd": 10,
+      "def": 4,
+      "res": 4
+    },
+    "growth": {
+      "hp": 50,
+      "atk": 55,
+      "spd": 60,
+      "def": 55,
+      "res": 45,
+      "total": 265
+    },
+    "growth_type": 231
+  }
+}

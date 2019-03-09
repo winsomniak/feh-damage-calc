@@ -12,7 +12,8 @@
     "fenrir-plus",
     "fenrir",
     "ruin",
-    "flux"
+    "flux",
+    "eternal-tome"
   ],
   "special": [
     "dragon-fang",
@@ -45,5 +46,8 @@
       "total": 240
     },
     "growth_type": 181
-  }
+  },
+  "description": "A shaman of Nabata who has lived a sheltered life away from other people. Sees the future. Appears in Fire Emblem: The Binding Blade.",
+  "voice_actor": "Wendee Lee",
+  "illustrator": "Zaza (ザザ)"
 }

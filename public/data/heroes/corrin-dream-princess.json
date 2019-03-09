@@ -20,7 +20,9 @@
   "assist": [
     "rally-attack-speed-plus",
     "rally-attack-speed",
-    "rally-speed"
+    "rally-speed",
+    "rally-atk-spd-plus",
+    "rally-atk-spd"
   ],
   "passive_a": [
     "atk-spd-bond-3",
@@ -49,5 +51,8 @@
       "total": 295
     },
     "growth_type": 100
-  }
+  },
+  "description": "A Hoshidan princess raised in another Nohr. She understands young Azura's feelings very well. They are the best of friends. Appears in Fire Emblem Fates.",
+  "voice_actor": "Marcella Lentz-Pope",
+  "illustrator": "Sencha (煎茶)"
 }

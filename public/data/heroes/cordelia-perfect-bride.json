@@ -15,7 +15,8 @@
   ],
   "assist": [
     "rally-attack-speed",
-    "rally-attack"
+    "rally-attack",
+    "rally-atk-spd"
   ],
   "passive_b": [
     "escape-route-3",
@@ -44,5 +45,8 @@
       "total": 240
     },
     "growth_type": 255
-  }
+  },
+  "description": "Pegasus knight of Ylisse who excels in all things, including being delightful. Hopes to marry her perfect match. Appears in Fire Emblem Awakening.",
+  "voice_actor": "Julie Ann Taylor",
+  "illustrator": "Mayo (まよ)"
 }

@@ -12,7 +12,9 @@
     "firesweep-sword-plus",
     "firesweep-sword",
     "steel-sword",
-    "iron-sword"
+    "iron-sword",
+    "firesweep-s-plus",
+    "firesweep-s"
   ],
   "special": [
     "blazing-wind",
@@ -45,5 +47,8 @@
       "total": 265
     },
     "growth_type": 147
-  }
+  },
+  "description": "Laslow's daughter. Cheerful and not even slightly shy. Looks up to cool women. Appears in Fire Emblem Fates.",
+  "voice_actor": "Michelle Ruff",
+  "illustrator": "Enkyo Yuichiro (円居雄一郎)"
 }

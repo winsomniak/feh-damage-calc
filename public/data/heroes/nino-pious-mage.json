@@ -12,7 +12,8 @@
     "gronnblade-plus",
     "gronnblade",
     "elwind",
-    "wind"
+    "wind",
+    "iriss-tome"
   ],
   "assist": [
     "draw-back"
@@ -44,5 +45,8 @@
       "total": 240
     },
     "growth_type": 57
-  }
+  },
+  "description": "A kindhearted member of the Black Fang assassins. Longed to help her mother. Appears in Fire Emblem: The Blazing Blade.",
+  "voice_actor": "Sarah Blandy",
+  "illustrator": "Amagaitaro (アマガイタロー)"
 }

@@ -16,7 +16,9 @@
   "assist": [
     "rally-speed-defense-plus",
     "rally-speed-defense",
-    "rally-defense"
+    "rally-defense",
+    "rally-spd-def-plus",
+    "rally-spd-def"
   ],
   "special": [
     "draconic-aura",
@@ -49,5 +51,8 @@
       "total": 255
     },
     "growth_type": 135
-  }
+  },
+  "description": "Prince of Leonster and inheritor of the lance Gáe Bolg. Husband of Ethlyn, the younger sister of his close friend Sigurd. Appears in Fire Emblem: Genealogy of the Holy War.",
+  "voice_actor": "Chris Hackney",
+  "illustrator": "Aoji (あおじ)"
 }

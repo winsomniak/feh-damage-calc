@@ -30,7 +30,8 @@
   "passive_c": [
     "close-guard-3",
     "close-guard-2",
-    "close-guard-1"
+    "close-guard-1",
+    "close-guard"
   ],
   "base_stat": {
     "star_5": {
@@ -49,5 +50,8 @@
       "total": 275
     },
     "growth_type": 255
-  }
+  },
+  "description": "The gallant prince of Renais. His chivalrous nature enlivens the winter festival. Appears in Fire Emblem: The Sacred Stones.",
+  "voice_actor": "Greg Chun",
+  "illustrator": "Asatani Tomoyo (麻谷知世)"
 }

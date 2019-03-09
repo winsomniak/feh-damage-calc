@@ -15,7 +15,8 @@
   ],
   "assist": [
     "rally-attack-speed",
-    "rally-speed"
+    "rally-speed",
+    "rally-atk-spd"
   ],
   "passive_a": [
     "swift-sparrow-2",
@@ -49,5 +50,8 @@
       "total": 235
     },
     "growth_type": 179
-  }
+  },
+  "description": "Princess of Renais, Ephraim's twin sister, and Lyon's friend. The three of them studied many things together in their youth. Appears in Fire Emblem: The Sacred Stones.",
+  "voice_actor": "Kira Buckland",
+  "illustrator": "Asatani Tomoyo (麻谷知世)"
 }

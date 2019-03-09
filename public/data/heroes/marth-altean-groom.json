@@ -16,7 +16,8 @@
   ],
   "assist": [
     "rally-speed-defense",
-    "rally-defense"
+    "rally-defense",
+    "rally-spd-def"
   ],
   "passive_b": [
     "wings-of-mercy-3",
@@ -45,5 +46,8 @@
       "total": 255
     },
     "growth_type": 18
-  }
+  },
+  "description": "Prince of Altea who fights for his homeland. Dressed as a groom to participate in a festival. Appears in Fire Emblem: Mystery of the Emblem.",
+  "voice_actor": "Yuri Lowenthal",
+  "illustrator": "Mayo (まよ)"
 }

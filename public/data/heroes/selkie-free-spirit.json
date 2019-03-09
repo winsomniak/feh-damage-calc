@@ -1,0 +1,56 @@
+{
+  "display": "Selkie, Free Spirit",
+  "name": "Selkie",
+  "title": "Free Spirit",
+  "id": "selkie-free-spirit",
+  "description": "Kaden's daughter, carrying kitsune blood. Highly curious and fearless. Ready to take on any challenge. Appears in Fire Emblem Fates.",
+  "voice_actor": "Lexi Klein",
+  "illustrator": "Enkyo Yuichiro (円居雄一郎)",
+  "color": "Blue",
+  "weapon_type": "Blue Beast",
+  "link": "https://kagerochart.com/hero/selkie-free-spirit",
+  "move_type": "Cavalry",
+  "weapon": [
+    "foxkit-fang",
+    "adult-(cavalry)",
+    "yearling-(cavalry)",
+    "whelp-(cavalry)"
+  ],
+  "special": [
+    "chilling-wind",
+    "iceberg"
+  ],
+  "passive_a": [
+    "atk-spd-bond-3",
+    "atk-spd-bond-2",
+    "atk-spd-bond-1"
+  ],
+  "passive_b": [
+    "sabotage-atk-3",
+    "sabotage-atk-2",
+    "sabotage-atk-1"
+  ],
+  "passive_c": [
+    "even-res-wave-3",
+    "even-res-wave-2",
+    "even-res-wave-1"
+  ],
+  "base_stat": {
+    "star_5": {
+      "hp": 16,
+      "atk": 7,
+      "spd": 10,
+      "def": 4,
+      "res": 9
+    },
+    "growth": {
+      "hp": 45,
+      "atk": 50,
+      "spd": 65,
+      "def": 35,
+      "res": 60,
+      "total": 255
+    },
+    "growth_type": 217
+  }
+}

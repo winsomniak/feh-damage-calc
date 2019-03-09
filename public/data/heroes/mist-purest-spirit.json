@@ -1,0 +1,57 @@
+{
+  "display": "Mist, Purest Spirit",
+  "name": "Mist",
+  "title": "Purest Spirit",
+  "id": "mist-purest-spirit",
+  "description": "Ike's sister and a great help to the Greil Mercenaries. Looks forward to shopping at the Day of Devotion festival. Appears in Fire Emblem: Path of Radiance.",
+  "voice_actor": "Sarah Williams",
+  "illustrator": "Miwabe Sakura (みわべさくら)",
+  "color": "Green",
+  "weapon_type": "Green Tome",
+  "link": "https://kagerochart.com/hero/mist-purest-spirit",
+  "move_type": "Cavalry",
+  "weapon": [
+    "gronnblooms-plus",
+    "gronnblooms",
+    "elwind",
+    "wind"
+  ],
+  "assist": [
+    "rally-def-res-plus",
+    "rally-resistance",
+    "rally-def-res"
+  ],
+  "passive_a": [
+    "swift-sparrow-2",
+    "swift-sparrow-1",
+    "darting-blow-1"
+  ],
+  "passive_b": [
+    "res-feint-3",
+    "res-feint-2",
+    "res-feint-1"
+  ],
+  "passive_c": [
+    "g-tome-valor-3",
+    "g-tome-valor-2",
+    "g-tome-valor-1"
+  ],
+  "base_stat": {
+    "star_5": {
+      "hp": 17,
+      "atk": 10,
+      "spd": 8,
+      "def": 4,
+      "res": 4
+    },
+    "growth": {
+      "hp": 45,
+      "atk": 55,
+      "spd": 60,
+      "def": 30,
+      "res": 45,
+      "total": 235
+    },
+    "growth_type": 246
+  }
+}

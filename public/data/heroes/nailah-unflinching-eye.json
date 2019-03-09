@@ -1,0 +1,52 @@
+{
+  "display": "Nailah, Unflinching Eye",
+  "name": "Nailah",
+  "title": "Unflinching Eye",
+  "id": "nailah-unflinching-eye",
+  "description": "Queen of Hatari, a desert nation spoken of mostly in legend. Her eye patch conceals an evil eye. Appears in Fire Emblem: Radiant Dawn.",
+  "voice_actor": "Rachel Robinson",
+  "illustrator": "PenekoR (п猫Ｒ)",
+  "color": "Blue",
+  "weapon_type": "Blue Beast",
+  "link": "https://kagerochart.com/hero/nailah-unflinching-eye",
+  "move_type": "Infantry",
+  "weapon": [
+    "wolf-queen-fang",
+    "adult-(infantry)",
+    "yearling-(infantry)",
+    "whelp-(infantry)"
+  ],
+  "special": [
+    "new-moon",
+    "moonbow"
+  ],
+  "passive_a": [
+    "distant-counter"
+  ],
+  "passive_b": [
+    "null-c-disrupt-3",
+    "null-c-disrupt-2",
+    "null-c-disrupt-1"
+  ],
+  "passive_c": [
+    "glare"
+  ],
+  "base_stat": {
+    "star_5": {
+      "hp": 18,
+      "atk": 7,
+      "spd": 11,
+      "def": 8,
+      "res": 4
+    },
+    "growth": {
+      "hp": 50,
+      "atk": 55,
+      "spd": 60,
+      "def": 55,
+      "res": 45,
+      "total": 265
+    },
+    "growth_type": 220
+  }
+}

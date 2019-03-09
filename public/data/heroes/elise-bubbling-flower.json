@@ -1,0 +1,57 @@
+{
+  "display": "Elise, Bubbling Flower",
+  "name": "Elise",
+  "title": "Bubbling Flower",
+  "id": "elise-bubbling-flower",
+  "description": "Youngest princess of Nohr. Sometimes slips out of the castle to enjoy herself at a famous hot spring. Appears in Fire Emblem Fates.",
+  "voice_actor": "Liv Strander",
+  "illustrator": "Mikuro (みく郎)",
+  "color": "Red",
+  "weapon_type": "Red Dagger",
+  "link": "https://kagerochart.com/hero/elise-bubbling-flower",
+  "move_type": "Cavalry",
+  "weapon": [
+    "red-hot-ducks-plus",
+    "red-hot-ducks",
+    "steel-dagger",
+    "iron-dagger"
+  ],
+  "assist": [
+    "rally-up-atk-plus",
+    "rally-attack",
+    "rally-up-atk"
+  ],
+  "passive_a": [
+    "swift-sparrow-2",
+    "swift-sparrow-1",
+    "darting-blow-1"
+  ],
+  "passive_b": [
+    "atk-feint-3",
+    "atk-feint-2",
+    "atk-feint-1"
+  ],
+  "passive_c": [
+    "dagger-valor-3",
+    "dagger-valor-2",
+    "dagger-valor-1"
+  ],
+  "base_stat": {
+    "star_5": {
+      "hp": 15,
+      "atk": 7,
+      "spd": 11,
+      "def": 3,
+      "res": 7
+    },
+    "growth": {
+      "hp": 45,
+      "atk": 60,
+      "spd": 60,
+      "def": 35,
+      "res": 35,
+      "total": 235
+    },
+    "growth_type": 156
+  }
+}

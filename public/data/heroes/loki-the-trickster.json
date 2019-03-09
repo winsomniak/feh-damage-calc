@@ -47,8 +47,11 @@
       "spd": 60,
       "def": 30,
       "res": 45,
-      "total": 255
+      "total": 245
     },
     "growth_type": 102
-  }
+  },
+  "description": "Strategist for Múspell, the Kingdom of Flame. Likes to play tricks and manipulate people.",
+  "voice_actor": "Erika Ishii",
+  "illustrator": "Maeshima Shigeki (前嶋重機)"
 }

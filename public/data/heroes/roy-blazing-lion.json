@@ -1,0 +1,55 @@
+{
+  "display": "Roy, Blazing Lion",
+  "name": "Roy",
+  "title": "Blazing Lion",
+  "id": "roy-blazing-lion",
+  "description": "The son of the Marquess of Pherae. After overcoming misfortunes, he quells the uprising at Bern and ends the war between humans and dragons. Appears in Fire Emblem: The Binding Blade.",
+  "voice_actor": "Ray Chase",
+  "illustrator": "Meka (めか)",
+  "legendary": "true",
+  "color": "Red",
+  "weapon_type": "Sword",
+  "link": "https://kagerochart.com/hero/roy-blazing-lion",
+  "move_type": "Infantry",
+  "weapon": [
+    "dragonbind",
+    "silver-sword",
+    "steel-sword",
+    "iron-sword"
+  ],
+  "special": [
+    "dragon-gaze",
+    "dragon-fang"
+  ],
+  "passive_a": [
+    "bonus-doubler-3",
+    "bonus-doubler-2",
+    "bonus-doubler-1"
+  ],
+  "passive_b": [
+    "renewal-3",
+    "renewal-2",
+    "renewal-1"
+  ],
+  "passive_c": [
+    "human-virtue"
+  ],
+  "base_stat": {
+    "star_5": {
+      "hp": 17,
+      "atk": 10,
+      "spd": 10,
+      "def": 8,
+      "res": 4
+    },
+    "growth": {
+      "hp": 50,
+      "atk": 55,
+      "spd": 65,
+      "def": 55,
+      "res": 50,
+      "total": 275
+    },
+    "growth_type": 141
+  }
+}

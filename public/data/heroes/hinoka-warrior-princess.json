@@ -12,7 +12,8 @@
     "brave-lance-plus",
     "brave-lance",
     "steel-lance",
-    "iron-lance"
+    "iron-lance",
+    "hinokas-spear"
   ],
   "special": [
     "blazing-wind",
@@ -45,5 +46,8 @@
       "total": 255
     },
     "growth_type": 235
-  }
+  },
+  "description": "Hoshidan princess who prefers battles over court life. Excels at watching over others. Appears in Fire Emblem Fates.",
+  "voice_actor": "Cindy Robinson",
+  "illustrator": "HACCAN"
 }

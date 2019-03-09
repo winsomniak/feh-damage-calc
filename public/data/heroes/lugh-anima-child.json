@@ -1,0 +1,52 @@
+{
+  "display": "Lugh, Anima Child",
+  "name": "Lugh",
+  "title": "Anima Child",
+  "id": "lugh-anima-child",
+  "description": "A boy from an orphanage. Raigh's twin brother. He's cheerful and tender-hearted. Appears in Fire Emblem: The Binding Blade.",
+  "voice_actor": "Michael Johnston",
+  "illustrator": "Himukai Yuji (日向悠二)",
+  "color": "Green",
+  "weapon_type": "Green Tome",
+  "link": "https://kagerochart.com/hero/lugh-anima-child",
+  "move_type": "Infantry",
+  "weapon": [
+    "gronnserpent-plus",
+    "gronnserpent",
+    "elwind",
+    "wind"
+  ],
+  "assist": [
+    "rally-up-res-plus",
+    "rally-resistance",
+    "rally-up-res"
+  ],
+  "passive_a": [
+    "mirror-stance-2",
+    "mirror-stance-1",
+    "warding-stance-1"
+  ],
+  "passive_b": [
+    "atk-feint-3",
+    "atk-feint-2",
+    "atk-feint-1"
+  ],
+  "base_stat": {
+    "star_5": {
+      "hp": 18,
+      "atk": 5,
+      "spd": 12,
+      "def": 4,
+      "res": 7
+    },
+    "growth": {
+      "hp": 45,
+      "atk": 70,
+      "spd": 55,
+      "def": 30,
+      "res": 55,
+      "total": 255
+    },
+    "growth_type": 48
+  }
+}

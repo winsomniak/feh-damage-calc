@@ -11,7 +11,8 @@
     "slaying-axe-plus",
     "slaying-axe",
     "steel-axe",
-    "iron-axe"
+    "iron-axe",
+    "grado-poleax"
   ],
   "special": [
     "sacred-cowl",
@@ -44,5 +45,8 @@
       "total": 295
     },
     "growth_type": 175
-  }
+  },
+  "description": "A young soldier from a small village in Grado. She is honest and sincere. Appears in Fire Emblem: The Sacred Stones.",
+  "voice_actor": "Liv Strander",
+  "illustrator": "Amagaitaro (アマガイタロー)"
 }

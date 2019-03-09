@@ -1,0 +1,51 @@
+{
+  "display": "Rutger, Lone Swordsman",
+  "name": "Rutger",
+  "title": "Lone Swordsman",
+  "id": "rutger-lone-swordsman",
+  "description": "A swordsman from Bulgar, a trading city in Sacae. He swore vengeance against Bern after they killed his people, leaving only him alive. Appears in Fire Emblem: The Binding Blade.",
+  "voice_actor": "Brian Kimmett",
+  "illustrator": "Itagaki Hako (板垣ハコ)",
+  "color": "Red",
+  "weapon_type": "Sword",
+  "link": "https://kagerochart.com/hero/rutger-lone-swordsman",
+  "move_type": "Infantry",
+  "weapon": [
+    "slaying-edge-plus",
+    "slaying-edge",
+    "steel-sword",
+    "iron-sword"
+  ],
+  "special": [
+    "retribution",
+    "vengeance"
+  ],
+  "passive_a": [
+    "atk-def-bond-3",
+    "atk-def-bond-2",
+    "atk-def-bond-1"
+  ],
+  "passive_b": [
+    "vantage-3",
+    "vantage-2",
+    "vantage-1"
+  ],
+  "base_stat": {
+    "star_5": {
+      "hp": 20,
+      "atk": 8,
+      "spd": 9,
+      "def": 7,
+      "res": 5
+    },
+    "growth": {
+      "hp": 55,
+      "atk": 55,
+      "spd": 70,
+      "def": 50,
+      "res": 45,
+      "total": 275
+    },
+    "growth_type": 251
+  }
+}

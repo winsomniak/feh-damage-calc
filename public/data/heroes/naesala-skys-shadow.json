@@ -1,0 +1,51 @@
+{
+  "display": "Naesala, Sky's Shadow",
+  "name": "Naesala",
+  "title": "Sky's Shadow",
+  "id": "naesala-skys-shadow",
+  "description": "King of Kilvas and leader of the raven clan. He uses his cunning as a weapon and won't shy away from dirtying his hands. Appears in Fire Emblem: Radiant Dawn.",
+  "voice_actor": "Lucien Dodge",
+  "illustrator": "Suda Ayaka (須田彩加)",
+  "color": "Blue",
+  "weapon_type": "Blue Beast",
+  "link": "https://kagerochart.com/hero/naesala-skys-shadow",
+  "move_type": "Flying",
+  "weapon": [
+    "raven-king-beak",
+    "adult-(flier)",
+    "fledgling-(flier)",
+    "hatchling-(flier)"
+  ],
+  "special": [
+    "rising-wind",
+    "blazing-wind"
+  ],
+  "passive_a": [
+    "swift-sparrow-2",
+    "swift-sparrow-1",
+    "darting-blow-1"
+  ],
+  "passive_b": [
+    "guard-3",
+    "guard-2",
+    "guard-1"
+  ],
+  "base_stat": {
+    "star_5": {
+      "hp": 17,
+      "atk": 8,
+      "spd": 10,
+      "def": 5,
+      "res": 7
+    },
+    "growth": {
+      "hp": 50,
+      "atk": 55,
+      "spd": 65,
+      "def": 45,
+      "res": 50,
+      "total": 265
+    },
+    "growth_type": 203
+  }
+}

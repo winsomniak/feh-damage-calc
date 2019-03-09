@@ -12,11 +12,13 @@
     "blarblade-plus",
     "blarblade",
     "elthunder",
-    "thunder"
+    "thunder",
+    "tome-of-thoron"
   ],
   "assist": [
     "rally-speed-resistance",
-    "rally-resistance"
+    "rally-resistance",
+    "rally-spd-res"
   ],
   "passive_a": [
     "attack-res-2",
@@ -45,5 +47,8 @@
       "total": 240
     },
     "growth_type": 95
-  }
+  },
+  "description": "A noblewoman from Friege and descendant of the crusader Thrud. She appears cheerful but is hiding her troubles. Appears in Fire Emblem: Genealogy of the Holy War.",
+  "voice_actor": "Heather Watson",
+  "illustrator": "Shioemon (しおえもん) / INTELLIGENT SYSTEMS"
 }

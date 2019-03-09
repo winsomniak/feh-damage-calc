@@ -1,0 +1,57 @@
+{
+  "display": "Gunnthrá, Year's First Dream",
+  "name": "Gunnthrá",
+  "title": "Year's First Dream",
+  "id": "gunnthra-years-first-dream",
+  "description": "The eldest princess of Nifl, the Kingdom of Ice. A gentle soul with strong maternal instincts. She is very much looking forward to her first dream of the New Year.",
+  "voice_actor": "Carrie Keranen",
+  "illustrator": "Yoshiku (四々九)",
+  "color": "Red",
+  "weapon_type": "Sword",
+  "link": "https://kagerochart.com/hero/gunnthra-years-first-dream",
+  "move_type": "Flying",
+  "weapon": [
+    "hikami",
+    "silver-sword",
+    "steel-sword",
+    "iron-sword"
+  ],
+  "special": [
+    "night-sky",
+    "glimmer"
+  ],
+  "passive_a": [
+    "swift-sparrow-2",
+    "swift-sparrow-1",
+    "darting-blow-1"
+  ],
+  "passive_b": [
+    "desperation-3",
+    "desperation-2",
+    "desperation-1"
+  ],
+  "passive_c": [
+    "joint-hone-spd",
+    "hone-spd-3",
+    "hone-spd-2",
+    "hone-spd-1"
+  ],
+  "base_stat": {
+    "star_5": {
+      "hp": 16,
+      "atk": 8,
+      "spd": 11,
+      "def": 8,
+      "res": 4
+    },
+    "growth": {
+      "hp": 50,
+      "atk": 60,
+      "spd": 60,
+      "def": 45,
+      "res": 50,
+      "total": 265
+    },
+    "growth_type": 123
+  }
+}

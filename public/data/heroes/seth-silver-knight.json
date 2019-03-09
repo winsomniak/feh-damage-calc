@@ -12,7 +12,8 @@
     "ruby-sword-plus",
     "ruby-sword",
     "steel-sword",
-    "iron-sword"
+    "iron-sword",
+    "silverbrand"
   ],
   "assist": [
     "swap"
@@ -44,5 +45,8 @@
       "total": 250
     },
     "growth_type": 36
-  }
+  },
+  "description": "A young commander of Renais. He's calm, composed, and skilled. Appears in Fire Emblem: The Sacred Stones.",
+  "voice_actor": "Chris Smith",
+  "illustrator": "Fujiwara Ryo (冨士原良)"
 }

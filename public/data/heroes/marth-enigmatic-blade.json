@@ -12,7 +12,8 @@
     "falchion-1",
     "silver-sword",
     "steel-sword",
-    "iron-sword"
+    "iron-sword",
+    "falchion"
   ],
   "base_stat": {
     "star_5": {
@@ -31,5 +32,8 @@
       "total": 255
     },
     "growth_type": 18
-  }
+  },
+  "description": "A mysterious swordsman who hides his face behind a mask. Calls himself Marth. Appears in Fire Emblem Awakening.",
+  "voice_actor": "Alexis Tipton",
+  "illustrator": "Maiponpon (まいぽんぽん) / INTELLIGENT SYSTEMS"
 }

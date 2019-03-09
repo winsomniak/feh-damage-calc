@@ -1,0 +1,55 @@
+{
+  "display": "Hinoka, Relaxed Warrior",
+  "name": "Hinoka",
+  "title": "Relaxed Warrior",
+  "id": "hinoka-relaxed-warrior",
+  "description": "Eldest princess of Hoshido. She seeks respite from the travails of battle in hot springs from time to time, but she rarely finds it. Appears in Fire Emblem Fates.",
+  "voice_actor": "Cindy Robinson",
+  "illustrator": "Foo Midori (碧風羽)",
+  "color": "Green",
+  "weapon_type": "Green Dagger",
+  "link": "https://kagerochart.com/hero/hinoka-relaxed-warrior",
+  "move_type": "Flying",
+  "weapon": [
+    "splashy-bucket-plus",
+    "splashy-bucket",
+    "steel-dagger",
+    "iron-dagger"
+  ],
+  "assist": [
+    "draw-back"
+  ],
+  "passive_a": [
+    "atk-spd-bond-3",
+    "atk-spd-bond-2",
+    "atk-spd-bond-1"
+  ],
+  "passive_b": [
+    "atk-spd-link-3",
+    "atk-spd-link-2",
+    "atk-spd-link-1"
+  ],
+  "passive_c": [
+    "air-orders-3",
+    "air-orders-2",
+    "air-orders-1"
+  ],
+  "base_stat": {
+    "star_5": {
+      "hp": 16,
+      "atk": 9,
+      "spd": 9,
+      "def": 3,
+      "res": 7
+    },
+    "growth": {
+      "hp": 50,
+      "atk": 60,
+      "spd": 60,
+      "def": 30,
+      "res": 45,
+      "total": 245
+    },
+    "growth_type": 157
+  }
+}

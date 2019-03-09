@@ -16,7 +16,8 @@
   ],
   "assist": [
     "rally-attack-defense",
-    "rally-attack"
+    "rally-attack",
+    "rally-atk-def"
   ],
   "passive_a": [
     "fire-boost-3",
@@ -45,5 +46,8 @@
       "total": 275
     },
     "growth_type": 26
-  }
+  },
+  "description": "A sincere noble of Pherae. Wishes to enjoy the festival together with his close friends Hector and Lyn. Appears in Fire Emblem: The Blazing Blade.",
+  "voice_actor": "Yuri Lowenthal",
+  "illustrator": "Ito Misei (伊藤未生)"
 }

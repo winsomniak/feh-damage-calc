@@ -12,7 +12,8 @@
     "heavy-spear-plus",
     "heavy-spear",
     "steel-lance",
-    "iron-lance"
+    "iron-lance",
+    "oboros-spear"
   ],
   "assist": [
     "rally-defense"
@@ -44,5 +45,8 @@
       "total": 255
     },
     "growth_type": 211
-  }
+  },
+  "description": "Lance wielder who loves fashion and hates Nohr. One of Takumi's retainers. Appears in Fire Emblem Fates.",
+  "voice_actor": "Marisha Ray",
+  "illustrator": "Ueda Yumehito (上田夢人)"
 }

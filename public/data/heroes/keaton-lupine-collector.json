@@ -1,0 +1,51 @@
+{
+  "display": "Keaton, Lupine Collector",
+  "name": "Keaton",
+  "title": "Lupine Collector",
+  "id": "keaton-lupine-collector",
+  "description": "Leader of the wolfskin who set up their stronghold on Mount Garou. Sociable but isn't always honest with himself or others. Appears in Fire Emblem Fates.",
+  "voice_actor": "Ted Sroka",
+  "illustrator": "Okuma Yugo (大熊ゆうご)",
+  "color": "Red",
+  "weapon_type": "Red Beast",
+  "link": "https://kagerochart.com/hero/keaton-lupine-collector",
+  "move_type": "Infantry",
+  "weapon": [
+    "wolfskin-fang",
+    "adult-(infantry)",
+    "yearling-(infantry)",
+    "whelp-(infantry)"
+  ],
+  "special": [
+    "dragon-gaze",
+    "draconic-aura"
+  ],
+  "passive_b": [
+    "special-spiral-3",
+    "special-spiral-2",
+    "special-spiral-1"
+  ],
+  "passive_c": [
+    "beast-valor-3",
+    "beast-valor-2",
+    "beast-valor-1"
+  ],
+  "base_stat": {
+    "star_5": {
+      "hp": 19,
+      "atk": 11,
+      "spd": 7,
+      "def": 8,
+      "res": 4
+    },
+    "growth": {
+      "hp": 60,
+      "atk": 70,
+      "spd": 40,
+      "def": 70,
+      "res": 35,
+      "total": 275
+    },
+    "growth_type": 201
+  }
+}

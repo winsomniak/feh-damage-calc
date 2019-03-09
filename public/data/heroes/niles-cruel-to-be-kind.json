@@ -12,7 +12,8 @@
     "killer-bow-plus",
     "killer-bow",
     "steel-bow",
-    "iron-bow"
+    "iron-bow",
+    "niless-bow"
   ],
   "special": [
     "iceberg",
@@ -45,5 +46,8 @@
       "total": 240
     },
     "growth_type": 9
-  }
+  },
+  "description": "Nohrian scoundrel who wags his saucy tongue at everyone. One of Leo's retainers. Appears in Fire Emblem Fates.",
+  "voice_actor": "Michael Sinterniklaas",
+  "illustrator": "Yura (由良)"
 }

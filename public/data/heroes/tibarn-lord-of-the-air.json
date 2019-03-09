@@ -1,0 +1,57 @@
+{
+  "display": "Tibarn, Lord of the Air",
+  "name": "Tibarn",
+  "title": "Lord of the Air",
+  "id": "tibarn-lord-of-the-air",
+  "description": "King of Phoenicis, the nation of the hawk laguz. Leads his people by dint of his overwhelming fighting ability and charisma. Appears in Fire Emblem: Radiant Dawn.",
+  "voice_actor": "Joe J. Thomas",
+  "illustrator": "Suekane Kumiko (スエカネクミコ)",
+  "color": "Red",
+  "weapon_type": "Red Beast",
+  "link": "https://kagerochart.com/hero/tibarn-lord-of-the-air",
+  "move_type": "Flying",
+  "weapon": [
+    "hawk-king-claw",
+    "adult-(flier)",
+    "fledgling-(flier)",
+    "hatchling-(flier)"
+  ],
+  "special": [
+    "dragon-gaze",
+    "draconic-aura"
+  ],
+  "passive_a": [
+    "sturdy-impact",
+    "sturdy-blow-2",
+    "sturdy-blow-1",
+    "death-blow-1"
+  ],
+  "passive_b": [
+    "chill-atk-3",
+    "chill-atk-2",
+    "chill-atk-1"
+  ],
+  "passive_c": [
+    "even-atk-wave-3",
+    "even-atk-wave-2",
+    "even-atk-wave-1"
+  ],
+  "base_stat": {
+    "star_5": {
+      "hp": 19,
+      "atk": 10,
+      "spd": 7,
+      "def": 8,
+      "res": 3
+    },
+    "growth": {
+      "hp": 50,
+      "atk": 65,
+      "spd": 55,
+      "def": 60,
+      "res": 35,
+      "total": 265
+    },
+    "growth_type": 136
+  }
+}

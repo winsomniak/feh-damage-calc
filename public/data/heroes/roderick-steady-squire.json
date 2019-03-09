@@ -12,11 +12,13 @@
     "firesweep-lance-plus",
     "firesweep-lance",
     "steel-lance",
-    "iron-lance"
+    "iron-lance",
+    "firesweep-l-plus"
   ],
   "assist": [
     "rally-defense-resistance",
-    "rally-defense"
+    "rally-defense",
+    "rally-def-res"
   ],
   "passive_b": [
     "drag-back"
@@ -43,5 +45,8 @@
       "total": 250
     },
     "growth_type": 247
-  }
+  },
+  "description": "An aspiring knight of Altea. Of calm demeanor. Luke's longtime friend and rival. Appears in Fire Emblem: New Mystery of the Emblem.",
+  "voice_actor": "Christian La Monte",
+  "illustrator": "Itagaki Hako (板垣ハコ)"
 }

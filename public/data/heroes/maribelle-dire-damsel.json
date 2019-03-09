@@ -20,7 +20,8 @@
     "martyr-plus",
     "martyr",
     "mend",
-    "heal"
+    "heal",
+    "reconcile"
   ],
   "passive_b": [
     "dazzling-staff-3",
@@ -49,5 +50,8 @@
       "total": 235
     },
     "growth_type": 142
-  }
+  },
+  "description": "A proud noble from one of Ylisse's most well-to-do houses. A Shepherd and Lissa's best friend. Appears in Fire Emblem Awakening.",
+  "voice_actor": "Melissa Fahn",
+  "illustrator": "Kousei Horiguchi (恒星ホリグチ)"
 }

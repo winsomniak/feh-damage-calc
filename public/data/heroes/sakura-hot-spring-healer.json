@@ -1,0 +1,58 @@
+{
+  "display": "Sakura, Hot-Spring Healer",
+  "name": "Sakura",
+  "title": "Hot-Spring Healer",
+  "id": "sakura-hot-spring-healer",
+  "description": "Youngest princess of Hoshido. Well versed in the healing benefits of hot springs. Appears in Fire Emblem Fates.",
+  "voice_actor": "Brianna Knickerbocker",
+  "illustrator": "Amagaitaro (アマガイタロー)",
+  "color": "Colorless",
+  "weapon_type": "Staff",
+  "link": "https://kagerochart.com/hero/sakura-hot-spring-healer",
+  "move_type": "Flying",
+  "weapon": [
+    "grandscratcher-plus",
+    "grandscratcher",
+    "assault"
+  ],
+  "assist": [
+    "physic-plus",
+    "physic",
+    "mend",
+    "heal"
+  ],
+  "special": [
+    "fireflood-balm-plus",
+    "still-water-balm",
+    "fireflood-balm",
+    "imbue"
+  ],
+  "passive_b": [
+    "wrathful-staff-3",
+    "wrathful-staff-2",
+    "wrathful-staff-1"
+  ],
+  "passive_c": [
+    "spd-opening-3",
+    "spd-opening-2",
+    "spd-opening-1"
+  ],
+  "base_stat": {
+    "star_5": {
+      "hp": 17,
+      "atk": 9,
+      "spd": 8,
+      "def": 4,
+      "res": 6
+    },
+    "growth": {
+      "hp": 45,
+      "atk": 60,
+      "spd": 55,
+      "def": 50,
+      "res": 35,
+      "total": 245
+    },
+    "growth_type": 159
+  }
+}

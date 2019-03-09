@@ -15,7 +15,8 @@
   ],
   "assist": [
     "rally-attack-defense",
-    "rally-defense"
+    "rally-defense",
+    "rally-atk-def"
   ],
   "passive_b": [
     "def-feint-3",
@@ -44,5 +45,8 @@
       "total": 265
     },
     "growth_type": 200
-  }
+  },
+  "description": "The prince of Frelia. Tana's brother. Determined to use his vacation to hone his skills rather than play around. Appears in Fire Emblem: The Sacred Stones.",
+  "voice_actor": "Xander Mobus",
+  "illustrator": "Asatani Tomoyo (麻谷知世)"
 }

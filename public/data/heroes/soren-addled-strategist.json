@@ -1,0 +1,57 @@
+{
+  "display": "Soren, Addled Strategist",
+  "name": "Soren",
+  "title": "Addled Strategist",
+  "id": "soren-addled-strategist",
+  "description": "Strategist of the Greil Mercenaries. Always considers the best tactics—even at the Day of Devotion festival. Appears in Fire Emblem: Path of Radiance.",
+  "voice_actor": "Kyle McCarley",
+  "illustrator": "Miyajima Haru (ミヤジマハル)",
+  "color": "Blue",
+  "weapon_type": "Blue Tome",
+  "link": "https://kagerochart.com/hero/soren-addled-strategist",
+  "move_type": "Cavalry",
+  "weapon": [
+    "blarblooms-plus",
+    "blarblooms",
+    "elthunder",
+    "thunder"
+  ],
+  "assist": [
+    "rally-atk-spd-plus",
+    "rally-speed",
+    "rally-atk-spd"
+  ],
+  "passive_a": [
+    "atk-res-bond-3",
+    "atk-res-bond-2",
+    "atk-res-bond-1"
+  ],
+  "passive_b": [
+    "spd-feint-3",
+    "spd-feint-2",
+    "spd-feint-1"
+  ],
+  "passive_c": [
+    "res-opening-3",
+    "res-opening-2",
+    "res-opening-1"
+  ],
+  "base_stat": {
+    "star_5": {
+      "hp": 18,
+      "atk": 9,
+      "spd": 9,
+      "def": 4,
+      "res": 3
+    },
+    "growth": {
+      "hp": 45,
+      "atk": 60,
+      "spd": 55,
+      "def": 25,
+      "res": 50,
+      "total": 235
+    },
+    "growth_type": 178
+  }
+}

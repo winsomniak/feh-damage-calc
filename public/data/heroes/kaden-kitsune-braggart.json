@@ -1,0 +1,50 @@
+{
+  "display": "Kaden, Kitsune Braggart",
+  "name": "Kaden",
+  "title": "Kitsune Braggart",
+  "id": "kaden-kitsune-braggart",
+  "description": "The chief of a hidden village of kitsune. He has absolute confidence in the beauty of his fur. Appears in Fire Emblem Fates.",
+  "voice_actor": "Max Mittelman",
+  "illustrator": "Kusugi Toku (久杉トク)",
+  "color": "Green",
+  "weapon_type": "Green Beast",
+  "link": "https://kagerochart.com/hero/kaden-kitsune-braggart",
+  "move_type": "Cavalry",
+  "weapon": [
+    "kitsune-fang",
+    "adult-(cavalry)",
+    "yearling-(cavalry)",
+    "whelp-(cavalry)"
+  ],
+  "assist": [
+    "pivot"
+  ],
+  "passive_b": [
+    "spd-res-link-3",
+    "spd-res-link-2",
+    "spd-res-link-1"
+  ],
+  "passive_c": [
+    "goad-beasts",
+    "spur-atk-2",
+    "spur-atk-1"
+  ],
+  "base_stat": {
+    "star_5": {
+      "hp": 16,
+      "atk": 8,
+      "spd": 10,
+      "def": 6,
+      "res": 6
+    },
+    "growth": {
+      "hp": 50,
+      "atk": 55,
+      "spd": 60,
+      "def": 45,
+      "res": 45,
+      "total": 255
+    },
+    "growth_type": 143
+  }
+}

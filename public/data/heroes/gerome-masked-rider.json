@@ -16,7 +16,8 @@
   ],
   "assist": [
     "rally-attack-defense",
-    "rally-defense"
+    "rally-defense",
+    "rally-atk-def"
   ],
   "passive_a": [
     "fortress-def-3",
@@ -43,5 +44,8 @@
       "total": 265
     },
     "growth_type": 136
-  }
+  },
+  "description": "Cherche's son. Unaccustomed to interpersonal interactions. His wyvern Minerva belonged to his late mother. Appears in Fire Emblem Awakening.",
+  "voice_actor": "Orion Acaba",
+  "illustrator": "Meka (めか)"
 }

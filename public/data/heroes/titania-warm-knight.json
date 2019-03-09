@@ -1,0 +1,50 @@
+{
+  "display": "Titania, Warm Knight",
+  "name": "Titania",
+  "title": "Warm Knight",
+  "id": "titania-warm-knight",
+  "description": "Talented second-in-command of the Greil Mercenaries. Her heart stirs at the reunion of Ike and Greil. Appears in Fire Emblem: Path of Radiance.",
+  "voice_actor": "Misty Lee",
+  "illustrator": "Wada Sachiko (ワダサチコ)",
+  "color": "Red",
+  "weapon_type": "Red Tome",
+  "link": "https://kagerochart.com/hero/titania-warm-knight",
+  "move_type": "Cavalry",
+  "weapon": [
+    "loyal-wreath-plus",
+    "loyal-wreath",
+    "elfire",
+    "fire"
+  ],
+  "assist": [
+    "swap"
+  ],
+  "passive_a": [
+    "triangle-adept-3",
+    "triangle-adept-2",
+    "triangle-adept-1"
+  ],
+  "passive_b": [
+    "atk-res-link-3",
+    "atk-res-link-2",
+    "atk-res-link-1"
+  ],
+  "base_stat": {
+    "star_5": {
+      "hp": 16,
+      "atk": 8,
+      "spd": 9,
+      "def": 4,
+      "res": 6
+    },
+    "growth": {
+      "hp": 45,
+      "atk": 50,
+      "spd": 55,
+      "def": 30,
+      "res": 55,
+      "total": 235
+    },
+    "growth_type": 7
+  }
+}

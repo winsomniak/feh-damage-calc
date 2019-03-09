@@ -1,0 +1,57 @@
+{
+  "display": "Azura, Vallite Songstress",
+  "name": "Azura",
+  "title": "Vallite Songstress",
+  "id": "azura-vallite-songstress",
+  "description": "Daughter of Arete and the former king of Valla. Gripped by an unkind fate, she strives to lead both Hoshido and Nohr to the truth. Appears in Fire Emblem Fates.",
+  "voice_actor": "Rena Strober",
+  "illustrator": "kaya8",
+  "legendary": "true",
+  "color": "Blue",
+  "weapon_type": "Blue Tome",
+  "link": "https://kagerochart.com/hero/azura-vallite-songstress",
+  "move_type": "Flying",
+  "weapon": [
+    "prayer-wheel",
+    "shine",
+    "ellight",
+    "light"
+  ],
+  "assist": [
+    "gray-waves",
+    "sing"
+  ],
+  "passive_a": [
+    "b-duel-flying-3",
+    "b-duel-flying-2",
+    "b-duel-flying-1"
+  ],
+  "passive_b": [
+    "aerobatics-3",
+    "aerobatics-2",
+    "aerobatics-1"
+  ],
+  "passive_c": [
+    "atk-tactic-3",
+    "atk-tactic-2",
+    "atk-tactic-1"
+  ],
+  "base_stat": {
+    "star_5": {
+      "hp": 14,
+      "atk": 6,
+      "spd": 7,
+      "def": 4,
+      "res": 5
+    },
+    "growth": {
+      "hp": 45,
+      "atk": 55,
+      "spd": 65,
+      "def": 30,
+      "res": 45,
+      "total": 240
+    },
+    "growth_type": 47
+  }
+}

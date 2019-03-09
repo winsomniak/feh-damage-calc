@@ -1,0 +1,50 @@
+{
+  "display": "Reyson, White Prince",
+  "name": "Reyson",
+  "title": "White Prince",
+  "id": "reyson-white-prince",
+  "description": "Prince of Serenes, the former kingdom of the heron laguz. Brother of Leanne. Frail, but strong willed. Appears in Fire Emblem: Radiant Dawn.",
+  "voice_actor": "Frank Todaro",
+  "illustrator": "Yura (由良)",
+  "color": "Green",
+  "weapon_type": "Green Beast",
+  "link": "https://kagerochart.com/hero/reyson-white-prince",
+  "move_type": "Flying",
+  "weapon": [
+    "heron-wing",
+    "adult-(flier)",
+    "fledgling-(flier)",
+    "hatchling-(flier)"
+  ],
+  "assist": [
+    "sing"
+  ],
+  "passive_a": [
+    "steady-posture-2",
+    "steady-posture-1",
+    "darting-stance-1"
+  ],
+  "passive_c": [
+    "fortify-beasts",
+    "fortify-res-2",
+    "fortify-res-1"
+  ],
+  "base_stat": {
+    "star_5": {
+      "hp": 15,
+      "atk": 7,
+      "spd": 8,
+      "def": 5,
+      "res": 4
+    },
+    "growth": {
+      "hp": 50,
+      "atk": 50,
+      "spd": 60,
+      "def": 45,
+      "res": 50,
+      "total": 255
+    },
+    "growth_type": 131
+  }
+}

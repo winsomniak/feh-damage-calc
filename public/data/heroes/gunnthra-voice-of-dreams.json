@@ -5,7 +5,7 @@
   "id": "gunnthra-voice-of-dreams",
   "color": "Green",
   "weapon_type": "Green Tome",
-  "legendary": true,
+  "legendary": "true",
   "link": "https://kagerochart.com/hero/gunnthra-voice-of-dreams",
   "move_type": "Cavalry",
   "weapon": [
@@ -48,5 +48,8 @@
       "total": 235
     },
     "growth_type": 249
-  }
+  },
+  "description": "The eldest princess of Nifl, the Kingdom of Ice. A gentle and caring soul with strong maternal instincts.",
+  "voice_actor": "Carrie Keranen",
+  "illustrator": "Maeshima Shigeki (前嶋重機)"
 }
