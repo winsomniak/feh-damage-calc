@@ -225,7 +225,7 @@ function getSpecialCooldown(specialData, weaponData, assistData, passiveBData) {
         if (weaponData.hasOwnProperty("spec_cooldown_mod")) {
             cool += weaponData.spec_cooldown_mod;
         }
-		
+
         if (passiveBData.hasOwnProperty("spec_cooldown_mod")) {
             cool += passiveBData.spec_cooldown_mod;
         }
@@ -608,7 +608,7 @@ function getPortrait(imgID, portraitName) {
         href = href.substr(0, href.indexOf('('));
     }
     $(imgID).parent().attr("href", href);
-    $(imgID).attr("src", imageUrl + "/images/hero/tile/" + portraitName + ".png");
+    $(imgID).attr("src", imageUrl + "/images/hero/tile/" + portraitName + ".webp");
 }
 
 // loads the given weapon type image into the given img
@@ -744,7 +744,7 @@ function getStatTotals(charName, weaponName, passiveA, seal, rarity, level, merg
 
     // base stats + boons/banes
     var stats = {};
-    
+
 
     //Fix issue with even rarities and merges
     var statsbase = {};
@@ -1890,7 +1890,7 @@ function singleCombat(battleInfo, initiator, logIntro, brave) {
                 source = defender.passiveAData.name;
             }
         }
-        
+
         atkMod -= maxBoost;
 
         if(maxBoost > 0) {
@@ -1950,7 +1950,7 @@ function singleCombat(battleInfo, initiator, logIntro, brave) {
         battleInfo.logMsg += "Damage boosted by " + (attacker.specialData.dmg_buff_by_stat.buff * 100).toString() + "% of " + statWord(attacker.specialData.dmg_buff_by_stat.stat) + " [" + specialInfo[attacker.special].name + "]. ";
         atkSpec = true;
     }
-	
+
     // damage buffs by number
     if (attacker.specialData.hasOwnProperty("dmg_bonus") && attacker.specCurrCooldown <= 0) {
         var bonus = 0;
@@ -3215,13 +3215,13 @@ function swap() {
     // no longer defaults
     defaultAttacker = false;
     defaultDefender = false;
-	
+
     // show/hide collapsed section
     if($("#char-1").val() === "Custom")
         $("#extra-char-info-1").show(200);
     else
         $("#extra-char-info-1").hide(200);
-	
+
     // show/hide collapsed section
     if($("#char-2").val() === "Custom")
         $("#extra-char-info-2").show(200);
@@ -3763,7 +3763,7 @@ function calculateMatchups(attacker) {
             if (href.indexOf('(') !== -1) {
                 href = href.substr(0, href.indexOf('('));
             }
-            tableHTML += "<td class='matchup-portrait-container' ><div class='open-in-new'><i class='material-icons'>open_in_new</i><a href='" + href + "' target='_blank'><img class='matchup-portrait' src='" + imageUrl + "/images/hero/tile/" + charInfo[key].id + ".png'></a></div></td>";
+            tableHTML += "<td class='matchup-portrait-container' ><div class='open-in-new'><i class='material-icons'>open_in_new</i><a href='" + href + "' target='_blank'><img class='matchup-portrait' src='" + imageUrl + "/images/hero/tile/" + charInfo[key].id + ".webp'></a></div></td>";
             tableHTML += "<td><span class='matchup-char' data-id='" + key + "'>" + charInfo[key].display + " <i class='compare-icon material-icons'>compare_arrows</i></span></td>";
             //tableHTML += "<td class='attacker'>" + battleInfo.attacker.damageDealt.toString() + "</td>";
             //tableHTML += "<td class='defender'>" + battleInfo.defender.damageDealt.toString() + "</td>";
