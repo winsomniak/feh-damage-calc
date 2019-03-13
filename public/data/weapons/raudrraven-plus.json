@@ -5,9 +5,9 @@
     "sp": 300,
     "description": "Grants weapon-triangle advantage against colorless foes, and inflicts weapon-triangle disadvantage on colorless foes during combat.",
     "type": "Red Tome",
-    "link": "https://kagerochart.com/hero/weapons/raurraven-plus",
+    "link": "https://kagerochart.com/hero/weapons/raudrraven-plus",
     "color": "Red",
     "magical": true,
     "color_effective": "Colorless",
-    "id": "raurraven-plus"
+    "id": "raudrraven-plus"
 }

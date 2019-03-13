@@ -219,22 +219,30 @@ function getSpecialCooldown(specialData, weaponData, assistData, passiveBData) {
 
     var cool = 0;
 
-    if (specialData.hasOwnProperty("cooldown")) {
-        cool = specialData.cooldown;
+    try {
+        if (specialData.hasOwnProperty("cooldown")) {
+            cool = specialData.cooldown;
 
-        if (weaponData.hasOwnProperty("spec_cooldown_mod")) {
-            cool += weaponData.spec_cooldown_mod;
-        }
+            if (weaponData.hasOwnProperty("spec_cooldown_mod")) {
+                cool += weaponData.spec_cooldown_mod;
+            }
 
-        if (passiveBData.hasOwnProperty("spec_cooldown_mod")) {
-            cool += passiveBData.spec_cooldown_mod;
-        }
+            if (passiveBData.hasOwnProperty("spec_cooldown_mod")) {
+                cool += passiveBData.spec_cooldown_mod;
+            }
 
-        if (assistData.hasOwnProperty("spec_cooldown_mod")) {
-            cool += assistData.spec_cooldown_mod;
+            if (assistData.hasOwnProperty("spec_cooldown_mod")) {
+                cool += assistData.spec_cooldown_mod;
+            }
         }
     }
-
+    catch (err) {
+        console.error(err);
+        console.error(specialData);
+        console.error(weaponData);
+        console.error(assistData);
+        console.error(passiveBData);
+    }
     return Math.max(cool, 0);
 }
 
@@ -803,7 +811,13 @@ function getStatTotals(charName, weaponName, passiveA, seal, rarity, level, merg
     }
 
     // add weapon might
-    stats.atk += ((weaponName !== "None"))? weaponInfo[weaponName].might : 0;
+    try {
+        stats.atk += ((weaponName !== "None"))? weaponInfo[weaponName].might : 0;
+    }
+    catch (err) {
+        console.error(err);
+        console.error("Weapon Name: " + weaponName);
+    }
 
     //Check for refinement updated might
     if(refinement!="None" && weaponName!="None" && weaponInfo[weaponName].hasOwnProperty("refinable") && weaponInfo[weaponName].refinable.hasOwnProperty("might"))

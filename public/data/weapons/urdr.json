@@ -5,7 +5,7 @@
     "sp": 400,
     "description": "If Sing or Dance is used, grants Atk/Spd/Def/Res+3 to target.",
     "type": "Axe",
-    "link": "https://kagerochart.com/hero/weapons/urr",
+    "link": "https://kagerochart.com/hero/weapons/urdr",
     "char_unique": true,
-    "id": "urr"
+    "id": "urdr"
 }
